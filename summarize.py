@@ -1,13 +1,35 @@
 #!/usr/bin/env python3
 """
 使用LLM总结论文并生成Markdown报告
+支持 OpenAI 和阿里云 DashScope API
 """
 
 import json
 import os
+import time
 from pathlib import Path
 from datetime import datetime
 from openai import OpenAI
+
+def get_client():
+    """初始化 LLM 客户端"""
+    api_key = os.environ.get("OPENAI_API_KEY")
+    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
+
+    # 检测是否为阿里云 DashScope
+    if "dashscope" in base_url or "aliyuncs" in base_url:
+        model = os.environ.get("LLM_MODEL", "qwen-plus")
+        print(f"Using Alibaba Cloud DashScope with model: {model}")
+    else:
+        model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+        print(f"Using OpenAI API with model: {model}")
+
+    client = OpenAI(
+        api_key=api_key,
+        base_url=base_url,
+        timeout=60.0,
+    )
+    return client, model
 
 def load_papers(date_str=None):
     """加载论文数据"""
@@ -23,7 +45,7 @@ def load_papers(date_str=None):
     with open(papers_file, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def summarize_paper(paper, client):
+def summarize_paper(paper, client, model, max_retries=3):
     """使用LLM总结单篇论文"""
     prompt = f"""请用中文总结以下论文的核心内容：
 
@@ -39,20 +61,27 @@ def summarize_paper(paper, client):
 
 请用简洁的中文回答。"""
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": "你是一个学术研究助手，擅长用简洁的中文总结论文。"},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0.3,
-            max_tokens=500,
-        )
-        return response.choices[0].message.content
-    except Exception as e:
-        print(f"Error summarizing paper: {e}")
-        return None
+    for attempt in range(max_retries):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[
+                    {"role": "system", "content": "你是一个学术研究助手，擅长用简洁的中文总结论文。"},
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=0.3,
+                max_tokens=500,
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            print(f"  Attempt {attempt + 1}/{max_retries} failed: {e}")
+            if attempt < max_retries - 1:
+                wait_time = (attempt + 1) * 5
+                print(f"  Retrying in {wait_time}s...")
+                time.sleep(wait_time)
+            else:
+                print(f"  All retries failed for: {paper['title'][:50]}")
+                return None
 
 def generate_markdown(papers, summaries, date_str):
     """生成Markdown报告"""
@@ -153,19 +182,23 @@ def main():
         print("No papers to summarize!")
         return
 
-    # 初始化OpenAI客户端
-    client = OpenAI(
-        api_key=os.environ.get("OPENAI_API_KEY"),
-        base_url=os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
-    )
+    # 初始化客户端
+    client, model = get_client()
 
     # 总结每篇论文
     summaries = {}
+    success_count = 0
+
     for i, paper in enumerate(papers, 1):
-        print(f"Summarizing {i}/{len(papers)}: {paper['title'][:50]}...")
-        summary = summarize_paper(paper, client)
+        print(f"[{i}/{len(papers)}] {paper['title'][:50]}...")
+        summary = summarize_paper(paper, client, model)
         if summary:
             summaries[paper['id']] = summary
+            success_count += 1
+        # 避免 API 限流
+        time.sleep(1)
+
+    print(f"\nSuccessfully summarized: {success_count}/{len(papers)}")
 
     # 生成Markdown
     md_content = generate_markdown(papers, summaries, date_str)
