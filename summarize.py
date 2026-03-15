@@ -6,6 +6,8 @@
 
 import json
 import os
+import sys
+import argparse
 import time
 from pathlib import Path
 from datetime import datetime
@@ -13,8 +15,16 @@ from openai import OpenAI
 
 def get_client():
     """初始化 LLM 客户端"""
-    api_key = os.environ.get("OPENAI_API_KEY")
-    base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
+    # 优先从命令行参数获取
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--api-key', type=str, default=None)
+    parser.add_argument('--base-url', type=str, default=None)
+    args, _ = parser.parse_known_args()
+
+    # API Key: 命令行参数 > 环境变量
+    api_key = args.api_key or os.environ.get("OPENAI_API_KEY", "")
+    # Base URL: 命令行参数 > 环境变量 > 默认值
+    base_url = args.base_url or os.environ.get("OPENAI_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
 
     # 检测是否为阿里云 DashScope
     if "dashscope" in base_url or "aliyuncs" in base_url:

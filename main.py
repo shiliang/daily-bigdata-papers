@@ -6,6 +6,7 @@
 import subprocess
 import sys
 import os
+import argparse
 from datetime import datetime
 
 def run_cmd(cmd, check=True, capture=False):
@@ -17,16 +18,26 @@ def run_cmd(cmd, check=True, capture=False):
     return result
 
 def main():
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description='Daily paper fetch pipeline')
+    parser.add_argument('--api-key', type=str, default=os.environ.get("OPENAI_API_KEY", ""),
+                        help='OpenAI API Key (or set OPENAI_API_KEY env var)')
+    parser.add_argument('--base-url', type=str, default=os.environ.get("OPENAI_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1"),
+                        help='API Base URL')
+    args = parser.parse_args()
+
     print("="*60)
     print("Starting daily paper fetch pipeline...")
     print("="*60)
 
-    # 调试：检查环境变量
-    import os
-    api_key = os.environ.get("OPENAI_API_KEY", "")
-    base_url = os.environ.get("OPENAI_BASE_URL", "")
-    print(f"OPENAI_API_KEY set: {'Yes' if api_key else 'No'}")
-    print(f"OPENAI_BASE_URL: {base_url if base_url else 'Not set'}")
+    # 调试：显示配置
+    print(f"API Key provided: {'Yes' if args.api_key else 'No'}")
+    print(f"Base URL: {args.base_url}")
+
+    if not args.api_key:
+        print("\nERROR: No API Key provided!")
+        print("Please set OPENAI_API_KEY environment variable or use --api-key parameter")
+        sys.exit(1)
 
     # Step 1: 抓取论文
     print("\n[Step 1/3] Fetching papers from arXiv...")
@@ -34,9 +45,14 @@ def main():
     if result.returncode != 0:
         print(f"Warning: fetch_arxiv.py exited with code {result.returncode}")
 
-    # Step 2: 生成总结
+    # Step 2: 生成总结（传递 API 参数）
     print("\n[Step 2/3] Summarizing papers...")
-    result = subprocess.run([sys.executable, "summarize.py"], check=False)
+    summarize_cmd = [
+        sys.executable, "summarize.py",
+        "--api-key", args.api_key,
+        "--base-url", args.base_url
+    ]
+    result = subprocess.run(summarize_cmd, check=False)
     if result.returncode != 0:
         print(f"Warning: summarize.py exited with code {result.returncode}")
 
