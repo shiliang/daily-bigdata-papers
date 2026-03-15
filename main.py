@@ -21,6 +21,13 @@ def main():
     print("Starting daily paper fetch pipeline...")
     print("="*60)
 
+    # 调试：检查环境变量
+    import os
+    api_key = os.environ.get("OPENAI_API_KEY", "")
+    base_url = os.environ.get("OPENAI_BASE_URL", "")
+    print(f"OPENAI_API_KEY set: {'Yes' if api_key else 'No'}")
+    print(f"OPENAI_BASE_URL: {base_url if base_url else 'Not set'}")
+
     # Step 1: 抓取论文
     print("\n[Step 1/3] Fetching papers from arXiv...")
     result = subprocess.run([sys.executable, "fetch_arxiv.py"], check=False)
