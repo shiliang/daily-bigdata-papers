@@ -18,11 +18,11 @@ def get_client():
 
     # 检测是否为阿里云 DashScope
     if "dashscope" in base_url or "aliyuncs" in base_url:
-        model = os.environ.get("LLM_MODEL", "qwen-plus")
+        model = os.environ.get("LLM_MODEL", "qwen3.5-plus")
         print(f"Using Alibaba Cloud DashScope with model: {model}")
     else:
-        model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
-        print(f"Using OpenAI API with model: {model}")
+        model = os.environ.get("LLM_MODEL", "qwen3.5-plus")
+        print(f"Using API with model: {model}")
 
     client = OpenAI(
         api_key=api_key,
