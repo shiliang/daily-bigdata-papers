@@ -1,0 +1,1313 @@
+[
+  {
+    "id": "2603.17841v1",
+    "title": "Omni-3DEdit: Generalized Versatile 3D Editing in One-Pass",
+    "authors": [
+      "Chen Liyi",
+      "Wang Pengfei",
+      "Zhang Guowen",
+      "Ma Zhiyuan",
+      "Zhang Lei"
+    ],
+    "summary": "Most instruction-driven 3D editing methods rely on 2D models to guide the explicit and iterative optimization of 3D representations. This paradigm, however, suffers from two primary drawbacks. First, it lacks a universal design of different 3D editing tasks because the explicit manipulation of 3D geometry necessitates task-dependent rules, e.g., 3D appearance editing demands inherent source 3D geometry, while 3D removal alters source geometry. Second, the iterative optimization process is highly time-consuming, often requiring thousands of invocations of 2D/3D updating. We present Omni-3DEdit, a unified, learning-based model that generalizes various 3D editing tasks implicitly. One key challenge to achieve our goal is the scarcity of paired source-edited multi-view assets for training. To address this issue, we construct a data pipeline, synthesizing a relatively rich number of high-quality paired multi-view editing samples. Subsequently, we adapt the pre-trained generative model SEVA as our backbone by concatenating source view latents along with conditional tokens in sequence space. A dual-stream LoRA module is proposed to disentangle different view cues, largely enhancing our model's representational learning capability. As a learning-based model, our model is free of the time-consuming online optimization, and it can complete various 3D editing tasks in one forward pass, reducing the inference time from tens of minutes to approximately two minutes. Extensive experiments demonstrate the effectiveness and efficiency of Omni-3DEdit.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17841v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.17298v1",
+    "title": "Efficient and Effective Table-Centric Table Union Search in Data Lakes",
+    "authors": [
+      "Yongkang Sun",
+      "Zhihao Ding",
+      "Huiqiang Wang",
+      "Reynold Cheng",
+      "Jieming Shi"
+    ],
+    "summary": "In data lakes, information on the same subject is often fragmented across multiple tables. Table union search aims to find the top-k tables that can be unioned with a query table to extend it with more rows, without relying on metadata or ground-truth labels. Existing methods are mainly column-centric: they focus on modeling column unionability scores using column embeddings, which are then used throughout the search process for column matching, filtering, and aggregation. However, this overlooks holistic table-level semantics, which may result in suboptimal rankings and inefficiencies. We introduce TACTUS, a novel table-centric method for table union search. Unlike prior work that searches from columns to tables, we search in a table-first way and examine columns only in the final step. During offline processing, we directly generate table embeddings for holistic, table-level unionability scoring by designing table-level representation techniques, including positive table pair construction to simulate unionable tables, two-pronged negative table sampling to avoid latent positives and mine hard negatives to enhance representation quality, and attentive table encoding for effective embeddings. During online search, we first develop a table-centric adaptive candidate retrieval method that efficiently selects a compact, high-quality candidate pool by leveraging the distribution of table-level unionability scores induced by table embeddings. We then inspect columns only within this compact candidate set and design a dual-evidence reranking technique that integrates table-level and column-level scores to refine the final top-k results. Extensive experiments on real-world datasets show that TACTUS significantly improves result quality while being much faster than existing methods in both offline and online processing, often by an order of magnitude.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17298v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.15970v2",
+    "title": "100x Cost & Latency Reduction: Performance Analysis of AI Query Approximation using Lightweight Proxy Models",
+    "authors": [
+      "Yeounoh Chung",
+      "Rushabh Desai",
+      "Jian He",
+      "Yu Xiao",
+      "Thibaud Hottelier",
+      "Yves-Laurent Kom Samo",
+      "Pushkar Kadilkar",
+      "Xianshun Chen",
+      "Sam Idicula",
+      "Fatma Özcan",
+      "Alon Halevy",
+      "Yannis Papakonstantinou"
+    ],
+    "summary": "Several data warehouse and database providers have recently introduced extensions to SQL called AI Queries, enabling users to specify functions and conditions in SQL that are evaluated by LLMs, thereby broadening significantly the kinds of queries one can express over the combination of structured and unstructured data. LLMs offer remarkable semantic reasoning capabilities, making them an essential tool for complex and nuanced queries that blend structured and unstructured data. While extremely powerful, these AI queries can become prohibitively costly when invoked thousands of times. This paper provides an extensive evaluation of a recent AI query approximation approach that enables low cost analytics and database applications to benefit from AI queries. The approach delivers >100x cost and latency reduction for the semantic filter ($AI.IF$) operator and also important gains for semantic ranking ($AI.RANK$). The cost and performance gains come from utilizing cheap and accurate proxy models over embedding vectors. We show that despite the massive gains in latency and cost, these proxy models preserve accuracy and occasionally improve accuracy across various benchmark datasets, including the extended Amazon reviews benchmark that has 10M rows. We present an OLAP-friendly architecture within Google BigQuery for this approach for purely online (ad hoc) queries, and a low-latency HTAP database-friendly architecture in AlloyDB that could further improve the latency by moving the proxy model training offline. We present techniques that accelerate the proxy model training.",
+    "published": "2026-03-16",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.15970v2",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.16450v1",
+    "title": "MFTune: An Efficient Multi-fidelity Framework for Spark SQL Configuration Tuning",
+    "authors": [
+      "Beicheng Xu",
+      "Lingching Tung",
+      "Yuchen Wang",
+      "Yupeng Lu",
+      "Bin Cui"
+    ],
+    "summary": "Apache Spark SQL is a cornerstone of modern big data analytics.However,optimizing Spark SQL performance is challenging due to its vast configuration space and the prohibitive cost of evaluating massive workloads. Existing tuning methods predominantly rely on full-fidelity evaluations, which are extremely time-consuming,often leading to suboptimal performance within practical budgets.While multi-fidelity optimization offers a potential solution, directly applying standard techniques-such as data volume reduction or early stopping-proves ineffective for Spark SQL as they fail to preserve performance correlations or represent true system bottlenecks. To address these challenges, we propose MFTune, an efficient multi-fidelity framework that introduces a query-based fidelity partitioning strategy, utilizing representative SQL subsets to provide accurate, low-cost proxies. To navigate the huge search space, MFTune incorporates a density-based optimization mechanism for automated knob and range compression, alongside an adapted transfer learning approach and a two-phase warm start to further accelerate the tuning process. Experimental results on TPC-H and TPC-DS benchmarks demonstrate that MFTune significantly outperforms five state-of-the-art tuning methods, identifying superior configurations within practical time constraints.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16450v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.17108v1",
+    "title": "LLM-Powered Flood Depth Estimation from Social Media Imagery: A Vision-Language Model Framework with Mechanistic Interpretability for Transportation Resilience",
+    "authors": [
+      "Nafis Fuad",
+      "Xiaodong Qian"
+    ],
+    "summary": "Urban flooding poses an escalating threat to transportation network continuity, yet no operational system currently provides real-time, street-level flood depth information at the centimeter resolution required for dynamic routing, electric vehicle (EV) safety, and autonomous vehicle (AV) operations. This study presents FloodLlama, a fine-tuned open-source vision-language model (VLM) for continuous flood depth estimation from single street-level images, supported by a multimodal sensing pipeline using TikTok data. A synthetic dataset of approximately 190000 images was generated, covering seven vehicle types, four weather conditions, and 41 depth levels (0-40 cm at 1 cm resolution). Progressive curriculum training enabled coarse-to-fine learning, while LLaMA 3.2-11B Vision was fine-tuned using QLoRA. Evaluation across 34797 trials reveals a depth-dependent prompt effect: simple prompts perform better for shallow flooding, whereas chain-of-thought (CoT) reasoning improves performance at greater depths. FloodLlama achieves a mean absolute error (MAE) below 0.97 cm and Acc@5cm above 93.7% for deep flooding, exceeding 96.8% for shallow depths. A five-phase mechanistic interpretability framework identifies layer L23 as the critical depth-encoding transition and enables selective fine-tuning that reduces trainable parameters by 76-80% while maintaining accuracy. The Tier 3 configuration achieves 98.62% accuracy on real-world data and shows strong robustness under visual occlusion. A TikTok-based data pipeline, validated on 676 annotated flood frames from Detroit, demonstrates the feasibility of real-time, crowd-sourced flood sensing. The proposed framework provides a scalable, infrastructure-free solution with direct implications for EV safety, AV deployment, and resilient transportation management.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.17108v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.16759v1",
+    "title": "TurnWise: The Gap between Single- and Multi-turn Language Model Capabilities",
+    "authors": [
+      "Victoria Graf",
+      "Valentina Pyatkin",
+      "Nouha Dziri",
+      "Nathan Lambert",
+      "Hannaneh Hajishirzi"
+    ],
+    "summary": "Multi-turn conversations are a common and critical mode of language model interaction. However, current open training and evaluation data focus on single-turn settings, failing to capture the additional dimension of these longer interactions. To understand this multi-/single-turn gap, we first introduce a new benchmark, TurnWiseEval, for multi-turn capabilities that is directly comparable to single-turn chat evaluation. Our evaluation isolates multi-turn specific conversational ability through pairwise comparison to equivalent single-turn settings. We additionally introduce our synthetic multi-turn data pipeline TurnWiseData which allows the scalable generation of multi-turn training data. Our experiments with Olmo 3 show that training with multi-turn data is vital to achieving strong multi-turn chat performance, and that including as little as 10k multi-turn conversations during post-training can lead to a 12% improvement on TurnWiseEval.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16759v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.16397v1",
+    "title": "Fanar 2.0: Arabic Generative AI Stack",
+    "authors": [
+      "FANAR TEAM",
+      "Ummar Abbas",
+      "Mohammad Shahmeer Ahmad",
+      "Minhaj Ahmad",
+      "Abdulaziz Al-Homaid",
+      "Anas Al-Nuaimi",
+      "Enes Altinisik",
+      "Ehsaneddin Asgari",
+      "Sanjay Chawla",
+      "Shammur Chowdhury",
+      "Fahim Dalvi",
+      "Kareem Darwish",
+      "Nadir Durrani",
+      "Mohamed Elfeky",
+      "Ahmed Elmagarmid",
+      "Mohamed Eltabakh",
+      "Asim Ersoy",
+      "Masoomali Fatehkia",
+      "Mohammed Qusay Hashim",
+      "Majd Hawasly",
+      "Mohamed Hefeeda",
+      "Mus'ab Husaini",
+      "Keivin Isufaj",
+      "Soon-Gyo Jung",
+      "Houssam Lachemat",
+      "Ji Kim Lucas",
+      "Abubakr Mohamed",
+      "Tasnim Mohiuddin",
+      "Basel Mousi",
+      "Hamdy Mubarak",
+      "Ahmad Musleh",
+      "Mourad Ouzzani",
+      "Amin Sadeghi",
+      "Husrev Taha Sencar",
+      "Mohammed Shinoy",
+      "Omar Sinan",
+      "Yifan Zhang"
+    ],
+    "summary": "We present Fanar 2.0, the second generation of Qatar's Arabic-centric Generative AI platform. Sovereignty is a first-class design principle: every component, from data pipelines to deployment infrastructure, was designed and operated entirely at QCRI, Hamad Bin Khalifa University. Fanar 2.0 is a story of resource-constrained excellence: the effort ran on 256 NVIDIA H100 GPUs, with Arabic having only ~0.5% of web data despite 400 million native speakers. Fanar 2.0 adopts a disciplined strategy of data quality over quantity, targeted continual pre-training, and model merging to achieve substantial gains within these constraints. At the core is Fanar-27B, continually pre-trained from a Gemma-3-27B backbone on a curated corpus of 120 billion high-quality tokens across three data recipes. Despite using 8x fewer pre-training tokens than Fanar 1.0, it delivers substantial benchmark improvements: Arabic knowledge (+9.1 pts), language (+7.3 pts), dialects (+3.5 pts), and English capability (+7.6 pts). Beyond the core LLM, Fanar 2.0 introduces a rich stack of new capabilities. FanarGuard is a state-of-the-art 4B bilingual moderation filter for Arabic safety and cultural alignment. The speech family Aura gains a long-form ASR model for hours-long audio. Oryx vision family adds Arabic-aware image and video understanding alongside culturally grounded image generation. An agentic tool-calling framework enables multi-step workflows. Fanar-Sadiq utilizes a multi-agent architecture for Islamic content. Fanar-Diwan provides classical Arabic poetry generation. FanarShaheen delivers LLM-powered bilingual translation. A redesigned multi-layer orchestrator coordinates all components through intent-aware routing and defense-in-depth safety validation. Taken together, Fanar 2.0 demonstrates that sovereign, resource-constrained AI development can produce systems competitive with those built at far greater scale.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16397v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.16124v1",
+    "title": "SWE-QA-Pro: A Representative Benchmark and Scalable Training Recipe for Repository-Level Code Understanding",
+    "authors": [
+      "Songcheng Cai",
+      "Zhiheng Lyu",
+      "Yuansheng Ni",
+      "Xiangchao Chen",
+      "Baichuan Zhou",
+      "Shenzhe Zhu",
+      "Yi Lu",
+      "Haozhe Wang",
+      "Chi Ruan",
+      "Benjamin Schneider",
+      "Weixu Zhang",
+      "Xiang Li",
+      "Andy Zheng",
+      "Yuyu Zhang",
+      "Ping Nie",
+      "Wenhu Chen"
+    ],
+    "summary": "Agentic repository-level code understanding is essential for automating complex software engineering tasks, yet the field lacks reliable benchmarks. Existing evaluations often overlook the long tail topics and rely on popular repositories where Large Language Models (LLMs) can cheat via memorized knowledge. To address this, we introduce SWE-QA-Pro, a benchmark constructed from diverse, long-tail repositories with executable environments. We enforce topical balance via issue-driven clustering to cover under-represented task types and apply a rigorous difficulty calibration process: questions solvable by direct-answer baselines are filtered out. This results in a dataset where agentic workflows significantly outperform direct answering (e.g., a ~13-point gap for Claude Sonnet 4.5), confirming the necessity of agentic codebase exploration. Furthermore, to tackle the scarcity of training data for such complex behaviors, we propose a scalable synthetic data pipeline that powers a two-stage training recipe: Supervised Fine-Tuning (SFT) followed by Reinforcement Learning from AI Feedback (RLAIF). This approach allows small open models to learn efficient tool usage and reasoning. Empirically, a Qwen3-8B model trained with our recipe surpasses GPT-4o by 2.3 points on SWE-QA-Pro and substantially narrows the gap to state-of-the-art proprietary models, demonstrating both the validity of our evaluation and the effectiveness of our agentic training workflow.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16124v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.SE"
+  },
+  {
+    "id": "2603.15729v1",
+    "title": "AGILE: an end-to-end Rubin-LSST simulation of AGNs, galaxies, and stars I. Software description and first data release",
+    "authors": [
+      "A. Viitanen",
+      "A. Bongiorno",
+      "I. Saccheo",
+      "A. Grazian",
+      "M. Paolillo",
+      "V. Petrecca",
+      "D. De Cicco",
+      "D. Roberts",
+      "F. Shankar",
+      "V. Allevato",
+      "E. Merlin",
+      "D. Ilić",
+      "A. B. Kovačević G. De Somma",
+      "M. Di Criscienzo",
+      "L. Girardi",
+      "M. Marconi",
+      "A. Mazzi",
+      "G. Pastorelli",
+      "M. Trabucchi",
+      "T. Ananna",
+      "R. J. Assef",
+      "W. N. Brandt",
+      "M. Brescia",
+      "A. W. Graham",
+      "G. Li",
+      "D. Marsango",
+      "A. Peca",
+      "M. Polioudakis",
+      "C. M. Raiteri",
+      "B. Rani",
+      "C. Ricci",
+      "G. Richards",
+      "M. Salvato",
+      "S. Satheesh-Sheeba",
+      "R. Shirley",
+      "S. Tang",
+      "M. J. Temple",
+      "F. Tombesi",
+      "I. Yoon",
+      "F. Zou"
+    ],
+    "summary": "Contemporary large-scale surveys such as the Vera C. Rubin Observatory Legacy Survey of Space and Time (LSST) and Euclid present an unprecedented discovery potential for studying AGNs at the population level in the big data era. However, one major challenge is the accurate identification and classification of AGNs from optical/NIR photometry, or variability data alone. In order to optimize AGN selection, classification, and systematics, as well as to test different data analysis tools, we present AGILE (AGNs In the LSST Era), an LSST end-to-end simulation software. AGILE -- developed as part of the INAF LSST in-kind contribution -- is capable of simulating the anticipated AGN population in LSST and Euclid. We based AGILE on existing simulations of galaxies and stars, while we developed an AGN recipe based on empirical relations. AGILE populates complete galaxy samples with AGNs according to the observed AGN accretion rate distribution, and each AGN is assigned an optical/UV spectral energy distribution. Optical AGN variability is added using a damped random walk model connected to the AGN physical parameters. Finally, AGILE creates both LSST-like images and related data products. Using AGILE, we build a $24$ deg$^2$ complete mock truth catalog of AGNs, galaxies, and stars with $0.2 < z < 5.5$, $\\log M/M_\\odot > 8.5$ (AGNs and galaxies), and $r < 27.5$ mag (stars). We perform a pilot simulation (AGILE DR1) consisting of $1$ deg$^2$ of LSST operations in the COSMOS field observed up to three years according to the survey strategy. We use AGILE DR1 to quantify the accuracy of the LSST Science Pipelines in recovering true fluxes of AGNs, galaxies, and stars. We quantify the LSST completeness and purity in recovering Type 1 AGNs using typical color-color and variability selections. We share the AGILE DR1 dataset, an ideal test-bench for further scientific exploitation.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15729v1",
+    "categories": [
+      "astro-ph.GA"
+    ],
+    "primary_category": "astro-ph.GA"
+  },
+  {
+    "id": "2603.15490v1",
+    "title": "iDaVIE v1.0: A virtual reality tool for interactive analysis of astronomical data cubes",
+    "authors": [
+      "Alexander Sivitilli",
+      "Lucia Marchetti",
+      "Angus Comrie",
+      "P. Cilliers Pretorius",
+      "Thijs",
+      "van der Hulst",
+      "Fabio Vitello",
+      "D. J. Pisano",
+      "Ugo Becciani",
+      "A. Russell Taylor",
+      "Paolo Serra",
+      "Mayhew Steyn",
+      "Michaela van Zyl"
+    ],
+    "summary": "As modern astronomy confronts unprecedented data volumes, automated pipelines and machine-learning techniques have become essential for processing and analysis. As these workflows grow more complex, astronomers also require input and inspection tools that can keep pace. To address challenges in navigating multidimensional datasets for quality control and scientific interpretation, we present the immersive Data Visualisation Interactive Explorer (iDaVIE), a virtual reality (VR) software suite developed in collaboration with the astronomy community. iDaVIE enables users to import and render large 3D data cubes within a VR environment, offering real-time tools for selection, cropping, catalogue overlays, and exporting results back into existing pipelines. Built on the Unity engine and SteamVR, the system uses custom plug-ins for efficient data parsing, downsampling, and statistical calculations. The software has already been integrated into workflows such as verifying HI data cubes from MeerKAT, ASKAP, and APERTIF, refining detection masks, and identifying new sources. Its intuitive interface aims to reduce the cognitive load associated with higher-dimensional data, allowing researchers to focus more directly on scientific goals. As an open-source, scalable, and adaptable platform, iDaVIE supports continued development and integration with other tools. Version 1.0 marks a significant milestone, with planned enhancements including subcube loading, advanced rendering modes, video-generation scripts, and collaborative capabilities. By pairing immersive visualisation with robust interaction tools, iDaVIE seeks to transform how researchers engage with complex datasets and enhance productivity in the era of big data.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15490v1",
+    "categories": [
+      "astro-ph.IM",
+      "astro-ph.GA",
+      "cs.HC"
+    ],
+    "primary_category": "astro-ph.IM"
+  },
+  {
+    "id": "2603.14853v1",
+    "title": "WhispSynth: Scaling Multilingual Whisper Corpus through Real Data Curation and A Novel Pitch-free Generative Framework",
+    "authors": [
+      "Tianyi Tan",
+      "Jiaxin Ye",
+      "Yuanming Zhang",
+      "Xiaohuai Le",
+      "Xianjun Xia",
+      "Chuanzeng Huang",
+      "Jing Lu"
+    ],
+    "summary": "Whisper generation is constrained by the difficulty of data collection. Because whispered speech has low acoustic amplitude, high-fidelity recording is challenging. In this paper, we introduce WhispSynth, a large-scale multilingual corpus constructed via a novel high-fidelity generative framework. Specifically, we propose a pipeline integrating Differentiable Digital Signal Processing (DDSP)-based pitch-free method with Text-to-Speech (TTS) models. This framework refines a comprehensive collection of resources, including our newly constructed WhispNJU dataset, into 118 hours of high-fidelity whispered speech from 479 speakers. Unlike standard synthetic or noisy real data, our data engine faithfully preserves source vocal timbre and linguistic content while ensuring acoustic consistency, providing a robust foundation for text-to-whisper research. Experimental results demonstrate that WhispSynth exhibits significantly higher quality than existing corpora. Moreover, our CosyWhisper, tuned with WhispSynth, achieves speech naturalness on par with ground-truth samples. The official implementation and related resources are available at https://github.com/tan90xx/cosywhisper.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.14853v1",
+    "categories": [
+      "cs.SD"
+    ],
+    "primary_category": "cs.SD"
+  },
+  {
+    "id": "2602.23289v2",
+    "title": "Workload-Aware Incremental Reclustering in Cloud Data Warehouses",
+    "authors": [
+      "Yipeng Liu",
+      "Renfei Zhou",
+      "Jiaqi Yan",
+      "Huanchen Zhang"
+    ],
+    "summary": "Modern cloud data warehouses store data in micro-partitions and rely on metadata (e.g., zonemaps) for efficient data pruning during query processing. Maintaining data clustering in a large-scale table is crucial for effective data pruning. Existing automatic clustering approaches lack the flexibility required in dynamic cloud environments with continuous data ingestion and evolving workloads. This paper advocates a clean separation between reclustering policy and clustering-key selection. We introduce the concept of boundary micro-partitions that sit on the boundary of query ranges. We then present WAIR, a workload-aware algorithm to identify and recluster only boundary micro-partitions most critical for pruning efficiency. WAIR achieves near-optimal (with respect to fully sorted table layouts) query performance but incurs significantly lower reclustering cost with a theoretical upper bound. We further implement the algorithm into a prototype reclustering service and evaluate on standard benchmarks (TPC-H, DSB) and a real-world workload. Results show that WAIR improves query performance and reduces the overall cost compared to existing solutions.",
+    "published": "2026-02-26",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2602.23289v2",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.14229v1",
+    "title": "Agentic DAG-Orchestrated Planner Framework for Multi-Modal, Multi-Hop Question Answering in Hybrid Data Lakes",
+    "authors": [
+      "Kirushikesh D B",
+      "Manish Kesarwani",
+      "Nishtha Madaan",
+      "Sameep Mehta",
+      "Aldrin Dennis",
+      "Siddarth Ajay",
+      "Rakesh B R",
+      "Renu Rajagopal",
+      "Sudheesh Kairali"
+    ],
+    "summary": "Enterprises increasingly need natural language (NL) question answering over hybrid data lakes that combine structured tables and unstructured documents. Current deployed solutions, including RAG-based systems, typically rely on brute-force retrieval from each store and post-hoc merging. Such approaches are inefficient and leaky, and more critically, they lack explicit support for multi-hop reasoning, where a query is decomposed into successive steps (hops) that may traverse back and forth between structured and unstructured sources. We present Agentic DAG-Orchestrated Transformer (A.DOT) Planner, a framework for multi-modal, multi-hop question answering, that compiles user NL queries into directed acyclic graph (DAG) execution plans spanning both structured and unstructured stores. The system decomposes queries into parallelizable sub-queries, incorporates schema-aware reasoning, and applies both structural and semantic validation before execution. The execution engine adheres to the generated DAG plan to coordinate concurrent retrieval across heterogeneous sources, route intermediate outputs to dependent sub-queries, and merge final results in strict accordance with the plan's logical dependencies. Advanced caching mechanisms, incorporating paraphrase-aware template matching, enable the system to detect equivalent queries and reuse prior DAG execution plans for rapid re-execution, while the DataOps System addresses validation feedback or execution errors. The proposed framework not only improves accuracy and latency, but also produces explicit evidence trails, enabling verification of retrieved content, tracing of data lineage, and fostering user trust in the system's outputs. On benchmark dataset, A.DOT achieves 14.8% absolute gain in correctness and 10.7% in completeness over baselines.",
+    "published": "2026-03-15",
+    "updated": "2026-03-15",
+    "pdf_url": "https://arxiv.org/pdf/2603.14229v1",
+    "categories": [
+      "cs.AI",
+      "cs.SE"
+    ],
+    "primary_category": "cs.AI"
+  },
+  {
+    "id": "2603.13864v1",
+    "title": "Inevitable Encounters: Backdoor Attacks Involving Lossy Compression",
+    "authors": [
+      "Qian Li",
+      "Yunuo Chen",
+      "Yuntian Chen"
+    ],
+    "summary": "Real-world backdoor attacks often require poisoned datasets to be stored and transmitted before being used to compromise deep learning systems. However, in the era of big data, the inevitable use of lossy compression poses a fundamental challenge to invisible backdoor attacks. We find that triggers embedded in RGB images often become ineffective after the images are lossily compressed into binary bitstreams (e.g., JPEG files) for storage and transmission. As a result, the poisoned data lose its malicious effect after compression, causing backdoor injection to fail. In this paper, we highlight the necessity of explicitly accounting for the lossy compression process in backdoor attacks. This requires attackers to ensure that the transmitted binary bitstreams preserve malicious trigger information, so that effective triggers can be recovered in the decompressed data. Building on the region-of-interest (ROI) coding mechanism in image compression, we propose two poisoning strategies tailored to inevitable lossy compression. First, we introduce Universal Attack Activation, a universal method that uses sample-specific ROI masks to reactivate trigger information in binary bitstreams for learned image compression (LIC). Second, we present Compression-Adapted Attack, a new attack strategy that employs customized ROI masks to encode trigger information into binary bitstreams and is applicable to both traditional codecs and LIC. Extensive experiments demonstrate the effectiveness of both strategies.",
+    "published": "2026-03-14",
+    "updated": "2026-03-14",
+    "pdf_url": "https://arxiv.org/pdf/2603.13864v1",
+    "categories": [
+      "cs.CR",
+      "cs.CV"
+    ],
+    "primary_category": "cs.CR"
+  },
+  {
+    "id": "2603.13708v1",
+    "title": "RSEdit: Text-Guided Image Editing for Remote Sensing",
+    "authors": [
+      "Chen Zhenyuan",
+      "Zhang Zechuan",
+      "Zhang Feng"
+    ],
+    "summary": "General-domain text-guided image editors achieve strong photorealism but introduce artifacts, hallucinate objects, and break the orthographic constraints of remote sensing (RS) imagery. We trace this gap to two high-level causes: (i) limited RS world knowledge in pre-trained models, and (ii) conditioning schemes that misalign with the bi-temporal structure and spatial priors of Earth observation data. We present RSEdit, a unified framework that adapts pretrained text-to-image diffusion models - both U-Net and DiT - into instruction-following RS editors via channel concatenation and in-context token concatenation. Trained on over 60,000 semantically rich bi-temporal remote sensing image pairs, RSEdit learns precise, physically coherent edits while preserving geospatial content. Experiments show clear gains over general and commercial baselines, demonstrating strong generalizability across diverse scenarios including disaster impacts, urban growth, and seasonal shifts, positioning RSEdit as a robust data engine for downstream analysis. We will release code, pretrained models, evaluation protocols, training logs, and generated results for full reproducibility. Code: https://github.com/Bili-Sakura/RSEdit-Preview",
+    "published": "2026-03-14",
+    "updated": "2026-03-14",
+    "pdf_url": "https://arxiv.org/pdf/2603.13708v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.13833v1",
+    "title": "ImagiNav: Scalable Embodied Navigation via Generative Visual Prediction and Inverse Dynamics",
+    "authors": [
+      "Jie Chen",
+      "Yuxin Cai",
+      "Yizhuo Wang",
+      "Ruofei Bai",
+      "Yuhong Cao",
+      "Jun Li",
+      "Yau Wei Yun",
+      "Guillaume Sartoretti"
+    ],
+    "summary": "Enabling robots to navigate open-world environments via natural language is critical for general-purpose autonomy. Yet, Vision-Language Navigation has relied on end-to-end policies trained on expensive, embodiment-specific robot data. While recent foundation models trained on vast simulation data show promise, the challenge of scaling and generalizing due to the limited scene diversity and visual fidelity in simulation persists. To address this gap, we propose ImagiNav, a novel modular paradigm that decouples visual planning from robot actuation, enabling the direct utilization of diverse in-the-wild navigation videos. Our framework operates as a hierarchy: a Vision-Language Model first decomposes instructions into textual subgoals; a finetuned generative video model then imagines the future video trajectory towards that subgoal; finally, an inverse dynamics model extracts the trajectory from the imagined video, which can then be tracked via a low-level controller. We additionally develop a scalable data pipeline of in-the-wild navigation videos auto-labeled via inverse dynamics and a pretrained Vision-Language Model. ImagiNav demonstrates strong zero-shot transfer to robot navigation without requiring robot demonstrations, paving the way for generalist robots that learn navigation directly from unlabeled, open-world data.",
+    "published": "2026-03-14",
+    "updated": "2026-03-14",
+    "pdf_url": "https://arxiv.org/pdf/2603.13833v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO"
+  },
+  {
+    "id": "2603.13032v1",
+    "title": "Multimodal OCR: Parse Anything from Documents",
+    "authors": [
+      "Handong Zheng",
+      "Yumeng Li",
+      "Kaile Zhang",
+      "Liang Xin",
+      "Guangwei Zhao",
+      "Hao Liu",
+      "Jiayu Chen",
+      "Jie Lou",
+      "Jiyu Qiu",
+      "Qi Fu",
+      "Rui Yang",
+      "Shuo Jiang",
+      "Weijian Luo",
+      "Weijie Su",
+      "Weijun Zhang",
+      "Xingyu Zhu",
+      "Yabin Li",
+      "Yiwei ma",
+      "Yu Chen",
+      "Zhaohui Yu",
+      "Guang Yang",
+      "Colin Zhang",
+      "Lei Zhang",
+      "Yuliang Liu",
+      "Xiang Bai"
+    ],
+    "summary": "We present Multimodal OCR (MOCR), a document parsing paradigm that jointly parses text and graphics into unified textual representations. Unlike conventional OCR systems that focus on text recognition and leave graphical regions as cropped pixels, our method, termed dots.mocr, treats visual elements such as charts, diagrams, tables, and icons as first-class parsing targets, enabling systems to parse documents while preserving semantic relationships across elements. It offers several advantages: (1) it reconstructs both text and graphics as structured outputs, enabling more faithful document reconstruction; (2) it supports end-to-end training over heterogeneous document elements, allowing models to exploit semantic relations between textual and visual components; and (3) it converts previously discarded graphics into reusable code-level supervision, unlocking multimodal supervision embedded in existing documents. To make this paradigm practical at scale, we build a comprehensive data engine from PDFs, rendered webpages, and native SVG assets, and train a compact 3B-parameter model through staged pretraining and supervised fine-tuning. We evaluate dots.mocr from two perspectives: document parsing and structured graphics parsing. On document parsing benchmarks, it ranks second only to Gemini 3 Pro on our OCR Arena Elo leaderboard, surpasses existing open-source document parsing systems, and sets a new state of the art of 83.9 on olmOCR Bench. On structured graphics parsing, dots.mocr achieves higher reconstruction quality than Gemini 3 Pro across image-to-SVG benchmarks, demonstrating strong performance on charts, UI layouts, scientific figures, and chemical diagrams. These results show a scalable path toward building large-scale image-to-code corpora for multimodal pretraining. Code and models are publicly available at https://github.com/rednote-hilab/dots.mocr.",
+    "published": "2026-03-13",
+    "updated": "2026-03-13",
+    "pdf_url": "https://arxiv.org/pdf/2603.13032v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.12016v1",
+    "title": "Nyxus: A Next Generation Image Feature Extraction Library for the Big Data and AI Era",
+    "authors": [
+      "Nicholas Schaub",
+      "Andriy Kharchenko",
+      "Hamdah Abbasi",
+      "Sameeul Samee",
+      "Hythem Sidky",
+      "Nathan Hotaling"
+    ],
+    "summary": "Modern imaging instruments can produce terabytes to petabytes of data for a single experiment. The biggest barrier to processing big image datasets has been computational, where image analysis algorithms often lack the efficiency needed to process such large datasets or make tradeoffs in robustness and accuracy. Deep learning algorithms have vastly improved the accuracy of the first step in an analysis workflow (region segmentation), but the expansion of domain specific feature extraction libraries across scientific disciplines has made it difficult to compare the performance and accuracy of extracted features. To address these needs, we developed a novel feature extraction library called Nyxus. Nyxus is designed from the ground up for scalable out-of-core feature extraction for 2D and 3D image data and rigorously tested against established standards. The comprehensive feature set of Nyxus covers multiple biomedical domains including radiomics and cellular analysis, and is designed for computational scalability across CPUs and GPUs. Nyxus has been packaged to be accessible to users of various skill sets and needs: as a Python package for code developers, a command line tool, as a Napari plugin for low to no-code users or users that want to visualize results, and as an Open Container Initiative (OCI) compliant container that can be used in cloud or super-computing workflows aimed at processing large data sets. Further, Nyxus enables a new methodological approach to feature extraction allowing for programmatic tuning of many features sets for optimal computational efficiency or coverage for use in novel machine learning and deep learning applications.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.12016v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.11552v1",
+    "title": "Deep Domain Decomposition Method for Solving the Variational Inequality Problems",
+    "authors": [
+      "Yiyang Wang",
+      "Qijia Zhou",
+      "Shengyuan Deng",
+      "Chenliang Li"
+    ],
+    "summary": "By integrating physics-informed neural network (PINN) techniques with domain decomposition method, a deep domain decomposition method is presented for solving elliptic variational inequality problems. Based on the Ritz variation method, the elliptic variational inequality problem is firstly reformulated as an optimization problem, and then the subproblem in each subdomain is solved by using the Ritz-PINN method, which the parameters in the network are updated by the Adam optimizer, and the residual-adaptive training by introducing a residual-adaptive dataset update strategy to gradually guide the model to learn more complex regions. Additionally, the impact of overlapping regions on the performance of the new algorithm is explored. Numerical results demonstrate the effectiveness of the proposed algorithm, the mean square error can be reached 1.0e-07, and the number of iterations is independent of grid length h under uniform overlap conditions.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.11552v1",
+    "categories": [
+      "math.NA"
+    ],
+    "primary_category": "math.NA"
+  },
+  {
+    "id": "2603.12214v1",
+    "title": "WORKSWORLD: A Domain for Integrated Numeric Planning and Scheduling of Distributed Pipelined Workflows",
+    "authors": [
+      "Taylor Paul",
+      "William Regli"
+    ],
+    "summary": "This work pursues automated planning and scheduling of distributed data pipelines, or workflows. We develop a general workflow and resource graph representation that includes both data processing and sharing components with corresponding network interfaces for scheduling. Leveraging these graphs, we introduce WORKSWORLD, a new domain for numeric domain-independent planners designed for permanently scheduled workflows, like ingest pipelines. Our framework permits users to define data sources, available workflow components, and desired data destinations and formats without explicitly declaring the entire workflow graph as a goal. The planner solves a joint planning and scheduling problem, producing a plan that both builds the workflow graph and schedules its components on the resource graph. We empirically show that a state-of-the-art numeric planner running on commodity hardware with one hour of CPU time and 30GB of memory can solve linear-chain workflows of up to 14 components across eight sites.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.12214v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC"
+  },
+  {
+    "id": "2603.11928v1",
+    "title": "AS-Bridge: A Bidirectional Generative Framework Bridging Next-Generation Astronomical Surveys",
+    "authors": [
+      "Dichang Zhang",
+      "Yixuan Shao",
+      "Simon Birrer",
+      "Dimitris Samaras"
+    ],
+    "summary": "The upcoming decade of observational cosmology will be shaped by large sky surveys, such as the ground-based LSST at the Vera C. Rubin Observatory and the space-based Euclid mission. While they promise an unprecedented view of the Universe across depth, resolution, and wavelength, their differences in observational modality, sky coverage, point-spread function, and scanning cadence make joint analysis beneficial, but also challenging. To facilitate joint analysis, we introduce A(stronomical)S(urvey)-Bridge, a bidirectional generative model that translates between ground- and space-based observations. AS-Bridge learns a diffusion model that employs a stochastic Brownian Bridge process between the LSST and Euclid observations. The two surveys have overlapping sky regions, where we can explicitly model the conditional probabilistic distribution between them. We show that this formulation enables new scientific capabilities beyond single-survey analysis, including faithful probabilistic predictions of missing survey observations and inter-survey detection of rare events. These results establish the feasibility of inter-survey generative modeling. AS-Bridge is therefore well-positioned to serve as a complementary component of future LSST-Euclid joint data pipelines, enhancing the scientific return once data from both surveys become available. Data and code are available at \\href{https://github.com/ZHANG7DC/AS-Bridge}{https://github.com/ZHANG7DC/AS-Bridge}.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.11928v1",
+    "categories": [
+      "astro-ph.IM",
+      "cs.CV"
+    ],
+    "primary_category": "astro-ph.IM"
+  },
+  {
+    "id": "2603.09704v2",
+    "title": "Evaluation of LLMs in retrieving food and nutritional context for RAG systems",
+    "authors": [
+      "Maks Požarnik Vavken",
+      "Matevž Ogrinc",
+      "Tome Eftimov",
+      "Barbara Koroušić Seljak"
+    ],
+    "summary": "In this article, we evaluate four Large Language Models (LLMs) and their effectiveness at retrieving data within a specialized Retrieval-Augmented Generation (RAG) system, using a comprehensive food composition database. Our method is focused on the LLMs ability to translate natural language queries into structured metadata filters, enabling efficient retrieval via a Chroma vector database. By achieving high accuracy in this critical retrieval step, we demonstrate that LLMs can serve as an accessible, high-performance tool, drastically reducing the manual effort and technical expertise previously required for domain experts, such as food compilers and nutritionists, to leverage complex food and nutrition data. However, despite the high performance on easy and moderately complex queries, our analysis of difficult questions reveals that reliable retrieval remains challenging when queries involve non-expressible constraints. These findings demonstrate that LLM-driven metadata filtering excels when constraints can be explicitly expressed, but struggles when queries exceed the representational scope of the metadata format.",
+    "published": "2026-03-10",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.09704v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.09688v2",
+    "title": "Fusing Semantic, Lexical, and Domain Perspectives for Recipe Similarity Estimation",
+    "authors": [
+      "Denica Kjorvezir",
+      "Danilo Najkov",
+      "Eva Valencič",
+      "Erika Jesenko",
+      "Barbara Koroišić Seljak",
+      "Tome Eftimov",
+      "Riste Stojanov"
+    ],
+    "summary": "This research focuses on developing advanced methods for assessing similarity between recipes by combining different sources of information and analytical approaches. We explore the semantic, lexical, and domain similarity of food recipes, evaluated through the analysis of ingredients, preparation methods, and nutritional attributes. A web-based interface was developed to allow domain experts to validate the combined similarity results. After evaluating 318 recipe pairs, experts agreed on 255 (80%). The evaluation of expert assessments enables the estimation of which similarity aspects--lexical, semantic, or nutritional--are most influential in expert decision-making. The application of these methods has broad implications in the food industry and supports the development of personalized diets, nutrition recommendations, and automated recipe generation systems.",
+    "published": "2026-03-10",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.09688v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.08900v2",
+    "title": "A New Modeling to Feature Selection Based on the Fuzzy Rough Set Theory in Normal and Optimistic States on Hybrid Information Systems",
+    "authors": [
+      "Mohammad Hossein Safarpour",
+      "Seyed Majid Alavi",
+      "Mohammad Izadikhah",
+      "Hossein Dibachi"
+    ],
+    "summary": "Considering the high volume, wide variety, and rapid speed of data generation, investigating feature selection methods for big data presents various applications and advantages. By removing irrelevant and redundant features, feature selection reduces data dimensions, thereby facilitating optimal decision-making within decision systems. One of the key tools for feature selection in hybrid information systems is fuzzy rough set theory. However, this theory faces two significant challenges: First, obtaining fuzzy equivalence relations through intersection operations in high-dimensional spaces can be both time-consuming and memory-intensive. Additionally, this method may produce noisy data, complicating the feature selection process. The purpose and innovation of this paper are to address these issues. We proposed a new feature selection model that calculates the combined distance between objects and subsequently used this information to derive the fuzzy equivalence relation. Rather than directly solving the feature selection problem, this approach reformulates it into an optimization problem that can be tackled using appropriate meta-heuristic algorithms. We have named this new approach FSbuHD. The FSbuHD model operates in two modes - normal and optimistic - based on the selection of one of the two introduced fuzzy equivalence relations. The model is then tested on standard datasets from the UCI repository and compared with other algorithms. The results of this research demonstrate that FSbuHD is one of the most efficient and effective methods for feature selection when compared to previous methods and algorithms.",
+    "published": "2026-03-09",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.08900v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.10547v1",
+    "title": "Automatic End-to-End Data Integration using Large Language Models",
+    "authors": [
+      "Aaron Steiner",
+      "Christian Bizer"
+    ],
+    "summary": "Designing data integration pipelines typically requires substantial manual effort from data engineers to configure pipeline components and label training data. While LLMs have shown promise in handling individual steps of the integration process, their potential to replace all human input across end-to-end data integration pipelines has not been investigated. As a step toward exploring this potential, we present an automatic data integration pipeline that uses GPT-5.2 to generate all artifacts required to adapt the pipeline to specific use cases. These artifacts are schema mappings, value mappings for data normalization, training data for entity matching, and validation data for selecting conflict resolution heuristics in data fusion. We compare the performance of this LLM-based pipeline to the performance of human-designed pipelines along three case studies requiring the integration of video game, music, and company related data. Our experiments show that the LLM-based pipeline is able to produce similar results, for some tasks even better results, as the human-designed pipelines. End-to-end, the human and the LLM pipelines produce integrated datasets of comparable size and density. Having the LLM configure the pipelines costs approximately \\$10 per case study, which represents only a small fraction of the cost of having human data engineers perform the same tasks.",
+    "published": "2026-03-11",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.10547v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.10410v1",
+    "title": "Effective Dataset Distillation for Spatio-Temporal Forecasting with Bi-dimensional Compression",
+    "authors": [
+      "Taehyung Kwon",
+      "Yeonje Choi",
+      "Yeongho Kim",
+      "Kijung Shin"
+    ],
+    "summary": "Spatio-temporal time series are widely used in real-world applications, including traffic prediction and weather forecasting. They are sequences of observations over extensive periods and multiple locations, naturally represented as multidimensional data. Forecasting is a central task in spatio-temporal analysis, and numerous deep learning methods have been developed to address it. However, as dataset sizes and model complexities continue to grow in practice, training deep learning models has become increasingly time- and resource-intensive. A promising solution to this challenge is dataset distillation, which synthesizes compact datasets that can effectively replace the original data for model training. Although successful in various domains, including time series analysis, existing dataset distillation methods compress only one dimension, making them less suitable for spatio-temporal datasets, where both spatial and temporal dimensions jointly contribute to the large data volume. To address this limitation, we propose STemDist, the first dataset distillation method specialized for spatio-temporal time series forecasting. A key idea of our solution is to compress both temporal and spatial dimensions in a balanced manner, reducing training time and memory. We further reduce the distillation cost by performing distillation at the cluster level rather than the individual location level, and we complement this coarse-grained approach with a subset-based granular distillation technique that enhances forecasting performance. On five real-world datasets, we show empirically that, compared to both general and time-series dataset distillation methods, datasets distilled by our STemDist method enable model training (1) faster (up to 6X) (2) more memory-efficient (up to 8X), and (3) more effective (with up to 12% lower prediction error).",
+    "published": "2026-03-11",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.10410v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DB"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.11101v1",
+    "title": "Thousand-GPU Large-Scale Training and Optimization Recipe for AI-Native Cloud Embodied Intelligence Infrastructure",
+    "authors": [
+      "Chen Zhou",
+      "Haoran Sun",
+      "Hedan Yang",
+      "Jing Long",
+      "Junwu Xiong",
+      "Luqiao Wang",
+      "Mingxi Luo",
+      "Qiming Yang",
+      "Shuai Di",
+      "Song Wang",
+      "Tianyun Zhao",
+      "Wanting Xu",
+      "Wen Huang",
+      "Xiaodong Bai",
+      "Xiaomeng Tian",
+      "Xiaolong Xiang",
+      "Yicheng Gong",
+      "Yongjian Guo",
+      "Yucheng Guo",
+      "Yunxuan Ma",
+      "Yu Wei",
+      "Zhong Guan",
+      "Zhen Sun"
+    ],
+    "summary": "Embodied intelligence is a key step towards Artificial General Intelligence (AGI), yet its development faces multiple challenges including data, frameworks, infrastructure, and evaluation systems. To address these issues, we have, for the first time in the industry, launched a cloud-based, thousand-GPU distributed training platform for embodied intelligence, built upon the widely adopted LeRobot framework, and have systematically overcome bottlenecks across the entire pipeline. At the data layer, we have restructured the data pipeline to optimize the flow of embodied training data. In terms of training, for the GR00T-N1.5 model, utilizing thousand-GPU clusters and data at the scale of hundreds of millions, the single-round training time has been reduced from 15 hours to just 22 minutes, achieving a 40-fold speedup. At the model layer, by combining variable-length FlashAttention and Data Packing, we have moved from sample redundancy to sequence integration, resulting in a 188% speed increase; π-0.5 attention optimization has accelerated training by 165%; and FP8 quantization has delivered a 140% speedup. On the infrastructure side, relying on high-performance storage, a 3.2T RDMA network, and a Ray-driven elastic AI data lake, we have achieved deep synergy among data, storage, communication, and computation. We have also built an end-to-end evaluation system, creating a closed loop from training to simulation to assessment. This framework has already been fully validated on thousand-GPU clusters, laying a crucial technical foundation for the development and application of next-generation autonomous intelligent robots, and is expected to accelerate the arrival of the era of human-machine integration.",
+    "published": "2026-03-11",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.11101v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.RO"
+  },
+  {
+    "id": "2603.08823v2",
+    "title": "Fish Audio S2 Technical Report",
+    "authors": [
+      "Shijia Liao",
+      "Yuxuan Wang",
+      "Songting Liu",
+      "Yifan Cheng",
+      "Ruoyi Zhang",
+      "Tianyu Li",
+      "Shidong Li",
+      "Yisheng Zheng",
+      "Xingwei Liu",
+      "Qingzheng Wang",
+      "Zhizhuo Zhou",
+      "Jiahua Liu",
+      "Xin Chen",
+      "Dawei Han"
+    ],
+    "summary": "We introduce Fish Audio S2, an open-sourced text-to-speech system featuring multi-speaker, multi-turn generation, and, most importantly, instruction-following control via natural-language descriptions. To scale training, we develop a multi-stage training recipe together with a staged data pipeline covering video captioning and speech captioning, voice-quality assessment, and reward modeling. To push the frontier of open-source TTS, we release our model weights, fine-tuning code, and an SGLang-based inference engine. The inference engine is production-ready for streaming, achieving an RTF of 0.195 and a time-to-first-audio below 100 ms.Our code and weights are available on GitHub (https://github.com/fishaudio/fish-speech) and Hugging Face (https://huggingface.co/fishaudio/s2-pro). We highly encourage readers to visit https://fish.audio to try custom voices.",
+    "published": "2026-03-09",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.08823v2",
+    "categories": [
+      "cs.SD",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.SD"
+  },
+  {
+    "id": "2603.09329v1",
+    "title": "Measuring onion website discovery and Tor users' interests with honeypots",
+    "authors": [
+      "Arttu Paju",
+      "Waris Abdullah",
+      "Juha Nurmi"
+    ],
+    "summary": "Tor enables anonymous web browsing and access to anonymous onion websites. Prior work has focused on crawling and content analysis rather than on what users actually try to access. Our honeypot approach measures engagement across onion-site categories, revealing behavioral interest rather than inferred popularity. In March--April 2025, we deployed honeypot onion websites and seeded neutral-looking links via three channels -- the Ahmia Tor search engine, Stronghold paste onion \"paste\" service, and pastebin.com -- to observe discovery and subsequent interaction events (CAPTCHA solves; registration/login attempts). We observe that, almost without exception, human users originate from Ahmia.fi; after removing the honeypot links from the Ahmia.fi search results, visits dropped to nearly zero and no users solved CAPTCHAs. The honeypot landing front pages represent different forums for cybercrime activities -- child sexual abuse, violence, malware, stolen goods, illegal firearms, illegal drugs, and forgery items -- and, as a baseline comparison, an unclear forum. Within that set, the CSAM-themed honeypot drew markedly higher engagement than the other honeypots. When identical sites were offered in multiple languages, interaction events occurred most often on the English-language versions.",
+    "published": "2026-03-10",
+    "updated": "2026-03-10",
+    "pdf_url": "https://arxiv.org/pdf/2603.09329v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR"
+  },
+  {
+    "id": "2603.09122v1",
+    "title": "Nezha: A Key-Value Separated Distributed Store with Optimized Raft Integration",
+    "authors": [
+      "Yangyang Wang",
+      "Yucong Dong",
+      "Ziqian Cheng",
+      "Zichen Xu"
+    ],
+    "summary": "Distributed key-value stores are widely adopted to support elastic big data applications, leveraging purpose-built consensus algorithms like Raft to ensure data consistency. However, through systematic analysis, we reveal a critical performance issue in such consistent stores, i.e., overlapping persistence operations between consensus protocols and underlying storage engines result in significant I/O overhead. To address this issue, we present Nezha, a prototype distributed storage system that innovatively integrates key-value separation with Raft to provide scalable throughput in a strong consistency guarantee. Nezha redesigns the persistence strategy at the operation level and incorporates leveled garbage collection, significantly improving read and write performance while preserving Raft's safety properties. Experimental results demonstrate that, on average, Nezha achieves throughput improvements of 460.2%, 12.5%, and 72.6% for put, get, and scan operations, respectively.",
+    "published": "2026-03-10",
+    "updated": "2026-03-10",
+    "pdf_url": "https://arxiv.org/pdf/2603.09122v1",
+    "categories": [
+      "cs.DC",
+      "cs.DB"
+    ],
+    "primary_category": "cs.DC"
+  },
+  {
+    "id": "2603.09896v1",
+    "title": "Stepping VLMs onto the Court: Benchmarking Spatial Intelligence in Sports",
+    "authors": [
+      "Yuchen Yang",
+      "Yuqing Shao",
+      "Duxiu Huang",
+      "Linfeng Dong",
+      "Yifei Liu",
+      "Suixin Tang",
+      "Xiang Zhou",
+      "Yuanyuan Gao",
+      "Wei Wang",
+      "Yue Zhou",
+      "Xue Yang",
+      "Yanfeng Wang",
+      "Xiao Sun",
+      "Zhihang Zhong"
+    ],
+    "summary": "Sports have long attracted broad attention as they push the limits of human physical and cognitive capabilities. Amid growing interest in spatial intelligence for vision-language models (VLMs), sports provide a natural testbed for understanding high-intensity human motion and dynamic object interactions. To this end, we present CourtSI, the first large-scale spatial intelligence dataset tailored to sports scenarios. CourtSI contains over 1M QA pairs, organized under a holistic taxonomy that systematically covers spatial counting, distance measurement, localization, and relational reasoning, across representative net sports including badminton, tennis, and table tennis. Leveraging well-defined court geometry as metric anchors, we develop a semi-automatic data engine to reconstruct sports scenes, enabling scalable curation of CourtSI. In addition, we introduce CourtSI-Bench, a high-quality evaluation benchmark comprising 3,686 QA pairs with rigorous human verification. We evaluate 25 proprietary and open-source VLMs on CourtSI-Bench, revealing a remaining human-AI performance gap and limited generalization from existing spatial intelligence benchmarks. These findings indicate that sports scenarios expose limitations in spatial intelligence capabilities captured by existing benchmarks. Further, fine-tuning Qwen3-VL-8B on CourtSI improves accuracy on CourtSI-Bench by 23.5 percentage points. The adapted model also generalizes effectively to CourtSI-Ext, an evaluation set built on a similar but unseen sport, and demonstrates enhanced spatial-aware commentary generation. Together, these findings demonstrate that CourtSI provides a scalable pathway toward advancing spatial intelligence of VLMs in sports.",
+    "published": "2026-03-10",
+    "updated": "2026-03-10",
+    "pdf_url": "https://arxiv.org/pdf/2603.09896v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.08972v1",
+    "title": "MAcPNN: Mutual Assisted Learning on Data Streams with Temporal Dependence",
+    "authors": [
+      "Federico Giannini",
+      "Emanuele Della Valle"
+    ],
+    "summary": "Internet of Things (IoT) Analytics often involves applying machine learning (ML) models on data streams. In such scenarios, traditional ML paradigms face obstacles related to continuous learning while dealing with concept drifts, temporal dependence, and avoiding forgetting. Moreover, in IoT, different edge devices build up a network. When learning models on those devices, connecting them could be useful in improving performance and reusing others' knowledge. This work proposes Mutual Assisted Learning, a learning paradigm grounded on Vygotsky's popular Sociocultural Theory of Cognitive Development. Each device is autonomous and does not need a central orchestrator. Whenever it degrades its performance due to a concept drift, it asks for assistance from others and decides whether their knowledge is useful for solving the new problem. This way, the number of connections is drastically reduced compared to the classical Federated Learning approaches, where the devices communicate at each training round. Every device is equipped with a Continuous Progressive Neural Network (cPNN) to handle the dynamic nature of data streams. We call this implementation Mutual Assisted cPNN (MAcPNN). To implement it, we allow cPNNs for single data point predictions and apply quantization to reduce the memory footprint. Experimental results prove the effectiveness of MAcPNN in boosting performance on synthetic and real data streams.",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08972v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.08600v1",
+    "title": "Don't Look Back in Anger: MAGIC Net for Streaming Continual Learning with Temporal Dependence",
+    "authors": [
+      "Federico Giannini",
+      "Sandro D'Andrea",
+      "Emanuele Della Valle"
+    ],
+    "summary": "Concept drift, temporal dependence, and catastrophic forgetting represent major challenges when learning from data streams. While Streaming Machine Learning and Continual Learning (CL) address these issues separately, recent efforts in Streaming Continual Learning (SCL) aim to unify them. In this work, we introduce MAGIC Net, a novel SCL approach that integrates CL-inspired architectural strategies with recurrent neural networks to tame temporal dependence. MAGIC Net continuously learns, looks back at past knowledge by applying learnable masks over frozen weights, and expands its architecture when necessary. It performs all operations online, ensuring inference availability at all times. Experiments on synthetic and real-world streams show that it improves adaptation to new concepts, limits memory usage, and mitigates forgetting.",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08600v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.08612v1",
+    "title": "Query-Guided Analysis and Mitigation of Data Verification Errors (Extended Version)",
+    "authors": [
+      "Ran Schreiber",
+      "Yael Amsterdamer"
+    ],
+    "summary": "Data verification, the process of labeling data items as correct or incorrect, is a preprocessing step that may critically affect the quality of results in data-driven pipelines. Despite recent advances, verification can still produce erroneous labels that propagate to downstream query results in complex ways. We present a framework that complements existing verification tools by assessing the impact of potential labeling errors on query outputs and guiding additional verification steps to improve result reliability. To this end, we introduce Maximal Error Score (MES), a worst-case uncertainty metric that quantifies the reliability of query output tuples independently of the underlying data distribution. As an auxiliary indicator, we identify risky tuples - input tuples for which reducing label uncertainty may counterintuitively increase the output uncertainty. We then develop efficient algorithms for computing MES and detecting risky tuples, as well as a generic algorithm, named MESReduce, that builds on both indicators and interacts with external verifiers to select effective additional verification steps. We implement our techniques in a prototype system and evaluate them on real and synthetic datasets, demonstrating that MESReduce can substantially and effectively reduce the MES and improve the accuracy of verification results.",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08612v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.08337v1",
+    "title": "PRIME: Efficient Algorithm for Token Graph Routing Problem",
+    "authors": [
+      "Haotian Xu",
+      "Yuqing Zhu",
+      "Yuming Huang",
+      "Jing Tang"
+    ],
+    "summary": "Optimizing asset exchanges on blockchain-driven platforms poses a novel and challenging graph query optimization problem. In this model, assets represent vertices and exchanges form edges, recasting the graph query task as a routing problem over a large-scale, dynamic graph. However, the existing solutions fail to solve the problem efficiently due to the non-linear nature of the edge weights defined by a concave swap function. To address the challenge, we propose PRIME, a two-stage iterative graph algorithm designed for the Token Graph Routing Problem (TGRP). The first stage employs a pruned graph search to efficiently identify a set of high-potential routing paths. The second stage formulates the allocation task as a strongly convex optimization problem, which we solve using our novel Adaptive Sign Gradient Method (ASGM) with a linear convergence rate. Extensive experiments on real-world Ethereum data confirm PRIME's advantages over industry baselines. PRIME consistently outperforms the widely-used Uniswap routing algorithm, achieving up to 8.42 basis points (bps) better execution prices on large trades while reducing computation up to 96.7%. The practicality of PRIME is further validated by its deployment in hedge fund production environments, demonstrating its viability as a scalable graph query processing solution for high-frequency decentralized markets.",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08337v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.08260v1",
+    "title": "Seed2Scale: A Self-Evolving Data Engine for Embodied AI via Small to Large Model Synergy and Multimodal Evaluation",
+    "authors": [
+      "Cong Tai",
+      "Zhaoyu Zheng",
+      "Haixu Long",
+      "Hansheng Wu",
+      "Zhengbin Long",
+      "Haodong Xiang",
+      "Rong Shi",
+      "Zhuo Cui",
+      "Shizhuang Zhang",
+      "Gang Qiu",
+      "He Wang",
+      "Ruifeng Li",
+      "Biao Liu",
+      "Zhenzhe Sun",
+      "Tao Shen"
+    ],
+    "summary": "Existing data generation methods suffer from exploration limits, embodiment gaps, and low signal-to-noise ratios, leading to performance degradation during self-iteration. To address these challenges, we propose Seed2Scale, a self-evolving data engine that overcomes the data bottleneck through a heterogeneous synergy of \"small-model collection, large-model evaluation, and target-model learning\". Starting with as few as four seed demonstrations, the engine employs the lightweight Vision-Language-Action model, SuperTiny, as a dedicated collector, leveraging its strong inductive bias for robust exploration in parallel environments. Concurrently, a pre-trained Vision-Language Model is integrated as a Verifer to autonomously perform success/failure judgment and quality scoring for the massive generated trajectories. Seed2Scale effectively mitigates model collapse, ensuring the stability of the self-evolution process. Experimental results demonstrate that Seed2Scale exhibits signifcant scaling potential: as iterations progress, the success rate of the target model shows a robust upward trend, achieving a performance improvement of 131.2%. Furthermore, Seed2Scale signifcantly outperforms existing data augmentation methods, providing a scalable and cost-effective pathway for the large-scale development of Generalist Embodied AI. Project page: https://terminators2025.github.io/Seed2Scale.github.io",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08260v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO"
+  },
+  {
+    "id": "2603.08199v1",
+    "title": "Fusion-Poly: A Polyhedral Framework Based on Spatial-Temporal Fusion for 3D Multi-Object Tracking",
+    "authors": [
+      "Xian Wu",
+      "Yitao Wu",
+      "Xiaoyu Li",
+      "Zijia Li",
+      "Lijun Zhao",
+      "Lining Sun"
+    ],
+    "summary": "LiDAR-camera 3D multi-object tracking (MOT) combines rich visual semantics with accurate depth cues to improve trajectory consistency and tracking reliability. In practice, however, LiDAR and cameras operate at different sampling rates. To maintain temporal alignment, existing data pipelines usually synchronize heterogeneous sensor streams and annotate them at a reduced shared frequency, forcing most prior methods to perform spatial fusion only at synchronized timestamps through projection-based or learnable cross-sensor association. As a result, abundant asynchronous observations remain underexploited, despite their potential to support more frequent association and more robust trajectory estimation over short temporal intervals.\n  To address this limitation, we propose Fusion-Poly, a spatial-temporal fusion framework for 3D MOT that integrates asynchronous LiDAR and camera data. Fusion-Poly associates trajectories with multi-modal observations at synchronized timestamps and with single-modal observations at asynchronous timestamps, enabling higher-frequency updates of motion and existence states. The framework contains three key components: a frequency-aware cascade matching module that adapts to synchronized and asynchronous frames according to available detection modalities; a frequency-aware trajectory estimation module that maintains trajectories through high-frequency motion prediction, differential updates, and confidence-calibrated lifecycle management; and a full-state observation alignment module that improves cross-modal consistency at synchronized timestamps by optimizing image-projection errors.\n  On the nuScenes test set, Fusion-Poly achieves 76.5% AMOTA, establishing a new state of the art among tracking-by-detection 3D MOT methods. Extensive ablation studies further validate the effectiveness of each component. Code will be released.",
+    "published": "2026-03-09",
+    "updated": "2026-03-09",
+    "pdf_url": "https://arxiv.org/pdf/2603.08199v1",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.07572v1",
+    "title": "TS-MLLM: A Multi-Modal Large Language Model-based Framework for Industrial Time-Series Big Data Analysis",
+    "authors": [
+      "Haiteng Wang",
+      "Yikang Li",
+      "Yunfei Zhu",
+      "Jingheng Yan",
+      "Lei Ren",
+      "Laurence T. Yang"
+    ],
+    "summary": "Accurate analysis of industrial time-series big data is critical for the Prognostics and Health Management (PHM) of industrial equipment. While recent advancements in Large Language Models (LLMs) have shown promise in time-series analysis, existing methods typically focus on single-modality adaptations, failing to exploit the complementary nature of temporal signals, frequency-domain visual representations, and textual knowledge information. In this paper, we propose TS-MLLM, a unified multi-modal large language model framework designed to jointly model temporal signals, frequency-domain images, and textual domain knowledge. Specifically, we first develop an Industrial time-series Patch Modeling branch to capture long-range temporal dynamics. To integrate cross-modal priors, we introduce a Spectrum-aware Vision-Language Model Adaptation (SVLMA) mechanism that enables the model to internalize frequency-domain patterns and semantic context. Furthermore, a Temporal-centric Multi-modal Attention Fusion (TMAF) mechanism is designed to actively retrieve relevant visual and textual cues using temporal features as queries, ensuring deep cross-modal alignment. Extensive experiments on multiple industrial benchmarks demonstrate that TS-MLLM significantly outperforms state-of-the-art methods, particularly in few-shot and complex scenarios. The results validate our framework's superior robustness, efficiency, and generalization capabilities for industrial time-series prediction.",
+    "published": "2026-03-08",
+    "updated": "2026-03-08",
+    "pdf_url": "https://arxiv.org/pdf/2603.07572v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.07235v1",
+    "title": "Novel Table Search [Technical Report]",
+    "authors": [
+      "Besat Kassaie",
+      "Renée J. Miller"
+    ],
+    "summary": "Avoiding redundancy in query results has been extensively studied in relational databases and information retrieval, yet its implications for data lakes remain largely unexplored. We bridge this gap by investigating how to discover unionable tables that contribute new information for a given query table in large-scale data lakes. We formally define Novel Table Search (NTS) as the problem of finding tables that are novel with respect to a given query table and identify two desirable properties that any scoring function for NTS should satisfy. We introduce a concrete scoring mechanism designed to maximize syntactic novelty, prove that it satisfies the proposed properties, and show that the associated optimization problem is NP-hard. To address this challenge, we develop an efficient approximation technique based on penalization, i.e., Attribute-Based Novel Table Search (ANTs). We propose three additional NTS variants to achieve syntactic novelty and introduce two evaluation metrics for syntactic novelty. Through extensive experiments, we demonstrate that ANTs outperforms other methods in capturing syntactic novelty across evaluation metrics and various benchmarks, while also achieving the lowest execution time.",
+    "published": "2026-03-07",
+    "updated": "2026-03-07",
+    "pdf_url": "https://arxiv.org/pdf/2603.07235v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.07300v1",
+    "title": "AutoResearch-RL: Perpetual Self-Evaluating Reinforcement Learning Agents for Autonomous Neural Architecture Discovery",
+    "authors": [
+      "Nilesh Jain",
+      "Rohit Yadav",
+      "Sagar Kotian",
+      "Claude AI"
+    ],
+    "summary": "We present AutoResearch-RL, a framework in which a reinforcement learning agent conducts open-ended neural architecture and hyperparameter research without human supervision, running perpetually until a termination oracle signals convergence or resource exhaustion. At each step the agent proposes a code modification to a target training script, executes it under a fixed wall clock time budget, observes a scalar reward derived from validation bits-per-byte (val-bpb), and updates its policy via Proximal Policy Optimisation (PPO).\n  The key design insight is the separation of three concerns: (i) a frozen environment (data pipeline, evaluation protocol, and constants) that guarantees fair cross-experiment comparison; (ii) a mutable target file (train.py) that represents the agent's editable state; and (iii) a meta-learner (the RL agent itself) that accumulates a growing trajectory of experiment outcomes and uses them to inform subsequent proposals.\n  We formalise this as a Markov Decision Process, derive convergence guarantees under mild assumptions, and demonstrate empirically on a single GPU nanochat pretraining benchmark that AutoResearch-RL discovers configurations that match or exceed hand-tuned baselines after approximately 300 overnight iterations, with no human in the loop.",
+    "published": "2026-03-07",
+    "updated": "2026-03-07",
+    "pdf_url": "https://arxiv.org/pdf/2603.07300v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.07263v1",
+    "title": "Seeing the Context: Rich Visual Context-Aware Speech Recognition via Multimodal Reasoning",
+    "authors": [
+      "Wenjie Tian",
+      "Mingchen Shao",
+      "Bingshen Mu",
+      "Xuelong Geng",
+      "Chengyou Wang",
+      "Yujie Liao",
+      "Zhixian Zhao",
+      "Ziyu Zhang",
+      "Jingbin Hu",
+      "Mengqi Wei",
+      "Lei Xie"
+    ],
+    "summary": "Audio-visual speech recognition (AVSR) is an extension of ASR that incorporates visual signals. Current AVSR approaches primarily focus on lip motion, largely overlooking rich context present in the video such as speaking scene and on-screen text. To tackle such CAVSR (AVSR including rich visual Context), we propose VASR designed to \"see\" and reason the visual context to improve speech recognition. Specifically, we construct an Audio-Visual Chain-of-Thought (AV-CoT) that explicitly enforces intermediate cross-modal grounding between acoustic signals and visual evidence. This evidence-driven reasoning mitigates the \"single-modality dominance\" problem, where models either over-rely on visual context or fail to utilize it. Besides, to address the data scarcity, we construct and release a corresponding data pipeline and test set. Experiments show that AV-CoT effectively mitigates the single-modality dominance, achieving state-of-the-art performance in CAVSR. The project is open-sourced.",
+    "published": "2026-03-07",
+    "updated": "2026-03-07",
+    "pdf_url": "https://arxiv.org/pdf/2603.07263v1",
+    "categories": [
+      "cs.SD",
+      "eess.AS"
+    ],
+    "primary_category": "cs.SD"
+  },
+  {
+    "id": "2603.06889v1",
+    "title": "Single-pass Possibilistic Clustering with Damped Window Footprints",
+    "authors": [
+      "Jeffrey Dale",
+      "James Keller",
+      "Aquila Galusha"
+    ],
+    "summary": "Streaming clustering is a domain that has become extremely relevant in the age of big data, such as in network traffic analysis or in processing continuously-running sensor data. Furthermore, possibilistic models offer unique benefits over approaches from the literature, especially with the introduction of a \"fuzzifier\" parameter that controls how quickly typicality degrades as one gets further from cluster centers. We propose a single-pass possibilistic clustering (SPC) algorithm that is effective and easy to apply to new datasets. Key contributions of SPC include the ability to model non-spherical clusters, closed-form footprint updates over arbitrarily sized damped windows, and the employment of covariance union from the multiple hypothesis tracking literature to merge two cluster mean and covariance estimates. SPC is validated against five other streaming clustering algorithm on the basis of cluster purity and normalized mutual information.",
+    "published": "2026-03-06",
+    "updated": "2026-03-06",
+    "pdf_url": "https://arxiv.org/pdf/2603.06889v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.06130v1",
+    "title": "A Hazard-Informed Data Pipeline for Robotics Physical Safety",
+    "authors": [
+      "Alexei Odinokov",
+      "Rostislav Yavorskiy"
+    ],
+    "summary": "This report presents a structured Robotics Physical Safety Framework based on explicit asset declaration, systematic vulnerability enumeration, and hazard-driven synthetic data generation. The approach bridges classical risk engineering with modern machine learning pipelines, enabling safety envelope learning grounded in a formalized hazard ontology. The key contribution of this framework is the alignment between classical safety engineering, digital twin simulation, synthetic data generation, and machine learning model training.",
+    "published": "2026-03-06",
+    "updated": "2026-03-06",
+    "pdf_url": "https://arxiv.org/pdf/2603.06130v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO"
+  },
+  {
+    "id": "2603.05162v1",
+    "title": "RESYSTANCE: Unleashing Hidden Performance of Compaction in LSM-trees via eBPF",
+    "authors": [
+      "Hongsu Byun",
+      "Seungjae Lee",
+      "Honghyeon Yoo",
+      "Myoungjoon Kim",
+      "Sungyong Park"
+    ],
+    "summary": "The development of high-speed storage devices such as NVMe SSDs has shifted the primary I/O bottleneck from hardware to software. Modern database systems also rely on kernel-based I/O paths, where frequent system call invocations and kernel-user space transitions lead to relatively large overheads and performance degradation. This issue is particularly pronounced in Log-Structured Merge-tree (LSM-tree)-based NoSQL databases. We identified that, in particular, the background compaction process generates a large number of read system calls, causing significant overhead. To address this problem, we propose RESYSTANCE, which leverages eBPF and io_uring to free compaction from system calls and unlock hidden performance potential. RESYSTANCE improves disk I/O efficiency during read operations via io uring and significantly reduces software stack overhead by handling compaction directly inside the kernel through eBPF. Moreover, RESYSTANCE minimizes user-kernel transitions by offloading key I/O routines into the kernel without modifying the LSM-tree structure or compaction algorithm. RESYSTANCE was extensively evaluated using db_bench, YCSB, and OLTP workloads. Compared to baseline RocksDB, it reduced the average number of system call invocations during compaction by 99% and shortened compaction time by 50%. Consequently, in write-intensive workloads, RESYSTANCE improved throughput by up to 75% and reduced the p99 latency by 40%.",
+    "published": "2026-03-05",
+    "updated": "2026-03-05",
+    "pdf_url": "https://arxiv.org/pdf/2603.05162v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.04692v1",
+    "title": "Engineering Regression Without Real-Data Training: Domain Adaptation for Tabular Foundation Models Using Multi-Dataset Embeddings",
+    "authors": [
+      "Lyle Regenwetter",
+      "Rosen Yu",
+      "Cyril Picard",
+      "Faez Ahmed"
+    ],
+    "summary": "Predictive modeling in engineering applications has long been dominated by bespoke models and small, siloed tabular datasets, limiting the applicability of large-scale learning approaches. Despite recent progress in tabular foundation models, the resulting synthetic training distributions used for pre-training may not reflect the statistical structure of engineering data, limiting transfer to engineering regression. We introduce TREDBench, a curated collection of 83 real-world tabular regression datasets with expert engineering/non-engineering labels, and use TabPFN 2.5's dataset-level embedding to study domain structure in a common representation space. We find that engineering datasets are partially distinguishable from non-engineering datasets, while standard procedurally generated datasets are highly distinguishable from engineering datasets, revealing a substantial synthetic-real domain gap. To bridge this gap without training on real engineering samples, we propose an embedding-guided synthetic data curation method: we generate and identify \"engineering-like\" synthetic datasets, and perform continued pre-training of TabPFN 2.5 using only the selected synthetic tasks. Across 35 engineering regression datasets, this synthetic-only adaptation improves predictive accuracy and data efficiency, outperforming TabPFN 2.5 on 29/35 datasets and AutoGluon on 27/35, with mean multiplicative data-efficiency gains of 1.75x and 4.44x, respectively. More broadly, our results indicate that principled synthetic data curation can convert procedural generators into domain-relevant \"data engines,\" enabling foundation models to improve in data-sparse scientific and industrial domains where real data collection is the primary bottleneck.",
+    "published": "2026-03-05",
+    "updated": "2026-03-05",
+    "pdf_url": "https://arxiv.org/pdf/2603.04692v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2601.13117v2",
+    "title": "The Case for Cardinality Lower Bounds",
+    "authors": [
+      "Mihail Stoian",
+      "Tiemo Bang",
+      "Hangdong Zhao",
+      "Jesús Camacho-Rodríguez",
+      "Yuanyuan Tian",
+      "Andreas Kipf"
+    ],
+    "summary": "Despite decades of research, cardinality estimation remains the optimizer's Achilles heel, with industrial-strength systems exhibiting a systemic tendency toward underestimation. At cloud scale, this is a severe production vulnerability: in Microsoft's Fabric Data Warehouse (DW), a mere 0.05% of extreme underestimates account for 95% of all CPU under-allocation, causing preventable slowdowns for thousands of queries daily. Yet recent theoretical work on provable upper bounds only corrects overestimation, leaving the more harmful problem of underestimation unaddressed. We argue that closing this gap is an urgent priority for the database community.\n  As a vital step toward this goal, we introduce xBound, the first theoretical framework for computing provable join size lower bounds. By clipping the optimizer's estimates from below, xBound offers strict mathematical safety nets demanded by production systems - using only a handful of lightweight base table statistics. We demonstrate xBound's practical impact on Fabric DW: on the StackOverflow-CEB benchmark, it corrects 23.6% of Fabric DW's underestimates, yielding end-to-end query speedups of up to 20.1x, demonstrating that even a first step toward provable lower bounds can deliver meaningful production gains and motivating the community to further pursue this critical, open direction.",
+    "published": "2026-01-19",
+    "updated": "2026-03-05",
+    "pdf_url": "https://arxiv.org/pdf/2601.13117v2",
+    "categories": [
+      "cs.DB",
+      "cs.IT"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.04657v1",
+    "title": "Stan: An LLM-based thermodynamics course assistant",
+    "authors": [
+      "Eric M. Furst",
+      "Vasudevan Venkateshwaran"
+    ],
+    "summary": "Discussions of AI in education focus predominantly on student-facing tools -- chatbots, tutors, and problem generators -- while the potential for the same infrastructure to support instructors remains largely unexplored. We describe Stan, a suite of tools for an undergraduate chemical engineering thermodynamics course built on a data pipeline that we develop and deploy in dual roles: serving students and supporting instructors from a shared foundation of lecture transcripts and a structured textbook index. On the student side, a retrieval-augmented generation (RAG) pipeline answers natural-language queries by extracting technical terms, matching them against the textbook index, and synthesizing grounded responses with specific chapter and page references. On the instructor side, the same transcript corpus is processed through structured analysis pipelines that produce per-lecture summaries, identify student questions and moments of confusion, and catalog the anecdotes and analogies used to motivate difficult material -- providing a searchable, semester-scale record of teaching that supports course reflection, reminders, and improvement. All components, including speech-to-text transcription, structured content extraction, and interactive query answering, run entirely on locally controlled hardware using open-weight models (Whisper large-v3, Llama~3.1 8B) with no dependence on cloud APIs, ensuring predictable costs, full data privacy, and reproducibility independent of third-party services. We describe the design, implementation, and practical failure modes encountered when deploying 7--8 billion parameter models for structured extraction over long lecture transcripts, including context truncation, bimodal output distributions, and schema drift, along with the mitigations that resolved them.",
+    "published": "2026-03-04",
+    "updated": "2026-03-04",
+    "pdf_url": "https://arxiv.org/pdf/2603.04657v1",
+    "categories": [
+      "cs.CL",
+      "cs.CY",
+      "physics.ed-ph"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2603.03126v1",
+    "title": "The Science Data Lake: A Unified Open Infrastructure Integrating 293 Million Papers Across Eight Scholarly Sources with Embedding-Based Ontology Alignment",
+    "authors": [
+      "Jonas Wilinski"
+    ],
+    "summary": "Scholarly data are largely fragmented across siloed databases with divergent metadata and missing linkages among them. We present the Science Data Lake, a locally-deployable infrastructure built on DuckDB and simple Parquet files that unifies eight open sources - Semantic Scholar, OpenAlex, SciSciNet, Papers with Code, Retraction Watch, Reliance on Science, a preprint-to-published mapping, and Crossref - via DOI normalization while preserving source-level schemas. The resource comprises approximately 960GB of Parquet files spanning ~293 million uniquely identifiable papers across ~22 schemas and ~153 SQL views. An embedding-based ontology alignment using BGE-large sentence embeddings maps 4,516 OpenAlex topics to 13 scientific ontologies (~1.3 million terms), yielding 16,150 mappings covering 99.8% of topics ($\\geq 0.65$ threshold) with $F1 = 0.77$ at the recommended $\\geq 0.85$ operating point, outperforming TF-IDF, BM25, and Jaro-Winkler baselines on a 300-pair gold-standard evaluation. We validate through 10 automated checks, cross-source citation agreement analysis (pairwise Pearson $r = 0.76$ - $0.87$), and stratified manual annotation. Four vignettes demonstrate cross-source analyses infeasible with any single database. The resource is open source, deployable on a single drive or queryable remotely via HuggingFace, and includes structured documentation suitable for large language model (LLM) based research agents.",
+    "published": "2026-03-03",
+    "updated": "2026-03-03",
+    "pdf_url": "https://arxiv.org/pdf/2603.03126v1",
+    "categories": [
+      "cs.DL",
+      "cs.DB",
+      "cs.IR",
+      "cs.SI"
+    ],
+    "primary_category": "cs.DL"
+  },
+  {
+    "id": "2603.01686v1",
+    "title": "DiffusionXRay: A Diffusion and GAN-Based Approach for Enhancing Digitally Reconstructed Chest Radiographs",
+    "authors": [
+      "Aryan Goyal",
+      "Ashish Mittal",
+      "Pranav Rao",
+      "Manoj Tadepalli",
+      "Preetham Putha"
+    ],
+    "summary": "Deep learning-based automated diagnosis of lung cancer has emerged as a crucial advancement that enables healthcare professionals to detect and initiate treatment earlier. However, these models require extensive training datasets with diverse case-specific properties. High-quality annotated data is particularly challenging to obtain, especially for cases with subtle pulmonary nodules that are difficult to detect even for experienced radiologists. This scarcity of well-labeled datasets can limit model performance and generalization across different patient populations. Digitally reconstructed radiographs (DRR) using CT-Scan to generate synthetic frontal chest X-rays with artificially inserted lung nodules offers one potential solution. However, this approach suffers from significant image quality degradation, particularly in the form of blurred anatomical features and loss of fine lung field structures. To overcome this, we introduce DiffusionXRay, a novel image restoration pipeline for Chest X-ray images that synergistically leverages denoising diffusion probabilistic models (DDPMs) and generative adversarial networks (GANs). DiffusionXRay incorporates a unique two-stage training process: First, we investigate two independent approaches, DDPM-LQ and GAN-based MUNIT-LQ, to generate low-quality CXRs, addressing the challenge of training data scarcity, posing this as a style transfer problem. Subsequently, we train a DDPM-based model on paired low-quality and high-quality images, enabling it to learn the nuances of X-ray image restoration. Our method demonstrates promising results in enhancing image clarity, contrast, and overall diagnostic value of chest X-rays while preserving subtle yet clinically significant artifacts, validated by both quantitative metrics and expert radiological assessment.",
+    "published": "2026-03-02",
+    "updated": "2026-03-02",
+    "pdf_url": "https://arxiv.org/pdf/2603.01686v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV"
+  },
+  {
+    "id": "2603.01448v1",
+    "title": "SEAnet: A Deep Learning Architecture for Data Series Similarity Search",
+    "authors": [
+      "Qitong Wang",
+      "Themis Palpanas"
+    ],
+    "summary": "A key operation for massive data series collection analysis is similarity search. According to recent studies, SAX-based indexes offer state-of-the-art performance for similarity search tasks. However, their performance lags under high-frequency, weakly correlated, excessively noisy, or other dataset-specific properties. In this work, we propose Deep Embedding Approximation (DEA), a novel family of data series summarization techniques based on deep neural networks. Moreover, we describe SEAnet, a novel architecture especially designed for learning DEA, that introduces the Sum of Squares preservation property into the deep network design. We further enhance SEAnet with SEAtrans encoder. Finally, we propose novel sampling strategies, SEAsam and SEAsamE, that allow SEAnet to effectively train on massive datasets. Comprehensive experiments on 7 diverse synthetic and real datasets verify the advantages of DEA learned using SEAnet in providing high-quality data series summarizations and similarity search results.",
+    "published": "2026-03-02",
+    "updated": "2026-03-02",
+    "pdf_url": "https://arxiv.org/pdf/2603.01448v1",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2603.01444v1",
+    "title": "Autoregressive Synthesis of Sparse and Semi-Structured Mixed-Type Data",
+    "authors": [
+      "Thomas Rückstieß",
+      "Robin Vujanic"
+    ],
+    "summary": "Synthetic data generation is a critical capability for data sharing, privacy compliance, system benchmarking and test data provisioning. Existing methods assume dense, fixed-schema tabular data, yet this assumption is increasingly at odds with modern data systems - from document databases, REST APIs to data lakes - which store and exchange data in sparse, semi-structured formats like JSON. Applying existing tabular methods to such data requires flattening of nested data into wide, sparse tables which scales poorly. We present Origami, an autoregressive transformer-based architecture that tokenizes data records, including nested objects and variable length arrays, into sequences of key, value and structural tokens. This representation natively handles sparsity, mixed types and hierarchical structure without flattening or imputation. Origami outperforms baselines spanning GAN, VAE, diffusion and autoregressive architectures on fidelity, utility and detection metrics across nearly all settings, while maintaining high privacy scores. On semi-structured datasets with up to 38% sparsity, baseline synthesizers either fail to scale or degrade substantially, while Origami maintains high-fidelity synthesis that is harder to distinguish from real data. To the best of our knowledge, Origami is the first architecture capable of natively modeling and generating semi-structured data end-to-end.",
+    "published": "2026-03-02",
+    "updated": "2026-03-02",
+    "pdf_url": "https://arxiv.org/pdf/2603.01444v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2603.00468v1",
+    "title": "Cloud-OpsBench: A Reproducible Benchmark for Agentic Root Cause Analysis in Cloud Systems",
+    "authors": [
+      "Yilun Wang",
+      "Guangba Yu",
+      "Haiyu Huang",
+      "Zirui Wang",
+      "Yujie Huang",
+      "Pengfei Chen",
+      "Michael R. Lyu"
+    ],
+    "summary": "The transition to agentic Root Cause Analysis (RCA) necessitates benchmarks that evaluate active reasoning rather than passive classification. However, current frameworks fail to reconcile ecological validity with reproducibility. We introduce Cloud-OpsBench, a large-scale benchmark that employs a State Snapshot Paradigm to construct a deterministic digital twin of the cloud, featuring 452 distinct fault cases across 40 root cause types spanning the full Kubernetes stack. Crucially, Cloud-OpsBench serves as an enabling infrastructure for next-generation SRE research: (1) As a Data Engine, it harvests high-quality reasoning trajectories to bootstrap Supervised Fine-Tuning (SFT) for Small Language Models; (2) As an Reinforcement Learning (RL) environment, it transforms high-risk operations into a safe low-latency sandbox for training policy optimization agents; and (3) As a Diagnostic Standard, its process-centric protocol uncovers architectural bottlenecks guiding the design of robust specialized multi-agent system for RCA.",
+    "published": "2026-02-28",
+    "updated": "2026-02-28",
+    "pdf_url": "https://arxiv.org/pdf/2603.00468v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "primary_category": "cs.SE"
+  },
+  {
+    "id": "2602.18775v1",
+    "title": "Should I Hide My Duck in the Lake?",
+    "authors": [
+      "Jonas Dann",
+      "Gustavo Alonso"
+    ],
+    "summary": "Data lakes spend a significant fraction of query execution time on scanning data from remote storage. Decoding alone accounts for 46% of runtime when running TPC-H directly on Parquet files. To address this bottleneck, we propose a vision for a data processing SmartNIC for the cloud that sits on the network datapath of compute nodes to offload decoding and pushed-down operators, effectively hiding the cost of querying raw files. Our experimental estimations with DuckDB suggest that by operating directly on pre-filtered data as delivered by a SmartNIC, significantly smaller CPUs can still match query throughput of traditional setups.",
+    "published": "2026-02-21",
+    "updated": "2026-02-21",
+    "pdf_url": "https://arxiv.org/pdf/2602.18775v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2602.10441v1",
+    "title": "LakeMLB: Data Lake Machine Learning Benchmark",
+    "authors": [
+      "Feiyu Pan",
+      "Tianbin Zhang",
+      "Aoqian Zhang",
+      "Yu Sun",
+      "Zheng Wang",
+      "Lixing Chen",
+      "Li Pan",
+      "Jianhua Li"
+    ],
+    "summary": "Modern data lakes have emerged as foundational platforms for large-scale machine learning, enabling flexible storage of heterogeneous data and structured analytics through table-oriented abstractions. Despite their growing importance, standardized benchmarks for evaluating machine learning performance in data lake environments remain scarce. To address this gap, we present LakeMLB (Data Lake Machine Learning Benchmark), designed for the most common multi-source, multi-table scenarios in data lakes. LakeMLB focuses on two representative multi-table scenarios, Union and Join, and provides three real-world datasets for each scenario, covering government open data, finance, Wikipedia, and online marketplaces. The benchmark supports three representative integration strategies: pre-training-based, data augmentation-based, and feature augmentation-based approaches. We conduct extensive experiments with state-of-the-art tabular learning methods, offering insights into their performance under complex data lake scenarios. We release both datasets and code to facilitate rigorous research on machine learning in data lake ecosystems; the benchmark is available at https://github.com/zhengwang100/LakeMLB.",
+    "published": "2026-02-11",
+    "updated": "2026-02-11",
+    "pdf_url": "https://arxiv.org/pdf/2602.10441v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG"
+  },
+  {
+    "id": "2602.10027v1",
+    "title": "Optimal Bounds-Only Pruning for Spatial AkNN Joins",
+    "authors": [
+      "Dominik Winecki"
+    ],
+    "summary": "We propose a bounds-only pruning test for exact Euclidean AkNN joins on partitioned spatial datasets. Data warehouses commonly partition large tables and store row group statistics for them to accelerate searches and joins, rather than maintaining indexes. AkNN joins can benefit from such statistics by constructing bounds and localizing join evaluations to a few partitions before loading them to build spatial indexes. Existing pruning methods are overly conservative for bounds-only spatial data because they do not fully capture its directional semantics, thereby missing opportunities to skip unneeded partitions at the earliest stages of a join. We propose a three-bound proximity test to determine whether all points within a partition have a closer neighbor in one partition than in another, potentially occluded partition. We show that our algorithm is both optimal and efficient.",
+    "published": "2026-02-10",
+    "updated": "2026-02-10",
+    "pdf_url": "https://arxiv.org/pdf/2602.10027v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2602.08793v1",
+    "title": "LakeHopper: Cross Data Lakes Column Type Annotation through Model Adaptation",
+    "authors": [
+      "Yushi Sun",
+      "Xujia Li",
+      "Nan Tang",
+      "Quanqing Xu",
+      "Chuanhui Yang",
+      "Lei Chen"
+    ],
+    "summary": "Column type annotation is vital for tasks like data cleaning, integration, and visualization. Recent solutions rely on resource-intensive language models fine-tuned on well-annotated columns from a particular set of tables, i.e., a source data lake. In this paper, we study whether we can adapt an existing pre-trained LM-based model to a new (i.e., target) data lake to minimize the annotations required on the new data lake. However, challenges include the source-target knowledge gap, selecting informative target data, and fine-tuning without losing shared knowledge exist. We propose LakeHopper, a framework that identifies and resolves the knowledge gap through LM interactions, employs a cluster-based data selection scheme for unannotated columns, and uses an incremental fine-tuning mechanism that gradually adapts the source model to the target data lake. Our experimental results validate the effectiveness of LakeHopper on two different data lake transfers under both low-resource and high-resource settings.",
+    "published": "2026-02-09",
+    "updated": "2026-02-09",
+    "pdf_url": "https://arxiv.org/pdf/2602.08793v1",
+    "categories": [
+      "cs.CL",
+      "cs.DB"
+    ],
+    "primary_category": "cs.CL"
+  },
+  {
+    "id": "2602.08226v1",
+    "title": "ByteHouse: A Cloud-Native OLAP Engine with Incremental Computation and Multi-Modal Retrieval",
+    "authors": [
+      "Yuxing Han",
+      "Yu Lin",
+      "Yifeng Dong",
+      "Xuanhe Zhou",
+      "Xindong Peng",
+      "Xinhui Tian",
+      "Zhiyuan You",
+      "Yingzhong Guo",
+      "Xi Chen",
+      "Weiping Qu",
+      "Tao Meng",
+      "Dayue Gao",
+      "Haoyu Wang",
+      "Liuxi Wei",
+      "Huanchen Zhang",
+      "Fan Wu"
+    ],
+    "summary": "With the rapid rise of intelligent data services, modern enterprises increasingly require efficient, multimodal, and cost-effective data analytics infrastructures. However, in ByteDance's production environments, existing systems fall short due to limitations such as I/O-inefficient multimodal storage, inflexible query optimization (e.g., failing to optimize multimodal access patterns), and performance degradation caused by resource disaggregation (e.g., loss of data locality in remote storage). To address these challenges, we introduce ByteHouse (https://bytehouse.cloud), a cloud-native data warehouse designed for real-time multimodal data analytics. The storage layer integrates a unified table engine that provides a two-tier logical abstraction and physically consistent layout, SSD-backed cluster-scale cache (CrossCache) that supports shared caching across compute nodes, and virtual file system (NexusFS) that enable efficient local access on compute nodes. The compute layer supports analytical, batch, and incremental execution modes, with tailored optimizations for hybrid queries (e.g., runtime filtering over tiered vector indexes). The control layer coordinates global metadata and transactions, and features an effective optimizer enhanced by historical execution traces and AI-assisted plan selection. Evaluations on internal and standard workloads show that ByteHouse achieves significant efficiency improvement over existing systems.",
+    "published": "2026-02-09",
+    "updated": "2026-02-09",
+    "pdf_url": "https://arxiv.org/pdf/2602.08226v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2512.14622v2",
+    "title": "Beyond Text-to-SQL: Autonomous Research-Driven Database Exploration with DAR",
+    "authors": [
+      "Ostap Vykhopen",
+      "Viktoria Skorik",
+      "Maksym Tereshchenko",
+      "Veronika Solopova"
+    ],
+    "summary": "Large language models can already query databases, yet most existing systems remain reactive: they rely on explicit user prompts and do not actively explore data. We introduce DAR (Data Agnostic Researcher), a multi-agent system that performs end-to-end database research without human-initiated queries. DAR orchestrates specialized AI agents across three layers: initialization (intent inference and metadata extraction), execution (SQL and AI-based query synthesis with iterative validation), and synthesis (report generation with built-in quality control). All reasoning is executed directly inside BigQuery using native generative AI functions, eliminating data movement and preserving data governance. On a realistic asset-incident dataset, DAR completes the full analytical task in 16 minutes, compared to 8.5 hours for a professional analyst (approximately 32x times faster), while producing useful pattern-based insights and evidence-grounded recommendations. Although human experts continue to offer deeper contextual interpretation, DAR excels at rapid exploratory analysis. Overall, this work shifts database interaction from query-driven assistance toward autonomous, research-driven exploration within cloud data warehouses.",
+    "published": "2025-12-16",
+    "updated": "2026-02-09",
+    "pdf_url": "https://arxiv.org/pdf/2512.14622v2",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2602.07336v1",
+    "title": "Learned Query Optimizer in Alibaba MaxCompute: Challenges, Analysis, and Solutions",
+    "authors": [
+      "Lianggui Weng",
+      "Dandan Liu",
+      "Wenzhuang Zhu",
+      "Rong Zhu",
+      "Junzheng Zheng",
+      "Bolin Ding",
+      "Zhiguo Zhang",
+      "Jingren Zhou"
+    ],
+    "summary": "Existing learned query optimizers remain ill-suited to modern distributed, multi-tenant data warehouses due to idealized modeling assumptions and design choices. Using Alibaba's MaxCompute as a representative, we surface four fundamental, system-agnostic challenges for any deployable learned query optimizer: 1) highly dynamic execution environments that induce large variance in plan costs; 2) potential absence of input statistics needed for cost estimation; 3) infeasibility of conventional model refinement; and 4) uncertain benefits across different workloads. These challenges expose a deep mismatch between theoretical advances and production realities and demand a principled, deployment-first redesign of learned optimizers.\n  To bridge this gap, we present LOAM, a one-stop learned query optimization framework for MaxCompute. Its design principles and techniques generalize and are readily adaptable to similar systems. Architecturally, LOAM introduces a statistics-free plan encoding that leverages operator semantics and historical executions to infer details about data distributions and explicitly encodes the execution environments of training queries to learn their impacts on plan costs. For online queries with unknown environments at prediction time, LOAM provides a theoretical bound on the achievable performance and a practical strategy to smooth the environmental impacts on cost estimations. For system operating, LOAM integrates domain adaptation techniques into training to generalize effectively to online query plans without requiring conventional refinement. Additionally, LOAM includes a lightweight project selector to prioritize high-benefit deployment projects. LOAM has seen up to 30% CPU cost savings over MaxCompute's native query optimizer on production workloads, which could translate to substantial real-world resource savings.",
+    "published": "2026-02-07",
+    "updated": "2026-02-07",
+    "pdf_url": "https://arxiv.org/pdf/2602.07336v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB"
+  },
+  {
+    "id": "2601.19899v1",
+    "title": "Evaluation of Oncotimia: An LLM based system for supporting tumour boards",
+    "authors": [
+      "Luis Lorenzo",
+      "Marcos Montana-Mendez",
+      "Sergio Figueiras",
+      "Miguel Boubeta",
+      "Cristobal Bernardo-Castineira"
+    ],
+    "summary": "Multidisciplinary tumour boards (MDTBs) play a central role in oncology decision-making but require manual processes and structuring large volumes of heterogeneous clinical information, resulting in a substantial documentation burden. In this work, we present ONCOTIMIA, a modular and secure clinical tool designed to integrate generative artificial intelligence (GenAI) into oncology workflows and evaluate its application to the automatic completion of lung cancer tumour board forms using large language models (LLMs). The system combines a multi-layer data lake, hybrid relational and vector storage, retrieval-augmented generation (RAG) and a rule-driven adaptive form model to transform unstructured clinical documentation into structured and standardised tumour board records. We assess the performance of six LLMs deployed through AWS Bedrock on ten lung cancer cases, measuring both completion form accuracy and end-to-end latency. The results demonstrate high performance across models, with the best performing configuration achieving an 80% of correct field completion and clinically acceptable response time for most LLMs. Larger and more recent models exhibit best accuracies without incurring prohibitive latency. These findings provide empirical evidence that LLM- assisted autocompletion form is technically feasible and operationally viable in multidisciplinary lung cancer workflows and support its potential to significantly reduce documentation burden while preserving data quality.",
+    "published": "2026-01-27",
+    "updated": "2026-01-27",
+    "pdf_url": "https://arxiv.org/pdf/2601.19899v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL"
+  }
+]
