@@ -1,0 +1,660 @@
+[
+  {
+    "id": "2603.19172v1",
+    "title": "DyMoE: Dynamic Expert Orchestration with Mixed-Precision Quantization for Efficient MoE Inference on Edge",
+    "authors": [
+      "Yuegui Huang",
+      "Zhiyuan Fang",
+      "Weiqi Luo",
+      "Ruoyu Wu",
+      "Wuhui Chen",
+      "Zibin Zheng"
+    ],
+    "summary": "Despite the computational efficiency of MoE models, the excessive memory footprint and I/O overhead inherent in multi-expert architectures pose formidable challenges for real-time inference on resource-constrained edge platforms. While existing static methods struggle with a rigid latency-accuracy trade-off, we observe that expert importance is highly skewed and depth-dependent. Motivated by these insights, we propose DyMoE, a dynamic mixed-precision quantization framework designed for high-performance edge inference. Leveraging insights into expert importance skewness and depth-dependent sensitivity, DyMoE introduces: (1) importance-aware prioritization to dynamically quantize experts at runtime; (2) depth-adaptive scheduling to preserve semantic integrity in critical layers; and (3) look-ahead prefetching to overlap I/O stalls. Experimental results on commercial edge hardware show that DyMoE reduces Time-to-First-Token (TTFT) by 3.44x-22.7x and up to a 14.58x speedup in Time-Per-Output-Token (TPOT) compared to state-of-the-art offloading baselines, enabling real-time, accuracy-preserving MoE inference on resource-constrained edge devices.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19172v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.19078v1",
+    "title": "Articulated-Body Dynamics Network: Dynamics-Grounded Prior for Robot Learning",
+    "authors": [
+      "Sangwoo Shin",
+      "Kunzhao Ren",
+      "Xiaobin Xiong",
+      "Josiah Hanna"
+    ],
+    "summary": "Recent work in reinforcement learning has shown that incorporating structural priors for articulated robots, such as link connectivity, into policy networks improves learning efficiency. However, dynamics properties, despite their fundamental role in determining how forces and motion propagate through the body, remain largely underexplored as an inductive bias for policy learning. To address this gap, we present the Articulated-Body Dynamics Network (ABD-Net), a novel graph neural network architecture grounded in the computational structure of forward dynamics. Specifically, we adapt the inertia propagation mechanism from the Articulated Body Algorithm, systematically aggregating inertial quantities from child to parent links in a tree-structured manner, while replacing physical quantities with learnable parameters. Embedding ABD-NET into the policy actor enables dynamics-informed representations that capture how actions propagate through the body, leading to efficient and robust policy learning. Through experiments with simulated humanoid, quadruped, and hopper robots, our approach demonstrates increased sample efficiency and generalization to dynamics shifts compared to transformer-based and GNN baselines. We further validate the learned policy on real Unitree G1 and Go2 robots, state-of-the-art humanoid and quadruped platforms, generating dynamic, versatile and robust locomotion behaviors through sim-to-real transfer with real-time inference.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19078v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.18601v1",
+    "title": "From Connectivity to Multi-Orbit Intelligence: Space-Based Data Center Architectures for 6G and Beyond",
+    "authors": [
+      "Shimaa Naser",
+      "Maryam Tariq",
+      "Raneem Abdel-Rahim",
+      "De Mi",
+      "Azzam Mourad",
+      "Hadi Otrok",
+      "Mahmoud Al-Qutayri",
+      "Ayman Elnashar",
+      "Sami Muhaidat"
+    ],
+    "summary": "Direct handset-to-satellite (DHTS) communication is emerging as a core capability of 6G non-terrestrial networks, enabling standard devices to directly access low Earth orbit (LEO) satellites. While LEO provides the physical access layer for DHTS, large-scale device connectivity introduces challenges in mobility management, interference control, spectrum efficiency, and constellation-wide coordination. Relay-only LEO architectures are insufficient to manage massive handset access under dynamic traffic and energy constraints. This article introduces a hierarchical architecture in which direct handset-to-LEO access is supported by multi-orbit space-based data centers (SBDCs) spanning LEO, medium Earth orbit (MEO), and geostationary Earth orbit (GEO). In this framework, LEO satellites handle radio access and real-time inference, while higher orbital layers provide regional aggregation, global orchestration, and compute-aware routing. By embedding distributed in-orbit computing, energy-aware scheduling, and AI-driven hierarchical control, the constellation evolves from a passive relay network into an intelligent multi-layer system capable of supporting large-scale DHTS services. We discuss key enabling technologies, envisioned multi-orbit integrated Earth-space compute architecture, and open research challenges in integrating multi-orbit computing, highlighting pathways toward scalable and resilient 6G DHTS networks.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18601v1",
+    "categories": [
+      "cs.ET"
+    ],
+    "primary_category": "cs.ET",
+    "github": null
+  },
+  {
+    "id": "2603.19221v1",
+    "title": "Online Learning and Equilibrium Computation with Ranking Feedback",
+    "authors": [
+      "Mingyang Liu",
+      "Yongshan Chen",
+      "Zhiyuan Fan",
+      "Gabriele Farina",
+      "Asuman Ozdaglar",
+      "Kaiqing Zhang"
+    ],
+    "summary": "Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \\emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \\emph{ranking} over a set of proposed actions at each timestep. We consider two ranking mechanisms: rankings induced by the \\emph{instantaneous} utility at the current timestep, and rankings induced by the \\emph{time-average} utility up to the current timestep, under both \\emph{full-information} and \\emph{bandit} feedback settings. Using the standard external-regret metric, we show that sublinear regret is impossible with instantaneous-utility ranking feedback in general. Moreover, when the ranking model is relatively deterministic, \\emph{i.e.}, under the Plackett-Luce model with a temperature that is sufficiently small, sublinear regret is also impossible with time-average utility ranking feedback. We then develop new algorithms that achieve sublinear regret under the additional assumption that the utility sequence has sublinear total variation. Notably, for full-information time-average utility ranking feedback, this additional assumption can be removed. As a consequence, when all players in a normal-form game follow our algorithms, repeated play yields an approximate coarse correlated equilibrium. We also demonstrate the effectiveness of our algorithms in an online large-language-model routing task.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19221v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.19139v1",
+    "title": "Hierarchical Latent Structure Learning through Online Inference",
+    "authors": [
+      "Ines Aitsahalia",
+      "Kiyohito Iigaya"
+    ],
+    "summary": "Learning systems must balance generalization across experiences with discrimination of task-relevant details. Effective learning therefore requires representations that support both. Online latent-cause models support incremental inference but assume flat partitions, whereas hierarchical Bayesian models capture multilevel structure but typically require offline inference. We introduce the Hierarchical Online Learning of Multiscale Experience Structure (HOLMES) model, a computational framework for hierarchical latent structure learning through online inference. HOLMES combines a variation on the nested Chinese Restaurant Process prior with sequential Monte Carlo inference to perform tractable trial-by-trial inference over hierarchical latent representations without explicit supervision over the latent structure. In simulations, HOLMES matched the predictive performance of flat models while learning more compact representations that supported one-shot transfer to higher-level latent categories. In a context-dependent task with nested temporal structure, HOLMES also improved outcome prediction relative to flat models. These results provide a tractable computational framework for discovering hierarchical structure in sequential data.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19139v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.NC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.18999v1",
+    "title": "Regret Bounds for Competitive Resource Allocation with Endogenous Costs",
+    "authors": [
+      "Rui Chai"
+    ],
+    "summary": "We study online resource allocation among N interacting modules over T rounds. Unlike standard online optimization, costs are endogenous: they depend on the full allocation vector through an interaction matrix W encoding pairwise cooperation and competition.\n  We analyze three paradigms: (I) uniform allocation (cost-ignorant), (II) gated allocation (cost-estimating), and (III) competitive allocation via multiplicative weights update with interaction feedback (cost-revealing). Our main results establish a strict separation under adversarial sequences with bounded variation: uniform incurs Omega(T) regret, gated achieves O(T^{2/3}), and competitive achieves O(sqrt(T log N)). The performance gap stems from competitive allocation's ability to exploit endogenous cost information revealed through interactions.\n  We further show that W's topology governs a computation-regret tradeoff. Full interaction (|E|=O(N^2)) yields the tightest bound but highest per-step cost, while sparse topologies (|E|=O(N)) increase regret by at most O(sqrt(log N)) while reducing per-step cost from O(N^2) to O(N). Ring-structured topologies with both cooperative and competitive links - of which the five-element Wuxing topology is canonical - minimize the computation x regret product.\n  These results provide the first formal regret-theoretic justification for decentralized competitive allocation in modular architectures and establish cost endogeneity as a fundamental challenge distinct from partial observability.\n  Keywords: online learning, regret bounds, resource allocation, endogenous costs, interaction topology, multiplicative weights, modular systems, Wuxing topology",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.18999v1",
+    "categories": [
+      "cs.AI",
+      "cs.DS",
+      "cs.GT",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2603.16195v2",
+    "title": "S-VAM: Shortcut Video-Action Model by Self-Distilling Geometric and Semantic Foresight",
+    "authors": [
+      "Haodong Yan",
+      "Zhide Zhong",
+      "Jiaguan Zhu",
+      "Junjie He",
+      "Weilin Yuan",
+      "Wenxuan Song",
+      "Xin Gong",
+      "Yingjie Cai",
+      "Guanyi Zhao",
+      "Xu Yan",
+      "Bingbing Liu",
+      "Ying-Cong Chen",
+      "Haoang Li"
+    ],
+    "summary": "Video action models (VAMs) have emerged as a promising paradigm for robot learning, owing to their powerful visual foresight for complex manipulation tasks. However, current VAMs, typically relying on either slow multi-step video generation or noisy one-step feature extraction, cannot simultaneously guarantee real-time inference and high-fidelity foresight. To address this limitation, we propose S-VAM, a shortcut video-action model that foresees coherent geometric and semantic representations via a single forward pass. Serving as a stable blueprint, these foreseen representations significantly simplify the action prediction. To enable this efficient shortcut, we introduce a novel self-distillation strategy that condenses structured generative priors of multi-step denoising into one-step inference. Specifically, vision foundation model (VFM) representations extracted from the diffusion model's own multi-step generated videos provide teacher targets. Lightweight decouplers, as students, learn to directly map noisy one-step features to these targets. Extensive experiments in simulation and the real world demonstrate that our S-VAM outperforms state-of-the-art methods, enabling efficient and precise manipulation in complex environments. Our project page is https://haodong-yan.github.io/S-VAM/",
+    "published": "2026-03-17",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.16195v2",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.18157v1",
+    "title": "Learning-Augmented Algorithms for $k$-median via Online Learning",
+    "authors": [
+      "Anish Hebbar",
+      "Rong Ge",
+      "Amit Kumar",
+      "Debmalya Panigrahi"
+    ],
+    "summary": "The field of learning-augmented algorithms seeks to use ML techniques on past instances of a problem to inform an algorithm designed for a future instance. In this paper, we introduce a novel model for learning-augmented algorithms inspired by online learning. In this model, we are given a sequence of instances of a problem and the goal of the learning-augmented algorithm is to use prior instances to propose a solution to a future instance of the problem. The performance of the algorithm is measured by its average performance across all the instances, where the performance on a single instance is the ratio between the cost of the algorithm's solution and that of an optimal solution for that instance. We apply this framework to the classic $k$-median clustering problem, and give an efficient learning algorithm that can approximately match the average performance of the best fixed $k$-median solution in hindsight across all the instances. We also experimentally evaluate our algorithm and show that its empirical performance is close to optimal, and also that it automatically adapts the solution to a dynamically changing sequence.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.18157v1",
+    "categories": [
+      "cs.DS",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DS",
+    "github": null
+  },
+  {
+    "id": "2603.17632v1",
+    "title": "Real-Time Online Learning for Model Predictive Control using a Spatio-Temporal Gaussian Process Approximation",
+    "authors": [
+      "Lars Bartels",
+      "Amon Lahr",
+      "Andrea Carron",
+      "Melanie N. Zeilinger"
+    ],
+    "summary": "Learning-based model predictive control (MPC) can enhance control performance by correcting for model inaccuracies, enabling more precise state trajectory predictions than traditional MPC. A common approach is to model unknown residual dynamics as a Gaussian process (GP), which leverages data and also provides an estimate of the associated uncertainty. However, the high computational cost of online learning poses a major challenge for real-time GP-MPC applications. This work presents an efficient implementation of an approximate spatio-temporal GP model, offering online learning at constant computational complexity. It is optimized for GP-MPC, where it enables improved control performance by learning more accurate system dynamics online in real-time, even for time-varying systems. The performance of the proposed method is demonstrated by simulations and hardware experiments in the exemplary application of autonomous miniature racing.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17632v1",
+    "categories": [
+      "eess.SY",
+      "cs.RO",
+      "math.OC"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2603.17378v1",
+    "title": "Efficient Exploration at Scale",
+    "authors": [
+      "Seyed Mohammad Asghari",
+      "Chris Chute",
+      "Vikranth Dwaracherla",
+      "Xiuyuan Lu",
+      "Mehdi Jafarnia",
+      "Victor Minden",
+      "Zheng Wen",
+      "Benjamin Van Roy"
+    ],
+    "summary": "We develop an online learning algorithm that dramatically improves the data efficiency of reinforcement learning from human feedback (RLHF). Our algorithm incrementally updates reward and language models as choice data is received. The reward model is fit to the choice data, while the language model is updated by a variation of reinforce, with reinforcement signals provided by the reward model. Several features enable the efficiency gains: a small affirmative nudge added to each reinforcement signal, an epistemic neural network that models reward uncertainty, and information-directed exploration. With Gemma large language models (LLMs), our algorithm matches the performance of offline RLHF trained on 200K labels using fewer than 20K labels, representing more than a 10x gain in data efficiency. Extrapolating from our results, we expect our algorithm trained on 1M labels to match offline RLHF trained on 1B labels. This represents a 1,000x gain. To our knowledge, these are the first results to demonstrate that such large improvements are possible.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17378v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.16596v1",
+    "title": "FSMC-Pose: Frequency and Spatial Fusion with Multiscale Self-calibration for Cattle Mounting Pose Estimation",
+    "authors": [
+      "Fangjing Li",
+      "Zhihai Wang",
+      "Xinxin Ding",
+      "Haiyang Liu",
+      "Ronghua Gao",
+      "Rong Wang",
+      "Yao Zhu",
+      "Ming Jin"
+    ],
+    "summary": "Mounting posture is an important visual indicator of estrus in dairy cattle. However, achieving reliable mounting pose estimation in real-world environments remains challenging due to cluttered backgrounds and frequent inter-animal occlusion. We present FSMC-Pose, a top-down framework that integrates a lightweight frequency-spatial fusion backbone, CattleMountNet, and a multiscale self-calibration head, SC2Head. Specifically, we design two algorithmic components for CattleMountNet: the Spatial Frequency Enhancement Block (SFEBlock) and the Receptive Aggregation Block (RABlock). SFEBlock separates cattle from cluttered backgrounds, while RABlock captures multiscale contextual information. The Spatial-Channel Self-Calibration Head (SC2Head) attends to spatial and channel dependencies and introduces a self-calibration branch to mitigate structural misalignment under inter-animal overlap. We construct a mounting dataset, MOUNT-Cattle, covering 1176 mounting instances, which follows the COCO format and supports drop-in training across pose estimation models. Using a comprehensive dataset that combines MOUNT-Cattle with the public NWAFU-Cattle dataset, FSMC-Pose achieves higher accuracy than strong baselines, with markedly lower computational and parameter costs, while maintaining real-time inference on commodity GPUs. Extensive experiments and qualitative analyses show that FSMC-Pose effectively captures and estimates cattle mounting pose in complex and cluttered environments. Dataset and code are available at https://github.com/elianafang/FSMC-Pose.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16596v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/elianafang/FSMC-Pose.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.14177v2",
+    "title": "Artificial intelligence-enabled single-lead ECG for non-invasive hyperkalemia detection: development, multicenter validation, and proof-of-concept deployment",
+    "authors": [
+      "Gongzheng Tang",
+      "Qinghao Zhao",
+      "Guangkun Nie",
+      "Yujie Xiao",
+      "Shijia Geng",
+      "Donglin Xie",
+      "Shun Huang",
+      "Deyun Zhang",
+      "Xingchen Yao",
+      "Jinwei Wang",
+      "Kangyin Chen",
+      "Luxia Zhang",
+      "Shenda Hong"
+    ],
+    "summary": "Hyperkalemia is a life-threatening electrolyte disorder that is common in patients with chronic kidney disease and heart failure, yet frequent monitoring remains difficult outside hospital settings. We developed and validated Pocket-K, a single-lead AI-ECG system initialized from the ECGFounder foundation model for non-invasive hyperkalemia screening and handheld deployment. In this multicentre observational study using routinely collected clinical ECG and laboratory data, 34,439 patients contributed 62,290 ECG--potassium pairs. Lead I data were used to fine-tune the model. Data from Peking University People's Hospital were divided into development and temporal validation sets, and data from The Second Hospital of Tianjin Medical University served as an independent external validation set. Hyperkalemia was defined as venous serum potassium > 5.5 mmol/L. Pocket-K achieved AUROCs of 0.936 in internal testing, 0.858 in temporal validation, and 0.808 in external validation. For KDIGO-defined moderate-to-severe hyperkalemia (serum potassium >= 6.0 mmol/L), AUROCs increased to 0.940 and 0.861 in the temporal and external sets, respectively. External negative predictive value exceeded 99.3%. Model-predicted high risk below the hyperkalemia threshold was more common in patients with chronic kidney disease and heart failure. A handheld prototype enabled near-real-time inference, supporting future prospective evaluation in native handheld and wearable settings.",
+    "published": "2026-03-15",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.14177v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.16856v1",
+    "title": "Online Experiential Learning for Language Models",
+    "authors": [
+      "Tianzhu Ye",
+      "Li Dong",
+      "Qingxiu Dong",
+      "Xun Wu",
+      "Shaohan Huang",
+      "Furu Wei"
+    ],
+    "summary": "The prevailing paradigm for improving large language models relies on offline training with human annotations or simulated environments, leaving the rich experience accumulated during real-world deployment entirely unexploited. We propose Online Experiential Learning (OEL), a framework that enables language models to continuously improve from their own deployment experience. OEL operates in two stages: first, transferable experiential knowledge is extracted and accumulated from interaction trajectories collected on the user side; second, this knowledge is consolidated into model parameters via on-policy context distillation, requiring no access to the user-side environment. The two stages are iterated to form an online learning loop, where the improved model collects higher-quality trajectories that yield richer experiential knowledge for subsequent rounds. We evaluate OEL on text-based game environments across multiple model scales and both thinking and non-thinking variants. OEL achieves consistent improvements over successive iterations, enhancing both task accuracy and token efficiency while preserving out-of-distribution performance. Our analysis further shows that extracted experiential knowledge is significantly more effective than raw trajectories, and that on-policy consistency between the knowledge source and the policy model is critical for effective learning.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16856v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2603.16755v1",
+    "title": "A Practical Algorithm for Feature-Rich, Non-Stationary Bandit Problems",
+    "authors": [
+      "Wei Min Loh",
+      "Sajib Kumer Sinha",
+      "Ankur Agarwal",
+      "Pascal Poupart"
+    ],
+    "summary": "Contextual bandits are incredibly useful in many practical problems. We go one step further by devising a more realistic problem that combines: (1) contextual bandits with dense arm features, (2) non-linear reward functions, and (3) a generalization of correlated bandits where reward distributions change over time but the degree of correlation maintains. This formulation lends itself to a wider set of applications such as recommendation tasks. To solve this problem, we introduce conditionally coupled contextual C3 Thompson sampling for Bernoulli bandits. It combines an improved Nadaraya-Watson estimator on an embedding space with Thompson sampling that allows online learning without retraining. Empirical results show that C3 outperforms the next best algorithm by 5.7% lower average cumulative regret on four OpenML tabular datasets as well as demonstrating a 12.4% click lift on Microsoft News Dataset (MIND) compared to other algorithms.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16755v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.16697v1",
+    "title": "Cost Trade-offs in Matrix Inversion Updates for Streaming Outlier Detection",
+    "authors": [
+      "Florian Grivet",
+      "Louise Travé-Massuyès"
+    ],
+    "summary": "Outlier detection identifies data points that deviate significantly from expected patterns, revealing anomalies that may require special attention. Incorporating online learning further improves accuracy by continuously updating the model to reflect the most recent data. When employing the Christoffel function as an outlier score, online learning requires updating the inverse of a matrix following a rank-k update, given the initial inverse. Surprisingly, there is no consensus on the optimal method for this task. This technical note aims to compare three different updating methods: Direct Inversion (DI), Iterative Sherman-Morrison (ISM), and Woodbury Matrix Identity (WMI), to identify the most suitable approach for different scenarios. We first derive the theoretical computational costs of each method and then validate these findings through comprehensive Python simulations run on a CPU. These results allow us to propose a simple, quantitative, and easy-to-remember rule that can be stated qualitatively as follows: ISM is optimal for rank-1 updates, WMI excels for small updates relative to matrix size, and DI is preferable otherwise. This technical note produces a general result for any problem involving a matrix inversion update. In particular, it contributes to the ongoing development of efficient online outlier detection techniques.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.16697v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.14762v2",
+    "title": "Online Learning for Supervisory Switching Control",
+    "authors": [
+      "Haoyuan Sun",
+      "Ali Jadbabaie"
+    ],
+    "summary": "We study supervisory switching control for partially-observed linear dynamical systems. The objective is to identify and deploy the best controller for the unknown system by periodically selecting among a collection of $N$ candidate controllers, some of which may destabilize the underlying system. While classical estimator-based supervisory control guarantees asymptotic stability, it lacks quantitative finite-time performance bounds. Conversely, current non-asymptotic methods in both online learning and system identification require restrictive assumptions that are incompatible in a control setting, such as system stability, which preclude testing potentially unstable controllers. To bridge this gap, we propose a novel, non-asymptotic analysis of supervisory control that adapts multi-armed bandit algorithms to a control-theoretic setting. The proposed data-driven algorithm evaluates candidate controllers via scoring criteria that leverage system observability to isolate the effects of state history, enabling both detection of destabilizing controllers and accurate system identification. We present two algorithmic variants with dimension-free, finite-time guarantees, where each identifies the most suitable controller in $\\mathcal{O}(N \\log N)$ steps, while simultaneously achieving finite $L_2$-gain with respect to system disturbances.",
+    "published": "2026-03-16",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.14762v2",
+    "categories": [
+      "math.OC",
+      "cs.LG",
+      "eess.SY"
+    ],
+    "primary_category": "math.OC",
+    "github": null
+  },
+  {
+    "id": "2603.15725v1",
+    "title": "S2Act: Simple Spiking Actor",
+    "authors": [
+      "Ugur Akcal",
+      "Seung Hyun Kim",
+      "Mikihisa Yuasa",
+      "Hamid Osooli",
+      "Jiarui Sun",
+      "Ribhav Sahu",
+      "Mattia Gazzola",
+      "Huy T. Tran",
+      "Girish Chowdhary"
+    ],
+    "summary": "Spiking neural networks (SNNs) and biologically-inspired learning mechanisms are attractive in mobile robotics, where the size and performance of onboard neural network policies are constrained by power and computational budgets. Existing SNN approaches, such as population coding, reward modulation, and hybrid artificial neural network (ANN)-SNN architectures, have shown promising results; however, they face challenges in complex, highly stochastic environments due to SNN sensitivity to hyperparameters and inconsistent gradient signals. To address these challenges, we propose simple spiking actor (S2Act), a computationally lightweight framework that deploys an RL policy using an SNN in three steps: (1) architect an actor-critic model based on an approximated network of rate-based spiking neurons, (2) train the network with gradients using compatible activation functions, and (3) transfer the trained weights into physical parameters of rate-based leaky integrate-and-fire (LIF) neurons for inference and deployment. By globally shaping LIF neuron parameters such that their rate-based responses approximate ReLU activations, S2Act effectively mitigates the vanishing gradient problem, while pre-constraining LIF response curves reduces reliance on complex SNN-specific hyperparameter tuning. We demonstrate our method in two multi-agent stochastic environments (capture-the-flag and parking) that capture the complexity of multi-robot interactions, and deploy our trained policies on physical TurtleBot platforms using Intel's Loihi neuromorphic hardware. Our experimental results show that S2Act outperforms relevant baselines in task performance and real-time inference in nearly all considered scenarios, highlighting its potential for rapid prototyping and efficient real-world deployment of SNN-based RL policies.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15725v1",
+    "categories": [
+      "cs.MA",
+      "cs.ET",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "primary_category": "cs.MA",
+    "github": null
+  },
+  {
+    "id": "2603.15433v1",
+    "title": "Real-Time Human Frontal View Synthesis from a Single Image",
+    "authors": [
+      "Fangyu Lin",
+      "Yingdong Hu",
+      "Lunjie Zhu",
+      "Zhening Liu",
+      "Yushi Huang",
+      "Zehong Lin",
+      "Jun Zhang"
+    ],
+    "summary": "Photorealistic human novel view synthesis from a single image is crucial for democratizing immersive 3D telepresence, eliminating the need for complex multi-camera setups. However, current rendering-centric methods prioritize visual fidelity over explicit geometric understanding and struggle with intricate regions like faces and hands, leading to temporal instability. Meanwhile, human-centric frameworks suffer from memory bottlenecks since they typically rely on an auxiliary model to provide informative structural priors for geometric modeling, which limits real-time performance. To address these challenges, we propose PrismMirror, a geometry-guided framework for instant frontal view synthesis from a single image. By avoiding external geometric modeling and focusing on frontal view synthesis, our model optimizes visual integrity for telepresence. Specifically, PrismMirror introduces a novel cascade learning strategy that enables coarse-to-fine geometric feature learning. It first directly learns coarse geometric features, such as SMPL-X meshes and point clouds, and then refines textures through rendering supervision. To achieve real-time efficiency, we distill this unified framework into a lightweight linear attention model. Notably, PrismMirror is the first monocular human frontal view synthesis model that achieves real-time inference at 24 FPS, significantly outperforming previous methods in both visual authenticity and structural accuracy.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15433v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.14822v1",
+    "title": "RadarXFormer: Robust Object Detection via Cross-Dimension Fusion of 4D Radar Spectra and Images for Autonomous Driving",
+    "authors": [
+      "Yue Sun",
+      "Yeqiang Qian",
+      "Zhe Wang",
+      "Tianhui Li",
+      "Chunxiang Wang",
+      "Ming Yang"
+    ],
+    "summary": "Reliable perception is essential for autonomous driving systems to operate safely under diverse real-world traffic conditions. However, camera- and LiDAR-based perception systems suffer from performance degradation under adverse weather and lighting conditions, limiting their robustness and large-scale deployment in intelligent transportation systems. Radar-vision fusion provides a promising alternative by combining the environmental robustness and cost efficiency of millimeter-wave (mmWave) radar with the rich semantic information captured by cameras. Nevertheless, conventional 3D radar measurements lack height resolution and remain highly sparse, while emerging 4D mmWave radar introduces elevation information but also brings challenges such as signal noise and large data volume. To address these issues, this paper proposes RadarXFormer, a 3D object detection framework that enables efficient cross-modal fusion between 4D radar spectra and RGB images. Instead of relying on sparse radar point clouds, RadarXFormer directly leverages raw radar spectra and constructs an efficient 3D representation that reduces data volume while preserving complete 3D spatial information. The \"X\" highlights the proposed cross-dimension (3D-2D) fusion mechanism, in which multi-scale 3D spherical radar feature cubes are fused with complementary 2D image feature maps. Experiments on the K-Radar dataset demonstrate improved detection accuracy and robustness under challenging conditions while maintaining real-time inference capability.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.14822v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.15195v1",
+    "title": "Massive Redundancy in Gradient Transport Enables Sparse Online Learning",
+    "authors": [
+      "Aur Shalev Merin"
+    ],
+    "summary": "Real-time recurrent learning (RTRL) computes exact online gradients by propagating a Jacobian tensor forward through recurrent dynamics, but at O(n^4) cost per step. Prior work has sought structured approximations (rank-1 compression, graph-based sparsity, Kronecker factorization). We show that, in the continuous error signal regime, the recurrent Jacobian is massively redundant:propagating through a random 6% of paths (k=4 of n=64) recovers 84 +/- 6% of full RTRL's adaptation ability across five seeds, and the absolute count k=4 remains effective from n=64 to n=256 (6% to 1.6%, recovery 84 to 78%), meaning sparse RTRL becomes relatively cheaper as networks grow. In RNNs, the recovery is selection-invariant (even adversarial path selection works) and exhibits a step-function transition from zero to any nonzero propagation. Spectral analysis reveals the mechanism: the Jacobian is full-rank but near-isotropic (condition numbers 2.6-6.5), so any random subset provides a directionally representative gradient estimate. On chaotic dynamics (Lorenz attractor), sparse propagation is more numerically stable than full RTRL (CV 13% vs. 88%), as subsampling avoids amplifying pathological spectral modes. The redundancy extends to LSTMs (k=4 matches full RTRL) and to transformers via sparse gradient transport (50% head sparsity outperforms the dense reference; 33% is borderline), with higher thresholds reflecting head specialization rather than isotropy. On real primate neural data, sparse RTRL (k=4) adapts online to cross-session electrode drift (80 +/- 11% recovery, 5 seeds), where sparse propagation is again more stable than full RTRL. Without continuous error signal, Jacobian propagation accumulates numerical drift and degrades all RTRL variants, a scope condition for all forward-mode methods. Results hold with SGD (92 +/- 1% recovery), suggesting independence from optimizer choice.",
+    "published": "2026-03-16",
+    "updated": "2026-03-16",
+    "pdf_url": "https://arxiv.org/pdf/2603.15195v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.14498v1",
+    "title": "R3DP: Real-Time 3D-Aware Policy for Embodied Manipulation",
+    "authors": [
+      "Yuhao Zhang",
+      "Wanxi Dong",
+      "Yue Shi",
+      "Yi Liang",
+      "Jingnan Gao",
+      "Qiaochu Yang",
+      "Yaxing Lyu",
+      "Zhixuan Liang",
+      "Yibin Liu",
+      "Congsheng Xu",
+      "Xianda Guo",
+      "Wei Sui",
+      "Yaohui Jin",
+      "Xiaokang Yang",
+      "Yanyan Xu",
+      "Yao Mu"
+    ],
+    "summary": "Embodied manipulation requires accurate 3D understanding of objects and their spatial relations to plan and execute contact-rich actions. While large-scale 3D vision models provide strong priors, their computational cost incurs prohibitive latency for real-time control. We propose Real-time 3D-aware Policy (R3DP), which integrates powerful 3D priors into manipulation policies without sacrificing real-time performance. A core innovation of R3DP is the asynchronous fast-slow collaboration module, which seamlessly integrates large-scale 3D priors into the policy without compromising real-time performance. The system maintains real-time efficiency by querying the pre-trained slow system (VGGT) only on sparse key frames, while simultaneously employing a lightweight Temporal Feature Prediction Network (TFPNet) to predict features for all intermediate frames. By leveraging historical data to exploit temporal correlations, TFPNet explicitly improves task success rates through consistent feature estimation. Additionally, to enable more effective multi-view fusion, we introduce a Multi-View Feature Fuser (MVFF) that aggregates features across views by explicitly incorporating camera intrinsics and extrinsics. R3DP offers a plug-and-play solution for integrating large models into real-time inference systems. We evaluate R3DP against multiple baselines across different visual configurations. R3DP effectively harnesses large-scale 3D priors to achieve superior results, outperforming single-view and multi-view DP by 32.9% and 51.4% in average success rate, respectively. Furthermore, by decoupling heavy 3D reasoning from policy execution, R3DP achieves a 44.8% reduction in inference time compared to a naive DP+VGGT integration.",
+    "published": "2026-03-15",
+    "updated": "2026-03-15",
+    "pdf_url": "https://arxiv.org/pdf/2603.14498v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.11984v1",
+    "title": "Ada3Drift: Adaptive Training-Time Drifting for One-Step 3D Visuomotor Robotic Manipulation",
+    "authors": [
+      "Chongyang Xu",
+      "Yixian Zou",
+      "Ziliang Feng",
+      "Fanman Meng",
+      "Shuaicheng Liu"
+    ],
+    "summary": "Diffusion-based visuomotor policies effectively capture multimodal action distributions through iterative denoising, but their high inference latency limits real-time robotic control. Recent flow matching and consistency-based methods achieve single-step generation, yet sacrifice the ability to preserve distinct action modes, collapsing multimodal behaviors into averaged, often physically infeasible trajectories. We observe that the compute budget asymmetry in robotics (offline training vs.\\ real-time inference) naturally motivates recovering this multimodal fidelity by shifting iterative refinement from inference time to training time. Building on this insight, we propose Ada3Drift, which learns a training-time drifting field that attracts predicted actions toward expert demonstration modes while repelling them from other generated samples, enabling high-fidelity single-step generation (1 NFE) from 3D point cloud observations. To handle the few-shot robotic regime, Ada3Drift further introduces a sigmoid-scheduled loss transition from coarse distribution learning to mode-sharpening refinement, and multi-scale field aggregation that captures action modes at varying spatial granularities. Experiments on three simulation benchmarks (Adroit, Meta-World, and RoboTwin) and real-world robotic manipulation tasks demonstrate that Ada3Drift achieves state-of-the-art performance while requiring $10\\times$ fewer function evaluations than diffusion-based alternatives.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.11984v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.10782v1",
+    "title": "Phase-Interface Instance Segmentation as a Visual Sensor for Laboratory Process Monitoring",
+    "authors": [
+      "Mingyue Li",
+      "Xin Yang",
+      "Shilin Yan",
+      "Jinye Ran",
+      "Morui Zhu",
+      "Zirui Peng",
+      "Huanqing Peng",
+      "Wei Peng",
+      "Guanghua Zhang",
+      "Shuo Li",
+      "Hao Zhang"
+    ],
+    "summary": "Reliable visual monitoring of chemical experiments remains challenging in transparent glassware, where weak phase boundaries and optical artifacts degrade conventional segmentation. We formulate laboratory phenomena as the time evolution of phase interfaces and introduce the Chemical Transparent Glasses dataset 2.0 (CTG 2.0), a vessel-aware benchmark with 3,668 images, 23 glassware categories, and five multiphase interface types for phase-interface instance segmentation. Building on YOLO11m-seg, we propose LGA-RCM-YOLO, which combines Local-Global Attention (LGA) for robust semantic representation and a Rectangular Self-Calibration Module (RCM) for boundary refinement of thin, elongated interfaces. On CTG 2.0, the proposed model achieves 84.4% AP@0.5 and 58.43% AP@0.5-0.95, improving over the YOLO11m baseline by 6.42 and 8.75 AP points, respectively, while maintaining near real-time inference (13.67 FPS, RTX 3060). An auxiliary color-attribute head further labels liquid instances as colored or colorless with 98.71% precision and 98.32% recall. Finally, we demonstrate continuous process monitoring in separatory-funnel phase separation and crystallization, showing that phase-interface instance segmentation can serve as a practical visual sensor for laboratory automation.",
+    "published": "2026-03-11",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.10782v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2601.00126v2",
+    "title": "Compositional Diffusion with Guided Search for Long-Horizon Planning",
+    "authors": [
+      "Utkarsh A Mishra",
+      "David He",
+      "Yongxin Chen",
+      "Danfei Xu"
+    ],
+    "summary": "Generative models have emerged as powerful tools for planning, with compositional approaches offering particular promise for modeling long-horizon task distributions by composing together local, modular generative models. This compositional paradigm spans diverse domains, from multi-step manipulation planning to panoramic image synthesis to long video generation. However, compositional generative models face a critical challenge: when local distributions are multimodal, existing composition methods average incompatible modes, producing plans that are neither locally feasible nor globally coherent. We propose Compositional Diffusion with Guided Search (CDGS), which addresses this mode averaging problem by embedding search directly within the diffusion denoising process. Our method explores diverse combinations of local modes through population-based sampling, prunes infeasible candidates using likelihood-based filtering, and enforces global consistency through iterative resampling between overlapping segments. CDGS matches oracle performance on seven robot manipulation tasks, outperforming baselines that lack compositionality or require long-horizon training data. The approach generalizes across domains, enabling coherent text-guided panoramic images and long videos through effective local-to-global message passing. More details: https://cdgsearch.github.io/",
+    "published": "2025-12-31",
+    "updated": "2026-01-05",
+    "pdf_url": "https://arxiv.org/pdf/2601.00126v2",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2408.01094v2",
+    "title": "Revisiting Bi-Encoder Neural Search: An Encoding--Searching Separation Perspective",
+    "authors": [
+      "Hung-Nghiep Tran",
+      "Akiko Aizawa",
+      "Atsuhiro Takasu"
+    ],
+    "summary": "This paper reviews, analyzes, and proposes a new perspective on the bi-encoder architecture for neural search. While the bi-encoder architecture is widely used due to its simplicity and scalability at test time, it has some notable issues such as low performance on seen datasets and weak zero-shot performance on new datasets. In this paper, we analyze these issues and summarize two main critiques: the encoding information bottleneck problem and limitations of the basic assumption of embedding search. We then construct a thought experiment to logically analyze the encoding and searching operations and challenge the basic assumptions of embedding search. Building on these observations, we propose a new perspective on the bi-encoder architecture called the \\textit{encoding--searching separation} perspective, which conceptually and practically separates the encoding and searching operations. This framework is applied to explain the root cause of existing issues and suggest mitigation strategies, potentially lowering training costs and improving retrieval performance. Finally, we discuss the broader implications of the ideas underlying this perspective, the new design surface it exposes, and potential research directions arising from it.",
+    "published": "2024-08-02",
+    "updated": "2025-12-25",
+    "pdf_url": "https://arxiv.org/pdf/2408.01094v2",
+    "categories": [
+      "cs.LG",
+      "cs.IR"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2508.19487v1",
+    "title": "Data-Efficient Symbolic Regression via Foundation Model Distillation",
+    "authors": [
+      "Wangyang Ying",
+      "Jinghan Zhang",
+      "Haoyue Bai",
+      "Nanxu Gong",
+      "Xinyuan Wang",
+      "Kunpeng Liu",
+      "Chandan K. Reddy",
+      "Yanjie Fu"
+    ],
+    "summary": "Discovering interpretable mathematical equations from observed data (a.k.a. equation discovery or symbolic regression) is a cornerstone of scientific discovery, enabling transparent modeling of physical, biological, and economic systems. While foundation models pre-trained on large-scale equation datasets offer a promising starting point, they often suffer from negative transfer and poor generalization when applied to small, domain-specific datasets. In this paper, we introduce EQUATE (Equation Generation via QUality-Aligned Transfer Embeddings), a data-efficient fine-tuning framework that adapts foundation models for symbolic equation discovery in low-data regimes via distillation. EQUATE combines symbolic-numeric alignment with evaluator-guided embedding optimization, enabling a principled embedding-search-generation paradigm. Our approach reformulates discrete equation search as a continuous optimization task in a shared embedding space, guided by data-equation fitness and simplicity. Experiments across three standard public benchmarks (Feynman, Strogatz, and black-box datasets) demonstrate that EQUATE consistently outperforms state-of-the-art baselines in both accuracy and robustness, while preserving low complexity and fast inference. These results highlight EQUATE as a practical and generalizable solution for data-efficient symbolic regression in foundation model distillation settings.",
+    "published": "2025-08-27",
+    "updated": "2025-08-27",
+    "pdf_url": "https://arxiv.org/pdf/2508.19487v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2508.18048v1",
+    "title": "HyST: LLM-Powered Hybrid Retrieval over Semi-Structured Tabular Data",
+    "authors": [
+      "Jiyoon Myung",
+      "Jihyeon Park",
+      "Joohyung Han"
+    ],
+    "summary": "User queries in real-world recommendation systems often combine structured constraints (e.g., category, attributes) with unstructured preferences (e.g., product descriptions or reviews). We introduce HyST (Hybrid retrieval over Semi-structured Tabular data), a hybrid retrieval framework that combines LLM-powered structured filtering with semantic embedding search to support complex information needs over semi-structured tabular data. HyST extracts attribute-level constraints from natural language using large language models (LLMs) and applies them as metadata filters, while processing the remaining unstructured query components via embedding-based retrieval. Experiments on a semi-structured benchmark show that HyST consistently outperforms tradtional baselines, highlighting the importance of structured filtering in improving retrieval precision, offering a scalable and accurate solution for real-world user queries.",
+    "published": "2025-08-25",
+    "updated": "2025-08-25",
+    "pdf_url": "https://arxiv.org/pdf/2508.18048v1",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2507.15865v2",
+    "title": "From Reasoning to Super-Intelligence: A Search-Theoretic Perspective",
+    "authors": [
+      "Shai Shalev-Shwartz",
+      "Amnon Shashua"
+    ],
+    "summary": "Chain-of-Thought (CoT) reasoning has emerged as a powerful tool for enhancing the problem-solving capabilities of large language models (LLMs). However, the theoretical foundations of learning from CoT data remain underdeveloped, and existing approaches -- such as Supervised Fine-Tuning (SFT), Reinforcement Learning (RL), Tree-of-Thoughts (ToT), and Monte Carlo Tree Search (MCTS) -- often fail on complex reasoning tasks. In this work, we identify core obstacles that hinder effective CoT learning, including distribution drift, lack of embedded search, and exponential inference costs. We introduce the Diligent Learner, a new learning paradigm that explicitly models reasoning as a depth-first search guided by a validator and supports backtracking upon failure. Under two mild and realistic assumptions, we prove that the Diligent Learner can efficiently learn from CoT data while existing methods fail to do so. This framework offers a path toward building scalable and reliable reasoning systems trained on naturally occurring, incomplete data -- paving the way for the development of Large Reasoning Models (LRMs) with robust, interpretable problem-solving abilities.",
+    "published": "2025-07-13",
+    "updated": "2025-07-26",
+    "pdf_url": "https://arxiv.org/pdf/2507.15865v2",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2507.16978v1",
+    "title": "Fast and Scalable Gene Embedding Search: A Comparative Study of FAISS and ScaNN",
+    "authors": [
+      "Mohammad Saleh Refahi",
+      "Gavin Hearne",
+      "Harrison Muller",
+      "Kieran Lynch",
+      "Bahrad A. Sokhansanj",
+      "James R. Brown",
+      "Gail Rosen"
+    ],
+    "summary": "The exponential growth of DNA sequencing data has outpaced traditional heuristic-based methods, which struggle to scale effectively. Efficient computational approaches are urgently needed to support large-scale similarity search, a foundational task in bioinformatics for detecting homology, functional similarity, and novelty among genomic and proteomic sequences. Although tools like BLAST have been widely used and remain effective in many scenarios, they suffer from limitations such as high computational cost and poor performance on divergent sequences.\n  In this work, we explore embedding-based similarity search methods that learn latent representations capturing deeper structural and functional patterns beyond raw sequence alignment. We systematically evaluate two state-of-the-art vector search libraries, FAISS and ScaNN, on biologically meaningful gene embeddings. Unlike prior studies, our analysis focuses on bioinformatics-specific embeddings and benchmarks their utility for detecting novel sequences, including those from uncharacterized taxa or genes lacking known homologs. Our results highlight both computational advantages (in memory and runtime efficiency) and improved retrieval quality, offering a promising alternative to traditional alignment-heavy tools.",
+    "published": "2025-07-22",
+    "updated": "2025-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2507.16978v1",
+    "categories": [
+      "q-bio.GN",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "q-bio.GN",
+    "github": null
+  },
+  {
+    "id": "2506.00528v1",
+    "title": "Ultra-Quantisation: Efficient Embedding Search via 1.58-bit Encodings",
+    "authors": [
+      "Richard Connor",
+      "Alan Dearle",
+      "Ben Claydon"
+    ],
+    "summary": "Many modern search domains comprise high-dimensional vectors of floating point numbers derived from neural networks, in the form of embeddings. Typical embeddings range in size from hundreds to thousands of dimensions, making the size of the embeddings, and the speed of comparison, a significant issue.\n  Quantisation is a class of mechanism which replaces the floating point values with a smaller representation, for example a short integer. This gives an approximation of the embedding space in return for a smaller data representation and a faster comparison function.\n  Here we take this idea almost to its extreme: we show how vectors of arbitrary-precision floating point values can be replaced by vectors whose elements are drawn from the set {-1,0,1}. This yields very significant savings in space and metric evaluation cost, while maintaining a strong correlation for similarity measurements.\n  This is achieved by way of a class of convex polytopes which exist in the high-dimensional space. In this article we give an outline description of these objects, and show how they can be used for the basis of such radical quantisation while maintaining a surprising degree of accuracy.",
+    "published": "2025-05-31",
+    "updated": "2025-05-31",
+    "pdf_url": "https://arxiv.org/pdf/2506.00528v1",
+    "categories": [
+      "cs.LG",
+      "cs.DB"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
