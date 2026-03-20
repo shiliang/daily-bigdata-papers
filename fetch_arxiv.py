@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-抓取arXiv上大数据领域相关论文
+抓取arXiv上大数据+AI领域相关论文
+支持跨日期去重
 """
 
 import arxiv
@@ -9,19 +10,39 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-# 精简关键词，分批查询
+# 历史记录文件
+HISTORY_FILE = Path("papers/history.json")
+
+# 大数据 + AI 关键词
 KEYWORD_GROUPS = [
-    # 核心大数据
-    ["big data", "data engineering", "data pipeline"],
-    # 数据存储
-    ["data lake", "data warehouse", "data lakehouse"],
-    # 流处理
-    ["stream processing", "real-time data", "data streaming"],
-    # 分布式系统
-    ["distributed systems", "Apache Spark", "Apache Flink"],
-    # 数据管理
-    ["data governance", "data quality", "data mesh"],
+    # 大模型与AI基础设施
+    ["LLM training", "large language model infrastructure", "AI infrastructure"],
+    # 向量数据库与检索
+    ["vector database", "RAG retrieval augmented", "embedding search"],
+    # 数据湖与AI
+    ["data lake AI", "lakehouse machine learning", "Iceberg AI"],
+    # 流式AI与实时推理
+    ["streaming ML", "real-time inference", "online learning"],
+    # 分布式训练
+    ["distributed training", "GPU cluster training", "model parallelism"],
 ]
+
+def load_history():
+    """加载历史已抓取的论文ID"""
+    if HISTORY_FILE.exists():
+        with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            return set(data.get("paper_ids", []))
+    return set()
+
+def save_history(paper_ids):
+    """保存历史记录"""
+    HISTORY_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump({
+            "paper_ids": list(paper_ids),
+            "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }, f, ensure_ascii=False, indent=2)
 
 def fetch_papers_by_keyword(keyword, max_results=20, client=None):
     """单个关键词抓取论文"""
@@ -56,11 +77,16 @@ def fetch_papers_by_keyword(keyword, max_results=20, client=None):
 
     return papers
 
-def fetch_papers(max_results_per_keyword=15, total_max=60):
-    """从arXiv抓取论文，分批查询避免请求过大"""
+def fetch_papers(max_results_per_keyword=15, total_max=30, history_ids=None):
+    """从arXiv抓取论文，分批查询避免请求过大，支持跨日期去重"""
     client = arxiv.Client()
     all_papers = {}
     total_fetched = 0
+    skipped_count = 0
+
+    # 初始化历史记录
+    if history_ids is None:
+        history_ids = set()
 
     for group in KEYWORD_GROUPS:
         if total_fetched >= total_max:
@@ -79,10 +105,16 @@ def fetch_papers(max_results_per_keyword=15, total_max=60):
                 client=client
             )
 
-            # 用 ID 去重
+            # 用 ID 去重（包括跨日期历史）
             for paper in papers:
-                if paper["id"] not in all_papers:
-                    all_papers[paper["id"]] = paper
+                paper_id = paper["id"]
+                # 跨日期去重
+                if paper_id in history_ids:
+                    skipped_count += 1
+                    continue
+                # 本次抓取去重
+                if paper_id not in all_papers:
+                    all_papers[paper_id] = paper
                     total_fetched += 1
 
             # 避免请求过快
@@ -94,6 +126,9 @@ def fetch_papers(max_results_per_keyword=15, total_max=60):
         key=lambda x: x["updated"],
         reverse=True
     )
+
+    if skipped_count > 0:
+        print(f"\nSkipped {skipped_count} papers (already in history)")
 
     return papers_list[:total_max]
 
@@ -116,16 +151,27 @@ def save_papers(papers, date_str=None):
 
 def main():
     print("="*60)
-    print("Fetching big data papers from arXiv...")
+    print("Fetching Big Data + AI papers from arXiv...")
     print("="*60)
 
-    papers = fetch_papers(max_results_per_keyword=15, total_max=60)
+    # 加载历史记录
+    history_ids = load_history()
+    print(f"Loaded {len(history_ids)} papers from history")
+
+    # 先抓取更多论文，后续筛选含金量最高的10篇
+    papers = fetch_papers(max_results_per_keyword=15, total_max=30, history_ids=history_ids)
 
     if papers:
         save_papers(papers)
-        print(f"\nSuccessfully fetched {len(papers)} unique papers!")
+        print(f"\nSuccessfully fetched {len(papers)} new papers!")
+
+        # 更新历史记录
+        new_ids = {p["id"] for p in papers}
+        history_ids.update(new_ids)
+        save_history(history_ids)
+        print(f"Updated history: {len(history_ids)} total papers")
     else:
-        print("No papers found!")
+        print("No new papers found!")
 
     return papers
 
