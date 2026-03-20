@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """
 抓取arXiv上大数据+AI领域相关论文
-支持跨日期去重
+支持跨日期去重、GitHub代码检测
 """
 
 import arxiv
 import json
 import time
+import re
+import requests
 from datetime import datetime
 from pathlib import Path
 
@@ -27,6 +29,44 @@ KEYWORD_GROUPS = [
     ["distributed training", "GPU cluster training", "model parallelism"],
 ]
 
+def extract_github_url(text):
+    """从文本中提取GitHub链接"""
+    # 匹配 https://github.com/owner/repo 格式
+    pattern = r'https://github\.com/([a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+)'
+    matches = re.findall(pattern, text)
+    if matches:
+        # 返回第一个匹配的完整URL
+        return f"https://github.com/{matches[0]}"
+    return None
+
+def get_github_stats(github_url):
+    """获取GitHub仓库的Star数和描述"""
+    if not github_url:
+        return None
+
+    try:
+        # 提取 owner/repo
+        match = re.search(r'github\.com/([a-zA-Z0-9_-]+/[a-zA-Z0-9_.-]+)', github_url)
+        if not match:
+            return None
+
+        repo_path = match.group(1)
+        api_url = f"https://api.github.com/repos/{repo_path}"
+
+        response = requests.get(api_url, timeout=10)
+        if response.status_code == 200:
+            data = response.json()
+            return {
+                "url": github_url,
+                "stars": data.get("stargazers_count", 0),
+                "description": data.get("description", "")[:100] if data.get("description") else "",
+                "language": data.get("language", ""),
+            }
+    except Exception as e:
+        print(f"    Warning: Failed to fetch GitHub stats: {e}")
+
+    return {"url": github_url, "stars": 0, "description": "", "language": ""}
+
 def load_history():
     """加载历史已抓取的论文ID"""
     if HISTORY_FILE.exists():
@@ -44,7 +84,7 @@ def save_history(paper_ids):
             "last_updated": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         }, f, ensure_ascii=False, indent=2)
 
-def fetch_papers_by_keyword(keyword, max_results=20, client=None):
+def fetch_papers_by_keyword(keyword, max_results=20, client=None, check_github=True):
     """单个关键词抓取论文"""
     if client is None:
         client = arxiv.Client()
@@ -69,7 +109,19 @@ def fetch_papers_by_keyword(keyword, max_results=20, client=None):
                 "pdf_url": result.pdf_url,
                 "categories": list(result.categories) if result.categories else [],
                 "primary_category": result.primary_category,
+                "github": None,  # GitHub信息
             }
+
+            # 检测GitHub链接
+            if check_github:
+                github_url = extract_github_url(result.summary)
+                if github_url:
+                    print(f"    Checking GitHub: {github_url.split('/')[-1]}...")
+                    github_stats = get_github_stats(github_url)
+                    paper["github"] = github_stats
+                    if github_stats and github_stats.get("stars", 0) > 0:
+                        print(f"    [*] {github_stats['stars']} stars")
+
             papers.append(paper)
             print(f"  Fetched: {paper['title'][:50]}...")
     except Exception as e:

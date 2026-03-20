@@ -94,10 +94,24 @@ def evaluate_paper(paper, client, model, max_retries=3):
                 if content.startswith('json'):
                     content = content[4:].strip()
             result = json.loads(content)
+
+            # GitHub代码加分
+            github = paper.get('github')
+            if github and github.get('url'):
+                stars = github.get('stars', 0)
+                # 有代码加1-3分（根据Star数）
+                code_bonus = min(3, 1 + stars // 100)
+                result['total'] = result.get('total', 0) + code_bonus
+                result['has_code'] = True
+                result['code_bonus'] = code_bonus
+            else:
+                result['has_code'] = False
+                result['code_bonus'] = 0
+
             return result
         except Exception as e:
             if attempt == max_retries - 1:
-                return {"innovation": 5, "impact": 5, "practicality": 5, "rigor": 5, "total": 20, "reason": "评估失败"}
+                return {"innovation": 5, "impact": 5, "practicality": 5, "rigor": 5, "total": 20, "reason": "评估失败", "has_code": False, "code_bonus": 0}
             time.sleep(2)
 
 def summarize_paper(paper, client, model, max_retries=3):
@@ -145,15 +159,69 @@ def summarize_paper(paper, client, model, max_retries=3):
                 print(f"  All retries failed for: {paper['title'][:50]}")
                 return None
 
+def generate_comparison_table(papers, summaries, evaluations):
+    """生成论文对比表格"""
+    table = """## 论文对比表
+
+| # | 论文 | 核心方法 | 主要贡献 | 代码 | 评分 |
+|---|------|----------|----------|------|------|
+"""
+
+    for i, paper in enumerate(papers, 1):
+        # 从总结中提取核心方法
+        summary = summaries.get(paper['id'], '')
+        method = "待分析"
+        if summary:
+            # 提取技术要点
+            lines = summary.split('\n')
+            for line in lines:
+                if '技术要点' in line or '核心贡献' in line:
+                    # 取下一行
+                    idx = lines.index(line)
+                    if idx + 1 < len(lines) and lines[idx + 1].startswith('-'):
+                        method = lines[idx + 1].replace('-', '').strip()[:30]
+                        break
+
+        # 主要贡献（一句话）
+        contribution = evaluations.get(paper['id'], {}).get('reason', '待分析')[:30]
+
+        # 代码状态
+        github = paper.get('github')
+        if github and github.get('url'):
+            stars = github.get('stars', 0)
+            # 使用文字避免编码问题
+            if stars > 0:
+                code_str = f"[*{stars}]({github['url']})"
+            else:
+                code_str = f"[Code]({github['url']})"
+        else:
+            code_str = "-"
+
+        # 评分
+        score = evaluations.get(paper['id'], {}).get('total', 0)
+
+        # 论文标题（缩短）
+        title = paper['title'][:35] + "..." if len(paper['title']) > 35 else paper['title']
+        title_link = f"[{title}](https://arxiv.org/abs/{paper['id']})"
+
+        table += f"| {i} | {title_link} | {method} | {contribution} | {code_str} | {score}/43 |\n"
+
+    table += "\n---\n"
+    return table
+
 def generate_markdown(papers, summaries, evaluations, date_str):
     """生成Markdown报告"""
+
+    # 生成对比表格
+    comparison_table = generate_comparison_table(papers, summaries, evaluations)
+
     md_content = f"""# 大数据+AI 领域论文日报
 
 **日期**: {date_str}
 
 **论文数量**: {len(papers)} 篇精选论文
 
----
+{comparison_table}
 
 """
 
@@ -167,7 +235,16 @@ def generate_markdown(papers, summaries, evaluations, date_str):
 
         # 含金量评分
         total_score = eval_result.get('total', 0)
+        code_bonus = eval_result.get('code_bonus', 0)
         reason = eval_result.get('reason', '')
+
+        # GitHub信息
+        github = paper.get('github')
+        github_info = ""
+        if github and github.get('url'):
+            stars = github.get('stars', 0)
+            lang = github.get('language', '')
+            github_info = f"\n- **代码**: [GitHub]({github['url']}) ⭐ {stars}" + (f" ({lang})" if lang else "")
 
         md_content += f"""## {i}. {paper['title']}
 
@@ -175,7 +252,7 @@ def generate_markdown(papers, summaries, evaluations, date_str):
 - **发布日期**: {paper['published']}
 - **链接**: [arXiv:{paper['id']}](https://arxiv.org/abs/{paper['id']}) | [PDF]({paper['pdf_url']})
 - **分类**: {', '.join(paper['categories'])}
-- **含金量**: {total_score}/40 分
+- **含金量**: {total_score}/43 分{' (含代码+' + str(code_bonus) + '分)' if code_bonus > 0 else ''}{github_info}
 
 ### 摘要
 
