@@ -1,0 +1,356 @@
+[
+  {
+    "id": "2603.17769v1",
+    "title": "Modeling Overlapped Speech with Shuffles",
+    "authors": [
+      "Matthew Wiesner",
+      "Samuele Cornell",
+      "Alexander Polok",
+      "Lucas Ondel Yang",
+      "Lukáš Burget",
+      "Sanjeev Khudanpur"
+    ],
+    "summary": "We propose to model parallel streams of data, such as overlapped speech, using shuffles. Specifically, this paper shows how the shuffle product and partial order finite-state automata (FSAs) can be used for alignment and speaker-attributed transcription of overlapped speech. We train using the total score on these FSAs as a loss function, marginalizing over all possible serializations of overlapping sequences at subword, word, and phrase levels. To reduce graph size, we impose temporal constraints by constructing partial order FSAs. We address speaker attribution by modeling (token, speaker) tuples directly. Viterbi alignment through the shuffle product FSA directly enables one-pass alignment. We evaluate performance on synthetic LibriSpeech overlaps. To our knowledge, this is the first algorithm that enables single-pass alignment of multi-talker recordings. All algorithms are implemented using k2 / Icefall.",
+    "published": "2026-03-18",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.17769v1",
+    "categories": [
+      "cs.SD",
+      "cs.CL",
+      "cs.LG",
+      "eess.AS"
+    ],
+    "primary_category": "cs.SD",
+    "github": null
+  },
+  {
+    "id": "2603.14801v2",
+    "title": "Genetic Algorithms in Regression",
+    "authors": [
+      "Mo Li",
+      "QiQi Lu",
+      "Robert Lund",
+      "Xueheng Shi"
+    ],
+    "summary": "Many statistical problems involve optimization over a discrete parameter space having an unknown dimension. In such settings, gradient-based methods often fail due to the non-differentiability of the objective function or a non-convex or massive search space with an objective function having many local maxima/minima. This paper presents GAReg, a unified genetic algorithm package that handles discrete optimization regression problems, which works well when standard algorithms are unjustified. GAReg provides a compact chromosome representation supporting optimal knot placement for regression splines, best-subset regression variable selection, and related problems. The package allows for uniform initialization, constraint-preserving crossover and mutation, steady-state replacement, and an optional island-model parallelization. GAReg efficiently searches high-dimensional model spaces, providing near-optimal solutions in settings where exhaustive enumeration or integer or dynamic programming approaches are infeasible.",
+    "published": "2026-03-16",
+    "updated": "2026-03-18",
+    "pdf_url": "https://arxiv.org/pdf/2603.14801v2",
+    "categories": [
+      "stat.AP",
+      "stat.CO"
+    ],
+    "primary_category": "stat.AP",
+    "github": null
+  },
+  {
+    "id": "2603.11603v1",
+    "title": "AutoScout: Structured Optimization for Automating ML System Configuration",
+    "authors": [
+      "Jimmy Shong",
+      "Yuhan Ding",
+      "Yihan Jiang",
+      "Liheng Jing",
+      "Haonan Chen",
+      "Gaokai Zhang",
+      "Aditya Akella",
+      "Fan Lai"
+    ],
+    "summary": "Machine learning (ML) systems expose a rapidly expanding configuration space spanning model-parallelism strategies, communication optimizations, and low-level runtime parameters. End-to-end system efficiency is highly sensitive to these choices, yet identifying high-performance configurations is challenging due to heterogeneous feature types (e.g., sparse and dense parameters), conditional dependencies (e.g., valid execution parameters only under specific upstream decisions), and the high search (profiling) cost. Existing approaches either optimize a narrow subset of configuration dimensions or rely on ad-hoc heuristics that fail to generalize as configuration spaces continue to grow. We present AutoScout, a general-purpose systems configurator for ML training, fine-tuning, and inference. It formulates the system configuration as a mixed-discrete/continuous optimization problem with hierarchical dependencies and introduces a hybrid optimization framework that jointly refines sparse structural decisions and dense execution parameters. To reduce profiling cost, AutoScout adaptively prioritizes high-impact configuration features and ensembles simulators with varying fidelity. Across diverse models, hardware platforms, and deployment objectives, AutoScout consistently identifies high-performance configurations, achieving 2.7-3.0$\\times$ training speedup over expert-tuned settings.",
+    "published": "2026-03-12",
+    "updated": "2026-03-12",
+    "pdf_url": "https://arxiv.org/pdf/2603.11603v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2602.14167v1",
+    "title": "TensorCircuit-NG: A Universal, Composable, and Scalable Platform for Quantum Computing and Quantum Simulation",
+    "authors": [
+      "Shi-Xin Zhang",
+      "Yu-Qin Chen",
+      "Weitang Li",
+      "Jiace Sun",
+      "Wei-Guo Ma",
+      "Pei-Lin Zheng",
+      "Yu-Xiang Huang",
+      "Qi-Xiang Wang",
+      "Hui Yu",
+      "Zhuo Li",
+      "Xuyang Huang",
+      "Zong-Liang Li",
+      "Zhou-Quan Wan",
+      "Shuo Liu",
+      "Jiezhong Qiu",
+      "Jiaqi Miao",
+      "Zixuan Song",
+      "Yuxuan Yan",
+      "Kazuki Tsuoka",
+      "Pan Zhang",
+      "Lei Wang",
+      "Heng Fan",
+      "Chang-Yu Hsieh",
+      "Hong Yao",
+      "Tao Xiang"
+    ],
+    "summary": "We present TensorCircuit-NG, a next-generation quantum software platform designed to bridge the gap between quantum physics, artificial intelligence, and high-performance computing. Moving beyond the scope of traditional circuit simulators, TensorCircuit-NG establishes a unified, tensor-native programming paradigm where quantum circuits, tensor networks, and neural networks fuse into a single, end-to-end differentiable computational graph. Built upon industry-standard machine learning backends (JAX, TensorFlow, PyTorch), the framework introduces comprehensive capabilities for approximate circuit simulation, analog dynamics, fermion Gaussian states, qudit systems, and scalable noise modeling. To tackle the exponential complexity of deep quantum circuits, TensorCircuit-NG implements advanced distributed computing strategies, including automated data parallelism and model-parallel tensor network slicing. We validate these capabilities on GPU clusters, demonstrating a near-linear speedup in distributed variational quantum algorithms. TensorCircuit-NG enables flagship applications, including end-to-end QML for CIFAR-100 computer vision, efficient pipelines from quantum states to neural networks via classical shadows, and differentiable optimization of tensor network states for many-body physics.",
+    "published": "2026-02-15",
+    "updated": "2026-02-15",
+    "pdf_url": "https://arxiv.org/pdf/2602.14167v1",
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "github": null
+  },
+  {
+    "id": "2602.00062v2",
+    "title": "SCPL: Enhancing Neural Network Training Throughput with Decoupled Local Losses and Model Parallelism",
+    "authors": [
+      "Ming-Yao Ho",
+      "Cheng-Kai Wang",
+      "You-Teng Lin",
+      "Hung-Hsuan Chen"
+    ],
+    "summary": "Adopting large-scale AI models in enterprise information systems is often hindered by high training costs and long development cycles, posing a significant managerial challenge. The standard end-to-end backpropagation (BP) algorithm is a primary driver of modern AI, but it is also the source of inefficiency in training deep networks. This paper introduces a new training methodology, Supervised Contrastive Parallel Learning (SCPL), that addresses this issue by decoupling BP and transforming a long gradient flow into multiple short ones. This design enables the simultaneous computation of parameter gradients in different layers, achieving superior model parallelism and enhancing training throughput. Detailed experiments are presented to demonstrate the efficiency and effectiveness of our model compared to BP, Early Exit, GPipe, and Associated Learning (AL), a state-of-the-art method for decoupling backpropagation. By mitigating a fundamental performance bottleneck, SCPL provides a practical pathway for organizations to develop and deploy advanced information systems more cost-effectively and with greater agility. The experimental code is released for reproducibility. https://github.com/minyaho/scpl/",
+    "published": "2026-01-20",
+    "updated": "2026-02-03",
+    "pdf_url": "https://arxiv.org/pdf/2602.00062v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/minyaho/scpl",
+      "stars": 0,
+      "description": "",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2601.22438v1",
+    "title": "Towards Resiliency in Large Language Model Serving with KevlarFlow",
+    "authors": [
+      "Shangshu Qian",
+      "Kipling Liu",
+      "P. C. Sruthi",
+      "Lin Tan",
+      "Yongle Zhang"
+    ],
+    "summary": "Large Language Model (LLM) serving systems remain fundamentally fragile, where frequent hardware faults in hyperscale clusters trigger disproportionate service outages in the software stack. Current recovery mechanisms are prohibitively slow, often requiring up to 10 minutes to reinitialize resources and reload massive model weights. We introduce KevlarFlow, a fault tolerant serving architecture designed to bridge the gap between hardware unreliability and service availability. KevlarFlow leverages 1) decoupled model parallelism initialization, 2) dynamic traffic rerouting, and 3) background KV cache replication to maintain high throughput during partial failures. Our evaluation demonstrates that KevlarFlow reduces mean-time-to-recovery (MTTR) by 20x and, under failure conditions, improves average latency by 3.1x, 99th percentile (p99) latency by 2.8x, average time-to-first-token (TTFT) by 378.9x, and p99 TTFT by 574.6x with negligible runtime overhead in comparison to state-of-the-art LLM serving systems.",
+    "published": "2026-01-30",
+    "updated": "2026-01-30",
+    "pdf_url": "https://arxiv.org/pdf/2601.22438v1",
+    "categories": [
+      "cs.DC",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2602.00128v1",
+    "title": "Quantum Model Parallelism for MRI-Based Classification of Alzheimer's Disease Stages",
+    "authors": [
+      "Emine Akpinar",
+      "Murat Oduncuoglu"
+    ],
+    "summary": "With increasing life expectancy, AD has become a major global health concern. While classical AI-based methods have been developed for early diagnosis and stage classification of AD, growing data volumes and limited computational resources necessitate faster, more efficient approaches. Quantum-based AI methods, which leverage superposition and entanglement principles along with high-dimensional Hilbert space, can surpass classical approaches' limitations and offer higher accuracy for high-dimensional, heterogeneous, and noisy data. In this study, a Quantum-Based Parallel Model (QBPM) architecture is proposed for the efficient classification of AD stages using MRI datasets, inspired by the principles of classical model parallelism. The proposed model leverages quantum advantages by employing two distinct quantum circuits, each incorporating rotational and entanglement blocks, running in parallel on the same quantum simulator. The classification performance of the model was evaluated on two different datasets to assess its overall robustness and generalization capability. The proposed model demonstrated high classification accuracy across both datasets, highlighting its overall robustness and generalization capability. Results obtained under high-level Gaussian noise, simulating real-world conditions, further provided experimental evidence for the model's applicability not only in theoretical but also in practical scenarios. Moreover, compared with five different classical transfer learning methods, the proposed model demonstrated its efficiency as an alternative to classical approaches by achieving higher classification accuracy and comparable execution time while utilizing fewer circuit parameters. The results indicate that the proposed QBPM architecture represents an innovative and powerful approach for the classification of stages in complex diseases such as Alzheimer's.",
+    "published": "2026-01-28",
+    "updated": "2026-01-28",
+    "pdf_url": "https://arxiv.org/pdf/2602.00128v1",
+    "categories": [
+      "cs.LG",
+      "quant-ph"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2601.06567v1",
+    "title": "Path Types in Algebraic Type Theory",
+    "authors": [
+      "Steve Awodey",
+      "Joseph Hua"
+    ],
+    "summary": "A new approach to the semantics of identity types in intensional Martin-Löf type theory is proposed, assuming only a category with finite limits and an interval. The specification of \\emph{extensional} identity types in the original presentation of natural models paralleled that of the other type formers $Σ$ and $Π$, but the treatment of the \\emph{intensional} case there was less uniform. It was later reformulated to an account based on polynomials; here a further improvement in the style of the other type formers is achieved by employing an interval, in order to give a single pullback specification of a model with \\emph{path types}. The interval is also used to specify a (Hurewicz) fibration structure on the universe of the model. It is shown that the combination of these two conditions suffices to model the intensional identity rules, assuming only finite limits. The addition of an interval also relates the current treatment to that of cubical type theory.",
+    "published": "2026-01-10",
+    "updated": "2026-01-10",
+    "pdf_url": "https://arxiv.org/pdf/2601.06567v1",
+    "categories": [
+      "math.CT",
+      "math.AT",
+      "math.LO"
+    ],
+    "primary_category": "math.CT",
+    "github": null
+  },
+  {
+    "id": "2601.02360v1",
+    "title": "Heterogeneous Low-Bandwidth Pre-Training of LLMs",
+    "authors": [
+      "Yazan Obeidi",
+      "Amir Sarfi",
+      "Joel Lidin",
+      "Paul Janson",
+      "Eugene Belilovsky"
+    ],
+    "summary": "Pre-training large language models (LLMs) increasingly requires distributed compute, yet bandwidth constraints make it difficult to scale beyond well-provisioned datacenters-especially when model parallelism forces frequent, large inter-device communications. We study whether SparseLoCo, a low-communication data parallel method based on infrequent synchronization and sparse pseudo-gradient exchange, can be combined with low-bandwidth pipeline model parallelism via activation and activation-gradient compression. We introduce a heterogeneous distributed training framework where some participants host full replicas on high-bandwidth interconnects, while resource-limited participants are grouped to jointly instantiate a replica using pipeline parallelism with subspace-projected inter-stage communication. To make the recently introduced subspace pipeline compression compatible with SparseLoCo, we study a number of adaptations. Across large-scale language modeling experiments (178M-1B parameters) on standard pretraining corpora, we find that activation compression composes with SparseLoCo at modest cost, while selective (heterogeneous) compression consistently improves the loss-communication tradeoff relative to compressing all replicas-especially at aggressive compression ratios. These results suggest a practical path to incorporating low-bandwidth model parallelism and heterogeneous participants into LLM pre-training.",
+    "published": "2026-01-05",
+    "updated": "2026-01-05",
+    "pdf_url": "https://arxiv.org/pdf/2601.02360v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2512.20064v1",
+    "title": "FastMPS: Revisit Data Parallel in Large-scale Matrix Product State Sampling",
+    "authors": [
+      "Yaojian Chen",
+      "Si-Qiu Gong",
+      "Lin Gan",
+      "Yanfei Liu",
+      "An Yang",
+      "Yinuo Wang",
+      "Chao-yang Lu",
+      "Guangwen Yang"
+    ],
+    "summary": "Matrix Product State (MPS) is a versatile tensor network representation widely applied in quantum physics, quantum chemistry, and machine learning, etc. MPS sampling serves as a critical fundamental operation in these fields. As the problems become more complex, the scale of MPS is rapidly increasing. Traditional data parallelism is limited by memory and heavy I/O in large-scale MPS. Model parallelism that can handle large-scale MPS imposes rigid process bindings and lacks scalability. This work proposes Fast-MPS, a multi-level parallel framework for scalable MPS sampling. Our design combines data parallelism across samples with tensor parallelism along bond dimensions. We eliminate memory and I/O pressure through compression and overlapping, and revive data parallel in large-scale MPS sampling. We evaluate our approach on Gaussian Boson Sampling, a representative and demanding application. Fast-MPS achieves over 10x speedup compared to existing simulators, scales to thousands of processes, and enables simulations with 8,176 sites and bond dimension chi = 10^4, significantly outperforming the state of the art. Fast-MPS has demonstrated great potential in high-performance tensor network applications.",
+    "published": "2025-12-23",
+    "updated": "2025-12-23",
+    "pdf_url": "https://arxiv.org/pdf/2512.20064v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2511.09557v3",
+    "title": "LLM Inference Beyond a Single Node: From Bottlenecks to Mitigations with Fast All-Reduce Communication",
+    "authors": [
+      "Prajwal Singhania",
+      "Siddharth Singh",
+      "Lannie Dalton Hough",
+      "Akarsh Srivastava",
+      "Harshitha Menon",
+      "Charles Fredrick Jekel",
+      "Abhinav Bhatele"
+    ],
+    "summary": "As large language models (LLMs) continue to grow in size, distributed inference has become increasingly important. Model-parallel strategies must now efficiently scale not only across multiple GPUs but also across multiple nodes. In this work, we present a detailed performance study of multi-node distributed inference using LLMs on GPU-based supercomputers. We conduct experiments with several state-of-the-art inference engines alongside YALIS, a research-oriented prototype engine designed for controlled experimentation. We analyze the strong-scaling behavior of different model-parallel schemes and identify key bottlenecks. Since all-reduce operations are a common performance bottleneck, we develop NVRAR, a hierarchical all-reduce algorithm based on recursive doubling with NVSHMEM. NVRAR achieves up to 1.9x-3.6x lower latency than NCCL for message sizes between 128 KB and 2 MB on HPE Slingshot and InfiniBand interconnects. Integrated into YALIS, NVRAR achieves up to a 1.72x reduction in end-to-end batch latency for the Llama 3.1 405B model in multi-node decode-heavy workloads using tensor parallelism.",
+    "published": "2025-11-12",
+    "updated": "2025-12-15",
+    "pdf_url": "https://arxiv.org/pdf/2511.09557v3",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2512.03839v1",
+    "title": "A 3D virtual geographic environment for flood representation towards risk communication",
+    "authors": [
+      "Weilian Li",
+      "Jun Zhu",
+      "Saied Pirasteh",
+      "Qing Zhu",
+      "Yukun Guo",
+      "Lan Luo",
+      "Youness Dehbi"
+    ],
+    "summary": "Risk communication seeks to develop a shared understanding of disaster among stakeholders, thereby amplifying public awareness and empowering them to respond more effectively to emergencies. However, existing studies have overemphasized specialized numerical modelling, making the professional output challenging to understand and use by non-research stakeholders. In this context, this article proposes a 3D virtual geographic environment for flood representation towards risk communication, which integrates flood modelling, parallel computation, and 3D representation in a pipeline. Finally, a section of the Rhine River in Bonn, Germany, is selected for experiment analysis. The experimental results show that the proposed approach is capable of flood modelling and 3D representation within a few hours, the parallel speedup ratio reached 6.45. The intuitive flood scene with 3D city models is beneficial for promoting flood risk communication and is particularly helpful for participants without direct experience of floods to understand its spatiotemporal process. It also can be embedded in the Geospatial Infrastructure Management Ecosystem (GeoIME) cloud application for intelligent flood systems.",
+    "published": "2025-12-03",
+    "updated": "2025-12-03",
+    "pdf_url": "https://arxiv.org/pdf/2512.03839v1",
+    "categories": [
+      "cs.CE"
+    ],
+    "primary_category": "cs.CE",
+    "github": null
+  },
+  {
+    "id": "2510.27257v1",
+    "title": "Synergistic Tensor and Pipeline Parallelism",
+    "authors": [
+      "Mengshi Qi",
+      "Jiaxuan Peng",
+      "Jie Zhang",
+      "Juan Zhu",
+      "Yong Li",
+      "Huadong Ma"
+    ],
+    "summary": "In the machine learning system, the hybrid model parallelism combining tensor parallelism (TP) and pipeline parallelism (PP) has become the dominant solution for distributed training of Large Language Models~(LLMs) and Multimodal LLMs (MLLMs). However, TP introduces significant collective communication overheads, while PP suffers from synchronization inefficiencies such as pipeline bubbles. Existing works primarily address these challenges from isolated perspectives, focusing either on overlapping TP communication or on flexible PP scheduling to mitigate pipeline bubbles. In this paper, we propose a new synergistic tensor and pipeline parallelism schedule that simultaneously reduces both types of bubbles. Our proposed schedule decouples the forward and backward passes in PP into fine-grained computation units, which are then braided to form a composite computation sequence. This compositional structure enables near-complete elimination of TP-related bubbles. Building upon this structure, we further design the PP schedule to minimize PP bubbles. Experimental results demonstrate that our approach improves training throughput by up to 12% for LLMs and 16% for MLLMs compared to existing scheduling methods. Our source code is avaiable at https://github.com/MICLAB-BUPT/STP.",
+    "published": "2025-10-31",
+    "updated": "2025-10-31",
+    "pdf_url": "https://arxiv.org/pdf/2510.27257v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": {
+      "url": "https://github.com/MICLAB-BUPT/STP.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2510.16981v1",
+    "title": "MuonBP: Faster Muon via Block-Periodic Orthogonalization",
+    "authors": [
+      "Ahmed Khaled",
+      "Kaan Ozkara",
+      "Tao Yu",
+      "Mingyi Hong",
+      "Youngsuk Park"
+    ],
+    "summary": "Gradient orthogonalization is a simple strategy that shows great utility in speeding up gradient descent. The Muon optimizer (Jordan, Jin, et al., 2024) combines gradient orthogonalization with first-order momentum and achieves significant improvement in data efficiency over Adam/AdamW (Loshchilov and Hutter, 2019) for language model training. However, when using model parallelism, gradient orthogonalization introduces additional overhead compared to coordinate-wise optimizers (such as AdamW) due to additional gather and scatter operations on gradient matrix shards from different devices. This additional communication can amount to a throughput hit of 5%-10% compared to Adam/AdamW. To remedy this, we propose Muon with Block-Periodic Orthogonalization (MuonBP), which applies orthogonalization independently to matrix shards on each device and periodically performs full orthogonalization to maintain training stability at scale. We show how to adjust the learning rate from the baseline to MuonBP and give convergence guarantees for this algorithm. Crucially, our theory dictates that we use two stepsizes: one for the blockwise orthogonalization steps, and one for the full orthogonalization steps. Our method is simple, requires minimal hyperparameter adjustments, and achieves competitive iteration complexity compared with baseline Muon while providing per-iteration throughput comparable to coordinate-wise methods such as AdamW. When training an 8B model with eight-way tensor parallelism and ZeRO optimizer state sharding, MuonBP achieves 8% throughput increase compared to Muon with no degradation in performance.",
+    "published": "2025-10-19",
+    "updated": "2025-10-19",
+    "pdf_url": "https://arxiv.org/pdf/2510.16981v1",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2506.13996v1",
+    "title": "Arctic Long Sequence Training: Scalable And Efficient Training For Multi-Million Token Sequences",
+    "authors": [
+      "Stas Bekman",
+      "Samyam Rajbhandari",
+      "Michael Wyatt",
+      "Jeff Rasley",
+      "Tunji Ruwase",
+      "Zhewei Yao",
+      "Aurick Qiao",
+      "Yuxiong He"
+    ],
+    "summary": "Long sequences are critical for applications like RAG, long document summarization, multi-modality, etc., and modern LLMs, like Llama 4 Scout, support max sequence length of up to 10 million tokens. However, outside of enterprise labs, long sequence training is challenging for the AI community with limited system support in the open-source space.\n  Out-of-box, even on a modern NVIDIA H100 80GB GPU cluster, training Llama 8B model with sequence over 32K runs out of memory on a basic Hugging Face (HF) model due to two reasons: i) LLM training workloads are not optimized to fully leverage a single GPU memory, ii) existing solutions for leveraging multiple GPU memory are not easily available to HF models, making long sequence training inaccessible.\n  We address this with Arctic Long Sequence Training (ALST). It offers a combination of attention-agnostic single GPU and multi-GPU memory optimizations, that enables it to support out-of-box training of multi-million sequence length for a wide variety of HF models.\n  ALST supports training Meta's Llama 8B model with 500K sequence length on a single H100 GPU, 3.7M on a single 8xH100 GPU node, and over 15M on a 4 node cluster, an increase of over 400x compared to the 32K baseline for the latter. ALST is fully compatible with HF models and open-sourced via Deepspeed https://www.deepspeed.ai/tutorials/ulysses-alst-sequence-pallellism/ and Arctic Training https://github.com/snowflakedb/ArcticTraining/blob/main/projects/sequence-parallelism/README.md.",
+    "published": "2025-06-16",
+    "updated": "2025-06-16",
+    "pdf_url": "https://arxiv.org/pdf/2506.13996v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/snowflakedb/ArcticTraining",
+      "stars": 278,
+      "description": "ArcticTraining is a framework designed to simplify and accelerate the post-training process for larg",
+      "language": "Python"
+    }
+  }
+]
