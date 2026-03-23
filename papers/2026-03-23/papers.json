@@ -1,0 +1,87 @@
+[
+  {
+    "id": "2603.19700v1",
+    "title": "Regret Analysis of Sleeping Competing Bandits",
+    "authors": [
+      "Shinnosuke Uba",
+      "Yutaro Yamaguchi"
+    ],
+    "summary": "The Competing Bandits framework is a recently emerging area that integrates multi-armed bandits in online learning with stable matching in game theory. While conventional models assume that all players and arms are constantly available, in real-world problems, their availability can vary arbitrarily over time. In this paper, we formulate this setting as Sleeping Competing Bandits. To analyze this problem, we naturally extend the regret definition used in existing competing bandits and derive regret bounds for the proposed model. We propose an algorithm that simultaneously achieves an asymptotic regret bound of $\\mathrm{O}\\left(NK\\log T_{i}/Δ^2\\right)$ under reasonable assumptions, where $N$ is the number of players, $K$ is the number of arms, $T_{i}$ is the number of rounds of each player $p_i$, and $Δ$ is the minimum reward gap. We also provide a regret lower bound of $\\mathrmΩ\\left( N(K-N+1)\\log T_{i}/Δ^2 \\right)$ under the same assumptions. This implies that our algorithm is asymptotically optimal in the regime where the number of arms $K$ is relatively larger than the number of players $N$.",
+    "published": "2026-03-20",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.19700v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.19563v1",
+    "title": "Dual-Domain Representation Alignment: Bridging 2D and 3D Vision via Geometry-Aware Architecture Search",
+    "authors": [
+      "Haoyu Zhang",
+      "Zhihao Yu",
+      "Rui Wang",
+      "Yaochu Jin",
+      "Qiqi Liu",
+      "Ran Cheng"
+    ],
+    "summary": "Modern computer vision requires balancing predictive accuracy with real-time efficiency, yet the high inference cost of large vision models (LVMs) limits deployment on resource-constrained edge devices. Although Evolutionary Neural Architecture Search (ENAS) is well suited for multi-objective optimization, its practical use is hindered by two issues: expensive candidate evaluation and ranking inconsistency among subnetworks. To address them, we propose EvoNAS, an efficient distributed framework for multi-objective evolutionary architecture search. We build a hybrid supernet that integrates Vision State Space and Vision Transformer (VSS-ViT) modules, and optimize it with a Cross-Architecture Dual-Domain Knowledge Distillation (CA-DDKD) strategy. By coupling the computational efficiency of VSS blocks with the semantic expressiveness of ViT modules, CA-DDKD improves the representational capacity of the shared supernet and enhances ranking consistency, enabling reliable fitness estimation during evolution without extra fine-tuning. To reduce the cost of large-scale validation, we further introduce a Distributed Multi-Model Parallel Evaluation (DMMPE) framework based on GPU resource pooling and asynchronous scheduling. Compared with conventional data-parallel evaluation, DMMPE improves efficiency by over 70% through concurrent multi-GPU, multi-model execution. Experiments on COCO, ADE20K, KITTI, and NYU-Depth v2 show that the searched architectures, termed EvoNets, consistently achieve Pareto-optimal trade-offs between accuracy and efficiency. Compared with representative CNN-, ViT-, and Mamba-based models, EvoNets deliver lower inference latency and higher throughput under strict computational budgets while maintaining strong generalization on downstream tasks such as novel view synthesis. Code is available at https://github.com/EMI-Group/evonas",
+    "published": "2026-03-20",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.19563v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/EMI-Group/evonas",
+      "stars": 0,
+      "description": "EvoNAS is a framework for neural architecture search , implemented with PyTorch. It supports superne",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2603.19384v1",
+    "title": "SOFTMAP: Sim2Real Soft Robot Forward Modeling via Topological Mesh Alignment and Physics Prior",
+    "authors": [
+      "Ziyong Ma",
+      "Uksang Yoo",
+      "Jonathan Francis",
+      "Weiming Zhi",
+      "Jeffrey Ichnowski",
+      "Jean Oh"
+    ],
+    "summary": "While soft robot manipulators offer compelling advantages over rigid counterparts, including inherent compliance, safe human-robot interaction, and the ability to conform to complex geometries, accurate forward modeling from low-dimensional actuation commands remains an open challenge due to nonlinear material phenomena such as hysteresis and manufacturing variability. We present SOFTMAP, a sim-to-real learning framework for real-time 3D forward modeling of tendon-actuated soft finger manipulators. SOFTMAP combines four components: (1) As-Rigid-As-Possible (ARAP)-based topological alignment that projects simulated and real point clouds into a shared, topologically consistent vertex space; (2) a lightweight MLP forward model pretrained on simulation data to map servo commands to full 3D finger geometry; (3) a residual correction network trained on a small set of real observations to predict per-vertex displacement fields that compensate for sim-to-real discrepancies; and (4) a closed-form linear actuation calibration layer enabling real-time inference at 30 FPS. We evaluate SOFTMAP on both simulated and physical hardware, achieving state-of-the-art shape prediction accuracy with a Chamfer distance of 0.389 mm in simulation and 3.786 mm on hardware, millimeter-level fingertip trajectory tracking across multiple target paths, and a 36.5% improvement in teleoperation task success over the baseline. Our results show that SOFTMAP provides a data-efficient approach for 3D forward modeling and control of soft manipulators.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19384v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.19501v1",
+    "title": "Stochastic Sequential Decision Making over Expanding Networks with Graph Filtering",
+    "authors": [
+      "Zhan Gao",
+      "Bishwadeep Das",
+      "Elvin Isufi"
+    ],
+    "summary": "Graph filters leverage topological information to process networked data with existing methods mainly studying fixed graphs, ignoring that graphs often expand as nodes continually attach with an unknown pattern. The latter requires developing filter-based decision-making paradigms that take evolution and uncertainty into account. Existing approaches rely on either pre-designed filters or online learning, limited to a myopic view considering only past or present information. To account for future impacts, we propose a stochastic sequential decision-making framework for filtering networked data with a policy that adapts filtering to expanding graphs. By representing filter shifts as agents, we model the filter as a multi-agent system and train the policy following multi-agent reinforcement learning. This accounts for long-term rewards and captures expansion dynamics through sequential decision-making. Moreover, we develop a context-aware graph neural network to parameterize the policy, which tunes filter parameters based on information of both the graph and agents. Experiments on synthetic and real datasets from cold-start recommendation to COVID prediction highlight the benefits of using a sequential decision-making perspective over batch and online filtering alternatives.",
+    "published": "2026-03-19",
+    "updated": "2026-03-19",
+    "pdf_url": "https://arxiv.org/pdf/2603.19501v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
