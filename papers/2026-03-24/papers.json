@@ -1,0 +1,238 @@
+[
+  {
+    "id": "2603.21563v1",
+    "title": "Counterfactual Credit Policy Optimization for Multi-Agent Collaboration",
+    "authors": [
+      "Zhongyi Li",
+      "Wan Tian",
+      "Yikun Ban",
+      "Jinju Chen",
+      "Huiming Zhang",
+      "Yang Liu",
+      "Fuzhen Zhuang"
+    ],
+    "summary": "Collaborative multi-agent large language models (LLMs) can solve complex reasoning tasks by decomposing roles and aggregating diverse hypotheses. Yet, reinforcement learning (RL) for such systems is often undermined by credit assignment: a shared global reward obscures individual contributions, inflating update variance and encouraging free-riding. We introduce Counterfactual Credit Policy Optimization (CCPO), a framework that assigns agent-specific learning signals by estimating each agent's marginal contribution through counterfactual trajectories. CCPO builds dynamic counterfactual baselines that simulate outcomes with an agent's contribution removed, yielding role-sensitive advantages for policy optimization. To further improve stability under heterogeneous tasks and data distributions, we propose a global-history-aware normalization scheme that calibrates advantages using global rollout statistics. We evaluate CCPO on two collaboration topologies: a sequential Think--Reason dyad and multi-agent voting. Across mathematical and logical reasoning benchmarks, CCPO mitigates free-riding and outperforms strong multi-agent RL baselines, yielding finer-grained and more effective credit assignment for collaborative LLM training. Our code is available at https://github.com/bhai114/ccpo.",
+    "published": "2026-03-23",
+    "updated": "2026-03-23",
+    "pdf_url": "https://arxiv.org/pdf/2603.21563v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": {
+      "url": "https://github.com/bhai114/ccpo.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.21710v1",
+    "title": "FGIM: a Fast Graph-based Indexes Merging Framework for Approximate Nearest Neighbor Search",
+    "authors": [
+      "Zekai Wu",
+      "Jiabao Jin",
+      "Peng Cheng",
+      "Xiaoyao Zhong",
+      "Lei Chen",
+      "Yongxin Tong",
+      "Zhitao Shen",
+      "Jingkuan Song",
+      "Heng Tao Shen",
+      "Xuemin Lin"
+    ],
+    "summary": "As the state-of-the-art methods for high-dimensional data retrieval, Approximate Nearest Neighbor Search (ANNS) approaches with graph-based indexes have attracted increasing attention and play a crucial role in many real-world applications, e.g., retrieval-augmented generation (RAG) and recommendation systems. Unlike the extensive works focused on designing efficient graph-based ANNS methods, this paper delves into merging multiple existing graph-based indexes into a single one, which is also crucial in many real-world scenarios (e.g., cluster consolidation in distributed systems and read-write contention in real-time vector databases). We propose a Fast Graph-based Indexes Merging (FGIM) framework with three core techniques: (1) Proximity Graphs (PGs) to $k$ Nearest Neighbor Graph ($k$-NNG) transformation used to extract potential candidate neighbors from input graph-based indexes through cross-querying, (2) $k$-NNG refinement designed to identify overlooked high-quality neighbors and maintain graph connectivity, and (3) $k$-NNG to PG transformation aimed at improving graph navigability and enhancing search performance. Then, we integrate our FGIM framework with the state-of-the-art ANNS method, HNSW, and other existing mainstream graph-based methods to demonstrate its generality and merging efficiency. Extensive experiments on six real-world datasets show that our FGIM framework is applicable to various mainstream graph-based ANNS methods, achieves up to 3.5$\\times$ speedup over HNSW's incremental construction and an average of 7.9$\\times$ speedup for methods without incremental support, while maintaining comparable or superior search performance.",
+    "published": "2026-03-23",
+    "updated": "2026-03-23",
+    "pdf_url": "https://arxiv.org/pdf/2603.21710v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2603.22167v1",
+    "title": "Calibeating Made Simple",
+    "authors": [
+      "Yurong Chen",
+      "Zhiyi Huang",
+      "Michael I. Jordan",
+      "Haipeng Luo"
+    ],
+    "summary": "We study calibeating, the problem of post-processing external forecasts online to minimize cumulative losses and match an informativeness-based benchmark. Unlike prior work, which analyzed calibeating for specific losses with specific arguments, we reduce calibeating to existing online learning techniques and obtain results for general proper losses. More concretely, we first show that calibeating is minimax-equivalent to regret minimization. This recovers the $O(\\log T)$ calibeating rate of Foster and Hart [FH23] for the Brier and log losses and its optimality, and yields new optimal calibeating rates for mixable losses and general bounded losses. Second, we prove that multi-calibeating is minimax-equivalent to the combination of calibeating and the classical expert problem. This yields new optimal multi-calibeating rates for mixable losses, including Brier and log losses, and general bounded losses. Finally, we obtain new bounds for achieving calibeating and calibration simultaneously for the Brier loss. For binary predictions, our result gives the first calibrated algorithm that at the same time also achieves the optimal $O(\\log T)$ calibeating rate.",
+    "published": "2026-03-23",
+    "updated": "2026-03-23",
+    "pdf_url": "https://arxiv.org/pdf/2603.22167v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.GT",
+      "econ.TH"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.21375v1",
+    "title": "Constrained Online Convex Optimization with Memory and Predictions",
+    "authors": [
+      "Mohammed Abdullah",
+      "George Iosifidis",
+      "Salah Eddine Elayoubi",
+      "Tijani Chahed"
+    ],
+    "summary": "We study Constrained Online Convex Optimization with Memory (COCO-M), where both the loss and the constraints depend on a finite window of past decisions made by the learner. This setting extends the previously studied unconstrained online optimization with memory framework and captures practical problems such as the control of constrained dynamical systems and scheduling with reconfiguration budgets. For this problem, we propose the first algorithms that achieve sublinear regret and sublinear cumulative constraint violation under time-varying constraints, both with and without predictions of future loss and constraint functions. Without predictions, we introduce an adaptive penalty approach that guarantees sublinear regret and constraint violation. When short-horizon and potentially unreliable predictions are available, we reinterpret the problem as online learning with delayed feedback and design an optimistic algorithm whose performance improves as prediction accuracy improves, while remaining robust when predictions are inaccurate. Our results bridge the gap between classical constrained online convex optimization and memory-dependent settings, and provide a versatile learning toolbox with diverse applications.",
+    "published": "2026-03-22",
+    "updated": "2026-03-22",
+    "pdf_url": "https://arxiv.org/pdf/2603.21375v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.21014v1",
+    "title": "CLT-Forge: A Scalable Library for Cross-Layer Transcoders and Attribution Graphs",
+    "authors": [
+      "Florent Draye",
+      "Abir Harrasse",
+      "Vedant Palit",
+      "Tung-Yu Wu",
+      "Jiarui Liu",
+      "Punya Syon Pandey",
+      "Roderick Wu",
+      "Terry Jingchen Zhang",
+      "Zhijing Jin",
+      "Bernhard Schölkopf"
+    ],
+    "summary": "Mechanistic interpretability seeks to understand how Large Language Models (LLMs) represent and process information. Recent approaches based on dictionary learning and transcoders enable representing model computation in terms of sparse, interpretable features and their interactions, giving rise to feature attribution graphs. However, these graphs are often large and redundant, limiting their interpretability in practice. Cross-Layer Transcoders (CLTs) address this issue by sharing features across layers while preserving layer-specific decoding, yielding more compact representations, but remain difficult to train and analyze at scale. We introduce an open-source library for end-to-end training and interpretability of CLTs. Our framework integrates scalable distributed training with model sharding and compressed activation caching, a unified automated interpretability pipeline for feature analysis and explanation, attribution graph computation using Circuit-Tracer, and a flexible visualization interface. This provides a practical and unified solution for scaling CLT-based mechanistic interpretability. Our code is available at: https://github.com/LLM-Interp/CLT-Forge.",
+    "published": "2026-03-22",
+    "updated": "2026-03-22",
+    "pdf_url": "https://arxiv.org/pdf/2603.21014v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/LLM-Interp/CLT-Forge.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.20632v1",
+    "title": "Optimal low-rank stochastic gradient estimation for LLM training",
+    "authors": [
+      "Zehao Li",
+      "Tao Ren",
+      "Zishi Zhang",
+      "Xi Chen",
+      "Yijie Peng"
+    ],
+    "summary": "Large language model (LLM) training is often bottlenecked by memory constraints and stochastic gradient noise in extremely high-dimensional parameter spaces. Motivated by empirical evidence that many LLM gradient matrices are effectively low-rank during training, we present an unbiased, memory-efficient, low-rank matrix estimator with the lowest variance that is applicable across common stochastic gradient estimation paradigms. The core idea is to project a high-dimensional stochastic gradient estimator onto a random low-dimensional subspace and lift it back, reducing memory while keeping the estimator unbiased and controlling mean-squared error via an optimally designed projection distribution, including Haar--Stiefel projections. The projection distribution is derived by solving a constrained functional optimization problem, yielding an optimal random projector that guides algorithm design. Empirically, the resulting low-rank gradient estimators deliver both practical memory savings and improved training behavior. In RoBERTa-large fine-tuning, our method attains the lowest peak GPU memory among compared methods (e.g., 3.83GB versus 16.7GB for full BP) while remaining competitive in accuracy; in autoregressive LLM pretraining (LLaMA-20M/60M/100M), our method outperforms the traditional methods, supporting the benefit of the proposed optimal projection strategy.",
+    "published": "2026-03-21",
+    "updated": "2026-03-21",
+    "pdf_url": "https://arxiv.org/pdf/2603.20632v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.20696v1",
+    "title": "High-dimensional online learning via asynchronous decomposition: Non-divergent results, dynamic regularization, and beyond",
+    "authors": [
+      "Shixiang Liu",
+      "Zhifan Li",
+      "Hanming Yang",
+      "Jianxin Yin"
+    ],
+    "summary": "Existing high-dimensional online learning methods often face the challenge that their error bounds, or per-batch sample sizes, diverge as the number of data batches increases. To address this issue, we propose an asynchronous decomposition framework that leverages summary statistics to construct a surrogate score function for current-batch learning. This framework is implemented via a dynamic-regularized iterative hard thresholding algorithm, providing a computationally and memory-efficient solution for sparse online optimization. We provide a unified theoretical analysis that accounts for both the streaming computational error and statistical accuracy, establishing that our estimator maintains non-divergent error bounds and $\\ell_0$ sparsity across all batches. Furthermore, the proposed estimator adaptively achieves additional gains as batches accumulate, attaining the oracle accuracy as if the entire historical dataset were accessible and the true support were known. These theoretical properties are further illustrated through an example of the generalized linear model.",
+    "published": "2026-03-21",
+    "updated": "2026-03-21",
+    "pdf_url": "https://arxiv.org/pdf/2603.20696v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2603.20533v1",
+    "title": "Revenue-Sharing as Infrastructure: A Distributed Business Model for Generative AI Platforms",
+    "authors": [
+      "Ghislain Dorian Tchuente Mondjo"
+    ],
+    "summary": "Generative AI platforms (Google AI Studio, OpenAI, Anthropic) provide infrastructures (APIs, models) that are transforming the application development ecosystem. Recent literature distinguishes three generations of business models: a first generation modeled on cloud computing (pay-per-use), a second characterized by diversification (freemium, subscriptions), and a third, emerging generation exploring multi-layer market architectures with revenue-sharing mechanisms. Despite these advances, current models impose a financial barrier to entry for developers, limiting innovation and excluding actors from emerging economies. This paper proposes and analyzes an original model, \"Revenue-Sharing as Infrastructure\" (RSI), where the platform offers its AI infrastructure for free and takes a percentage of the revenues generated by developers applications. This model reverses the traditional upstream payment logic and mobilizes concepts of value co-creation, incentive mechanisms, and multi-layer market architecture to build an original theoretical framework. A detailed comparative analysis shows that the RSI model lowers entry barriers for developers, aligns stakeholder interests, and could stimulate innovation in the ecosystem. Beyond its economic relevance, RSI has a major societal dimension: by enabling developers without initial capital to participate in the digital economy, it could unlock the \"latent jobs dividend\" in low-income countries, where mobile penetration reaches 84%, and help address local challenges in health, agriculture, and services. Finally, we discuss the conditions of feasibility and strategic implications for platforms and developers.",
+    "published": "2026-03-20",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.20533v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2603.20522v1",
+    "title": "A cellular automaton model for thermal transport in low-dimensional systems",
+    "authors": [
+      "Alejandra León"
+    ],
+    "summary": "In this work, we formulate a theoretical model based on a cellular automaton (CA) to study thermal transport in low-dimensional nanostructures across ballistic, diffusive, and transition regimes. Unlike computationally intensive methods such as the Boltzmann Transport Equation (BTE), our model stands out for its geometrical robustness, allowing the seamless integration of substitutional impurities, vacancies, and irregular edges. We validated the model using graphene nanoribbons (AGNRs), successfully replicating the dependence of thermal conductivity on ribbon width and temperature. Results demonstrate that the model captures critical scattering and confinement effects with a linear scalability O(N). Given the increasing pressure to optimize computational resources and reduce the carbon footprint associated with AI infrastructure, this CA model emerges as a highly efficient tool for the parametric exploration and design of next-generation thermal devices.",
+    "published": "2026-03-20",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.20522v1",
+    "categories": [
+      "cond-mat.mes-hall"
+    ],
+    "primary_category": "cond-mat.mes-hall",
+    "github": null
+  },
+  {
+    "id": "2603.19078v2",
+    "title": "Articulated-Body Dynamics Network: Dynamics-Grounded Prior for Robot Learning",
+    "authors": [
+      "Sangwoo Shin",
+      "Kunzhao Ren",
+      "Xiaobin Xiong",
+      "Josiah P. Hanna"
+    ],
+    "summary": "Recent work in reinforcement learning has shown that incorporating structural priors for articulated robots, such as link connectivity, into policy networks improves learning efficiency. However, dynamics properties, despite their fundamental role in determining how forces and motion propagate through the body, remain largely underexplored as an inductive bias for policy learning. To address this gap, we present the Articulated-Body Dynamics Network (ABD-Net), a novel graph neural network architecture grounded in the computational structure of forward dynamics. Specifically, we adapt the inertia propagation mechanism from the Articulated Body Algorithm, systematically aggregating inertial quantities from child to parent links in a tree-structured manner, while replacing physical quantities with learnable parameters. Embedding ABD-NET into the policy actor enables dynamics-informed representations that capture how actions propagate through the body, leading to efficient and robust policy learning. Through experiments with simulated humanoid, quadruped, and hopper robots, our approach demonstrates increased sample efficiency and generalization to dynamics shifts compared to transformer-based and GNN baselines. We further validate the learned policy on real Unitree G1 and Go2 robots, state-of-the-art humanoid and quadruped platforms, generating dynamic, versatile and robust locomotion behaviors through sim-to-real transfer with real-time inference.",
+    "published": "2026-03-19",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.19078v2",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.20333v1",
+    "title": "Bounded Coupled AI Learning Dynamics in Tri-Hierarchical Drone Swarms",
+    "authors": [
+      "Oleksii Bychkov"
+    ],
+    "summary": "Modern autonomous multi-agent systems combine heterogeneous learning mechanisms operating at different timescales. An open question remains: can one formally guarantee that coupled dynamics of such mechanisms stay within the admissible operational regime? This paper studies a tri-hierarchical swarm learning system where three mechanisms act simultaneously: (1) local Hebbian online learning at individual agent level (fast timescale, 10-100 ms); (2) multi-agent reinforcement learning (MARL) for tactical group coordination (medium timescale, 1-10 s); (3) meta-learning (MAML) for strategic adaptation (slow timescale, 10-100 s). Four results are established. The Bounded Total Error Theorem shows that under contractual constraints on learning rates, Lipschitz continuity of inter-level mappings, and weight stabilization, total suboptimality admits a component-wise upper bound uniform in time. The Bounded Representation Drift Theorem gives a worst-case estimate of how Hebbian updates affect coordination-level embeddings during one MARL cycle. The Meta-Level Compatibility Theorem provides sufficient conditions under which strategic adaptation preserves lower-level invariants. The Non-Accumulation Theorem proves that error does not grow unboundedly over time.",
+    "published": "2026-03-20",
+    "updated": "2026-03-20",
+    "pdf_url": "https://arxiv.org/pdf/2603.20333v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
