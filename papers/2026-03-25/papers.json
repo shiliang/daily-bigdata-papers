@@ -1,0 +1,231 @@
+[
+  {
+    "id": "2603.23355v1",
+    "title": "Off-Policy Value-Based Reinforcement Learning for Large Language Models",
+    "authors": [
+      "Peng-Yuan Wang",
+      "Ziniu Li",
+      "Tian Xu",
+      "Bohan Yang",
+      "Tian-Shuo Liu",
+      "ChenYang Wang",
+      "Xiong-Hui Chen",
+      "Yi-Chen Li",
+      "Tianyun Yang",
+      "Congliang Chen",
+      "Yang Yu"
+    ],
+    "summary": "Improving data utilization efficiency is critical for scaling reinforcement learning (RL) for long-horizon tasks where generating trajectories is expensive. However, the dominant RL methods for LLMs are largely on-policy: they update each batch of data only once, discard it, and then collect fresh samples, resulting in poor sample efficiency. In this work, we explore an alternative value-based RL framework for LLMs that naturally enables off-policy learning. We propose ReVal, a Bellman-update-based method that combines stepwise signals capturing internal consistency with trajectory-level signals derived from outcome verification. ReVal naturally supports replay-buffer-based training, allowing efficient reuse of past trajectories. Experiments on standard mathematical reasoning benchmarks show that ReVal not only converges faster but also outperforms GRPO in final performance. On DeepSeek-R1-Distill-1.5B, ReVal improves training efficiency and achieves improvement of 2.7% in AIME24 and 4.5% in out-of-domain benchmark GPQA over GRPO. These results suggest that value-based RL is a practical alternative to policy-based methods for LLM training.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23355v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.23073v1",
+    "title": "Can an LLM Detect Instances of Microservice Infrastructure Patterns?",
+    "authors": [
+      "Carlos Eduardo Duarte",
+      "Neil B. Harrison",
+      "Filipe Figueiredo Correia",
+      "Ademar Aguiar",
+      "Pavlína Gonçalves"
+    ],
+    "summary": "Architectural patterns are frequently found in various software artifacts. The wide variety of patterns and their implementations makes detection challenging with current tools, especially since they often only support detecting patterns in artifacts written in a single language. Large Language Models (LLMs), trained on a diverse range of software artifacts and knowledge, might overcome the limitations of existing approaches. However, their true effectiveness and the factors influencing their performance have not yet been thoroughly examined. To better understand this, we developed MicroPAD. This tool utilizes GPT 5 nano to identify architectural patterns in software artifacts written in any language, based on natural-language pattern descriptions. We used MicroPAD to evaluate an LLM's ability to detect instances of architectural patterns, particularly infrastructure-related microservice patterns. To accomplish this, we selected a set of GitHub repositories and contacted their top contributors to create a new, human-annotated dataset of 190 repositories containing microservice architectural patterns. The results show that MicroPAD was capable of detecting pattern instances across multiple languages and artifact types. The detection performance varied across patterns (F1 scores ranging from 0.09 to 0.70), specifically in relation to their prevalence and the distinctiveness of the artifacts through which they manifest. We also found that patterns associated with recognizable, dominant artifacts were detected more reliably. Whether these findings generalize to other LLMs and tools is a promising direction for future research.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23073v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2603.22755v1",
+    "title": "KALAVAI: Predicting When Independent Specialist Fusion Works -- A Quantitative Model for Post-Hoc Cooperative LLM Training",
+    "authors": [
+      "Ramchand Kumaresan"
+    ],
+    "summary": "Independently trained domain specialists can be fused post-hoc into a single model that outperforms any individual specialist, and the gain is predictable: gain = 0.82 x divergence - 2.72 (R^2 = 0.856, n=6, 3-26% divergence). This enables practitioners to estimate cooperative value before committing compute. Below ~3.3% divergence, gains approach zero.In the KALAVAI protocol, contributors fine-tune copies of a shared checkpoint independently, then submit for lightweight MoE routing (500 steps). Gains are consistent: +7.72% at 410M (+/-0.02%, 3 seeds), +7.49% at 1B (+/-0.01%, 3 seeds), +6.53% at 6.9B, each over the best specialist. The router matches domain-oracle routing within <10^{-5} nats. Cross-lingual fusion (Tamil/Yoruba/Welsh/Code) achieves +21.76%, with Yoruba perplexity falling 41.9 to 7.7. A 20-contributor federation achieves +16.71% (+/-0.07pp, 3 seeds).Three requirements bound the protocol. Shared initialisation is necessary: checkpoint mismatch degrades routing. Frozen layers are optional below ~10,000 steps and beneficial beyond. Learned routing is essential: uniform averaging degrades by -1.2% vs. best specialist, while any trained router achieves oracle-optimal assignment.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.22755v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2603.22707v1",
+    "title": "Detecting Non-Membership in LLM Training Data via Rank Correlations",
+    "authors": [
+      "Pranav Shetty",
+      "Mirazul Haque",
+      "Zhiqiang Ma",
+      "Xiaomo Liu"
+    ],
+    "summary": "As large language models (LLMs) are trained on increasingly vast and opaque text corpora, determining which data contributed to training has become essential for copyright enforcement, compliance auditing, and user trust. While prior work focuses on detecting whether a dataset was used in training (membership inference), the complementary problem -- verifying that a dataset was not used -- has received little attention. We address this gap by introducing PRISM, a test that detects dataset-level non-membership using only grey-box access to model logits. Our key insight is that two models that have not seen a dataset exhibit higher rank correlation in their normalized token log probabilities than when one model has been trained on that data. Using this observation, we construct a correlation-based test that detects non-membership. Empirically, PRISM reliably rules out membership in training data across all datasets tested while avoiding false positives, thus offering a framework for verifying that specific datasets were excluded from LLM training.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.22707v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2603.23342v1",
+    "title": "Edge Radar Material Classification Under Geometry Shifts",
+    "authors": [
+      "Jannik Hohmann",
+      "Dong Wang",
+      "Andreas Nüchter"
+    ],
+    "summary": "Material awareness can improve robotic navigation and interaction, particularly in conditions where cameras and LiDAR degrade. We present a lightweight mmWave radar material classification pipeline designed for ultra-low-power edge devices (TI IWRL6432), using compact range-bin intensity descriptors and a Multilayer Perceptron (MLP) for real-time inference. While the classifier reaches a macro-F1 of 94.2\\% under the nominal training geometry, we observe a pronounced performance drop under realistic geometry shifts, including sensor height changes and small tilt angles. These perturbations induce systematic intensity scaling and angle-dependent radar cross section (RCS) effects, pushing features out of distribution and reducing macro-F1 to around 68.5\\%. We analyze these failure modes and outline practical directions for improving robustness with normalization, geometry augmentation, and motion-aware features.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23342v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.23252v1",
+    "title": "AI Lifecycle-Aware Feasibility Framework for Split-RIC Orchestration in NTN O-RAN",
+    "authors": [
+      "Daniele Tarchi"
+    ],
+    "summary": "Integrating Artificial Intelligence (AI) into Non-Terrestrial Networks (NTN) is constrained by the joint limits of satellite SWaP and feeder-link capacity, which directly impact O-RAN closed-loop control and model lifecycle management. This paper studies the feasibility of distributing the O-RAN control hierarchy across Ground, LEO, and GEO segments through a Split-RIC architecture. We compare three deployment scenarios: (i) ground-centric control with telemetry streaming, (ii) ground--LEO Split-RIC with on-board inference and store-and-forward learning, and (iii) GEO--LEO multi-layer control enabled by inter-satellite links. For each scenario, we derive closed-form expressions for lifecycle energy and lifecycle latency that account for training-data transfer, model dissemination, and near-real-time inference. Numerical sensitivity analysis over feeder-link conditions, model complexity, and orbital intermittency yields operator-relevant feasibility regions that delineate when on-board inference and non-terrestrial learning loops are physically preferable to terrestrial offloading.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23252v1",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2603.23039v1",
+    "title": "Rao-Blackwellized Stein Gradient Descent for Joint State-Parameter Estimation",
+    "authors": [
+      "Milad Banitalebi Dehkordi",
+      "Manas Mejari",
+      "Dario Piga"
+    ],
+    "summary": "We present a filtering framework for online joint state estimation and parameter identification in nonlinear, time-varying systems. The algorithm uses Rao-Blackwellization technique to infer joint state-parameter posteriors efficiently. In particular, conditional state distributions are computed analytically via Kalman filtering, while model parameters including process and measurement noise covariances are approximated using particle-based Stein Variational Gradient Descent (SVGD), enabling stable real-time inference. We prove a theoretical consistency result by bounding the impact of the SVGD approximated parameter posterior on state estimates, relating the divergence between the true and approximate parameter posteriors to the total variation distance between the resulting state marginals. Performance of the proposed filter is validated on two case studies: a bioreactor with Haldane kinetics and a neural-network-augmented dynamic system. The latter demonstrates the filter's capacity for online neural network training within a dynamical model, showcasing its potential for fully adaptive, data-driven system identification.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23039v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2603.23020v1",
+    "title": "Concept-based explanations of Segmentation and Detection models in Natural Disaster Management",
+    "authors": [
+      "Samar Heydari",
+      "Jawher Said",
+      "Galip Ümit Yolcu",
+      "Evgenii Kortukov",
+      "Elena Golimblevskaia",
+      "Evgenios Vlachos",
+      "Vasileios Mygdalis",
+      "Ioannis Pitas",
+      "Sebastian Lapuschkin",
+      "Leila Arras"
+    ],
+    "summary": "Deep learning models for flood and wildfire segmentation and object detection enable precise, real-time disaster localization when deployed on embedded drone platforms. However, in natural disaster management, the lack of transparency in their decision-making process hinders human trust required for emergency response. To address this, we present an explainability framework for understanding flood segmentation and car detection predictions on the widely used PIDNet and YOLO architectures. More specifically, we introduce a novel redistribution strategy that extends Layer-wise Relevance Propagation (LRP) explanations for sigmoid-gated element-wise fusion layers. This extension allows LRP relevances to flow through the fusion modules of PIDNet, covering the entire computation graph back to the input image. Furthermore, we apply Prototypical Concept-based Explanations (PCX) to provide both local and global explanations at the concept level, revealing which learned features drive the segmentation and detection of specific disaster semantic classes. Experiments on a publicly available flood dataset show that our framework provides reliable and interpretable explanations while maintaining near real-time inference capabilities, rendering it suitable for deployment on resource-constrained platforms, such as Unmanned Aerial Vehicles (UAVs).",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23020v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.23140v1",
+    "title": "DAK-UCB: Diversity-Aware Prompt Routing for LLMs and Generative Models",
+    "authors": [
+      "Donya Jafari",
+      "Farzan Farnia"
+    ],
+    "summary": "The expansion of generative AI and LLM services underscores the growing need for adaptive mechanisms to select an appropriate available model to respond to a user's prompts. Recent works have proposed offline and online learning formulations to identify the optimal generative AI model for an input prompt, based solely on maximizing prompt-based fidelity evaluation scores, e.g., CLIP-Score in text-to-image generation. However, such fidelity-based selection methods overlook the diversity of generated outputs, and hence, they can fail to address potential diversity shortcomings in the generated responses. In this paper, we introduce the Diversity-Aware Kernelized Upper Confidence Bound (DAK-UCB) method as a contextual bandit algorithm for the online selection of generative models with diversity considerations. The proposed DAK-UCB method incorporates both fidelity and diversity-related metrics into the selection process. We design this framework based on prompt-aware diversity score functions that decompose to a two-sample-based expectation over prompt-output pairs in the previous generation rounds. Specifically, we illustrate the application of our framework using joint kernel distance and kernel entropy measures. Our experimental results demonstrate the effectiveness of DAK-UCB in promoting diversity-aware model selection while maintaining fidelity in the generations for a sequence of prompts. The code is available at https://github.com/Donya-Jafari/DAK-UCB.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23140v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/Donya-Jafari/DAK-UCB.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.22348v1",
+    "title": "COMPASS-Hedge: Learning Safely Without Knowing the World",
+    "authors": [
+      "Ting Hu",
+      "Luanda Cai",
+      "Manolis Vlatakis"
+    ],
+    "summary": "Online learning algorithms often faces a fundamental trilemma: balancing regret guarantees between adversarial and stochastic settings and providing baseline safety against a fixed comparator. While existing methods excel in one or two of these regimes, they typically fail to unify all three without sacrificing optimal rates or requiring oracle access to problem-dependent parameters.\n  In this work, we bridge this gap by introducing COMPASS-Hedge. Our algorithm is the first full-information method to simultaneously achieve: i) Minimax-optimal regret in adversarial environments; ii) Instance-optimal, gap-dependent regret in stochastic environments; and iii) $\\tilde{\\mathcal{O}}(1)$ regret relative to a designated baseline policy, up to logarithmic factors.\n  Crucially, COMPASS-Hedge is parameter-free and requires no prior knowledge of the environment's nature or the magnitude of the stochastic sub optimality gaps. Our approach hinges on a novel integration of adaptive pseudo-regret scaling and phase-based aggression, coupled with a comparator-aware mixing strategy. To the best of our knowledge, this provides the first \"best-of-three-world\" guarantee in the full-information setting, establishing that baseline safety does not have to come at the cost of worst-case robustness or stochastic efficiency.",
+    "published": "2026-03-22",
+    "updated": "2026-03-22",
+    "pdf_url": "https://arxiv.org/pdf/2603.22348v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.22293v1",
+    "title": "TIPS: Turn-Level Information-Potential Reward Shaping for Search-Augmented LLMs",
+    "authors": [
+      "Yutao Xie",
+      "Nathaniel Thomas",
+      "Nicklas Hansen",
+      "Yang Fu",
+      "Li Erran Li",
+      "Xiaolong Wang"
+    ],
+    "summary": "Search-augmented large language models (LLMs) trained with reinforcement learning (RL) have achieved strong results on open-domain question answering (QA), but training still remains a significant challenge. The optimization is often unstable due to sparse rewards and difficult credit assignments across reasoning and tool calls. To address this, we introduce Turn-Level Information Potential Reward Shaping (TIPS), a simple framework that assigns dense, turn-level rewards to each reasoning + tool-call segment based on the increased likelihood of the correct answer under a teacher model. By leveraging the potential-based reward shaping, TIPS offers fine-grained and policy-invariant guidance that overcomes the limitations of outcome-only optimization. Evaluated on seven QA benchmarks, TIPS consistently outperforms GRPO/PPO baselines and substantially improves training stability. For instance, with a Qwen-2.5 7B Instruct model, TIPS improves the average Exact Match score by 11.8% and F1 by 13.6% relative to PPO. Our results demonstrate that turn-level information-potential reward shaping provides an effective and general solution to sparse-reward credit assignment for multi-turn LLM reasoning.",
+    "published": "2026-03-11",
+    "updated": "2026-03-11",
+    "pdf_url": "https://arxiv.org/pdf/2603.22293v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  }
+]
