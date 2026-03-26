@@ -1,0 +1,63 @@
+[
+  {
+    "id": "2603.24113v1",
+    "title": "Mixed-signal implementation of feedback-control optimizer for single-layer Spiking Neural Networks",
+    "authors": [
+      "Jonathan Haag",
+      "Christian Metzner",
+      "Dmitrii Zendrikov",
+      "Giacomo Indiveri",
+      "Benjamin Grewe",
+      "Chiara De Luca",
+      "Matteo Saponati"
+    ],
+    "summary": "On-chip learning is key to scalable and adaptive neuromorphic systems, yet existing training methods are either difficult to implement in hardware or overly restrictive. However, recent studies show that feedback-control optimizers can enable expressive, on-chip training of neuromorphic devices. In this work, we present a proof-of-concept implementation of such feedback-control optimizers on a mixed-signal neuromorphic processor. We assess the proposed approach in an In-The-Loop(ITL) training setup on both a binary classification task and the nonlinear Yin-Yang problem, demonstrating on-chip training that matches the performance of numerical simulations and gradient-based baselines. Our results highlight the feasibility of feedback-driven, online learning under realistic mixed-signal constraints, and represent a co-design approach toward embedding such rules directly in silicon for autonomous and adaptive neuromorphic computing.",
+    "published": "2026-03-25",
+    "updated": "2026-03-25",
+    "pdf_url": "https://arxiv.org/pdf/2603.24113v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.23140v2",
+    "title": "DAK-UCB: Diversity-Aware Prompt Routing for LLMs and Generative Models",
+    "authors": [
+      "Donya Jafari",
+      "Farzan Farnia"
+    ],
+    "summary": "The expansion of generative AI and LLM services underscores the growing need for adaptive mechanisms to select an appropriate available model to respond to a user's prompts. Recent works have proposed offline and online learning formulations to identify the optimal generative AI model for an input prompt, based solely on maximizing prompt-based fidelity evaluation scores, e.g., CLIP-Score in text-to-image generation. However, such fidelity-based selection methods overlook the diversity of generated outputs, and hence, they can fail to address potential diversity shortcomings in the generated responses. In this paper, we introduce the Diversity-Aware Kernelized Upper Confidence Bound (DAK-UCB) method as a contextual bandit algorithm for the online selection of generative models with diversity considerations. The proposed DAK-UCB method incorporates both fidelity and diversity-related metrics into the selection process. We design this framework based on prompt-aware diversity score functions that decompose to a two-sample-based expectation over prompt-output pairs in the previous generation rounds. Specifically, we illustrate the application of our framework using joint kernel distance and kernel entropy measures. Our experimental results demonstrate the effectiveness of DAK-UCB in promoting diversity-aware model selection while maintaining fidelity in the generations for a sequence of prompts. The code is available at https://github.com/Donya-Jafari/DAK-UCB.",
+    "published": "2026-03-24",
+    "updated": "2026-03-25",
+    "pdf_url": "https://arxiv.org/pdf/2603.23140v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/Donya-Jafari/DAK-UCB.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.23748v1",
+    "title": "Data-driven online control for real-time optimal economic dispatch and temperature regulation in district heating systems",
+    "authors": [
+      "Xinyi Yi",
+      "Ioannis Lestas"
+    ],
+    "summary": "District heating systems (DHSs) require coordinated economic dispatch and temperature regulation under uncertain operating conditions. Existing DHS operation strategies often rely on disturbance forecasts and nominal models, so their economic and thermal performance may degrade when predictive information or model knowledge is inaccurate. This paper develops a data-driven online control framework for DHS operation by embedding steady-state economic optimality conditions into the temperature dynamics, so that the closed-loop system converges to the economically optimal operating point without relying on disturbance forecasts. Based on this formulation, we develop a Data-Enabled Policy Optimization (DeePO)-based online learning controller and incorporate Adaptive Moment Estimation (ADAM) to improve closed-loop performance. We further establish convergence and performance guarantees for the resulting closed-loop system. Simulations on an industrial-park DHS in Northern China show that the proposed method achieves stable near-optimal operation and strong empirical robustness to both static and time-varying model mismatch under practical disturbance conditions.",
+    "published": "2026-03-24",
+    "updated": "2026-03-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.23748v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  }
+]
