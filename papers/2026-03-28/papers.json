@@ -1,0 +1,69 @@
+[
+  {
+    "id": "2603.25120v1",
+    "title": "DFLOP: A Data-driven Framework for Multimodal LLM Training Pipeline Optimization",
+    "authors": [
+      "Hyeonjun An",
+      "Sihyun Kim",
+      "Chaerim Lim",
+      "Hyunjoon Kim",
+      "Rathijit Sen",
+      "Sangmin Jung",
+      "Hyeonsoo Lee",
+      "Dongwook Kim",
+      "Takki Yu",
+      "Jinkyu Jeong",
+      "Youngsok Kim",
+      "Kwanghyun Park"
+    ],
+    "summary": "Multimodal Large Language Models (MLLMs) have achieved remarkable advances by integrating text, image, and audio understanding within a unified architecture. However, existing distributed training frameworks remain fundamentally data-blind: they parallelize computation without accounting for variations in input data characteristics. This data unawareness leads to severe computation skew across stages and microbatches, where heterogeneous multimodal inputs incur different processing costs. Consequently, GPU resources are unevenly utilized, synchronization delays accumulate, and overall training efficiency degrades. To address this limitation, we present DFLOP, a data-driven framework for multimodal LLM training pipeline optimization. DFLOP continuously profiles runtime behavior to capture data-induced computation variance and employs predictive scheduling to balance workloads across stages and microbatches. By coupling data characteristics with execution planning, DFLOP substantially improves GPU utilization and throughput. Extensive experiments on large-scale multimodal benchmarks show that DFLOP achieves up to 3.6x faster training compared to state-of-the-art distributed training frameworks.",
+    "published": "2026-03-26",
+    "updated": "2026-03-26",
+    "pdf_url": "https://arxiv.org/pdf/2603.25120v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2603.25378v1",
+    "title": "PRISM: Dynamic Primitive-Based Forecasting for Large-Scale GPU Cluster Workloads",
+    "authors": [
+      "Xin Wu",
+      "Fei Teng",
+      "Xingwang Li",
+      "Bin Zheng",
+      "Qiang Duan"
+    ],
+    "summary": "Accurately forecasting GPU workloads is essential for AI infrastructure, enabling efficient scheduling, resource allocation, and power management. Modern workloads are highly volatile, multiple periodicity, and heterogeneous, making them challenging for traditional predictors. We propose PRISM, a primitive-based compositional forecasting framework combining dictionary-driven temporal decomposition with adaptive spectral refinement. This dual representation extracts stable, interpretable workload signatures across diverse GPU jobs. Evaluated on large-scale production traces, PRISM achieves state-of-the-art results. It significantly reduces burst-phase errors, providing a robust, architecture-aware foundation for dynamic resource management in GPU-powered AI platforms.",
+    "published": "2026-03-26",
+    "updated": "2026-03-26",
+    "pdf_url": "https://arxiv.org/pdf/2603.25378v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2603.24861v1",
+    "title": "TAMI-MPC:Trusted Acceleration of Minimal-Interaction MPC for Efficient Nonlinear Inference",
+    "authors": [
+      "Zhuoran Li",
+      "Hanieh Totonchi Asl",
+      "Yifei Cai",
+      "Ebrahim Nouri",
+      "Danella Zhao"
+    ],
+    "summary": "Secure multi-party computation (MPC) offers a practical foundation for privacy-preserving machine learning at the edge. However, current MPC systems rely heavily on communication and computation-intensive primitives-such as secure comparison for nonlinear inference, which are often impractical on resource-constrained platforms. To enable real-time inference under a resource-constrained platform, we introduce a Trusted Acceleration of Minimal-Interaction MPC framework, TAMI-MPC, for nonlinear evaluation. Specifically, we reduce communication cost by redesigning the core primitives, leaf comparison, and tree merge, reducing the interactive round from log(n) to just 1 per operation. Furthermore, unlike prior work that heavily relies on oblivious transfer (OT), a well-known computational bottleneck, we leverage synchronized seeds inside the TEE to eliminate OT for the vast majority of our designs, along with a correlated-randomness reuse technique that keeps new designs computationally lightweight. To fully realize the potential, we design a specialized accelerator that restructures the dataflow across stages to enable continuous, fine-grained streaming and high parallelism, reducing memory overhead. Our design achieves up to 4.86x speedup on ResNet-50 inference, compared with state-of-the-art CNN frameworks, and achieves up to 7.44x speedup on BERT-base inference, compared with state-of-the-art LLM frameworks.",
+    "published": "2026-03-25",
+    "updated": "2026-03-25",
+    "pdf_url": "https://arxiv.org/pdf/2603.24861v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  }
+]
