@@ -1,0 +1,40 @@
+[
+  {
+    "id": "2603.22348v2",
+    "title": "COMPASS-Hedge: Learning Safely Without Knowing the World",
+    "authors": [
+      "Ting Hu",
+      "Luanda Cai",
+      "Manolis Vlatakis"
+    ],
+    "summary": "Online learning algorithms often faces a fundamental trilemma: balancing regret guarantees between adversarial and stochastic settings and providing baseline safety against a fixed comparator. While existing methods excel in one or two of these regimes, they typically fail to unify all three without sacrificing optimal rates or requiring oracle access to problem-dependent parameters.\n  In this work, we bridge this gap by introducing COMPASS-Hedge. Our algorithm is the first full-information method to simultaneously achieve: i) Minimax-optimal regret in adversarial environments; ii) Instance-optimal, gap-dependent regret in stochastic environments; and iii) $\\tilde{\\mathcal{O}}(1)$ regret relative to a designated baseline policy, up to logarithmic factors.\n  Crucially, COMPASS-Hedge is parameter-free and requires no prior knowledge of the environment's nature or the magnitude of the stochastic sub optimality gaps. Our approach hinges on a novel integration of adaptive pseudo-regret scaling and phase-based aggression, coupled with a comparator-aware mixing strategy. To the best of our knowledge, this provides the first \"best-of-three-world\" guarantee in the full-information setting, establishing that baseline safety does not have to come at the cost of worst-case robustness or stochastic efficiency.",
+    "published": "2026-03-22",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.22348v2",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.25954v1",
+    "title": "Online Learning for Dynamic Constellation Topologies",
+    "authors": [
+      "João Norberto",
+      "Ricardo Ferreira",
+      "Cláudia Soares"
+    ],
+    "summary": "The use of satellite networks has increased significantly in recent years due to their advantages over purely terrestrial systems, such as higher availability and coverage. However, to effectively provide these services, satellite networks must cope with the continuous orbital movement and maneuvering of their nodes and the impact on the network's topology. In this work, we address the problem of (dynamic) network topology configuration under the online learning framework. As a byproduct, our approach does not assume structure about the network, such as known orbital planes (that could be violated by maneuvering satellites). We empirically demonstrate that our problem formulation matches the performance of state-of-the-art offline methods. Importantly, we demonstrate that our approach is amenable to constrained online learning, exhibiting a trade-off between computational complexity per iteration and convergence to a final strategy.",
+    "published": "2026-03-26",
+    "updated": "2026-03-26",
+    "pdf_url": "https://arxiv.org/pdf/2603.25954v1",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
