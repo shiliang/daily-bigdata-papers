@@ -1,0 +1,451 @@
+[
+  {
+    "id": "2603.28750v1",
+    "title": "Temporal Credit Is Free",
+    "authors": [
+      "Aur Shalev Merin"
+    ],
+    "summary": "Recurrent networks do not need Jacobian propagation to adapt online. The hidden state already carries temporal credit through the forward pass; immediate derivatives suffice if you stop corrupting them with stale trace memory and normalize gradient scales across parameter groups. An architectural rule predicts when normalization is needed: \\b{eta}2 is required when gradients must pass through a nonlinear state update with no output bypass, and unnecessary otherwise. Across ten architectures, real primate neural data, and streaming ML benchmarks, immediate derivatives with RMSprop match or exceed full RTRL, scaling to n = 1024 at 1000x less memory.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28750v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28708v1",
+    "title": "GPU-Accelerated Optimization of Transformer-Based Neural Networks for Real-Time Inference",
+    "authors": [
+      "Soutrik Mukherjee",
+      "Sangwhan Cha"
+    ],
+    "summary": "This paper presents the design and evaluation of a GPU-accelerated inference pipeline for transformer models using NVIDIA TensorRT with mixed-precision optimization. We evaluate BERT-base (110M parameters) and GPT-2 (124M parameters) across batch sizes from 1 to 32 and sequence lengths from 32 to 512. The system achieves up to 64.4x speedup over CPU baselines, sub-10 ms latency for single-sample inference, and a 63 percent reduction in memory usage. We introduce a hybrid precision strategy that preserves FP32 for numerically sensitive operations such as softmax and layer normalization, while applying FP16 to linear layers. This approach maintains high numerical fidelity (cosine similarity >= 0.9998 relative to baseline outputs) and eliminates NaN instability. The pipeline is implemented as a modular, containerized system that enables reproducible benchmarking across more than 360 configurations. Cross-GPU validation on an NVIDIA A100 shows consistent FP16 speedup ratios between 1.84x and 2.00x, along with stable numerical behavior. Downstream evaluation on SST-2 demonstrates no accuracy degradation under hybrid precision. Validation on WikiText-2 shows that random inputs underestimate NaN instability by up to 6x for full FP16, while confirming the robustness of the hybrid approach (0.0 percent NaN, cosine similarity >= 0.9998). These results provide a detailed characterization of performance and accuracy trade-offs across GPU architectures and offer practical guidance for deploying transformer models in latency-critical environments.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28708v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28670v1",
+    "title": "Sim-to-Real Fruit Detection Using Synthetic Data: Quantitative Evaluation and Embedded Deployment with Isaac Sim",
+    "authors": [
+      "Martina Hutter-Mironovova"
+    ],
+    "summary": "This study investigates the effectiveness of synthetic data for sim-to-real transfer in object detection under constrained data conditions and embedded deployment requirements. Synthetic datasets were generated in NVIDIA Isaac Sim and combined with limited real-world fruit images to train YOLO-based detection models under real-only, synthetic-only, and hybrid regimes. Performance was evaluated on two test datasets: an in-domain dataset with conditions matching the training data and a domain shift dataset containing real fruit and different background conditions. Results show that models trained exclusively on real data achieve the highest accuracy, while synthetic-only models exhibit reduced performance due to a domain gap. Hybrid training strategies significantly improve performance compared to synthetic-only approaches and achieve results close to real-only training while reducing the need for manual annotation. Under domain shift conditions, all models show performance degradation, with hybrid models providing improved robustness. The trained models were successfully deployed on a Jetson Orin NX using TensorRT optimization, achieving real-time inference performance. The findings highlight that synthetic data is most effective when used in combination with real data and that deployment constraints must be considered alongside detection accuracy.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28670v1",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.27995v1",
+    "title": "UniDA3D: A Unified Domain-Adaptive Framework for Multi-View 3D Object Detection",
+    "authors": [
+      "Hongjing Wu",
+      "Cheng Chi",
+      "Jinlin Wu",
+      "Yanzhao Su",
+      "Zhen Lei",
+      "Wenqi Ren"
+    ],
+    "summary": "Camera-only 3D object detection is critical for autonomous driving, offering a cost-effective alternative to LiDAR based methods. In particular, multi-view 3D object detection has emerged as a promising direction due to its balanced trade-off between performance and cost. However, existing methods often suffer significant performance degradation under complex environmental conditions such as nighttime, fog, and rain, primarily due to their reliance on training data collected mostly in ideal conditions. To address this challenge, we propose UniDA3D, a unified domain-adaptive multi-view 3D object detector designed for robust perception under diverse adverse conditions. UniDA3D formulates nighttime, rainy, and foggy scenes as a unified multi target domain adaptation problem and leverages a novel query guided domain discrepancy mitigation (QDDM) module to align object features between source and target domains at both batch and global levels via query-centric adversarial and contrastive learning. Furthermore, we introduce a domain-adaptive teacher student training pipeline with an exponential-moving-average teacher and dynamically updated high-quality pseudo labels to enhance consistency learning and suppress background noise in unlabeled target domains. In contrast to prior approaches that require separate training for each condition, UniDA3D performs a single unified training process across multiple domains, enabling robust all-weather 3D perception. On a synthesized multi-view 3D benchmark constructed by generating nighttime, rainy, and foggy counterparts from nuScenes (nuScenes-Night, nuScenes-Rain, and nuScenes-Haze), UniDA3D consistently outperforms state of-the-art camera-only multi-view 3D detectors under extreme conditions, achieving substantial gains in mAP and NDS while maintaining real-time inference efficiency.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.27995v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.28290v1",
+    "title": "OptINC: Optical In-Network-Computing for Scalable Distributed Learning",
+    "authors": [
+      "Sijie Fei",
+      "Grace Li Zhang",
+      "Bing Li",
+      "Ulf Schlichtmann"
+    ],
+    "summary": "Distributed learning is widely used for training large models on large datasets by distributing parts of the model or dataset across multiple devices and aggregating the computed results for subsequent computations or parameter updates. Existing communication algorithms for distributed learning such as ring all-reduce result in heavy communication overhead between servers. Since communication in large-scale systems uses optical fibers, we propose an Optical In-Network-Computing (OptINC) architecture to offload the computation in servers onto the optical interconnects. To execute gradient averaging and quantization in the optical domain, we incorporate optical devices such as Mach-Zehnder-Interferometers (MZIs) into the interconnects. Such a de facto optical neural network (ONN) can effectively reduce the communication overhead in existing distributed training solutions. To reduce dataset complexity for training this neural network, a preprocessing algorithm implemented in the optical domain is also proposed. Hardware cost is lowered by approximating the weight matrices of the optical neural network with unitary and diagonal matrices, while the accuracy is maintained by a proposed hardware-aware training algorithm. The proposed solution was evaluated on real distributed learning tasks, including ResNet50 on CIFAR-100, and a LLaMA-based network on Wikipedia-1B. In both cases, the proposed framework can achieve comparable training accuracy to the ring all-reduce baseline, while eliminating communication overhead.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28290v1",
+    "categories": [
+      "cs.LG",
+      "cs.AR"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28282v1",
+    "title": "Pre-Deployment Complexity Estimation for Federated Perception Systems",
+    "authors": [
+      "KMA Solaiman",
+      "Shafkat Islam",
+      "Ruy de Oliveira",
+      "Bharat Bhargava"
+    ],
+    "summary": "Edge AI systems increasingly rely on federated learning to train perception models in distributed, privacy-preserving, and resource-constrained environments. Yet, before training begins, practitioners often lack practical tools to estimate how difficult a federated learning task will be in terms of achievable accuracy and communication cost. This paper presents a classifier-agnostic, pre-deployment framework for estimating learning complexity in federated perception systems by jointly modeling intrinsic properties of the data and characteristics of the distributed environment. The proposed complexity metric integrates dataset attributes such as dimensionality, sparsity, and heterogeneity with factors related to the composition of participating clients. Using federated learning as a representative distributed training setting, we examine how learning difficulty varies across different federated configurations. Experiments on multiple variants of the MNIST dataset and CIFAR dataset show that the proposed metric strongly correlates with federated learning performance and the communication effort required to reach fixed accuracy targets. These findings suggest that complexity estimation can serve as a practical diagnostic tool for resource planning, dataset assessment, and feasibility evaluation in edge-deployed perception systems.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28282v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28101v1",
+    "title": "Heddle: A Distributed Orchestration System for Agentic RL Rollout",
+    "authors": [
+      "Zili Zhang",
+      "Yinmin Zhong",
+      "Chengxu Yang",
+      "Chao Jin",
+      "Bingyang Wu",
+      "Xinming Wei",
+      "Yuliang Liu",
+      "Xin Jin"
+    ],
+    "summary": "Agentic Reinforcement Learning (RL) enables LLMs to solve complex tasks by alternating between a data-collection rollout phase and a policy training phase. During rollout, the agent generates trajectories, i.e., multi-step interactions between LLMs and external tools. Yet, frequent tool calls induce long-tailed trajectory generation that bottlenecks rollouts. This stems from step-centric designs that ignore trajectory context, triggering three system problems for long-tail trajectory generation: queueing delays, interference overhead, and inflated per-token time. We propose Heddle, a trajectory-centric system to optimize the when, where, and how of agentic rollout execution. Heddle integrates three core mechanisms: trajectory-level scheduling using runtime prediction and progressive priority to minimize cumulative queueing; trajectory-aware placement via presorted dynamic programming and opportunistic migration during idle tool call intervals to minimize interference; and trajectory-adaptive resource manager that dynamically tunes model parallelism to accelerate the per-token time of long-tail trajectories while maintaining high throughput for short trajectories. Evaluations across diverse agentic RL workloads demonstrate that Heddle effectively neutralizes the long-tail bottleneck, achieving up to 2.5$\\times$ higher end-to-end rollout throughput compared to state-of-the-art baselines.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28101v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.27462v1",
+    "title": "RSR-core: A High-Performance Engine for Low-Bit Matrix-Vector Multiplication",
+    "authors": [
+      "Mohsen Dehghankar",
+      "Abolfazl Asudeh"
+    ],
+    "summary": "Matrix-vector multiplication is a fundamental building block in neural networks, vector databases, and large language models, particularly during inference. As a result, efficient matrix-vector multiplication engines directly translate into more efficient inference. Recent work has explored low-bit quantization of model weights, where matrices are represented using binary (1-bit) or ternary (1.58-bit) values while activation is kept in higher precision. These representations enable efficient hardware-level computation. In parallel, algorithms such as Redundant Segment Reduction (RSR) provide theoretical guarantees for accelerating low-bit matrix-vector multiplication. However, existing implementations operate at the application level and cannot be efficiently integrated into hardware kernels, limiting practical performance. To bridge this gap, we present RSR-core, a high-performance engine that implements the RSR algorithm as optimized low-level kernels for both CPU and CUDA environments. RSR-core supports efficient matrix-vector multiplication for binary and ternary weight matrices and general vectors while enabling practical deployment of RSR algorithm in real inference pipelines. RSR-core is provided as a production-ready engine with HuggingFace integration for preprocessing low-bit models and running accelerated inference. Experimental results demonstrate significant performance improvements over baseline HuggingFace PyTorch multiplication, achieving up to 62x speedup on CPU and up to 1.9x speedup for token generation on CUDA for popular ternary LLMs. The source code is publicly available at https://github.com/UIC-InDeXLab/RSR-core.",
+    "published": "2026-03-29",
+    "updated": "2026-03-29",
+    "pdf_url": "https://arxiv.org/pdf/2603.27462v1",
+    "categories": [
+      "cs.DS",
+      "cs.LG",
+      "cs.PF"
+    ],
+    "primary_category": "cs.DS",
+    "github": {
+      "url": "https://github.com/UIC-InDeXLab/RSR-core.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.27533v1",
+    "title": "Demo-Pose: Depth-Monocular Modality Fusion For Object Pose Estimation",
+    "authors": [
+      "Rachit Agarwal",
+      "Abhishek Joshi",
+      "Sathish Chalasani",
+      "Woo Jin Kim"
+    ],
+    "summary": "Object pose estimation is a fundamental task in 3D vision with applications in robotics, AR/VR, and scene understanding. We address the challenge of category-level 9-DoF pose estimation (6D pose + 3Dsize) from RGB-D input, without relying on CAD models during inference. Existing depth-only methods achieve strong results but ignore semantic cues from RGB, while many RGB-D fusion models underperform due to suboptimal cross-modal fusion that fails to align semantic RGB cues with 3D geometric representations. We propose DeMo-Pose, a hybrid architecture that fuses monocular semantic features with depth-based graph convolutional representations via a novel multimodal fusion strategy. To further improve geometric reasoning, we introduce a novel Mesh-Point Loss (MPL) that leverages mesh structure during training without adding inference overhead. Our approach achieves real-time inference and significantly improves over state-of-the-art methods across object categories, outperforming the strong GPV-Pose baseline by 3.2\\% on 3D IoU and 11.1\\% on pose accuracy on the REAL275 benchmark. The results highlight the effectiveness of depth-RGB fusion and geometry-aware learning, enabling robust category-level 3D pose estimation for real-world applications.",
+    "published": "2026-03-29",
+    "updated": "2026-03-29",
+    "pdf_url": "https://arxiv.org/pdf/2603.27533v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.27057v1",
+    "title": "Debiasing Large Language Models toward Social Factors in Online Behavior Analytics through Prompt Knowledge Tuning",
+    "authors": [
+      "Hossein Salemi",
+      "Jitin Krishnan",
+      "Hemant Purohit"
+    ],
+    "summary": "Attribution theory explains how individuals interpret and attribute others' behavior in a social context by employing personal (dispositional) and impersonal (situational) causality. Large Language Models (LLMs), trained on human-generated corpora, may implicitly mimic this social attribution process in social contexts. However, the extent to which LLMs utilize these causal attributions in their reasoning remains underexplored. Although using reasoning paradigms, such as Chain-of-Thought (CoT), has shown promising results in various tasks, ignoring social attribution in reasoning could lead to biased responses by LLMs in social contexts. In this study, we investigate the impact of incorporating a user's goal as knowledge to infer dispositional causality and message context to infer situational causality on LLM performance. To this end, we introduce a scalable method to mitigate such biases by enriching the instruction prompts for LLMs with two prompt aids using social-attribution knowledge, based on the context and goal of a social media message. This method improves the model performance while reducing the social-attribution bias of the LLM in the reasoning on zero-shot classification tasks for behavior analytics applications. We empirically show the benefits of our method across two tasks-intent detection and theme detection on social media in the disaster domain-when considering the variability of disaster types and multiple languages of social media. Our experiments highlight the biases of three open-source LLMs: Llama3, Mistral, and Gemma, toward social attribution, and show the effectiveness of our mitigation strategies.",
+    "published": "2026-03-28",
+    "updated": "2026-03-28",
+    "pdf_url": "https://arxiv.org/pdf/2603.27057v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2603.27094v1",
+    "title": "Sovereign Context Protocol: An Open Attribution Layer for Human-Generated Content in the Age of Large Language Models",
+    "authors": [
+      "Praneel Panchigar",
+      "Torlach Rush",
+      "Matthew Canabarro"
+    ],
+    "summary": "Large Language Models (LLMs) consume vast quantities of human-generated content for both training and real-time inference, yet the creators of that content remain largely invisible in the value chain. Existing approaches to data attribution operate either at the model-internals level, tracing influence through gradient signals, or at the legal-policy level through transparency mandates and copyright litigation. Neither provides a runtime mechanism for content creators to know when, by whom, and how their work is being consumed. We introduce the Sovereign Context Protocol (SCP), an open-source protocol specification and reference architecture that functions as an attribution-aware data access layer between LLMs and human-generated content. Inspired by Anthropic's Model Context Protocol (MCP), which standardizes how LLMs connect to tools, SCP standardizes how LLMs connect to creator-owned data, with every access event logged, licensed, and attributable. SCP defines six core methods (creator profiles, semantic search, content retrieval, trust/value scoring, authenticity verification, and access auditing) exposed over both REST and MCP-compatible interfaces. We formalize the protocol's message envelope, present a threat model with five adversary classes, propose a log-proportional revenue attribution model, and report preliminary latency benchmarks from a reference implementation built on FastAPI, ChromaDB, and NetworkX. We situate SCP within the emerging regulatory landscape, including the EU AI Act's Article 53 training data transparency requirements and ongoing U.S. copyright litigation, and argue that the attribution gap requires a protocol-level intervention that makes attribution a default property of data access.",
+    "published": "2026-03-28",
+    "updated": "2026-03-28",
+    "pdf_url": "https://arxiv.org/pdf/2603.27094v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2603.27159v1",
+    "title": "Online Learning of Kalman Filtering: From Output to State Estimation",
+    "authors": [
+      "Lintao Ye",
+      "Ankang Zhang",
+      "Ming Chi",
+      "Bin Du",
+      "Jianghai Hu"
+    ],
+    "summary": "In this paper, we study the problem of learning Kalman filtering with unknown system model in partially observed linear dynamical systems. We propose a unified algorithmic framework based on online optimization that can be used to solve both the output estimation and state estimation scenarios. By exploring the properties of the estimation error cost functions, such as conditionally strong convexity, we show that our algorithm achieves a $\\log T$-regret in the horizon length $T$ for the output estimation scenario. More importantly, we tackle the more challenging scenario of learning Kalman filtering for state estimation, which is an open problem in the literature. We first characterize a fundamental limitation of the problem, demonstrating the impossibility of any algorithm to achieve sublinear regret in $T$. By further introducing a random query scheme into our algorithm, we show that a $\\sqrt{T}$-regret is achievable when rendering the algorithm limited query access to more informative measurements of the system state in practice. Our algorithm and regret readily capture the trade-off between the number of queries and the achieved regret, and shed light on online learning problems with limited observations. We validate the performance of our algorithms using numerical examples.",
+    "published": "2026-03-28",
+    "updated": "2026-03-28",
+    "pdf_url": "https://arxiv.org/pdf/2603.27159v1",
+    "categories": [
+      "cs.LG",
+      "eess.SY",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.26164v1",
+    "title": "DataFlex: A Unified Framework for Data-Centric Dynamic Training of Large Language Models",
+    "authors": [
+      "Hao Liang",
+      "Zhengyang Zhao",
+      "Meiyi Qiang",
+      "Mingrui Chen",
+      "Lu Ma",
+      "Rongyi Yu",
+      "Hengyi Feng",
+      "Shixuan Sun",
+      "Zimo Meng",
+      "Xiaochen Ma",
+      "Xuanlin Yang",
+      "Qifeng Cai",
+      "Ruichuan An",
+      "Bohan Zeng",
+      "Zhen Hao Wong",
+      "Chengyu Shen",
+      "Runming He",
+      "Zhaoyang Han",
+      "Yaowei Zheng",
+      "Fangcheng Fu",
+      "Conghui He",
+      "Bin Cui",
+      "Zhiyu Li",
+      "Weinan E",
+      "Wentao Zhang"
+    ],
+    "summary": "Data-centric training has emerged as a promising direction for improving large language models (LLMs) by optimizing not only model parameters but also the selection, composition, and weighting of training data during optimization. However, existing approaches to data selection, data mixture optimization, and data reweighting are often developed in isolated codebases with inconsistent interfaces, hindering reproducibility, fair comparison, and practical integration. In this paper, we present DataFlex, a unified data-centric dynamic training framework built upon LLaMA-Factory. DataFlex supports three major paradigms of dynamic data optimization: sample selection, domain mixture adjustment, and sample reweighting, while remaining fully compatible with the original training workflow. It provides extensible trainer abstractions and modular components, enabling a drop-in replacement for standard LLM training, and unifies key model-dependent operations such as embedding extraction, inference, and gradient computation, with support for large-scale settings including DeepSpeed ZeRO-3. We conduct comprehensive experiments across multiple data-centric methods. Dynamic data selection consistently outperforms static full-data training on MMLU across both Mistral-7B and Llama-3.2-3B. For data mixture, DoReMi and ODM improve both MMLU accuracy and corpus-level perplexity over default proportions when pretraining Qwen2.5-1.5B on SlimPajama at 6B and 30B token scales. DataFlex also achieves consistent runtime improvements over original implementations. These results demonstrate that DataFlex provides an effective, efficient, and reproducible infrastructure for data-centric dynamic training of LLMs.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26164v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.26106v1",
+    "title": "LLM Benchmark-User Need Misalignment for Climate Change",
+    "authors": [
+      "Oucheng Liu",
+      "Lexing Xie",
+      "Jing Jiang"
+    ],
+    "summary": "Climate change is a major socio-scientific issue shapes public decision-making and policy discussions. As large language models (LLMs) increasingly serve as an interface for accessing climate knowledge, whether existing benchmarks reflect user needs is critical for evaluating LLM in real-world settings. We propose a Proactive Knowledge Behaviors Framework that captures the different human-human and human-AI knowledge seeking and provision behaviors. We further develop a Topic-Intent-Form taxonomy and apply it to analyze climate-related data representing different knowledge behaviors. Our results reveal a substantial mismatch between current benchmarks and real-world user needs, while knowledge interaction patterns between humans and LLMs closely resemble those in human-human interactions. These findings provide actionable guidance for benchmark design, RAG system development, and LLM training. Code is available at https://github.com/OuchengLiu/LLM-Misalign-Climate-Change.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26106v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/OuchengLiu/LLM-Misalign-Climate-Change.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.26050v1",
+    "title": "Hierarchical Control Framework Integrating LLMs with RL for Decarbonized HVAC Operation",
+    "authors": [
+      "Dianyu Zhong",
+      "Tian Xing",
+      "Kailai Sun",
+      "Xu Yang",
+      "Heye Huang",
+      "Irfan Qaisar",
+      "Tinggang Jia",
+      "Shaobo Wang",
+      "Qianchuan Zhao"
+    ],
+    "summary": "Heating, ventilation, and air conditioning (HVAC) systems account for a substantial share of building energy consumption. Environmental uncertainty and dynamic occupancy behavior bring challenges in decarbonized HVAC control. Reinforcement learning (RL) can optimize long-horizon comfort-energy trade-offs but suffers from exponential action-space growth and inefficient exploration in multi-zone buildings. Large language models (LLMs) can encode semantic context and operational knowledge, yet when used alone they lack reliable closed-loop numerical optimization and may result in less reliable comfort-energy trade-offs. To address these limitations, we propose a hierarchical control framework in which a fine-tuned LLM, trained on historical building operation data, generates state-dependent feasible action masks that prune the combinatorial joint action space into operationally plausible subsets. A masked value-based RL agent then performs constrained optimization within this reduced space, improving exploration efficiency and training stability. Evaluated in a high-fidelity simulator calibrated with real-world sensor and occupancy data from a 7-zone office building, the proposed method achieves a mean PPD of 7.30%, corresponding to reductions of 39.1% relative to DQN, the best vanilla RL baseline in comfort, and 53.1% relative to the best vanilla LLM baseline, while reducing daily HVAC energy use to 140.90~kWh, lower than all vanilla RL baselines. The results suggest that LLM-guided action masking is a promising pathway toward efficient multi-zone HVAC control.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26050v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2603.22755v2",
+    "title": "KALAVAI: Predicting When Independent Specialist Fusion Works -- A Quantitative Model for Post-Hoc Cooperative LLM Training",
+    "authors": [
+      "Ramchand Kumaresan"
+    ],
+    "summary": "Independently trained domain specialists can be fused post-hoc into a single model that outperforms any individual specialist, and the gain is predictable: gain = 0.82 x divergence - 2.72 (R^2 = 0.856, n=6, 3-26% divergence). This enables practitioners to estimate cooperative value before committing compute. Below ~3.3% divergence, gains approach zero.In the KALAVAI protocol, contributors fine-tune copies of a shared checkpoint independently, then submit for lightweight MoE routing (500 steps). Gains are consistent: +7.72% at 410M (+/-0.02%, 3 seeds), +7.49% at 1B (+/-0.01%, 3 seeds), +6.53% at 6.9B, each over the best specialist. The router matches domain-oracle routing within <10^{-5} nats. Cross-lingual fusion (Tamil/Yoruba/Welsh/Code) achieves +21.76%, with Yoruba perplexity falling 41.9 to 7.7. A 20-contributor federation achieves +16.71% (+/-0.07pp, 3 seeds).Three requirements bound the protocol. Shared initialisation is necessary: checkpoint mismatch degrades routing. Frozen layers are optional below ~10,000 steps and beneficial beyond. Learned routing is essential: uniform averaging degrades by -1.2% vs. best specialist, while any trained router achieves oracle-optimal assignment.",
+    "published": "2026-03-24",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.22755v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2603.26150v1",
+    "title": "Vector Similarity Search-Based MCS Selection in Massive Multi-User MIMO-OFDM",
+    "authors": [
+      "Fuga Kobayashi",
+      "Takumi Takahashi",
+      "Shinsuke Ibi",
+      "Takanobu Doi",
+      "Kazushi Muraoka",
+      "Hideki Ochiai"
+    ],
+    "summary": "This paper proposes a novel modulation and coding scheme (MCS) selection framework that integrates mutual information (MI) prediction based on vector similarity search (VSS) for massive multi-user multiple-input multiple-output orthogonal frequency-division multiplexing (MU-MIMO-OFDM) systems with advanced uplink multi-user detection (MUD). The framework performs MCS selection at the transport block (TB)-level MI and establishes the mapping from post-MUD MI to post-decoding block error rate (BLER) using a prediction function generated from extrinsic information transfer (EXIT) curves. A key innovation is the VSS-based MI prediction scheme, which addresses the challenge of analytically predicting MI in iterative detectors such as expectation propagation (EP). In this scheme, an offline vector database (VDB) stores feature vectors derived from channel state information (CSI) and average received signal-to-noise ratio (SNR), together with corresponding MI values achieved with advanced MUD. During online operation, an approximate nearest neighbor (ANN) search on graphics processing units (GPUs) enables ultra-fast and accurate MI prediction, effectively capturing iterative detection gains. Simulation results under fifth-generation new radio (5G NR)-compliant settings demonstrate that the proposed framework significantly improves both system and user throughput, ensuring that the detection gains of advanced MUD are faithfully translated into tangible system-level performance improvements.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26150v1",
+    "categories": [
+      "eess.SP"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2603.26188v1",
+    "title": "OSA: Echocardiography Video Segmentation via Orthogonalized State Update and Anatomical Prior-aware Feature Enhancement",
+    "authors": [
+      "Rui Wang",
+      "Huisi Wu",
+      "Jing Qin"
+    ],
+    "summary": "Accurate and temporally consistent segmentation of the left ventricle from echocardiography videos is essential for estimating the ejection fraction and assessing cardiac function. However, modeling spatiotemporal dynamics remains difficult due to severe speckle noise and rapid non-rigid deformations. Existing linear recurrent models offer efficient in-context associative recall for temporal tracking, but rely on unconstrained state updates, which cause progressive singular value decay in the state matrix, a phenomenon known as rank collapse, resulting in anatomical details being overwhelmed by noise. To address this, we propose OSA, a framework that constrains the state evolution on the Stiefel manifold. We introduce the Orthogonalized State Update (OSU) mechanism, which formulates the memory evolution as Euclidean projected gradient descent on the Stiefel manifold to prevent rank collapse and maintain stable temporal transitions. Furthermore, an Anatomical Prior-aware Feature Enhancement module explicitly separates anatomical structures from speckle noise through a physics-driven process, providing the temporal tracker with noise-resilient structural cues. Comprehensive experiments on the CAMUS and EchoNet-Dynamic datasets show that OSA achieves state-of-the-art segmentation accuracy and temporal stability, while maintaining real-time inference efficiency for clinical deployment. Codes are available at https://github.com/wangrui2025/OSA.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26188v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/wangrui2025/OSA.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2603.26030v1",
+    "title": "Constitutive parameterized deep energy method for solid mechanics problems with random material parameters",
+    "authors": [
+      "Zhangyong Liang",
+      "Huanhuan Gao"
+    ],
+    "summary": "In practical structural design and solid mechanics simulations, material properties inherently exhibit random variations within bounded intervals. However, evaluating mechanical responses under continuous material uncertainty remains a persistent challenge. Traditional numerical approaches, such as the Finite Element Method (FEM), incur prohibitive computational costs as they require repeated mesh discretization and equation solving for every parametric realization. Similarly, data-driven surrogate models depend heavily on massive, high-fidelity datasets, while standard physics-informed frameworks (e.g., the Deep Energy Method) strictly demand complete retraining from scratch whenever material parameters change. To bridge this critical gap, we propose the Constitutive Parameterized Deep Energy Method (CPDEM). In this purely physics-driven framework, the strain energy density functional is reformulated by encoding a latent representation of stochastic constitutive parameters. By embedding material parameters directly into the neural network alongside spatial coordinates, CPDEM transforms conventional spatial collocation points into parameter-aware material points. Trained in an unsupervised manner via expected energy minimization over the parameter domain, the pre-trained model continuously learns the solution manifold. Consequently, it enables zero-shot, real-time inference of displacement fields for unknown material parameters without requiring any dataset generation or model retraining. The proposed method is rigorously validated across diverse benchmarks, including linear elasticity, finite-strain hyperelasticity, and complex highly nonlinear contact mechanics. To the best of our knowledge, CPDEM represents the first purely physics-driven deep learning paradigm capable of simultaneously and efficiently handling continuous multi-parameter variations in solid mechanics.",
+    "published": "2026-03-27",
+    "updated": "2026-03-27",
+    "pdf_url": "https://arxiv.org/pdf/2603.26030v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.25863v1",
+    "title": "Dynamic LIBRAS Gesture Recognition via CNN over Spatiotemporal Matrix Representation",
+    "authors": [
+      "Jasmine Moreira"
+    ],
+    "summary": "This paper proposes a method for dynamic hand gesture recognition based on the composition of two models: the MediaPipe Hand Landmarker, responsible for extracting 21 skeletal keypoints of the hand, and a convolutional neural network (CNN) trained to classify gestures from a spatiotemporal matrix representation of dimensions 90 by 21 of those keypoints. The method is applied to the recognition of LIBRAS (Brazilian Sign Language) gestures for device control in a home automation system, covering 11 classes of static and dynamic gestures. For real-time inference, a sliding window with temporal frame triplication is used, enabling continuous recognition without recurrent networks. Tests achieved 95\\% accuracy under low-light conditions and 92\\% under normal lighting. The results indicate that the approach is effective, although systematic experiments with greater user diversity are needed for a more thorough evaluation of generalization.",
+    "published": "2026-03-26",
+    "updated": "2026-03-26",
+    "pdf_url": "https://arxiv.org/pdf/2603.25863v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2603.26735v1",
+    "title": "Distilled Large Language Model-Driven Dynamic Sparse Expert Activation Mechanism",
+    "authors": [
+      "Qinghui Chen",
+      "Zekai Zhang",
+      "Zaigui Zhang",
+      "Kai Zhang",
+      "Dagang Li",
+      "Wenmin Wang",
+      "Jinglin Zhang",
+      "Cong Liu"
+    ],
+    "summary": "High inter-class similarity, extreme scale variation, and limited computational budgets hinder reliable visual recognition across diverse real-world data. Existing vision-centric and cross-modal approaches often rely on rigid fusion mechanisms and heavy annotation pipelines, leading to sub-optimal generalization. We propose the Distilled Large Language Model (LLM)-Driven Sparse Mixture-of-Experts (DS-MoE) framework, which integrates text-guided dynamic routing and lightweight multi-scale comprehension. The DS-MoE framework dynamically aligns textual semantics with defect-specific visual patterns through a sparse MoE architecture, where task-relevant experts are adaptively activated based on semantic relevance, resolving inter-class ambiguity. A lightweight MobileSAM encoder enables real-time inference while preserving multi-scale defect details. Extensive experiments on PCB, aluminum foil, and mold defect datasets demonstrate that our framework achieves superior performance compared to existing pure vision models. \\textbf{DS-MoE} surpasses YOLOv8/YOLOX with gains of +13.9, +1.4, and +2.0 pp mAP@ 0.5:0.95 on BBMP, aluminum, and PCB, respectively, while also improving precision and recall.",
+    "published": "2026-03-21",
+    "updated": "2026-03-21",
+    "pdf_url": "https://arxiv.org/pdf/2603.26735v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
