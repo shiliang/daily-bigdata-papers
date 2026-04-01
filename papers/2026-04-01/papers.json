@@ -1,0 +1,156 @@
+[
+  {
+    "id": "2603.29871v1",
+    "title": "ShapE-GRPO: Shapley-Enhanced Reward Allocation for Multi-Candidate LLM Training",
+    "authors": [
+      "Rui Ai",
+      "Yu Pan",
+      "David Simchi-Levi",
+      "Chonghuan Wang"
+    ],
+    "summary": "In user-agent interaction scenarios such as recommendation, brainstorming, and code suggestion, Large Language Models (LLMs) often generate sets of candidate recommendations where the objective is to maximize the collective utility of the entire set rather than individual candidates independently. However, existing reinforcement learning post-training paradigms, such as Group Relative Policy Optimization (GRPO), typically assign the same set-level scalar reward to every candidate in the set. This leads to noisy training signals where poor candidates free-ride on the high reward produced by a single strong peer, resulting in suboptimal exploration. To address this, we propose Shapley-Enhanced GRPO (ShapE-GRPO). By leveraging the permutation-invariant nature of set-level utility, we derive a Shapley-enhanced formulation from cooperative game theory to decompose set-level rewards into granular, candidate-specific signals. We show that our formulation preserves the fundamental axioms of the Shapley value while remaining computationally efficient with polynomial-time complexity. Empirically, ShapE-GRPO consistently outperforms standard GRPO across diverse datasets with accelerated convergence during training.",
+    "published": "2026-03-31",
+    "updated": "2026-03-31",
+    "pdf_url": "https://arxiv.org/pdf/2603.29871v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2603.29762v1",
+    "title": "Same Rules, Mixed Messages: Exploring Community Perceptions of Academic Dishonesty in Computing Education",
+    "authors": [
+      "Chandler C. Payne",
+      "Kai A. Hackney",
+      "Lucas Guarenti Zangari",
+      "Sterling R. Kalogeras",
+      "Emmanuel Munoz",
+      "Juan Sebastián Sánchez-Gómez",
+      "Olufisayo Omojokun",
+      "Pedro Guillermo Feijóo-García"
+    ],
+    "summary": "Academic dishonesty has long been a concern in computing education, and the rapid growth of online learning and generative artificial intelligence (AI) has further complicated how cheating is perceived and addressed. We report on a study examining how different actors in the computer science (CS) classroom interpret potential cheating scenarios and the motivations behind academic dishonesty. Participants included instructors (n = 6), teaching assistants (TAs; n = 21), and undergraduate students (n = 538) enrolled in two CS courses at a large Southeastern institution in the United States. Respondents classified scenarios as serious cheating, trivial cheating, or not cheating and answered to an open-ended question about motivations for academic dishonesty. Our findings reveal notable discrepancies across groups: instructors most often attribute cheating to grade pressure and laziness, while students and TAs emphasize gaps in prerequisite knowledge and time management challenges. These results highlight misaligned perceptions of academic dishonesty and underscore the need for clearer communication and curricular strategies in computing education, particularly in post-COVID learning environments where hybrid instruction, increased reliance on digital resources, and AI-assisted tools have reshaped students' approaches to coursework and learning.",
+    "published": "2026-03-31",
+    "updated": "2026-03-31",
+    "pdf_url": "https://arxiv.org/pdf/2603.29762v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2603.29285v1",
+    "title": "Designing Human-GenAI Interaction for cMOOC Discussion Facilitation: Effects of a Collaborative AI-in-the-Loop Workflow on Social and Cognitive Presence",
+    "authors": [
+      "Jianjun Xiao",
+      "Cixiao Wang"
+    ],
+    "summary": "Connectivist MOOCs (cMOOCs) rely on learner-driven interaction, yet their intentionally light facilitation makes it difficult to design generative AI participation that is both scalable and educationally productive. This design-based research study examined how human-AI interaction can be designed for discussion facilitation through a collaborative AI-in-the-loop workflow. Across two iterations in a five-week cMOOC (N = 606), we designed, deployed, and evaluated a facilitation system that combined network-structure-driven target selection, discourse-adaptive response roles, and mandatory human review before AI participation became visible in the community. Iteration 1 (Weeks 1-2) focused on refining the interaction design, showing that the most sustainable facilitation patterns were Guide (70.4%) and Amplifier (28.5%) responses and yielding explicit moderation standards for publishable AI participation. Iteration 2 (Weeks 3-5) examined how different forms of AI-mediated interaction related to social and cognitive presence. AI participation selectively enhanced Open Communication (r = 0.188, p = 0.006), Networked Cohesion (r = 0.274, p < 0.001), and overall social presence (r = 0.162, p = 0.015), while cognitive presence showed no overall improvement. More importantly, direct learner-agent interaction was associated with significantly higher social presence (r = 0.186, p = 0.004) and higher-order cognitive indicators-Integration (r = 0.206, p = 0.001) and Resolution/Creation (r = 0.350, p < 0.001)-than mere co-presence in AI-involved threads. The findings suggest that effective GenAI-supported discussion depends less on AI presence alone than on interaction design: reciprocal exchange, discourse-adaptive facilitation roles, and collaborative human review appear to be key conditions for productive AI participation in online learning communities.",
+    "published": "2026-03-31",
+    "updated": "2026-03-31",
+    "pdf_url": "https://arxiv.org/pdf/2603.29285v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2603.29093v1",
+    "title": "APEX-EM: Non-Parametric Online Learning for Autonomous Agents via Structured Procedural-Episodic Experience Replay",
+    "authors": [
+      "Pratyay Banerjee",
+      "Masud Moshtaghi",
+      "Ankit Chadha"
+    ],
+    "summary": "LLM-based autonomous agents lack persistent procedural memory: they re-derive solutions from scratch even when structurally identical tasks have been solved before. We present \\textbf{APEX-EM}, a non-parametric online learning framework that accumulates, retrieves, and reuses structured procedural plans without modifying model weights. APEX-EM introduces: (1) a \\emph{structured experience representation} encoding the full procedural-episodic trace of each execution -- planning steps, artifacts, iteration history with error analysis, and quality scores; (2) a \\emph{Plan-Retrieve-Generate-Iterate-Ingest} (PRGII) workflow with Task Verifiers providing multi-dimensional reward signals; and (3) a \\emph{dual-outcome Experience Memory} with hybrid retrieval combining semantic search, structural signature matching, and plan DAG traversal -- enabling cross-domain transfer between tasks sharing no lexical overlap but analogous operational structure. Successful experiences serve as positive in-context examples; failures as negative examples with structured error annotations.\n  We evaluate on BigCodeBench~\\cite{zhuo2025bigcodebench}, KGQAGen-10k~\\cite{zhang2025kgqagen}, and Humanity's Last Exam~\\cite{phan2025hle} using Claude Sonnet 4.5 and Opus 4.5. On KGQAGen-10k, APEX-EM achieves 89.6\\% accuracy versus 41.3\\% without memory (+48.3pp), surpassing the oracle-retrieval upper bound (84.9\\%). On BigCodeBench, it reaches 83.3\\% SR from a 53.9\\% baseline (+29.4pp), exceeding MemRL's~\\cite{memrl2025} +11.0pp gain under comparable frozen-backbone conditions (noting backbone differences controlled for in our analysis). On HLE, entity graph retrieval reaches 48.0\\% from 25.2\\% (+22.8pp). Ablations show component value is task-dependent: rich judge feedback is negligible for code generation but critical for structured queries (+10.3pp), while binary-signal iteration partially compensates for weaker feedback.",
+    "published": "2026-03-31",
+    "updated": "2026-03-31",
+    "pdf_url": "https://arxiv.org/pdf/2603.29093v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2602.10900v2",
+    "title": "AI Infrastructure Sovereignty",
+    "authors": [
+      "Sergio Cruzes"
+    ],
+    "summary": "Artificial intelligence has shifted from a software-centric discipline to an infrastructure-driven system. Large-scale training and inference increasingly depend on tightly coupled data centers, high-capacity optical networks, and energy systems operating close to physical and environmental limits. As a result, control over data and algorithms alone is no longer sufficient to achieve meaningful AI sovereignty. Practical sovereignty now depends on who can deploy, operate, and adapt AI infrastructure under constraints imposed by energy availability, sustainability targets, and network reach. This tutorial-survey introduces the concept of AI infrastructure sovereignty, defined as the ability of a region, operator, or nation to exercise operational control over AI systems within physical and environmental limits. The paper argues that sovereignty emerges from the co-design of three layers: AI-oriented data centers, optical transport networks, and automation frameworks that provide real-time visibility and control. We analyze how AI workloads reshape data center design, driving extreme power densities, advanced cooling requirements, and tighter coupling to local energy systems, with sustainability metrics such as carbon intensity and water usage acting as hard deployment boundaries. We then examine optical networks as the backbone of distributed AI, showing how latency, capacity, failure domains, and jurisdictional control define practical sovereignty limits. Building on this foundation, the paper positions telemetry, agentic AI, and digital twins as enablers of operational sovereignty through validated, closed-loop control across compute, network, and energy domains. The tutorial concludes with a reference architecture for sovereign AI infrastructure that integrates telemetry pipelines, agent-based control, and digital twins, framing sustainability as a first-order design constraint.",
+    "published": "2026-02-11",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2602.10900v2",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2603.13570v3",
+    "title": "Privacy-Preserving Machine Learning for IoT: A Cross-Paradigm Survey and Future Roadmap",
+    "authors": [
+      "Zakia Zaman",
+      "Praveen Gauravaram",
+      "Mahbub Hassan",
+      "Sanjay Jha",
+      "Wen Hu"
+    ],
+    "summary": "The rapid proliferation of the Internet of Things has intensified demand for robust privacy-preserving machine learning mechanisms to safeguard sensitive data generated by large-scale, heterogeneous, and resource-constrained devices. Unlike centralized environments, IoT ecosystems are inherently decentralized, bandwidth-limited, and latency-sensitive, exposing privacy risks across sensing, communication, and distributed training pipelines. These characteristics render conventional anonymization and centralized protection strategies insufficient for practical deployments. This survey presents a comprehensive IoT-centric, cross-paradigm analysis of privacy-preserving machine learning. We introduce a structured taxonomy spanning perturbation-based mechanisms such as differential privacy, distributed paradigms such as federated learning, cryptographic approaches including homomorphic encryption and secure multiparty computation, and generative synthesis techniques based on generative adversarial networks. For each paradigm, we examine formal privacy guarantees, computational and communication complexity, scalability under heterogeneous device participation, and resilience against threats including membership inference, model inversion, gradient leakage, and adversarial manipulation. We further analyze deployment constraints in wireless IoT environments, highlighting trade-offs between privacy, communication overhead, model convergence, and system efficiency within next-generation mobile architectures. We also consolidate evaluation methodologies, summarize representative datasets and open-source frameworks, and identify open challenges including hybrid privacy integration, energy-aware learning, privacy-preserving large language models, and quantum-resilient machine learning.",
+    "published": "2026-03-13",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.13570v3",
+    "categories": [
+      "cs.LG",
+      "cs.CR"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28939v1",
+    "title": "Foundations of Polar Linear Algebra",
+    "authors": [
+      "Giovanni Guasti"
+    ],
+    "summary": "This work revisits operator learning from a spectral perspective by introducing Polar Linear Algebra, a structured framework based on polar geometry that combines a linear radial component with a periodic angular component. Starting from this formulation, we define the associated operators and analyze their spectral properties. As a proof of feasibility, the framework is evaluated on a canonical benchmark (MNIST). Despite the simplicity of the task, the results demonstrate that polar and fully spectral operators can be trained reliably, and that imposing self-adjoint-inspired spectral constraints improves stability and convergence. Beyond accuracy, the proposed formulation leads to a reduction in parameter count and computational complexity, while providing a more interpretable representation in terms of decoupled spectral modes. By moving from a spatial to a spectral domain, the problem decomposes into orthogonal eigenmodes that can be treated as independent computational pipelines. This structure naturally exposes an additional dimension of model parallelization, complementing existing parallel strategies without relying on ad-hoc partitioning. Overall, the work offers a different conceptual lens for operator learning, particularly suited to problems where spectral structure and parallel execution are central.",
+    "published": "2026-03-30",
+    "updated": "2026-03-30",
+    "pdf_url": "https://arxiv.org/pdf/2603.28939v1",
+    "categories": [
+      "cs.LG",
+      "math.NA"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.28780v1",
+    "title": "Byzantine-Robust and Communication-Efficient Distributed Training: Compressive and Cyclic Gradient Coding",
+    "authors": [
+      "Chengxi Li",
+      "Youssef Allouah",
+      "Rachid Guerraoui",
+      "Mikael Skoglund",
+      "Ming Xiao"
+    ],
+    "summary": "In this paper, we study the problem of distributed training (DT) under Byzantine attacks with communication constraints. While prior work has developed various robust aggregation rules at the server to enhance robustness to Byzantine attacks, the existing methods suffer from a critical limitation in that the solution error does not diminish when the local gradients sent by different devices vary considerably, as a result of data heterogeneity among the subsets held by different devices. To overcome this limitation, we propose a novel DT method, cyclic gradient coding-based DT (LAD). In LAD, the server allocates the entire training dataset to the devices before training begins. In each iteration, it assigns computational tasks redundantly to the devices using cyclic gradient coding. Each honest device then computes local gradients on a fixed number of data subsets and encodes the local gradients before transmitting to the server. The server aggregates the coded vectors from the honest devices and the potentially incorrect messages from Byzantine devices using a robust aggregation rule. Leveraging the redundancy of computation across devices, the convergence performance of LAD is analytically characterized, demonstrating improved robustness against Byzantine attacks and significantly lower solution error. Furthermore, we extend LAD to a communication-efficient variant, compressive and cyclic gradient coding-based DT (Com-LAD), which further reduces communication overhead under constrained settings. Numerical results validate the effectiveness of the proposed methods in enhancing both Byzantine resilience and communication efficiency.",
+    "published": "2026-03-17",
+    "updated": "2026-03-17",
+    "pdf_url": "https://arxiv.org/pdf/2603.28780v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  }
+]
