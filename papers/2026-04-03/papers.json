@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2604.02188v1",
+    "title": "Lightweight Spatiotemporal Highway Lane Detection via 3D-ResNet and PINet with ROI-Aware Attention",
+    "authors": [
+      "Sorna Shanmuga Raja",
+      "Abdelhafid Zenati"
+    ],
+    "summary": "This paper presents a lightweight, end-to-end highway lane detection architecture that jointly captures spatial and temporal information for robust performance in real-world driving scenarios. Building on the strengths of 3D convolutional neural networks and instance segmentation, we propose two models that integrate a 3D-ResNet encoder with a Point Instance Network (PINet) decoder. The first model enhances multi-scale feature representation using a Feature Pyramid Network (FPN) and Self-Attention mechanism to refine spatial dependencies. The second model introduces a Region of Interest (ROI) detection head to selectively focus on lane-relevant regions, thereby improving precision and reducing computational complexity.\n  Experiments conducted on the TuSimple dataset (highway driving scenarios) demonstrate that the proposed second model achieves 93.40% accuracy while significantly reducing false negatives. Compared to existing 2D and 3D baselines, our approach achieves improved performance with fewer parameters and reduced latency. The architecture has been validated through offline training and real-time inference in the Autonomous Systems Laboratory at City, St George's University of London. These results suggest that the proposed models are well-suited for integration into Advanced Driver Assistance Systems (ADAS), with potential scalability toward full Lane Assist Systems (LAS).",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02188v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.01607v1",
+    "title": "ModTrans: Translating Real-world Models for Distributed Training Simulator",
+    "authors": [
+      "Yi Lyu"
+    ],
+    "summary": "Large-scale distributed training has been a research hot spot in machine learning systems for industry and academia in recent years. However, conducting experiments without physical machines and corresponding resources is difficult. One solution is to leverage distributed training simulators, but current ones like ASTRA-sim do not support importing real-world developed models, which poses challenges for ML researchers seeking to use them. Based on this challenge, we developed ModTrans, a translator supporting format translation from any real-world model to the ASTRA-sim simulator's input, removing the barrier between machine learning experts and machine learning system researchers. The experiment results show that ModTrans's cost is negligible.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.01607v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  }
+]
