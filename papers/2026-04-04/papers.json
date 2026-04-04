@@ -1,0 +1,65 @@
+[
+  {
+    "id": "2604.01904v1",
+    "title": "Combating Data Laundering in LLM Training",
+    "authors": [
+      "Muxing Li",
+      "Zesheng Ye",
+      "Sharon Li",
+      "Feng Liu"
+    ],
+    "summary": "Data rights owners can detect unauthorized data use in large language model (LLM) training by querying with proprietary samples. Often, superior performance (e.g., higher confidence or lower loss) on a sample relative to the untrained data implies it was part of the training corpus, as LLMs tend to perform better on data they have seen during training. However, this detection becomes fragile under data laundering, a practice of transforming the stylistic form of proprietary data, while preserving critical information to obfuscate data provenance. When an LLM is trained exclusively on such laundered variants, it no longer performs better on originals, erasing the signals that standard detections rely on. We counter this by inferring the unknown laundering transformation from black-box access to the target LLM and, via an auxiliary LLM, synthesizing queries that mimic the laundered data, even if rights owners have only the originals. As the search space of finding true laundering transformations is infinite, we abstract such a process into a high-level transformation goal (e.g., \"lyrical rewriting\") and concrete details (e.g., \"with vivid imagery\"), and introduce synthesis data reversion (SDR) that instantiates this abstraction. SDR first identifies the most probable goal for synthesis to narrow the search; it then iteratively refines details so that synthesized queries gradually elicit stronger detection signals from the target LLM. Evaluated on the MIMIR benchmark against diverse laundering practices and target LLM families (Pythia, Llama2, and Falcon), SDR consistently strengthens data misuse detection, providing a practical countermeasure to data laundering.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.01904v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2604.01563v1",
+    "title": "Does Your Optimizer Care How You Normalize? Normalization-Optimizer Coupling in LLM Training",
+    "authors": [
+      "Abdelrahman Abouzeid"
+    ],
+    "summary": "In LLM training, normalization layers and optimizers are typically treated as independent design choices. In a 3x2 factorial at 1B parameters and 1000 training steps, we show this assumption can fail: Dynamic Erf (Derf; Chen & Liu, 2025) suffers a large negative interaction with Muon (Jordan, 2024), with its gap to RMSNorm growing from +0.31 nats under AdamW to +0.97 under Muon, approximately three times larger. Dynamic Tanh (DyT; Zhu et al., 2025), included as a bounded-normalizer control, shows no such penalty. Our evidence points to two failure modes of erf under Muon's faster spectral-norm growth: saturation (lossy compression) and scale blindness (discarding activation magnitude). An EMA-blend that reintroduces running scale estimates recovers ~84% of the gap. Separately, reducing Derf's alpha from its published default (0.5 to 0.3) recovers ~80% by keeping erf in its near-linear regime, where it approximately preserves relative scale; this setting is not the published default of Chen & Liu (2025). Using Derf's published default alpha with Muon incurs a 0.66-nat interaction penalty without producing NaNs or divergence, making the failure easy to miss in short pilot runs.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.01563v1",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.01599v1",
+    "title": "ByteRover: Agent-Native Memory Through LLM-Curated Hierarchical Context",
+    "authors": [
+      "Andy Nguyen",
+      "Danh Doan",
+      "Hoang Pham",
+      "Bao Ha",
+      "Dat Pham",
+      "Linh Nguyen",
+      "Hieu Nguyen",
+      "Thien Nguyen",
+      "Cuong Do",
+      "Phat Nguyen",
+      "Toan Nguyen"
+    ],
+    "summary": "Memory-Augmented Generation (MAG) extends large language models with external memory to support long-context reasoning, but existing approaches universally treat memory as an external service that agents call into, delegating storage to separate pipelines of chunking, embedding, and graph extraction. This architectural separation means the system that stores knowledge does not understand it, leading to semantic drift between what the agent intended to remember and what the pipeline actually captured, loss of coordination context across agents, and fragile recovery after failures. In this paper, we propose ByteRover, an agent-native memory architecture that inverts the memory pipeline: the same LLM that reasons about a task also curates, structures, and retrieves knowledge. ByteRover represents knowledge in a hierarchical Context Tree, a file-based knowledge graph organized as Domain, Topic, Subtopic, and Entry, where each entry carries explicit relations, provenance, and an Adaptive Knowledge Lifecycle (AKL) with importance scoring, maturity tiers, and recency decay. Retrieval uses a 5-tier progressive strategy that resolves most queries at sub-100 ms latency without LLM calls, escalating to agentic reasoning only for novel questions. Experiments on LoCoMo and LongMemEval demonstrate that ByteRover achieves state-of-the-art accuracy on LoCoMo and competitive results on LongMemEval while requiring zero external infrastructure, no vector database, no graph database, no embedding service, with all knowledge stored as human-readable markdown files on the local filesystem.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.01599v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  }
+]
