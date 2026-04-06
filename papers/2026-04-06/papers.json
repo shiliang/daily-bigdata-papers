@@ -1,0 +1,257 @@
+[
+  {
+    "id": "2604.03058v1",
+    "title": "Verbalizing LLMs' assumptions to explain and control sycophancy",
+    "authors": [
+      "Myra Cheng",
+      "Isabel Sieh",
+      "Humishka Zope",
+      "Sunny Yu",
+      "Lujain Ibrahim",
+      "Aryaman Arora",
+      "Jared Moore",
+      "Desmond Ong",
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ],
+    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues, e.g., the top bigram in LLMs' assumptions on social sycophancy datasets is ``seeking validation.'' We provide evidence for a causal link between Verbalized Assumptions and sycophantic model behavior: our assumption probes (linear probes trained on internal representations of these assumptions) enable interpretable fine-grained steering of social sycophancy. We explore why LLMs default to sycophantic assumptions: on identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for sycophancy.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.03058v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.02951v1",
+    "title": "How Annotation Trains Annotators: Competence Development in Social Influence Recognition",
+    "authors": [
+      "Maciej Markiewicz",
+      "Beata Bajcar",
+      "Wiktoria Mieleszczenko-Kowszewicz",
+      "Aleksander Szczęsny",
+      "Tomasz Adamczyk",
+      "Grzegorz Chodak",
+      "Karolina Ostrowska",
+      "Aleksandra Sawczuk",
+      "Jolanta Babiak",
+      "Jagoda Szklarczyk",
+      "Przemysław Kazienko"
+    ],
+    "summary": "Human data annotation, especially when involving experts, is often treated as an objective reference. However, many annotation tasks are inherently subjective, and annotators' judgments may evolve over time. This study investigates changes in the quality of annotators' work from a competence perspective during a process of social influence recognition. The study involved 25 annotators from five different groups, including both experts and non-experts, who annotated a dataset of 1,021 dialogues with 20 social influence techniques, along with intentions, reactions, and consequences. An initial subset of 150 texts was annotated twice - before and after the main annotation process - to enable comparison. To measure competence shifts, we combined qualitative and quantitative analyses of the annotated data, semi-structured interviews with annotators, self-assessment surveys, and Large Language Model training and evaluation on the comparison dataset. The results indicate a significant increase in annotators' self-perceived competence and confidence. Moreover, observed changes in data quality suggest that the annotation process may enhance annotator competence and that this effect is more pronounced in expert groups. The observed shifts in annotator competence have a visible impact on the performance of LLMs trained on their annotated data.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02951v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.02852v1",
+    "title": "Dependency-Guided Repository-Level C-to-Rust Translation with Reinforcement Alignment",
+    "authors": [
+      "Jia Feng",
+      "Wenjie Gan",
+      "Cuiyun Gao",
+      "Chaozheng Wang",
+      "Feng Luo",
+      "Xin Xia",
+      "Ge Li",
+      "Kui Liu"
+    ],
+    "summary": "Automating C-to-Rust migration is critical for improving software security without sacrificing performance. Traditional rule-based methods struggle with diverse C idioms, often producing rigid and unidiomatic Rust code. Large Language Models (LLMs), trained on massive code corpora, offer a promising alternative by leveraging cross-language generalization to generate more idiomatic and maintainable Rust code. However, several challenges remain. First, existing LLM-based approaches fail to handle cross-file dependencies effectively, either ignoring them or including entire files as context, which limits accurate dependency modeling. Second, complex dependencies and structured inputs and outputs make it difficult to verify syntactic correctness and functional equivalence at the repository level. Third, the lack of large-scale C-Rust parallel data constrains model performance.\n  We propose DepTrans, a framework that combines model capability enhancement with structured inference. DepTrans introduces Reinforcement-Aligned Syntax Training to improve generation quality through multi-task fine-tuning and feedback-driven reinforcement learning. It further applies Dependency-Guided Iterative Refinement to capture fine-grained cross-file dependencies and iteratively refine generated Rust code. We construct a dataset of 85k training samples and a benchmark of 145 repository-level instances. Experiments show that DepTrans achieves a 60.7 percent compilation success rate and 43.5 percent computational accuracy, outperforming the strongest baseline by 22.8 and 17.3 percentage points. It also successfully builds 7 of 15 industrial C projects, demonstrating its practical potential.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02852v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2604.02637v1",
+    "title": "Train Yourself as an LLM: Exploring Effects of AI Literacy on Persuasion via Role-playing LLM Training",
+    "authors": [
+      "Qihui Fan",
+      "Min Ge",
+      "Chenyan Jia",
+      "Weiyan Shi"
+    ],
+    "summary": "As large language models (LLMs) become increasingly persuasive, there is concern that people's opinions and decisions may be influenced across various contexts at scale. Prior mitigation (e.g., AI detectors and disclaimers) largely treats people as passive recipients of AI-generated information. To provide a more proactive intervention against persuasive AI, we introduce $\\textbf{LLMimic}$, a role-play-based, interactive, gamified AI literacy tutorial, where participants assume the role of an LLM and progress through three key stages of the training pipeline (pretraining, SFT, and RLHF). We conducted a $2 \\times 3$ between-subjects study ($N = 274$) where participants either (1) watched an AI history video (control) or (2) interacted with LLMimic (treatment), and then engaged in one of three realistic AI persuasion scenarios: (a) charity donation persuasion, (b) malicious money solicitation, or (c) hotel recommendation. Our results show that LLMimic significantly improved participants' AI literacy ($p < .001$), reduced persuasion success across scenarios ($p < .05$), and enhanced truthfulness and social responsibility levels ($p<0.01$) in the hotel scenario. These findings suggest that LLMimic offers a scalable, human-centered approach to improving AI literacy and supporting more informed interactions with persuasive AI.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02637v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.02801v1",
+    "title": "Distance Comparison Operations Are Not Silver Bullets in Vector Similarity Search: A Benchmark Study on Their Merits and Limits",
+    "authors": [
+      "Zhuanglin Zheng",
+      "Yuxiang Zeng",
+      "Chenchen Liu",
+      "Yunzhen Chi",
+      "Binhan Yang",
+      "Yongxin Tong"
+    ],
+    "summary": "Distance Comparison Operations (DCOs), which decide whether the distance between a data vector and a query is within a threshold, are a critical performance bottleneck in vector similarity search. Recent DCO methods that avoid full-dimensional distance computations promise significant speedups, but their readiness for production vector database systems remains an open question. To address this, we conduct a comprehensive benchmark of 8 DCO algorithms across 10 datasets (with up to 100M vectors and 12,288 dimensions) and diverse hardware configurations (CPUs with/without SIMD, and GPUs). Our study reveals that these methods are not silver bullets: their efficiency is highly sensitive to data dimensionality, degrades under out-of-distribution queries, and is unstable across hardware. Yet, our evaluation also demonstrates often-overlooked merits: they can accelerate index construction and data updates. Despite these benefits, their unstable performance, which can be slower than a full-dimensional scan, leads us to conclude that recent algorithmic advancements in DCO are not yet ready for production deployment.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02801v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2603.28750v2",
+    "title": "Temporal Credit Is Free",
+    "authors": [
+      "Aur Shalev Merin"
+    ],
+    "summary": "Recurrent networks do not need Jacobian propagation to adapt online. The hidden state already carries temporal credit through the forward pass; immediate derivatives suffice if you stop corrupting them with stale trace memory and normalize gradient scales across parameter groups. An architectural rule predicts when normalization is needed: \\b{eta}2 is required when gradients must pass through a nonlinear state update with no output bypass, and unnecessary otherwise. Across ten architectures, real primate neural data, and streaming ML benchmarks, immediate derivatives with RMSprop match or exceed full RTRL, scaling to n = 1024 at 1000x less memory.",
+    "published": "2026-03-30",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2603.28750v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.02619v1",
+    "title": "An Online Learning Approach for Two-Player Zero-Sum Linear Quadratic Games",
+    "authors": [
+      "Shanting Wang",
+      "Weihao Sun",
+      "Andreas A. Malikopoulos"
+    ],
+    "summary": "In this paper, we present an online learning approach for two-player zero-sum linear quadratic games with unknown dynamics. We develop a framework combining regularized least squares model estimation, high probability confidence sets, and surrogate model selection to maintain a regular model for policy updates. We apply a shrinkage step at each episode to identify a surrogate model in the region where the generalized algebraic Riccati equation admits a stabilizing saddle point solution. We then establish regret analysis on algorithm convergence, followed by a numerical example to illustrate the convergence performance and verify the regret analysis.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02619v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2604.02651v1",
+    "title": "Communication-free Sampling and 4D Hybrid Parallelism for Scalable Mini-batch GNN Training",
+    "authors": [
+      "Cunyang Wei",
+      "Siddharth Singh",
+      "Aishwarya Sarkar",
+      "Daniel Nichols",
+      "Tisha Patel",
+      "Aditya K. Ranjan",
+      "Sayan Ghosh",
+      "Ali Jannesari",
+      "Nathan R. Tallent",
+      "Abhinav Bhatele"
+    ],
+    "summary": "Graph neural networks (GNNs) are widely used for learning on graph datasets derived from various real-world scenarios. Learning from extremely large graphs requires distributed training, and mini-batching with sampling is a popular approach for parallelizing GNN training. Existing distributed mini-batch approaches have significant performance bottlenecks due to expensive sampling methods and limited scaling when using data parallelism. In this work, we present ScaleGNN, a 4D parallel framework for scalable mini-batch GNN training that combines communication-free distributed sampling, 3D parallel matrix multiplication (PMM), and data parallelism. ScaleGNN introduces a uniform vertex sampling algorithm, enabling each process (GPU device) to construct its local mini-batch, i.e., subgraph partitions without any inter-process communication. 3D PMM enables scaling mini-batch training to much larger GPU counts than vanilla data parallelism with significantly lower communication overheads. We also present additional optimizations to overlap sampling with training, reduce communication overhead by sending data in lower precision, kernel fusion, and communication-computation overlap. We evaluate ScaleGNN on five graph datasets and demonstrate strong scaling up to 2048 GPUs on Perlmutter, 2048 GCDs on Frontier, and 1024 GPUs on Tuolumne. On Perlmutter, ScaleGNN achieves 3.5x end-to-end training speedup over the SOTA baseline on ogbn-products.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.02651v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.02501v1",
+    "title": "ECG Foundation Models and Medical LLMs for Agentic Cardiovascular Intelligence at the Edge: A Review and Outlook",
+    "authors": [
+      "Mudassir Hasan Khan",
+      "Ahmad Nayfeh",
+      "Mudassir Masood",
+      "Ali Ahmad Al-Shaikhi",
+      "Muhammad Mahboob Ur Rahman",
+      "Tareq Y. Al-Naffouri"
+    ],
+    "summary": "Electrocardiogram (ECG) foundation models represent a paradigm shift from task-specific pipelines to generalizable architectures pre-trained on large-scale unlabeled waveform data. This survey presents a unified and deployment-aware review of foundation models and medical large language models (LLMs) for ECG intelligence in cardiovascular disease (CVD) diagnosis, monitoring, and clinical decision support. The central thesis of this survey paper is that next-generation cardiovascular AI systems will be inherently agentic, requiring the synergistic integration of two complementary model classes: (i) ECG foundation models that act as signal-level interpreters, learning rich electrophysiological representations via self-supervised and multimodal pretraining, and (ii) medical LLMs, trained on biomedical text corpora, that function as knowledge-based reasoning backbones for contextual inference, guideline alignment, and clinical decision support. Thus, the survey systematically reviews existing pool of generalist medical LLMs, as well as ECG foundation models that utilize techniques such as self-supervised learning, multimodal ECG-language alignment, vision transformer architectures, and possess capabilities such as zero-shot classification, automated report generation, and longitudinal risk modeling. Recognizing the constraints of consumer-grade wearable edge devices, we further examine model optimization techniques such as quantization, pruning, knowledge distillation, as well as the role of small language models in enabling low-latency, energy-efficient, and privacy-preserving ECG intelligence on edge platforms such as smartwatches. Finally, we outline future directions in multimodal ECG foundation models, agent-driven monitoring, and explainable, secure edge intelligence, with particular emphasis on real-time, on-device cardiovascular analytics in consumer electronics ecosystems.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02501v1",
+    "categories": [
+      "eess.SP"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2604.02431v1",
+    "title": "SelRoute: Query-Type-Aware Routing for Long-Term Conversational Memory Retrieval",
+    "authors": [
+      "Matthew McKee"
+    ],
+    "summary": "Retrieving relevant past interactions from long-term conversational memory typically relies on large dense retrieval models (110M-1.5B parameters) or LLM-augmented indexing. We introduce SelRoute, a framework that routes each query to a specialized retrieval pipeline -- lexical, semantic, hybrid, or vocabulary-enriched -- based on its query type. On LongMemEval_M (Wu et al., 2024), SelRoute achieves Recall@5 of 0.800 with bge-base-en-v1.5 (109M parameters) and 0.786 with bge-small-en-v1.5 (33M parameters), compared to 0.762 for Contriever with LLM-generated fact keys. A zero-ML baseline using SQLite FTS5 alone achieves NDCG@5 of 0.692, already exceeding all published baselines on ranking quality -- a gap we attribute partly to implementation differences in lexical retrieval. Five-fold stratified cross-validation confirms routing stability (CV gap of 1.3-2.4 Recall@5 points; routes stable for 4/6 query types across folds). A regex-based query-type classifier achieves 83% effective routing accuracy, and end-to-end retrieval with predicted types (Recall@5 = 0.689) still outperforms uniform baselines. Cross-benchmark evaluation on 8 additional benchmarks spanning 62,000+ instances -- including MSDialog, LoCoMo, QReCC, and PerLTQA -- confirms generalization without benchmark-specific tuning, while exposing a clear failure mode on reasoning-intensive retrieval (RECOR Recall@5 = 0.149) that bounds the claim. We also identify an enrichment-embedding asymmetry: vocabulary expansion at storage time improves lexical search but degrades embedding search, motivating per-pipeline enrichment decisions. The full system requires no GPU and no LLM inference at query time.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02431v1",
+    "categories": [
+      "cs.IR"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2603.29093v2",
+    "title": "APEX-EM: Non-Parametric Online Learning for Autonomous Agents via Structured Procedural-Episodic Experience Replay",
+    "authors": [
+      "Pratyay Banerjee",
+      "Masud Moshtaghi",
+      "Ankit Chadha"
+    ],
+    "summary": "LLM-based autonomous agents lack persistent procedural memory: they re-derive solutions from scratch even when structurally identical tasks have been solved before. We present APEX-EM, a non-parametric online learning framework that accumulates, retrieves, and reuses structured procedural plans without modifying model weights. APEX-EM introduces: (1) a structured experience representation encoding the full procedural-episodic trace of each execution -- planning steps, artifacts, iteration history with error analysis, and quality scores; (2) a Plan-Retrieve-Generate-Iterate-Ingest (PRGII) workflow with Task Verifiers providing multi-dimensional reward signals; and (3) a dual-outcome Experience Memory with hybrid retrieval combining semantic search, structural signature matching, and plan DAG traversal -- enabling cross-domain transfer between tasks sharing no lexical overlap but analogous operational structure. Successful experiences serve as positive in-context examples; failures as negative examples with structured error annotations.\n  We evaluate on BigCodeBench, KGQAGen-10k, and Humanity's Last Exam using Claude Sonnet 4.5 and Opus 4.5. On KGQAGen-10k, APEX-EM achieves 89.6% accuracy versus 41.3% without memory (+48.3pp), surpassing the oracle-retrieval upper bound (84.9%). On BigCodeBench, it reaches 83.3% SR from a 53.9% baseline (+29.4pp), exceeding MemRL's +11.0pp gain under comparable frozen-backbone conditions (noting backbone differences controlled for in our analysis). On HLE, entity graph retrieval reaches 48.0% from 25.2% (+22.8pp). Ablations show component value is task-dependent: rich judge feedback is negligible for code generation but critical for structured queries (+10.3pp), while binary-signal iteration partially compensates for weaker feedback.",
+    "published": "2026-03-31",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2603.29093v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.02398v1",
+    "title": "Improving MPI Error Detection and Repair with Large Language Models and Bug References",
+    "authors": [
+      "Scott Piersall",
+      "Yang Gao",
+      "Shenyang Liu",
+      "Liqiang Wang"
+    ],
+    "summary": "Message Passing Interface (MPI) is a foundational technology in high-performance computing (HPC), widely used for large-scale simulations and distributed training (e.g., in machine learning frameworks such as PyTorch and TensorFlow). However, maintaining MPI programs remains challenging due to their complex interplay among processes and the intricacies of message passing and synchronization. With the advancement of large language models like ChatGPT, it is tempting to adopt such technology for automated error detection and repair. Yet, our studies reveal that directly applying large language models (LLMs) yields suboptimal results, largely because these models lack essential knowledge about correct and incorrect usage, particularly the bugs found in MPI programs. In this paper, we design a bug detection and repair technique alongside Few-Shot Learning (FSL), Chain-of-Thought (CoT) reasoning, and Retrieval Augmented Generation (RAG) techniques in LLMs to enhance the large language model's ability to detect and repair errors. Surprisingly, such enhancements lead to a significant improvement, from 44% to 77%, in error detection accuracy compared to baseline methods that use ChatGPT directly. Additionally, our experiments demonstrate our bug referencing technique generalizes well to other large language models.",
+    "published": "2026-04-02",
+    "updated": "2026-04-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.02398v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  }
+]
