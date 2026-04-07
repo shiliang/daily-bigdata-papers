@@ -1,0 +1,242 @@
+[
+  {
+    "id": "2604.04514v1",
+    "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+    "authors": [
+      "Varun Pratap Bhardwaj"
+    ],
+    "summary": "AI coding agents operate in a paradox: they possess vast parametric knowledge yet cannot remember a conversation from an hour ago. Existing memory systems store text in vector databases with single-channel retrieval, require cloud LLMs for core operations, and implement none of the cognitive processes that make human memory effective.\n  We present SuperLocalMemory V3.3 (\"The Living Brain\"), a local-first agent memory system implementing the full cognitive memory taxonomy with mathematical lifecycle dynamics. Building on the information-geometric foundations of V3.2 (arXiv:2603.14588), we introduce five contributions: (1) Fisher-Rao Quantization-Aware Distance (FRQAD) -- a new metric on the Gaussian statistical manifold achieving 100% precision at preferring high-fidelity embeddings over quantized ones (vs 85.6% for cosine), with zero prior art; (2) Ebbinghaus Adaptive Forgetting with lifecycle-aware quantization -- the first mathematical forgetting curve in local agent memory coupled to progressive embedding compression, achieving 6.7x discriminative power; (3) 7-channel cognitive retrieval spanning semantic, keyword, entity graph, temporal, spreading activation, consolidation, and Hopfield associative channels, achieving 70.4% on LoCoMo in zero-LLM Mode A; (4) memory parameterization implementing Long-Term Implicit memory via soft prompts; (5) zero-friction auto-cognitive pipeline automating the complete memory lifecycle.\n  On LoCoMo, V3.3 achieves 70.4% in Mode A (zero-LLM), with +23.8pp on multi-hop and +12.7pp on adversarial. V3.2 achieved 74.8% Mode A and 87.7% Mode C; the 4.4pp gap reflects a deliberate architectural trade-off. SLM V3.3 is open source under the Elastic License 2.0, runs entirely on CPU, with over 5,000 monthly downloads.",
+    "published": "2026-04-06",
+    "updated": "2026-04-06",
+    "pdf_url": "https://arxiv.org/pdf/2604.04514v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.04895v1",
+    "title": "Agentic Federated Learning: The Future of Distributed Training Orchestration",
+    "authors": [
+      "Rafael O. Jarczewski",
+      "Gabriel U. Talasso",
+      "Leandro Villas",
+      "Allan M. de Souza"
+    ],
+    "summary": "Although Federated Learning (FL) promises privacy and distributed collaboration, its effectiveness in real-world scenarios is often hampered by the stochastic heterogeneity of clients and unpredictable system dynamics. Existing static optimization approaches fail to adapt to these fluctuations, resulting in resource underutilization and systemic bias. In this work, we propose a paradigm shift towards Agentic-FL, a framework where Language Model-based Agents (LMagents) assume autonomous orchestration roles. Unlike rigid protocols, we demonstrate how server-side agents can mitigate selection bias through contextual reasoning, while client-side agents act as local guardians, dynamically managing privacy budgets and adapting model complexity to hardware constraints. More than just resolving technical inefficiencies, this integration signals the evolution of FL towards decentralized ecosystems, where collaboration is negotiated autonomously, paving the way for future markets of incentive-based models and algorithmic justice. We discuss the reliability (hallucinations) and security challenges of this approach, outlining a roadmap for resilient multi-agent systems in federated environments.",
+    "published": "2026-04-06",
+    "updated": "2026-04-06",
+    "pdf_url": "https://arxiv.org/pdf/2604.04895v1",
+    "categories": [
+      "cs.MA",
+      "cs.AI"
+    ],
+    "primary_category": "cs.MA",
+    "github": null
+  },
+  {
+    "id": "2604.04712v1",
+    "title": "Hardware-Level Governance of AI Compute: A Feasibility Taxonomy for Regulatory Compliance and Treaty Verification",
+    "authors": [
+      "Samar Ansari"
+    ],
+    "summary": "The governance of frontier AI increasingly relies on controlling access to computational resources, yet the hardware-level mechanisms invoked by policy proposals remain largely unexamined from an engineering perspective. This paper bridges the gap between AI governance and computer engineering by proposing a taxonomy of 20 hardware-level governance mechanisms, organised by function (monitoring, verification, enforcement) and assessed for technical feasibility on a four-point scale from currently deployable to speculative. For each mechanism, we provide a technical description, a feasibility rating, and an identification of adversarial vulnerabilities. We map the taxonomy onto four governance scenarios: domestic regulation, bilateral agreements, multilateral treaty verification, and industry self-regulation. Our analysis reveals a structural mismatch: the mechanisms most needed for treaty verification, including on-chip compute metering, cryptographic proof-of-training, and hardware-embedded enforcement, are also the least mature. We assess principal threats to compute-based governance, including algorithmic efficiency gains, distributed training methods, and sovereignty concerns. We identify a temporal constraint: the window during which semiconductor manufacturing concentration makes hardware-level governance implementable is narrowing, while R&D timelines for critical mechanisms span years. We present an adversary-tiered threat analysis distinguishing commercial, non-state, and nation-state actors, arguing the appropriate security standard is tamper-evident assurance analogous to IAEA verification rather than absolute tamper-proofing. The taxonomy, feasibility classification, and mechanism-to-scenario mapping provide a technical foundation for policymakers and identify the R&D investments required before hardware-level governance can support verifiable international agreements.",
+    "published": "2026-04-06",
+    "updated": "2026-04-06",
+    "pdf_url": "https://arxiv.org/pdf/2604.04712v1",
+    "categories": [
+      "cs.CR",
+      "cs.CY"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2604.04184v1",
+    "title": "AURA: Always-On Understanding and Real-Time Assistance via Video Streams",
+    "authors": [
+      "Xudong Lu",
+      "Yang Bo",
+      "Jinpeng Chen",
+      "Shuhan Li",
+      "Xintong Guo",
+      "Huankang Guan",
+      "Fang Liu",
+      "Dunyuan Xu",
+      "Peiwen Sun",
+      "Heyang Sun",
+      "Rui Liu",
+      "Hongsheng Li"
+    ],
+    "summary": "Video Large Language Models (VideoLLMs) have achieved strong performance on many video understanding tasks, but most existing systems remain offline and are not well-suited for live video streams that require continuous observation and timely response. Recent streaming VideoLLMs have made progress, yet current approaches often rely on decoupled trigger-response pipelines or are limited to captioning-style narration, reducing their effectiveness for open-ended question answering and long-horizon interaction. We propose AURA (Always-On Understanding and Real-Time Assistance), an end-to-end streaming visual interaction framework that enables a unified VideoLLM to continuously process video streams and support both real-time question answering and proactive responses. AURA integrates context management, data construction, training objectives, and deployment optimization for stable long-horizon streaming interaction. It achieves state-of-the-art performance on streaming benchmarks and supports a real-time demo system with ASR and TTS running at 2 FPS on two 80G accelerators. We release the AURA model together with a real-time inference framework to facilitate future research.",
+    "published": "2026-04-05",
+    "updated": "2026-04-05",
+    "pdf_url": "https://arxiv.org/pdf/2604.04184v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.04277v1",
+    "title": "Would Learning Help? Adaptive CRC-QC-LDPC Selection for Integrity in 5G-NR V2X",
+    "authors": [
+      "Sarah Al-Shareeda",
+      "Gulcihan Özdemir",
+      "Arouj Fatima",
+      "Madalin-Dorin Pop",
+      "Bander A. Jabr",
+      "Yasser Bin Salamah",
+      "Jacques Demerjian"
+    ],
+    "summary": "Vehicle-to-everything (V2X) communications impose stringent physical-layer integrity requirements, particularly under short-packet transmission and mobility-induced channel variation. This paper studies whether standard-compliant online selection of Cyclic Redundancy Check (CRC) polynomials and Quasi-Cyclic Low-Density Parity-Check (QC-LDPC) coding rates can reduce silent (undetected) errors in 5G New Radio (5G-NR) V2X links. The joint configuration problem is formulated as a lightweight Contextual Bandit (CB) with a small, discrete action space, and a discounted LinUCB policy is evaluated against greedy online adaptation and a conservative fixed baseline. A 5G-NR-compliant physical-layer simulation is developed using Sionna, modeling mobility through time-correlated Rayleigh fading, where vehicle speed governs channel correlation, and non-stationary interference via a two-state Markov process. The learning agent operates on coarse receiver feedback, including a noisy Signal-to-Noise Ratio (SNR) estimate and indicators of burst interference and deep fades, and targets minimization of the Undetected Error Probability ((P{UE})) while accounting for the Detected Error Probability ((P{DE})). Overall, our objective is to delineate the mobility regimes in which learning-assisted CRC-QC-LDPC configuration improves physical-layer integrity in 5G-NR V2X systems. Our results indicate that learning-assisted adaptation is most effective at low to moderate mobility, reducing (P_UE) by up to 50-70% relative to greedy selection in the low-SNR regime ((-5) to 5~dB) and approaching the best fixed configuration at higher (E_b/N_0). At high mobility (>= 180~km/h), fast channel decorrelation weakens temporal predictability, limiting the effectiveness of online learning and reducing performance differences across policies.",
+    "published": "2026-04-05",
+    "updated": "2026-04-05",
+    "pdf_url": "https://arxiv.org/pdf/2604.04277v1",
+    "categories": [
+      "cs.IT",
+      "cs.ET"
+    ],
+    "primary_category": "cs.IT",
+    "github": null
+  },
+  {
+    "id": "2604.04195v1",
+    "title": "Stable and Privacy-Preserving Synthetic Educational Data with Empirical Marginals: A Copula-Based Approach",
+    "authors": [
+      "Gabriel Diaz Ramos",
+      "Lorenzo Luzi",
+      "Debshila Basu Mallick",
+      "Richard Baraniuk"
+    ],
+    "summary": "To advance Educational Data Mining (EDM) within strict privacy-protecting regulatory frameworks, researchers must develop methods that enable data-driven analysis while protecting sensitive student information. Synthetic data generation is one such approach, enabling the release of statistically generated samples instead of real student records; however, existing deep learning and parametric generators often distort marginal distributions and degrade under iterative regeneration, leading to distribution drift and progressive loss of distributional support that compromise reliability. In response, we introduce the Non-Parametric Gaussian Copula (NPGC), a plug-and-play synthesis method that replaces deep learning and parametric optimization with empirical statistical anchoring to preserve the observed marginal distributions while modeling dependencies through a copula framework. NPGC integrates Differential Privacy (DP) at both the marginal and correlation levels, supports heterogeneous variable types, and treats missing data as an explicit state to retain informative absence patterns. We evaluate NPGC against deep learning and parametric baselines on five benchmark datasets and demonstrate that it remains stable across multiple regeneration cycles and achieves competitive downstream performance at substantially lower computational cost. We further validate NPGC through deployment in a real-world online learning platform, demonstrating its practicality for privacy-preserving research.",
+    "published": "2026-04-05",
+    "updated": "2026-04-05",
+    "pdf_url": "https://arxiv.org/pdf/2604.04195v1",
+    "categories": [
+      "cs.LG",
+      "cs.CY"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.03985v1",
+    "title": "Autoencoder-Based Parameter Estimation for Superposed Multi-Component Damped Sinusoidal Signals",
+    "authors": [
+      "Momoka Iida",
+      "Hayato Motohashi",
+      "Hirotaka Takahashi"
+    ],
+    "summary": "Damped sinusoidal oscillations are widely observed in many physical systems, and their analysis provides access to underlying physical properties. However, parameter estimation becomes difficult when the signal decays rapidly, multiple components are superposed, and observational noise is present. In this study, we develop an autoencoder-based method that uses the latent space to estimate the frequency, phase, decay time, and amplitude of each component in noisy multi-component damped sinusoidal signals. We investigate multi-component cases under Gaussian-distribution training and further examine the effect of the training-data distribution through comparisons between Gaussian and uniform training. The performance is evaluated through waveform reconstruction and parameter-estimation accuracy. We find that the proposed method can estimate the parameters with high accuracy even in challenging setups, such as those involving a subdominant component or nearly opposite-phase components, while remaining reasonably robust when the training distribution is less informative. This demonstrates its potential as a tool for analyzing short-duration, noisy signals.",
+    "published": "2026-04-05",
+    "updated": "2026-04-05",
+    "pdf_url": "https://arxiv.org/pdf/2604.03985v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.03858v1",
+    "title": "A Bayesian Information-Theoretic Approach to Data Attribution",
+    "authors": [
+      "Dharmesh Tailor",
+      "Nicolò Felicioni",
+      "Kamil Ciosek"
+    ],
+    "summary": "Training Data Attribution (TDA) seeks to trace model predictions back to influential training examples, enhancing interpretability and safety. We formulate TDA as a Bayesian information-theoretic problem: subsets are scored by the information loss they induce - the entropy increase at a query when removed. This criterion credits examples for resolving predictive uncertainty rather than label noise. To scale to modern networks, we approximate information loss using a Gaussian Process surrogate built from tangent features. We show this aligns with classical influence scores for single-example attribution while promoting diversity for subsets. For even larger-scale retrieval, we relax to an information-gain objective and add a variance correction for scalable attribution in vector databases. Experiments show competitive performance on counterfactual sensitivity, ground-truth retrieval and coreset selection, showing that our method scales to modern architectures while bridging principled measures with practice.",
+    "published": "2026-04-04",
+    "updated": "2026-04-04",
+    "pdf_url": "https://arxiv.org/pdf/2604.03858v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.03525v1",
+    "title": "Online learning of smooth functions on $\\mathbb{R}$",
+    "authors": [
+      "Jesse Geneson",
+      "Kuldeep Singh",
+      "Alexander Wang"
+    ],
+    "summary": "We study adversarial online learning of real-valued functions on $\\mathbb{R}$. In each round the learner is queried at $x_t\\in\\mathbb{R}$, predicts $\\hat y_t$, and then observes the true value $f(x_t)$; performance is measured by cumulative $p$-loss $\\sum_{t\\ge 1}|\\hat y_t-f(x_t)|^p$. For the class \\[ \\mathcal{G}_q=\\Bigl\\{f:\\mathbb{R}\\to\\mathbb{R}\\ \\text{absolutely continuous}:\\ \\int_{\\mathbb{R}}|f'(x)|^q\\,dx\\le 1\\Bigr\\}, \\] we show that the standard model becomes ill-posed on $\\mathbb{R}$: for every $p\\ge 1$ and $q>1$, an adversary can force infinite loss. Motivated by this obstruction, we analyze three modified learning scenarios that limit the influence of queries that are far from previously observed inputs. In Scenario 1 the adversary must choose each new query within distance $1$ of some past query. In Scenario 2 the adversary may query anywhere, but the learner is penalized only on rounds whose query lies within distance $1$ of a past query. In Scenario 3 the loss in round $t$ is multiplied by a weight $g(\\min_{j<t}|x_t-x_j|)$.\n  We obtain sharp characterizations for Scenarios 1-2 in several regimes. For Scenario 3 we identify a clean threshold phenomenon: if $g$ decays too slowly, then the adversary can force infinite weighted loss. In contrast, for rapidly decaying weights such as $g(z)=e^{-cz}$ we obtain finite and sharp guarantees in the quadratic case $p=q=2$. Finally, we study a natural multivariable slice generalization $\\mathcal{G}_{q,d}$ of $\\mathcal{G}_q$ on $\\mathbb{R}^d$ and show a sharp dichotomy: while the one-dimensional case admits finite opt-values in certain regimes, for every $d\\ge 2$ the slice class $\\mathcal{G}_{q,d}$ is too permissive, and even under Scenarios 1-3 an adversary can force infinite loss.",
+    "published": "2026-04-04",
+    "updated": "2026-04-04",
+    "pdf_url": "https://arxiv.org/pdf/2604.03525v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2603.29285v2",
+    "title": "Designing Human-GenAI Interaction for cMOOC Discussion Facilitation: Effects of a Collaborative AI-in-the-Loop Workflow on Social and Cognitive Presence",
+    "authors": [
+      "Jianjun Xiao",
+      "Cixiao Wang"
+    ],
+    "summary": "Connectivist MOOCs (cMOOCs) rely on learner-driven interaction, yet their intentionally light facilitation makes it difficult to design generative AI participation that is both scalable and educationally productive. This design-based research study examined how human-AI interaction can be designed for discussion facilitation through a collaborative AI-in-the-loop workflow. Across two iterations in a five-week cMOOC (N = 606), we designed, deployed, and evaluated a facilitation system that combined network-structure-driven target selection, discourse-adaptive response roles, and mandatory human review before AI participation became visible in the community. Iteration 1 (Weeks 1-2) focused on refining the interaction design, showing that the most sustainable facilitation patterns were Guide (70.4%) and Amplifier (28.5%) responses and yielding explicit moderation standards for publishable AI participation. Iteration 2 (Weeks 3-5) examined how different forms of AI-mediated interaction related to social and cognitive presence. AI participation selectively enhanced Open Communication (r = 0.188, p = 0.006), Networked Cohesion (r = 0.274, p < 0.001), and overall social presence (r = 0.162, p = 0.015), while cognitive presence showed no overall improvement. More importantly, direct learner-agent interaction was associated with significantly higher social presence (r = 0.186, p = 0.004) and higher-order cognitive indicators-Integration (r = 0.206, p = 0.001) and Resolution/Creation (r = 0.350, p < 0.001)-than mere co-presence in AI-involved threads. The findings suggest that effective GenAI-supported discussion depends less on AI presence alone than on interaction design: reciprocal exchange, discourse-adaptive facilitation roles, and collaborative human review appear to be key conditions for productive AI participation in online learning communities.",
+    "published": "2026-03-31",
+    "updated": "2026-04-04",
+    "pdf_url": "https://arxiv.org/pdf/2603.29285v2",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2604.03377v1",
+    "title": "ViBA: Implicit Bundle Adjustment with Geometric and Temporal Consistency for Robust Visual Matching",
+    "authors": [
+      "Xiaoji Niu",
+      "Yuqing Wang",
+      "Yan Wang",
+      "Hailiang Tang",
+      "Tisheng Zhang"
+    ],
+    "summary": "Most existing image keypoint detection and description methods rely on datasets with accurate pose and depth annotations, limiting scalability and generalization, and often degrading navigation and localization performance. We propose ViBA, a sustainable learning framework that integrates geometric optimization with feature learning for continuous online training on unconstrained video streams. Embedded in a standard visual odometry pipeline, it consists of an implicitly differentiable geometric residual framework: (i) an initial tracking network for inter-frame correspondences, (ii) depth-based outlier filtering, and (iii) differentiable global bundle adjustment that jointly refines camera poses and feature positions by minimizing reprojection errors. By combining geometric consistency from BA with long-term temporal consistency across frames, ViBA enforces stable and accurate feature representations. We evaluate ViBA on EuRoC and UMA datasets. Compared with state-of-the-art methods such as SuperPoint+SuperGlue, ALIKED, and LightGlue, ViBA reduces mean absolute translation error (ATE) by 12-18% and absolute rotation error (ARE) by 5-10% across sequences, while maintaining real-time inference speeds (FPS 36-91). When evaluated on unseen sequences, it retains over 90% localization accuracy, demonstrating robust generalization. These results show that ViBA supports continuous online learning with geometric and temporal consistency, consistently improving navigation and localization in real-world scenarios.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.03377v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.03299v1",
+    "title": "MoViD: View-Invariant 3D Human Pose Estimation via Motion-View Disentanglement",
+    "authors": [
+      "Yejia Liu",
+      "Hengle Jiang",
+      "Haoxian Liu",
+      "Runxi Huang",
+      "Xiaomin Ouyang"
+    ],
+    "summary": "3D human pose estimation is a key enabling technology for applications such as healthcare monitoring, human-robot collaboration, and immersive gaming, but real-world deployment remains challenged by viewpoint variations. Existing methods struggle to generalize to unseen camera viewpoints, require large amounts of training data, and suffer from high inference latency. We propose MoViD, a viewpoint-invariant 3D human pose estimation framework that disentangles viewpoint information from motion features. The key idea is to extract viewpoint information from intermediate pose features and leverage it to enhance both the robustness and efficiency of pose estimation. MoViD introduces a view estimator that models key joint relationships to predict viewpoint information, and an orthogonal projection module to disentangle motion and view features, further enhanced through physics-grounded contrastive alignment across views. For real-time edge deployment, MoViD employs a frame-by-frame inference pipeline with a view-aware strategy that adaptively activates flip refinement based on the estimated viewpoint. Evaluations on nine public datasets and newly collected multiview UAV and gait analysis datasets show that MoViD reduces pose estimation error by over 24.2\\% compared to state-of-the-art methods, maintains robust performance under severe occlusions with 60\\% less training data, and achieves real-time inference at 15 FPS on NVIDIA edge devices.",
+    "published": "2026-03-29",
+    "updated": "2026-03-29",
+    "pdf_url": "https://arxiv.org/pdf/2604.03299v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
