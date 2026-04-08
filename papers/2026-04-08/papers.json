@@ -1,0 +1,107 @@
+[
+  {
+    "id": "2604.06071v1",
+    "title": "Stories of Your Life as Others: A Round-Trip Evaluation of LLM-Generated Life Stories Conditioned on Rich Psychometric Profiles",
+    "authors": [
+      "Ben Wigler",
+      "Maria Tsfasman",
+      "Tiffany Matej Hrkalovic"
+    ],
+    "summary": "Personality traits are richly encoded in natural language, and large language models (LLMs) trained on human text can simulate personality when conditioned on persona descriptions. However, existing evaluations rely predominantly on questionnaire self-report by the conditioned model, are limited in architectural diversity, and rarely use real human psychometric data. Without addressing these limitations, it remains unclear whether personality conditioning produces psychometrically informative representations of individual differences or merely superficial alignment with trait descriptors. To test how robustly LLMs can encode personality into extended text, we condition LLMs on real psychometric profiles from 290 participants to generate first-person life story narratives, and then task independent LLMs to recover personality scores from those narratives alone. We show that personality scores can be recovered from the generated narratives at levels approaching human test-retest reliability (mean r = 0.750, 85% of the human ceiling), and that recovery is robust across 10 LLM narrative generators and 3 LLM personality scorers spanning 6 providers. Decomposing systematic biases reveals that scoring models achieve their accuracy while counteracting alignment-induced defaults. Content analysis of the generated narratives shows that personality conditioning produces behaviourally differentiated text: nine of ten coded features correlate significantly with the same features in participants' real conversations, and personality-driven emotional reactivity patterns in narratives replicate in real conversational data. These findings provide evidence that the personality-language relationship captured during pretraining supports robust encoding and decoding of individual differences, including characteristic emotional variability patterns that replicate in real human behaviour.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.06071v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.HC"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.05480v1",
+    "title": "Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects",
+    "authors": [
+      "Hanxi Li",
+      "Jianan Zhou",
+      "Jiale Lao",
+      "Yibo Wang",
+      "Zhengmao Ye",
+      "Yang Cao",
+      "Junfen Wang",
+      "Mingjie Tang"
+    ],
+    "summary": "Vector databases serve as the retrieval backbone of modern AI applications, yet their security remains largely unexplored. We propose the Black-Hole Attack, a poisoning attack that injects a small number of malicious vectors near the geometric center of the stored vectors. These injected vectors attract queries like a black hole and frequently appear in the top-k retrieval results for most queries. This attack is enabled by a phenomenon we term centrality-driven hubness: in high-dimensional embedding spaces, vectors near the centroid become nearest neighbors of a disproportionately large number of other vectors, while this centroid region is nearly empty in practice. The attack shows that vectors in a vector database cannot be blindly trusted: geometric defects in high-dimensional embeddings make retrieval inherently vulnerable. Our experiments show that malicious vectors appear in up to 99.85% of top-10 results. Additionally, we evaluate existing hubness mitigation methods as potential defenses against the Black-Hole Attack. The results show that these methods either significantly reduce retrieval accuracy or provide limited protection, which indicates the need for more robust defenses against the Black-Hole Attack.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.05480v1",
+    "categories": [
+      "cs.CR",
+      "cs.DB"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2604.05458v1",
+    "title": "MA-IDS: Multi-Agent RAG Framework for IoT Network Intrusion Detection with an Experience Library",
+    "authors": [
+      "Md Shamimul Islam",
+      "Luis G. Jaimes",
+      "Ayesha S. Dina"
+    ],
+    "summary": "Network Intrusion Detection Systems (NIDS) face important limitations. Signature-based methods are effective for known attack patterns, but they struggle to detect zero-day attacks and often miss modified variants of previously known attacks, while many machine learning approaches offer limited interpretability. These challenges become even more severe in IoT environments because of resource constraints and heterogeneous protocols. To address these issues, we propose MA-IDS, a Multi-Agent Intrusion Detection System that combines Large Language Models (LLMs) with Retrieval Augmented Generation (RAG) for reasoning-driven intrusion detection. The proposed framework grounds LLM reasoning through a persistent, self-building Experience Library. Two specialized agents collaborate through a FAISS-based vector database: a Traffic Classification Agent that retrieves past error rules before each inference, and an Error Analysis Agent that converts misclassifications into human-readable detection rules stored for future retrieval, enabling continual learning through external knowledge accumulation, without modifying the underlying language model. Evaluated on NF-BoT-IoT and NF-ToN-IoT benchmark datasets, MA-IDS achieves Macro F1-Scores of 89.75% and 85.22%, improving over zero-shot baselines of 17% and 4.96% by more than 72 and 80 percentage points. These results are competitive with SVM while providing rule-level explanations for every classification decision, demonstrating that retrieval-augmented reasoning offers a principled path toward explainable, self-improving intrusion detection for IoT networks.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.05458v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2604.05751v1",
+    "title": "Brain-to-Speech: Prosody Feature Engineering and Transformer-Based Reconstruction",
+    "authors": [
+      "Mohammed Salah Al-Radhi",
+      "Géza Németh",
+      "Andon Tchechmedjiev",
+      "Binbin Xu"
+    ],
+    "summary": "This chapter presents a novel approach to brain-to-speech (BTS) synthesis from intracranial electroencephalography (iEEG) data, emphasizing prosody-aware feature engineering and advanced transformer-based models for high-fidelity speech reconstruction. Driven by the increasing interest in decoding speech directly from brain activity, this work integrates neuroscience, artificial intelligence, and signal processing to generate accurate and natural speech. We introduce a novel pipeline for extracting key prosodic features directly from complex brain iEEG signals, including intonation, pitch, and rhythm. To effectively utilize these crucial features for natural-sounding speech, we employ advanced deep learning models. Furthermore, this chapter introduces a novel transformer encoder architecture specifically designed for brain-to-speech tasks. Unlike conventional models, our architecture integrates the extracted prosodic features to significantly enhance speech reconstruction, resulting in generated speech with improved intelligibility and expressiveness. A detailed evaluation demonstrates superior performance over established baseline methods, such as traditional Griffin-Lim and CNN-based reconstruction, across both quantitative and perceptual metrics. By demonstrating these advancements in feature extraction and transformer-based learning, this chapter contributes to the growing field of AI-driven neuroprosthetics, paving the way for assistive technologies that restore communication for individuals with speech impairments. Finally, we discuss promising future research directions, including the integration of diffusion models and real-time inference systems.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.05751v1",
+    "categories": [
+      "eess.SP",
+      "cs.LG",
+      "cs.SD"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2604.05848v1",
+    "title": "Evaluating Learner Representations for Differentiation Prior to Instructional Outcomes",
+    "authors": [
+      "Junsoo Park",
+      "Youssef Medhat",
+      "Htet Phyo Wai",
+      "Ploy Thajchayapong",
+      "Ashok K. Goel"
+    ],
+    "summary": "Learner representations play a central role in educational AI systems, yet it is often unclear whether they preserve meaningful differences between students when instructional outcomes are unavailable or highly context-dependent. This work examines how to evaluate learner representations based on whether they retain separation between learners under a shared comparison rule. We introduce distinctiveness, a representation-level measure that evaluates how each learner differs from others in the cohort using pairwise distances, without requiring clustering, labels, or task-specific evaluation. Using student-authored questions collected through a conversational AI agent in an online learning environment, we compare representations based on individual questions with representations that aggregate patterns across a student's interactions over time. Results show that learner-level representations yield higher separation, stronger clustering structure, and more reliable pairwise discrimination than interaction-level representations. These findings demonstrate that learner representations can be evaluated independently of instructional outcomes and provide a practical pre-deployment criterion using distinctiveness as a diagnostic metric for assessing whether a representation supports differentiated modeling or personalization.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.05848v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  }
+]
