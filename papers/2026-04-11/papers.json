@@ -1,0 +1,204 @@
+[
+  {
+    "id": "2604.07963v1",
+    "title": "Rethinking Data Mixing from the Perspective of Large Language Models",
+    "authors": [
+      "Yuanjian Xu",
+      "Tianze Sun",
+      "Changwei Xu",
+      "XinLong Zhao",
+      "Jianing Hao",
+      "Ran Chen",
+      "Yang Liu",
+      "Ruijie Xu",
+      "Stephen Chen",
+      "Guang Zhang"
+    ],
+    "summary": "Data mixing strategy is essential for large language model (LLM) training. Empirical evidence shows that inappropriate strategies can significantly reduce generalization. Although recent methods have improved empirical performance, several fundamental questions remain open: what constitutes a domain, whether human and model perceptions of domains are aligned, and how domain weighting influences generalization. We address these questions by establishing formal connections between gradient dynamics and domain distributions, offering a theoretical framework that clarifies the role of domains in training dynamics. Building on this analysis, we introduce DoGraph, a reweighting framework that formulates data scheduling as a graph-constrained optimization problem. Extensive experiments on GPT-2 models of varying scales demonstrate that DoGraph consistently achieves competitive performance.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.07963v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.07985v1",
+    "title": "Rag Performance Prediction for Question Answering",
+    "authors": [
+      "Or Dado",
+      "David Carmel. Oren Kurland"
+    ],
+    "summary": "We address the task of predicting the gain of using RAG (retrieval augmented generation) for question answering with respect to not using it. We study the performance of a few pre-retrieval and post-retrieval predictors originally devised for ad hoc retrieval. We also study a few post-generation predictors, one of which is novel to this study and posts the best prediction quality. Our results show that the most effective prediction approach is a novel supervised predictor that explicitly models the semantic relationships among the question, retrieved passages, and the generated answer.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.07985v1",
+    "categories": [
+      "cs.CL",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.07823v1",
+    "title": "LPM 1.0: Video-based Character Performance Model",
+    "authors": [
+      "Ailing Zeng",
+      "Casper Yang",
+      "Chauncey Ge",
+      "Eddie Zhang",
+      "Garvey Xu",
+      "Gavin Lin",
+      "Gilbert Gu",
+      "Jeremy Pi",
+      "Leo Li",
+      "Mingyi Shi",
+      "Sheng Bi",
+      "Steven Tang",
+      "Thorn Hang",
+      "Tobey Guo",
+      "Vincent Li",
+      "Xin Tong",
+      "Yikang Li",
+      "Yuchen Sun",
+      "Yue",
+      "Zhao",
+      "Yuhan Lu",
+      "Yuwei Li",
+      "Zane Zhang",
+      "Zeshi Yang",
+      "Zi Ye"
+    ],
+    "summary": "Performance, the externalization of intent, emotion, and personality through visual, vocal, and temporal behavior, is what makes a character alive. Learning such performance from video is a promising alternative to traditional 3D pipelines. However, existing video models struggle to jointly achieve high expressiveness, real-time inference, and long-horizon identity stability, a tension we call the performance trilemma. Conversation is the most comprehensive performance scenario, as characters simultaneously speak, listen, react, and emote while maintaining identity over time. To address this, we present LPM 1.0 (Large Performance Model), focusing on single-person full-duplex audio-visual conversational performance. Concretely, we build a multimodal human-centric dataset through strict filtering, speaking-listening audio-video pairing, performance understanding, and identity-aware multi-reference extraction; train a 17B-parameter Diffusion Transformer (Base LPM) for highly controllable, identity-consistent performance through multimodal conditioning; and distill it into a causal streaming generator (Online LPM) for low-latency, infinite-length interaction. At inference, given a character image with identity-aware references, LPM 1.0 generates listening videos from user audio and speaking videos from synthesized audio, with text prompts for motion control, all at real-time speed with identity-stable, infinite-length generation. LPM 1.0 thus serves as a visual engine for conversational agents, live streaming characters, and game NPCs. To systematically evaluate this setting, we propose LPM-Bench, the first benchmark for interactive character performance. LPM 1.0 achieves state-of-the-art results across all evaluated dimensions while maintaining real-time inference.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.07823v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.08404v1",
+    "title": "Adversarial Label Invariant Graph Data Augmentations for Out-of-Distribution Generalization",
+    "authors": [
+      "Simon Zhang",
+      "Ryan P. DeMilt",
+      "Kun Jin",
+      "Cathy H. Xia"
+    ],
+    "summary": "Out-of-distribution (OoD) generalization occurs when representation learning encounters a distribution shift. This occurs frequently in practice when training and testing data come from different environments. Covariate shift is a type of distribution shift that occurs only in the input data, while the concept distribution stays invariant. We propose RIA - Regularization for Invariance with Adversarial training, a new method for OoD generalization under convariate shift. Motivated by an analogy to $Q$-learning, it performs an adversarial exploration for training data environments. These new environments are induced by adversarial label invariant data augmentations that prevent a collapse to an in-distribution trained learner. It works with many existing OoD generalization methods for covariate shift that can be formulated as constrained optimization problems. We develop an alternating gradient descent-ascent algorithm to solve the problem, and perform extensive experiments on OoD graph classification for various kinds of synthetic and natural distribution shifts. We demonstrate that our method can achieve high accuracy compared with OoD baselines.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08404v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.06836v2",
+    "title": "STQuant: Spatio-Temporal Adaptive Framework for Optimizer Quantization in Large Multimodal Model Training",
+    "authors": [
+      "Minglu Liu",
+      "Cunchen Hu",
+      "Liangliang Xu",
+      "Fengming Tang",
+      "Ruijia Wang",
+      "Fu Yu"
+    ],
+    "summary": "Quantization is an effective way to reduce the memory cost of large-scale model training. However, most existing methods adopt fixed-precision policies, which ignore the fact that optimizer-state distributions vary significantly across layers and training steps. Such uniform designs often introduce noticeable accuracy degradation. To move beyond fixed quantization, we propose STQuant, a distributed training framework that reduces the memory footprint of optimizer states via dynamic precision allocation across layers, state variables, and training steps, while maintaining model quality. Naively applying dynamic quantization during training is challenging for two reasons. First, optimizer states are numerically sensitive, and quantization noise can destabilize quality. Second, jointly considering multiple states and layers induces a large combinatorial search space. STQuant addresses these challenges with two key techniques: 1) a provably near-optimal factor selection strategy that accurately identifies the most influential factors for precision adaptation. 2) a dynamic transition decision algorithm that reduces the search cost from exponential to linear complexity. Experiments on GPT-2 and ViT show that STQuant reduces optimizer-state memory by 84.4%, achieving an average bit-width of as low as 5.1 bits, compared with existing solutions. Moreover, STQuant incurs only O(N/K) computational overhead and requires O(1) extra space.",
+    "published": "2026-04-08",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.06836v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.08123v1",
+    "title": "LegoDiffusion: Micro-Serving Text-to-Image Diffusion Workflows",
+    "authors": [
+      "Lingyun Yang",
+      "Suyi Li",
+      "Tianyu Feng",
+      "Xiaoxiao Jiang",
+      "Zhipeng Di",
+      "Weiyi Lu",
+      "Kan Liu",
+      "Yinghao Yu",
+      "Tao Lan",
+      "Guodong Yang",
+      "Lin Qu",
+      "Liping Zhang",
+      "Wei Wang"
+    ],
+    "summary": "Text-to-image generation executes a diffusion workflow comprising multiple models centered on a base diffusion model. Existing serving systems treat each workflow as an opaque monolith, provisioning, placing, and scaling all constituent models together, which obscures internal dataflow, prevents model sharing, and enforces coarse-grained resource management. In this paper, we make a case for micro-serving diffusion workflows with LegoDiffusion, a system that decomposes a workflow into loosely coupled model-execution nodes that can be independently managed and scheduled. By explicitly managing individual model inference, LegoDiffusion unlocks cluster-scale optimizations, including per-model scaling, model sharing, and adaptive model parallelism. Collectively, LegoDiffusion outperforms existing diffusion workflow serving systems, sustaining up to 3x higher request rates and tolerating up to 8x higher burst traffic.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08123v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.07569v1",
+    "title": "Learning is Forgetting: LLM Training As Lossy Compression",
+    "authors": [
+      "Henry C. Conklin",
+      "Tom Hosking",
+      "Tan Yi-Chern",
+      "Julian Gold",
+      "Jonathan D. Cohen",
+      "Thomas L. Griffiths",
+      "Max Bartolo",
+      "Seraphina Goldfarb-Tarrant"
+    ],
+    "summary": "Despite the increasing prevalence of large language models (LLMs), we still have a limited understanding of how their representational spaces are structured. This limits our ability to interpret how and what they learn or relate them to learning in humans. We argue LLMs are best seen as an instance of lossy compression, where over training they learn by retaining only information in their training data relevant to their objective(s). We show pre-training results in models that are optimally compressed for next-sequence prediction, approaching the Information Bottleneck bound on compression. Across an array of open weights models, each compresses differently, likely due to differences in the data and training recipes used. However even across different families of LLMs the optimality of a model's compression, and the information present in it, can predict downstream performance on across a wide array of benchmarks, letting us directly link representational structure to actionable insights about model performance. In the general case the work presented here offers a unified Information-Theoretic framing for how these models learn that is deployable at scale.",
+    "published": "2026-04-08",
+    "updated": "2026-04-08",
+    "pdf_url": "https://arxiv.org/pdf/2604.07569v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL",
+      "cs.IT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.03858v2",
+    "title": "A Bayesian Information-Theoretic Approach to Data Attribution",
+    "authors": [
+      "Dharmesh Tailor",
+      "Nicolò Felicioni",
+      "Kamil Ciosek"
+    ],
+    "summary": "Training Data Attribution (TDA) seeks to trace model predictions back to influential training examples, enhancing interpretability and safety. We formulate TDA as a Bayesian information-theoretic problem: subsets are scored by the information loss they induce - the entropy increase at a query when removed. This criterion credits examples for resolving predictive uncertainty rather than label noise. To scale to modern networks, we approximate information loss using a Gaussian Process surrogate built from tangent features. We show this aligns with classical influence scores for single-example attribution while promoting diversity for subsets. For even larger-scale retrieval, we relax to an information-gain objective and add a variance correction for scalable attribution in vector databases. Experiments show competitive performance on counterfactual sensitivity, ground-truth retrieval and coreset selection, showing that our method scales to modern architectures while bridging principled measures with practice.",
+    "published": "2026-04-04",
+    "updated": "2026-04-08",
+    "pdf_url": "https://arxiv.org/pdf/2604.03858v2",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
