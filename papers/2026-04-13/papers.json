@@ -1,0 +1,164 @@
+[
+  {
+    "id": "2604.03058v2",
+    "title": "Verbalizing LLMs' assumptions to explain and control sycophancy",
+    "authors": [
+      "Myra Cheng",
+      "Isabel Sieh",
+      "Humishka Zope",
+      "Sunny Yu",
+      "Lujain Ibrahim",
+      "Aryaman Arora",
+      "Jared Moore",
+      "Desmond Ong",
+      "Dan Jurafsky",
+      "Diyi Yang"
+    ],
+    "summary": "LLMs can be socially sycophantic, affirming users when they ask questions like \"am I in the wrong?\" rather than providing genuine assessment. We hypothesize that this behavior arises from incorrect assumptions about the user, like underestimating how often users are seeking information over reassurance. We present Verbalized Assumptions, a framework for eliciting these assumptions from LLMs. Verbalized Assumptions provide insight into LLM sycophancy, delusion, and other safety issues, e.g., the top bigram in LLMs' assumptions on social sycophancy datasets is ``seeking validation.'' We provide evidence for a causal link between Verbalized Assumptions and sycophantic model behavior: our assumption probes (linear probes trained on internal representations of these assumptions) enable interpretable fine-grained steering of social sycophancy. We explore why LLMs default to sycophantic assumptions: on identical queries, people expect more objective and informative responses from AI than from other humans, but LLMs trained on human-human conversation do not account for this difference in expectations. Our work contributes a new understanding of assumptions as a mechanism for sycophancy.",
+    "published": "2026-04-03",
+    "updated": "2026-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2604.03058v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.CY"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2511.03913v2",
+    "title": "Evolutionary Optimization Trumps Adam Optimization on Embedding Space Exploration",
+    "authors": [
+      "Domício Pereira Neto",
+      "João Correia",
+      "Penousal Machado"
+    ],
+    "summary": "Deep diffusion models have revolutionized image generation by producing high-quality outputs. However, achieving specific objectives with these models often requires costly adaptations such as fine-tuning, which can be resource-intensive and time-consuming. An alternative approach is inference-time control, which involves optimizing the prompt embeddings to guide the generation process without altering the model weights. We explore prompt-embedding search optimization for the Stable Diffusion XL Turbo model, comparing a gradient-free evolutionary approach, the Separable Covariance Matrix Adaptation Evolution Strategy (sep-CMA-ES), against the widely used gradient-based optimizer Adaptive Moment Estimation (Adam). Candidate images are evaluated by a weighted objective that combines LAION Aesthetic Predictor V2 and CLIPScore, enabling explicit trade-offs between aesthetic quality and prompt-image alignment. On 36 prompts sampled from Parti Prompts (P2) under three weight settings (aesthetics-only, balanced, alignment-only), sep-CMA-ES consistently achieves higher objective values than Adam. We additionally analyze divergence from the unoptimized baseline using cosine similarity and SSIM and report the compute and memory footprints. These results suggest that sep-CMA-ES is an effective inference-time optimizer for prompt-embedding search, improving aesthetics-alignment trade-offs and resource usage without model fine-tuning.",
+    "published": "2025-11-05",
+    "updated": "2026-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2511.03913v2",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.NE",
+    "github": null
+  },
+  {
+    "id": "2604.08995v1",
+    "title": "Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory",
+    "authors": [
+      "Zile Wang",
+      "Zexiang Liu",
+      "Jaixing Li",
+      "Kaichen Huang",
+      "Baixin Xu",
+      "Fei Kang",
+      "Mengyin An",
+      "Peiyu Wang",
+      "Biao Jiang",
+      "Yichen Wei",
+      "Yidan Xietian",
+      "Jiangbo Pei",
+      "Liang Hu",
+      "Boyi Jiang",
+      "Hua Xue",
+      "Zidong Wang",
+      "Haofeng Sun",
+      "Wei Li",
+      "Wanli Ouyang",
+      "Xianglong He",
+      "Yang Liu",
+      "Yangguang Li",
+      "Yahui Zhou"
+    ],
+    "summary": "With the advancement of interactive video generation, diffusion models have increasingly demonstrated their potential as world models. However, existing approaches still struggle to simultaneously achieve memory-enabled long-term temporal consistency and high-resolution real-time generation, limiting their applicability in real-world scenarios. To address this, we present Matrix-Game 3.0, a memory-augmented interactive world model designed for 720p real-time longform video generation. Building upon Matrix-Game 2.0, we introduce systematic improvements across data, model, and inference. First, we develop an upgraded industrial-scale infinite data engine that integrates Unreal Engine-based synthetic data, large-scale automated collection from AAA games, and real-world video augmentation to produce high-quality Video-Pose-Action-Prompt quadruplet data at scale. Second, we propose a training framework for long-horizon consistency: by modeling prediction residuals and re-injecting imperfect generated frames during training, the base model learns self-correction; meanwhile, camera-aware memory retrieval and injection enable the base model to achieve long horizon spatiotemporal consistency. Third, we design a multi-segment autoregressive distillation strategy based on Distribution Matching Distillation (DMD), combined with model quantization and VAE decoder pruning, to achieve efficient real-time inference. Experimental results show that Matrix-Game 3.0 achieves up to 40 FPS real-time generation at 720p resolution with a 5B model, while maintaining stable memory consistency over minute-long sequences. Scaling up to a 2x14B model further improves generation quality, dynamics, and generalization. Our approach provides a practical pathway toward industrial-scale deployable world models.",
+    "published": "2026-04-10",
+    "updated": "2026-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2604.08995v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.09480v1",
+    "title": "Online3R: Online Learning for Consistent Sequential Reconstruction Based on Geometry Foundation Model",
+    "authors": [
+      "Shunkai Zhou",
+      "Zike Yan",
+      "Fei Xue",
+      "Dong Wu",
+      "Yuchen Deng",
+      "Hongbin Zha"
+    ],
+    "summary": "We present Online3R, a new sequential reconstruction framework that is capable of adapting to new scenes through online learning, effectively resolving inconsistency issues. Specifically, we introduce a set of learnable lightweight visual prompts into a pretrained, frozen geometry foundation model to capture the knowledge of new environments while preserving the fundamental capability of the foundation model for geometry prediction. To solve the problems of missing groundtruth and the requirement of high efficiency when updating these visual prompts at test time, we introduce a local-global self-supervised learning strategy by enforcing the local and global consistency constraints on predictions. The local consistency constraints are conducted on intermediate and previously local fused results, enabling the model to be trained with high-quality pseudo groundtruth signals; the global consistency constraints are operated on sparse keyframes spanning long distances rather than per frame, allowing the model to learn from a consistent prediction over a long trajectory in an efficient way. Our experiments demonstrate that Online3R outperforms previous state-of-the-art methods on various benchmarks. Project page: https://shunkaizhou.github.io/online3r-1.0/",
+    "published": "2026-04-10",
+    "updated": "2026-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2604.09480v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.08969v1",
+    "title": "Online Quantile Regression for Nonparametric Additive Models",
+    "authors": [
+      "Haoran Zhan"
+    ],
+    "summary": "This paper introduces a projected functional gradient descent algorithm (P-FGD) for training nonparametric additive quantile regression models in online settings. This algorithm extends the functional stochastic gradient descent framework to the pinball loss. An advantage of P-FGD is that it does not need to store historical data while maintaining $O(J_t\\ln J_t)$ computational complexity per step where $J_t$ denotes the number of basis functions. Besides, we only need $O(J_t)$ computational time for quantile function prediction at time $t$. These properties show that P-FGD is much better than the commonly used RKHS in online learning. By leveraging a novel Hilbert space projection identity, we also prove that the proposed online quantile function estimator (P-FGD) achieves the minimax optimal consistency rate $O(t^{-\\frac{2s}{2s+1}})$ where $t$ is the current time and $s$ denotes the smoothness degree of the quantile function. Extensions to mini-batch learning are also established.",
+    "published": "2026-04-10",
+    "updated": "2026-04-10",
+    "pdf_url": "https://arxiv.org/pdf/2604.08969v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "math.ST"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2604.08720v1",
+    "title": "Demystifying the Silence of Correctness Bugs in PyTorch Compiler",
+    "authors": [
+      "Meiziniu Li",
+      "Dongze Li",
+      "Jianmeng Liu",
+      "Shing-Chi Cheung"
+    ],
+    "summary": "Performance optimization of AI infrastructure is key to the fast adoption of large language models (LLMs). The PyTorch compiler (torch.compile), a core optimization tool for deep learning (DL) models (including LLMs), has received due attention. However, torch.compile is prone to correctness bugs, which cause incorrect outputs of compiled DL models without triggering exceptions, crashes, or warnings. These bugs pose a serious threat to the reliability of downstream LLM applications. Data from the PyTorch community shows that 19.2% of high-priority issues are incorrect outputs of compiled DL models induced by torch.compile bugs, the second-most-common bug category (only behind program crashes at 19.57%). However, no systematic study has been conducted to specifically characterize and thereby detect these bugs. In this paper, we present the first empirical study of the correctness bugs in torch.compile, examine their characteristics, and assess the effectiveness of existing fuzzers in detecting them. Based on our findings, we propose a proof-of-concept testing technique named AlignGuard, tailored specifically for detecting correctness bugs in torch.compile. AlignGuard incorporates bug characteristics distilled from our empirical study, applying LLM-based test mutation to existing test cases for correctness bug detection. At the time of writing, AlignGuard has successfully detected 23 new correctness bugs in recent torch.compile. All these bugs have been confirmed or fixed by the PyTorch development team, and over half (14/23) of them are even marked as high-priority bugs, underscoring the usefulness of our technique.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08720v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2604.08685v1",
+    "title": "RAMP: Hybrid DRL for Online Learning of Numeric Action Models",
+    "authors": [
+      "Yarin Benyamin",
+      "Argaman Mordoch",
+      "Shahaf S. Shperberg",
+      "Roni Stern"
+    ],
+    "summary": "Automated planning algorithms require an action model specifying the preconditions and effects of each action, but obtaining such a model is often hard. Learning action models from observations is feasible, but existing algorithms for numeric domains are offline, requiring expert traces as input. We propose the Reinforcement learning, Action Model learning, and Planning (RAMP) strategy for learning numeric planning action models online via interactions with the environment. RAMP simultaneously trains a Deep Reinforcement Learning (DRL) policy, learns a numeric action model from past interactions, and uses that model to plan future actions when possible. These components form a positive feedback loop: the RL policy gathers data to refine the action model, while the planner generates plans to continue training the RL policy. To facilitate this integration of RL and numeric planning, we developed Numeric PDDLGym, an automated framework for converting numeric planning problems to Gym environments. Experimental results on standard IPC numeric domains show that RAMP significantly outperforms PPO, a well-known DRL algorithm, in terms of solvability and plan quality.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.08685v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  }
+]
