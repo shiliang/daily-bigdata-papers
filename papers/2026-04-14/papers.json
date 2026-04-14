@@ -1,0 +1,273 @@
+[
+  {
+    "id": "2604.10982v1",
+    "title": "Ψ-Map: Panoptic Surface Integrated Mapping Enables Real2Sim Transfer",
+    "authors": [
+      "Xuan Yu",
+      "Yuxuan Xie",
+      "Changjian Jiang",
+      "Shichao Zhai",
+      "Rong Xiong",
+      "Yu Zhang",
+      "Yue Wang"
+    ],
+    "summary": "Open-vocabulary panoptic reconstruction is essential for advanced robotics perception and simulation. However, existing methods based on 3D Gaussian Splatting (3DGS) often struggle to simultaneously achieve geometric accuracy, coherent panoptic understanding, and real-time inference frequency in large-scale scenes. In this paper, we propose a comprehensive framework that integrates geometric reinforcement, end-to-end panoptic learning, and efficient rendering. First, to ensure physical realism in large-scale environments, we leverage LiDAR data to construct plane-constrained multimodal Gaussian Mixture Models (GMMs) and employ 2D Gaussian surfels as the map representation, enabling high-precision surface alignment and continuous geometric supervision. Building upon this, to overcome the error accumulation and cumbersome cross-frame association inherent in traditional multi-stage panoptic segmentation pipelines, we design a query-guided end-to-end learning architecture. By utilizing a local cross-attention mechanism within the view frustum, the system lifts 2D mask features directly into 3D space, achieving globally consistent panoptic understanding. Finally, addressing the computational bottlenecks caused by high-dimensional semantic features, we introduce Precise Tile Intersection and a Top-K Hard Selection strategy to optimize the rendering pipeline. Experimental results demonstrate that our system achieves superior geometric and panoptic reconstruction quality in large-scale scenes while maintaining an inference rate exceeding 40 FPS, meeting the real-time requirements of robotic control loops.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.10982v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2604.10951v1",
+    "title": "Fast-SegSim: Real-Time Open-Vocabulary Segmentation for Robotics in Simulation",
+    "authors": [
+      "Xuan Yu",
+      "Yuxuan Xie",
+      "Shichao Zhai",
+      "Shuhao Ye",
+      "Rong Xiong",
+      "Yue Wang"
+    ],
+    "summary": "Open-vocabulary panoptic reconstruction is crucial for advanced robotics and simulation. However, existing 3D reconstruction methods, such as NeRF or Gaussian Splatting variants, often struggle to achieve the real-time inference frequency required by robotic control loops. Existing methods incur prohibitive latency when processing the high-dimensional features required for robust open-vocabulary segmentation. We propose Fast-SegSim, a novel, simple, and end-to-end framework built upon 2D Gaussian Splatting, designed to realize real-time, high-fidelity, and 3D-consistent open-vocabulary segmentation reconstruction. Our core contribution is a highly optimized rendering pipeline that specifically addresses the computational bottleneck of high-channel segmentation feature accumulation. We introduce two key optimizations: Precise Tile Intersection to reduce rasterization redundancy, and a novel Top-K Hard Selection strategy. This strategy leverages the geometric sparsity inherent in the 2D Gaussian representation to greatly simplify feature accumulation and alleviate bandwidth limitations, achieving render rates exceeding 40 FPS. Fast-SegSim provides critical value in robotic applications: it serves both as a high-frequency sensor input for simulation platforms like Gazebo, and its 3D-consistent outputs provide essential multi-view 'ground truth' labels for fine-tuning downstream perception tasks. We demonstrate this utility by using the generated labels to fine-tune the perception module in object goal navigation, successfully doubling the navigation success rate. Our superior rendering speed and practical utility underscore Fast-SegSim's potential to bridge the sim-to-real gap.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.10951v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2604.08995v2",
+    "title": "Matrix-Game 3.0: Real-Time and Streaming Interactive World Model with Long-Horizon Memory",
+    "authors": [
+      "Zile Wang",
+      "Zexiang Liu",
+      "Jiaxing Li",
+      "Kaichen Huang",
+      "Baixin Xu",
+      "Fei Kang",
+      "Mengyin An",
+      "Peiyu Wang",
+      "Biao Jiang",
+      "Yichen Wei",
+      "Yidan Xietian",
+      "Jiangbo Pei",
+      "Liang Hu",
+      "Boyi Jiang",
+      "Hua Xue",
+      "Zidong Wang",
+      "Haofeng Sun",
+      "Wei Li",
+      "Wanli Ouyang",
+      "Xianglong He",
+      "Yang Liu",
+      "Yangguang Li",
+      "Yahui Zhou"
+    ],
+    "summary": "With the advancement of interactive video generation, diffusion models have increasingly demonstrated their potential as world models. However, existing approaches still struggle to simultaneously achieve memory-enabled long-term temporal consistency and high-resolution real-time generation, limiting their applicability in real-world scenarios. To address this, we present Matrix-Game 3.0, a memory-augmented interactive world model designed for 720p real-time longform video generation. Building upon Matrix-Game 2.0, we introduce systematic improvements across data, model, and inference. First, we develop an upgraded industrial-scale infinite data engine that integrates Unreal Engine-based synthetic data, large-scale automated collection from AAA games, and real-world video augmentation to produce high-quality Video-Pose-Action-Prompt quadruplet data at scale. Second, we propose a training framework for long-horizon consistency: by modeling prediction residuals and re-injecting imperfect generated frames during training, the base model learns self-correction; meanwhile, camera-aware memory retrieval and injection enable the base model to achieve long horizon spatiotemporal consistency. Third, we design a multi-segment autoregressive distillation strategy based on Distribution Matching Distillation (DMD), combined with model quantization and VAE decoder pruning, to achieve efficient real-time inference. Experimental results show that Matrix-Game 3.0 achieves up to 40 FPS real-time generation at 720p resolution with a 5B model, while maintaining stable memory consistency over minute-long sequences. Scaling up to a 2x14B model further improves generation quality, dynamics, and generalization. Our approach provides a practical pathway toward industrial-scale deployable world models.",
+    "published": "2026-04-10",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.08995v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.11151v1",
+    "title": "Gradient-Variation Regret Bounds for Unconstrained Online Learning",
+    "authors": [
+      "Yuheng Zhao",
+      "Andrew Jacobsen",
+      "Nicolò Cesa-Bianchi",
+      "Peng Zhao"
+    ],
+    "summary": "We develop parameter-free algorithms for unconstrained online learning with regret guarantees that scale with the gradient variation $V_T(u) = \\sum_{t=2}^T \\|\\nabla f_t(u)-\\nabla f_{t-1}(u)\\|^2$. For $L$-smooth convex loss, we provide fully-adaptive algorithms achieving regret of order $\\widetilde{O}(\\|u\\|\\sqrt{V_T(u)} + L\\|u\\|^2+G^4)$ without requiring prior knowledge of comparator norm $\\|u\\|$, Lipschitz constant $G$, or smoothness $L$. The update in each round can be computed efficiently via a closed-form expression. Our results extend to dynamic regret and find immediate implications to the stochastically-extended adversarial (SEA) model, which significantly improves upon the previous best-known result [Wang et al., 2025].",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.11151v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.10958v1",
+    "title": "Continuous-time Online Learning via Mean-Field Neural Networks: Regret Analysis in Diffusion Environments",
+    "authors": [
+      "Erhan Bayraktar",
+      "Bingyan Han",
+      "Ziqing Zhang"
+    ],
+    "summary": "We study continuous-time online learning where data are generated by a diffusion process with unknown coefficients. The learner employs a two-layer neural network, continuously updating its parameters in a non-anticipative manner. The mean-field limit of the learning dynamics corresponds to a stochastic Wasserstein gradient flow adapted to the data filtration. We establish regret bounds for both the mean-field limit and finite-particle system. Our analysis leverages the logarithmic Sobolev inequality, Polyak-Lojasiewicz condition, Malliavin calculus, and uniform-in-time propagation of chaos. Under displacement convexity, we obtain a constant static regret bound. In the general non-convex setting, we derive explicit linear regret bounds characterizing the effects of data variation, entropic exploration, and quadratic regularization. Finally, our simulations demonstrate the outperformance of the online approach and the impact of network width and regularization parameters.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.10958v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.10967v1",
+    "title": "Learning to Test: Physics-Informed Representation for Dynamical Instability Detection",
+    "authors": [
+      "Minxing Zheng",
+      "Zewei Deng",
+      "Liyan Xie",
+      "Shixiang Zhu"
+    ],
+    "summary": "Many safety-critical scientific and engineering systems evolve according to differential-algebraic equations (DAEs), where dynamical behavior is constrained by physical laws and admissibility conditions. In practice, these systems operate under stochastically varying environmental inputs, so stability is not a static property but must be reassessed as the context distribution shifts. Repeated large-scale DAE simulation, however, is computationally prohibitive in high-dimensional or real-time settings. This paper proposes a test-oriented learning framework for stability assessment under distribution shift. Rather than re-estimating physical parameters or repeatedly solving the underlying DAE, we learn a physics-informed latent representation of contextual variables that captures stability-relevant structure and is regularized toward a tractable reference distribution. Trained on baseline data from a certified safe regime, the learned representation enables deployment-time safety monitoring to be formulated as a distributional hypothesis test in latent space, with controlled Type I error. By integrating neural dynamical surrogates, uncertainty-aware calibration, and uniformity-based testing, our approach provides a scalable and statistically grounded method for detecting instability risk in stochastic constrained dynamical systems without repeated simulation.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.10967v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.10438v1",
+    "title": "Whisper-AuT: Domain-Adapted Audio Encoder for Efficient Audio-LLM Training",
+    "authors": [
+      "Jielin Qiu",
+      "Ming Zhu",
+      "Wenting Zhao",
+      "Zhiwei Liu",
+      "Liangwei Yang",
+      "Zixiang Chen",
+      "Roshan Ram",
+      "Akshara Prabhakar",
+      "Juntao Tan",
+      "Rithesh Murthy",
+      "Shelby Heinecke",
+      "Caiming Xiong",
+      "Silvio Savarese",
+      "Huan Wang"
+    ],
+    "summary": "Audio-native large language models (audio-LLMs) commonly use Whisper as their audio encoder. However, Whisper was trained exclusively on speech data, producing weak representations for music and environmental sound. This forces downstream audio-LLMs to compensate through extensive training on large-scale non-speech data. We present Whisper-AuT, a domain-adapted audio encoder obtained by fine-tuning Whisper-large-v3 on a curated mixture of speech (80%), environmental sound (10%), and music (10%) totaling approximately 20M samples. The full encoder-decoder is trained end-to-end with a seq2seq captioning objective; the decoder is then discarded and only the encoder is retained. Linear probe evaluations show that Whisper-AuT achieves +23.0% on ESC-50 (environmental sound), +5.0% on GTZAN (music genre), and +0.7% on Speech Commands (keyword spotting) compared to the original Whisperlarge-v3 encoder. Whisper-AuT is designed as a drop-in replacement for Whisper in audio-LLM architectures, with the goal of reducing downstream training cost by providing stronger initial audio representations for non-speech domains.",
+    "published": "2026-04-12",
+    "updated": "2026-04-12",
+    "pdf_url": "https://arxiv.org/pdf/2604.10438v1",
+    "categories": [
+      "cs.SD"
+    ],
+    "primary_category": "cs.SD",
+    "github": null
+  },
+  {
+    "id": "2604.10390v1",
+    "title": "LLM-PRISM: Characterizing Silent Data Corruption from Permanent GPU Faults in LLM Training",
+    "authors": [
+      "Abhishek Tyagi",
+      "Saurabh Hukerikar",
+      "Nirmal Saxena",
+      "Yanxiang Huang",
+      "Philip Shirvani",
+      "Chung-Hsuan Tung",
+      "Yuhao Zhu"
+    ],
+    "summary": "Large-scale LLM training is increasingly susceptible to hardware defects stemming from manufacturing escapes and silicon aging. These defects manifest as Silent Data Corruption (SDC) that perturb gradients and parameters throughout the training process. We present LLM-PRISM, a methodology to characterize LLM pre-training resilience to hardware faults. LLM-PRISM couples RTL-level GPU fault simulation with a stochastic injection engine embedded in Megatron-LM. Through 7,664 training runs across FP16, BF16, and FP8 regimes, we analyze how fault type, rate, and numeric format govern resilience. We find that while LLMs resist low-frequency faults, impact is highly non-uniform; critical datapaths and specific precision formats can induce catastrophic divergence even at moderate fault rates. This study provides the first hardware-grounded, pre-training characterization of SDC resilience.",
+    "published": "2026-04-12",
+    "updated": "2026-04-12",
+    "pdf_url": "https://arxiv.org/pdf/2604.10390v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2604.10662v1",
+    "title": "Energy-Efficient Federated Edge Learning For Small-Scale Datasets in Large IoT Networks",
+    "authors": [
+      "Haihui Xie",
+      "Wenkun Wen",
+      "Shuwu Chen",
+      "Zhaogang Shu",
+      "Minghua Xia"
+    ],
+    "summary": "Large-scale Internet of Things (IoT) networks enable intelligent services such as smart cities and autonomous driving, but often face resource constraints. Collecting heterogeneous sensory data, especially in small-scale datasets, is challenging, and independent edge nodes can lead to inefficient resource utilization and reduced learning performance. To address these issues, this paper proposes a collaborative optimization framework for energy-efficient federated edge learning with small-scale datasets. We first derive an expected learning loss to quantify the relationship between the number of training samples and learning objectives. A stochastic online learning algorithm is then designed to adapt to data variations, and a resource optimization problem with a convergence bound is formulated. Finally, an online distributed algorithm efficiently solves large-scale optimization problems with high scalability. Extensive simulations and autonomous navigation case studies with collision avoidance demonstrate that the proposed approach significantly improves learning performance and resource efficiency compared to state-of-the-art benchmarks.",
+    "published": "2026-04-12",
+    "updated": "2026-04-12",
+    "pdf_url": "https://arxiv.org/pdf/2604.10662v1",
+    "categories": [
+      "cs.LG",
+      "cs.IT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.09995v1",
+    "title": "Agentic Application in Power Grid Static Analysis: Automatic Code Generation and Error Correction",
+    "authors": [
+      "Qinjuan Wang",
+      "Shan Yang",
+      "Yongli Zhu"
+    ],
+    "summary": "This paper introduces an LLM agent that automates power grid static analysis by converting natural language into MATPOWER scripts. The framework utilizes DeepSeek-OCR to build an enhanced vector database from MATPOWER manuals. To ensure reliability, it devises a three-tier error-correction system: a static pre-check, a dynamic feedback loop, and a semantic validator. Operating via the Model Context Protocol, the tool enables asynchronous execution and automatically debugging in MATLAB. Experimental results demonstrate that the system achieves a 82.38% accuracy regarding the code fidelity, effectively eliminating hallucinations even in complex analysis tasks.",
+    "published": "2026-04-11",
+    "updated": "2026-04-11",
+    "pdf_url": "https://arxiv.org/pdf/2604.09995v1",
+    "categories": [
+      "eess.SY",
+      "cs.AI"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2604.09705v1",
+    "title": "Sustainability-Constrained Workload Orchestration for Sovereign AI Infrastructure: A Joint Compute-Network Optimization Framework",
+    "authors": [
+      "Sergio Cruzes"
+    ],
+    "summary": "AI infrastructure has transitioned from a software-centric paradigm to a system tightly bound by physical and environmental limits. Energy availability, cooling capacity, and network connectivity now impose hard operational boundaries that cannot be relaxed through software optimization alone. This paper proposes a sustainability-constrained orchestration framework that treats carbon intensity, water usage, and power capacity as strict feasibility constraints rather than tunable penalties, and that jointly optimizes compute placement and optical network routing in a single closed-loop system. We introduce the Feasible Sovereign Operating Region (FSOR) - a conceptual and operational construct that characterizes the set of workloads a given infrastructure can actually sustain under its physical and regulatory endowment. Scenario-based analysis demonstrates that joint optimization yields lower environmental impact relative to baseline formulations. Infeasibility events, rather than being optimizer failures, constitute precise, telemetry-grounded signals that sovereign AI operation requires infrastructure investment or workload reduction.",
+    "published": "2026-04-07",
+    "updated": "2026-04-07",
+    "pdf_url": "https://arxiv.org/pdf/2604.09705v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2604.09681v1",
+    "title": "R2E-VID: Two-Stage Robust Routing via Temporal Gating for Elastic Edge-Cloud Video Inference",
+    "authors": [
+      "Zheming Yang",
+      "Lulu Zuo",
+      "Shun Lu",
+      "Yangyu Zhang",
+      "Zhicheng Li",
+      "Xiangyang Li",
+      "Yang You"
+    ],
+    "summary": "With the rapid growth of large-scale video analytics applications, edge-cloud collaborative systems have become the dominant paradigm for real-time inference. However, existing approaches often fail to dynamically adapt to heterogeneous video content and fluctuating resource conditions, resulting in suboptimal routing efficiency and high computational costs. In this paper, we propose R2E-VID, a two-stage robust routing framework via temporal gating for elastic edge-cloud video inference. In the first stage, R2E-VID introduces a temporal gating mechanism that models the temporal consistency and motion dynamics of incoming video streams to predict the optimal routing pattern for each segment. This enables adaptive partitioning of inference workloads between edge and cloud nodes, achieving fine-grained spatiotemporal elasticity. In the second stage, a robust routing optimization module refines the allocation through multi-model adaptation, jointly minimizing inference delay and resource consumption under dynamic network and workload variations. Extensive experiments on public datasets demonstrate that R2E-VID achieves up to 60% reduction in overall cost compared to cloud-centric baselines, and delivers 35-45% lower delay while improving inference accuracy by 2-7% over state-of-the-art edge-cloud solutions.",
+    "published": "2026-04-03",
+    "updated": "2026-04-03",
+    "pdf_url": "https://arxiv.org/pdf/2604.09681v1",
+    "categories": [
+      "cs.NI",
+      "cs.CV",
+      "cs.DC"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  }
+]
