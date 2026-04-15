@@ -1,0 +1,143 @@
+[
+  {
+    "id": "2604.12928v1",
+    "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+    "authors": [
+      "Chung-Ming Chien",
+      "Manu Orsini",
+      "Eugene Kharitonov",
+      "Neil Zeghidour",
+      "Karen Livescu",
+      "Alexandre Défossez"
+    ],
+    "summary": "Speech-to-speech language models have recently emerged to enhance the naturalness of conversational AI. In particular, full-duplex models are distinguished by their real-time interactivity, including handling of pauses, interruptions, and backchannels. However, improving their factuality remains an open challenge. While scaling the model size could address this gap, it would make real-time inference prohibitively expensive. In this work, we propose MoshiRAG, a modular approach that combines a compact full-duplex interface with selective retrieval to access more powerful knowledge sources. Our asynchronous framework enables the model to identify knowledge-demanding queries and ground its responses in external information. By leveraging the natural temporal gap between response onset and the delivery of core information, the retrieval process can be completed while maintaining a natural conversation flow. With this approach, MoshiRAG achieves factuality comparable to the best publicly released non-duplex speech language models while preserving the interactivity inherent to full-duplex systems. Moreover, our flexible design supports plug-and-play retrieval methods without retraining and demonstrates strong performance on out-of-domain mathematical reasoning tasks.",
+    "published": "2026-04-14",
+    "updated": "2026-04-14",
+    "pdf_url": "https://arxiv.org/pdf/2604.12928v1",
+    "categories": [
+      "cs.CL",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.12406v1",
+    "title": "LightTune: Lightweight Forward-Only Online Fine-Tuning with Applications to Link Adaptation",
+    "authors": [
+      "Ramy E. Ali",
+      "Federico Penna"
+    ],
+    "summary": "Deploying machine learning (ML) algorithms on mobile phones is bottlenecked by performance degradation under dynamic, real-world conditions that differ from the offline training conditions. While continual learning and adaptation are essential to mitigate this distributional shift, conventional online learning methods are often computationally prohibitive for resource-constrained devices. In this paper, we propose LightTune, a lightweight, backpropagation-free online fine-tuning framework with provable convergence guarantees. LightTune opportunistically refines ML models using live test-time data only when performance falls below a predefined threshold, ensuring minimal computational overhead and highly efficient responsiveness.\n  As a practical demonstration, we integrate LightTune into a block error rate (BLER) prediction algorithm for 6G mobile systems. This integration enables the ML BLER prediction model to dynamically adapt to previously unseen channel conditions in real-time. Our extensive results show a substantial reduction in the average BLER prediction error of up to 48.8% with online fine-tuning. Furthermore, we leverage this BLER prediction algorithm for link adaptation and demonstrate average throughput improvements of up to 15.5% compared to a conventional table-based outer loop link adaptation (OLLA) algorithm.",
+    "published": "2026-04-14",
+    "updated": "2026-04-14",
+    "pdf_url": "https://arxiv.org/pdf/2604.12406v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2604.12129v1",
+    "title": "Aethon: A Reference-Based Replication Primitive for Constant-Time Instantiation of Stateful AI Agents",
+    "authors": [
+      "Swanand Rao",
+      "Kiran Kashalkar",
+      "Parvathi Somashekar",
+      "Priya Krishnan"
+    ],
+    "summary": "The transition from stateless model inference to stateful agentic execution is reshaping the systems assumptions underlying modern AI infrastructure. While large language models have made persistent, tool-using, and collaborative agents technically viable, existing runtime architectures remain constrained by materialization-heavy instantiation models that impose significant latency and memory overhead.\n  This paper introduces Aethon, a reference-based replication primitive for near-constant-time instantiation of stateful AI agents. Rather than reconstructing agents as fully materialized objects, Aethon represents each instance as a compositional view over stable definitions, layered memory, and local contextual overlays. By shifting instantiation from duplication to reference, Aethon decouples creation cost from inherited structure.\n  We present the conceptual framework, system architecture, and memory model underlying Aethon, including layered inheritance and copy-on-write semantics. We analyze its implications for complexity, scalability, multi-agent orchestration, and enterprise governance. We argue that reference-based instantiation is not merely an optimization, but a more appropriate systems abstraction for production-scale agentic software.\n  Aethon points toward a new class of AI infrastructure in which agents become lightweight, composable execution identities that can be spawned, specialized, and governed at scale.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.12129v1",
+    "categories": [
+      "cs.AI",
+      "cs.AR",
+      "cs.DC",
+      "cs.MA"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.11994v1",
+    "title": "Offline-Online Reinforcement Learning for Linear Mixture MDPs",
+    "authors": [
+      "Zhongjun Zhang",
+      "Sean R. Sinclair"
+    ],
+    "summary": "We study offline-online reinforcement learning in linear mixture Markov decision processes (MDPs) under environment shift. In the offline phase, data are collected by an unknown behavior policy and may come from a mismatched environment, while in the online phase the learner interacts with the target environment. We propose an algorithm that adaptively leverages offline data. When the offline data are informative, either due to sufficient coverage or small environment shift, the algorithm provably improves over purely online learning. When the offline data are uninformative, it safely ignores them and matches the online-only performance. We establish regret upper bounds that explicitly characterize when offline data are beneficial, together with nearly matching lower bounds. Numerical experiments further corroborate our theoretical findings.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.11994v1",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.11989v1",
+    "title": "Predictive Bayesian Arbitration: A Scalable Noisy-OR Model with Service Criticality Awareness",
+    "authors": [
+      "Anil Jangam",
+      "Ganesh Karthick Rajendran",
+      "Roy Kantharajah"
+    ],
+    "summary": "Geographically High-Available (Geo-HA) cluster systems are essential for service continuity in distributed cloud-native environments. However, traditional arbitration mechanisms, which are often predicated on deterministic node-level heartbeats, are resource-intensive and inherently reactive. This necessitates a dedicated arbiter per deployment and leads to reactive switchovers that incur unavoidable downtime, occurring only after a failure has already compromised the system. This paper presents a novel predictive arbitration framework that utilizes a shared, microservice-based architecture to consolidate arbitration logic across multiple Geo-HA domains, significantly reducing the aggregate infrastructure footprint. Central to our approach is an adaptive online learning mechanism grounded in a Bayesian Noisy-OR model that autonomously discovers and learns temporal cascade dependencies from emergent failure patterns. To overcome the \"cold start\" challenge, the system utilizes expert-informed priors that are dynamically refined at runtime without manual configuration. Experimental results demonstrate that this framework achieves a 60\\% reduction in Mean Time to Failure Detection (MTTFD) and improves total switchover efficiency by up to 77.8\\% compared to traditional reactive standards. By enabling a significant predictive lead time, the system allows switchovers to initiate proactively before hard failures occur, while maintaining a linear $O(n)$ computational complexity. This approach provides a scalable, context-aware alternative that bridges the performance-durability gap in modern microservice architectures.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.11989v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.12090v1",
+    "title": "Evaluating Cross-Architecture Performance Modeling of Distributed ML Workloads Using StableHLO",
+    "authors": [
+      "Jonas Svedas",
+      "Nathan Laubeuf",
+      "Ryan Harvey",
+      "Arjun Singh",
+      "Changhai Man",
+      "Abubakr Nada",
+      "Tushar Krishna",
+      "James Myers",
+      "Debjyoti Bhattacharjee"
+    ],
+    "summary": "Predicting the performance of large-scale distributed machine learning (ML) workloads across multiple accelerator architectures remains a central challenge in ML system design. Existing GPU and TPU focused simulators are typically architecture-specific, while distributed training simulators rely on workload-specific analytical models or costly post-execution traces, limiting portability and cross-platform comparison. This work evaluates whether MLIR's StableHLO dialect can serve as a unified workload representation for cross-architecture and cross-fidelity performance modeling of distributed ML workloads. The study establishes a StableHLO-based simulation methodology that maps a single workload representation onto multiple performance models, spanning analytical, profiling-based, and simulator-driven predictors. Using this methodology, workloads are evaluated across GPUs and TPUs without requiring access to scaled-out physical systems, enabling systematic comparison across modeling fidelities. An empirical evaluation covering distributed GEMM kernels, ResNet, and large language model training workloads demonstrates that StableHLO preserves relative performance trends across architectures and fidelities, while exposing accuracy trade-offs and simulator limitations. Across evaluated scenarios, prediction errors remain within practical bounds for early-stage design exploration, and the methodology reveals fidelity-dependent limitations in existing GPU simulators. These results indicate that StableHLO provides a viable foundation for unified, distributed ML performance modeling across accelerator architectures and simulators, supporting reusable evaluation workflows and cross-validation throughout the ML system design process.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.12090v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.11810v1",
+    "title": "GRACE: A Dynamic Coreset Selection Framework for Large Language Model Optimization",
+    "authors": [
+      "Tianhao Tang",
+      "Haoyang Li",
+      "Lei Chen"
+    ],
+    "summary": "Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation. However, their immense number of parameters and complex transformer-based architectures result in significant resource demands and computational complexity during training, making it challenging to optimize them efficiently on large datasets. To reduce training costs while preserving performance, researchers have investigated coreset selection techniques, which aim to identify small, representative subsets of the entire training dataset to accelerate LLM training. However, existing coreset selection methods fail to adapt to the dynamic nature of LLM training and often struggle with scalability for models of this size. To address these limitations, we propose a graph-guided adaptive and dynamic coreset selection framework for LLMs, namely GRACE. GRACE dynamically constructs and updates coresets by combining representation diversity with gradient-based importance metrics, ensuring both informativeness and efficiency. To mitigate the computational cost of frequent updates, GRACE leverages a $k$-NN graph-based propagation mechanism and selectively updates scores and embeddings, adapting to evolving training dynamics. Extensive experiments on three benchmarks demonstrate that GRACE significantly improves training efficiency and downstream performance across diverse LLMs and tasks.",
+    "published": "2026-04-09",
+    "updated": "2026-04-09",
+    "pdf_url": "https://arxiv.org/pdf/2604.11810v1",
+    "categories": [
+      "cs.DB",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  }
+]
