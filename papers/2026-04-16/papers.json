@@ -1,0 +1,192 @@
+[
+  {
+    "id": "2604.14116v1",
+    "title": "TREX: Automating LLM Fine-tuning via Agent-Driven Tree-based Exploration",
+    "authors": [
+      "Zerun Ma",
+      "Guoqiang Wang",
+      "Xinchen Xie",
+      "Yicheng Chen",
+      "He Du",
+      "Bowen Li",
+      "Yanan Sun",
+      "Wenran Liu",
+      "Kai Chen",
+      "Yining Li"
+    ],
+    "summary": "While Large Language Models (LLMs) have empowered AI research agents to perform isolated scientific tasks, automating complex, real-world workflows, such as LLM training, remains a significant challenge. In this paper, we introduce TREX, a multi-agent system that automates the entire LLM training life-cycle. By orchestrating collaboration between two core modules-the Researcher and the Executor-the system seamlessly performs requirement analysis, open-domain literature and data research, formulation of training strategies, preparation of data recipes, and model training and evaluation. The multi-round experimental process is modeled as a search tree, enabling the system to efficiently plan exploration paths, reuse historical results, and distill high-level insights from iterative trials. To evaluate the capability of automated LLM training, we construct FT-Bench, a benchmark comprising 10 tasks derived from real-world scenarios, ranging from optimizing fundamental model capabilities to enhancing performance on domain-specific tasks. Experimental results demonstrate that the TREX agent consistently optimizes model performance on target tasks.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.14116v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.13899v1",
+    "title": "Do We Still Need Humans in the Loop? Comparing Human and LLM Annotation in Active Learning for Hostility Detection",
+    "authors": [
+      "Ahmad Dawar Hakimi",
+      "Lea Hirlimann",
+      "Isabelle Augenstein",
+      "Hinrich Schütze"
+    ],
+    "summary": "Instruction-tuned LLMs can annotate thousands of instances from a short prompt at negligible cost. This raises two questions for active learning (AL): can LLM labels replace human labels within the AL loop, and does AL remain necessary when entire corpora can be labelled at once? We investigate both questions on a new dataset of 277,902 German political TikTok comments (25,974 LLM-labelled, 5,000 human-annotated), comparing seven annotation strategies across four encoders to detect anti-immigrant hostility. A classifier trained on 25,974 GPT-5.2 labels (\\$43) achieves comparable F1-Macro to one trained on 3,800 human annotations (\\$316). Active learning offers little advantage over random sampling in our pre-enriched pool and delivers lower F1 than full LLM annotation at the same cost. However, comparable aggregate F1 masks a systematic difference in error structure: LLM-trained classifiers over-predict the positive class relative to the human gold standard. This divergence concentrates in topically ambiguous discussions where the distinction between anti-immigrant hostility and policy critique is most subtle, suggesting that annotation strategy should be guided not by aggregate F1 alone but by the error profile acceptable for the target application.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.13899v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.13847v1",
+    "title": "SparseBalance: Load-Balanced Long Context Training with Dynamic Sparse Attention",
+    "authors": [
+      "Hongtao Xu",
+      "Jianchao Tan",
+      "Yuxuan Hu",
+      "Pengju Lu",
+      "Hongyu Wang",
+      "Pingwei Sun",
+      "Yerui Sun",
+      "Yuchen Xie",
+      "Xunliang Cai",
+      "Mingzhen Li",
+      "Weile Jia"
+    ],
+    "summary": "While sparse attention mitigates the computational bottleneck of long-context LLM training, its distributed training process exhibits extreme heterogeneity in both \\textit{1)} sequence length and \\textit{2)} sparsity sensitivity, leading to a severe imbalance problem and sub-optimal model accuracy. Existing algorithms and training frameworks typically focus on single issue, failing to systematically co-optimize these two problems. Therefore, we propose SparseBalance, a novel algorithm-system co-design framework, which exploits the sparsity and sequence heterogeneity to optimize model accuracy and system efficiency jointly. First, we propose workload-aware dynamic sparsity tuning, which employs a bidirectional sparsity adjustment to eliminate stragglers and exploit inherent bubbles for free accuracy. Second, we propose a sparsity-aware batching strategy to achieve coarse-grained balance, which complements dynamic sparsity tuning. Experimental results demonstrate that SparseBalance achieves up to a 1.33$\\times$ end-to-end speedup while still improving the long-context capability by 0.46\\% on the LongBench benchmark.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.13847v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.13600v1",
+    "title": "SAKURAONE: An Open Ethernet-Based AI HPC System and Its Observed Workload Dynamics in a Single-Tenant LLM Development Environment",
+    "authors": [
+      "Fumikazu Konishi",
+      "Yuuki Tsubouchi",
+      "Hirofumi Tsuruta"
+    ],
+    "summary": "SAKURAONE is a managed high performance computing (HPC) cluster developed and operated by the SAKURA Internet Research Center. It builds on the KOKARYOKU PHY bare metal GPU platform and is optimized for advanced workloads, including large language model (LLM) training. In ISC 2025 TOP500, SAKURAONE is ranked 49th by HPL and is the only top 100 system that uses a fully open networking stack - 800 GbE with SONiC - demonstrating the scalability of vendor-neutral technology. Measured performance is 33.95 PFLOP/s (HPL Rmax), 396.295 TFLOP/s (HPCG), and 339.86 PFLOP/s on HPL-MxP with FP8. The system consists of 100 nodes, each with eight NVIDIA H100 GPUs and a 2 PB all-flash Lustre file system, interconnected via a rail-optimized 800 GbE leaf-spine fabric with RoCEv2. Through exclusive use by a single research project, we observed the characteristics of development-related jobs. Consistent with previous HPC studies, small-scale jobs dominated in number, while a few large-scale jobs accounted for most GPU resource time. As the project progressed, resource use shifted from large-scale to mid-scale jobs, reflecting a transition from initial large-scale training to iterative refinement. These observations illustrate the real-world utilization dynamics of GPU clusters under unified project workloads.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.13600v1",
+    "categories": [
+      "cs.DC",
+      "cs.NI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.07985v2",
+    "title": "Rag Performance Prediction for Question Answering",
+    "authors": [
+      "Or Dado",
+      "David Carmel",
+      "Oren Kurland"
+    ],
+    "summary": "We address the task of predicting the gain of using RAG (retrieval augmented generation) for question answering with respect to not using it. We study the performance of a few pre-retrieval and post-retrieval predictors originally devised for ad hoc retrieval. We also study a few post-generation predictors, one of which is novel to this study and posts the best prediction quality. Our results show that the most effective prediction approach is a novel supervised predictor that explicitly models the semantic relationships among the question, retrieved passages, and the generated answer.",
+    "published": "2026-04-09",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.07985v2",
+    "categories": [
+      "cs.CL",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.13740v1",
+    "title": "Online learning with noisy side observations",
+    "authors": [
+      "Tomáš Kocák",
+      "Gergely Neu",
+      "Michal Valko"
+    ],
+    "summary": "We propose a new partial-observability model for online learning problems where the learner, besides its own loss, also observes some noisy feedback about the other actions, depending on the underlying structure of the problem. We represent this structure by a weighted directed graph, where the edge weights are related to the quality of the feedback shared by the connected nodes. Our main contribution is an efficient algorithm that guarantees a regret of $\\widetilde{O}(\\sqrt{α^* T})$ after $T$ rounds, where $α^*$ is a novel graph property that we call the effective independence number. Our algorithm is completely parameter-free and does not require knowledge (or even estimation) of $α^*$. For the special case of binary edge weights, our setting reduces to the partial-observability models of Mannor and Shamir (2011) and Alon et al. (2013) and our algorithm recovers the near-optimal regret bounds.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.13740v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.13236v1",
+    "title": "SemiFA: An Agentic Multi-Modal Framework for Autonomous Semiconductor Failure Analysis Report Generation",
+    "authors": [
+      "Shivam Chand Kaushik"
+    ],
+    "summary": "Semiconductor failure analysis (FA) requires engineers to examine inspection images, correlate equipment telemetry, consult historical defect records, and write structured reports, a process that can consume several hours of expert time per case. We present SemiFA, an agentic multi-modal framework that autonomously generates structured FA reports from semiconductor inspection images in under one minute. SemiFA decomposes FA into a four-agent LangGraph pipeline: a DefectDescriber that classifies and narrates defect morphology using DINOv2 and LLaVA-1.6, a RootCauseAnalyzer that fuses SECS/GEM equipment telemetry with historically similar defects retrieved from a Qdrant vector database, a SeverityClassifier that assigns severity and estimates yield impact, and a RecipeAdvisor that proposes corrective process adjustments. A fifth node assembles a PDF report. We introduce SemiFA-930, a dataset of 930 annotated semiconductor defect images paired with structured FA narratives across nine defect classes, drawn from procedural synthesis, WM-811K, and MixedWM38. Our DINOv2-based classifier achieves 92.1% accuracy on 140 validation images (macro F1 = 0.917), and the full pipeline produces complete FA reports in 48 seconds on an NVIDIA A100-SXM4-40 GB GPU. A GPT-4o judge ablation across four modality conditions demonstrates that multi-modal fusion improves root cause reasoning by +0.86 composite points (1-5 scale) over an image-only baseline, with equipment telemetry as the more load-bearing modality. To our knowledge, SemiFA is the first system to integrate SECS/GEM equipment telemetry into a vision-language model pipeline for autonomous FA report generation.",
+    "published": "2026-04-14",
+    "updated": "2026-04-14",
+    "pdf_url": "https://arxiv.org/pdf/2604.13236v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "eess.IV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.07823v2",
+    "title": "LPM 1.0: Video-based Character Performance Model",
+    "authors": [
+      "Ailing Zeng",
+      "Casper Yang",
+      "Chauncey Ge",
+      "Eddie Zhang",
+      "Garvey Xu",
+      "Gavin Lin",
+      "Gilbert Gu",
+      "Jeremy Pi",
+      "Leo Li",
+      "Mingyi Shi",
+      "Shawn Wang",
+      "Sheng Bi",
+      "Steven Tang",
+      "Thorn Hang",
+      "Tobey Guo",
+      "Vincent Li",
+      "Xin Tong",
+      "Yikang Li",
+      "Yuchen Sun",
+      "Yue Zhao",
+      "Yuhan Lu",
+      "Yuwei Li",
+      "Zane Zhang",
+      "Zeshi Yang",
+      "Zi Ye"
+    ],
+    "summary": "Performance, the externalization of intent, emotion, and personality through visual, vocal, and temporal behavior, is what makes a character alive. Learning such performance from video is a promising alternative to traditional 3D pipelines. However, existing video models struggle to jointly achieve high expressiveness, real-time inference, and long-horizon identity stability, a tension we call the performance trilemma. Conversation is the most comprehensive performance scenario, as characters simultaneously speak, listen, react, and emote while maintaining identity over time. To address this, we present LPM 1.0 (Large Performance Model), focusing on single-person full-duplex audio-visual conversational performance. Concretely, we build a multimodal human-centric dataset through strict filtering, speaking-listening audio-video pairing, performance understanding, and identity-aware multi-reference extraction; train a 17B-parameter Diffusion Transformer (Base LPM) for highly controllable, identity-consistent performance through multimodal conditioning; and distill it into a causal streaming generator (Online LPM) for low-latency, infinite-length interaction. At inference, given a character image with identity-aware references, LPM 1.0 generates listening videos from user audio and speaking videos from synthesized audio, with text prompts for motion control, all at real-time speed with identity-stable, infinite-length generation. LPM 1.0 thus serves as a visual engine for conversational agents, live streaming characters, and game NPCs. To systematically evaluate this setting, we propose LPM-Bench, the first benchmark for interactive character performance. LPM 1.0 achieves state-of-the-art results across all evaluated dimensions while maintaining real-time inference.",
+    "published": "2026-04-09",
+    "updated": "2026-04-14",
+    "pdf_url": "https://arxiv.org/pdf/2604.07823v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.MM"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
