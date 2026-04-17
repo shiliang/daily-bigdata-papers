@@ -1,0 +1,101 @@
+[
+  {
+    "id": "2604.14768v1",
+    "title": "CoTEvol: Self-Evolving Chain-of-Thoughts for Data Synthesis in Mathematical Reasoning",
+    "authors": [
+      "Zhuo Wang",
+      "Zhuo Zhang",
+      "Yafu Li",
+      "Yu Cheng",
+      "Lizhen Qu",
+      "Zenglin Xu"
+    ],
+    "summary": "Large Language Models (LLMs) exhibit strong mathematical reasoning when trained on high-quality Chain-of-Thought (CoT) that articulates intermediate steps, yet costly CoT curation hinders further progress. While existing remedies such as distillation from stronger LLMs and self-synthesis based on test-time search alleviate this issue, they often suffer from diminishing returns or high computing overhead.In this work, we propose CoTEvol, a genetic evolutionary framework that casts CoT generation as a population-based search over reasoning trajectories.Candidate trajectories are iteratively evolved through reflective global crossover at the trajectory level and local mutation guided by uncertainty at the step level, enabling holistic recombination and fine-grained refinement. Lightweight, task-aware fitness functions are designed to guide the evolutionary process toward accurate and diverse reasoning. Empirically, CoTEvol improves correct-CoT synthesis success by over 30% and enhances structural diversity, with markedly improved efficiency. LLMs trained on these evolutionary CoT data achieve an average gain of 6.6% across eight math benchmarks, outperforming previous distillation and self-synthesis approaches. These results underscore the promise of evolutionary CoT synthesis as a scalable and effective method for mathematical reasoning tasks.",
+    "published": "2026-04-16",
+    "updated": "2026-04-16",
+    "pdf_url": "https://arxiv.org/pdf/2604.14768v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.14690v1",
+    "title": "Switching Efficiency: A Novel Framework for Dissecting AI Data Center Network Efficiency",
+    "authors": [
+      "Niangen Ye",
+      "Jiawen Zhu",
+      "Baojun Chen",
+      "Dong Wang",
+      "Jiang Sun",
+      "Weiqiang Sun",
+      "Weisheng Hu"
+    ],
+    "summary": "Communication is pivotal in LLM training, and a thorough analysis of the communication efficiency of AI data center (AIDC) network is essential for guiding the design of these capital-intensive clusters. However, conventional metrics are inadequate for such analysis, as they do not directly link network activity to computational progress and lack granularity to diagnose the impact of different network design patterns. To address this, we introduce a metric framework, the Switching Efficiency Framework, whose core metric - Switching Efficiency ($η$) - quantifies computationally effective data throughput per unit switching capacity. We further decompose $η$ into three factors - Data, Routing Efficiency, and Port Utilization to facilitate analysis of distinct communication bottlenecks.\n  Using this metric framework, we demonstrate how the symmetric, distributed switching of 3D-Torus and the centralized, hierarchical switching of Rail-Optimized architecture align with sparse or imbalanced LLM training traffic, and show that All-to-All traffic from Mixture-of-Experts models severely degrades their port utilization and routing efficiency. Our analysis also demonstrates how key design choices - such as adjusting switching resource allocation, expanding server size, adopting in-network computing, and multi-plane design - positively influence distinct facets of communication efficiency. Ultimately, the Switching Efficiency Framework provides an analytical tool for analyzing efficiency bottlenecks, thereby informing the design of future-generation AIDC networks.",
+    "published": "2026-04-16",
+    "updated": "2026-04-16",
+    "pdf_url": "https://arxiv.org/pdf/2604.14690v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2604.13600v2",
+    "title": "SAKURAONE: An Open Ethernet-Based AI HPC System and Its Observed Workload Dynamics in a Single-Tenant LLM Development Environment",
+    "authors": [
+      "Fumikazu Konishi",
+      "Yuuki Tsubouchi",
+      "Hirofumi Tsuruta"
+    ],
+    "summary": "SAKURAONE is a managed high performance computing (HPC) cluster developed and operated by the SAKURA Internet Research Center. It builds on the KOKARYOKU PHY bare metal GPU platform and is optimized for advanced workloads, including large language model (LLM) training. In ISC 2025 TOP500, SAKURAONE is ranked 49th by HPL and is the only top 100 system that uses a fully open networking stack - 800 GbE with SONiC - demonstrating the scalability of vendor-neutral technology. Measured performance is 33.95 PFLOP/s (HPL Rmax), 396.295 TFLOP/s (HPCG), and 339.86 PFLOP/s on HPL-MxP with FP8. The system consists of 100 nodes, each with eight NVIDIA H100 GPUs and a 2 PB all-flash Lustre file system, interconnected via a rail-optimized 800 GbE leaf-spine fabric with RoCEv2. Through exclusive use by a single research project, we observed the characteristics of development-related jobs. Consistent with previous HPC studies, small-scale jobs dominated in number, while a few large-scale jobs accounted for most GPU resource time. As the project progressed, resource use shifted from large-scale to mid-scale jobs, reflecting a transition from initial large-scale training to iterative refinement. These observations illustrate the real-world utilization dynamics of GPU clusters under unified project workloads.",
+    "published": "2026-04-15",
+    "updated": "2026-04-16",
+    "pdf_url": "https://arxiv.org/pdf/2604.13600v2",
+    "categories": [
+      "cs.DC",
+      "cs.NI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.14336v1",
+    "title": "Mistake gating leads to energy and memory efficient continual learning",
+    "authors": [
+      "Aaron Pache",
+      "Mark CW van Rossum"
+    ],
+    "summary": "Synaptic plasticity is metabolically expensive, yet animals continuously update their internal models without exhausting energy reserves. However, when artificial neural networks are trained, the network parameters are typically updated on every sample that is presented, even if the sample was classified correctly. Inspired by the human negativity bias and error-related negativity, we propose 'memorized mistake-gated learning' -- a biologically plausible plasticity rule where synaptic updates are strictly gated by current and past classification errors. This reduces the number of updates the network needs to make by $50\\%\\sim80\\%$. Mistake gating is particularly well suited in two cases: 1) For incremental learning where new knowledge is acquired on a background of pre-existing knowledge, 2) For online learning scenarios when data needs to be stored for later replay, as mistake-gating reduces storage buffer requirements. The algorithm can be implemented in a few lines of code, adds no hyper-parameters, and comes at negligible computational overhead. Learning on mistakes is an energy efficient and biologically relevant modification to commonly used learning rules that is well suited for continual learning.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.14336v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.14322v1",
+    "title": "Doubly Outlier-Robust Online Infinite Hidden Markov Model",
+    "authors": [
+      "Horace Yiu",
+      "Leandro Sánchez-Betancourt",
+      "Álvaro Cartea",
+      "Gerardo Duran-Martin"
+    ],
+    "summary": "We derive a robust update rule for the online infinite hidden Markov model (iHMM) for when the streaming data contains outliers and the model is misspecified. Leveraging recent advances in generalised Bayesian inference, we define robustness via the posterior influence function (PIF), and provide conditions under which the online iHMM has bounded PIF. Imposing robustness inevitably induces an adaptation lag for regime switching. Our method, which is called Batched Robust iHMM (BR-iHMM), balances adaptivity and robustness with two additional tunable parameters. Across limit order book data, hourly electricity demand, and a synthetic high-dimensional linear system, BR-iHMM reduces one-step-ahead forecasting error by up to 67% relative to competing online Bayesian methods. Together with theoretical guarantees of bounded PIF, our results highlight the practicality of our approach for both forecasting and interpretable online learning.",
+    "published": "2026-04-15",
+    "updated": "2026-04-15",
+    "pdf_url": "https://arxiv.org/pdf/2604.14322v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  }
+]
