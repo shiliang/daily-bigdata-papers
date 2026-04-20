@@ -1,0 +1,142 @@
+[
+  {
+    "id": "2604.15802v1",
+    "title": "CHOP: Chunkwise Context-Preserving Framework for RAG on Multi Documents",
+    "authors": [
+      "Hyunseok Park",
+      "Jihyeon Kim",
+      "Jongeun Kim",
+      "Dongsik Yoon"
+    ],
+    "summary": "Retrieval-Augmented Generation (RAG) systems lose retrieval accuracy when similar documents coexist in the vector database, causing unnecessary information, hallucinations, and factual errors. To alleviate this issue, we propose CHOP, a framework that iteratively evaluates chunk relevance with Large Language Models (LLMs) and progressively reconstructs documents by determining their association with specific topics or query types. CHOP integrates two key components: the CNM-Extractor, which generates compact per-chunk signatures capturing categories, key nouns, and model names, and the Continuity Decision Module, which preserves contextual coherence by deciding whether consecutive chunks belong to the same document flow. By prefixing each chunk with context-aware metadata, CHOP reduces semantic conflicts among similar documents and enhances retriever discrimination. Experiments on benchmark datasets show that CHOP alleviates retrieval confusion and provides a scalable approach for building high-quality knowledge bases, achieving a Top-1 Hit Rate of 90.77% and notable gains in ranking quality metrics.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.15802v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.15609v1",
+    "title": "Adapting in the Dark: Efficient and Stable Test-Time Adaptation for Black-Box Models",
+    "authors": [
+      "Yunbei Zhang",
+      "Shuaicheng Niu",
+      "Chengyi Cai",
+      "Feng Liu",
+      "Jihun Hamm"
+    ],
+    "summary": "Test-Time Adaptation (TTA) for black-box models accessible only via APIs remains a largely unexplored challenge. Existing approaches such as post-hoc output refinement offer limited adaptive capacity, while Zeroth-Order Optimization (ZOO) enables input-space adaptation but faces high query costs and optimization challenges in the unsupervised TTA setting. We introduce BETA (Black-box Efficient Test-time Adaptation), a framework that addresses these limitations by employing a lightweight, local white-box steering model to create a tractable gradient pathway. Through a prediction harmonization technique combined with consistency regularization and prompt learning-oriented filtering, BETA enables stable adaptation with no additional API calls and negligible latency beyond standard inference. On ImageNet-C, BETA achieves a +7.1% accuracy gain on ViT-B/16 and +3.4% on CLIP, surpassing strong white-box and gray-box methods including TENT and TPT. On a commercial API, BETA achieves comparable performance to ZOO at 250x lower cost while maintaining real-time inference speed, establishing it as a practical and efficient solution for real-world black-box TTA.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.15609v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.12928v2",
+    "title": "MoshiRAG: Asynchronous Knowledge Retrieval for Full-Duplex Speech Language Models",
+    "authors": [
+      "Chung-Ming Chien",
+      "Manu Orsini",
+      "Eugene Kharitonov",
+      "Neil Zeghidour",
+      "Karen Livescu",
+      "Alexandre Défossez"
+    ],
+    "summary": "Speech-to-speech language models have recently emerged to enhance the naturalness of conversational AI. In particular, full-duplex models are distinguished by their real-time interactivity, including handling of pauses, interruptions, and backchannels. However, improving their factuality remains an open challenge. While scaling the model size could address this gap, it would make real-time inference prohibitively expensive. In this work, we propose MoshiRAG, a modular approach that combines a compact full-duplex interface with selective retrieval to access more powerful knowledge sources. Our asynchronous framework enables the model to identify knowledge-demanding queries and ground its responses in external information. By leveraging the natural temporal gap between response onset and the delivery of core information, the retrieval process can be completed while maintaining a natural conversation flow. With this approach, MoshiRAG achieves factuality comparable to the best publicly released non-duplex speech language models while preserving the interactivity inherent to full-duplex systems. Moreover, our flexible design supports plug-and-play retrieval methods without retraining and demonstrates strong performance on out-of-domain mathematical reasoning tasks.",
+    "published": "2026-04-14",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.12928v2",
+    "categories": [
+      "cs.CL",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.16145v1",
+    "title": "Training Time Prediction for Mixed Precision-based Distributed Training",
+    "authors": [
+      "Minchul Kang",
+      "Changyong Shin",
+      "Jinwoo Jeong",
+      "Hyunho Lee",
+      "Younghun Go",
+      "Gyeongmin Kim",
+      "Gyeongsik Yang",
+      "Chuck Yoo"
+    ],
+    "summary": "Accurate prediction of training time in distributed deep learning is crucial for resource allocation, cost estimation, and job scheduling. We observe that the floating-point precision setting is a key determinant of training time, leading to training time variations of ~2.4x over its minimum. However, existing studies on distributed training time prediction rely on static model computation graphs that do not capture precision variations, including mixed precision. According to our experiments, training time prediction without considering precision results in significant prediction errors - reaching up to 147.85% in mean absolute percentage error (MAPE). To address this issue, we propose a precision-aware distributed training time predictor that achieves robust accuracy across diverse precision settings, including mixed precision, with 9.8% MAPE.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.16145v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC",
+      "cs.PF"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.15821v1",
+    "title": "Breaking the Training Barrier of Billion-Parameter Universal Machine Learning Interatomic Potentials",
+    "authors": [
+      "Yuanchang Zhou",
+      "Hongyu Wang",
+      "Yiming Du",
+      "Yan Wang",
+      "Mingzhen Li",
+      "Siyu Hu",
+      "Xiangyu Zhang",
+      "Weijian Liu",
+      "Chen Wang",
+      "Zhuoqiang Guo",
+      "Long Wang",
+      "Jingde Bu",
+      "Yutong Lu",
+      "Guangming Tan",
+      "Weile Jia"
+    ],
+    "summary": "Universal Machine Learning Interatomic Potentials (uMLIPs), pre-trained on massively diverse datasets encompassing inorganic materials and organic molecules across the entire periodic table, serve as foundational models for quantum-accurate physical simulations. However, uMLIP training requires second-order derivatives, which lack corresponding parallel training frameworks; moreover, scaling to the billion-parameter regime causes explosive growth in computation and communication overhead, making its training a tremendous challenge. We introduce MatRIS-MoE, a billion-parameter Mixture-of-Experts model built upon invariant architecture, and {Janus}, a pioneering high-dimensional distributed training framework for uMLIPs with hardware-aware optimizations. Deployed across two Exascale supercomputers, our code attains a peak performance of 1.2/1.0 EFLOPS (24\\%/{35.5\\%} of theoretical peak) in single precision at over 90\\% parallel efficiency, compressing the training of billion-parameter uMLIPs from weeks to hours. This work establishes a new high-water mark for AI-for-Science (AI4S) foundation models at Exascale and provides essential infrastructure for rapid scientific discovery.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.15821v1",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.15416v1",
+    "title": "StoSignSGD: Unbiased Structural Stochasticity Fixes SignSGD for Training Large Language Models",
+    "authors": [
+      "Dingzhi Yu",
+      "Rui Pan",
+      "Yuxing Liu",
+      "Tong Zhang"
+    ],
+    "summary": "Sign-based optimization algorithms, such as SignSGD, have garnered significant attention for their remarkable performance in distributed learning and training large foundation models. Despite their empirical superiority, SignSGD is known to diverge on non-smooth objectives, which are ubiquitous in modern machine learning due to ReLUs, max-pools, and mixture-of-experts. To overcome this fundamental limitation, we propose \\textbf{StoSignSGD}, an algorithm that injects structural stochasticity into the sign operator while maintaining an unbiased update step. In the regime of (online) convex optimization, our theoretical analysis shows that StoSignSGD rigorously resolves the non-convergence issues of SignSGD, achieving a sharp convergence rate matching the lower bound. For the more challenging non-convex non-smooth optimization, we introduce generalized stationary measures that encompass prior definitions, proving that StoSignSGD improves upon the best-known complexity bounds by dimensional factors. Empirically, StoSignSGD exhibits robust stability and superior efficiency across diverse large language model (LLM) training regimes. Notably, in low-precision FP8 pretraining -- a setting where AdamW fails catastrophically -- StoSignSGD remains highly stable and yields a remarkable 1.44$\\times$ to 2.14$\\times$ speedup relative to established baselines. Furthermore, when fine-tuning 7B LLMs on mathematical reasoning tasks, StoSignSGD delivers substantial performance gains over both AdamW and SignSGD. Finally, to dissect the mechanisms driving its success, we develop a sign conversion framework capable of transforming any general optimizer into its unbiased, sign-based counterpart. Utilizing this framework, we deconstruct the core components of StoSignSGD and present a comprehensive ablation study to empirically validate our algorithmic design choices.",
+    "published": "2026-04-16",
+    "updated": "2026-04-16",
+    "pdf_url": "https://arxiv.org/pdf/2604.15416v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
