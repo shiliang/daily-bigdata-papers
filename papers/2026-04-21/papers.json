@@ -1,0 +1,217 @@
+[
+  {
+    "id": "2604.18464v1",
+    "title": "Semantic Step Prediction: Multi-Step Latent Forecasting in LLM Reasoning Trajectories via Step Sampling",
+    "authors": [
+      "Yidi Yuan"
+    ],
+    "summary": "Semantic Tube Prediction (STP) leverages representation geometric to regularize LLM hidden-state trajectories toward locally linear geodesics during fine-tuning, thereby greatly improving data efficiency. The original STP recipe samples random token sub-spans, which is compatible with the base large language model (LLM) training architecture. Inspired by STP, we are interested to investigate whether the sampling position can further enhance the semantic structure of multi-step reasoning, and hence affect its geometric impact. We applied STP at consecutive semantic reasoning step boundaries and achieved 168x more accurate multi-step latent prediction than frozen baselines on ProcessBench (3,400 samples), compared to only 4x for the random-token STP. Probing the latent manifold with a learned non-linear predictor reveals that STP-shaped trajectories are smooth curves, not straight lines: a 3-layer MLP reduces prediction error by a further 3-12x over linear extrapolation on step-boundary models. Removing the language modeling loss yields trajectories that are 2x more MLP-predictable than the combined loss, revealing a tradeoff between generation quality and geometric purity. Our results identify sampling position as the critical variable in geometric regularization and establish multi-step latent prediction MSE as a new evaluation metric for this class of methods.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18464v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.18496v1",
+    "title": "Tensor Processing with Homodyne Photonic Integrated Circuits exceeds 1,000 TOPS",
+    "authors": [
+      "Lian Zhou",
+      "Kaiwen Xue",
+      "Yun-Jhu Lee",
+      "Chun-Ho Lee",
+      "Yuan Li",
+      "Kiwon Kwon",
+      "Weipeng Zhang",
+      "Songlin Zhao",
+      "Jason Moraes",
+      "Niranjan Bhatia",
+      "Ryan Hamerly",
+      "Mengjie Yu",
+      "Zaijun Chen"
+    ],
+    "summary": "High-performance computing underpins modern artificial intelligence (AI), enabling foundation models, real-time inference and perception in autonomous systems, and data-intensive scientific simulations. Recent advances in quantization techniques utilizing low-precision computation without degrading model accuracy, creates new opportunities for analog photonic computing characterized by ultra-high clock rates and low energy consumption. Here we propose and demonstrate a coherent homodyne integrated circuit capable of general matrix multiplication(GEMM) with aggregate throughput that exceeds 1,000 TOPS (tera-operations per second), enabled by massive on-chip optical fanout and parallelism. By leveraging time multiplexing, the required modulator count is reduced from O($N^2$) to O(N), allowing dense integration of record-scale 256 $\\times$ 256 homodyne units (each <0.0064 $mm^2$) within a single reticle. We employ wafer-scale fabricated 64 thin-film lithium niobate (TFLN) transmitters (each over 40-GHz bandwidth with propagation loss of 0.2 dB/cm) to encode data and chip-to-chip coupled to Si/SiN computing circuits (64 channels). Our system achieves up to 7-bit computational accuracy across 8 $\\times$ 8 parallel channels at record computing clockrate 120 Gbaud/s, and 6-bit statistical accuracy across 256 $\\times$ 100 channels at 20-128 Gbaud/s, representing a total throughput of 1,000-6,000 TOPS. Massive parallelism amortizes the optoelectronic (OE) conversion to allow 330-TOPS/W efficiency using foundry-available packaging technology. The system throughput is benchmarked with Qwen2.5-0.5 billion parameter models that generate accurate tokens. High throughput and energy efficiency establish a near-term pathway toward light-based accelerators for large-scale training and low-latency inference from datacenters to edges, accelerating new models toward artificial general intelligence.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18496v1",
+    "categories": [
+      "cs.ET"
+    ],
+    "primary_category": "cs.ET",
+    "github": null
+  },
+  {
+    "id": "2604.18302v1",
+    "title": "Toward Zero-Egress Psychiatric AI: On-Device LLM Deployment for Privacy-Preserving Mental Health Decision Support",
+    "authors": [
+      "Eranga Bandara",
+      "Asanga Gunaratna",
+      "Ross Gore",
+      "Anita H. Clayton",
+      "Christopher K. Rhea",
+      "Sachini Rajapakse",
+      "Isurunima Kularathna",
+      "Sachin Shetty",
+      "Ravi Mukkamala",
+      "Xueping Liang",
+      "Preston Samuel",
+      "Atmaram Yarlagadda"
+    ],
+    "summary": "Privacy represents one of the most critical yet underaddressed barriers to AI adoption in mental healthcare -- particularly in high-sensitivity operational environments such as military, correctional, and remote healthcare settings, where the risk of patient data exposure can deter help-seeking behavior entirely. Existing AI-enabled psychiatric decision support systems predominantly rely on cloud-based inference pipelines, requiring sensitive patient data to leave the device and traverse external servers, creating unacceptable privacy and security risks in these contexts. In this paper, we propose a zero-egress, on-device AI platform for privacy-preserving psychiatric decision support, deployed as a cross-platform mobile application. The proposed system extends our prior work on fine-tuned LLM consortiums for psychiatric diagnosis standardization by fundamentally re-architecting the inference pipeline for fully local execution -- ensuring that no patient data is transmitted to, processed by, or stored on any external server at any stage. The platform integrates a consortium of three lightweight, fine-tuned, and quantized open-source LLMs -- Gemma, Phi-3.5-mini, and Qwen2 -- selected for their compact architectures and proven efficiency on resource-constrained mobile hardware. An on-device orchestration layer coordinates ensemble inference and consensus-based diagnostic reasoning, producing DSM-5-aligned assessments for conditions. The platform is designed to assist clinicians with differential diagnosis and evidence-linked symptom mapping, as well as to support patient-facing self-screening with appropriate clinical safeguards. Initial evaluation demonstrates that the proposed zero-egress deployment achieves diagnostic accuracy comparable to its server-side predecessor while sustaining real-time inference latency on commodity mobile hardware.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18302v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.18420v1",
+    "title": "Spectral bandits for smooth graph functions",
+    "authors": [
+      "Michal Valko",
+      "Rémi Munos",
+      "Branislav Kveton",
+      "Tomáš Kocák"
+    ],
+    "summary": "Smooth functions on graphs have wide applications in manifold and semi-supervised learning. In this paper, we study a bandit problem where the payoffs of arms are smooth on a graph. This framework is suitable for solving online learning problems that involve graphs, such as content-based recommendation. In this problem, each item we can recommend is a node and its expected rating is similar to its neighbors. The goal is to recommend items that have high expected ratings. We aim for the algorithms where the cumulative regret with respect to the optimal policy would not scale poorly with the number of nodes. In particular, we introduce the notion of an effective dimension, which is small in real-world graphs, and propose two algorithms for solving our problem that scale linearly and sublinearly in this dimension. Our experiments on real-world content recommendation problem show that a good estimator of user preferences for thousands of items can be learned from just tens of nodes evaluations.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18420v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2604.06710v2",
+    "title": "ATANT: An Evaluation Framework for AI Continuity",
+    "authors": [
+      "Samuel Sameer Tanguturi"
+    ],
+    "summary": "We present ATANT (Automated Test for Acceptance of Narrative Truth), an open evaluation framework for measuring continuity in AI systems: the ability to persist, update, disambiguate, and reconstruct meaningful context across time. While the AI industry has produced memory components (RAG pipelines, vector databases, long context windows, profile layers), no published framework formally defines or measures whether these components produce genuine continuity. We define continuity as a system property with 7 required properties, introduce a 10-checkpoint evaluation methodology that operates without an LLM in the evaluation loop, and present a narrative test corpus of 250 stories comprising 1,835 verification questions across 6 life domains. We evaluate a reference implementation across 5 test suite iterations, progressing from 58% (legacy architecture) to 100% in isolated mode (250 stories) and 100% in 50-story cumulative mode, with 96% at 250-story cumulative scale. The cumulative result is the primary measure: when 250 distinct life narratives coexist in the same database, the system must retrieve the correct fact for the correct context without cross-contamination. ATANT is system-agnostic, model-independent, and designed as a sequenced methodology for building and validating continuity systems. The framework specification, example stories, and evaluation protocol are available at https://github.com/Kenotic-Labs/ATANT. The full 250-story corpus will be released incrementally.",
+    "published": "2026-04-08",
+    "updated": "2026-04-19",
+    "pdf_url": "https://arxiv.org/pdf/2604.06710v2",
+    "categories": [
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.AI",
+    "github": {
+      "url": "https://github.com/Kenotic-Labs/ATANT.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.17373v1",
+    "title": "Active Inference-Based Adaptive Routing for Heterogeneous Edge AI Services",
+    "authors": [
+      "Zihang Wang",
+      "Boris Sedlak",
+      "Schahram Dustdar"
+    ],
+    "summary": "Edge computing enables AI inference closer to data sources, reducing latency and bandwidth costs. However, orchestrating AI services across the cloud-edge continuum remains challenging due to dynamic workloads and infrastructure variability. We present AIF-Router, an Active Inference--based routing framework that autonomously learns to balance latency, throughput, and resource utilization across multi-tier AI services without offline training. AIF-Router performs Bayesian state inference and expected free energy minimization to guide routing decisions based on observability-driven real-time metrics. Despite device instability on edge nodes, AIF-Router exhibits stable online learning behavior and demonstrates the feasibility of applying Active Inference for adaptive AI service orchestration in unreliable edge environments. Our findings highlight both the promise and practical challenges of deploying self-adaptive decision-making frameworks for real-world edge AI systems.",
+    "published": "2026-04-19",
+    "updated": "2026-04-19",
+    "pdf_url": "https://arxiv.org/pdf/2604.17373v1",
+    "categories": [
+      "cs.DC",
+      "cs.ET",
+      "cs.PF"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.16778v1",
+    "title": "Federation over Text: Insight Sharing for Multi-Agent Reasoning",
+    "authors": [
+      "Dixi Yao",
+      "Tahseen Rabbani",
+      "Tian Li"
+    ],
+    "summary": "LLM-powered agents often reason from scratch when presented with a new problem instance and lack automatic mechanisms to transfer learned skills to other agents. We propose a federated learning-like framework, Federation over Text (FoT), that enables multiple agents solving different tasks to collectively generate a shared library of metacognitive insights by iteratively federating their local reasoning processes. Instead of federation over gradients (e.g., as in distributed training), FoT operates at the semantic level without any gradient optimization or supervision signal. Iteratively, each agent does local thinking and self-improvement on their specific tasks independently, and shares reasoning traces with a central server, which aggregates and distills them into a cross-task (and cross-domain) insight library that existing and future agents can leverage to improve performance on related tasks. Experiments show that FoT improves reasoning effectiveness and efficiency across a wide range of challenging applications, including mathematical problem solving, cross-domain collaboration, and machine learning research insight discovery. Specifically, it improves average accuracies of downstream tasks by 24% while reducing the reasoning tokens by 28% across the first two applications. In the research insight discovery application, FoT is able to generate insights that cover over 90% of the major contributions in the subsequent papers.",
+    "published": "2026-04-18",
+    "updated": "2026-04-18",
+    "pdf_url": "https://arxiv.org/pdf/2604.16778v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.16583v1",
+    "title": "POLAR: Online Learning for LoRA Adapter Caching and Routing in Edge LLM Serving",
+    "authors": [
+      "Shaoang Li",
+      "Jian Li"
+    ],
+    "summary": "Edge deployment of large language models (LLMs) increasingly relies on libraries of lightweight LoRA adapters, yet GPU/DRAM can keep only a small resident subset at a time. Serving a request through a non-resident adapter requires paging its weights from storage, incurring measurable latency. This creates a two-timescale online control problem: on a slow timescale, the system selects which adapters remain resident in fast memory, while on a fast timescale it routes each request to an adapter whose context-dependent utility is unknown a priori. The two decisions are tightly coupled: the cache determines the cost of exploration, and the router determines which adapters receive informative feedback. We formulate this joint caching-and-routing problem as a two-timescale contextual bandit and propose POLAR (Paging and Online Learning for Adapter Routing). POLAR pairs a cache-aware LinUCB router with an epoch-based cache controller. We study two variants. A fixed-epoch version provides a robust baseline with worst-case regret guarantees under arbitrary contexts. An epoch-doubling version, POLAR+, adds forced exploration and improved cache optimization to achieve $\\widetilde{\\mathcal{O}}(d\\sqrt{NT}+\\sqrt{KT})$ sublinear regret under stochastic regularity and cacheability conditions, where $N$ is the adapter count, $K$ the cache size, $d$ the context dimension, and $T$ the horizon. The routing term matches the standard contextual-bandit rate up to logarithmic factors, showing that the memory hierarchy does not fundamentally slow routing learning. Experiments using 15 real LoRA adapters for Qwen2.5-7B together with measured GPU paging latencies show that adaptive cache control substantially outperforms non-adaptive baselines and exhibits scaling trends consistent with the theory.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.16583v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.16715v1",
+    "title": "Scalable and Adaptive Parallel Training of Graph Transformer on Large Graphs",
+    "authors": [
+      "Jun-Liang Lin",
+      "Kamesh Madduri",
+      "Mahmut Taylan Kandemir"
+    ],
+    "summary": "Graph foundation models have demonstrated remarkable adaptability across diverse downstream tasks through large-scale pretraining on graphs. However, existing implementations of the backbone model, graph transformers, are typically limited to single-GPU systems, leading to long training times or out-of-memory issues on large graphs. Moreover, parallelizing graph transformer training over the full graph is challenging, as efficiency depends heavily on both the graph structure and system characteristics, such as bandwidth and memory capacity.\n  In this work, we introduce a distributed training framework for graph transformers, which automatically selects and optimizes parallelization strategies based on the graph structure and hardware configuration. With our implementation of distributed sparse operations, we accelerate sparse graph attention by up to 3.8x and reduce memory consumption by 78% compared to state-of-the-art frameworks. On large graph benchmarks, our proposed framework achieves up to 6x speedup with system scaling up to 8 GPUs. These results demonstrate that the proposed framework improves the scalability of graph transformers, bringing them closer to serving as practical graph foundation models.",
+    "published": "2026-04-17",
+    "updated": "2026-04-17",
+    "pdf_url": "https://arxiv.org/pdf/2604.16715v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.16491v1",
+    "title": "A Lightweight Transformer for Pain Recognition from Brain Activity",
+    "authors": [
+      "Stefanos Gkikas",
+      "Christian Arzate Cruz",
+      "Yu Fang",
+      "Lu Cao",
+      "Muhammad Umar Khan",
+      "Thomas Kassiotis",
+      "Giorgos Giannakakis",
+      "Raul Fernandez Rojas",
+      "Randy Gomez"
+    ],
+    "summary": "Pain is a multifaceted and widespread phenomenon with substantial clinical and societal burden, making reliable automated assessment a critical objective. This paper presents a lightweight transformer architecture that fuses multiple fNIRS representations through a unified tokenization mechanism, enabling joint modeling of complementary signal views without requiring modality-specific adaptations or increasing architectural complexity. The proposed token-mixing strategy preserves spatial, temporal, and time-frequency characteristics by projecting heterogeneous inputs onto a shared latent representation, using a structured segmentation scheme to control the granularity of local aggregation and global interaction. The model is evaluated on the AI4Pain dataset using stacked raw waveform and power spectral density representations of fNIRS inputs. Experimental results demonstrate competitive pain recognition performance while remaining computationally compact, making the approach suitable for real-time inference on both GPU and CPU hardware.",
+    "published": "2026-04-13",
+    "updated": "2026-04-13",
+    "pdf_url": "https://arxiv.org/pdf/2604.16491v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
