@@ -1,0 +1,257 @@
+[
+  {
+    "id": "2604.19241v1",
+    "title": "UniEP: Unified Expert-Parallel MoE MegaKernel for LLM Training",
+    "authors": [
+      "Size Zheng",
+      "Xuegui Zheng",
+      "Li-wen Chang",
+      "Jidong Zhai"
+    ],
+    "summary": "The exponential growth in Large Language Model (LLM) parameters has transformed model training into an increasingly resource-intensive endeavor. With the stagnation of Moore's Law and the widening disparity between computation throughput and communication bandwidth, expert parallelism (EP) has emerged as a critical strategy for scaling mixture-of-experts (MoE) models. However, despite numerous proposals for optimizing EP, ranging from communication compression to computation-communication overlap, adoption within production-grade frameworks like Megatron-LM remains conservative. Existing solutions often rely on ad-hoc, complex kernels that lack adaptability across diverse optimization configurations and frequently neglect numerical stability, failing to meet the strict precision requirements of large-scale training.\n  In this paper, we introduce UniEP, a novel system that unifies diverse EP optimization strategies into a cohesive abstraction. UniEP fuses the MoE communication and computation into MegaKernels, effectively transforming complex architectural tuning into a unified parameter search space for automated adaptability. Crucially, UniEP incorporates a deterministic token ordering mechanism that guarantees numerical consistency with sequential execution, even under aggressive overlap schedules. We evaluate UniEP on GPU clusters equipped with NVIDIA Hopper GPUs. Our results demonstrate that UniEP achieves 1.03$\\times$-1.38$\\times$ speedups over state-of-the-art work, effectively mitigating communication bottlenecks while maintaining the rigorous accuracy standards required for production LLM training.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19241v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.19522v1",
+    "title": "GenerativeMPC: VLM-RAG-guided Whole-Body MPC with Virtual Impedance for Bimanual Mobile Manipulation",
+    "authors": [
+      "Marcelino Julio Fernando",
+      "Miguel Altamirano Cabrera",
+      "Jeffrin Sam",
+      "Yara Mahmoud",
+      "Konstantin Gubernatorov",
+      "Dzmitry Tsetserukou"
+    ],
+    "summary": "Bimanual mobile manipulation requires a seamless integration between high-level semantic reasoning and safe, compliant physical interaction - a challenge that end-to-end models approach opaquely and classical controllers lack the context to address. This paper presents GenerativeMPC, a hierarchical cyber-physical framework that explicitly bridges semantic scene understanding with physical control parameters for bimanual mobile manipulators. The system utilizes a Vision-Language Model with Retrieval-Augmented Generation (VLM-RAG) to translate visual and linguistic context into grounded control constraints, specifically outputting dynamic velocity limits and safety margins for a Whole-Body Model Predictive Controller (MPC). Simultaneously, the VLM-RAG module modulates virtual stiffness and damping gains for a unified impedance-admittance controller, enabling context-aware compliance during human-robot interaction. Our framework leverages an experience-driven vector database to ensure consistent parameter grounding without retraining. Experimental results in MuJoCo, IsaacSim, and on a physical bimanual platform confirm a 60% speed reduction near humans and safe, socially-aware navigation and manipulation through semantic-to-physical parameter grounding. This work advances the field of human-centric cybernetics by grounding large-scale cognitive models into predictable, high-frequency physical control loops.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19522v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2604.19293v1",
+    "title": "Energy Efficient LSTM Accelerators for Embedded FPGAs through Parameterised Architecture Design",
+    "authors": [
+      "Chao Qian",
+      "Tianheng Ling",
+      "Gregor Schiele"
+    ],
+    "summary": "Long Short-term Memory Networks (LSTMs) are a vital Deep Learning technique suitable for performing on-device time series analysis on local sensor data streams of embedded devices. In this paper, we propose a new hardware accelerator design for LSTMs specially optimised for resource-scarce embedded Field Programmable Gate Arrays (FPGAs). Our design improves the execution speed and reduces energy consumption compared to related work. Moreover, it can be adapted to different situations using a number of optimisation parameters, such as the usage of DSPs or the implementation of activation functions. We present our key design decisions and evaluate the performance. Our accelerator achieves an energy efficiency of 11.89 GOP/s/W during a real-time inference with 32873 samples/s.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19293v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2604.18496v2",
+    "title": "Homodyne Photonic Tensor Processor exceeds 1,000-TOPS",
+    "authors": [
+      "Lian Zhou",
+      "Kaiwen Xue",
+      "Yun-Jhu Lee",
+      "Chun-Ho Lee",
+      "Yuan Li",
+      "Kiwon Kwon",
+      "Weipeng Zhang",
+      "Songlin Zhao",
+      "Jason Moraes",
+      "Niranjan Bhatia",
+      "Ryan Hamerly",
+      "Mengjie Yu",
+      "Zaijun Chen"
+    ],
+    "summary": "High-performance computing underpins modern artificial intelligence (AI), enabling foundation models, real-time inference and perception in autonomous systems, and data-intensive scientific simulations. Recent advances in quantization techniques utilizing low-precision computation without degrading model accuracy, create new opportunities for analog photonic computing characterized by ultra-high clock rates and low energy consumption. Here we propose and demonstrate a coherent homodyne integrated circuit capable of general matrix multiplication (GEMM) with aggregate throughput that exceeds 1,000 TOPS (tera-operations per second), enabled by massive on-chip optical fanout and parallelism. By leveraging time multiplexing, the required modulator count is reduced from O($N^2$) to O(N), allowing dense integration of record-scale 256 $\\times$ 256 homodyne units (each <0.0064 $mm^2$) within a single reticle. We employ wafer-scale fabricated 64 thin-film lithium niobate (TFLN) transmitters (each over 40-GHz bandwidth with propagation loss of 0.2 dB/cm) to encode data and chip-to-chip coupled to Si/SiN computing circuits (64 channels). Our system achieves up to 7-bit computational accuracy across 8 $\\times$ 8 parallel channels at record computing clockrate 120 Gbaud/s, and 6-bit statistical accuracy across 256 $\\times$ 100 channels at 20-128 Gbaud/s, representing a total throughput of 1,000-6,000 TOPS. Massive parallelism amortizes the optoelectronic (OE) conversion to allow 330-TOPS/W efficiency using foundry-available packaging technology. The system throughput is benchmarked with Qwen2.5-0.5 billion parameter models that generate accurate tokens. High throughput and energy efficiency establish a near-term pathway toward light-based accelerators for large-scale training and low-latency inference from datacenters to edges, accelerating new models toward artificial general intelligence.",
+    "published": "2026-04-20",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.18496v2",
+    "categories": [
+      "cs.ET"
+    ],
+    "primary_category": "cs.ET",
+    "github": null
+  },
+  {
+    "id": "2604.19592v1",
+    "title": "An Efficient Black-Box Reduction from Online Learning to Multicalibration, and a New Route to $Φ$-Regret Minimization",
+    "authors": [
+      "Gabriele Farina",
+      "Juan Carlos Perdomo"
+    ],
+    "summary": "We give a Gordon-Greenwald-Marks (GGM) style black-box reduction from online learning to online multicalibration. Concretely, we show that to achieve high-dimensional multicalibration with respect to a class of functions H, it suffices to combine any no-regret learner over H with an expected variational inequality (EVI) solver. We also prove a converse statement showing that efficient multicalibration implies efficient EVI solving, highlighting how EVIs in multicalibration mirror the role of fixed points in the GGM result for $Φ$-regret.\n  This first set of results resolves the main open question in Garg, Jung, Reingold, and Roth (SODA '24), showing that oracle-efficient online multicalibration with $\\sqrt{T}$-type guarantees is possible in full generality. Furthermore, our GGM-style reduction unifies the analyses of existing online multicalibration algorithms, enables new algorithms for challenging environments with delayed observations or censored outcomes, and yields the first efficient black-box reduction between online learning and multiclass omniprediction.\n  Our second main result is a fine-grained reduction from high-dimensional online multicalibration to (contextual) $Φ$-regret minimization. Together with our first result, this establishes a new route from external regret to Phi-regret that bypasses sophisticated fixed-point or semi-separation machinery, dramatically simplifies a result of Daskalakis, Farina, Fishelson, Pipis, and Schneider (STOC '25) while improving rates, and yields new algorithms that are robust to richer deviation classes, such as those belonging to any reproducing kernel Hilbert space.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19592v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.19336v1",
+    "title": "FedSEA: Achieving Benefit of Parallelization in Federated Online Learning",
+    "authors": [
+      "Harekrushna Sahu",
+      "Pratik Jawanpuria",
+      "Pranay Sharma"
+    ],
+    "summary": "Online federated learning (OFL) has emerged as a popular framework for decentralized decision-making over continuous data streams without compromising client privacy. However, the adversary model assumed in standard OFL typically precludes any potential benefits of parallelization. Further, it fails to adequately capture the different sources of statistical variation in OFL problems. In this paper, we extend the OFL paradigm by integrating a stochastically extended adversary (SEA). Under this framework, the loss function remains fixed across clients over time. However, the adversary dynamically and independently selects the data distribution for each client at each time. We propose the \\algoOFL{} algorithm to solve this problem, which utilizes online stochastic gradient descent at the clients, along with periodic global aggregation via the server. We establish bounds on the global network regret over a time horizon \\(T\\) for two classes of functions: (1) for smooth and convex losses, we prove an \\(\\mathcal{O}(\\sqrt{T})\\) bound, and (2) for smooth and strongly convex losses, we prove an \\(\\mathcal{O}(\\log T)\\) bound. Through careful analysis, we quantify the individual impact of both spatial (across clients) and temporal (over time) data heterogeneity on the regret bounds. Consequently, we identify a regime of mild temporal variation (relative to stochastic gradient variance), where the network regret improves with parallelization. Hence, in the SEA setting, our results improve the existing pessimistic worst-case results in online federated learning.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19336v1",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.19269v1",
+    "title": "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation",
+    "authors": [
+      "Lixiang Wang",
+      "Shaoyun Shi",
+      "Peng Wang",
+      "Wenjin Wu",
+      "Peng Jiang"
+    ],
+    "summary": "To balance effectiveness and efficiency in recommender systems, multi-stage pipelines commonly use lightweight two-tower models for large-scale candidate retrieval. However, the isolated two-tower architecture restricts representation capacity, embedding-space alignment, and cross-feature interactions. Existing solutions such as late interaction and knowledge distillation can mitigate these issues, but often increase latency or are difficult to deploy in online learning settings. We propose Capability Synergy (CS3), an efficient online framework that strengthens two-tower retrievers while preserving real-time constraints. CS3 introduces three mechanisms: (1) Cycle-Adaptive Structure for self-revision via adaptive feature denoising within each tower; (2) Cross-Tower Synchronization to improve alignment through lightweight mutual awareness between towers; and (3) Cascade-Model Sharing to enhance cross-stage consistency by reusing knowledge from downstream models. CS3 is plug-and-play with diverse two-tower backbones and compatible with online learning. Experiments on three public datasets show consistent gains over strong baselines, and deployment in a largescale advertising system yields up to 8.36% revenue improvement across three scenarios while maintaining ms-level latency.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19269v1",
+    "categories": [
+      "cs.IR"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2604.18961v1",
+    "title": "AI-Enabled Image-Based Hybrid Vision/Force Control of Tendon-Driven Aerial Continuum Manipulators",
+    "authors": [
+      "Shayan Sepahvand",
+      "Farrokh Janabi-Sharifi",
+      "Farhad Aghili"
+    ],
+    "summary": "This paper presents an AI-enabled cascaded hybrid vision/force control framework for tendon-driven aerial continuum manipulators based on constant-strain modeling in $SE(3)$ as a coupled system. The proposed controller is designed to enable autonomous, physical interaction with a static environment while stabilizing the image feature error. The developed strategy combines the cascaded fast fixed-time sliding mode control and a radial basis function neural network to cope with the uncertainties in the image acquired by the eye-in-hand monocular camera and the measurements from the force sensing apparatus. This ensures rapid, online learning of the vision- and force-related uncertainties without requiring offline training. Furthermore, the features are extracted via a state-of-the-art graph neural network architecture employed by a visual servoing framework using line features, rather than relying on heuristic geometric line extractors, to concurrently contribute to tracking the desired normal interaction force during contact and regulating the image feature error. A comparative study benchmarks the proposed controller against established rigid-arm aerial manipulation methods, evaluating robustness across diverse scenarios and feature extraction strategies. The simulation and experimental results showcase the effectiveness of the proposed methodology under various initial conditions and demonstrate robust performance in executing manipulation tasks.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.18961v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2604.19654v1",
+    "title": "FEPLB: Exploiting Copy Engines for Nearly Free MoE Load Balancing in Distributed Training",
+    "authors": [
+      "Shuyao Qi",
+      "Haoyuan Liu",
+      "Shizhen Zhao"
+    ],
+    "summary": "Fine-grained, per-micro-batch load balancing is essential for efficient Mixture-of-Experts (MoE) training, yet every prior dynamic scheduling scheme pays for it with extra communication that is hard to hide. Especially on modern bulk-transfer backends such as DeepEP. We make a simple but consequential observation: on the NVIDIA Hopper architecture the NVLink Copy Engine can move data between intra-node GPUs without consuming any SM cycles, effectively providing a nearly free communication channel that runs in parallel with compute kernels. FEPLB turns this idle hardware into a new parallel dimension for MoE load rebalancing. Its Two-Phase Dispatch first routes tokens across nodes via the standard EP backend, then redistributes dynamic-expert tokens and weights within the NVLink domain through the Copy Engine at nearly zero cost, while a lightweight CPU scheduler runs concurrently with static expert computation. Because FEPLB uses only Copy Engine and CPU that are orthogonal to those consumed by EP and PP, it coexists with existing parallel strategies without reconfiguration.\n  On GLM-5's MoE layers (128 experts, no auxiliary loss, up to 16 H100 GPUs), FEPLB reduces the token straggler by 51-70% and the GEMM straggler by 50-68% with no measurable EP communication overhead. Its advantage grows with the EP degree: at EP=8, it achieves 2x lower token straggler than FasterMoE.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19654v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.18909v1",
+    "title": "ChipLight: Cross-Layer Optimization of Chiplet Design with Optical Interconnects for LLM Training",
+    "authors": [
+      "Kangbo Bai",
+      "Zhantong Zhu",
+      "Yifan Ding",
+      "Tianyu Jia"
+    ],
+    "summary": "In large-scale distributed LLM training, communication between devices becomes the key performance bottleneck. Chiplet technology can integrate multiple dies into a package to scale-up node performance with higher bandwidth. Meanwhile, optical interconnect (OI) technology offers long-reach, high-bandwidth links, making it well suited for scale-out networks. The combination of these two technologies has the potential to overcome communication bottlenecks within and across packages. In this work, we present ChipLight, a cross-layer multi-objective design and optimization method for training clusters leveraging chiplet and OI. We first abstract an architecture model for such complex clusters, co-optimizing chiplet architecture, training parallel strategy, and OI network topology. Based on such models, we tailor the design space exploration flow by combining both black-box and white-box methodologies. Evaluated by our experimental results, ChipLight achieves significantly improved training efficiency and provides valuable design insights for the development of future training clusters.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18909v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2602.10900v4",
+    "title": "AI Infrastructure Sovereignty",
+    "authors": [
+      "Sergio Cruzes"
+    ],
+    "summary": "Artificial intelligence has shifted from a software-centric discipline to an infrastructure-driven system. Training and inference at scale now depend on tightly connected data centers, high-capacity optical networks, and energy systems operating close to their physical and environmental limits. In this context, control over data and algorithms is not enough. Real AI sovereignty depends on the ability to deploy, operate, and adapt infrastructure under constraints such as energy availability, sustainability requirements, and network reach. This tutorial-survey introduces the concept of AI infrastructure sovereignty, defined as the ability of a region, operator, or nation to maintain operational control over AI systems within these constraints. The central idea is that sovereignty emerges from the joint design of three layers: AI-oriented data centers, optical transport networks, and control frameworks that provide real-time visibility and coordination across them. We first examine how AI workloads are reshaping data center design, pushing power densities higher, increasing cooling demands, and tightening the relationship with local energy systems. In this setting, factors such as carbon intensity and water usage become hard limits on where and how AI can be deployed. We then look at optical networks as the backbone of distributed AI, showing how latency, capacity, failure domains, and jurisdictional boundaries directly influence what can be achieved in practice. Building on this foundation, the paper highlights the role of telemetry, agentic AI, and digital twins as key enablers of operational sovereignty. Together, they make it possible to monitor, coordinate, and validate system behavior across compute, network, and energy domains in a closed loop.",
+    "published": "2026-02-11",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2602.10900v4",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2604.18800v1",
+    "title": "Optimal Exploration of New Products under Assortment Decisions",
+    "authors": [
+      "Jackie Baek",
+      "Atanas Dinev",
+      "Thodoris Lykouris"
+    ],
+    "summary": "We study online learning for new products on a platform that makes capacity-constrained assortment decisions on which products to offer. For a newly listed product, its quality is initially unknown, and quality information propagates through social learning: when a customer purchases a new product and leaves a review, its quality is revealed to both the platform and future customers. Since reviews require purchases, the platform must feature new products in the assortment (\"explore\") to generate reviews to learn about new products. Such exploration is costly because customer demand for new products is lower than for incumbent products. We characterize the optimal assortments for exploration to minimize regret, addressing two questions. (1) Should the platform offer a new product alone or alongside incumbent products? The former maximizes the purchase probability of the new product but yields lower short-term revenue. Despite the lower purchase probability, we show it is always optimal to pair the new product with the top incumbent products. (2) With multiple new products, should the platform explore them simultaneously or one at a time? We show that the optimal number of new products to explore simultaneously has a simple threshold structure: it increases with the \"potential\" of the new products and, surprisingly, does not depend on their individual purchase probabilities. We also show that two canonical bandit algorithms, UCB and Thompson Sampling, both fail in this setting for opposite reasons: UCB over-explores while Thompson Sampling under-explores. Our results provide structural insights on how platforms should learn about new products through assortment decisions.",
+    "published": "2026-04-20",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.18800v1",
+    "categories": [
+      "cs.SI",
+      "cs.GT",
+      "cs.LG"
+    ],
+    "primary_category": "cs.SI",
+    "github": null
+  },
+  {
+    "id": "2604.08404v2",
+    "title": "Adversarial Label Invariant Graph Data Augmentations for Out-of-Distribution Generalization",
+    "authors": [
+      "Simon Zhang",
+      "Ryan P. DeMilt",
+      "Kun Jin",
+      "Cathy H. Xia"
+    ],
+    "summary": "Out-of-distribution (OoD) generalization occurs when representation learning encounters a distribution shift. This occurs frequently in practice when training and testing data come from different environments. Covariate shift is a type of distribution shift that occurs only in the input data, while the concept distribution stays invariant. We propose RIA - Regularization for Invariance with Adversarial training, a new method for OoD generalization under convariate shift. Motivated by an analogy to $Q$-learning, it performs an adversarial exploration for counterfactual data environments. These new environments are induced by adversarial label invariant data augmentations that prevent a collapse to an in-distribution trained learner. It works with many existing OoD generalization methods for covariate shift that can be formulated as constrained optimization problems. We develop an alternating gradient descent-ascent algorithm to solve the problem in the context of causally generated graph data, and perform extensive experiments on OoD graph classification for various kinds of synthetic and natural distribution shifts. We demonstrate that our method can achieve high accuracy compared with OoD baselines.",
+    "published": "2026-04-09",
+    "updated": "2026-04-20",
+    "pdf_url": "https://arxiv.org/pdf/2604.08404v2",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
