@@ -1,0 +1,192 @@
+[
+  {
+    "id": "2604.20331v1",
+    "title": "Surrogate modeling for interpreting black-box LLMs in medical predictions",
+    "authors": [
+      "Changho Han",
+      "Songsoo Kim",
+      "Dong Won Kim",
+      "Leo Anthony Celi",
+      "Jaewoong Kim",
+      "SungA Bae",
+      "Dukyong Yoon"
+    ],
+    "summary": "Large language models (LLMs), trained on vast datasets, encode extensive real-world knowledge within their parameters, yet their black-box nature obscures the mechanisms and extent of this encoding. Surrogate modeling, which uses simplified models to approximate complex systems, can offer a path toward better interpretability of black-box models. We propose a surrogate modeling framework that quantitatively explains LLM-encoded knowledge. For a specific hypothesis derived from domain knowledge, this framework approximates the latent LLM knowledge space using observable elements (input-output pairs) through extensive prompting across a comprehensive range of simulated scenarios. Through proof-of-concept experiments in medical predictions, we demonstrate our framework's effectiveness in revealing the extent to which LLMs \"perceive\" each input variable in relation to the output. Particularly, given concerns that LLMs may perpetuate inaccuracies and societal biases embedded in their training data, our experiments using this framework quantitatively revealed both associations that contradict established medical knowledge and the persistence of scientifically refuted racial assumptions within LLM-encoded knowledge. By disclosing these issues, our framework can act as a red-flag indicator to support the safe and reliable application of these models.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20331v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.20304v1",
+    "title": "LLM-guided phase diagram construction through high-throughput experimentation",
+    "authors": [
+      "Ryo Tamura",
+      "Haruhiko Morito",
+      "Yuna Oikawa",
+      "Guillaume Deffrennes",
+      "Shoichi Matsuda",
+      "Naruki Yoshikawa",
+      "Tomoaki Takayama",
+      "Taichi Abe",
+      "Koji Tsuda",
+      "Kei Terayama"
+    ],
+    "summary": "Constructing phase diagrams for multicomponent alloys requires extensive experimental measurements and is a time-consuming task. Here we investigate whether large language models (LLMs) can guide experimental planning for phase diagram construction. In our framework, a general-purpose LLM serves as the experimental planner, suggesting compositions for measurement at each cycle in a closed loop with high-throughput synthesis and X-ray diffraction phase identification. Using this framework, we experimentally constructed the ternary phase diagram of the Co-Al-Ge system at 900 degree C through iterative synthesis and characterization. We compared two strategies that differ in how the initial compositions are selected: one uses predictions from a domain-specific LLM trained on phase diagram data (aLLoyM), while the other relies solely on the general-purpose LLM. The two strategies exhibited complementary strengths. aLLoyM directed the initial measurements toward compositionally complex regions in the interior of the ternary diagram, enabling the earliest discovery of all three novel phases that form only in the ternary system. In contrast, the general-purpose LLM adopted a textbook-like approach which efficiently identified a larger number of phases in fewer cycles. In addition, a simulated benchmark comparing the LLM against conventional machine learning confirmed that the LLM achieves more efficient exploration. The results demonstrate that LLMs have high potential as experimental planners for phase diagram construction.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20304v1",
+    "categories": [
+      "cond-mat.mtrl-sci",
+      "cs.AI"
+    ],
+    "primary_category": "cond-mat.mtrl-sci",
+    "github": null
+  },
+  {
+    "id": "2604.14116v2",
+    "title": "TREX: Automating LLM Fine-tuning via Agent-Driven Tree-based Exploration",
+    "authors": [
+      "Zerun Ma",
+      "Guoqiang Wang",
+      "Xinchen Xie",
+      "Yicheng Chen",
+      "He Du",
+      "Bowen Li",
+      "Yanan Sun",
+      "Wenran Liu",
+      "Kai Chen",
+      "Yining Li"
+    ],
+    "summary": "While Large Language Models (LLMs) have empowered AI research agents to perform isolated scientific tasks, automating complex, real-world workflows, such as LLM training, remains a significant challenge. In this paper, we introduce TREX, a multi-agent system that automates the entire LLM training life-cycle. By orchestrating collaboration between two core modules-the Researcher and the Executor-the system seamlessly performs requirement analysis, open-domain literature and data research, formulation of training strategies, preparation of data recipes, and model training and evaluation. The multi-round experimental process is modeled as a search tree, enabling the system to efficiently plan exploration paths, reuse historical results, and distill high-level insights from iterative trials. To evaluate the capability of automated LLM training, we construct FT-Bench, a benchmark comprising 10 tasks derived from real-world scenarios, ranging from optimizing fundamental model capabilities to enhancing performance on domain-specific tasks. Experimental results demonstrate that the TREX agent consistently optimizes model performance on target tasks.",
+    "published": "2026-04-15",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.14116v2",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.13899v2",
+    "title": "Do We Still Need Humans in the Loop? Comparing Human and LLM Annotation in Active Learning for Hostility Detection",
+    "authors": [
+      "Ahmad Dawar Hakimi",
+      "Lea Hirlimann",
+      "Isabelle Augenstein",
+      "Hinrich Schütze"
+    ],
+    "summary": "Instruction-tuned LLMs can annotate thousands of instances from a short prompt at negligible cost. This raises two questions for active learning (AL): can LLM labels replace human labels within the AL loop, and does AL remain necessary when entire corpora can be labelled at once? We investigate both questions on a new dataset of 277,902 German political TikTok comments (25,974 LLM-labelled, 5,000 human-annotated), comparing seven annotation strategies across four encoders to detect anti-immigrant hostility. A classifier trained on 25,974 GPT-5.2 labels (\\$43) achieves comparable F1-Macro to one trained on 3,800 human annotations (\\$316). Active learning offers little advantage over random sampling in our pre-enriched pool and delivers lower F1 than full LLM annotation at the same cost. However, comparable aggregate F1 masks a systematic difference in error structure: LLM-trained classifiers over-predict the positive class relative to the human gold standard. This divergence concentrates in topically ambiguous discussions where the distinction between anti-immigrant hostility and policy critique is most subtle, suggesting that annotation strategy should be guided not by aggregate F1 alone but by the error profile acceptable for the target application.",
+    "published": "2026-04-15",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.13899v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.20300v1",
+    "title": "FSFM: A Biologically-Inspired Framework for Selective Forgetting of Agent Memory",
+    "authors": [
+      "Yingjie Gu",
+      "Bo Xiong",
+      "Yijuan Guo",
+      "Chao Li",
+      "Xiaojing Zhang",
+      "Liqiang Wang",
+      "Pengcheng Ren",
+      "Qi Sun",
+      "Jingyao Ma",
+      "Shidang Shi"
+    ],
+    "summary": "For LLM agents, memory management critically impacts efficiency, quality, and security. While much research focuses on retention, selective forgetting--inspired by human cognitive processes (hippocampal indexing/consolidation theory and Ebbinghaus forgetting curve)--remains underexplored. We argue that in resource-constrained environments, a well-designed forgetting mechanism is as crucial as remembering, delivering benefits across three dimensions: (1) efficiency via intelligent memory pruning, (2) quality by dynamically updating outdated preferences and context, and (3) security through active forgetting of malicious inputs, sensitive data, and privacy-compromising content. Our framework establishes a taxonomy of forgetting mechanisms: passive decay-based, active deletion-based, safety-triggered, and adaptive reinforcement-based. Building on advances in LLM agent architectures and vector databases, we present detailed specifications, implementation strategies, and empirical validation from controlled experiments. Results show significant improvements: access efficiency (+8.49%), content quality (+29.2% signal-to-noise ratio), and security performance (100% elimination of security risks). Our work bridges cognitive neuroscience and AI systems, offering practical solutions for real-world deployment while addressing ethical and regulatory compliance. The paper concludes with challenges and future directions, establishing selective forgetting as a fundamental capability for next-generation LLM agents operating in real-world, resource-constrained scenarios. Our contributions align with AI-native memory systems and responsible AI development.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20300v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2604.20121v1",
+    "title": "A GPU-Accelerated Framework for Multi-Attribute Range Filtered Approximate Nearest Neighbor Search",
+    "authors": [
+      "Zhonggen Li",
+      "Haoran Yu",
+      "Yifan Zhu",
+      "Yunjun Gao"
+    ],
+    "summary": "Range-filtered approximate nearest neighbor search (RFANNS) is increasingly critical for modern vector databases. However, existing solutions suffer from severe index inflation and construction overhead. Furthermore, they rely exclusively on CPUs for the heavy indexing and query processing, failing to leverage the powerful computational capabilities of GPUs. In this paper, we present Garfield, a GPU-accelerated framework for multi-attribute range filtered ANNS that overcomes these bottlenecks through designing a lightweight index structure and hardware-aware execution pipeline. Garfield introduces the GMG index, which partitions data into cells and builds local graph indexes. By adding a constant number of cross-cell edges, it guarantees linear storage and indexing overhead. For queries, Garfield utilizes a cluster-guided ordering strategy that reorders query-relevant cells, enabling a highly efficient cell-by-cell traversal on the GPU that aggressively reuses candidates as entry points across cells. To handle datasets exceeding GPU memory, Garfield features a cell-oriented out-of-core pipeline. It dynamically schedules cells to minimize the number of active queries per batch and overlaps GPU computation with CPU-to-GPU index streaming. Extensive evaluations demonstrate that Garfield reduces index size by 4.4x, while delivering 119.8x higher throughput than state-of-the-art RFANNS methods.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20121v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2604.20296v1",
+    "title": "Online Survival Analysis: A Bandit Approach under Cox PH Model",
+    "authors": [
+      "Yang Xu",
+      "Wenbin Lu",
+      "Rui Song"
+    ],
+    "summary": "Survival analysis is a widely used statistical framework for modeling time-to-event data under censoring. Classical methods, such as the Cox proportional hazards (Cox PH) model, offer a semiparametric approach to estimating the effects of covariates on the hazard function. Despite its importance, survival analysis has been largely unexplored in online settings, particularly within the bandit framework, where decisions must be made sequentially to optimize treatments as new data arrive over time. In this work, we take an initial step toward integrating survival analysis into a purely online learning setting under the Cox PH model, addressing key challenges including staggered entry, delayed feedback, and right censoring. We adapt three canonical bandit algorithms to balance exploration and exploitation, with theoretical guarantees of sublinear regret bounds. Extensive simulations and semi-real experiments using SEER cancer data demonstrate that our approach enables rapid and effective learning of near-optimal treatment policies.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2604.20296v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2604.19877v1",
+    "title": "Super Apriel: One Checkpoint, Many Speeds",
+    "authors": [
+      "SLAM Labs",
+      ":",
+      "Oleksiy Ostapenko",
+      "Raymond Li",
+      "Torsten Scholak",
+      "Alireza Mousavi-Hosseini",
+      "Aman Tiwari",
+      "Denis Kocetkov",
+      "Joel Lamy Poirier",
+      "Kelechi Ogueji",
+      "Nanda H Krishna",
+      "Rafael Pardinas",
+      "Sathwik Tejaswi Madhusudhan",
+      "Shruthan Radhakrishna",
+      "Srinivas Sunkara",
+      "Valerie Becaert"
+    ],
+    "summary": "We release Super Apriel, a 15B-parameter supernet in which every decoder layer provides four trained mixer choices -- Full Attention (FA), Sliding Window Attention (SWA), Kimi Delta Attention (KDA), and Gated DeltaNet (GDN). A placement selects one mixer per layer; placements can be switched between requests at serving time without reloading weights, enabling multiple speed presets from a single checkpoint. The shared checkpoint also enables speculative decoding without a separate draft model. The all-FA preset matches the Apriel 1.6 teacher on all reported benchmarks; recommended hybrid presets span $2.9\\times$ to $10.7\\times$ decode throughput at 96% to 77% quality retention, with throughput advantages that compound at longer context lengths. With four mixer types across 48 layers, the configuration space is vast. A surrogate that predicts placement quality from the per-layer mixer assignment makes the speed-quality landscape tractable and identifies the best tradeoffs at each speed level. We investigate whether the best configurations at each speed level can be identified early in training or only after convergence. Rankings stabilize quickly at 0.5B scale, but the most efficient configurations exhibit higher instability at 15B, cautioning against extrapolation from smaller models. Super Apriel is trained by stochastic distillation from a frozen Apriel 1.6 teacher, followed by supervised fine-tuning. We release the supernet weights, Fast-LLM training code, vLLM serving code, and a placement optimization toolkit.",
+    "published": "2026-04-21",
+    "updated": "2026-04-21",
+    "pdf_url": "https://arxiv.org/pdf/2604.19877v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
