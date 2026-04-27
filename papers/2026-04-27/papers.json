@@ -1,0 +1,138 @@
+[
+  {
+    "id": "2604.21251v2",
+    "title": "CAP: Controllable Alignment Prompting for Unlearning in LLMs",
+    "authors": [
+      "Zhaokun Wang",
+      "Jinyu Guo",
+      "Jingwen Pu",
+      "Hongli Pu",
+      "Meng Yang",
+      "Xunlei Chen",
+      "Jie Ou",
+      "Wenyi Li",
+      "Guangchun Luo",
+      "Wenhong Tian"
+    ],
+    "summary": "Large language models (LLMs) trained on unfiltered corpora inherently risk retaining sensitive information, necessitating selective knowledge unlearning for regulatory compliance and ethical safety. However, existing parameter-modifying methods face fundamental limitations: high computational costs, uncontrollable forgetting boundaries, and strict dependency on model weight access. These constraints render them impractical for closed-source models, yet current non-invasive alternatives remain unsystematic and reliant on empirical experience. To address these challenges, we propose the Controllable Alignment Prompting for Unlearning (CAP) framework, an end-to-end prompt-driven unlearning paradigm. CAP decouples unlearning into a learnable prompt optimization process via reinforcement learning, where a prompt generator collaborates with the LLM to suppress target knowledge while preserving general capabilities selectively. This approach enables reversible knowledge restoration through prompt revocation. Extensive experiments demonstrate that CAP achieves precise, controllable unlearning without updating model parameters, establishing a dynamic alignment mechanism that overcomes the transferability limitations of prior methods.",
+    "published": "2026-04-23",
+    "updated": "2026-04-24",
+    "pdf_url": "https://arxiv.org/pdf/2604.21251v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.22624v1",
+    "title": "Compositional Online Learning for Multi-Objective System Co-Design",
+    "authors": [
+      "Meshal Alharbi",
+      "Munther A. Dahleh",
+      "Gioele Zardini"
+    ],
+    "summary": "Many engineered systems must balance competing objectives, such as performance and safety, cost and reliability, or efficiency and sustainability, and are naturally modeled as compositions of interacting subsystems. We study online multi-objective decision-making in monotone co-design, where functionalities and resources are partially ordered, and the goal is to identify the target-feasible antichain of non-dominated trade-offs using few expensive evaluations. We introduce optimistic evaluators: history-dependent bounds on functionality and resource mappings that enable safe elimination of implementations before full evaluation. Based on these evaluators, we develop an elimination-based rejection-sampling algorithm, prove its soundness, and show that the admissible region shrinks monotonically as information accumulates. We instantiate the framework under monotonicity, Lipschitz continuity, and linear-parametric structure. For compositional co-design problems modeled by multigraphs, we show how local optimistic certificates propagate through the tractable remainder of the graph to yield system-level optimistic feasibility and resource bounds. Experiments on multi-robot fleet design, intermodal mobility systems, and synthetic monotone and Lipschitz benchmarks show substantial sample-efficiency gains over uniform sampling, Bayesian optimization, and multi-objective evolutionary algorithms.",
+    "published": "2026-04-24",
+    "updated": "2026-04-24",
+    "pdf_url": "https://arxiv.org/pdf/2604.22624v1",
+    "categories": [
+      "math.OC",
+      "eess.SY"
+    ],
+    "primary_category": "math.OC",
+    "github": null
+  },
+  {
+    "id": "2604.22354v1",
+    "title": "One Shot Learning for Edge Detection on Point Clouds",
+    "authors": [
+      "Zhikun Tu",
+      "Yuhe Zhang",
+      "Yiou Jia",
+      "Kang Li",
+      "Daniel Cohen-Or"
+    ],
+    "summary": "Each scanner possesses its unique characteristics and exhibits its distinct sampling error distribution. Training a network on a dataset that includes data collected from different scanners is less effective than training it on data specific to a single scanner. Therefore, we present a novel one-shot learning method allowing for edge extraction on point clouds, by learning the specific data distribution of the target point cloud, and thus achieve superior results compared to networks that were trained on general data distributions. More specifically, we present how to train a lightweight network named OSFENet (One-Shot edge Feature Extraction Network), by designing a filtered-KNN-based surface patch representation that supports a one-shot learning framework. Additionally, we introduce an RBF_DoS module, which integrates Radial Basis Function-based Descriptor of the Surface patch, highly beneficial for the edge extraction on point clouds. The advantage of the proposed OSFENet is demonstrated through comparative analyses against 7 baselines on the ABC dataset, and its practical utility is validated by results across diverse real-scanned datasets, including indoor scenes like S3DIS dataset, and outdoor scenes such as the Semantic3D dataset and UrbanBIS dataset.",
+    "published": "2026-04-24",
+    "updated": "2026-04-24",
+    "pdf_url": "https://arxiv.org/pdf/2604.22354v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.22117v1",
+    "title": "PermaFrost-Attack: Stealth Pretraining Seeding(SPS) for planting Logic Landmines During LLM Training",
+    "authors": [
+      "Harsh Kumar",
+      "Rahul Maity",
+      "Tanmay Joshi",
+      "Aman Chadha",
+      "Vinija Jain",
+      "Suranjana Trivedy",
+      "Amitava Das"
+    ],
+    "summary": "Aligned large language models(LLMs) remain vulnerable to adversarial manipulation, and their dependence on web-scale pretraining creates a subtle but serious attack surface. We study Stealth Pretraining Seeding (SPS), a new attack family in which adversaries distribute small amounts of poisoned content across stealth websites, expose them to web crawlers through robots.txt, and thereby increase the likelihood that such content is absorbed into future training corpora derived from sources such as Common Crawl. Because each individual payload is tiny, diffuse, and superficially benign, the attack is difficult to detect during dataset construction or filtering. The result is a latent form of poisoning: dormant logic landmines embedded during pretraining that remain largely invisible under standard evaluation, yet can later be activated by precise alphanumeric triggers such as <00TRIGGER00> to bypass safeguards. We call this attack PermaFrost, by analogy to Arctic permafrost: harmful material can remain frozen, buried, and unnoticed for long periods, only to resurface when conditions allow. We operationalize this threat through PermaFrost-Attack, a controlled framework for latent conceptual poisoning, together with a suite of geometric diagnostics: Thermodynamic Length, Spectral Curvature, and the Infection Traceback Graph. Across multiple model families and scales, we show that SPS is broadly effective, inducing persistent unsafe behavior while often evading alignment defenses. Our results identify SPS as a practical and underappreciated threat to future foundation models. This paper introduces a novel geometric diagnostic lens for systematically examining latent model behavior, providing a principled foundation for detecting, characterizing, and understanding vulnerabilities that may remain invisible to standard evaluation.",
+    "published": "2026-04-23",
+    "updated": "2026-04-23",
+    "pdf_url": "https://arxiv.org/pdf/2604.22117v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.22002v1",
+    "title": "When Cow Urine Cures Constipation on YouTube: Limits of LLMs in Detecting Culture-specific Health Misinformation",
+    "authors": [
+      "Anamta Khan",
+      "Ratna Kandala",
+      "Deepti",
+      "Sheza Munir",
+      "Joyojeet Pal"
+    ],
+    "summary": "Social media platforms have become primary channels for health information in the Global South. Using gomutra (cow urine) discourse on YouTube in India as a case study, we present a post-facto Large Language Model (LLM)-assisted discourse analysis of 30 multilingual transcripts showing that promotional content blends sacred traditional language with pseudo-scientific claims in ways that sophisticated debunking content itself mirrors, creating a rhetorical register that LLMs, trained predominantly on Western corpora, are systematically ill-equipped to analyse. Varying prompt tone across three LLMs (GPT-4o, Gemini 2.5 Pro, DeepSeek-V3.1), we find that culturally embedded health misinformation does not look like ordinary misinformation, and this cultural obfuscation extends to gendered rhetoric and prompt design, compounding analytical unreliability. Our findings argue that cultural competency in LLM-assisted discourse analysis cannot be retrofitted through prompt engineering alone.",
+    "published": "2026-04-23",
+    "updated": "2026-04-23",
+    "pdf_url": "https://arxiv.org/pdf/2604.22002v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.13847v2",
+    "title": "SparseBalance: Load-Balanced Long Context Training with Dynamic Sparse Attention",
+    "authors": [
+      "Hongtao Xu",
+      "Jianchao Tan",
+      "Yuxuan Hu",
+      "Pengju Lu",
+      "Hongyu Wang",
+      "Pingwei Sun",
+      "Yerui Sun",
+      "Yuchen Xie",
+      "Xunliang Cai",
+      "Mingzhen Li",
+      "Weile Jia"
+    ],
+    "summary": "While sparse attention mitigates the computational bottleneck of long-context LLM training, its distributed training process exhibits extreme heterogeneity in both \\textit{1)} sequence length and \\textit{2)} sparsity sensitivity, leading to a severe imbalance problem and sub-optimal model accuracy. Existing algorithms and training frameworks typically focus on single issue, failing to systematically co-optimize these two problems. Therefore, we propose SparseBalance, a novel algorithm-system co-design framework, which exploits the sparsity and sequence heterogeneity to optimize model accuracy and system efficiency jointly. First, we propose workload-aware dynamic sparsity tuning, which employs a bidirectional sparsity adjustment to eliminate stragglers and exploit inherent bubbles for free accuracy. Second, we propose a sparsity-aware batching strategy to achieve coarse-grained balance, which complements dynamic sparsity tuning. Experimental results demonstrate that SparseBalance achieves up to a 1.33$\\times$ end-to-end speedup while still improving the long-context capability by 0.46\\% on the LongBench benchmark.",
+    "published": "2026-04-15",
+    "updated": "2026-04-23",
+    "pdf_url": "https://arxiv.org/pdf/2604.13847v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
