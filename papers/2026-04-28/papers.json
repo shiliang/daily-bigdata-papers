@@ -1,0 +1,293 @@
+[
+  {
+    "id": "2604.24088v1",
+    "title": "TACO: Efficient Communication Compression of Intermediate Tensors for Scalable Tensor-Parallel LLM Training",
+    "authors": [
+      "Man Liu",
+      "Xingchen Liu",
+      "Xingjian Tian",
+      "Bing Lu",
+      "Shengkay Lyu",
+      "Shengquan Yin",
+      "Wenjing Huang",
+      "Zheng Wei",
+      "Hairui Zhao",
+      "Guangming Tan",
+      "Dingwen Tao"
+    ],
+    "summary": "Handling communication overhead in large-scale tensor-parallel training remains a critical challenge due to the dense, near-zero distributions of intermediate tensors, which exacerbate errors under frequent communication and introduce significant computational overhead during compression. To this end, we propose TACO (Tensor-parallel Adaptive COmmunication compression), a robust FP8-based framework for compressing TP intermediate tensors. First, we employ a data-driven reshaping strategy combined with an Adaptive Scale-Hadamard Transform to enable high-fidelity FP8 quantization, while its Dual-Scale Quantization mechanism ensures numerical stability throughout training. Second, we design a highly fused compression operator to reduce memory traffic and kernel launch overhead, allowing efficient overlap with communication. Finally, we integrate TACO with existing state-of-the-art methods for Data and Pipeline Parallelism to develop a compression-enabled 3D-parallel training framework. Detailed experiments on GPT models and Qwen model demonstrate up to 1.87X end-to-end throughput improvement while maintaining near-lossless accuracy, validating the effectiveness and efficiency of TACO in large-scale training.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24088v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.24013v1",
+    "title": "FlashOverlap: Minimizing Tail Latency in Communication Overlap for Distributed LLM Training",
+    "authors": [
+      "Rezaul Karim",
+      "Austin Wen",
+      "Wang Zongzuo",
+      "Weiwei Zhang",
+      "Yang Liu",
+      "Walid Ahmed"
+    ],
+    "summary": "The rapid growth in the size of large language models has necessitated the partitioning of computational workloads across accelerators such as GPUs, TPUs, and NPUs. However, these parallelization strategies incur substantial data communication overhead significantly hindering computational efficiency. While communication-computation overlap presents a promising direction, existing data slicing based solutions suffer from tail latency. To overcome this limitation, this research introduces a novel communication-computation overlap technique to eliminate this tail latency in state of the art overlap methods for distributed LLM training. The aim of this technique is to effectively mitigate communication bottleneck of tensor parallelism and data parallelism for distributed training and inference. In particular, we propose a novel method termed Flash-Overlap that replaces conventional collective operations of reduce-scatter and all-gather with decomposed peer-to-peer (P2P) communication and schedules partitioned computations to enable fine-grained overlap. Our method provides an exact algorithm for reducing communication overhead that eliminates tail latency. Moreover, it presents a versatile solution compatible with data-parallel training and various tensor-level parallelism strategies, including TPSP and UP. Experimental evaluations demonstrate that our technique consistently achieves lower latency, superior Model FLOPS Utilization (MFU), and high throughput.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24013v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.23932v1",
+    "title": "MatchRDMA: A Segmented and Rate-Matched Long-Haul RDMA Scheme for Geo-distributed LLM Training over OTN",
+    "authors": [
+      "Jun Dai",
+      "Xiaorun Wang",
+      "Xingde Li",
+      "Zheng Yang",
+      "Kexiong Fang",
+      "Zhiqun Gu",
+      "Hongxiang Wang",
+      "Yuefeng Ji",
+      "Jiawei Zhang"
+    ],
+    "summary": "We propose MatchRDMA, a proactive, segmented, and rate-matched long-haul RDMA scheme for geo-distributed LLM training over OTN. By coordinating source and destination OTN rates, it improves inter-DC throughput by up to 20x compared with conventional RDMA, and reduces destination-OTN buffer occupancy by up to 62.7%.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.23932v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2604.24552v1",
+    "title": "BoomHQ: Learning to Boost Multiple Hybrid Queries on Vector DBMSs",
+    "authors": [
+      "Ermu Qiu",
+      "Tianyi Chen",
+      "Jun Gao",
+      "Xing Wei",
+      "Yaofeng Tu",
+      "Yinjun Han",
+      "Yang Lin"
+    ],
+    "summary": "Hybrid queries, which combine vector nearest neighbor searches with scalar predicates, represent a fundamental challenge in managing vector databases. Existing methods often restrict the number of vector columns involved or the complexity of scalar predicates, thereby limiting their flexibility in handling diverse query patterns. Moreover, these approaches typically do not fully leverage the correlations between scalar and vector attributes, or the distributional patterns observed from query vector neighborhoods. To address these limitations, we introduce BoomHQ, a learning-based framework to boost multiple hybrid queries on vector DBMSs. First, BoomHQ models the correlation between vector and scalar attributes using an autoencoder-based architecture, which is also friendly to data updates. Second, BoomHQ captures prevailing query patterns, particularly using estimated selectivity of scalar predicates within the neighborhood of a query vector. Guided by these two key features, BoomHQ predicts the execution hints and rewrites the original query into an optimized version. Furthermore, we extend well-known benchmarks by introducing vector and scalar data with inherent correlations to better evaluate query execution. Experimental results demonstrate that for multiple hybrid queries at specified recall thresholds, our method achieves a 2x average and over 25x peak speedup compared to the state-of-the-art. Additionally, BoomHQ shows strong robustness against data updates and consistent optimization effectiveness across three representative vector database systems.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24552v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2604.24469v1",
+    "title": "Geometric Analysis of Self-Supervised Vision Representations for Semantic Image Retrieval",
+    "authors": [
+      "Esteban Rodríguez-Betancourt",
+      "Edgar Casasola-Murillo"
+    ],
+    "summary": "Content-based image retrieval (CBIR) systems enable users to search images based on visual content instead of relying on metadata. The text domain has benefited from vector search of representations created with unsupervised methods such as BERT. However, modern self-supervised learning methods for vision are mostly not reported in CBIR-related literature, instead relying on supervised models or multi-modal methods that align text and vision.\n  We evaluate how the representations learned by modern self-supervised learning methods for vision perform under typical retrieval stacks that leverage vector databases and nearest neighbor search. Our evaluation reveals that the latent space geometry impacts approximate nearest neighbor (ANN) indexing. Specifically, highly anisotropic representations with high skewness produced by several modern SSL methods degrade the performance of partition-based and hashing-based search, even if their own linear probe or K-NN accuracy is not affected. In contrast, representations with higher isotropy and local purity better satisfy the distance-based assumptions of ANN indexes, leading to improved semantic retrieval performance.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24469v1",
+    "categories": [
+      "cs.IR",
+      "cs.CV"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2604.24447v1",
+    "title": "Characterizing Vision-Language-Action Models across XPUs: Constraints and Acceleration for On-Robot Deployment",
+    "authors": [
+      "Kaijun Zhou",
+      "Qiwei Chen",
+      "Da Peng",
+      "Zhiyang Li",
+      "Xijun Li",
+      "Jinyu Gu"
+    ],
+    "summary": "Vision-Language-Action (VLA) models are promising for generalist robot control, but on-robot deployment is bottlenecked by real-time inference under tight cost and energy budgets. Most prior evaluations rely on desktop-grade GPUs, obscuring the trade-offs and opportunities offered by heterogeneous edge accelerators (GPUs/XPUs/NPUs). We present a systematic analysis for low-cost VLA deployment via model-hardware co-characterization. First, we build a cross-accelerator leaderboard and evaluate model-hardware pairs under CET (Cost, Energy, Time), showing that right-sized edge devices can be more cost-/energy-efficient than flagship GPUs while meeting control-rate constraints. Second, using in-depth profiling, we uncover a consistent two-phase inference pattern: a compute-bound VLM backbone followed by a memory-bound Action Expert, which induces phase-dependent underutilization and hardware inefficiency. Finally, guided by these insights, we propose DP-Cache and V-AEFusion to reduce diffusion redundancy and enable asynchronous pipeline parallelism, achieving up to 2.9x speedup on GPUs and 6x on edge NPUs with only marginal success degradation. The example leaderboard website is available at: https://vla-leaderboard-01.vercel.app/.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24447v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2604.24555v1",
+    "title": "Efficient learning by implicit exploration in bandit problems with side observations",
+    "authors": [
+      "Tomas Kocak",
+      "Gergely Neu",
+      "Michal Valko",
+      "Remi Munos"
+    ],
+    "summary": "We consider online learning problems under a partial observability model capturing situations where the information conveyed to the learner is between full information and bandit feedback. In the simplest variant, we assume that in addition to its own loss, the learner also gets to observe losses of some other actions. The revealed losses depend on the learner's action and a directed observation system chosen by the environment. For this setting, we propose the first algorithm that enjoys near-optimal regret guarantees without having to know the observation system before selecting its actions. Along similar lines, we also define a new partial information setting that models online combinatorial optimization problems where the feedback received by the learner is between semi-bandit and full feedback. As the predictions of our first algorithm cannot be always computed efficiently in this setting, we propose another algorithm with similar properties and with the benefit of always being computationally efficient, at the price of a slightly more complicated tuning mechanism. Both algorithms rely on a novel exploration strategy called implicit exploration, which is shown to be more efficient both computationally and information-theoretically than previously studied exploration strategies for the problem.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24555v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.24093v1",
+    "title": "Learning is Revelation in Disguise: Improved Regret and Equivalence Results for Dynamic Pricing",
+    "authors": [
+      "Shiliang Zuo"
+    ],
+    "summary": "We study dynamic pricing where a seller repeatedly interacts with a strategic, non-myopic buyer who has a fixed private valuation and discounts future utility. Prior work focused exclusively on posted-price mechanisms, which only extract binary accept/reject signals. For our first result, we show that menu mechanisms-offering allocation-payment contracts are able to achieve $O(T_γ\\log T_γ)$ regret, where $T_γ$ is the buyer's effective discounted time horizon, improving all prior bounds. Our second contribution is more conceptual in nature. The problem of dynamic pricing sits at the intersection of two paradigms: adaptive learning in computer science / machine learning and revelation-principle-based mechanism design in economics-yet their relationship has remained unclear. We establish a fundamental equivalence: indirect learning mechanisms and direct revelation mechanisms achieve identical optimal regret. The adaptive, data-driven algorithms of online learning and explicit type elicitation are two languages towards solving the same problem; hence, learning is revelation in disguise.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24093v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2604.24016v1",
+    "title": "Geometry-Aware Offline-to-Online Learning in Linear Contextual Bandits",
+    "authors": [
+      "Zean Han",
+      "Ruihan Lin",
+      "Zezhen Ding",
+      "Jiheng Zhang"
+    ],
+    "summary": "We study offline-to-online learning in linear contextual bandits with biased offline regression data: the offline parameter need not match the online one, so history should not be treated as a single warm start. We model directional transfer with a shift certificate $(M_{\\mathrm{shift}},ρ)$ and offline ridge estimation, yielding a geometry-aware confidence region for the online parameter rather than an isotropic radius. We propose \\emph{Ellipsoidal-MINUCB}, which combines a standard online branch with an offline-informed pooled branch and uses offline information only when it tightens uncertainty. With high probability, regret is bounded by the minimum of a standard SupLinUCB-style fallback and a pooled term that separates statistical width from a certificate-weighted shift penalty. Under a simple alignment condition, the pooled term further simplifies to a rate governed by an effective dimension induced by the offline geometry. We also show that a purely Euclidean (scalar) shift bound, by itself, does not determine which feature directions are transferable. Beyond this fixed certificate, we show how to learn a data-driven certificate from data at finitely many refresh times and establish a high-probability regret bound for Ellipsoidal-MINUCB with epoch-wise learned certificates. Experiments match the main prediction: gains are strongest at intermediate horizons when offline coverage and transferability align, while the method otherwise tracks the safe online baseline.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24016v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.24073v1",
+    "title": "FreeScale: Distributed Training for Sequence Recommendation Models with Minimal Scaling Cost",
+    "authors": [
+      "Chenhao Feng",
+      "Haoli Zhang",
+      "Shakhzod Ali-Zade",
+      "Yanli Zhao",
+      "Liang Luo",
+      "Jennifer Cao",
+      "Lisen Deng",
+      "Siqiao Chen",
+      "Chenyu Zhao",
+      "Tristan Rice",
+      "Daniel Johnson",
+      "Min Si",
+      "Tiantu Xu",
+      "Yi Zhang",
+      "Siqi Yan",
+      "Chuanhao Zhuge",
+      "Min Ni",
+      "Bi Xue",
+      "Qunshu Zhang",
+      "Shen Li"
+    ],
+    "summary": "Modern industrial Deep Learning Recommendation Models typically extract user preferences through the analysis of sequential interaction histories, subsequently generating predictions based on these derived interests. The inherent heterogeneity in data characteristics frequently result in substantial under-utilization of computational resources during large-scale training, primarily due to computational bubbles caused by severe stragglers and slow blocking communications. This paper introduces FreeScale, a solution designed to (1) mitigate the straggler problem through meticulously load balanced input samples (2) minimize the blocking communication by overlapping prioritized embedding communications with computations (3) resolve the GPU resource competition during computation and communication overlapping by communicating through SM-Free techniques. Empirical evaluation demonstrates that FreeScale achieves up to 90.3% reduction in computational bubbles when applied to real-world workloads running on 256 H100 GPUs.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24073v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC",
+      "cs.IR"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.23100v1",
+    "title": "From Language to Logic: Bridging LLMs & Formal Representations for RTL Assertion Generation",
+    "authors": [
+      "Nowfel Mashnoor",
+      "Hadi Kamali",
+      "Kimia Azar"
+    ],
+    "summary": "SystemVerilog Assertions (SVA) are essential for formal verification of digital hardware, yet their manual creation demands significant expertise in both the design under verification and temporal logic. Recent studies have explored using large language models (LLMs) to automate SVA generation, but existing approaches suffer from incorrect signal references, missing timing constraints, and lack of formal correctness guarantees. This paper presents ProofLoop, a tool-augmented ReAct agent that generates SVA from natural-language specifications using a solver-in-the-loop approach. The agent operates in two phases: Phase A autonomously gathers design context by invoking EDA and formal tools, including semantic search over an AST-indexed vector database and JasperGold structural queries, while Phase B generates SVA and iteratively refines it using JasperGold formal proof feedback over up to fixed (here 3) verification rounds. We evaluate ProofLoop on FVEval Design2SVA design benchmarks and demonstrate that this framework can achieve 93.7% syntax correctness and 82.0% functional correctness. An ablation study confirms that each component, i.e., retrieval-augmented generation (RAG), JasperGold tools, and the verification loop contributes significantly (and orthogonally).",
+    "published": "2026-04-25",
+    "updated": "2026-04-25",
+    "pdf_url": "https://arxiv.org/pdf/2604.23100v1",
+    "categories": [
+      "cs.CR",
+      "cs.AR",
+      "cs.LO"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2604.20121v2",
+    "title": "A GPU-Accelerated Framework for Multi-Attribute Range Filtered Approximate Nearest Neighbor Search",
+    "authors": [
+      "Zhonggen Li",
+      "Haoran Yu",
+      "Zixuan Xu",
+      "Yifan Zhu",
+      "Yunjun Gao"
+    ],
+    "summary": "Range-filtered approximate nearest neighbor search (RFANNS) is increasingly critical for modern vector databases. However, existing solutions suffer from severe index inflation and construction overhead. Furthermore, they rely exclusively on CPUs for the heavy indexing and query processing, significantly restricting the throughput due to the limited memory bandwidth and parallelism. In this paper, we present Garfield, a GPU-accelerated framework for multi-attribute range filtered ANNS that overcomes these bottlenecks through designing a lightweight index structure and hardware-aware execution pipeline. Garfield introduces the GMG index, which partitions data into cells and builds local graph indexes. It guarantees linear storage and indexing overhead by adding a constant number of cross-cell edges. For queries, Garfield utilizes a cluster-guided ordering strategy that reorders query-relevant cells, enabling a highly efficient cell-by-cell traversal on the GPU that aggressively reuses candidates as entry points across cells. To handle datasets exceeding GPU memory, Garfield features a cell-oriented out-of-core pipeline. It dynamically schedules cells to minimize the number of active queries per batch and overlaps GPU computation with CPU-to-GPU index streaming. Extensive evaluations demonstrate that Garfield reduces index size by 4.4x, while delivering 119.8x higher throughput than state-of-the-art RFANNS methods.",
+    "published": "2026-04-22",
+    "updated": "2026-04-25",
+    "pdf_url": "https://arxiv.org/pdf/2604.20121v2",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2604.23012v1",
+    "title": "On-Device Vision Training, Deployment, and Inference on a Thumb-Sized Microcontroller",
+    "authors": [
+      "Jeremy Ellis"
+    ],
+    "summary": "This paper presents a complete, end-to-end on-device vision machine learning pipeline, comprising data acquisition, two-layer CNN training with Adam optimization, and real-time inference, executing entirely on a microcontroller-class device costing $15-40 USD. Unlike cloud-based workflows that require external infrastructure and conceal the computational pipeline from the practitioner, this system implements every step of the core ML lifecycle in approximately 1,750 lines of readable C++ that compiles in under one minute using the Arduino IDE, with no external ML dependencies. Running on the Seeed Studio ESP32-S3 XIAO ML Kit (8 MB PSRAM), the firmware achieves three-class 64x64 image classification in approximately 9 minutes per training run, with real-time inference at 6.3 FPS. Key contributions include: correct batch-level gradient accumulation; pre-computed resize lookup tables for inference; dual-format weight export for SD-free baked-in deployment; a three-tier weight priority system (SD binary > baked-in header > He-initialization) resolved automatically at boot; a single-constant network reconfiguration interface; and PSRAM-aware memory management suited to microcontroller constraints. All source code and reference datasets are released under the MIT License at https://github.com/webmcu-ai/on-device-vision-ai",
+    "published": "2026-04-24",
+    "updated": "2026-04-24",
+    "pdf_url": "https://arxiv.org/pdf/2604.23012v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/webmcu-ai/on-device-vision-ai",
+      "stars": 0,
+      "description": "Complete Seeedstudio xiao ml kit esp32s3-sense on device machine learning pipeline",
+      "language": "C"
+    }
+  }
+]
