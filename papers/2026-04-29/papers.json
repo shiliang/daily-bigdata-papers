@@ -1,0 +1,163 @@
+[
+  {
+    "id": "2604.25847v1",
+    "title": "From Soliloquy to Agora: Memory-Enhanced LLM Agents with Decentralized Debate for Optimization Modeling",
+    "authors": [
+      "Jianghao Lin",
+      "Zi Ling",
+      "Chenyu Zhou",
+      "Tianyi Xu",
+      "Ruoqing Jiang",
+      "Zizhuo Wang",
+      "Dongdong Ge"
+    ],
+    "summary": "Optimization modeling underpins real-world decision-making in logistics, manufacturing, energy, and public services, but reliably solving such problems from natural-language requirements remains challenging for current large language models (LLMs). In this paper, we propose \\emph{Agora-Opt}, a modular agentic framework for optimization modeling that combines decentralized debate with a read-write memory bank. Agora-Opt allows multiple agent teams to independently produce end-to-end solutions and reconcile them through an outcome-grounded debate protocol, while memory stores solver-verified artifacts and past disagreement resolutions to support training-free improvement over time. This design is flexible across both backbones and methods: it reduces base-model lock-in, transfers across different LLM families, and can be layered onto existing pipelines with minimal coupling. Across public benchmarks, Agora-Opt achieves the strongest overall performance among all compared methods, outperforming strong zero-shot LLMs, training-centric approaches, and prior agentic baselines. Further analyses show robust gains across backbone choices and component variants, and demonstrate that decentralized debate offers a structural advantage over centralized selection by enabling agents to refine candidate solutions through interaction and even recover correct formulations when all initial candidates are flawed. These results suggest that reliable optimization modeling benefits from combining collaborative cross-checking with reusable experience, and position Agora-Opt as a practical and extensible foundation for trustworthy optimization modeling assistance. Our code and data are available at https://github.com/CHIANGEL/Agora-Opt.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25847v1",
+    "categories": [
+      "math.OC",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "math.OC",
+    "github": {
+      "url": "https://github.com/CHIANGEL/Agora-Opt.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.22117v2",
+    "title": "PermaFrost-Attack: Stealth Pretraining Seeding(SPS) for planting Logic Landmines During LLM Training",
+    "authors": [
+      "Harsh Kumar",
+      "Rahul Maity",
+      "Tanmay Joshi",
+      "Aman Chadha",
+      "Vinija Jain",
+      "Suranjana Trivedy",
+      "Amitava Das"
+    ],
+    "summary": "Aligned large language models (LLMs) remain vulnerable to adversarial manipulation, and their reliance on web-scale pretraining creates a subtle but consequential attack surface. We study Stealth Pretraining Seeding (SPS), a threat model in which adversaries distribute small amounts of poisoned content across stealth websites, increasing the likelihood that such material is absorbed into future training corpora derived from sources such as Common Crawl. Because each individual payload is tiny, diffuse, and superficially benign, the attack is difficult to detect during dataset construction or filtering. The result is a latent form of poisoning that remains largely invisible under standard evaluation, yet can later be activated by a precise trigger such as <00TRIGGER00>. We call this attack PermaFrost, reflecting its latent and reactivatable nature. We study it through PermaFrost-Attack, a controlled framework for latent conceptual poisoning, together with three geometric diagnostics: Thermodynamic Length, Spectral Curvature, and the Infection Traceback Graph. Across multiple model families and scales, we show that this controlled SPS proxy can induce persistent unsafe behavior that often remains hidden under standard evaluation. Our results identify SPS as a practical and underappreciated threat to future foundation models. This paper introduces a novel geometric diagnostic lens for systematically examining latent model behavior, providing a principled foundation for detecting, characterizing, and understanding vulnerabilities that may remain invisible under standard evaluation.",
+    "published": "2026-04-23",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.22117v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.25367v1",
+    "title": "Self-DACE++: Robust Low-Light Enhancement via Efficient Adaptive Curve Estimation",
+    "authors": [
+      "Jianyu Wen",
+      "Jun Xie",
+      "Feng Chen",
+      "Zhepeng Wang",
+      "Chenhao Wu",
+      "Tong Zhang",
+      "Yixuan Yu",
+      "Piotr Swierczynski"
+    ],
+    "summary": "In this paper, we present Self-DACE++, an improved unsupervised and lightweight framework for Low-Light Image Enhancement (LLIE), building upon our previous Self-Reference Deep Adaptive Curve Estimation (Self-DACE). To better address the trade-off between computational efficiency and restoration quality, Self-DACE++ introduces enhanced Adaptive Adjustment Curves (AACs). These curves, governed by minimal trainable parameters, flexibly adjust the dynamic range while preserving the color fidelity, structural integrity, and naturalness of the enhanced images. To achieve an extremely lightweight architecture without sacrificing performance, we propose a randomized order training strategy coupled with a network fusion mechanism, which compresses the model into an efficient iterative inference structure. Furthermore, we formulate a physics-grounded objective function based on Retinex theory and incorporate a dedicated denoising module to effectively estimate and suppress latent noise in dark regions. Extensive qualitative and quantitative evaluations on multiple real-world benchmark datasets demonstrate that Self-DACE++ outperforms existing state-of-the-art methods, delivering superior enhancement quality with real-time inference capability. The code is available at https://github.com/John-Wendell/Self-DACE.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25367v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/John-Wendell/Self-DACE.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.25272v1",
+    "title": "Spectral bandits",
+    "authors": [
+      "Tomáš Kocák",
+      "Rémi Munos",
+      "Branislav Kveton",
+      "Shipra Agrawal",
+      "Michal Valko"
+    ],
+    "summary": "Smooth functions on graphs have wide applications in manifold and semi-supervised learning. In this work, we study a bandit problem where the payoffs of arms are smooth on a graph. This framework is suitable for solving online learning problems that involve graphs, such as content-based recommendation. In this problem, each item we can recommend is a node of an undirected graph and its expected rating is similar to the one of its neighbors. The goal is to recommend items that have high expected ratings. We aim for the algorithms where the cumulative regret with respect to the optimal policy would not scale poorly with the number of nodes. In particular, we introduce the notion of an effective dimension, which is small in real-world graphs, and propose three algorithms for solving our problem that scale linearly and sublinearly in this dimension. Our experiments on content recommendation problem show that a good estimator of user preferences for thousands of items can be learned from just tens of node evaluations.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25272v1",
+    "categories": [
+      "stat.ML",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2604.25271v1",
+    "title": "Online learning with Erdős-Rényi side-observation graphs",
+    "authors": [
+      "Tomáš Kocák",
+      "Gergely Neu",
+      "Michal Valko"
+    ],
+    "summary": "We consider adversarial multi-armed bandit problems where the learner is allowed to observe losses of a number of arms beside the arm that it actually chose. We study the case where all non-chosen arms reveal their loss with a fixed but unknown probability $r$, independently of each other and the action of the learner. We propose two algorithms that work for different ranges of $r$. We show that after $T$ rounds in a bandit problem with $N$ arms, the expected regret of our first algorithm is $O(\\sqrt{(T /r) \\log N })$ whenever $r\\ge(\\log T)/(2N)$, while our second algorithm achieves a regret of $O(\\sqrt{(T/r) \\log (N+T)})$ for smaller values of $r$. We also give a quick estimation procedure that decides the range of~$r$. All our bounds are within logarithmic factors of the best achievable performance of any algorithm that is even allowed to know~$r$.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25271v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2604.25156v1",
+    "title": "Online Learning for Autoregressive Multilayer Stochastic Block Models under Stationarity and Non-Stationarity",
+    "authors": [
+      "Fan Wang",
+      "Haotian Xu",
+      "Yi Yu"
+    ],
+    "summary": "Dynamic multilayer networks arise in many applications where multiple types of relations among a common set of nodes evolve over time. Existing approaches often assume temporal independence, focus on single-layer networks or impose stationarity, limiting their applicability in practice. In this paper, we introduce a first-order autoregressive multilayer stochastic block model (AR(1)-MSBM), in which edge formation and dissolution probabilities between consecutive time points are determined by latent community memberships and shared across layers. Under stationarity, we propose an online estimation procedure based on recursive updates and tensor-based spectral refinement. We establish non-asymptotic estimation rates, prove their minimax optimality and derive guarantees for community recovery. We further consider a non-stationary setting that allows both abrupt changes and gradual shifts, and develop an adaptive windowed online algorithm that automatically adjusts to unknown structural changes. Under a quasi-stationary segmentation framework, we derive estimation and community recovery guarantees that match the stationary results when applied segmentwise. Our theoretical findings are supported by extensive numerical experiments, with code available online.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.25156v1",
+    "categories": [
+      "stat.ME"
+    ],
+    "primary_category": "stat.ME",
+    "github": null
+  },
+  {
+    "id": "2604.24831v1",
+    "title": "FGDM: Reasoning Aware Multi-Agentic Framework for Software Bug Detection using Chain of Thought and Tree of Thought Prompting",
+    "authors": [
+      "Srita Padmanabhuni",
+      "Bhargavi Karuturi",
+      "Jerusha Karen Indupalli",
+      "Santhan Reddy Chilla",
+      "Vivek Yelleti"
+    ],
+    "summary": "Deep Learning methods are becoming prominent in automated software bug detection; however, they lack the global understanding of the given code. Consequently, their performance tends to degrade, especially when they are applied to large interconnected code bases or complex modular programs. Recently, Large Language Models (LLMs) have proven to be effective at capturing dependencies among multiple interconnected modules in the codebase. This motivated us to propose the Flow-Graph-Driven Multi-Agent Framework (FGDM), which is composed of four agents that operate in a sequential manner. The framework converts the received code to a flow graph, identifies the erroneous segments, and further generates the repaired code. All the employed agents utilize Chain-of-Thought (COT) and Tree-of-Thoughts (TOT) prompts. Additionally, we also integrated with the FAISS vector database to retrieve similar previous bugs and their repairs. We demonstrated the efficacy of the proposed framework over 100 programs from several projects, including Ansible, Black, FastAPI, Keras, Luigi, Matplotlib, Pandas, Scrapy, SpaCy, and Tornado in both C and Python programs. Our experiments demonstrate that the FGDM outperforms the extant approaches and yielded reductions with a mean of 24.33 and 8.37 in Levenshtein distance and similarities of 0.951 and 0.974 in cosine similarity for Python and C, respectively.",
+    "published": "2026-04-27",
+    "updated": "2026-04-27",
+    "pdf_url": "https://arxiv.org/pdf/2604.24831v1",
+    "categories": [
+      "cs.SE",
+      "cs.LG"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  }
+]
