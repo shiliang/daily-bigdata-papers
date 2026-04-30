@@ -1,0 +1,63 @@
+[
+  {
+    "id": "2604.24013v2",
+    "title": "CommFuse: Hiding Tail Latency via Communication Decomposition and Fusion for Distributed LLM Training",
+    "authors": [
+      "Rezaul Karim",
+      "Austin Wen",
+      "Wang Zongzuo",
+      "Weiwei Zhang",
+      "Yang Liu",
+      "Walid Ahmed"
+    ],
+    "summary": "The rapid growth in the size of large language models has necessitated the partitioning of computational workloads across accelerators such as GPUs, TPUs, and NPUs. However, these parallelization strategies incur substantial data communication overhead significantly hindering computational efficiency. While communication-computation overlap presents a promising direction, existing data slicing based solutions suffer from tail latency. To overcome this limitation, this research introduces a novel communication-computation overlap technique to eliminate this tail latency in state of the art overlap methods for distributed LLM training. The aim of this technique is to effectively mitigate communication bottleneck of tensor parallelism and data parallelism for distributed training and inference. In particular, we propose a novel method termed CommFuse that replaces conventional collective operations of reduce-scatter and all-gather with decomposed peer-to-peer (P2P) communication and schedules partitioned computations to enable fine-grained overlap. Our method provides an exact algorithm for reducing communication overhead that eliminates tail latency. Moreover, it presents a versatile solution compatible with data-parallel training and various tensor-level parallelism strategies, including TPSP and UP. Experimental evaluations demonstrate that our technique consistently achieves lower latency, superior Model FLOPS Utilization (MFU), and high throughput.",
+    "published": "2026-04-27",
+    "updated": "2026-04-29",
+    "pdf_url": "https://arxiv.org/pdf/2604.24013v2",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.26482v1",
+    "title": "The Buy-or-Build Decision, Revisited: How Agentic AI Changes the Economics of Enterprise Software",
+    "authors": [
+      "David Klotz"
+    ],
+    "summary": "Advances in generative artificial intelligence, particularly agentic coding systems capable of autonomous software development, are disrupting the economics of the make-or-buy decision for enterprise applications. The \"SaaSocalypse\" narrative predicts that AI will render large segments of the Software-as-a-Service market obsolete by enabling firms to build software in-house at a fraction of historical cost. This paper adopts a conceptual research approach, combining transaction cost economics and the resource-based view with an assessment of current AI capabilities, to systematically re-evaluate the factors underlying the make-or-buy decision. It makes three contributions. First, it provides a factor-level analysis of how AI reshapes seven canonical decision determinants: cost, strategic differentiation, asset specificity, vendor lock-in, time-to-market, quality and compliance, and organizational capability. Second, it develops a typology of enterprise applications by their sensitivity to AI-induced shifts in make-or-buy economics. Third, it demonstrates that AI fundamentally transforms the governance properties of the Make option, shifting it from Williamson's pure hierarchy to a hybrid governance form that combines code ownership with external AI infrastructure dependency, with qualitatively different economics, capability requirements, and governance structures than pre-AI in-house development. The analysis finds that the SaaSocalypse thesis is overstated for most enterprise application categories; Make is most compelling for commodity utilities and differentiating custom applications in the AI era, while regulated and mission-critical systems remain predominantly in the buy domain.",
+    "published": "2026-04-29",
+    "updated": "2026-04-29",
+    "pdf_url": "https://arxiv.org/pdf/2604.26482v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2604.26170v1",
+    "title": "EvoSelect: Data-Efficient LLM Evolution for Targeted Task Adaptation",
+    "authors": [
+      "Ting-Wei Li",
+      "Sirui Chen",
+      "Jiaru Zou",
+      "Yingbing Huang",
+      "Tianxin Wei",
+      "Jingrui He",
+      "Hanghang Tong"
+    ],
+    "summary": "Adapting large language models (LLMs) to a targeted task efficiently and effectively remains a fundamental challenge. Such adaptation often requires iteratively improving the model toward a targeted task, yet collecting high-quality human-labeled data to support this process is costly and difficult to scale. As a result, synthetic data generation has emerged as a flexible and scalable alternative. One straightforward approach is through an iterative generation-training loop, where candidate data are synthesized through an external generator, the model is updated using these data and the process is repeated over iterations. However, generated samples can be noisy, highly redundant, or even misaligned with the targeted task distribution. Training indiscriminately on such data can dilute useful learning signals and even degrade model performance. To address this, we introduce a refined paradigm, namely an iterative generation-selection-training loop, which incorporates a selection step prior to model updates. Building on this paradigm, we propose EvoSelect, a data-efficient framework to evolve LLM effectively. Given candidate samples produced by the data generator, EvoSelect selects training data by jointly modeling targeted task alignment and diversity. We estimate task relevance through optimal transport with proxy gradient representations, which quantifies how well candidate samples align with the targeted task distribution. To mitigate redundancy, we incorporate a diversification mechanism that promotes coverage of complementary training samples. By interleaving alignment and diversification, EvoSelect enables progressive LLM evolution toward targeted tasks. Extensive experiments on various benchmarks demonstrate that with either weak or strong data generators, EvoSelect consistently improves adaptation efficacy over existing data selection methods.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.26170v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  }
+]
