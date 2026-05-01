@@ -1,0 +1,309 @@
+[
+  {
+    "id": "2604.27844v1",
+    "title": "ZipCCL: Efficient Lossless Data Compression of Communication Collectives for Accelerating LLM Training",
+    "authors": [
+      "Wenxiang Lin",
+      "Xinglin Pan",
+      "Ruibo Fan",
+      "Shaohuai Shi",
+      "Xiaowen Chu"
+    ],
+    "summary": "Communication has emerged as a critical bottleneck in the distributed training of large language models (LLMs). While numerous approaches have been proposed to reduce communication overhead, the potential of lossless compression has remained largely underexplored since compression and decompression typically consume larger overheads than the benefits of reduced communication traffic. We observe that the communication data, including activations, gradients and parameters, during training often follows a near-Gaussian distribution, which is a key feature for data compression. Thus, we introduce ZipCCL, a lossless compressed communication library of collectives for LLM training. ZipCCL is equipped with our novel techniques: (1) theoretically grounded exponent coding that exploits the Gaussian distribution of LLM tensors to accelerate compression without expensive online statistics, (2) GPU-optimized compression and decompression kernels that carefully design memory access patterns and pipeline using communication-aware data layout, and (3) adaptive communication strategies that dynamically switch collective operations based on workload patterns and system characteristics. Evaluated on a 64-GPU cluster using both mixture-of-experts and dense transformer models, ZipCCL reduces communication time by up to 1.35$\\times$ and achieves end-to-end training speedups of up to 1.18$\\times$ without any impact on model quality.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27844v1",
+    "categories": [
+      "cs.DC",
+      "cs.CL"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.27661v1",
+    "title": "Language Ideologies in a Multilingual Society: An LLM-based Analysis of Luxembourgish News Comments",
+    "authors": [
+      "Emilia Milano",
+      "Alistair Plum",
+      "Yves Scherrer",
+      "Christoph Purschke"
+    ],
+    "summary": "Detecting language ideologies is a valuable yet complex task for understanding how identities are constructed through discourse. In Luxembourg's multicultural and multilingual society, language ideologies reflect more than simple preferences: they carry deep cultural and social meanings, shaping identities and social belonging. Following recent developments in applying Natural Language Processing tools to linguistics and social science, this paper explores the potential of large language models to assist in the detection of language ideologies. We manually annotate a corpus of user comments in Luxembourgish with predefined ideological categories and then evaluate the performance of large language models under varying prompt conditions to assess their ability to replicate these human annotations. Since Luxembourgish is a small language and poorly represented in the LLMs' training data, we also investigate whether machine-translating the data to high-resource languages increases performance on the ideology detection task. Our findings suggest that, while LLMs are not yet fully optimized for a multi-class ideological annotation task, they are practical tools to identify language ideological content.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27661v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2604.27643v1",
+    "title": "HAVEN: Hybrid Automated Verification ENgine for UVM Testbench Synthesis with LLMs",
+    "authors": [
+      "Chang-Chih Meng",
+      "Yu-Ren Lu",
+      "Guan-Yu Lin",
+      "Tsung Tai Yeh",
+      "Kai-Chiang Wu",
+      "I-Chen Wu"
+    ],
+    "summary": "Integrated Circuit (IC) verification consumes nearly 70% of the IC development cycle, and recent research leverages Large Language Models (LLMs) to automatically generate testbenches and reduce verification overhead. However, LLMs have difficulty generating testbenches correctly. Unlike high-level programming languages, Hardware Description Languages (HDLs) are extremely rare in LLMs training data, leading LLMs to produce incorrect code. To overcome challenges when using LLMs to generate Universal Verification Methodology (UVM) testbenches and sequences, wepropose HAVEN (Hybrid Automated Verification ENgine) to prevent LLMs from writing HDL directly. For UVM testbench generation, HAVEN utilizes LLM agents to analyze design specifications to produce a structured architectural plan. The HAVEN Template Engine then combines with predefined and protocol-specific templates to generate all UVM components with correct bus-handshake timing. For UVM sequence generation, HAVEN introduces a Protocol-Aware Sequence Domain-Specific Language (DSL) that decomposes sequences into fine-grained step types. A set of predefined DSL patterns first establishes sequences that achieve a high coverage rate without LLM involvement. HAVEN continues to improve the coverage rate by iteratively leveraging LLM agents to analyze coverage gap reports and compose additional targeted DSL sequences. Unlike previous works, HAVEN is the first system that utilizes pre-defined, protocol-specific Jinja2 templates to generate all UVM components and UVM sequences using our proposed Protocol-Aware DSL and rule-based code generator. Our experimental results on 19 open-source IP designs spanning three interface protocols (Direct, Wishbone, AXI4-Lite) show that HAVEN achieves 100% compilation success, 90.6% code coverage, and 87.9% functional coverage on average, and is SOTA among LLM-assisted testbench generation systems.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27643v1",
+    "categories": [
+      "cs.AR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2604.27435v1",
+    "title": "Structural Dissolution: How Artificial Intelligence Dismantles Coordination Architecture and Reconfigures the Political Economy of Production",
+    "authors": [
+      "Chao Li",
+      "Chunyi Zhao"
+    ],
+    "summary": "This paper introduces the Structural Dissolution Framework to explain how artificial intelligence restructures the coordination architecture of traditional industries. We argue that AI dissolves the boundaries that once separated firms, markets, experts, and consumers by internalizing human multimodal interfaces, including language, vision, and behavioral data, into computational systems. This process is not merely an efficiency gain but a qualitative transformation of production relations. It generates four major shifts: the erosion of firm and industry boundaries; the movement of value creation from physical resources and human collaboration to continuous token flows produced through data refinement loops; the rise of domain-specific data refinement infrastructure as the new basis of positional control; and the emergence of regional data sovereignty entities as organizational forms that replace the coordinating role of firms and markets. We define this mechanism as Interface Internalization, through which inter-agent coordination is absorbed into intra-system computation. The framework challenges the Coasian view that organizational boundaries are determined by transaction cost minimization, arguing instead that AI makes such boundaries economically obsolete. Firms may continue to exist as legal and physical entities, but their coordinating function is displaced as they become data nodes within regionally governed AI infrastructure. Using resource-dependent regional economies as an illustrative case, the paper shows how AI adoption can both transform seasonal industries into continuous economic infrastructure and replace intermediate coordination roles and traditional employment structures.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27435v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2604.28193v1",
+    "title": "Generalizable Sparse-View 3D Reconstruction from Unconstrained Images",
+    "authors": [
+      "Vinayak Gupta",
+      "Chih-Hao Lin",
+      "Shenlong Wang",
+      "Anand Bhattad",
+      "Jia-Bin Huang"
+    ],
+    "summary": "Reconstructing 3D scenes from sparse, unposed images remains challenging under real-world conditions with varying illumination and transient occlusions. Existing methods rely on scene-specific optimization using appearance embeddings or dynamic masks, which requires extensive per-scene training and fails under sparse views. Moreover, evaluations on limited scenes raise questions about generalization. We present GenWildSplat, a feed-forward framework for sparse-view outdoor reconstruction that requires no per-scene optimization. Given unposed internet images, GenWildSplat predicts depth, camera parameters, and 3D Gaussians in a canonical space using learned geometric priors. An appearance adapter modulates appearance for target lighting conditions, while semantic segmentation handles transient objects. Through curriculum learning on synthetic and real data, GenWildSplat generalizes across diverse illumination and occlusion patterns. Evaluations on PhotoTourism and MegaScenes benchmark demonstrate state-of-the-art feed-forward rendering quality, achieving real-time inference without test-time optimization",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.28193v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2604.27499v1",
+    "title": "Towards All-Day Perception for Off-Road Driving: A Large-Scale Multispectral Dataset and Comprehensive Benchmark",
+    "authors": [
+      "Shuo Wang",
+      "Jilin Mei",
+      "Wenfei Guan",
+      "Shuai Wang",
+      "Yan Xing",
+      "Chen Min",
+      "Yu Hu"
+    ],
+    "summary": "Off-road nighttime autonomous driving suffers from unreliable visible-light perception, making infrared modality crucial for accurate freespace detection. However, progress remains limited due to the scarcity of annotated infrared off-road datasets and the inter-frame inconsistencies inherent to current single-frame methods. To address these gaps, we present the IRON dataset, which, to our knowledge, is the first large-scale infrared dataset for off-road temporal freespace detection under all-day conditions, with strong support for nighttime perception. The dataset comprises 24,314 densely annotated infrared images with synchronized RGB images in diverse scenes and different light conditions. Building upon this dataset, we propose IRONet, a novel flow-free framework for temporal freespace detection that addresses inter-frame inconsistencies by aggregating historical context via a memory-attention mechanism and a carefully designed mask decoder. On our IRON dataset, IRONet achieves state-of-the-art performance, reaching 82.93%(+1.19%) IoU and 90.66%(+0.71%) F1 score at real-time inference. Remarkably, IRONet also exhibits robust generalization to RGB modalities on ORFD and Rellis datasets. Overall, our work establishes a foundation for reliable all-day off-road autonomous driving and future research in infrared temporal perception. The code and IRON dataset are available at https://github.com/wsnbws/IRON.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27499v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/wsnbws/IRON.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.25367v2",
+    "title": "Self-DACE++: Robust Low-Light Enhancement via Efficient Adaptive Curve Estimation",
+    "authors": [
+      "Jianyu Wen",
+      "Jun Xie",
+      "Feng Chen",
+      "Zhepeng Wang",
+      "Chenhao Wu",
+      "Tong Zhang",
+      "Yixuan Yu",
+      "Piotr Swierczynski"
+    ],
+    "summary": "In this paper, we present Self-DACE++, an improved unsupervised and lightweight framework for Low-Light Image Enhancement (LLIE), building upon our previous Self-Reference Deep Adaptive Curve Estimation (Self-DACE). To better address the trade-off between computational efficiency and restoration quality, Self-DACE++ introduces enhanced Adaptive Adjustment Curves (AACs). These curves, governed by minimal trainable parameters, flexibly adjust the dynamic range while preserving the color fidelity, structural integrity, and naturalness of the enhanced images. To achieve an extremely lightweight architecture without sacrificing performance, we propose a randomized order training strategy coupled with a network fusion mechanism, which compresses the model into an efficient iterative inference structure. Furthermore, we formulate a physics-grounded objective function based on Retinex theory and incorporate a dedicated denoising module to effectively estimate and suppress latent noise in dark regions. Extensive qualitative and quantitative evaluations on multiple real-world benchmark datasets demonstrate that Self-DACE++ outperforms existing state-of-the-art methods, delivering superior enhancement quality with real-time inference capability. The code is available at https://github.com/John-Wendell/Self-DACE.",
+    "published": "2026-04-28",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.25367v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/John-Wendell/Self-DACE.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.27562v1",
+    "title": "Online semi-supervised perception: Real-time learning without explicit feedback",
+    "authors": [
+      "Branislav Kveton",
+      "Michal Valko",
+      "Matthai Phillipose",
+      "Ling Huang"
+    ],
+    "summary": "This paper proposes an algorithm for real-time learning without explicit feedback. The algorithm combines the ideas of semi-supervised learning on graphs and online learning. In particular, it iteratively builds a graphical representation of its world and updates it with observed examples. Labeled examples constitute the initial bias of the algorithm and are provided offline, and a stream of unlabeled examples is collected online to update this bias. We motivate the algorithm, discuss how to implement it efficiently, prove a regret bound on the quality of its solutions, and apply it to the problem of real-time face recognition. Our recognizer runs in real time, and achieves superior precision and recall on 3 challenging video datasets.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27562v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.27442v1",
+    "title": "The Bernstein-von Mises theorem for Bayesian one-pass online learning",
+    "authors": [
+      "Jeyong Lee",
+      "Junhyeok Choi",
+      "Dongguen Kim",
+      "Minwoo Chae"
+    ],
+    "summary": "Bayesian online learning provides a coherent framework for sequential inference. However, its theoretical understanding remains limited, particularly in the one-pass setting. Existing theoretical guarantees typically require the mini-batch sample size to diverge, a condition that fails in the one-pass regime. In this paper, we propose a new Bayesian online learning algorithm tailored to the one-pass setting, which incorporates a warm-start phase to ensure stable sequential updates. For this algorithm, we show that the sequentially updated posterior attains the optimal convergence rate. Building on this, we establish an online analogue of the Bernstein-von Mises theorem, which guarantees valid uncertainty quantification without diverging mini-batch sample sizes. Our analysis is based on a novel theoretical framework that differs fundamentally from existing approaches in the online learning literature. Numerical experiments on generalized linear models show that the proposed method matches the performance of the batch estimator while outperforming existing online procedures.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27442v1",
+    "categories": [
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "math.ST",
+    "github": null
+  },
+  {
+    "id": "2604.27344v1",
+    "title": "Bibliometric Mapping of AI-Supported Social Presence in Online Learning Environments: Trends, Collaboration, and Thematic Directions",
+    "authors": [
+      "Almer B. Gamboa",
+      "Erika M. Pineda",
+      "Rhiziel P. Manalese",
+      "Aileen P. De Leon",
+      "Vernon Grace M. Maniago",
+      "Jan Henry B. Sunga",
+      "Agnes R. Regala",
+      "Roque Francis B. Dianelo",
+      "John Paul P. Miranda"
+    ],
+    "summary": "This study examines the development, influence, and collaboration patterns in AI-supported social presence research within online learning environments. Utilizing 59 open-access empirical studies from Scopus, the study applies citation analysis, co-authorship mapping, institutional analysis, and keyword clustering using Python-based bibliometric tools. Findings reveal an upward trend in publications since 2020, with research focusing on engagement, AI tools, instructional design, and ethical issues. While countries such as the United States and Brazil are leading contributors, international collaboration remains limited. Ethical concerns related to trust and fairness are emerging but underexplored. The study highlights the importance of ethical integration, interdisciplinary collaboration, and learner-centered AI applications in education.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27344v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2604.27431v1",
+    "title": "A Study on the Performance of Distributed Training of Data-driven CFD Simulations",
+    "authors": [
+      "Sergio Iserte",
+      "Alejandro González-Barberá",
+      "Paloma Barreda",
+      "Krzysztof Rojek"
+    ],
+    "summary": "Data-driven methods for computer simulations are blooming in many scientific areas. The traditional approach to simulating physical behaviors relies on solving partial differential equations (PDE). Since calculating these iterative equations is highly both computationally demanding and time-consuming, data-driven methods leverage artificial intelligence (AI) techniques to alleviate that workload. Data-driven methods have to be trained in advance to provide their subsequent fast predictions, however, the cost of the training stage is non-negligible. This paper presents a predictive model for inferencing future states of a specific fluid simulation that serves as a use case for evaluating different training alternatives. Particularly, this study compares the performance of only CPU, multiGPU, and distributed approaches for training a time series forecasting deep learning (DL) model. With some slight code adaptations, results show and compare, in different implementations, the benefits of distributed GPU-enabled training for predicting high-accuracy states in a fraction of the time needed by the computational fluid dynamics (CFD) solver.",
+    "published": "2026-04-30",
+    "updated": "2026-04-30",
+    "pdf_url": "https://arxiv.org/pdf/2604.27431v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2604.27089v1",
+    "title": "AutoSP: Unlocking Long-Context LLM Training Via Compiler-Based Sequence Parallelism",
+    "authors": [
+      "Ahan Gupta",
+      "Zhihao Wang",
+      "Neel Dani",
+      "Masahiro Tanaka",
+      "Olatunji Ruwase",
+      "Minjia Zhang"
+    ],
+    "summary": "Large-language-models (LLMs) demonstrate enormous utility in long-context tasks which require processing prompts that consist of tens to hundreds of thousands of tokens. However, existing LLM training libraries do not provide easy to use abstractions to optimize for long-context training, instead focusing on optimizations for models with large parameter counts through ZeRO-3/FSDP, Tensor and Pipeline parallelism. This forces users to rewrite LLM training libraries to incorporate compositions of various complex long-context optimizations, such as sequence-parallelism, to training pipelines; a process that requires in-depth expertise, reducing developer productivity. To tackle these challenges, we introduce AutoSP: the first automated solution to automatically optimize LLM training for longer-contexts. AutoSP compiles models and applies a targeted set of optimizations: automated sequence parallelism, and long-context aware activation-checkpointing, to drastically enhance LLM trainability at negligible cost to throughput. Our evaluation demonstrates AutoSP's capability on both NVIDIA and AMD hardware, increasing training contexts by upto 2.7$\\times$ and 2.5$\\times$ respectively over competitive hand-written baseline at negligible cost to runtime performance.",
+    "published": "2026-04-29",
+    "updated": "2026-04-29",
+    "pdf_url": "https://arxiv.org/pdf/2604.27089v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC",
+      "cs.PF"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.27083v1",
+    "title": "Co-Evolving Policy Distillation",
+    "authors": [
+      "Naibin Gu",
+      "Chenxu Yang",
+      "Qingyi Si",
+      "Chuanyu Qin",
+      "Dingyu Yao",
+      "Peng Fu",
+      "Zheng Lin",
+      "Weiping Wang",
+      "Nan Duan",
+      "Jiaqi Wang"
+    ],
+    "summary": "RLVR and OPD have become standard paradigms for post-training. We provide a unified analysis of these two paradigms in consolidating multiple expert capabilities into a single model, identifying capability loss in different ways: mixed RLVR suffers from inter-capability divergence cost, while the pipeline of first training experts and then performing OPD, though avoiding divergence, fails to fully absorb teacher capabilities due to large behavioral pattern gaps between teacher and student. We propose Co-Evolving Policy Distillation (CoPD), which encourages parallel training of experts and introduces OPD during each expert's ongoing RLVR training rather than after complete expert training, with experts serving as mutual teachers (making OPD bidirectional) to co-evolve. This enables more consistent behavioral patterns among experts while maintaining sufficient complementary knowledge throughout. Experiments validate that CoPD achieves all-in-one integration of text, image, and video reasoning capabilities, significantly outperforming strong baselines such as mixed RLVR and MOPD, and even surpassing domain-specific experts. The model parallel training pattern offered by CoPD may inspire a novel training scaling paradigm.",
+    "published": "2026-04-29",
+    "updated": "2026-04-29",
+    "pdf_url": "https://arxiv.org/pdf/2604.27083v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2604.26981v1",
+    "title": "Budget-Constrained Online Retrieval-Augmented Generation: The Chunk-as-a-Service Model",
+    "authors": [
+      "Shawqi Al-Maliki",
+      "Ammar Gharaibeh",
+      "Mohamed Rahouti",
+      "Mohammad Ruhul Amin",
+      "Mohamed Abdallah",
+      "Junaid Qadir",
+      "Ala Al-Fuqaha"
+    ],
+    "summary": "Large Language Models (LLMs) have revolutionized the field of natural language processing. However, they exhibit some limitations, including a lack of reliability and transparency: they may hallucinate and fail to provide sources that support the generated output. Retrieval-Augmented Generation (RAG) was introduced to address such limitations in LLMs. One popular implementation, RAG-as-a-Service (RaaS), has shortcomings that hinder its adoption and accessibility. For instance, RaaS pricing is based on the number of submitted prompts, without considering whether the prompts are enriched by relevant chunks, i.e., text segments retrieved from a vector database, or the quality of the utilized chunks (i.e., their degree of relevance). This results in an opaque and less cost-effective payment model. We propose Chunk-as-a-Service (CaaS) as a transparent and cost-effective alternative. CaaS includes two variants: Open-Budget CaaS (OB-CaaS) and Limited-Budget CaaS (LB-CaaS), which is enabled by our ``Utility-Cost Online Selection Algorithm (UCOSA)''. UCOSA further extends the cost-effectiveness and the accessibility of the OB-CaaS variant by enriching, in an online manner, a subset of the submitted prompts based on budget constraints and utility-cost tradeoff. Our experiments demonstrate the efficacy of the proposed UCOSA compared to both offline and relevance-greedy selection baselines. In terms of the performance metric-the number of enriched prompts (NEP) multiplied by the Average Relevance (AR)-UCOSA outperforms random selection by approximately 52% and achieves around 75% of the performance of offline selection methods. Additionally, in terms of budget utilization, LB-CaaS and OB-CaaS achieve higher performance-to-budget ratios of 140% and 86%, respectively, compared to RaaS, indicating their superior efficiency.",
+    "published": "2026-04-28",
+    "updated": "2026-04-28",
+    "pdf_url": "https://arxiv.org/pdf/2604.26981v1",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  }
+]
