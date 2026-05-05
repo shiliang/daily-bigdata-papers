@@ -1,0 +1,236 @@
+[
+  {
+    "id": "2605.02380v1",
+    "title": "UnGAP: Uncertainty-Guided Affine Prompting for Real-Time Crack Segmentation",
+    "authors": [
+      "Conghui Li",
+      "Huanyu He",
+      "Xin Wang",
+      "Weiyao Lin",
+      "Chern Hong Lim"
+    ],
+    "summary": "Real-time crack segmentation is vital for structural health monitoring but is plagued by aleatoric uncertainties arising from varying lighting, blur, and texture ambiguity. Current uncertainty-aware approaches typically treat uncertainty estimation as a passive endpoint for post-hoc analysis, failing to close the loop by feeding this information back to refine feature representations. We contend that independent pixel-wise heteroscedastic modeling is uniquely suited for crack segmentation, as cracks are defined by fine-grained local gradients rather than the global semantic coherence relied upon in general object segmentation. However, this approach suffers from a structural optimization pathology: high predicted variance attenuates loss gradients, effectively causing the model to ignore difficult samples and under-fit complex boundaries. To address these challenges, we propose UnGAP, a novel framework that establishes a closed-loop mechanism between uncertainty estimation and feature learning. Central to our approach is the Uncertainty-Prompted Feature Modulator (UPFM), which treats aleatoric uncertainty as an active visual prompt rather than a mere output. UPFM dynamically calibrates feature distributions through pixel-wise affine transformations. Crucially, this mechanism mitigates the heteroscedastic pathology by transforming high variance, which would otherwise indicate gradient suppression, into a constructive signal for stronger feature rectification in ambiguous regions. Additionally, a boundary-aware detection head is introduced to further constrain prediction precision. Extensive experiments demonstrate that UnGAP balances superior segmentation accuracy with real-time inference speed, effectively validating the benefit of transforming uncertainty from a passive metric into an active calibration tool.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.02380v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.02825v1",
+    "title": "The Bayesian Reflex: Online Learning as the Autonomic Nervous System of Modern and Future AI",
+    "authors": [
+      "Durba Bhattacharya",
+      "Sucharita Roy",
+      "Sourabh Bhattacharya"
+    ],
+    "summary": "This chapter introduces the Bayesian reflex -- an analogy with the autonomic nervous system -- as a unifying framework for online learning in AI. Bayesian online algorithms automatically maintain equilibrium in dynamic environments via three mechanisms: belief maintenance through probabilistic representations, sequential updating via Bayes' theorem, and uncertainty-driven action balancing exploration and exploitation. We survey online Bayesian methods, highlighting two computational principles: the look-up table principle for sequential inference in function space, and the ellipsoidal decomposition framework for nearly exact i.i.d. sampling from arbitrary posteriors. These principles are generalized across dynamic emulation, nonparametric state-space models, circular time series, inverse regression for climate model evaluation, and deep architectures via Recursive Gaussian Processes. Decision-making is explored via Thompson sampling and restless bandits. We extend the framework to assess infinite series convergence (applied to climate dynamics and the Riemann Hypothesis), model prime number distributions leading to the discovery of 184 strong Mersenne prime candidates, detect stationarity, and characterize point processes. The Bayesian reflex provides a foundational infrastructure for adaptive AI that continuously learns in a complex world.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.02825v1",
+    "categories": [
+      "stat.ME",
+      "stat.ML"
+    ],
+    "primary_category": "stat.ME",
+    "github": null
+  },
+  {
+    "id": "2605.01870v1",
+    "title": "Maistros: A Greek Large Language Model Adapted Through Knowledge Distillation From Large Reasoning Models",
+    "authors": [
+      "Nikolaos Giarelis",
+      "Charalampos Mastrokostas",
+      "Nikos Karacapilidis"
+    ],
+    "summary": "Large Language Models (LLMs) have substantially advanced the field of Natural Language Processing (NLP), achieving state-of-the-art performance across a wide range of tasks. These improvements have been attributed, in part, to their emerging reasoning capabilities, which are enabled by large-scale training and increased model capacity. However, existing LLMs can generate erroneous responses when addressing complex queries that fall outside their training distribution, due to limited internal knowledge or the need for multi-step reasoning. To address these limitations, recent work has introduced large reasoning models (LRMs), which incorporate explicit internal reasoning processes to improve response accuracy. Additionally, state-of-the-art LRMs often comprise hundreds of billions of parameters and require several seconds per inference, even on advanced multi-GPU systems. These characteristics limit their practicality for deployment in conventional computing environments. Meanwhile, NLP research on multilingual LLMs continues to prioritize high-resource languages. However, these models exhibit limited performance in under-resourced languages, primarily due to insufficient language- and culture-specific training data. In this paper, we focus on Modern Greek, for which only a limited number of question answering (QA) datasets have been proposed, most of which are intended for model evaluation. To address this research gap in Greek QA, we make the following contributions: (i) CulturaQA, a high-quality LRM-generated and human-curated dataset, for Greek LLM training and evaluation; (ii) a memory-efficient LLM evaluation framework adaptable to diverse languages and QA tasks; (iii) Maistros 8B, a state-of-the-art open-weights Greek LLM developed via knowledge distillation and fine-tuning on CulturaQA; and (iv) a comprehensive evaluation of nine LLMs across nine human-curated Greek QA datasets.",
+    "published": "2026-05-03",
+    "updated": "2026-05-03",
+    "pdf_url": "https://arxiv.org/pdf/2605.01870v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.01965v1",
+    "title": "Retrieval with Multiple Query Vectors through Anomalous Pattern Detection",
+    "authors": [
+      "Allassan Tchangmena A Nken",
+      "Baimam Boukar Jean Jacques",
+      "Miriam Rateike",
+      "Celia Cintas",
+      "Skyler Speakman"
+    ],
+    "summary": "A classical vector retrieval problem typically considers a \\emph{single} query embedding vector as input and retrieves the most similar embedding vectors from a vector database. However, complex reasoning and retrieval tasks frequently require \\emph{multiple query vectors}, rather than a single one. In this work, we propose a retrieval method that considers multiple query vectors simultaneously and retrieves the most relevant vectors from the database using concepts from anomalous pattern detection. Specifically, our approach leverages a set of query vectors $Q$ (with $|Q|\\geq 1$), and identifies the subset of vector dimensions within $Q$ that standout (anomalous) from the rest of dimensions. Next, we scan the vector database to retrieve the set of vectors that are also anomalous across the previously identified vector dimensions and return them as our retrieved set of vectors. We validate our approach on two image datasets, a text dataset, and a tabular dataset. Overall, we observe that, across most datasets, larger query sets lead to improved retrieval performance. The improvement is most pronounced when increasing the query sets from 1 to 8, while the gains become smaller beyond that.",
+    "published": "2026-05-03",
+    "updated": "2026-05-03",
+    "pdf_url": "https://arxiv.org/pdf/2605.01965v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.01961v1",
+    "title": "Multi-User Dueling Bandits: A Fair Approach using Nash Social Welfare",
+    "authors": [
+      "Maheed H. Ahmed",
+      "Mahsa Ghasemi"
+    ],
+    "summary": "Learning from human preference data is becoming a useful tool, from fine-tuning large language models to training reinforcement learning agents. However, in most scenarios, the model is trained on the average preference of all human evaluators, which, under large variations of preferences, can be unfair to minority groups. In this work, we consider fairness in dueling bandits, a standard framework for online learning from preference data. We assume that each user has a (potentially distinct) Condorcet winner, which is an arm preferred to every other arm. Using these user-specific Condorcet winners as reference points, we evaluate and score arms according to their performance relative to the corresponding winner. To promote fairness across heterogeneous users, we adopt the well-established Nash Social Welfare objective, which maximizes the product of user utilities, thereby inherently penalizing inequality and preventing the marginalization of any single user. Within this framework, we construct a hard instance to establish a regret lower bound of $Ω(T^{2/3}\\min(K,D)^\\frac{1}{3})$ for a time horizon $T$, $K$ arms, and $D$ users, which, to the best of our knowledge, is the first result quantifying the cost of fairness in dueling bandits with heterogeneous preferences. We then present the Fair-Explore-Then-Commit and Fair-$ε$-Greedy algorithms with a Condorcet winner identification phase. We further derive their regret upper bounds that match the lower-bound dependence on $T$ up to logarithmic factors.",
+    "published": "2026-05-03",
+    "updated": "2026-05-03",
+    "pdf_url": "https://arxiv.org/pdf/2605.01961v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.01756v1",
+    "title": "The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions",
+    "authors": [
+      "Yuxiao Wen",
+      "Zihao Hu",
+      "Yanjun Han",
+      "Yuan Yao",
+      "Zhengyuan Zhou"
+    ],
+    "summary": "Existing auto-bidding algorithms in digital advertising often treat the value of an ad opportunity as the revenue obtained when an ad is shown and/or clicked, and bid accordingly. This can lead to wasteful spending because the true value is the marginal gain from paid exposure: even without winning a sponsored slot, an advertiser may still earn revenue via an organic search result (e.g., on Google or Amazon). Motivated by recent work, we model ad value as a treatment effect--the outcome difference between winning and losing the auction--and study online learning for bidding in second-price (Vickrey) auctions under this causal perspective. We develop algorithms that attain rate-optimal regret under several feedback models. A key ingredient exploits the information revealed by the second-price payment rule, which strictly improves regret relative to analogous learning problems in first-price auctions.",
+    "published": "2026-05-03",
+    "updated": "2026-05-03",
+    "pdf_url": "https://arxiv.org/pdf/2605.01756v1",
+    "categories": [
+      "cs.GT",
+      "cs.IT",
+      "cs.LG"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2605.02043v1",
+    "title": "Bringing Order to Asynchronous SGD: Towards Optimality under Data-Dependent Delays with Momentum",
+    "authors": [
+      "Tehila Dahan",
+      "Roie Reshef",
+      "Sharon Goldstein",
+      "Kfir Y. Levy"
+    ],
+    "summary": "Asynchronous stochastic gradient descent (SGD) enables scalable distributed training but suffers from gradient staleness. Existing mitigation strategies, such as delay-adaptive learning rates and staleness-aware filtering, typically attenuate or discard delayed gradients, introducing systematic bias: updates from simpler or faster-to-process samples are overrepresented, while gradients from more complex samples are delayed or suppressed. In contrast, prior approaches to data-dependent delays rely on a Lipschitz assumption that yields suboptimal rates or leave the smooth, convex case unaddressed. We propose a momentum-based asynchronous framework designed to preserve information from delayed gradients while mitigating the effects of staleness. We establish the first optimal convergence rates for data-dependent delays in both convex and non-convex smooth setups, providing a new result for asynchronous optimization under standard assumptions. Additionally, we derive robust learning-rate schedules that simplify hyperparameter tuning in practice.",
+    "published": "2026-05-03",
+    "updated": "2026-05-03",
+    "pdf_url": "https://arxiv.org/pdf/2605.02043v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.01350v1",
+    "title": "LLM Output Detectability and Task Performance Can be Jointly Optimized",
+    "authors": [
+      "Koshiro Saito",
+      "Ryuto Koike",
+      "Masahiro Kaneko",
+      "Naoaki Okazaki"
+    ],
+    "summary": "Detecting machine-generated text is essential for transparency and accountability when deploying large language models (LLMs). Among detection approaches, watermarking is a statistically reliable method by design -- it embeds detectable signals into LLM outputs by biasing their token distributions. However, it has been reported that watermarked LLMs often perform worse on downstream tasks. We propose PUPPET, a framework that fine-tunes an LLM via reinforcement learning to generate text that is both more detectable and better performing on downstream tasks. We use two reward functions: a detector that outputs a machine-class likelihood and an evaluator that measures a task-specific metric. Experiments on long-form QA, summarization, and essay writing show that LLMs trained with PUPPET achieve high detectability competitive with watermarking methods while outperforming them on downstream tasks. The analysis shows that this optimization can be performed efficiently with only a few thousand samples in 1--2 GPU hours. Moreover, these gains are consistent across out-of-domain tasks, different LLM families, and model sizes, and are even robust to paraphrasing attacks.",
+    "published": "2026-05-02",
+    "updated": "2026-05-02",
+    "pdf_url": "https://arxiv.org/pdf/2605.01350v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.01342v1",
+    "title": "Don't Be a Pot Stirrer! Authorized Vector Data Retrieval via Access-Aware Indexing",
+    "authors": [
+      "Shanshan Han",
+      "Vishal Chakraborty",
+      "Sharad Mehrotra"
+    ],
+    "summary": "Vector databases increasingly enforce role-based access control: each top-k approximate nearest neighbor query must return only vectors the querying role is authorized to access. Two extremes bracket the design space. A single global index avoids data duplication but wastes search effort on unauthorized vectors and degrades recall, while an oracle index, built with all authorized vectors of the query roles, searches only authorized vectors but duplicates every shared vector between roles or queries. We present Veda and its efficient variant EffVeda, two indexing strategies built on an access-aware lattice to address access control in vector databases. The methods first partitions the dataset into disjoint data blocks by role combination, then leverage the structure of the access-aware lattice to apply copy and merge operations to group co-accessed blocks under a user-specified storage budget. Large nodes in the lattice are then indexed with HNSW, while small nodes are retained for linear scan. For each role, our methods construct a query plan that selects the minimal set of nodes that covers the role's authorized data. At query time, coordinated search first queries pure (authorized-only) nodes to populate a global top-k heap. The resulting distance bound then prunes exploration on impure nodes, avoiding the inflated search that independent per-index execution would require.",
+    "published": "2026-05-02",
+    "updated": "2026-05-02",
+    "pdf_url": "https://arxiv.org/pdf/2605.01342v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2605.01434v1",
+    "title": "High-Speed, Scalable Sensor Readout for Dexterous Robotic Hands via Shift-Register Multiplexing",
+    "authors": [
+      "Jaehoon Kim",
+      "Lazaros Christoforidis",
+      "Michalis Papadakis",
+      "Victor Kartsch",
+      "Robert K. Katzschmann"
+    ],
+    "summary": "Dexterous robotic hands require high-speed multimodal sensing across many degrees of freedom, yet existing readout architectures often impose trade-offs between sensor count, wiring complexity, and sampling bandwidth. This paper presents a scalable analog sensor readout architecture based on a serial-in parallel-out (SIPO) shift-register principle. The proposed architecture supports versatile integration of heterogeneous analog-output sensors, scalable expansion using only three signal lines between sensor modules, and fast, configurable sampling. We validate the approach on a tendon-driven robotic hand integrating 16 joint sensor modules and one four-channel tactile sensor module, enabling acquisition of 20 sensor channels at a full-scan rate of 1 kHz, with stable operation up to 1.5 kHz. Joint sensor characterization showed a maximum slope absolute percentage error (APE) of 0.446% and sub-degree estimation error, indicating that the proposed readout system does not significantly degrade sensing performance. For tactile sensing, LSTM-based models achieved an RMSE of 0.125 N for force estimation and 93.4% accuracy for five-class contact-location classification, and were deployed for real-time inference at 1 kHz. System-level experiments showed that the joint sensors provide more accurate feedback than motor-based estimation during interaction, while the tactile sensor enables responsive force estimation in contact. The proposed architecture offers a practical path toward fully sensorized robotic hands for dexterous manipulation.",
+    "published": "2026-05-02",
+    "updated": "2026-05-02",
+    "pdf_url": "https://arxiv.org/pdf/2605.01434v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.01355v1",
+    "title": "AgriKD: Cross-Architecture Knowledge Distillation for Efficient Leaf Disease Classification",
+    "authors": [
+      "Minh-Dung Le",
+      "Minh-Duc Hoang",
+      "Hoang-Vu Truong",
+      "Thi-Thu-Hong Phan"
+    ],
+    "summary": "Automated leaf disease classification is critical for early disease detection in resource-constrained field environments. Vision Transformers (ViTs) provide strong representation capability by modeling long-range dependencies and inter-class relationships; however, their high computational cost makes them impractical for deployment on edge devices. As a result, existing approaches struggle to effectively transfer these rich representations to lightweight models. This paper introduces AgriKD, a cross-architecture knowledge distillation framework for efficient edge deployment, which transfers knowledge from a Vision Transformer (ViT) teacher to a compact convolutional student model. To bridge the representational gap between Transformer and CNN architectures, the proposed approach integrates multiple distillation objectives at the output, feature, and relational levels, where each objective captures a different aspect of the teacher knowledge. This enables the student model to better preserve and utilize transformer-derived global representations. Experiments on multiple leaf disease datasets show that the distilled student achieves performance comparable to the teacher while significantly improving efficiency, reducing model parameters by approximately 172 times, computational cost by 47.57 times, and inference latency by 18-22 times. Furthermore, the optimized model is deployed across multiple runtime formats, including ONNX, TFLite Float16, and TensorRT FP16, achieving consistent predictive performance with negligible accuracy degradation. Real-world deployment on NVIDIA Jetson edge devices and a mobile application demonstrates reliable real-time inference, highlighting the practicality of AgriKD for AI-powered agricultural applications in resource-constrained environments.",
+    "published": "2026-05-02",
+    "updated": "2026-05-02",
+    "pdf_url": "https://arxiv.org/pdf/2605.01355v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.01082v1",
+    "title": "Networked Information Aggregation for Binary Classification",
+    "authors": [
+      "MohammadHossein Bateni",
+      "Zahra Hadizadeh",
+      "MohammadTaghi Hajiaghayi",
+      "Mahdi JafariRaviz",
+      "Shayan Taherijam"
+    ],
+    "summary": "We study networked binary classification on a directed acyclic graph (DAG) where each agent observes only a subset of the feature columns of a shared dataset. Agents act sequentially along the DAG: each receives prediction columns from its parents (if any), augments its local features with these columns, fits a logistic predictor by minimizing binary cross-entropy (BCE), and forwards its prediction column to its outgoing neighbors. We ask whether this sequential distributed training procedure achieves information aggregation, meaning that some agent attains small excess loss compared to the best logistic predictor trained with access to all feature columns.\n  This question was studied for linear regression under squared loss by Kearns, Roth, and Ryu (SODA 2026). Extending their guarantees to classification is nontrivial because their analysis relies on quadratic structure that does not directly transfer to BCE with a logistic link. We analyze the resulting sequential logit-passing protocol and prove: (i) an excess loss upper bound of $O(M/\\sqrt{D})$ on depth-$D$ paths under the condition that every $M$ contiguous subsequence of $M$ agents collectively observe all features, and (ii) a close lower bound showing instances with excess loss of at least $Ω(k/D)$ where $k$ is the dimension of the feature space. Together, these results identify network depth as a fundamental bottleneck for information aggregation in networked logistic regression.",
+    "published": "2026-05-01",
+    "updated": "2026-05-01",
+    "pdf_url": "https://arxiv.org/pdf/2605.01082v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT",
+      "econ.TH"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
