@@ -1,0 +1,161 @@
+[
+  {
+    "id": "2605.03751v1",
+    "title": "Carbon-Aware Compute--Power Scheduling for AI Data Centers with Microgrid Prosumer Operations",
+    "authors": [
+      "Johnny R. Zhang",
+      "Gaoyuan Du",
+      "Qianyi Sun",
+      "Shiqi Wang",
+      "Jiaxuan Li",
+      "Xian Sun"
+    ],
+    "summary": "AI data centers are increasingly becoming tightly coupled compute--energy systems, where workload placement, cooling demand, electricity procurement, storage operation, and carbon emissions interact over time. This paper studies carbon-aware compute--power scheduling for geographically distributed AI data centers with microgrid prosumer capabilities. We propose a mixed-integer linear programming (MILP) framework that jointly schedules rigid training jobs, routes elastic inference workloads, dispatches local generation and battery storage, and manages bidirectional grid interaction under latency, continuity, power-balance, and carbon-budget constraints. The model captures two key features of emerging AI infrastructure: heterogeneous workload flexibility and site-level energy prosumer operation. Experiments on synthetic yet practically motivated instances show that the proposed joint MILP substantially improves total operational benefit over compute-only and energy-only baselines while reducing emissions. The results further indicate that inference-routing flexibility is a major source of value, battery storage provides useful temporal flexibility, and local-generation-rich settings are particularly favorable. The framework provides a tractable optimization abstraction for sustainable and grid-interactive AI data centers.",
+    "published": "2026-05-05",
+    "updated": "2026-05-05",
+    "pdf_url": "https://arxiv.org/pdf/2605.03751v1",
+    "categories": [
+      "cs.CE"
+    ],
+    "primary_category": "cs.CE",
+    "github": null
+  },
+  {
+    "id": "2605.03921v1",
+    "title": "Optimal Posterior Sampling for Policy Identification in Tabular Markov Decision Processes",
+    "authors": [
+      "Cyrille Kone",
+      "Kevin Jamieson"
+    ],
+    "summary": "We study the $(\\varepsilon, δ)$-PAC policy identification problem in finite-horizon episodic Markov Decision Processes. Existing approaches provide finite-time guarantees for approximate settings ($\\varepsilon>0$) but suffer from high computational cost, rendering them hard to implement, and also suffer from suboptimal dependence on $\\log(1/δ)$. We propose a randomized and computationally efficient algorithm for best policy identification that combines posterior sampling with an online learning algorithm to guide exploration in the MDP. Our method achieves asymptotic optimality in sample complexity, also in terms of posterior contraction rate, and runs in $O(S^2AH)$ per episode, matching standard model-based approaches. Unlike prior algorithms such as MOCA and PEDEL, our guarantees remain meaningful in the asymptotic regime and avoid sub-optimal polynomial dependence on $\\log(1/δ)$. Our results provide both theoretical insights and practical tools for efficient policy identification in tabular MDPs.",
+    "published": "2026-05-05",
+    "updated": "2026-05-05",
+    "pdf_url": "https://arxiv.org/pdf/2605.03921v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.03215v1",
+    "title": "Enwar 3.0: An Agentic Multi-Modal LLM Orchestrator for Situation-Aware Beamforming, Blockage Prediction, and Handover Management",
+    "authors": [
+      "Ahmad M. Nazar",
+      "Abdulkadir Celik",
+      "Asmaa Abdallah",
+      "Mohamed Y. Selim",
+      "Daji Qiao",
+      "Ahmed M. Eltawil"
+    ],
+    "summary": "Maintaining robust millimeter-wave (mmWave) connectivity in vehicular networks requires real-time adaptation to environmental dynamics, sensor degradation, and link variability. This paper presents Enwar 3.0, an environment-aware reasoning framework that unifies multi-modal sensing, agentic large language models (LLMs), and context-driven model selection for predictive beamforming, blockage detection, and handover management. Building upon prior iterations of Enwar, the proposed architecture integrates a classifier-driven assessment of sensor health with a primed LLM that orchestrates multiple specialized agents through structured, task-aware prompting. A novel synthetic degradation pipeline enables the training of a sensor degradation classifier that detects real-time impairments across camera, radar, LiDAR, and GPS inputs, achieving over 99% accuracy. The LLM, trained via chain-of-thought (CoT) priming and human-in-the-loop feedback, coordinates agent calls for beam selection, blockage forecasting, and environment perception while dynamically loading sensor-specific models based on environmental context. Extensive evaluations across 15 sensor combinations demonstrate that Enwar 3.0 delivers state-of-the-art performance in both predictive accuracy and interpretability, with beam selection accuracy exceeding 88%, blockage F1-scores surpassing 98%, and reasoning correctness reaching 87% on complex decision prompts. This work establishes a scalable foundation for LLM-integrated wireless systems that reason, perceive, and adapt in real-time.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.03215v1",
+    "categories": [
+      "cs.MA"
+    ],
+    "primary_category": "cs.MA",
+    "github": null
+  },
+  {
+    "id": "2605.03210v1",
+    "title": "Human-Provenance Verification should be Treated as Labor Infrastructure in AI-Saturated Markets",
+    "authors": [
+      "Erin McGurk",
+      "David Khachaturov"
+    ],
+    "summary": "We argue that AI-saturated markets are likely to create Veblen-good premiums, which we term human-provenance premiums, for verified human presence, and hence AI governance should treat human-provenance verification as labor infrastructure. Generative and agentic AI systems lower the cost of many standardized cognitive, creative, and coordination tasks, weakening the scarcity premiums that have supported much middle-tier knowledge work. We argue that this pressure may produce an asymmetric barbell-shaped structure of value capture in advanced economies: high-volume synthetic production controlled by owners of AI infrastructure at one pole, and scarce, high-status human labor valued for verified human presence at the other.\n  We advance three claims. First, AI compresses the value of standardized middle-tier labor by making good-enough synthetic substitutes scalable at low marginal cost, hollowing out the middle of the skill distribution currently categorized by knowledge work. Second, this compression reallocates demand for human labor toward work valued for its visible human character. We term this performative humanity and distinguish three forms of labor: relational presence, aesthetic provenance, and accountability. Third, as these premiums depend on credible verification, AI governance should treat human-provenance systems as labor infrastructure rather than as luxury authenticity labels.\n  To evaluate hybrid human-AI work, we propose constitutive human presence as the relevant standard: human labor retains premium value when human judgment, attention, accountability, authorship, or relational participation is not incidental to the output but constitutive of what is being purchased.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.03210v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "econ.GN"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2605.00555v2",
+    "title": "Sim-FA: A GPGPU Simulator Framework for Fine-Grained FlashAttention Pipeline Analysis",
+    "authors": [
+      "Zhongchun Zhou",
+      "Yuhang Gu",
+      "Chengtao Lai",
+      "Ya Wang",
+      "Wei Zhang"
+    ],
+    "summary": "To efficiently support Large Language Models (LLMs), modern GPGPU architectures have introduced new features and programming paradigms, such as warp specialization. These features enable temporal overlap between the producer and consumer, as well as between matrix multiplication and activation function operations, substantially improving performance. To conduct effective AI infrastructure and computer architecture research, cycle-accurate simulators that support these new features, together with analytical models that faithfully capture workload characteristics, are essential.\n  However, existing academic tools provide limited support for these emerging requirements. Existing cycle-accurate simulators do not incorporate new NVIDIA GPU features, such as the Tensor Memory Accelerator (TMA), in a timely manner. Moreover, existing analytical models can misestimate DRAM traffic under certain configurations.\n  In this paper, we build a simulation pipeline from FlashAttention-3 kernel instrumentation to cycle-accurate simulation. The simulator achieves a mean absolute percentage error (MAPE) of 5.7\\% and a maximum absolute percentage error of 12.7\\% against H800. We also provide a theoretical analysis of FlashAttention-3 and explain why existing analytical models can produce inaccurate traffic estimates.",
+    "published": "2026-05-01",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.00555v2",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2605.03153v1",
+    "title": "OCRR: A Benchmark for Online Correction Recovery under Distribution Shift",
+    "authors": [
+      "Adrian Grassi"
+    ],
+    "summary": "Static benchmarks measure a model frozen at training time. Real systems face distribution shift: new categories, paraphrased queries, drift: and must recover online via user corrections. No existing benchmark measures recovery speed under correction streams. We introduce OCRR (Online Correction Recovery Rate): a benchmark that streams a corpus through a classification system, applies oracle or stochastic corrections to wrong predictions, and reports two curves: novel-class accuracy and original-distribution accuracy versus correction count. We evaluate the substrate alongside nine baseline algorithms from five families plus seven bounded-storage variants of the substrate for the Pareto sweep, including standard online-learning baselines (river), continual-learning methods (EWC, A-GEM, LwF), retrieval/parametric hybrids (kNN-LM), parameter-efficient fine-tuning of a 1.5 B-parameter encoder (LoRA on DeBERTa-v3-large), and a hash-chained append-only substrate (Substrate). On Banking77 and CLINC150, under oracle and sparse correction policies, the substrate is the only system that simultaneously recovers novel-class accuracy (88.7 +/- 2.9 %) and retains original-distribution accuracy (95.4 +/- 0.8 %) beating the next-best published continual-learning baseline by 32.6 percentage points at equal memory budget, and beating LoRA-on-DeBERTa-v3-large by 84.6 percentage points on retention. We further find that classification accuracy remains stable at 99 % even as approximate-nearest-neighbour recall@5 degrades from 0.69 to 0.23 across 10 k to 10 M corpus scales, suggesting the substrate's margin-band majority vote is robust to retrieval imperfection in a way that pure top-k recall metrics do not predict. Code and data are available at https://github.com/adriangrassi/ocrr-benchmark.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.03153v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/adriangrassi/ocrr-benchmark.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2604.26482v2",
+    "title": "The Buy-or-Build Decision, Revisited: How Agentic AI Changes the Economics of Enterprise Software",
+    "authors": [
+      "David Klotz"
+    ],
+    "summary": "Advances in generative artificial intelligence, particularly agentic coding systems capable of autonomous software development, are disrupting the economics of the make-or-buy decision for enterprise applications. The \"SaaSocalypse\" narrative predicts that AI will render large segments of the Software-as-a-Service market obsolete by enabling firms to build software in-house at a fraction of historical cost. This paper adopts a conceptual research approach, combining transaction cost economics and the resource-based view with an assessment of current AI capabilities, to systematically re-evaluate the factors underlying the make-or-buy decision. It makes three contributions. First, it provides a factor-level analysis of how AI reshapes seven canonical decision determinants: cost, strategic differentiation, asset specificity, vendor lock-in, time-to-market, quality and compliance, and organizational capability. Second, it develops a typology of enterprise applications by their sensitivity to AI-induced shifts in make-or-buy economics. Third, it demonstrates that AI fundamentally transforms the governance properties of the Make option, shifting it from Williamson's pure hierarchy to a hybrid governance form that combines code ownership with external AI infrastructure dependency, with qualitatively different economics, capability requirements, and governance structures than pre-AI in-house development. The analysis finds that the SaaSocalypse thesis is overstated for most enterprise application categories; Make is most compelling for commodity utilities and differentiating custom applications in the AI era, while regulated and mission-critical systems remain predominantly in the buy domain.",
+    "published": "2026-04-29",
+    "updated": "2026-05-02",
+    "pdf_url": "https://arxiv.org/pdf/2604.26482v2",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2605.02948v1",
+    "title": "AsymK-Talker: Real-Time and Long-Horizon Talking Head Generation via Asymmetric Kernel Distillation",
+    "authors": [
+      "Yuxin Lu",
+      "Qian Qiao",
+      "Jiayang Sun",
+      "Min Cao",
+      "Guibo Zhu"
+    ],
+    "summary": "Recent advances in diffusion models have markedly enhanced the visual fidelity of audio-driven talking head generation. Nevertheless, existing methods are constrained by three critical limitations: causal inefficiency that impedes real-time inference, incompatibility with temporally coherent conditioning, and progressive drift over long-horizon generation, collectively hindering their deployment in real-time applications. To overcome these challenges, we introduce AsymK-Talker, a novel diffusion-distillation method designed for real-time and long-horizon talking head generation. AsymK-Talker comprises three key components: (1) Kernel-Conditioned Loop Generation (KCLG), a causal, chunk-wise generation paradigm that leverages motion kernels to enable temporally consistent propagation; (2) Temporal Reference Encoding (TRE), which converts a static identity reference into a time-aware latent representation to enhance audio-visual synchronization; and (3) Asymmetric Kernel Distillation (AKD), a teacher-student distillation framework wherein the teacher model conditions on ground-truth motion kernels for supervision, while the student learns to generate from generated kernels, thereby ensuring robustness during extended generation sequences. AsymK-Talker achieves promising results on both visual fidelity and lip synchronization metrics.",
+    "published": "2026-05-01",
+    "updated": "2026-05-01",
+    "pdf_url": "https://arxiv.org/pdf/2605.02948v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SD"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
