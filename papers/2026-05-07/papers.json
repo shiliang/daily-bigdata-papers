@@ -1,0 +1,187 @@
+[
+  {
+    "id": "2605.05116v1",
+    "title": "On the Hardness of Junking LLMs",
+    "authors": [
+      "Marco Rando",
+      "Samuel Vaiter"
+    ],
+    "summary": "Large language models (LLMs) are known to be vulnerable to jailbreak attacks, which typically rely on carefully designed prompts containing explicit semantic structure. These attacks generally operate by fixing an adversarial instruction and optimizing small adversarial components (e.g., suffixes or prefixes). In this setting, prompt structure is fundamental for performance, and recent results show that even simple random search can achieve strong performance when combined with sophisticated prompt design. Recently, it has been observed that harmful behaviors can be elicited even without the adversarial prompt, relying solely on optimized token sequences. This suggests the existence of natural backdoors, i.e., token sequences naturally emerged during LLMs training that trigger unsafe outputs without any meaningful instruction. However, despite these observations, this setting remains largely unexplored, and in particular the hardness of finding natural backdoors has not been assessed yet. In this work, we provide a first proof-of-concept study investigating the hardness of this task, which we refer to as the junking problem. We formalize it as the problem of finding token sequences that maximize the probability of generating a target prefix of harmful responses, propose a greedy random-search method to assess is such sequences can be discovered easily. Our results show that this problem is harder than standard jailbreak attacks, confirming the importance of semantic information in prompt design. At the same time, we find that our simple strategy is sufficient to solve it with a high success rate, suggesting that natural backdoors are present and easily recoverable. Finally, through perplexity analysis, we observe that the discovered token sequences lie in low-probability regions of the model distribution, supporting the hypothesis that they emerged implicitly from the training process.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.05116v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.05072v1",
+    "title": "Height-Guided Projection Reparameterization for Camera-LiDAR Occupancy",
+    "authors": [
+      "Yuan Wu",
+      "Zhiqiang Yan",
+      "Jiawei Lian",
+      "Zhengxue Wang",
+      "Jian Yang"
+    ],
+    "summary": "3D occupancy prediction aims to infer dense, voxel-wise scene semantics from sensor observations, where the 2D-to-3D view transformation serves as a crucial step in bridging image features and volumetric representations. Most previous methods rely on a fixed projection space, where 3D reference points are uniformly sampled along pillars. However, such sampling struggles to capture the sparsity and height variations of real-world scenes, leading to ambiguous correspondences and unreliable feature aggregation. To address these challenges, we propose HiPR, a camera-LiDAR occupancy framework with Height-Guided Projection Reparameterization. HiPR first encodes LiDAR into a BEV height map to capture the maximum height of the point cloud. HiPR then adjusts the sampling range of each pillar using the height prior, enabling adaptive reparameterization of the projection space. As a result, the projected points are redistributed into geometrically meaningful regions rather than fixed ranges. Meanwhile, we mask out the invalid parts of the height map to avoid misleading the feature aggregation. In addition, to alleviate the training instability caused by noisy LiDAR-derived heights, we introduce a training-time Progressive Height Conditioning strategy, which gradually transitions the conditioning signal from ground-truth heights to LiDAR heights. Extensive experiments demonstrate that HiPR consistently outperforms existing state-of-the-art methods while maintaining real-time inference. The code and pretrained models can be found at https://github.com/Rayn-Wu/HiPR.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.05072v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/Rayn-Wu/HiPR.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.05172v1",
+    "title": "When Life Gives You BC, Make Q-functions: Extracting Q-values from Behavior Cloning for On-Robot Reinforcement Learning",
+    "authors": [
+      "Lakshita Dodeja",
+      "Ondrej Biza",
+      "Shivam Vats",
+      "Stephen Hart",
+      "Stefanie Tellex",
+      "Robin Walters",
+      "Karl Schmeckpeper",
+      "Thomas Weng"
+    ],
+    "summary": "Behavior Cloning (BC) has emerged as a highly effective paradigm for robot learning. However, BC lacks a self-guided mechanism for online improvement after demonstrations have been collected. Existing offline-to-online learning methods often cause policies to replace previously learned good actions due to a distribution mismatch between offline data and online learning. In this work, we propose Q2RL, Q-Estimation and Q-Gating from BC for Reinforcement Learning, an algorithm for efficient offline-to-online learning. Our method consists of two parts: (1) Q-Estimation extracts a Q-function from a BC policy using a few interaction steps with the environment, followed by online RL with (2) Q-Gating, which switches between BC and RL policy actions based on their respective Q-values to collect samples for RL policy training. Across manipulation tasks from D4RL and robomimic benchmarks, Q2RL outperforms SOTA offline-to-online learning baselines on success rate and time to convergence. Q2RL is efficient enough to be applied in an on-robot RL setting, learning robust policies for contact-rich and high precision manipulation tasks such as pipe assembly and kitting, in 1-2 hours of online interaction, achieving success rates of up to 100% and up to 3.75x improvement against the original BC policy. Code and video are available at https://pages.rai-inst.com/q2rl_website/",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.05172v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.05055v1",
+    "title": "Adaptive Learning Strategies for AoA-Based Outdoor Localization: A Comprehensive Framework",
+    "authors": [
+      "Bac Trinh-Nguyen",
+      "Sara Berri",
+      "Sin G. Teo",
+      "Tram Truong-Huu",
+      "Arsenia Chorti"
+    ],
+    "summary": "Localization in 5G and 6G networks is essential for important use cases such as intelligent transportation, smart factories, and smart cities. Although deep learning has enabled improving localization accuracy, depending on the deployment scenario and the effort required for dataset collection campaigns on a given infrastructure, the training process for localization models can vary significantly. Furthermore, with respect to feature selection, recent works have demonstrated the robustness of angle-of-arrival (AoA) based localization. In view of these two points, we propose an adaptive framework for AoA-based localization that consists of two alternative learning strategies, each suited either for large or small training datasets. The proposed framework is evaluated on a real, massive multiple input multiple output (mMIMO) orthogonal frequency division multiplexing (OFDM) outdoor channel state information (CSI) dataset. First, we investigate offline learning when large training datasets are available; we propose a hierarchical framework that first distinguishes between line of sight (LoS) and non line of sight (NLoS) regions and then moves to more fine grained localization in the respective region. This approach provides high-performance localization through accumulated batch retraining and an integrated hyperparameter optimization mechanism. Second, when only a small training dataset is available, an online learning framework is proposed, using incremental tree-based and ensemble-based models for handling streaming data and continuously updating mode, as well as an online few-shot learning model for rapidly initializing new classes from a limited labeled support set. These results showcase that highly accurate robust localization can be achieved incrementally during network operation by exploiting online learning, alleviating the need for large dataset collection campaigns.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.05055v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "eess.SP"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.04364v1",
+    "title": "Online Nonstochastic Prediction: Logarithmic Regret via Predictive Online Least Squares",
+    "authors": [
+      "Chih-Fan Pai",
+      "Yang Zheng"
+    ],
+    "summary": "We study online prediction for marginally stable, partially observed linear dynamical systems under nonstochastic disturbances. Our objective is to minimize the cumulative squared prediction loss and compete with the best-in-hindsight Luenberger predictor. Standard online learning methods typically rely on bounded domains/gradients, and thus their guarantees may fail to deal with potentially unbounded trajectories in marginally stable systems. In this paper, we introduce an unconstrained online least squares method that stabilizes the learning process via tailored predictive hints. With model knowledge, we prove that hints constructed from any stabilizing Luenberger predictor render the hint residuals uniformly bounded, achieving logarithmic regret despite unbounded trajectory growth. We also discuss model-free prediction and introduce a simple universal hint for symmetric systems, under which logarithmic regret is maintained without model knowledge. Our results provide an adaptive, instance-wise optimal online predictor compared to classical fixed-gain observers under nonstochastic disturbances.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.04364v1",
+    "categories": [
+      "cs.LG",
+      "eess.SY",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.04512v1",
+    "title": "Topology-Aware Two-Stage Federated Learning via Proxy Models for Sub-THz Heterogeneous LEO Communications",
+    "authors": [
+      "Jinhao Yi",
+      "Weijun Gao",
+      "Chong Han",
+      "Ozgur Gurbuz",
+      "Josep M. Jornet"
+    ],
+    "summary": "Federated learning (FL) has emerged as a promising distributed training paradigm for Low Earth Orbit (LEO) networks by significantly reducing communication overhead. However, its deployment faces critical challenges, e.g., topology-induced model staleness, short contact windows, and unaddressed computing heterogeneity. To address these issues, a topology-aware two-stage FL framework is proposed in this paper. First, a multi-layer physical architecture utilizing high-altitude platforms (HAPs) and Sub-THz communications is designed to extend satellite-ground contact windows and enlarge available bandwidth. Second, a proxy-model-based approach is adopted to fully utilize heterogeneous resources and enable architecture-agnostic knowledge aggregation. Finally, building upon these foundations, a topology-aware two-stage aggregation mechanism is proposed as the central algorithmic design to overcome the topology-induced staleness. The mechanism dynamically partitions LEO satellites into localized groups based on their transient HAP coverage. Within each group, LEO satellites perform asynchronous aggregation at their associated HAP to naturally tolerate computational delays without penalizing faster nodes. Subsequently, a synchronous inter-group aggregation is executed among all HAPs at the Ground Station (GS) to strictly bound the maximum staleness and guarantee stable global convergence. Numerical results demonstrate the proposed framework extends contact windows and achieves 86.59%--90.57% test accuracy, outperforming the state-of-the-art heterogeneous baseline by 16.26\\%--19.80\\%. Furthermore, it achieves a 1.5x to 2.2x convergence speedup, which closely approaches the ideal upper bound.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.04512v1",
+    "categories": [
+      "eess.SP"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2605.04478v1",
+    "title": "CCL-D: A High-Precision Diagnostic System for Slow and Hang Anomalies in Large-Scale Model Training",
+    "authors": [
+      "Yida Gu",
+      "Fakang Wang",
+      "Jianhao Fu",
+      "Zhenhang Sun",
+      "Qianyu Zhang",
+      "Hairui Zhao",
+      "Xingchen Liu",
+      "Yang Tian",
+      "Wenjing Huang",
+      "Zedong Liu",
+      "Yifan Chen",
+      "Jinwu Yang",
+      "Yueyuan Zhou",
+      "Qian Zhao",
+      "Haoxu Li",
+      "Tao Wang",
+      "Feng Yu",
+      "Zhan Wang",
+      "Guangming Tan",
+      "Dingwen Tao"
+    ],
+    "summary": "As training scales grow, collective communication libraries (CCL) increasingly face anomalies arising from complex interactions among hardware, software, and environmental factors. These anomalies typically manifest as slow/hang communication, the most frequent and time-consuming category to diagnose. However, traditional diagnostic methods remain inaccurate and inefficient, frequently requiring hours or even days for root cause analysis. To address this, we propose CCL-D, a high-precision diagnostic system designed to detect and locate slow/hang anomalies in large-scale distributed training. CCL-D integrates a rank-level real-time probe with an intelligent decision analyzer. The probe measures cross-layer anomaly metrics using a lightweight distributed tracing framework to monitor communication traffic. The analyzer performs automated anomaly detection and root-cause location, precisely identifying the faulty GPU rank. Deployed on a 4,000-GPU cluster over one year, CCL-D achieved near-complete coverage of known slow/hang anomalies and pinpointed affected ranks within 6 minutes-substantially outperforming existing solutions.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.04478v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.04084v1",
+    "title": "FASQ: Flexible Accelerated Subspace Quantization for Calibration-Free LLM Compression",
+    "authors": [
+      "Ye Qiao",
+      "Yian Wang",
+      "Zhiheng Chen",
+      "Hyoukjun Kwon",
+      "Sitao Huang"
+    ],
+    "summary": "Compressing large language models (LLMs) for deployment on commodity GPUs remains challenging: conventional scalar quantization is limited to fixed bit-widths (e.g., 8/4/3-bit), offers only a few discrete compression points, and typically requires calibration data. We present FASQ (Flexible Accelerated Subspace Quantization), a calibration-free framework that applies product quantization to LLM weight matrices. By tuning two parameters, sub-vector size and codebook cardinality, FASQ exposes a continuous design space spanning 27-49% of the original FP16 model size, filling compression gaps that fixed-bit schemes cannot reach. On Meta-Llama-3-8B, FASQ surpasses 4-bit GPTQ and AWQ in accuracy (67.1-67.7 avg.) at 37-42% model size, with consistent results on Qwen3-8B and Qwen3.5-9B-Base. To make product quantization practical at inference time, we design custom CUDA kernels: a LUT-free direct-compute GEMV for decode and an output-stationary double-buffered LUT GEMM for prefill, both with split-K parallelism. On an RTX~3090, FASQ achieves 45.2 tok/s decode at effective 4-bit (2.56x memory reduction) and 51.8 tok/s at effective 3-bit (2.80x), both surpassing FP16 tensor-core performance (43.9 tok/s) and delivering 1.6 to 1.8x the throughput of AWQ, 2.5 to 2.5x of GPTQ, and 4.3 to 5x of RTN. FASQ is the only compressed method that accelerates decode beyond FP16, offering calibration-free compression, continuous size-quality trade-offs, and real-time inference on a single consumer GPU.",
+    "published": "2026-04-22",
+    "updated": "2026-04-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.04084v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.AR"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
