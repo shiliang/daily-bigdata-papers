@@ -1,0 +1,255 @@
+[
+  {
+    "id": "2605.06660v1",
+    "title": "Verifier-Backed Hard Problem Generation for Mathematical Reasoning",
+    "authors": [
+      "Yuhang Lai",
+      "Jiazhan Feng",
+      "Yee Whye Teh",
+      "Ning Miao"
+    ],
+    "summary": "Large Language Models (LLMs) demonstrate strong capabilities for solving scientific and mathematical problems, yet they struggle to produce valid, challenging, and novel problems - an essential component for advancing LLM training and enabling autonomous scientific research. Existing problem generation approaches either depend on expensive human expert involvement or adopt naive self-play paradigms, which frequently yield invalid problems due to reward hacking. This work introduces VHG, a verifier-enhanced hard problem generation framework built upon three-party self-play. By integrating an independent verifier into the conventional setter-solver duality, our design constrains the setter's reward to be jointly determined by problem validity (evaluated by the verifier) and difficulty (assessed by the solver). We instantiate two verifier variants: a Hard symbolic verifier and a Soft LLM-based verifier, with evaluations conducted on indefinite integral tasks and general mathematical reasoning tasks. Experimental results show that VHG substantially outperforms all baseline methods by a clear margin.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06660v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.06374v1",
+    "title": "ResiHP: Taming LLM Training Failures with Dynamic Hybrid",
+    "authors": [
+      "Tenghui Ma",
+      "Jihu Guo",
+      "Wei Gao",
+      "Sitian Lu",
+      "Zhisheng Ye",
+      "Hanjing Wang",
+      "Dahua Lin"
+    ],
+    "summary": "Hybrid parallelism underpins large-scale LLM training across tens of thousands of GPUs. At such scale, hardware failures on individual devices lead to performance skew across devices, diminishing overall training efficiency. Existing resilient systems overlook sequence length variability in datasets and device performance skew under hybrid parallelism. As a result, (1) iteration time fluctuations induced by sequence length variability can trigger spurious fail-slow detections, and (2) failures are mitigated through individual adaptations in hybrid parallelism, leading to unnecessary detection overhead and inefficient resilient training. To respond, this paper presents ResiHP, a resilient system that enables robust failure detection and fine-grained adaptation for hybrid parallel training. First, we develop a Detector to accurately identify failures. In particular, it employs a workload-aware execution time predictor that disentangles failures from iteration time fluctuations while remaining lightweight for online detection. Second, we design a Scheduler that dynamically adapts parallelism group sizes, model partitioning, and workload scheduling policies to improve training efficiency under failures. Experiments show that ResiHP improves training throughput by 1.04-4.39$\\times$ compared with state-of-the-art resilient training systems under diverse failure scenarios in a 256-GPU cluster.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06374v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.06057v1",
+    "title": "FalconGEMM: Surpassing Hardware Peaks with Lower-Complexity Matrix Multiplication",
+    "authors": [
+      "Honglin Zhu",
+      "Jiaping Cao",
+      "Jiang Shao",
+      "Siyuan Feng",
+      "Qian Qiu",
+      "Peng Chen",
+      "Xu Zhang",
+      "Yixian Zhou",
+      "Man Lung Yiu",
+      "Guang Ji",
+      "Minwen Deng",
+      "Wenxi Zhu",
+      "Jintao Meng"
+    ],
+    "summary": "Peak breaking Matrix Multiplication is a promising technique to improve the performance of DL, especially in LLM training and inference. We present FalconGEMM, a cross-platform framework that automates the deployment, optimization, and selection of Lower-Complexity Matrix Multiplication Algorithms (LCMAs) across diverse hardware. There are three key innovations: (1) a Deployment Module that enables portable execution across various hardware and input configurations through code generation; (2) an Execution Module with Group-Parallel Optimizations that maximizes on-chip data reuse, utilizes parallel resources, and reduces bandwidth overhead; and (3) a Decision Module featuring a lightweight analytical performance model to select the optimal strategy based on matrix shapes and hardware profiles. Extensive evaluation is conducted on LLM workloads across GPU (H20, A100) and CPU (ARM, x86) architectures with multiple data types. FalconGEMM succeeds in delivering peak breaking performance and outperforms GEMM libraries (e.g., cuBLAS, CUTLASS, Intel MKL, etc) by 7.59%-17.85% and LCMA competitors like AlphaTensor by 12.41%-55.61%. Our framework makes the theoretical promise of LCMAs practical for production deployment across the heterogeneous landscape of modern hardware.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06057v1",
+    "categories": [
+      "cs.DC",
+      "cs.MS"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.05927v1",
+    "title": "Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody-Aware Text LLM",
+    "authors": [
+      "Wenqian Cui",
+      "Xiao-Hui Li",
+      "Daxin Tan",
+      "Qiyong Zheng",
+      "Irwin King"
+    ],
+    "summary": "Speech large language models (SLMs) are typically built from text large language model (TLM) checkpoints, yet they still suffer from a substantial modality gap. Prior work has mainly attempted to reduce this gap from the output side by making speech generation more text-like, but the gap remains. We argue that the key remaining bottleneck lies on the input side. We propose TextPro-SLM, an SLM that makes spoken input more closely resemble that of a prosody-aware text LLM. TextPro-SLM combines WhisperPro, a unified speech encoder that produces synchronized text tokens and prosody embeddings, with an LLM backbone trained to preserve the semantic capabilities of the original TLM while learning paralinguistic understanding. Experiments show that TextPro-SLM achieves the lowest modality gap among leading SLMs at both 3B and 7B scales, while also delivering strong overall performance on paralinguistic understanding tasks. These gains are achieved with only roughly 1,000 hours of LLM training audio, suggesting that reducing the modality gap from the input side is both effective and data-efficient.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.05927v1",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.05794v1",
+    "title": "Revealing Modular Gradient Noise Imbalance in LLMs: Calibrating Adam via Signal-to-Noise Ratio",
+    "authors": [
+      "Ziqing Wen",
+      "Zhouyang Liu",
+      "Jiahuan Wang",
+      "Ping Luo",
+      "Li Shen",
+      "Dongsheng Li",
+      "Tao Sun"
+    ],
+    "summary": "The impressive performance of large language models (LLMs) arises from their massive scale and heterogeneous module composition. However, this structural heterogeneity introduces additional optimization challenges. While adaptive optimizers such as Adam(W) provide per-parameter adaptivity, they do not explicitly account for module-level gradient heterogeneity, resulting in slower convergence, suboptimal performance, or training instability. Existing approaches typically rely on manually tuned module-specific learning rates or specific optimization strategies, which are computationally costly and difficult to generalize across tasks or models. To establish a more principled approach, we first analyze the noise-damping behavior of Adam in high-noise modules and introduce \\textbf{Module-wise Learning Rate Scaling via SNR (MoLS)}. MoLS estimates module-level SNRs to scale Adam updates, allowing automated module-wise learning rate allocation without manual tuning. Empirical results through multiple LLM training benchmarks demonstrate that MoLS improves convergence speed and generalization, achieving performance comparable to carefully tuned module-specific learning rates, while remaining compatible with memory-efficient training algorithms.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.05794v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.06173v1",
+    "title": "Retina-RAG: Retrieval-Augmented Vision-Language Modeling for Joint Retinal Diagnosis and Clinical Report Generation",
+    "authors": [
+      "Abdelrahman Zaian",
+      "Sheethal Bhat",
+      "Mohamed Abdalkader",
+      "Andreas Maier"
+    ],
+    "summary": "Diabetic Retinopathy (DR) is a leading cause of preventable blindness among working-age adults worldwide, yet most automated screening systems are limited to image-level classification and lack clinically structured reporting. We propose Retina-RAG, a low-cost modular framework that jointly performs DR severity grading, macular edema (ME) detection, and report generation. The architecture decouples a high-performance retinal classifier and a parameter-efficient vision-language model (Qwen2.5-VL-7B-Instruct) adapted via Low-Rank Adaptation (LoRA), enabling flexible component integration. A retrieval-augmented generation (RAG) module injects curated ophthalmic knowledge together with structured classifier outputs at inference time to improve diagnostic consistency and reduce hallucinations. Retina-RAG achieves an F1-score of 0.731 for DR grading and 0.948 for ME detection, substantially outperforming zero-shot Qwen (0.096, 0.732) and MMed-RAG (0.541, 0.641) on a retinal disease detection dataset with captions. For report generation, Retina-RAG attains ROUGE-L 0.429 and SBERT similarity 0.884, exceeding all baselines. The full framework operates on a single consumer-grade GPU, demonstrating that clinically structured retinal AI can be achieved with modest computational resources.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06173v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.06010v1",
+    "title": "Adding Thermal Awareness to Visual Systems in Real-Time via Distilled Diffusion Models",
+    "authors": [
+      "Yuchen Guo",
+      "Junli Gong",
+      "Wenjun Dong",
+      "Yiuming Cheung",
+      "Weifeng Su"
+    ],
+    "summary": "Purely RGB-based vision models often fail to provide reliable cues in challenging scenarios such as nighttime and fog, leading to degraded performance and safety risks. Infrared imaging captures heat-emitting sources and provides critical complementary information, but existing high-fidelity fusion methods suffer from prohibitive latency, rendering them impractical for real-time edge deployment. To address this, we propose FusionProxy, a real-time image fusion module designed as a fully independent, plug-and-play component with diffusion level quality. FusionProxy exploits two complementary statistics of a teacher sample ensemble: per-pixel variance in raw image space, used to weight pixel-level supervision, and per-pixel variance inside frozen foundation backbones, used to route feature-level alignment spatially. Once trained, FusionProxy can be directly integrated into any visual perception system without joint optimization. Extensive experiments demonstrate that our method achieves superior performance on static recognition tasks and significantly enhances robustness in dynamic tasks, including closed-loop autonomous driving. Crucially, FusionProxy achieves real-time inference speeds on diverse platforms, from high-end GPUs to commodity hardware, providing a flexible and generalizable solution for all-day perception.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06010v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.01355v2",
+    "title": "AgriKD: Cross-Architecture Knowledge Distillation for Efficient Leaf Disease Classification",
+    "authors": [
+      "Minh-Dung Le",
+      "Minh-Duc Hoang",
+      "Hoang-Vu Truong",
+      "Thi-Thu-Hong Phan"
+    ],
+    "summary": "Automated leaf disease classification is critical for early disease detection in resource-constrained field environments. Vision Transformers (ViTs) provide strong representation capability by modeling long-range dependencies and inter-class relationships; however, their high computational cost makes them impractical for deployment on edge devices. As a result, existing approaches struggle to effectively transfer these rich representations to lightweight models. This paper introduces AgriKD, a cross-architecture knowledge distillation framework for efficient edge deployment, which transfers knowledge from a Vision Transformer (ViT) teacher to a compact convolutional student model. To bridge the representational gap between Transformer and CNN architectures, the proposed approach integrates multiple distillation objectives at the output, feature, and relational levels, where each objective captures a different aspect of the teacher knowledge. This enables the student model to better preserve and utilize transformer-derived global representations. Experiments on multiple leaf disease datasets show that the distilled student achieves performance comparable to the teacher while significantly improving efficiency, reducing model parameters by approximately 172 times, computational cost by 47.57 times, and inference latency by 18-22 times. Furthermore, the optimized model is deployed across multiple runtime formats, including ONNX, TFLite Float16, and TensorRT FP16, achieving consistent predictive performance with negligible accuracy degradation. Real-world deployment on NVIDIA Jetson edge devices and a mobile application demonstrates reliable real-time inference, highlighting the practicality of AgriKD for AI-powered agricultural applications in resource-constrained environments.",
+    "published": "2026-05-02",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.01355v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.06437v1",
+    "title": "Distributed Online Learning for Time-Critical Communication in 6G Industrial Subnetworks",
+    "authors": [
+      "Samira Abdelrahman",
+      "Hossam Farag",
+      "Gilberto Berardinelli"
+    ],
+    "summary": "6G industrial in-X subnetworks are expected to support highly time-critical alarm reporting in large-scale environments characterized by mobility, bursty event-driven traffic, and limited radio resources. In such settings, conventional medium access solutions are ill-suited to guarantee reliable delivery of critical traffic, e.g., emergency alarms, within strict deadlines, especially when multiple subnetworks become simultaneously active after a common alarm event, a scenario widely referred as medium access with a shared message. This paper proposes a distributed deep reinforcement learning (DRL)-based medium access control protocol for timely alarm transmission in time-critical industrial subnetworks. The proposed method enables each local access point (LAP) to learn, in an online manner, to infer contention conditions from a broadcast contention-signature signal and to autonomously select a transmission pattern over the available channels using a lightweight deep neural network and an (ephsilon)-greedy policy. Simulation results demonstrate that the proposed approach consistently achieves a higher probability of in-time alarm delivery than benchmark random-access schemes, while exhibiting better scalability with increasing network density. For instance, the proposed method improves probability of in-time alarm delivery by at least 7% with a network size of 40 subnetworks, while the gain increases to 21% when the number of subnetworks increases to 60.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06437v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2605.06257v1",
+    "title": "LearnMate^2: Design and Evaluation of an LLM-powered Personalized and Adaptive Support System for Online Learning",
+    "authors": [
+      "Xinyu Jessica Wang",
+      "Christine P. Lee",
+      "Bilge Mutlu"
+    ],
+    "summary": "Personalization is crucial for effective learning, yet online learning, designed for widespread availability and open access, lacks personalized guidance. Recent advancements in large language models (LLMs) offer opportunities to bridge this gap. We explore how LLM-driven tools may be designed to support personalized and adaptive learning and examine how they shape user experience and learning outcomes. We iteratively designed \\tool{} to support online learning by providing personalized study plans, real-time contextual assistance, and adaptive learning activities. A preliminary study ($n=24$) assessed the effectiveness and usability of \\tool{} and informed refinements in our system, which we then evaluated ($n = 16$) against a combination of a state-of-the-art online learning platform and an LLM for learning support. Results indicate that \\tool{} advances AI pedagogy by improving both learning outcomes and user experience compared to existing online learning and support tools. This work advances our understanding of the design space of personalized, AI-driven educational tools and their potential impact on user experience.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06257v1",
+    "categories": [
+      "cs.HC"
+    ],
+    "primary_category": "cs.HC",
+    "github": null
+  },
+  {
+    "id": "2605.05911v1",
+    "title": "PREFER: Personalized Review Summarization with Online Preference Learning",
+    "authors": [
+      "Millend Roy",
+      "Agostino Capponi",
+      "Vineet Goyal"
+    ],
+    "summary": "Product reviews significantly influence purchasing decisions on e-commerce platforms. However, the sheer volume of reviews can overwhelm users, obscuring the information most relevant to their specific needs. Current e-commerce summarization systems typically produce generic, static summaries that fail to account for the fact that (i) different users care about different product characteristics, and (ii) these preferences may evolve with interactions. To address the challenge of unknown latent preferences, we propose an online learning framework that generates personalized summaries for each user. Our system iteratively refines its understanding of user preferences by incorporating feedback directly from the generated summaries over time. We provide a case study using the Amazon Reviews'23 dataset, showing in controlled simulations that online preference learning improves alignment with target user interests while maintaining summary quality.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.05911v1",
+    "categories": [
+      "cs.AI",
+      "cs.GT",
+      "cs.LG",
+      "eess.SY",
+      "math.OC"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.05497v1",
+    "title": "Online Localized Conformal Prediction",
+    "authors": [
+      "Yuheng Lai",
+      "Garvesh Raskutti"
+    ],
+    "summary": "Conformal prediction is a framework that provides valid uncertainty quantification for general models with exchangeable data. However, in the online learning and time-series settings, exchangeability is not satisfied. Existing online conformal methods, such as adaptive conformal inference (ACI), can achieve long-run validity, yet they remain inefficient under covariate heterogeneity because they rely on global calibration. We propose \\emph{Online Localized Conformal Prediction (OLCP)}, which combines online adaptation with covariate-dependent localization to better reflect heterogeneity. To reduce sensitivity to the localization bandwidth, we further develop \\emph{OLCP-Hedge}, which performs bandwidth selection as an online expert aggregation problem using a constrained online convex optimization framework. Importantly, we provide coverage guarantees for both algorithms and demonstrate through simulations and real-data experiments that the proposed methods attain valid long-run coverage with narrower prediction sets than existing baselines.",
+    "published": "2026-05-06",
+    "updated": "2026-05-06",
+    "pdf_url": "https://arxiv.org/pdf/2605.05497v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
