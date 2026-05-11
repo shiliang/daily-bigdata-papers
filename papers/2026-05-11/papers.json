@@ -1,0 +1,242 @@
+[
+  {
+    "id": "2605.07569v1",
+    "title": "HexiSeq: Accommodating Long Context Training of LLMs over Heterogeneous Hardware",
+    "authors": [
+      "Yan Liang",
+      "Youhe Jiang",
+      "Ran Yan",
+      "Binhang Yuan",
+      "Wei Wang",
+      "Chuan Wu"
+    ],
+    "summary": "Long-context training of large language models (LLMs) is commonly distributed with Context Parallelism (CP) and Head Parallelism (HP), but existing training systems largely assume homogeneous GPU meshes. This paper extends CP and HP to heterogeneous GPU clusters with mixed GPU models and non-uniform network bandwidths, a common setting in production training. We introduce HexiSeq, a system that supports fully asymmetric CP--HP partitioning by assigning sequence shards and attention heads according to device compute, memory, and communication capabilities. We formalize heterogeneous CP--HP allocation as a constrained optimization problem and develop an efficient hierarchical scheduler for finding optimal schedules. We evaluate HexiSeq against state-of-the-art CP and HP baselines on both real and simulated heterogeneous clusters. Across models from 3B to 70B parameters and context lengths up to one million tokens, HexiSeq improves throughput by $1.11\\times$ on average and up to $1.19\\times$ on mixed H100--A100 testbeds, and by $1.36\\times$ on average and up to $1.72\\times$ in simulations with 32--128 GPUs spanning up to four GPU models. On FLOP-comparable pairs against homogeneous clusters, HexiSeq reaches throughput close to the strongest homogeneous baseline, showing that heterogeneous clusters can be used efficiently for long-context LLM training.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07569v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.07403v1",
+    "title": "Boosting Automatic Java-to-Cangjie Translation with Multi-Stage LLM Training and Error Repair",
+    "authors": [
+      "Xinyue Liang",
+      "Jingxuan Zhang",
+      "Lin Li",
+      "Jun Zhang",
+      "Junhao Chen"
+    ],
+    "summary": "With the rapid evolution of emerging programming language ecosystems, the demand for code translation to low-resource languages continues to grow. As Cangjie emerges as a new programming language, its ecosystem and development toolchains are rapidly expanding. Automated translation from popular programming languages to Cangjie is therefore valuable for practical development. However, constrained by both insufficient Cangjie knowledge and scarce parallel code corpora, general Large Language Models (LLMs) are prone to syntactic errors and semantic as well as structural misalignment in code translation. Existing approaches typically rely on fine-tuning with large-scale parallel data, but they cannot reliably improve compilability or semantic consistency for low-resource Cangjie languages. To tackle these challenges, we propose a multi-stage training framework of LLMs that employs the iterative error repair technique to translate Java code into Cangjie code. This training framework performs training on LLMs, gradually integrating knowledge and achieving semantic alignment as well as structure awareness. During the code translation, we also combine the compiler feedback and error repair case retrieval to repair the incorrect Cangjie code. We construct syntactic knowledge and monolingual instruction datasets to train the LLM. In addition, we also build a Cangjie error repair repository to support error repair in our approach. Experimental results show that, with limited parallel data, our approach improves functional equivalence by 6.06\\% compared to the state-of-the-art approaches. Meanwhile, ablation studies confirm that each training stage positively contributes to the final performance.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07403v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2605.05927v2",
+    "title": "Minimizing Modality Gap from the Input Side: Your Speech LLM Can Be a Prosody-Aware Text LLM",
+    "authors": [
+      "Wenqian Cui",
+      "Xiao-Hui Li",
+      "Daxin Tan",
+      "Qiyong Zheng",
+      "Irwin King"
+    ],
+    "summary": "Speech large language models (SLMs) are typically built from text large language model (TLM) checkpoints, yet they still suffer from a substantial modality gap. Prior work has mainly attempted to reduce this gap from the output side by making speech generation more text-like, but the gap remains. We argue that the key remaining bottleneck lies on the input side. We propose TextPro-SLM, an SLM that makes spoken input more closely resemble that of a prosody-aware text LLM. TextPro-SLM combines WhisperPro, a unified speech encoder that produces synchronized text tokens and prosody embeddings, with an LLM backbone trained to preserve the semantic capabilities of the original TLM while learning paralinguistic understanding. Experiments show that TextPro-SLM achieves the lowest modality gap among leading SLMs at both 3B and 7B scales, while also delivering strong overall performance on paralinguistic understanding tasks. These gains are achieved with only roughly 1,000 hours of LLM training audio, suggesting that reducing the modality gap from the input side is both effective and data-efficient.",
+    "published": "2026-05-07",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.05927v2",
+    "categories": [
+      "cs.CL",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.06173v2",
+    "title": "Retina-RAG: Retrieval-Augmented Vision-Language Modeling for Joint Retinal Diagnosis and Clinical Report Generation",
+    "authors": [
+      "Abdelrahman Zaian",
+      "Sheethal Bhat",
+      "Mohamed Abdalkader",
+      "Andreas Maier"
+    ],
+    "summary": "Diabetic Retinopathy (DR) is a leading cause of preventable blindness among working-age adults worldwide, yet most automated screening systems are limited to image-level classification and lack clinically structured reporting. We propose Retina-RAG, a low-cost modular framework that jointly performs DR severity grading, macular edema (ME) detection, and report generation. The architecture decouples a high-performance retinal classifier and a parameter-efficient vision-language model (Qwen2.5-VL-7B-Instruct) adapted via Low-Rank Adaptation (LoRA), enabling flexible component integration. A retrieval-augmented generation (RAG) module injects curated ophthalmic knowledge together with structured classifier outputs at inference time to improve diagnostic consistency and reduce hallucinations. Retina-RAG achieves an F1-score of 0.731 for DR grading and 0.948 for ME detection, substantially outperforming zero-shot Qwen (0.096, 0.732) and MMed-RAG (0.541, 0.641) on a retinal disease detection dataset with captions. For report generation, Retina-RAG attains ROUGE-L 0.438 and SBERT similarity 0.884, exceeding all baselines. The full framework operates on a single consumer-grade GPU, demonstrating that clinically structured retinal AI can be achieved with modest computational resources.",
+    "published": "2026-05-07",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.06173v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.07552v1",
+    "title": "VIMCAN: Visual-Inertial 3D Human Pose Estimation with Hybrid Mamba-Cross-Attention Network",
+    "authors": [
+      "Zepeng Yang",
+      "Junxuan Bai",
+      "Hao Li",
+      "Ju Dai",
+      "Junjun Pan",
+      "Yongfeng Yin",
+      "Bin Li"
+    ],
+    "summary": "The rapid advances in deep learning have significantly enhanced the accuracy of multimodal 3D human pose estimation (HPE). However, the state-of-the-art (SOTA) HPE pipelines still rely on Transformers, whose quadratic complexity makes real-time processing for long sequences impractical. Mamba addresses this issue through selective state-space modeling, enabling efficient sequence processing without sacrificing representational power. Nevertheless, it struggles to capture complex spatial dependencies in multimodal settings. To bridge this gap, we propose VIMCAN, a hybrid architecture that combines the efficient sequence modeling of Mamba with the spatial reasoning of Cross-Attention, and performs robust visual-inertial fusion and human pose estimation between RGB keypoints and wearable IMU data. By leveraging Mamba's dynamic parameterization for temporal modeling and Attention for spatial dependency extraction, VIMCAN achieves superior accuracy, with mean per-joint position errors (MPJPE) of 17.2 mm on TotalCapture and 45.3 mm on 3DPW. VIMCAN outperforms prior Transformer-based and other SOTA approaches while supporting real-time inference at over 60 frames per second on consumer-grade hardware. The source code is available on GitHub.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07552v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.02948v2",
+    "title": "AsymTalker: Identity-Consistent Long-Term Talking Head Generation via Asymmetric Distillation",
+    "authors": [
+      "Yuxin Lu",
+      "Qian Qiao",
+      "Jiayang Sun",
+      "Guibo Zhu",
+      "Min Cao"
+    ],
+    "summary": "Diffusion-based talking head generation has achieved remarkable visual quality, yet scaling it to long-term videos remains challenging. The widely adopted chunk-wise paradigm introduces two fundamental failures: (1) temporal-spatial misalignment between static identity references and dynamic audio streams, and (2) cascading identity drift propagated through self-generated continuity references across chunks. To address both issues, we propose AsymTalker, a novel diffusion-based talking head generation method comprising Temporal Reference Encoding (TRE) and Asymmetric Knowledge Distillation (AKD). First, TRE mitigates temporal-spatial misalignment by transforming the static identity image into a temporally coherent latent representation through encoding of a temporally replicated pseudo-video, without introducing additional parameters. Second, AKD resolves the inherent conditioning dilemma in chunk-wise training: using ground-truth references causes train-inference mismatch, while self-generated references entangle supervision with identity drift. Our asymmetric design circumvents this by anchoring the teacher model with ground-truth continuity references to provide drift-free, chunk-level supervision, thereby avoiding the teacher bottleneck. Meanwhile, the student model learns under inference-aligned conditions, conditioned only on self-generated references, and is trained via distribution matching to preserve identity over long horizons. Extensive experiments show AsymTalker achieves state-of-the-art results on HDTF and VFHQ. It guarantees high-fidelity, identity-consistent synthesis over 600-second videos and reaches a real-time inference speed of 66 FPS.",
+    "published": "2026-05-01",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.02948v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SD"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.07977v1",
+    "title": "Self-Play Enhancement via Advantage-Weighted Refinement in Online Federated LLM Fine-Tuning with Real-Time Feedback",
+    "authors": [
+      "Seohyun Lee",
+      "Wenzhi Fang",
+      "Dong-Jun Han",
+      "Seyyedali Hosseinalipour",
+      "Christopher G. Brinton"
+    ],
+    "summary": "Recent works have advanced feedback-based learning systems, whereby a foundation model is able to intake incoming feedback (e.g., a user) to self-improve, creating a self-loop system of training. However, existing works are limited in needing to consider an offline setup to allow for such feedback-based methods, and are further limited in the need of requiring privileged ground-truth contexts for training. Moreover, there is limited consideration of federated learning (FL), which is particularly well-suited for incorporating external feedback across large networks of end users, for example, but requires methods to be efficient for training on resource-constrained edge devices. Therefore, we introduce SPEAR (Self-Play Enhancement via Advantage-Weighted Refinement), an efficient online learning algorithm for federated LLM fine-tuning. SPEAR utilizes a feedback-guided self-play loop to construct naturally contrastive pairs per prompt which are utilized to be trained on (i) standard maximum likelihood on correct completions and (ii) confidence-weighted unlikelihood on tail tokens of incorrect completions. Without the need of expensive group generations and ground-truth contexts for training (i.e., only partial, non-answer feedback), in contrast with existing works, SPEAR can be trained both online and in a resource-efficient manner. We validate SPEAR across various benchmark datasets, demonstrating its superior performance in comparison to state-of-the-art baselines. The implementation code is publicly available at https://github.com/lee3296/SPEAR.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07977v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/lee3296/SPEAR.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.07886v1",
+    "title": "Characterizing and Correcting Effective Target Shift in Online Learning",
+    "authors": [
+      "Ziyan Li",
+      "Naoki Hiratani"
+    ],
+    "summary": "Online learning from a stream of data is a defining feature of intelligence, yet modern machine learning systems often struggle in this setting, especially under distributional shift. To understand its basic properties, we study the relationship between online and offline learning in the context of kernel regression. We derive a closed-form expression for the function learned by online kernel regression, revealing that online kernel regression is equivalent to offline regression with shifted, inaccurate target outputs. Conversely, we show that by compensating for this effective shift in the teaching signal through target correction, online kernel-based learning can provably learn the same predictor as its offline counterpart. We derive both a closed-form expression for this target correction and an iterative form that can be applied sequentially. Applying this framework to image classification tasks on CIFAR-10 and CORe50, we show that online stochastic gradient descent with iteratively corrected targets outperforms learning with the true targets in continual learning settings. This work therefore provides a basic framework for analyzing and improving online learning in non-stationary environments.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07886v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2605.07155v1",
+    "title": "Regret-Oracle Complexity Tradeoffs in Agnostic Online Learning",
+    "authors": [
+      "Idan Attias",
+      "Steve Hanneke",
+      "Arvind Ramaswami"
+    ],
+    "summary": "Agnostic online learning is classically solved via a reduction to the realizable setting, utilizing Littlestone's Standard Optimal Algorithm (SOA) as a base learner. However, the SOA is computationally intractable to execute even for a single round. To overcome this barrier, recent work in oracle-efficient online learning replaces the SOA with a realizable base learner that accesses the concept class exclusively through an offline empirical risk minimization (ERM) oracle. While such agnostic learners achieve near-optimal expected regret, they suffer from a doubly-exponential oracle complexity of $O\\big(T^{2^{O(d_\\mathrm{LD})}}\\big)$, where $d_\\mathrm{LD}$ is the Littlestone dimension and $T$ is the number of rounds. In this work, we significantly improve this oracle complexity while relying on an even weaker primitive: a weak-consistency oracle, which merely decides whether a given labeled dataset is realizable. At the core of our approach is an adaptive and dynamic agnostic-to-realizable reduction that actively prunes non-realizable label sequences on the fly. By using the VC dimension ($d_\\mathrm{VC}$) to bound the number of dynamically maintained active paths, our algorithm reduces the total query complexity down to $O(T^{d_\\mathrm{VC}+1})$ while perfectly preserving near-optimal expected regret. Crucially, this dynamic pruning also yields a memory reduction over the standard reduction. Furthermore, we formally quantify the regret--oracle complexity tradeoff, providing upper bounds that smoothly interpolate between restricted query budgets and attainable expected regret. We complement these with lower bounds proving that any learner restricted to $Q = o(\\sqrt{T})$ queries must suffer an expected regret of $Ω(T/Q)$.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07155v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.05497v2",
+    "title": "Online Localized Conformal Prediction",
+    "authors": [
+      "Yuheng Lai",
+      "Garvesh Raskutti"
+    ],
+    "summary": "Conformal prediction is a framework that provides valid uncertainty quantification for general models with exchangeable data. However, in the online learning and time-series settings, exchangeability is not satisfied. Existing online conformal methods, such as adaptive conformal inference (ACI), can achieve long-run validity, yet they remain inefficient under covariate heterogeneity because they rely on global calibration. We propose \\emph{Online Localized Conformal Prediction (OLCP)}, which combines online adaptation with covariate-dependent localization to better reflect heterogeneity. To reduce sensitivity to the localization bandwidth, we further develop \\emph{OLCP-Hedge}, which performs bandwidth selection as an online expert aggregation problem using a constrained online convex optimization framework. Importantly, we provide coverage guarantees for both algorithms and demonstrate through simulations and real-data experiments that the proposed methods attain valid long-run coverage with narrower prediction sets than existing baselines.",
+    "published": "2026-05-06",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.05497v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.07726v1",
+    "title": "A Scalable Recipe on SuperMUC-NG Phase 2: Efficient Large-Scale Training of Language Models",
+    "authors": [
+      "Ajay Navilarekal Rajgopal",
+      "Nikolai Solmsdorf"
+    ],
+    "summary": "Large Language Models (LLMs) continue to demonstrate superior performance with increasing scale, yet training models with billions to trillions of parameters requires staggering computational resources, e.g. a one-trillion-parameter GPT-style model requires an estimated 120 million exaflops. This challenge necessitates efficient distributed training strategies on cutting-edge High-Performance Computing (HPC) infrastructure. In this work, we explore the SuperMUC-NG Phase 2 (SMNG-P2) system at the Leibniz Supercomputing Centre (LRZ) in Garching, Germany, equipped with Intel Data Center GPU Max 1550 accelerators to extract the necessary computational power. We enable and investigate a comprehensive recipe of parallel training techniques, including tensor parallelism, pipeline parallelism, and sharded data parallelism, essential for facilitating the training of LLMs up to 175 billion-parameter scale on SMNG-P2. Through empirical assessment and extensive hyperparameter tuning, we analyze the complex interplay among these techniques and determine their impact on GPU computational efficiency. We identify an optimized combined strategy that yields high throughput and enables the efficient training of LLMs of varying sizes. Specifically, for the 175B model, we achieved per-tile throughput of 10% of theoretical peak per-tile bf16 FLOPs, employing an out-of-the-box publicly available software stack, utilizing standard distributions without further modification. This approach ensures broad accessibility, as our methodology can be replicated by any user on SMNG-P2 system without need for porting or specialized software engineering. Furthermore, we achieved 93% weak scaling efficiency and strong scaling efficiency of 82% on 128 nodes. This scalable recipe provides a crucial blueprint for efficiently utilizing advanced exascale systems for next-generation foundational model development.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.07726v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.06819v1",
+    "title": "A Theory of Online Learning with Autoregressive Chain-of-Thought Reasoning",
+    "authors": [
+      "Ilan Doron-Arad",
+      "Idan Mehalel",
+      "Elchanan Mossel"
+    ],
+    "summary": "Autoregressive generation lies at the heart of the mechanism of large language models. It can be viewed as the repeated application of a next-token generator: starting from an input string (prompt), the generator is applied for $M$ steps, and the last generated token is taken as the final output. [Joshi et al., 2025] proposed a PAC model for studying the learnability of the input-output maps arising from this process. We develop an online analogue of this framework, focusing on the mistake bound of learning the final output induced by an unknown next-token generator.\n  We distinguish between two forms of feedback. In the End-to-End model, after each round the learner observes only the final token produced after $M$ autoregressive steps. In the Chain-of-Thought model, the learner is additionally shown the entire $M$-step trajectory. Our goal is to understand how the optimal mistake bound depends on the generation horizon $M$, and to what extent observing intermediate tokens can reduce this dependence.\n  Our main results show that the online theory of autoregressive learning exhibits a qualitative picture analogous to the statistical one found by [Hanneke et al., 2026], but with a different scale of dependence on the generation horizon. In the End-to-End model, we prove a taxonomy of possible mistake-bound growth rates in the generation horizon $M$: essentially any rate between constant and logarithmic can arise. We further show that this logarithmic ceiling is unavoidable. In the Chain-of-Thought model, we show that access to the full generated trajectory eliminates the dependence on $M$ altogether.\n  We also analyze autoregressive linear threshold classes, and prove optimal mistake bounds, as well as a new lower bound for the statistical setting. Along the way, our results resolve several questions left open by [Joshi et al., 2025].",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.06819v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
