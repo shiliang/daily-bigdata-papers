@@ -1,0 +1,489 @@
+[
+  {
+    "id": "2605.10501v1",
+    "title": "Accelerating Compound LLM Training Workloads with Maestro",
+    "authors": [
+      "Xiulong Yuan",
+      "Hongqing Chen",
+      "Jiaxuan Peng",
+      "Fan Zhou",
+      "Zhixiang Ruan",
+      "Zekun Wang",
+      "Bo Zheng",
+      "Rui Men",
+      "Haiquan Wang",
+      "Zhipeng Zhang",
+      "Langshi Chen",
+      "Man Yuan",
+      "Jiaqi Gao",
+      "Zhengping Qian",
+      "Junyang Lin",
+      "Yong Li",
+      "Wei Lin",
+      "Junhua Wang",
+      "Jingren Zhou"
+    ],
+    "summary": "Compound LLM training workloads-such as knowledge distillation and multimodal LLM (MLLM) training-are gaining prominence. These typically comprise heterogeneous components differing in parameter scale, execution mode (forward-only or full forward-backward), and sequence length. Besides, component activation can be data-dependent: in MLLM training, modality-specific parts activate only when inputs contain corresponding modalities, causing dynamic computational paths and irregular runtime workloads. Conventional frameworks, designed for monolithic models, cannot handle the dual heterogeneity-static (across components) and dynamic (runtime). By enforcing one-size-fits-all training configurations across components and ignoring input-induced variations, they suffer suboptimal throughput and poor GPU utilization. In this paper, we introduce Maestro, a section-centric training framework that addresses both challenges. Maestro first restructures the workload into a coarse-grained section graph. Each section independently configures its parallelism strategy, micro-batch size, and data-parallel degree-enabling fine-grained, component-aware resource allocation to tackle static heterogeneity. To tackle runtime irregularity, Maestro introduces a wavefront scheduling algorithm that dynamically reorders input samples to orchestrate concurrent section execution while preserving cross-section data dependencies. This maximizes inter-section parallelism and minimizes stalls, boosting hardware utilization. Deployed in production for millions of GPU hours, Maestro reduces GPU consumption by ~40% on key workloads-including knowledge distillation and MLLM training-validating its real-world impact.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10501v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.06374v2",
+    "title": "ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism",
+    "authors": [
+      "Tenghui Ma",
+      "Jihu Guo",
+      "Wei Gao",
+      "Sitian Lu",
+      "Zhisheng Ye",
+      "Hanjing Wang",
+      "Dahua Lin"
+    ],
+    "summary": "Hybrid parallelism underpins large-scale LLM training across tens of thousands of GPUs. At such scale, hardware failures on individual devices lead to performance skew across devices, diminishing overall training efficiency. Existing resilient systems overlook sequence length variability in datasets and device performance skew under hybrid parallelism. As a result, (1) iteration time fluctuations induced by sequence length variability can trigger spurious fail-slow detections, and (2) failures are mitigated through individual adaptations in hybrid parallelism, leading to unnecessary detection overhead and inefficient resilient training. To respond, this paper presents ResiHP, a resilient system that enables robust failure detection and fine-grained adaptation for hybrid parallel training. First, we develop a Detector to accurately identify failures. In particular, it employs a workload-aware execution time predictor that disentangles failures from iteration time fluctuations while remaining lightweight for online detection. Second, we design a Scheduler that dynamically adapts parallelism group sizes, model partitioning, and workload scheduling policies to improve training efficiency under failures. Experiments show that ResiHP improves training throughput by 1.04-4.39$\\times$ compared with state-of-the-art resilient training systems under diverse failure scenarios in a 256-GPU cluster.",
+    "published": "2026-05-07",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.06374v2",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.05072v2",
+    "title": "Height-Guided Projection Reparameterization for Camera-LiDAR Occupancy",
+    "authors": [
+      "Yuan Wu",
+      "Zhiqiang Yan",
+      "Jiawei Lian",
+      "Zhengxue Wang",
+      "Jian Yang"
+    ],
+    "summary": "3D occupancy prediction aims to infer dense, voxel-wise scene semantics from sensor observations, where the 2D-to-3D view transformation serves as a crucial step in bridging image features and volumetric representations. Most previous methods rely on a fixed projection space, where 3D reference points are uniformly sampled along pillars. However, such sampling struggles to capture the sparsity and height variations of real-world scenes, leading to ambiguous correspondences and unreliable feature aggregation. To address these challenges, we propose HiPR, a camera-LiDAR occupancy framework with Height-Guided Projection Reparameterization. HiPR first encodes LiDAR into a BEV height map to capture the maximum height of the point cloud. HiPR then adjusts the sampling range of each pillar using the height prior, enabling adaptive reparameterization of the projection space. As a result, the projected points are redistributed into geometrically meaningful regions rather than fixed ranges. Meanwhile, we mask out the invalid parts of the height map to avoid misleading the feature aggregation. In addition, to alleviate the training instability caused by noisy LiDAR-derived heights, we introduce a training-time Progressive Height Conditioning strategy, which gradually transitions the conditioning signal from ground-truth heights to LiDAR heights. Extensive experiments demonstrate that HiPR consistently outperforms existing state-of-the-art methods while maintaining real-time inference. The code and pretrained models can be found at https://github.com/yanzq95/HiPR.",
+    "published": "2026-05-06",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.05072v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/yanzq95/HiPR.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.02948v3",
+    "title": "AsymTalker: Identity-Consistent Long-Term Talking Head Generation via Asymmetric Distillation",
+    "authors": [
+      "Yuxin Lu",
+      "Jiayang Sun",
+      "Guibo Zhu",
+      "Min Cao"
+    ],
+    "summary": "Diffusion-based talking head generation has achieved remarkable visual quality, yet scaling it to long-term videos remains challenging. The widely adopted chunk-wise paradigm introduces two fundamental failures: (1) temporal-spatial misalignment between static identity references and dynamic audio streams, and (2) cascading identity drift propagated through self-generated continuity references across chunks. To address both issues, we propose AsymTalker, a novel diffusion-based talking head generation method comprising Temporal Reference Encoding (TRE) and Asymmetric Knowledge Distillation (AKD). First, TRE mitigates temporal-spatial misalignment by transforming the static identity image into a temporally coherent latent representation through encoding of a temporally replicated pseudo-video, without introducing additional parameters. Second, AKD resolves the inherent conditioning dilemma in chunk-wise training: using ground-truth references causes train-inference mismatch, while self-generated references entangle supervision with identity drift. Our asymmetric design circumvents this by anchoring the teacher model with ground-truth continuity references to provide drift-free, chunk-level supervision, thereby avoiding the teacher bottleneck. Meanwhile, the student model learns under inference-aligned conditions, conditioned only on self-generated references, and is trained via distribution matching to preserve identity over long horizons. Extensive experiments show AsymTalker achieves state-of-the-art results on HDTF and VFHQ. It guarantees high-fidelity, identity-consistent synthesis over 600-second videos and reaches a real-time inference speed of 66 FPS.",
+    "published": "2026-05-01",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.02948v3",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.SD"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.10572v1",
+    "title": "Online Sharp-Calibrated Bayesian Optimization",
+    "authors": [
+      "Marshal Arijona Sinaga",
+      "Julien Martinelli",
+      "Teemu Turpeinen",
+      "Samuel Kaski"
+    ],
+    "summary": "Bayesian optimization (BO) is a widely used framework for optimizing expensive black-box functions, commonly based on Gaussian process (GP) surrogate models. Its effectiveness relies on uncertainty quantification that is both sharp (informative) and well-calibrated along the BO trajectory. In practice, GP kernel hyperparameters are unknown and are refit online from sequentially collected (non-i.i.d.) data, which can yield miscalibrated or overly conservative uncertainty and lies outside the fixed-kernel assumptions of standard BO regret theory. We propose Online Sharp-Calibrated Bayesian Optimization (OSCBO), a BO algorithm that adaptively balances GP sharpness and calibration by casting hyperparameter selection as a constrained online-learning problem. We also show that OSCBO preserves sublinear regret bounds by leveraging the theoretical guarantees of the underlying online learning algorithm. Empirically, OSCBO performs competitively across synthetic and real-world benchmarks, ranking among the strongest methods in final simple regret while maintaining robust cumulative-regret behavior.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10572v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.10330v1",
+    "title": "Fast Training of Mixture-of-Experts for Time Series Forecasting via Expert Loss Integration",
+    "authors": [
+      "Btissame El Mahtout",
+      "Florian Ziel"
+    ],
+    "summary": "We propose a novel adaptive Mixture-of-Experts (MoE) framework for time series forecasting that enhances expert specialization by incorporating expert-specific loss information directly into the training process. Notably, the overall objective comprises the base forecasting loss and expert-specific losses, allowing expert-level prediction errors to jointly shape training alongside the global forecasting loss. This framework is further combined with a partial online learning strategy, enabling incremental updates of both the gating mechanism and expert parameters. This approach significantly reduces computational cost by eliminating the need for repeated full model retraining. By integrating expert-level loss awareness with efficient online optimization, the proposed method achieves improved learning efficiency while maintaining strong predictive performance. Empirical results across economic, tourism, and energy datasets with varying frequencies demonstrate that the proposed approach generally outperforms both statistical methods and state-of-the-art neural network models, such as Transformers and WaveNet, in forecasting accuracy and computational efficiency. Furthermore, ablation studies confirm the effectiveness of the expert-specific loss integration strategy, highlighting its contribution to enhancing predictive performance.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10330v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.ME"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2605.10289v1",
+    "title": "Sample-Mean Anchored Thompson Sampling for Offline-to-Online Learning with Distribution Shift",
+    "authors": [
+      "Bochao Li",
+      "Yao Fu",
+      "Wei Chen",
+      "Fang Kong"
+    ],
+    "summary": "Offline-to-online learning aims to improve online decision-making by leveraging offline logged data. A central challenge in this setting is the distribution shift between offline and online environments. While some existing works attempt to leverage shifted offline data, they largely rely on UCB-type algorithms. Thompson sampling (TS) represents another canonical class of bandit algorithms, well known for its strong empirical performance and naturally suited to offline-to-online learning through its Bayesian formulation. However, unlike UCB indices, posterior samples in TS are not guaranteed to be optimistic with respect to the true arm means. This makes indices constructed from purely online and hybrid data difficult to compare and complicates their use. To address this issue, we propose sample-mean anchored TS (Anchor-TS), which introduces a novel median-based anchoring rule that defines the arm index as the median of an online posterior sample, a hybrid posterior sample, and the online sample mean. The median anchoring systematically corrects bias induced by distribution shift by mitigating over-estimation for suboptimal arms and under-estimation for optimal arms, while exploiting offline information to obtain more accurate estimates when the shift is small. We establish theoretical guarantees showing that the proposed algorithm safely leverages offline data to accelerate online learning, and quantifying how the degree of distribution shift and the size of offline data affect the resulting regret reduction. Extensive experiments demonstrate consistent improvements of our algorithm over baselines.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10289v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.10152v1",
+    "title": "Online Learning-Based Control with Guaranteed Error Bounds for a Class of Nonlinear Systems",
+    "authors": [
+      "Ricus Husmann",
+      "Sven Weishaupt",
+      "Malin Lotta Husmann",
+      "Harald Aschemann"
+    ],
+    "summary": "In this paper, we present a learning-based control for a class of nonlinear systems that guarantees exponential stability as well as bounded output errors. The control is based on the Gaussian Process Submodel Online Learning (GPSOL) algorithm and the Disturbance Error Rate Limiting (DERL) algorithm, both of which were developed in previous work. The GPSOL algorithm provides a method to learn Gaussian Process (GP) models for subsystems online, whereas the DERL algorithm allows to limit the rate of the prediction error of these GP models. The focus of this paper is the utilization of the GP model within an adaptive controller and the derivation of corresponding stability conditions and system peak-to-peak gains by means of linear matrix inequalities (LMIs). These peak-to-peak gains are then used to prescribe a desired prediction error rate for the DERL algorithm to achieve user-defined output error bounds. The gains and the related bounds were successfully verified using a simulation model. Furthermore, results form a successful experimental validation of the bounds and the overall control structure on a pneumatic test rig are presented. While the control scheme and error bounds proposed in this paper are limited to first-order single-input-single-output systems, an extension to certain classes of higher-order and multiple-input-multiple-output systems is expected to be forthcoming.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10152v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2605.09867v1",
+    "title": "Continuous Latent Contexts Enable Efficient Online Learning in Transformers",
+    "authors": [
+      "Emile Anand",
+      "Abdullah Ateyeh",
+      "Xinyuan Cao",
+      "Max Dabagia"
+    ],
+    "summary": "Large language models (LLMs) exhibit a strong capacity for in-context learning: Given labeled examples, they can generate good predictions without parameter updates. However, many interactive settings go beyond static prediction to online decision-making, in which effective behavior demands adaptation over long multi-turn horizons in response to feedback, and efficient algorithms in these domains must use compact representations of what they have learned. Recently, continuous transformer architectures with latent chain of thought have shown promise for offline iterative tasks such as directed graph-reachability. Motivated by this, we study whether continuous latent context tokens equip transformers to more effectively realize online learning. We give explicit constructions of constant-depth transformers that implement two foundational online decision-making procedures -- the weighted majority algorithm and $Q$-learning -- by storing their algorithmic state as linear combinations of feature embeddings, using a small number of latent context tokens. We further train a small GPT-2-style transformer with latent contexts using a multi-curriculum objective that does not directly supervise the latent states. On long synthetic online prediction sequences, this model outperforms larger and more complex LLMs, including Qwen-3-14B and DeepSeek-V3. Our results suggest that continuous latent contexts provide a simple and effective persistent state for transformers to implement online learning algorithms.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.09867v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.10439v1",
+    "title": "Filtering Memorization from Parameter-Space in Diffusion Models",
+    "authors": [
+      "Yu Zhe",
+      "Yang Jiayan",
+      "Wei Junhao",
+      "Yu-Lin Tsai",
+      "Wang Chen"
+    ],
+    "summary": "Low-Rank Adaptation (LoRA) has become a widely used mechanism for customizing diffusion models, enabling users to inject new visual concepts or styles through lightweight parameter updates. However, LoRAs can memorize training images, causing generated outputs to reproduce copyrighted or sensitive content. This risk is particularly concerning in LoRA-sharing ecosystems, where users distribute trained LoRAs without releasing the underlying training data. Existing approaches for mitigating memorization rely on access to the training pipeline, training data, or control over the inference process, making them difficult to apply when only the released LoRA weights are available. We propose \\textbf{Base-Anchored Filtering (BAF)}, a training-free and data-free framework for post-hoc memorization mitigation in diffusion LoRAs. BAF decomposes LoRA updates into spectral channels and measures their alignment with the principal subspace of the pretrained backbone. Channels strongly aligned with this subspace are retained as generalizable adaptations, while weakly aligned channels are suppressed as potential carriers of memorized content. Experiments on multiple datasets and diffusion backbones demonstrate that BAF consistently reduces memorization while preserving or even improving generation quality. Our code is available in the supplementary material.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.10439v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.09994v1",
+    "title": "Lakestream: A Consistent and Brokerless Data Plane for Large Foundation Model Training",
+    "authors": [
+      "Ting Sun",
+      "Junjie Zhang",
+      "Xiao Yan",
+      "Songxin Zhang",
+      "Zhuoyang Song",
+      "Jingyi Xi",
+      "Zunyao Mao",
+      "Bingyi Jing",
+      "Jiaxing Zhang",
+      "Zejian Xie"
+    ],
+    "summary": "Modern Large Foundation Model (LFM) training has transformed the data pipeline from a static ingestion layer into a dynamic component that must co-evolve with the training process. Existing systems are ill-equipped: colocated dataloaders offer no failure isolation, while message queue-based disaggregated dataloaders operate on a record/offset abstraction that cannot express the batch-level semantics required by distributed training.\n  We present Lakestream, a brokerless, object-store-native training data plane with three key properties. First, it introduces the Transactional Global Batch (TGB), which builds on lakehouse-style ACID storage semantics and extends them with training-specific consistency, including atomic all-rank batch visibility, a globally ordered step sequence, checkpoint-aligned lifecycle management, and end-to-end exactly-once recovery. Second, it realizes recovery and retention directly in the storage layer, by inlining producer state in the manifest and tying reclamation to distributed checkpoint state. Third, its Decentralized Adaptive Commit (DAC) algorithm sustains stable ingestion throughput as the manifest grows, without any inter-producer communication.\n  Evaluations on large-scale multimodal pre-training and SFT workloads using 64 GPUs show that Lakestream outperforms colocated dataloader throughput while providing full failure isolation, outperforms Apache Kafka in ingestion throughput, and achieves lower consumer read latency than Kafka.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.09994v1",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.00539v2",
+    "title": "AGoQ: Activation and Gradient Quantization for Memory-Efficient Distributed Training of LLMs",
+    "authors": [
+      "Wenxiang Lin",
+      "Juntao Huang",
+      "Luhan Zhang",
+      "Laili Li",
+      "Xiang Bao",
+      "Mengyang Zhang",
+      "Bing Wang",
+      "Shaohuai Shi"
+    ],
+    "summary": "Quantization is a key method for reducing the GPU memory requirement of training large language models (LLMs). Yet, current approaches are ineffective for 4-bit activations and 8-bit gradients, which would easily cause slow convergence or accuracy loss. To address this, we introduce AGoQ, incorporating two new techniques: 1) a layer-aware activation quantization algorithm that allocates appropriate bit-widths for activations of various layers based on their types and pipeline stages to achieve near 4-bit activation storage, and 2) a gradient quantization algorithm that reduces memory usage and shortens communication time by employing 8-bit gradient storage and precision-preserving 8-bit All-Reduce communication. We conduct extensive experiments using different sizes of LLMs on two GPU clusters (up to 64 GPUs), and the experimental results show that our AGoQ reduces the memory by up to 52\\% and achieves up to 1.34$\\times$ improvement of training speed compared to state-of-the-art training systems Megatron-LM (w/ or w/o ZeRO), COAT and DeepSpeed with 8B to 32B LLaMA models, while achieving convergence loss on pretraining and comparable accuracy on downstream tasks with LLaMA architectures.",
+    "published": "2026-05-01",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.00539v2",
+    "categories": [
+      "cs.CL",
+      "cs.DC"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.09331v1",
+    "title": "Dimension-Free Saddle-Point Escape in Muon",
+    "authors": [
+      "Yanlin Long",
+      "Yufei Gu",
+      "Zeke Xie"
+    ],
+    "summary": "Modern Large Language Model (LLM) training is fundamentally bottlenecked by pathologically flat saddle points in extreme high-dimensional landscapes. Motivated by this challenge, we analyze the saddle-point escape dynamics of the emerging Muon optimizer, demonstrating its resilience against the $\\mathcal{O}(D)$ dimensional curse that severely traps element-wise adaptive optimizers like AdamW. By extending generalized matrix perturbation theory, we develop a theoretical framework to capture Muon's non-equilibrium optimization trajectories. This theoretical machinery mathematically proves that Muon elegantly bypasses the dimensional curse via a non-linear spectral shaping mechanism. By leveraging resolvent functional calculus and macroscopic Cauchy contour integration, we avoid isotropic noise assumptions and Tracy-Widom edge singularities. We establish that structural incoherence securely shields the trajectory from orthogonal drift, enabling a dimension-free saddle-point escape, and triggering a deterministic $\\mathcal{O}(1)$ discrete ballistic ejection under sufficient spectral gap. Consequently, we provide an algebraically dimension-free escape bound for Muon, formalizing the underlying mechanics of its non-convex optimization dynamics.",
+    "published": "2026-05-10",
+    "updated": "2026-05-10",
+    "pdf_url": "https://arxiv.org/pdf/2605.09331v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.09670v1",
+    "title": "Towards Generative Predictive Display for Vision-Based Teleoperation: A Zero-Shot Benchmark of Off-the-Shelf Video Models",
+    "authors": [
+      "Aws Khalil",
+      "Jaerock Kwon"
+    ],
+    "summary": "Teleoperation systems are fundamentally limited by communication latency, which degrades situational awareness and control performance. Predictive display aims to mitigate this limitation by presenting an estimate of the current visual state rather than delayed observations. While recent advances in generative video models enable high-quality video synthesis, their suitability for latency-sensitive predictive display remains unclear. This paper presents a zero-shot benchmark of off-the-shelf generative video models for short-horizon predictive display, without task-specific fine-tuning. We formulate the problem as rollout-based future frame prediction and develop a unified benchmarking pipeline using simulated driving data from the CARLA simulator. Five publicly released video models spanning transformer-based and diffusion-based families are evaluated across two resolutions and two conditioning regimes (multi-frame and single-frame). Performance is assessed using prediction accuracy (mean absolute difference), per-rollout latency, peak GPU memory usage, and temporal error evolution across the prediction horizon. On this zero-shot benchmark, no tested model simultaneously achieves low rollout error, non-divergent per-step error behavior, and real-time inference at the source frame rate. Increasing model scale or resolution yields limited and, in some cases, inverted improvements. These findings highlight a gap between general-purpose generative video synthesis and the requirements of predictive display in teleoperation, suggesting that practical deployment will require either explicit short-horizon temporal supervision, in-domain adaptation, or aggressive inference optimization rather than direct application of off-the-shelf models. Code, configurations, and qualitative results are released on the project page: https://bimilab.github.io/paper-GenPD",
+    "published": "2026-05-10",
+    "updated": "2026-05-10",
+    "pdf_url": "https://arxiv.org/pdf/2605.09670v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.09308v1",
+    "title": "Hierarchical Attention-based Graph Neural Network with Relevance-driven Pruning",
+    "authors": [
+      "Seungwoo Kum"
+    ],
+    "summary": "Graph Neural Networks (GNNs) excel at relational reasoning but face two persistent challenges: the lack of interpretable attribution for heterogeneous node types, and the computational overhead of message passing over large, noisy graphs. We propose the Hierarchical Attention-based Heterogeneous GNN (HA-HeteroGNN), a framework that addresses both issues through a unied explainability-to-pruning pipeline. A two-tier attention mechanism separates sensor-level and context-level computation across 16 node types and 18 edge types, producing per-node relevance scores via an attention-based GNN Explainer without requiring gradient backpropagation. These relevance scores then serve as a principled pruning criterion: removing nodes identied as consistently uninformative yields a 27% reduction in graph edges while simultaneously improving classication accuracy by 2.46.1% across all model variants, challenging the conventional assumption that pruning necessarily trades accuracy for eciency. Experiments on a 50,000-record synthetic dataset spanning 11 report categories demonstrate 97.5% cross-strategy explanation stability and domain consistent sensor attribution, with training-time reductions of up to 43.9% and real-time inference latency of approximately 5860 ms per sample.",
+    "published": "2026-05-10",
+    "updated": "2026-05-10",
+    "pdf_url": "https://arxiv.org/pdf/2605.09308v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.09772v1",
+    "title": "Safe Exploration for Nonlinear Processes Using Online Gaussian Process Learning",
+    "authors": [
+      "Stefano Tonini",
+      "Soroush Rastegarpour",
+      "Hamid Reza Feyzmahdavian",
+      "Nicola Bastianello",
+      "Karl Henrik Johansson"
+    ],
+    "summary": "This paper proposes a safe data-driven control framework for nonlinear systems with partially known dynamics. The method ensures stability and constraint satisfaction during online learning, assuming only a stabilizable linear approximation of the process is available. Unmodeled nonlinear dynamics are captured by a Gaussian process residual learned in real time. Safety is enforced through a probabilistic control-invariant set derived from Lyapunov theory, guaranteeing high-probability stability. A convex quadratic program computes control inputs that maximize information gain while respecting probabilistic safety constraints. The framework provides finite-sample safety guarantees and allows adaptive expansion of the invariant set as uncertainty decreases. Numerical results validate the approach, demonstrating safe and informative exploration under model uncertainty: the safe set expands by about 30% while the Gaussian process root-mean-square error drops from 1.11 to 0.03.",
+    "published": "2026-05-10",
+    "updated": "2026-05-10",
+    "pdf_url": "https://arxiv.org/pdf/2605.09772v1",
+    "categories": [
+      "eess.SY",
+      "cs.RO",
+      "math.OC"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2605.09599v1",
+    "title": "Adaptive Liquidity in Prediction Markets via Online Learning",
+    "authors": [
+      "Enrique Nueve",
+      "Bao Nguyen",
+      "Rafael Frongillo",
+      "Bo Waggoner"
+    ],
+    "summary": "Prediction markets rely on liquidity to convert trades into informative prices, yet existing mechanisms fix liquidity ex ante. This restriction enforces a static trade-off between price responsiveness and worst-case loss despite inherently nonstationary trading conditions. We propose a fundamentally different approach that treats liquidity selection itself as an online learning problem. Our mechanism mixes a family of cost-function markets via learnable weights, yielding a single adaptive market that preserves no-arbitrage, bounded worst-case loss, expressiveness, and positive upside. We introduce a hybrid structural risk signal, a per-round objective that quantifies the trade-off between price impact and inventory risk, and show that standard online learning algorithms achieve switching-regret guarantees relative to the best sequence of liquidity regimes in hindsight. Simulations demonstrate that the mechanism adaptively shifts liquidity across regimes in response to both order flow and inventory dynamics. Our results establish a principled framework for adaptive liquidity, connecting prediction market design with online learning.",
+    "published": "2026-05-10",
+    "updated": "2026-05-10",
+    "pdf_url": "https://arxiv.org/pdf/2605.09599v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2605.08962v1",
+    "title": "MegaScale-Omni: A Hyper-Scale, Workload-Resilient System for MultiModal LLM Training in Production",
+    "authors": [
+      "Chunyu Xue",
+      "Yangrui Chen",
+      "Jianyu Jiang",
+      "Ningxin Zheng",
+      "Junda Feng",
+      "Jingji Chen",
+      "Shixiong Zhao",
+      "Shen Yan",
+      "Yi Lin",
+      "Lei Shi",
+      "Zanbo Wang",
+      "Lishu Luo",
+      "Faming Wu",
+      "Haibin Lin",
+      "Xin Liu",
+      "Yanghua Peng",
+      "Quan Chen"
+    ],
+    "summary": "As the foundational component of versatile AI applications, training an multimodal large language model (MLLM) relies on multimodal datasets with dynamic modality mixture proportions and sample length distributions. However, existing MLLM systems remain inefficient under dynamic workloads, due to statically coupled decisions of resource allocation and model parallelization between encoders and the LLM backbone. This paper presents MegaScale-Omni, an industrial-grade MLLM training system tailored for dynamic workload adaption and hyper-scale deployment. MegaScale-Omni is built upon the training scheme of encoder-LLM multiplexing with three key innovations: (1) Decoupled parallelism strategies with long-short sequence parallelism for encoders to process variable-length samples, and full-fledged 5D parallelism for the LLM backbone, both organized under a communication-efficient parallelization layout. (2) Unified encoder-LLM representations for flexible, extensible colocation, and a new paradigm of encoder-LLM joint pipeline with workload resilience. (3) Workload balancing techniques via decentralized grouped reordering in data loaders and adaptive resharding from encoder to LLM ranks. MegaScale-Omni is deployed as the foundation of our in-house large-scale MLLM training tasks with thousands of GPUs. Our experimental results demonstrate $1.27\\times$-$7.57\\times$ throughput improvement under production-grade dynamic workloads, as compared to four state-of-the-art systems.",
+    "published": "2026-05-09",
+    "updated": "2026-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2605.08962v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.09093v1",
+    "title": "HyDRA Scorpion: A Cost-effective and Modular ROV for Real-Time Underwater Inspection, Intervention, and Object Detection",
+    "authors": [
+      "Anika Tabassum Orchi",
+      "Md Farhan Zaman",
+      "Md Darain Khan",
+      "Md Alamgir",
+      "Mahbubul Islam",
+      "Md. Jobayer Rahman",
+      "A. M. Zayed Abdullah",
+      "Md Mehrab Hossain Khan",
+      "Md. Kutub Al Baki",
+      "Iftekharul Islam",
+      "Shakil Ahmed",
+      "Md Sadique Hossain",
+      "Md Muzahidul Islam",
+      "Shah Mohammad Seaman",
+      "Nusrat Jahan Piyal",
+      "Shekh Md. Saifur Rahman",
+      "Fahim Hafiz",
+      "A. K. M. Muzahidul Islam",
+      "M. Rezwan Khan"
+    ],
+    "summary": "A Remotely Operated Vehicle (ROV) is a tethered underwater robot used for tasks like inspection and intervention. While essential tools for underwater science, the high cost of commercial ROVs and a persistent gap between mechanically capable platforms and those with integrated intelligence create a significant barrier to access. HyDRA Scorpion differs from conventional systems by addressing these challenges, integrating an advanced, AI-driven perception stack with in-situ measurement capabilities onto a low-cost, locally manufacturable platform. The system combines 4-DoF maneuverability, dual manipulators, and a custom pressure-tested housing. Experimental results validate the system's robustness and performance. Leak-free operation was confirmed through prolonged pressure testing of the electronics housing to 4 bar, equivalent to the pressure of a 304.8-meter water depth approximately in a simulated environment, with no moisture ingress detected. The vehicle also demonstrated stable station-keeping, maintaining its position within a tight tolerance of $\\(\\pm\\)0.15$ meters under external disturbances. The onboard AI module achieved underwater object detection mean Average Precision (mAP) of 0.89 with real-time inference, length and 3D-mapping based distance measurement. Also, 4-DoF manipulator arm can grip and maintain dual-function manipulator feature which support 360 degree tangle-free rotation.",
+    "published": "2026-05-09",
+    "updated": "2026-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2605.09093v1",
+    "categories": [
+      "cs.RO",
+      "eess.SY"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.08674v1",
+    "title": "Fair and Efficient Scheduling for Sensor Networks via Online Whittle Index Policy",
+    "authors": [
+      "Sokipriala Jonah",
+      "Seong Ki Yoo",
+      "Saurav Staphit",
+      "Anita Khadka"
+    ],
+    "summary": "Wake-Up Radio (WUR) enables resource-constrained, battery-powered sensor nodes to remain in a low-power deep sleep state while continuously listening for a Wake-Up Signal (WUS). Sensor nodes only wake and transmit data after receiving the WUS, significantly reducing energy consumption. However, polling nodes whose transmitted data provides little or no meaningful update to the remote monitor can still result in unnecessary energy usage and increased storage overhead. To address this issue, this paper uses the Age of Incorrect Information (AoII) metric to prioritise the polling of nodes that provide informative updates to the remote monitor. Determining the optimal set of nodes to poll based on AoII can be formulated as a Restless Multi-Armed Bandit (RMAB) problem, which traditionally requires prior knowledge of the monitored process transition dynamics. Since such dynamics are often unknown in practical deployments, we propose an online learning framework based on state estimation to derive Whittle Index AoII (WAoII) and Fair Whittle Index AoII (FWAoII) policies without assuming known transition probabilities. The proposed policies efficiently schedule node polling while adapting to unknown process behaviour. Experimental evaluation using both real-world and synthetic datasets demonstrates that the proposed online WAoII policy can reduce packet transmissions by up to 70\\% compared to the widely used Round Robin (RR) polling strategy, while maintaining Root Mean Squared Error (RMSE) values within acceptable application error tolerances. These results demonstrate the effectiveness of WAoII and FWAoII as energy-efficient polling techniques for low-power WUR sensor networks.",
+    "published": "2026-05-09",
+    "updated": "2026-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2605.08674v1",
+    "categories": [
+      "eess.SP"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2605.08856v1",
+    "title": "Controlling Transient Amplification Improves Long-horizon Rollouts",
+    "authors": [
+      "Adeel Pervez",
+      "Francesco Locatello"
+    ],
+    "summary": "Autoregressive neural simulators now match classical solvers on short-horizon prediction of physical systems, yet their accuracy degrades rapidly when rolled out over long horizons. In this work, we identify transient amplification of perturbations around rollout trajectories as a structural mechanism driving rollout error. Using a linearization analysis we show that when the Jacobians along an autoregressive trajectory are non-normal and non-commuting, the model amplifies errors transiently, resulting in model rollout drift even when the overall system is asymptotically stable. Building on the analysis, we propose commutativity regularization: a combination of two penalties designed to reduce the normality defect of individual Jacobians and the commutator norm of Jacobians across steps. The penalties are estimated with Jacobian-vector products and have no inference-time cost. We show a propagator bound that quantifies rollout error under approximate commutativity and normality. We evaluate UNet and FNO variants with commutativity regularization on 1D and 2D spatio-temporal data in synthetic and real settings, showing successful long-horizon rollouts over thousands of steps. Further, we show that the method improves FourCastNet climate forecasts on ERA5 without using any new data. The gain is most pronounced out-of-distribution: trained on trajectories of a few hundred steps, regularized models remain in-distribution for thousands of rollout steps on initial conditions where baselines diverge.",
+    "published": "2026-05-09",
+    "updated": "2026-05-09",
+    "pdf_url": "https://arxiv.org/pdf/2605.08856v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.08133v1",
+    "title": "VLADriver-RAG: Retrieval-Augmented Vision-Language-Action Models for Autonomous Driving",
+    "authors": [
+      "Rui Zhao",
+      "Haofeng Hu",
+      "Zhenhai Gao",
+      "Jiaqiao Liu",
+      "Gao Fei"
+    ],
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for end-to-end autonomous driving, yet their reliance on implicit parametric knowledge limits generalization in long-tail scenarios. While Retrieval-Augmented Generation (RAG) offers a solution by accessing external expert priors, standard visual retrieval suffers from high latency and semantic ambiguity. To address these challenges, we propose \\textbf{VLADriver-RAG}, a framework that grounds planning in explicit, structure-aware historical knowledge. Specifically, we abstract sensory inputs into spatiotemporal semantic graphs via a \\textit{Visual-to-Scenario} mechanism, effectively filtering visual noise. To ensure retrieval relevance, we employ a \\textit{Scenario-Aligned Embedding Model} that utilizes Graph-DTW metric alignment to prioritize intrinsic topological consistency over superficial visual similarity. These retrieved priors are then fused within a query-based VLA backbone to synthesize precise, disentangled trajectories. Extensive experiments on the Bench2Drive benchmark establish a new state-of-the-art, achieving a Driving Score of 89.12.",
+    "published": "2026-05-01",
+    "updated": "2026-05-01",
+    "pdf_url": "https://arxiv.org/pdf/2605.08133v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
