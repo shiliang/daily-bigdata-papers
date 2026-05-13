@@ -1,0 +1,334 @@
+[
+  {
+    "id": "2605.12492v1",
+    "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+    "authors": [
+      "Kexuan Shi",
+      "Hanxuan Li",
+      "Zeju Qiu",
+      "Yandong Wen",
+      "Simon Buchholz",
+      "Weiyang Liu"
+    ],
+    "summary": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically examine its design choices, and analyze its convergence behavior along with several key properties. Empirical results show that Pion offers a stable and competitive alternative to standard optimizers for both LLM pretraining and finetuning.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12492v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.11852v1",
+    "title": "Avoiding Cross-Datacenter Collective Congestion via Disaggregated Buffering",
+    "authors": [
+      "Mariano Scazzariello",
+      "Noga H. Rotman",
+      "Dima Gavrilenko",
+      "Sajy Khashab",
+      "Alexander Shpiner",
+      "Matty Kadosh",
+      "Marco Chiesa",
+      "Dejan Kostic",
+      "Mark Silberstein"
+    ],
+    "summary": "LLM training at the scale of tens of thousands of GPUs now spans multiple datacenters (DC), making cross-DC collectives over long-haul links unavoidable. A critical and overlooked bottleneck arises when these collectives collide with intra-DC traffic at the destination - a common pattern in real workloads. The multi-millisecond congestion control loop is too slow to react, triggering severe packet loss and congestion collapse.\n  We present Spillway, a transparent in-network mechanism that buffers dropped packets in switch-disaggregated buffers in a destination data center and drains them once congestion subsides. Through large-scale end-to-end simulations and a hardware prototype, we show that Spillway eliminates performance degradation from collective collisions, reducing iteration time by up to 14 %, without changes to end hosts or training frameworks.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11852v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2605.06057v2",
+    "title": "FalconGEMM: Surpassing Hardware Peaks with Lower-Complexity Matrix Multiplication",
+    "authors": [
+      "Honglin Zhu",
+      "Jiaping Cao",
+      "Jiang Shao",
+      "Siyuan Feng",
+      "Qian Qiu",
+      "Peng Chen",
+      "Xu Zhang",
+      "Yixian Zhou",
+      "Man Lung Yiu",
+      "Guang Ji",
+      "Minwen Deng",
+      "Wenxi Zhu",
+      "Jintao Meng"
+    ],
+    "summary": "Peak breaking Matrix Multiplication is a promising technique to improve the performance of DL, especially in LLM training and inference. We present FalconGEMM, a cross-platform framework that automates the deployment, optimization, and selection of Lower-Complexity Matrix Multiplication Algorithms (LCMAs) across diverse hardware. There are three key innovations: (1) a Deployment Module that enables portable execution across various hardware and input configurations through code generation; (2) an Execution Module with Group-Parallel Optimizations that maximizes on-chip data reuse, utilizes parallel resources, and reduces bandwidth overhead; and (3) a Decision Module featuring a lightweight analytical performance model to select the optimal strategy based on matrix shapes and hardware profiles. Extensive evaluation is conducted on LLM workloads across GPU (H20, A100) and CPU (ARM, x86) architectures with multiple data types. FalconGEMM succeeds in delivering peak breaking performance and outperforms GEMM libraries (e.g., cuBLAS, CUTLASS, Intel MKL, etc) by 7.59%-17.85% and LCMA competitors like AlphaTensor by 12.41%-55.61%. Our framework makes the theoretical promise of LCMAs practical for production deployment across the heterogeneous landscape of modern hardware.",
+    "published": "2026-05-07",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.06057v2",
+    "categories": [
+      "cs.DC",
+      "cs.MS"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.12364v1",
+    "title": "Attacks and Mitigations for Distributed Governance of Agentic AI under Byzantine Adversaries",
+    "authors": [
+      "Matthew D. Laws",
+      "Alina Oprea",
+      "Cristina Nita-Rotaru"
+    ],
+    "summary": "Agentic AI governance is a critical component of agentic AI infrastructure ensuring that agents follow their owner's communication and interaction policies, and providing protection against attacks from malicious agents. The state-of-the-art solution, SAGA, assumes a logically centralized point of trust, the Provider, which serves as a repository for user and agent information and actively enforces policies. While SAGA provides protection against malicious agents, it remains vulnerable to a malicious Provider that deviates from the protocol, undermining the security of the identity and access control infrastructure. Deployment on both private and public clouds, each susceptible to insider threats, further increases the risk of Provider compromise.\n  In this work, we analyze the attacks that can be mounted from a compromised Provider, taking into account the different system components and realistic deployments. We identify and execute several concrete attacks with devastating effects: undermining agent attributability, extracting private data, or bypassing access control. We then present three types of solutions for securing the Provider that offer different trade-offs between security and performance. We first present SAGA-BFT, a fully byzantine-resilient architecture that provides the strongest protection, but incurs significant performance degradation, due to the high-cost of byzantine resilient protocols. We then propose SAGA-MON and SAGA-AUD, two novel solutions that leverage lightweight server-side monitoring or client-side auditing to provide protection against most classes of attacks with minimal overhead. Finally, we propose SAGA-HYB, a hybrid architecture that combines byzantine-resilience with monitoring and auditing to trade-off security for performance. We evaluate all the architectures and compare them with SAGA. We discuss which solution is best and under what conditions.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12364v1",
+    "categories": [
+      "cs.CR",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2605.11442v1",
+    "title": "Can a Single Message Paralyze the AI Infrastructure? The Rise of AbO-DDoS Attacks through Targeted Mobius Injection",
+    "authors": [
+      "Zi Liang",
+      "Ronghua Li",
+      "Yanyun Wang",
+      "Qingqing Ye",
+      "Haibo Hu"
+    ],
+    "summary": "Large Language Model (LLM) agents have emerged as key intermediaries, orchestrating complex interactions between human users and a wide range of digital services and LLM infrastructures. While prior research has extensively examined the security of LLMs and agents in isolation, the systemic risk of the agent acting as a disruptive hub within the user-agent-service chain remains largely overlooked. In this work, we expose a novel threat paradigm by introducing Mobius Injection, a sophisticated attack that weaponizes autonomous agents into zombie nodes to launch what we define as gent-based and -Oriented DDoS (AbO-DDoS) attacks. By exploiting a structural vulnerability in agentic logic named Semantic Closure, an adversary can induce sustained recursive execution of agent components through a single textual injection. We demonstrate that this attack is exceptionally lightweight, stealthy against both traditional DDoS monitors and contemporary AI safety filters, and highly configurable, allowing for surgical targeting of specific environments or model providers. To evaluate the real-world impact, we conduct extensive experiments across three representative claw-style agents and three mainstream coding agents, integrated with 12 frontier proprietary or open-weight LLMs. Our results demonstrate that Mobius Injection achieves substantial attack success across diverse tasks, driving single-node call amplification up to 51.0x and multi-node p95 latency inflation up to 229.1x. The attack performance exhibits a superlinear increase with the number of poisoning nodes. To mitigate Mobius Injection, we propose a proactive defense mechanism using Agent Component Energy (ACE) Analysis, which detects malicious recursive triggers by measuring anomalous energy in the agent's component graph.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11442v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2605.12328v1",
+    "title": "A categorical error sensitivity index (ISEC): A preventive ordinal decision-support measure for irrecoverable errors in manual data entry systems",
+    "authors": [
+      "Ricardo Raúl Palma",
+      "Mauro Anibal Benetti",
+      "Fabricio Orlando Sanchez Varretti"
+    ],
+    "summary": "Data entry systems remain structurally vulnerable to categorical misclassifications, particularly in small and medium sized enterprises (SMEs). When nominal categories exhibit semantic or morphological proximity, human machine interaction may produce errors that are irrecoverable ex post. In the absence of automated input controls, manual data entry frequently generates irrecoverable categorical distortions that propagate into Key Performance Indicators (KPIs), thereby misleading managerial decision making. State of the art normalization tools typically evaluate semantic and morphological dimensions in isolation and rely heavily on standard dictionaries, rendering them ineffective for SME master data rich in custom SKUs, abbreviations, and domain-specific technical jargon. This paper introduces the Categorical Error Sensitivity Index (ISEC), an ordinal composite score designed to rank category pairs according to their structural susceptibility to confusion. ISEC integrates semantic distance (via word embeddings), custom weighted morphological transformation costs (through an adapted Damerau Levenshtein algorithm), and empirical frequency into a unified, mathematically robust preventive framework. By leveraging vector database architectures, ISEC reduces computational complexity, achieving approximately a 195x performance improvement over brute-force methods. Validated across three heterogeneous datasets: governmental judicial records, retail inventory, and a synthetic ISO coded metalworking catalog, ISEC provides a scalable and proactive data governance instrument that enables SMEs to detect latent structural risk embedded within their categorical data assets.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12328v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.11523v1",
+    "title": "NAVIS: Concurrent Search and Update with Low Position-Seeking Overhead in On-SSD Graph-Based Vector Search",
+    "authors": [
+      "Jaeyong Song",
+      "Hongsun Jang",
+      "Changmin Shin",
+      "Seongyeon Park",
+      "Yong Jae Ryoo",
+      "Seo Jin Park",
+      "Jinho Lee"
+    ],
+    "summary": "On-disk graph-based vector search (GVS) has become the dominant approach for serving large-scale vector databases at high recall, but prior systems struggle to sustain concurrent search and update throughput on high-dimensional workloads. We find the main cause of this in position seeking, a full graph traversal that every update performs to locate neighbors before linking the new vector into the graph. Position seeking is fundamentally heavier than a search query, and its cost is further amplified by two systemic limitations of current GVS systems, packed layouts that couple every edge fetch to a full vector load, and a static entrance graph whose entry points drift away from newly inserted regions as updates accumulate.\n  We present NAVIS, an on-SSD GVS system that drives down position-seeking overhead through (i) a layout-supported selective vector read that breaks the packed-page coupling without losing its locality benefits, (ii) a dynamic lightweight entrance graph update mechanism that reuses traversal information already produced by concurrent updates, and (iii) an entrance graph-aware edgelist cache that concentrates capacity on high-reuse paths near refreshed entry points. Across multiple large-scale high-dimensional benchmarks, NAVIS enhances average insertion throughput by up to 2.74x and average concurrent search throughput by up to 1.37x while reducing average search latency by up to 25.26%.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11523v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.08133v2",
+    "title": "VLADriver-RAG: Retrieval-Augmented Vision-Language-Action Models for Autonomous Driving",
+    "authors": [
+      "Rui Zhao",
+      "Haofeng Hu",
+      "Zhenhai Gao",
+      "Jiaqiao Liu",
+      "Gao Fei"
+    ],
+    "summary": "Vision-Language-Action (VLA) models have emerged as a promising paradigm for end-to-end autonomous driving, yet their reliance on implicit parametric knowledge limits generalization in long-tail scenarios. While Retrieval-Augmented Generation (RAG) offers a solution by accessing external expert priors, standard visual retrieval suffers from high latency and semantic ambiguity. To address these challenges, we propose \\textbf{VLADriver-RAG}, a framework that grounds planning in explicit, structure-aware historical knowledge. Specifically, we abstract sensory inputs into spatiotemporal semantic graphs via a \\textit{Visual-to-Scenario} mechanism, effectively filtering visual noise. To ensure retrieval relevance, we employ a \\textit{Scenario-Aligned Embedding Model} that utilizes Graph-DTW metric alignment to prioritize intrinsic topological consistency over superficial visual similarity. These retrieved priors are then fused within a query-based VLA backbone to synthesize precise, disentangled trajectories. Extensive experiments on the Bench2Drive benchmark establish a new state-of-the-art, achieving a Driving Score of 89.12.",
+    "published": "2026-05-01",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.08133v2",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.11581v1",
+    "title": "Ada-MK: Adaptive MegaKernel Optimization via Automated DAG-based Search for LLM Inference",
+    "authors": [
+      "Wenxin Dong",
+      "Mingqing Hu",
+      "Guanghui Yu",
+      "Qiang Fu",
+      "Peng Xu",
+      "Hui Xu",
+      "Yue Xing",
+      "Xuewu Jiao",
+      "Shuanglong Li",
+      "Lin Liu"
+    ],
+    "summary": "When large language models (LLMs) serve real-time inference in commercial online advertising systems, end-to-end latency must be strictly bounded to the millisecond range. Yet every token generated during the decode phase triggers thousands of kernel launches, and kernel launch overhead alone can account for 14.6% of end-to-end inference time. MegaKernel eliminates launch overhead and inter-operator HBM round-trips by fusing multiple operators into a single persistent kernel. However, existing MegaKernel implementations face a fundamental tension between portability and efficiency on resource-constrained GPUs such as NVIDIA Ada: hand-tuned solutions are tightly coupled to specific architectures and lack portability, while auto-compiled approaches introduce runtime dynamic scheduling whose branch penalties are unacceptable in latency-critical settings. We observe that under a fixed deployment configuration, the optimal execution path of a MegaKernel is uniquely determined, and runtime dynamic decision-making can be entirely hoisted to compile time. Building on this insight, we propose Ada-MK: (1) a three-dimensional shared-memory constraint model combined with K-dimension splitting that reduces peak shared memory usage by 50%; (2) MLIR-based fine-grained DAG offline search that solidifies the optimal execution path, completely eliminating runtime branching; and (3) a heterogeneous hybrid inference engine that embeds MegaKernel as a plugin into TensorRT-LLM, combining high-throughput Prefill with low-latency Decode. On an NVIDIA L20, Ada-MK improves single-batch throughput by up to 23.6% over vanilla TensorRT-LLM and 50.2% over vLLM, achieving positive gains across all tested scenarios--the first industrial deployment of MegaKernel in a commercial online advertising system.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.11581v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.07552v2",
+    "title": "VIMCAN: Visual-Inertial 3D Human Pose Estimation with Hybrid Mamba-Cross-Attention Network",
+    "authors": [
+      "Zepeng Yang",
+      "Junxuan Bai",
+      "Hao Li",
+      "Ju Dai",
+      "Junjun Pan",
+      "Yongfeng Yin",
+      "Bin Li"
+    ],
+    "summary": "The rapid advances in deep learning have significantly enhanced the accuracy of multimodal 3D human pose estimation (HPE). However, the state-of-the-art (SOTA) HPE pipelines still rely on Transformers, whose quadratic complexity makes real-time processing for long sequences impractical. Mamba addresses this issue through selective state-space modeling, enabling efficient sequence processing without sacrificing representational power. Nevertheless, it struggles to capture complex spatial dependencies in multimodal settings. To bridge this gap, we propose VIMCAN, a hybrid architecture that combines the efficient sequence modeling of Mamba with the spatial reasoning of Cross-Attention, and performs robust visual-inertial fusion and human pose estimation between RGB keypoints and wearable IMU data. By leveraging Mamba's dynamic parameterization for temporal modeling and Attention for spatial dependency extraction, VIMCAN achieves superior accuracy, with mean per-joint position errors (MPJPE) of 17.2 mm on TotalCapture and 45.3 mm on 3DPW. VIMCAN outperforms prior Transformer-based and other SOTA approaches while supporting real-time inference at over 60 frames per second on consumer-grade hardware. The source code is available at \\href{https://github.com/Eddieyzp/VIMCAN}{this GitHub repository}.",
+    "published": "2026-05-08",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.07552v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/Eddieyzp/VIMCAN",
+      "stars": 0,
+      "description": "",
+      "language": null
+    }
+  },
+  {
+    "id": "2605.12340v1",
+    "title": "Online Learning-to-Defer with Varying Experts",
+    "authors": [
+      "Dang Hoang Duy",
+      "Yannis Montreuil",
+      "Maxime Meyer",
+      "Axel Carlier",
+      "Lai Xing Ng",
+      "Wei Tsang Ooi"
+    ],
+    "summary": "Learning-to-Defer (L2D) methods route each query either to a predictive model or to external experts. While existing work studies this problem in batch settings, real-world deployments require handling streaming data, changing expert availability, and shifting expert distribution. We introduce the first online L2D algorithm for multiclass classification with bandit feedback and a dynamically varying pool of experts. Our method achieves regret guarantees of $O((n+n_e)T^{2/3})$ in general and $O((n+n_e)\\sqrt{T})$ under a low-noise condition, where $T$ is the time horizon, $n$ is the number of labels, and $n_e$ is the number of distinct experts observed across rounds. The analysis builds on novel $\\mathcal{H}$-consistency bounds for the online framework, combined with first-order methods for online convex optimization. Experiments on synthetic and real-world datasets demonstrate that our approach effectively extends standard Learning-to-Defer to settings with varying expert availability and reliability.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12340v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2605.12217v1",
+    "title": "Heterogeneous SoC Integrating an Open-Source Recurrent SNN Accelerator for Neuromorphic Edge Computing on FPGA",
+    "authors": [
+      "Michelangelo Barocci",
+      "Vittorio Fra",
+      "Enrico Macii",
+      "Gianvito Urgese"
+    ],
+    "summary": "The growing popularity of Spiking Neural Networks (SNNs) and their applications has led to a significant fast-paced increase of neuromorphic architectures capable of mimicking the spike-based data processing typical of biological neurons. The efficient power consumption and parallel computing capabilities of the SNNs lead researchers towards the development of digital accelerators, which exploit such features to bring fast and low-power computation on edge devices. The spread of digital neuromorphic hardware however is slowed down by the prohibitive costs that the silicon tape out of circuits brings, that's why targeting Field Programmable Gate Arrays (FPGAs) could represent a viable alternative, offering a flexible and cost-effective platform for implementing digital neuromorphic systems and helping the spread of open-source hardware designs. In this work we present an heterogeneous System-on-Chip (SoC) where the operations of ReckOn, a Recurrent SNN accelerator, are managed through the integration with traditional processors. These include the RISC-V-based, open-source microcontroller X-HEEP and the ARM processor featured in Zynq Ultrascale systems. We validate our design by reproducing the classification results through the implementation on FPGA of the taped-out version of ReckOn in order to check the equivalence of the accuracy and the characteristics in terms of physical implementation. In a second set of experiments, we evaluate the online learning capability of the solution in classifying a subset of the Braille digit dataset recently used to compare neuromorphic frameworks and platforms.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12217v1",
+    "categories": [
+      "cs.AR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2605.12190v1",
+    "title": "Information-Theoretic Generalization Bounds for Sequential Decision Making",
+    "authors": [
+      "Futoshi Futami",
+      "Masahiro Fujisawa"
+    ],
+    "summary": "Information-theoretic generalization bounds based on the supersample construction are a central tool for algorithm-dependent generalization analysis in the batch i.i.d.~setting. However, existing supersample conditional mutual information (CMI) bounds do not directly apply to sequential decision-making problems such as online learning, streaming active learning, and bandits, where data are revealed adaptively and the learner evolves along a causal trajectory. To address this limitation, we develop a sequential supersample framework that separates the learner filtration from a proof-side enlargement used for ghost-coordinate comparisons. Under a row-wise exchangeability assumption, the sequential generalization gap is controlled by sequential CMI, a sum of roundwise selector--loss information terms. We also establish a Bernstein-type refinement that yields faster rates under suitable variance conditions. The selector-SCMI proof strategy applies to online learning, streaming active learning with importance weighting, and stochastic multi-armed bandits.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12190v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2605.11195v1",
+    "title": "How Does Differential Privacy Affect Social Bias in LLMs? A Systematic Evaluation",
+    "authors": [
+      "Eduardo Tenorio",
+      "Karuna Bhaila",
+      "Xintao Wu"
+    ],
+    "summary": "Large language models (LLMs) trained on web-scale corpora can memorize sensitive training data, posing significant privacy risks. Differential privacy (DP) has emerged as a principled framework that limits the influence of individual data points during training, yet the relationship between differential privacy and social bias in LLMs remains poorly understood. To investigate this, we present a systematic evaluation of social bias in a pretrained LLM trained with DP-SGD, comparing a DP model against non-DP baselines across four complementary paradigms: sentence scoring, text completion, tabular classification, and question answering. We find that DP reduces bias in sentence scoring tasks, where bias is measured through controlled likelihood comparisons, yet this improvement does not generalize across all tasks. Our results reveal a discrepancy between logit-level bias and output-level bias. Moreover, decreasing memorization does not necessarily reduce unfairness, underscoring the importance of multi-paradigm evaluation when assessing fairness in LLMs.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.11195v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.11169v1",
+    "title": "OLIVIA: Online Learning via Inference-time Action Adaptation for Decision Making in LLM ReAct Agents",
+    "authors": [
+      "Sheldon Yu",
+      "Junda Wu",
+      "Xintong Li",
+      "Nikki Lijing Kuang",
+      "Sizhe Zhou",
+      "Tong Yu",
+      "Jiawei Han",
+      "Jingbo Shang",
+      "Julian McAuley"
+    ],
+    "summary": "Large language model agents interleave reasoning, action selection, and observation to solve sequential decision-making tasks. In deployed settings where agents repeatedly handle related multi-step tasks, small action-selection errors can accumulate into wasted tool calls, latency, and reduced reliability. Despite this need for deployment-time improvement, existing inference-time adaptation methods for LLM agents mainly rely on prompting or retrieval, which influence behavior indirectly through context manipulation. For ReAct-style agents, such approaches do not expose an explicit decision layer that can score candidate actions, represent uncertainty, or be updated online from action-level feedback. As a result, they provide limited support for trackable, fine-grained, and uncertainty-aware adaptation during deployment. We propose OLIVIA, an inference-time action adaptation framework for ReAct-style agents. OLIVIA models the LLM's final action-selection layer as a contextual linear bandit over candidate actions, with frozen hidden states as decision contexts. This choice is particularly suitable for deployment because it adapts behavior directly at the action-selection interface, preserves the underlying reasoning process, and provides explicit uncertainty estimates and lightweight online updates from action-level feedback. With upper-confidence-bound exploration, OLIVIA improves the policy sample-efficiently with minimal computational overhead. We instantiate OLIVIA on four benchmarks and show that it consistently improves task performance over static ReAct and prompt-based inference-time baselines. Our results suggest that explicit online decision layers provide an effective alternative to purely prompt- or retrieval-based adaptation for LLM agents during deployment.",
+    "published": "2026-05-11",
+    "updated": "2026-05-11",
+    "pdf_url": "https://arxiv.org/pdf/2605.11169v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  }
+]
