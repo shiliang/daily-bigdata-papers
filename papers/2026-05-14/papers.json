@@ -1,0 +1,268 @@
+[
+  {
+    "id": "2605.11852v2",
+    "title": "Avoiding Cross-Datacenter Collective Congestion via Disaggregated Buffering",
+    "authors": [
+      "Mariano Scazzariello",
+      "Noga H. Rotman",
+      "Dima Gavrilenko",
+      "Sajy Khashab",
+      "Alexander Shpiner",
+      "Matty Kadosh",
+      "Marco Chiesa",
+      "Dejan Kostic",
+      "Mark Silberstein"
+    ],
+    "summary": "LLM training at the scale of tens of thousands of GPUs now spans multiple datacenters (DC), making cross-DC collectives over long-haul links unavoidable. A critical and overlooked bottleneck arises when these collectives collide with intra-DC traffic at the destination - a common pattern in real workloads. The multi-millisecond congestion control loop is too slow to react, triggering severe packet loss and congestion collapse.\n  We present Spillway, a transparent in-network mechanism that buffers dropped packets in switch-disaggregated buffers in a destination data center and drains them once congestion subsides. Through large-scale end-to-end simulations and a hardware prototype, we show that Spillway eliminates performance degradation from collective collisions, reducing iteration time by up to 14 %, without changes to end hosts or training frameworks.",
+    "published": "2026-05-12",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.11852v2",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2605.13114v1",
+    "title": "Recasting AI Data Centers as Engines for Carbon Removal",
+    "authors": [
+      "Zhicong Fang",
+      "Boyu Zhang",
+      "Jin Shang",
+      "Jiaze Ma"
+    ],
+    "summary": "AI data centers (AIDCs) are rapidly increasing electricity demand and associated CO2 emissions, yet they also generate continuous low-grade waste heat. Here, we assess whether this heat can be upgraded by heat pumps to drive direct air capture (DAC) and reduce the climate impact of AI infrastructure. We develop a thermodynamically integrated DAC-AIDC system and conduct a region-resolved assessment across the United States, accounting for AIDC capacity, server composition, local climate, electricity prices, and grid carbon intensity. We find that AIDC waste heat can substantially improve net CO2 removal and lower the levelized cost of capture. In carbon-intensive regions, integration can flip DAC from net-positive to net-negative. Under a 2030 scenario with more GPU-intensive AIDCs and cleaner grids, several states achieve removal ratios above 1, indicating that integrated systems can offset their own operational emissions and deliver additional carbon removal.",
+    "published": "2026-05-13",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.13114v1",
+    "categories": [
+      "math.OC"
+    ],
+    "primary_category": "math.OC",
+    "github": null
+  },
+  {
+    "id": "2605.13764v1",
+    "title": "VectorSmuggle: Steganographic Exfiltration in Embedding Stores and a Cryptographic Provenance Defense",
+    "authors": [
+      "Jascha Wanger"
+    ],
+    "summary": "Modern retrieval-augmented generation (RAG) systems convert sensitive content into high-dimensional embeddings and store them in vector databases that treat the resulting numerical artifacts as opaque. Major vector-store products do not provide native controls for embedding integrity, ingestion-time distributional anomaly detection, or cryptographic provenance attestation. We show this opens a class of steganographic exfiltration attacks: an attacker with write access to the ingestion pipeline can hide payload data inside embeddings using simple post-embedding perturbations (noise injection, rotation, scaling, offset, fragmentation, and combinations thereof) while preserving the surface-level retrieval behavior the RAG system exposes to legitimate users.\n  We evaluate these techniques across a synthetic-PII corpus on text-embedding-3-large, four locally hosted open embedding models, a cross-corpus replication on BEIR NFCorpus and a Quora subset (over 26,000 chunks combined), seven vector-store configurations, an adaptive-attacker variant of the detector evaluation, and a paraphrased-query retrieval benchmark. Distribution-shifting perturbations are often caught by simple anomaly detectors; small-angle orthogonal rotation defeats distribution-based detection across every (model, corpus) pair tested. A disjoint-Givens rotation encoder gives a closed-form per-vector capacity ceiling of floor(d/2) * b bits, but real embedding manifolds impose a capacity-detectability trade-off, and the retrieval-preserving operating point sits well below it.\n  We propose VectorPin, a cryptographic provenance protocol that pins each embedding to its source content and producing model via an Ed25519 signature over a canonical byte representation. Any post-embedding modification breaks signature verification. Embedding-level integrity is a deployable, standardizable control that closes this attack class.",
+    "published": "2026-05-13",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.13764v1",
+    "categories": [
+      "cs.CR",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2605.13692v1",
+    "title": "Polyhedral Instability Governs Regret in Online Learning",
+    "authors": [
+      "Yuetai Li",
+      "Fengqing Jiang",
+      "Yichen Feng",
+      "Kaiyuan Zheng",
+      "Luyao Niu",
+      "Bhaskar Ramasubramanian",
+      "Basel Alomair",
+      "Linda Bushnell",
+      "Radha Poovendran"
+    ],
+    "summary": "Many online decision problems over combinatorial actions are addressed via convex relaxations, leading to online convex optimization with piecewise linear objectives and induced polyhedral structure. We show that regret in such problems is governed by \\emph{polyhedral instability}: the number of changes of the active region. Under full information feedback and fixed partition assumptions, if $\\mathrm{RS}_T$ denotes the number of region switches and $V_{\\max}$ the maximum number of vertices per region, we prove $\\Regret_T= Θ(\\sqrt{(1+\\mathrm{RS}_T)\\,T\\,\\log V_{\\max}})$ interpolating between experts-like and dimension-dependent OCO rates. For online submodular--concave games under Lovász convexification, this reduces to the permutation-switch count $\\mathrm{SC}_T$, yielding the matching rate $\\Regret_T= Θ(\\sqrt{(1+\\mathrm{SC}_T)\\,T\\,\\log n})$. Experiments on synthetic and real combinatorial problems (shortest path, influence maximization) validate the predicted scaling and indicate that low-instability regimes can arise in practice without explicit enumeration of actions.",
+    "published": "2026-05-13",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.13692v1",
+    "categories": [
+      "cs.LG",
+      "cs.CC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.13779v1",
+    "title": "MinT: Managed Infrastructure for Training and Serving Millions of LLMs",
+    "authors": [
+      "Mind Lab",
+      ":",
+      "Song Cao",
+      "Vic Cao",
+      "Andrew Chen",
+      "Kaijie Chen",
+      "Cleon Cheng",
+      "Steven Chiang",
+      "Kaixuan Fan",
+      "Hera Feng",
+      "Huan Feng",
+      "Arthur Fu",
+      "Jun Gao",
+      "Hongquan Gu",
+      "Aaron Guan",
+      "Nolan Ho",
+      "Mutian Hong",
+      "Hailee Hou",
+      "Peixuan Hua",
+      "Charles Huang",
+      "Miles Jiang",
+      "Nora Jiang",
+      "Yuyi Jiang",
+      "Qiuyu Jin",
+      "Fancy Kong",
+      "Andrew Lei",
+      "Kyrie Lei",
+      "Alexy Li",
+      "Lucian Li",
+      "Ray Li",
+      "Theo Li",
+      "Zhihui Li",
+      "Jiayi Lin",
+      "Kairus Liu",
+      "Kieran Liu",
+      "Logan Liu",
+      "Xiang Liu",
+      "Irvine Lu",
+      "Maeve Luo",
+      "Runze Lv",
+      "Pony Ma",
+      "Verity Niu",
+      "Anson Qiu",
+      "Vincent Wang",
+      "Rio Yang",
+      "Maxwell Yao",
+      "Carrie Ye",
+      "Regis Ye",
+      "Wenlin Ye",
+      "Josh Ying",
+      "Danney Zeng",
+      "Yuhan Zhan",
+      "Anya Zhang",
+      "Di Zhang",
+      "Ruijia Zhang",
+      "Sueky Zhang",
+      "Ya Zhang",
+      "Wei Zhao",
+      "Ada Zhou",
+      "Changhai Zhou",
+      "Yuhua Zhou",
+      "Xinyue Zhu",
+      "Murphy Zhuang"
+    ],
+    "summary": "We present MindLab Toolkit (MinT), a managed infrastructure system for Low-Rank Adaptation (LoRA) post-training and online serving. MinT targets a setting where many trained policies are produced over a small number of expensive base-model deployments. Instead of materializing each policy as a merged full checkpoint, MinT keeps the base model resident and moves exported LoRA adapter revisions through rollout, update, export, evaluation, serving, and rollback, hiding distributed training, serving, scheduling, and data movement behind a service interface. MinT scales this path along three axes. Scale Up extends LoRA RL to frontier-scale dense and MoE architectures, including MLA and DSA attention paths, with training and serving validated beyond 1T total parameters. Scale Down moves only the exported LoRA adapter, which can be under 1% of base-model size in rank-1 settings; adapter-only handoff reduces the measured step by 18.3x on a 4B dense model and 2.85x on a 30B MoE, while concurrent multi-policy GRPO shortens wall time by 1.77x and 1.45x without raising peak memory. Scale Out separates durable policy addressability from CPU/GPU working sets: a tensor-parallel deployment supports 10^6-scale addressable catalogs (measured single-engine sweeps through 100K) and thousand-adapter active waves at cluster scale, with cold loading treated as scheduled service work and packed MoE LoRA tensors improving live engine loading by 8.5-8.7x. MinT thus manages million-scale LoRA policy catalogs while training and serving selected adapter revisions over shared 1T-class base models.",
+    "published": "2026-05-13",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.13779v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.12681v1",
+    "title": "Toward Communication-Efficient Space Data Centers: Bottlenecks, Architectures, and New Paradigms",
+    "authors": [
+      "Minghao Sun",
+      "Zehui Chen",
+      "Jinbo Hou",
+      "Kezhi Wang",
+      "Xiaoli Chu"
+    ],
+    "summary": "The rapid growth of foundation model training and large-scale AI services has driven ground data centers toward unprecedented power densities, intensifying challenges in energy supply, cooling, and spatial scalability. Space Data Centers (SDCs) have emerged as a promising paradigm for hosting energy-intensive computing infrastructures in orbit, leveraging continuous solar energy and radiative cooling advantages. However, unlike ground facilities primarily constrained by power and site availability, SDCs are fundamentally limited by communication capability. The gap between petabit-scale internal data exchange in ground data centers and the gigabit-scale capacity of ground-space links forms a critical bottleneck. This article systematically analyzes communication constraints in SDC architectures and explores semantic communication as a key enabling paradigm. By transmitting compact, task-relevant semantic representations instead of raw data, uplink pressure can be substantially reduced. The feasibility of communication-efficient orbital AI infrastructures is demonstrated through the evaluation of a multi-layer heterogeneous SDC framework consisting of relay satellites and orbital computing nodes operating under coupled energy and thermal constraints. The article further outlines open research challenges toward scalable deployment.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12681v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2605.03751v2",
+    "title": "Carbon-Aware Compute--Power Scheduling for AI Data Centers with Microgrid Prosumer Operations",
+    "authors": [
+      "Johnny R. Zhang",
+      "Gaoyuan Du",
+      "Qianyi Sun",
+      "Shiqi Wang",
+      "Jiaxuan Li",
+      "Xian Sun"
+    ],
+    "summary": "AI data centers are increasingly becoming tightly coupled compute--energy systems, where workload placement, cooling demand, electricity procurement, storage operation, and carbon emissions interact over time. This paper studies carbon-aware compute--power scheduling for geographically distributed AI data centers with microgrid prosumer capabilities. We propose a mixed-integer linear programming (MILP) framework that jointly schedules rigid training jobs, routes elastic inference workloads, dispatches local generation and battery storage, and manages bidirectional grid interaction under latency, continuity, power-balance, and carbon-budget constraints. The model captures two key features of emerging AI infrastructure: heterogeneous workload flexibility and site-level energy prosumer operation. Experiments on synthetic yet practically motivated instances show that the proposed joint MILP substantially improves total operational benefit over compute-only and energy-only baselines while reducing emissions. The results further indicate that inference-routing flexibility is a major source of value, battery storage provides useful temporal flexibility, and local-generation-rich settings are particularly favorable. The framework provides a tractable optimization abstraction for sustainable and grid-interactive AI data centers.",
+    "published": "2026-05-05",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.03751v2",
+    "categories": [
+      "cs.CE"
+    ],
+    "primary_category": "cs.CE",
+    "github": null
+  },
+  {
+    "id": "2605.01342v2",
+    "title": "Don't Be a Pot Stirrer! Authorized Vector Data Retrieval via Access-Aware Indexing",
+    "authors": [
+      "Shanshan Han",
+      "Vishal Chakraborty",
+      "Sharad Mehrotra"
+    ],
+    "summary": "Vector databases increasingly enforce role-based access control, where each top-k approximate nearest neighbor query must return only vectors the querying role is authorized to access. Two extremes bracket the design space. A single global index built over all vectors avoids duplication but wastes search effort on unauthorized vectors and degrades recall, while an oracle index, built with all authorized vectors to the query roles, searches only authorized vectors but duplicates every shared vector between roles or queries. We present Veda and its efficient variant EffVeda, two indexing strategies built on an access-aware lattice to address access control in vector databases. The methods first partitions the dataset into disjoint data blocks by role combination, then leverage the structure of the access-aware lattice to apply copy and merge operations to group co-accessed blocks under a user-specified storage budget. Large nodes in the lattice are then indexed with HNSW, while small nodes are retained for linear scan. To facilitate query processing on the lattice, our methods construct a query plan that selects the minimal set of nodes that covers all authorized data for each role. At query time, coordinated search first queries pure (authorized-only) nodes to populate a global top-k heap, then leverages the resulting distance bound of the k-th data in the heap to prune exploration on impure nodes, avoiding the inflated search that independent per-index execution would require. Evaluations show that our methods deliver higher throughput at high recall while closely tracking the storage budget.",
+    "published": "2026-05-02",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.01342v2",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2605.12788v1",
+    "title": "From Heuristics to Analytics: Forecasting Effort and Progress in Online Learning",
+    "authors": [
+      "Eric S. Qiu",
+      "Danielle R. Thomas",
+      "Boyuan Guo",
+      "Vincent Aleven",
+      "Conrad Borchers"
+    ],
+    "summary": "Sustained effort is essential for realizing the benefits of intelligent tutoring systems (ITS), yet many learners disengage or underuse available practice time. We introduce engagement forecasting as a supervised prediction task based on ITS logs, targeting two outcomes central to effort and learning progress: minutes practiced per week and new skills mastered per week. Using interaction log data from 425 middle-school students over a school year, we benchmark fifteen predictors including regressions, decision trees, and neural networks. We show that these feature-based models reduce mean absolute error (MAE) by 22-33% relative to heuristic baselines, including fixed-percentile rules adapted from prior work in other behavioral domains. We find that percentile heuristics systematically overpredict, whereas feature-based models better track student practice trajectories across weeks. To support explainability, we analyze feature importance and ablations, revealing target-specific patterns: effort forecasting is driven mainly by recent activity features, while progress forecasting depends more on learner-state and content difficulty signals. Finally, in a semi-structured user interview case study with eight college tutors, we examine how tutors reasoned about system-generated predictive features when setting goals with students. We find that tutors reasoned differently about effort versus progress goals in ways that mirror our pattern analysis. Together, these results establish a reproducible benchmark for forecasting weekly effort and learning progress in ITS. By making patterns of sustained effort and progress visible at a weekly timescale, engagement forecasting offers a foundation for supporting tutor-learner goal setting and timely instructional decisions.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12788v1",
+    "categories": [
+      "cs.LG",
+      "cs.CY"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.12664v1",
+    "title": "Profit Maximization in Bilateral Trade against a Smooth Adversary",
+    "authors": [
+      "Simone Di Gregorio",
+      "Paul Dütting",
+      "Federico Fusco",
+      "Chris Schwiegelshohn"
+    ],
+    "summary": "Bilateral trade models the task of intermediating between two strategic agents, a seller and a buyer, who wish to trade a good. We study this problem from the perspective of a profit-maximizing broker within an online learning framework, where the agents' valuations are generated by a smooth adversary.\n  We devise a learning algorithm that guarantees a $\\tilde{O}(\\sqrt{T})$ regret bound, which is tight in the time horizon $T$ up to poly-logarithmic factors. This matches the minimax rate for the stochastic i.i.d. case, and is also well separated from the adversarial setting, where sublinear-regret is unattainable. By extending the strong regret guarantees from the i.i.d. case to the smooth adversary, we significantly broaden the scope of settings where such fast rate is achievable, while closing an important gap in the regret landscape of this fundamental economic problem.\n  To overcome the challenges posed by this adversary, we leverage a continuity property of smooth instances and combines this with a hierarchical net-construction of the broker's action space, which is analyzed via algorithmic chaining. We showcase the applicability of these techniques by deriving a similarly tight $\\tilde{O}(\\sqrt{T})$ regret bound for a related mechanism design model: the joint ads problem.",
+    "published": "2026-05-12",
+    "updated": "2026-05-12",
+    "pdf_url": "https://arxiv.org/pdf/2605.12664v1",
+    "categories": [
+      "cs.GT",
+      "cs.LG"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  }
+]
