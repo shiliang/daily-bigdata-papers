@@ -1,0 +1,63 @@
+[
+  {
+    "id": "2605.14404v1",
+    "title": "Knowledge Beyond Language: Bridging the Gap in Multilingual Machine Unlearning Evaluation",
+    "authors": [
+      "Kyomin Hwang",
+      "Hyeonjin Kim",
+      "Sangyeon Cho",
+      "Nojun Kwak"
+    ],
+    "summary": "While LLMs are increasingly used in commercial services, they pose privacy risks such as leakage of sensitive personally identifiable information (PII). For LLMs trained on multilingual corpora, Multilingual Machine Unlearning (MMU) aims to remove information across multiple languages. However, prior MMU evaluations fail to capture such cross-linguistic distribution of information, being largely limited to direct extensions of per-language evaluation protocols. To this end, we propose two metrics to evaluate the information spread across languages: the Knowledge Separability Score (KSS) and the Knowledge Persistence Score (KPS). KSS measures the overall unlearning quality across multiple languages, while KPS more specifically aims to assess consistent removal of information among different language pairs. We evaluated various unlearning methods in the multilingual setting with these metrics and conducted comprehensive analyses. Through our investigation, we provide insights into unique phenomena exclusive to MMU and offer a new perspective on MMU evaluation.",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14404v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.14581v1",
+    "title": "A Picture is Worth a Thousand Words? An Empirical Study of Aggregation Strategies for Visual Financial Document Retrieval",
+    "authors": [
+      "Ho Hung Lim",
+      "Yi Yang"
+    ],
+    "summary": "Visual RAG has offered an alternative to traditional RAG. It treats documents as images and uses vision encoders to obtain vision patch tokens. However, hundreds of patch tokens per document create retrieval and storage challenges in a vector database. Practical deployment requires aggregating them into a single vector. This raises a critical question: does single-vector aggregation lose key information in financial documents? We develop a diagnostic benchmark using financial documents where changes in single digits can lead to significant semantic shifts. Our experiments show that single-vector aggregation collapses different documents with almost identical vectors. Metrics show that the patch level detects semantic changes, and confirm that aggregation obscures these details. We identify global texture dominance as the root cause. Our findings are consistent across model scales, retrieval-optimized embeddings, and multiple mitigation strategies, highlighting significant risks for single-vector visual document retrieval in financial applications.",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14581v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.13936v1",
+    "title": "Towards the Next Frontier of LLMs, Training on Private Data: A Cross-Domain Benchmark for Federated Fine-Tuning",
+    "authors": [
+      "Daniel M. Jimenez-Gutierrez",
+      "Enrique Zuazua",
+      "Georgios Kellaris",
+      "Joaquin del Rio",
+      "Oleksii Sliusarenko",
+      "Xabi Uribe-Etxebarria"
+    ],
+    "summary": "The recent success of large language models (LLMs) has been largely driven by vast public datasets. However, the next frontier for LLM development lies beyond public data. Much of the world's most valuable information is private, especially in highly regulated sectors such as healthcare and finance, where data include patient histories or customer communications. Unlocking this data could represent a major leap forward, enabling LLMs with deeper domain expertise and stronger real-world utility. Yet, these data cannot be shared because they are distributed across institutions and constrained by privacy, regulatory, and organizational barriers. Moreover, institutional datasets are typically non-independent and identically distributed (non-IID), differing across sites in population characteristics, data modalities, documentation patterns, and task-specific label distributions.\n  In this paper, we demonstrate a practical approach to unlocking private and distributed institutional data for LLM adaptation through federated collaboration across data silos. Built on the Sherpa.ai Federated Learning platform, our framework enables nodes to jointly fine-tune a shared LLM without exchanging private data. We evaluate this approach through a cross-domain benchmark in healthcare and finance, using four closed-ended question answering and classification datasets: MedQA, MedMCQA, FPB, and FiQA-SA. We compare three parameter-efficient fine-tuning (PEFT) strategies-LoRA, QLoRA, and IA3-across pretrained backbones under non-IID settings reflecting institutional data heterogeneity. Our results show that federated fine-tuning performs close to centralized training and outperforms isolated single-institution learning. From a Green AI perspective, QLoRA and IA3 improve efficiency with limited accuracy degradation, supporting federated PEFT as a viable approach for adapting LLMs where data cannot be shared.",
+    "published": "2026-05-13",
+    "updated": "2026-05-13",
+    "pdf_url": "https://arxiv.org/pdf/2605.13936v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
