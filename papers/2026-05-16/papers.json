@@ -1,0 +1,103 @@
+[
+  {
+    "id": "2605.14953v1",
+    "title": "Efficient Online Conformal Selection with Limited Feedback",
+    "authors": [
+      "Sreenivas Gollapudi",
+      "Kostas Kollias",
+      "Kamesh Munagala",
+      "Ali Sinop"
+    ],
+    "summary": "We address the problem of conformal selection, where an agent must select a minimal subset of options to ensure that at least one ``success'' is identified with a pre-specified target probability $φ$. While traditional online conformal prediction focuses on maintaining validity for the observed sequence, minimizing the resource cost (efficiency) of such selections, especially under limited feedback, remains a significant challenge. In this work, we consider settings with the most limited ``bandit'' feedback, and demonstrate that the simple Adaptive Conformal Inference (ACI) update rule, when applied to the appropriate control parameter or dual variable, is both adversarially valid, ensuring the success target is met on average for any input sequence (and hence under distribution shifts), and stochastically efficient, achieving sublinear efficiency regret for $i.i.d.$ inputs against an appropriate stochastic benchmark. We show such guarantees under canonical models capturing bandit and semi-bandit feedback to the agent via a unifying algorithmic technique, and analytic framework involving Lyapunov functions. Our approach handles more complex settings than prior work, while requiring significantly less feedback, and our results provide a new theoretical bridge between efficient online learning with limited feedback and distribution-free uncertainty quantification.",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14953v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.14840v1",
+    "title": "In-Context Learning for Data-Driven Censored Inventory Control",
+    "authors": [
+      "Sohom Mukherjee",
+      "Anh-Duy Pham",
+      "Richard Pibernik",
+      "Yunbei Xu"
+    ],
+    "summary": "We study inventory control with decision-dependent censoring, focusing on the censored or repeated newsvendor (R-NV), where each order quantity determines whether demand is fully observed or censored by sales. Existing approaches based on parametric Thompson sampling (TS) can be brittle under prior mismatch, while offline imputation methods need not transfer to online learning. Motivated by the predictive view of decision making, we combine these ideas by taking oracle actions on learned completions of latent demand. We propose in-context generative posterior sampling (ICGPS), which uses modern generative models that are meta-trained offline and deployed online by in-context autoregressive generation. Theoretically, we show that the Bayesian regret of ICGPS with a learned completion kernel is bounded by the Bayesian regret of a TS benchmark with the ideal completion kernel plus a deployment penalty scaling as $\\sqrt{T}$ times the square root of the completion mismatch. This yields a plug-in template for operational problems with known TS regret bounds. For R-NV, we derive sublinear Bayesian regret by reducing censored feedback to bandit convex optimization feedback. We also show that, under reasonable coverage and stability assumptions, the online completion mismatch is controlled by the offline censored predictive mismatch, so offline predictive quality transfers to online performance. Practically, we instantiate ICGPS with ChronosFlow, which combines a frozen time-series transformer backbone with a trainable conditional normalizing-flow head for fast censoring-consistent sampling. In benchmark experiments, ChronosFlow-ICGPS matches correctly specified TS, outperforms myopic and UCB-style baselines, and is robust to prior mismatch and distribution shift. ChronosFlow-ICGPS also performs well for the real-world SuperStore dataset, especially under heavy censoring.",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14840v1",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.14779v1",
+    "title": "Peng's Q($λ$) for Conservative Value Estimation in Offline Reinforcement Learning",
+    "authors": [
+      "Byeongchan Kim",
+      "Min-hwan Oh"
+    ],
+    "summary": "We propose a model-free offline multi-step reinforcement learning (RL) algorithm, Conservative Peng's Q($λ$) (CPQL). Our algorithm adapts the Peng's Q($λ$) (PQL) operator for conservative value estimation as an alternative to the Bellman operator. To the best of our knowledge, this is the first work in offline RL to theoretically and empirically demonstrate the effectiveness of conservative value estimation with a \\textit{multi-step} operator by fully leveraging offline trajectories. The fixed point of the PQL operator in offline RL lies closer to the value function of the behavior policy, thereby naturally inducing implicit behavior regularization. CPQL simultaneously mitigates over-pessimistic value estimation, achieves performance greater than (or equal to) that of the behavior policy, and provides near-optimal performance guarantees -- a milestone that previous conservative approaches could not achieve. Extensive numerical experiments on the D4RL benchmark demonstrate that CPQL consistently and significantly outperforms existing offline single-step baselines. In addition to the contributions of CPQL in offline RL, our proposed method also contributes to the offline-to-online learning framework. Using the Q-function pre-trained by CPQL in offline settings enables the online PQL agent to avoid the performance drop typically observed at the start of fine-tuning and to attain robust performance improvements. Our code is available at https://github.com/oh-lab/CPQL.",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.14779v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/oh-lab/CPQL.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.10289v2",
+    "title": "Sample-Mean Anchored Thompson Sampling for Offline-to-Online Learning with Distribution Shift",
+    "authors": [
+      "Bochao Li",
+      "Yao Fu",
+      "Wei Chen",
+      "Fang Kong"
+    ],
+    "summary": "Offline-to-online learning aims to improve online decision-making by leveraging offline logged data. A central challenge in this setting is the distribution shift between offline and online environments. While some existing works attempt to leverage shifted offline data, they largely rely on UCB-type algorithms. Thompson sampling (TS) represents another canonical class of bandit algorithms, well known for its strong empirical performance and naturally suited to offline-to-online learning through its Bayesian formulation. However, unlike UCB indices, posterior samples in TS are not guaranteed to be optimistic with respect to the true arm means. This makes indices constructed from purely online and hybrid data difficult to compare and complicates their use. To address this issue, we propose sample-mean anchored TS (Anchor-TS), which introduces a novel median-based anchoring rule that defines the arm index as the median of an online posterior sample, a hybrid posterior sample, and the online sample mean. The median anchoring systematically corrects bias induced by distribution shift by mitigating over-estimation for suboptimal arms and under-estimation for optimal arms, while exploiting offline information to obtain more accurate estimates when the shift is small. We establish theoretical guarantees showing that the proposed algorithm safely leverages offline data to accelerate online learning, and quantifying how the degree of distribution shift and the size of offline data affect the resulting regret reduction. Extensive experiments demonstrate consistent improvements of our algorithm over baselines.",
+    "published": "2026-05-11",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.10289v2",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.02043v2",
+    "title": "Bringing Order to Asynchronous SGD: Towards Optimality under Data-Dependent Delays with Momentum",
+    "authors": [
+      "Tehila Dahan",
+      "Roie Reshef",
+      "Sharon Goldstein",
+      "Kfir Y. Levy"
+    ],
+    "summary": "Asynchronous stochastic gradient descent (SGD) enables scalable distributed training but suffers from gradient staleness. Existing mitigation strategies, such as delay-adaptive learning rates and staleness-aware filtering, typically attenuate or discard delayed gradients, introducing systematic bias: updates from simpler or faster-to-process samples are overrepresented, while gradients from more complex samples are delayed or suppressed. In contrast, prior approaches to data-dependent delays rely on a Lipschitz assumption that yields suboptimal rates or leave the smooth, convex case unaddressed. We propose a momentum-based asynchronous framework designed to preserve information from delayed gradients while mitigating the effects of staleness. We establish the first optimal convergence rates for data-dependent delays in both convex and non-convex smooth setups, providing a new result for asynchronous optimization under standard assumptions. Additionally, we derive robust learning-rate schedules that simplify hyperparameter tuning in practice.",
+    "published": "2026-05-03",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.02043v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
