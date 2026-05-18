@@ -1,0 +1,154 @@
+[
+  {
+    "id": "2605.16184v1",
+    "title": "Runtime-Orchestrated Second-Order Optimization for Scalable LLM Training",
+    "authors": [
+      "Yishun Lu",
+      "Junhao Zhang",
+      "Zeyu Yang",
+      "Wes Armour"
+    ],
+    "summary": "Second-order methods offer an attractive path toward more sample-efficient LLM training, but their practical use is often blocked by the systems cost of maintaining and updating large matrix-based optimizer states. We introduce \\textbf{Asteria}, a runtime system designed to remove this bottleneck by separating second-order optimization logic from the critical GPU training path. Rather than keeping all preconditioner state on the accelerator, Asteria dynamically distributes optimizer state across GPU memory, CPU memory, and optional NVMe storage according to architectural constraints and runtime pressure. It further uses training hooks to prepare shadow states in advance, allowing expensive inverse-root computations to proceed asynchronously on the host while GPU computation continues. For distributed training, Asteria employs a bounded-staleness protocol that limits synchronization frequency while preserving optimizer effectiveness through topology-aware coordination.\n  We evaluate Asteria on both memory-constrained and distributed training settings. On a DGX Spark platform with a single GB10 GPU and 128GB unified memory, Asteria supports second-order training for a 1B-parameter language model. On multi-node GH200 systems, it lowers visible optimizer overhead, reduces recurring latency spikes, accelerates convergence in wall-clock time, and maintains the optimization advantages of SOAP and KL-Shampoo in a 7B-parameter language model. Our results suggest that second-order LLM training can be made practical not by simplifying the optimizer alone, but by rethinking how optimizer state, background computation, and distributed synchronization are managed at the runtime level.",
+    "published": "2026-05-15",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.16184v1",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.15532v1",
+    "title": "DeltaPrompts: Escaping the Zero-Delta Trap in Multimodal Distillation",
+    "authors": [
+      "Jaehun Jung",
+      "Hyunwoo Kim",
+      "Brandon Cui",
+      "Ximing Lu",
+      "David Acuna",
+      "Prithviraj Ammanabrolu",
+      "Yejin Choi"
+    ],
+    "summary": "Distillation enables compact Vision-Language Models (VLMs) to obtain strong reasoning capabilities, yet the prompts driving this process are typically chosen via simple heuristics or aggregated from off-the-shelf datasets. We reveal a critical inefficiency in this approach: up to 69% of the prompts in standard chart / document reasoning datasets are effectively zero-delta, meaning the teacher and student already induce the exact same answer distribution. Training on these prompts provides minimal learning signal, causing student improvement to rapidly saturate regardless of data scale. To escape the zero-delta trap, we return to first principles: distillation fundamentally minimizes distributional divergence, and thus a prompt is valuable only if it exposes a functional capability gap between the teacher and student. We quantify this gap through answer divergence ($Δ$), demonstrating that non-zero divergence is critical for effective scaling. Building on this insight, we propose a staged synthesis pipeline that repurposes existing datasets as seeds, actively targeting student failure modes to produce better prompts. The result is DeltaPrompts, a diverse dataset of 200k synthetic, high-divergence reasoning problems. We evaluate DeltaPrompts across three distinct settings: on-policy distillation with the target teacher-student pair, transfer to a novel model family without regenerating the data, and off-policy fine-tuning of a non-reasoning model. Across all scenarios, DeltaPrompts drives substantial gains, yielding up to 15% relative improvement even on top of a highly-optimized reasoning model (e.g., Qwen3-VL-8B-Thinking) -- averaged over 10 benchmarks spanning chart, document and perception-centric reasoning.",
+    "published": "2026-05-15",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.15532v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.15520v1",
+    "title": "On the Fragility of Data Attribution When Learning Is Distributed",
+    "authors": [
+      "Xian Gao",
+      "Bo Hui",
+      "Min-Te Sun",
+      "Wei-Shinn Ku"
+    ],
+    "summary": "Data attribution has become an important component of pricing, auditing, and governance in machine learning pipelines, yet most attribution methods implicitly assume that attribution values faithfully reflect participants' contributions. We show that this assumption can fail: a single participant in a standard distributed training workflow can substantially inflate its measured attribution value while preserving global utility. Our attribution-first attack uses latent optimization to inject small synthetic batches that preserve utility while exploiting non-IID label coverage and evaluator sensitivities. Across datasets, models, and multiple marginal-utility evaluators, the attack consistently increases the adversary's attribution value and reshapes the relative attribution structure among benign clients without degrading accuracy or triggering geometry-based defenses. These results show that attribution itself forms a new attack surface and motivate the development of attribution-robust and incentive-compatible scoring mechanisms.",
+    "published": "2026-05-15",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.15520v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.09994v2",
+    "title": "BatchWeave: A Consistent Object-Store-Native Data Plane for Large Foundation Model Training",
+    "authors": [
+      "Ting Sun",
+      "Junjie Zhang",
+      "Xiao Yan",
+      "Songxin Zhang",
+      "Zhuoyang Song",
+      "Jingyi Xi",
+      "Zunyao Mao",
+      "Bingyi Jing",
+      "Jiaxing Zhang",
+      "Zejian Xie"
+    ],
+    "summary": "Modern Large Foundation Model (LFM) training has transformed the data pipeline from a static ingestion layer into a dynamic component that must co-evolve with the training process. Existing systems are ill-equipped: colocated dataloaders offer no failure isolation, while message queue-based disaggregated dataloaders operate on a record/offset abstraction that cannot express the batch-level semantics required by distributed training. We present BatchWeave, an object-store-native training data plane for distributed LFM training. BatchWeave uses versioned manifests and conditional object writes to coordinate batch publication, recovery, and lifecycle management. First, it introduces the Transactional Global Batch (TGB), which builds on versioned-manifest ACID storage semantics and extends them with training-specific consistency, including atomic all-rank batch visibility, a globally ordered step sequence, checkpoint-aligned lifecycle management, and end-to-end exactly-once recovery. Second, it realizes recovery and retention directly in the storage layer, by durably persisting producer state through the commit protocol and tying reclamation to distributed checkpoint state. Third, its Decentralized Adaptive Commit (DAC) algorithm sustains stable ingestion throughput as the manifest grows, without any inter-producer communication. Evaluations on large-scale multimodal pre-training and SFT workloads using 64 GPUs show that BatchWeave outperforms colocated dataloader throughput while providing full failure isolation, outperforms Apache Kafka in ingestion throughput, and achieves lower consumer read latency than Kafka.",
+    "published": "2026-05-11",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.09994v2",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.08856v2",
+    "title": "Controlling Transient Amplification Improves Long-horizon Rollouts",
+    "authors": [
+      "Adeel Pervez",
+      "Francesco Locatello"
+    ],
+    "summary": "Autoregressive neural simulators now match classical solvers on short-horizon prediction of physical systems, yet their accuracy degrades rapidly when rolled out over long horizons. In this work, we identify transient amplification of perturbations around rollout trajectories as a structural mechanism driving rollout error. Using a linearization analysis we show that when the Jacobians along an autoregressive trajectory are non-normal and non-commuting, the model amplifies errors transiently, resulting in model rollout drift even when the overall system is asymptotically stable. Building on the analysis, we propose commutativity regularization: a combination of two penalties designed to reduce the normality defect of individual Jacobians and the commutator norm of Jacobians across steps. The penalties are estimated with Jacobian-vector products and have no inference-time cost. We show a propagator bound that quantifies rollout error under approximate commutativity and normality. We evaluate UNet and FNO variants with commutativity regularization on 1D and 2D spatio-temporal data in synthetic and real settings, showing successful long-horizon rollouts over thousands of steps. Further, we show that the method improves FourCastNet climate forecasts on ERA5 without using any new data. The gain is most pronounced out-of-distribution: trained on trajectories of a few hundred steps, regularized models remain in-distribution for thousands of rollout steps on initial conditions where baselines diverge.",
+    "published": "2026-05-09",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.08856v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.15694v1",
+    "title": "Going Beyond the Edge: Distributed Inference of Transformer Models on Ultra-Low-Power Wireless Devices",
+    "authors": [
+      "Alexander Gräfe",
+      "Ding Huo",
+      "Johannes Berger",
+      "Marco Zimmerling",
+      "Sebastian Trimpe"
+    ],
+    "summary": "Transformer models are rapidly becoming a cornerstone of modern Internet of Things (IoT) applications, yet their computational and memory demands far exceed the capabilities of a single typical ultra-low-power IoT device. We present CATS, a framework for distributed transformer inference on ultra-low-power wireless devices, enabling multiple devices to collaboratively execute models far larger than what a single device can sustain. At its core, CATS is a communication-aware distributed transformer inference scheme co-designed across transformer partitioning, wireless communication and training. It employs SomeGather, a new pruned communication primitive that selectively broadcasts activation columns to reduce communication bandwidth and RAM usage without sacrificing model accuracy. Building on SomeGather, we design a partitioning method that exploits this primitive for efficient model parallelism. To cope with unreliable wireless communication, CATS employs message-dropout during training, which mimics packet losses and yields models that are robust to message loss during inference. In real-world experiments, we show that CATS brings distributed transformer inference to ultra-low-power wireless devices for the first time, with deployments on up to 16 devices that collaboratively execute transformer models up to 14 times larger than what a single device can run.",
+    "published": "2026-05-15",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.15694v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.15284v1",
+    "title": "Tadpole: Autoencoders as Foundation Models for 3D PDEs with Online Learning",
+    "authors": [
+      "Qiang Liu",
+      "Felix Koehler",
+      "Benjamin Holzschuh",
+      "Nils Thuerey"
+    ],
+    "summary": "We introduce Tadpole, a novel foundation model for three-dimensional partial differential equations (PDEs) that addresses key challenges in transferability, scalability to high dimensionality, and multi-functionality. Tadpole is pre-trained as an autoencoder on synthetic 3D PDE data generated by an efficient online data-generation framework. This enables large-scale, diverse training without storage or I/O overhead, demonstrated by scaling to an equivalent of hundreds of terabytes of training data. By autoencoding single-channel spatial crops, Tadpole learns rich and transferable representations across heterogeneous physical systems with varying numbers of state variables and spatial resolutions. Although pre-trained solely as an autoencoder, Tadpole can be efficiently applied for multiple downstream tasks beyond reconstruction, including dynamics learning and generative modeling. For dynamics learning, we propose a novel parameter-efficient fine-tuning strategy that integrates low-rank adaptation, latent-space transformations, and reintroduced skip connections, achieving accurate temporal modeling with a minimal number of trainable parameters. Tadpole demonstrates strong fine-tuning performance across various downstream tasks, highlighting its versatility and effectiveness as a foundation model for 3D PDE learning. Source code and pre-trained weights of Tadpole are available at https://github.com/tum-pbs/tadpole",
+    "published": "2026-05-14",
+    "updated": "2026-05-14",
+    "pdf_url": "https://arxiv.org/pdf/2605.15284v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/tum-pbs/tadpole",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  }
+]
