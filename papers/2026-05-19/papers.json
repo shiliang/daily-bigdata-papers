@@ -1,0 +1,232 @@
+[
+  {
+    "id": "2605.18039v1",
+    "title": "SGSoft: Learning Fused Semantic-Geometric Features for 3D Shape Correspondence via Template-Guided Soft Signals",
+    "authors": [
+      "Soyeon Yoon",
+      "Chang Wook Seo",
+      "Hyunjung Shim"
+    ],
+    "summary": "Learning dense correspondences across deformable 3D shapes remains a long-standing challenge due to structural variability, non-isometric deformation, and inconsistent topology. Existing methods typically trade off generalization, geometric fidelity, and efficiency. We address this by proposing SGSoft, a unified intrinsic pipeline that (i) constructs a geodesic correspondence field on a canonical template, (ii) learns multimodal dense descriptors guided by pretrained semantic priors with this geodesic correspondence field supervision, (iii) retrieves dense correspondences in a single feed-forward pass via nearest-neighbor search in descriptor space. This formulation enables stable and topology-invariant supervision under large pose variation, structural differences, and remeshing. SGSoft achieves state-of-the-art inter-category generalization while offering the best accuracy-efficiency trade-off among prior methods. It also achieves near real-time inference without pre-alignment, pairwise optimization, or post-refinement. Learned descriptors can be transferred effectively to downstream tasks such as semantic segmentation and deformation transfer, establishing a scalable and deployment-ready paradigm for dense 3D correspondence.",
+    "published": "2026-05-18",
+    "updated": "2026-05-18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18039v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.18562v1",
+    "title": "Estimating Item Difficulty with Large Language Models as Experts",
+    "authors": [
+      "Diana Kolesnikova",
+      "Kirill Fedyanin",
+      "Abe D. Hofman",
+      "Matthieu J. S. Brinkhuis",
+      "Maria Bolsinova"
+    ],
+    "summary": "Accurate estimates of item difficulty are essential for valid assessment and effective adaptive learning. However, for newly created tasks, response data are typically unavailable. Pretesting and expert judgement can be costly and slow, while machine learning methods often require large labelled training datasets. Recent work suggests that large language models (LLMs) may help. However, there is limited evidence on the elicitation procedures and prompt configurations used to emulate experts for difficulty estimation. This study addresses this gap by evaluating three off-the-shelf LLMs as difficulty raters for newly created items without access to response data. Using an item bank from an online learning system, the study examined 6 domains of primary-school mathematics, with empirical difficulty estimates treated as empirical reference. The study used a full factorial design crossing three factors: judgement format (absolute vs pairwise), decision type (hard decisions vs token-probability-based estimates), and prompting strategy (zero-shot vs few-shot). LLM-derived difficulty estimates were compared with empirical difficulties using Spearman rank correlations. Across domains, LLM-based estimates exhibited moderate to strong positive correlations with empirical item difficulties. For simpler arithmetic tasks, some configurations approached the upper end of the accuracy range reported for human experts in previous research. Pairwise comparison consistently outperformed absolute judgement in the absence of additional refinements. However, when token-level probabilities were incorporated and examples of items with known empirical difficulty were provided, the absolute judgement configuration likewise demonstrated moderate-to-high alignment. The study positions LLMs as a promising tool for initial item calibration and offers insights into effective workflow configuration.",
+    "published": "2026-05-18",
+    "updated": "2026-05-18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18562v1",
+    "categories": [
+      "stat.ME",
+      "cs.AI",
+      "cs.LG",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
+    "github": null
+  },
+  {
+    "id": "2605.18003v1",
+    "title": "Spiker-LL: An Energy-Efficient FPGA Accelerator Enabling Adaptive Local Learning in Spiking Neural Networks",
+    "authors": [
+      "Alessio Caviglia",
+      "Filippo Marostica",
+      "Alessandro Savino",
+      "Stefano Di Carlo"
+    ],
+    "summary": "Deploying adaptive intelligence at the edge remains challenging due to the high computational and energy cost of training neural models. Spiking Neural Networks (SNNs) offer a promising alternative, but enabling on-device learning requires hardware-algorithm co-design. This paper presents SPIKER-LL, an FPGA-based SNN accelerator that extends the open-source Spiker+ inference architecture with efficient support for the STSF local learning rule. Through targeted microarchitectural extensions, SPIKER-LL performs inference and online learning with minimal overhead. Across MNIST, F-MNIST, and DIGITS, it achieves up to 93% accuracy, sub-millisecond latency, and less than 0.1 mJ per inference, while remaining DSP-free and highly scalable for edge-FPGA deployments.",
+    "published": "2026-05-18",
+    "updated": "2026-05-18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18003v1",
+    "categories": [
+      "cs.NE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.NE",
+    "github": null
+  },
+  {
+    "id": "2605.18404v1",
+    "title": "JanusPipe: Efficient Pipeline Parallel Training for Machine Learning Interatomic Potentials",
+    "authors": [
+      "Hongyu Wang",
+      "Weijian Liu",
+      "Hongtao Xu",
+      "Yan Wang",
+      "Mingzhen Li",
+      "Weile Jia",
+      "Guangming Tan"
+    ],
+    "summary": "Discovering atom-level phenomena requires molecular dynamics (MD) simulations with ab initio accuracy. Machine learning interatomic potentials (MLIPs) enable stable, high-accuracy MD simulations, and their models exhibit scaling-law trends similar to large language models. However, the lack of scalable and efficient distributed training systems for conservative MLIPs makes them difficult to scale. This is because conservative MLIPs inherently follow a double-backward execution pattern, which involves computing gradients during the forward pass. This pattern creates a mismatch with existing distributed training systems, especially for pipeline parallelism. Therefore, we present JanusPipe, an efficient 3D-parallel (PP/DP/GP) training system tailored for conservative MLIPs. It integrates SymFold to enable memory-efficient pipeline parallelism for conservative MLIPs, and WaveK to reduce pipeline bubbles by balancing the four-phase compute time. Experimental results on 32 GPUs show that JanusPipe improves throughput by $1.51\\times$ and $1.45\\times$ on average over 1F1B and Hanayo, respectively.",
+    "published": "2026-05-18",
+    "updated": "2026-05-18",
+    "pdf_url": "https://arxiv.org/pdf/2605.18404v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.15694v2",
+    "title": "Going Beyond the Edge: Distributed Inference of Transformer Models on Ultra-Low-Power Wireless Devices",
+    "authors": [
+      "Alexander Gräfe",
+      "Ding Huo",
+      "Vincent de Bakker",
+      "Johannes Berger",
+      "Marco Zimmerling",
+      "Sebastian Trimpe"
+    ],
+    "summary": "Transformer models are rapidly becoming a cornerstone of modern Internet of Things (IoT) applications, yet their computational and memory demands far exceed the capabilities of a single typical ultra-low-power IoT device. We present CATS, a framework for distributed transformer inference on ultra-low-power wireless devices, enabling multiple devices to collaboratively execute models far larger than what a single device can sustain. At its core, CATS is a communication-aware distributed transformer inference scheme co-designed across transformer partitioning, wireless communication and training. It employs SomeGather, a new pruned communication primitive that selectively broadcasts activation columns to reduce communication bandwidth and RAM usage without sacrificing model accuracy. Building on SomeGather, we design a partitioning method that exploits this primitive for efficient model parallelism. To cope with unreliable wireless communication, CATS employs message-dropout during training, which mimics packet losses and yields models that are robust to message loss during inference. In real-world experiments, we show that CATS brings distributed transformer inference to ultra-low-power wireless devices for the first time, with deployments on up to 16 devices that collaboratively execute transformer models up to 14 times larger than what a single device can run.",
+    "published": "2026-05-15",
+    "updated": "2026-05-18",
+    "pdf_url": "https://arxiv.org/pdf/2605.15694v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.17410v1",
+    "title": "Computational Challenges in Token Economics: Bridging Economic Theory and AI System Design",
+    "authors": [
+      "Ou Wu",
+      "Yingjun Deng"
+    ],
+    "summary": "Token economics has emerged as a useful lens for understanding resource allocation, value creation, and pricing in large language model systems. While recent work has increasingly treated tokens as economic primitives, there remains a substantial gap between high-level economic theory and the computational realities of modern AI infrastructure. This paper identifies and analyzes the key computational challenges that arise when token-economic principles are implemented in real-time inference systems. We argue that computational feasibility is not merely one dimension of token economics, but its governing constraint: these challenges are driven by fundamental tensions among fine-grained valuation, low-latency execution, and allocation optimality under uncertainty. To structure this problem space, we introduce the notion of \\textbf{Computational Token Economics} and propose the \\textbf{Token Economics Trilemma} -- a conditional no-free-lunch principle that captures the inherent trade-offs among granularity, real-time performance, and optimality. We further categorize the main technical challenges into three areas: real-time value accounting, constrained resource allocation, and economic-aware system architecture. Rather than presenting a complete solution, this paper aims to define a research agenda for bridging token economics and AI system design, highlighting open problems at the intersection of computational economics, machine learning systems, and AI infrastructure.",
+    "published": "2026-05-17",
+    "updated": "2026-05-17",
+    "pdf_url": "https://arxiv.org/pdf/2605.17410v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.17665v1",
+    "title": "On the Complexity of Correlated Equilibria Beyond Normal-Form Games",
+    "authors": [
+      "Ioannis Anagnostides",
+      "Constantinos Daskalakis",
+      "Gabriele Farina",
+      "Noah Golowich",
+      "Tuomas Sandholm",
+      "Brian Hu Zhang"
+    ],
+    "summary": "Correlated equilibria are a fundamental solution concept in game theory. However, despite decades of research, the complexity beyond games of polynomial type -- such as extensive-form games, congestion or routing games, and more broadly concave games -- has remained a major open problem, first highlighted by Papadimitriou and Roughgarden (JACM '08).\n  In this paper, we resolve several long-standing questions concerning the complexity of correlated equilibria and swap regret minimization. First, we show that computing a correlated equilibrium in concave quadratic games is as hard as computing the fixed point of a contraction mapping (Contr), providing the first strong evidence of intractability. Moreover, we establish an unconditional, information-theoretic lower bound ruling out the existence of a strongly sublinear swap regret minimizer: any online learning algorithm requires exponentially many iterations in the dimension $d$ to guarantee at most $1/\\text{poly}(d)$ (average) swap regret.\n  To circumvent these hardness results, we examine the complexity of $Φ$-equilibria -- tractable relaxations of correlated equilibria. We obtain a fully polynomial-time approximation scheme (FPTAS) for computing poly-dimensional $Φ$-equilibria in general concave games. We complement this by showing that Contr-hardness persists even under poly-dimensional swap deviations in the regime where the precision $ε$ is exponentially small. Finally, we show that Contr-hardness can be bypassed in the canonical setting of concave \\emph{quadratic games}, for which we provide a $\\text{poly}(d, \\log(1/ε))$-time algorithm for computing poly-dimensional $Φ$-equilibria. As a byproduct, we obtain an algorithm for computing fixed points of a mapping that is contracting with respect to an unknown Mahalanobis norm, which could be of independent interest.",
+    "published": "2026-05-17",
+    "updated": "2026-05-17",
+    "pdf_url": "https://arxiv.org/pdf/2605.17665v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2605.16519v1",
+    "title": "DepthPolyp: Pseudo-Depth Guided Lightweight Segmentation for Real-Time Colonoscopy",
+    "authors": [
+      "Zhuoyu Wu",
+      "Wenhui Ou",
+      "Lexi Zhang",
+      "Pei-Sze Tan",
+      "Dongjun Wu",
+      "Junhe Zhao",
+      "Wenqi Fang",
+      "Raphaël C. -W. Phan"
+    ],
+    "summary": "Accurate polyp segmentation in colonoscopy is essential for early colorectal cancer detection, yet real-world clinical environments pose persistent challenges such as motion blur, specular reflections, and illumination instability. Most existing methods are optimized on clean benchmark images and suffer noticeable performance degradation when deployed in authentic surgical scenarios. We propose DepthPolyp, a lightweight and robust segmentation framework based on pseudo-depth-guided multi-task learning and efficient feature modulation. The architecture combines hierarchical Ghost factorization for compact feature generation, Interleaved Shuffle Fusion for low-cost cross-scale interaction, and Dynamic Group Gating for adaptive group-wise feature weighting. Extensive experiments demonstrate that DepthPolyp achieves strong cross-dataset generalization when trained on degraded data and evaluated on both clean and noisy target domains, consistently outperforming lightweight baselines and remaining competitive with substantially larger models. In real surgical video evaluation on PolypGen, DepthPolyp achieves better segmentation performance than models up to $20\\times$ larger while preserving real-time inference speed. With only 3.57M parameters and 0.86 GMACs, the proposed method runs at over 180 FPS on mobile devices, making it well suited for real-time deployment in resource-constrained clinical environments. Code and pretrained weights are available at: https://github.com/ReaganWu/DepthPolyp/",
+    "published": "2026-05-15",
+    "updated": "2026-05-15",
+    "pdf_url": "https://arxiv.org/pdf/2605.16519v1",
+    "categories": [
+      "cs.CV",
+      "eess.SP"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/ReaganWu/DepthPolyp",
+      "stars": 1,
+      "description": "[ICPR'26 Official Implementation] DepthPolyp: Pseudo-Depth Guided Lightweight Segmentation for Real-",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2605.16347v1",
+    "title": "HPC-LLM: Practical Domain Adaptation and Retrieval-Augmented Generation for HPC Support",
+    "authors": [
+      "Nourin Shahin",
+      "Izzat Alsmadi"
+    ],
+    "summary": "Modern scientific research increasingly depends on High-Performance Computing (HPC) infrastructures, yet many researchers face significant operational barriers when interacting with cluster environments, job schedulers, GPU resources, and parallel computing frameworks. General-purpose large language models (LLMs) provide useful coding assistance but often lack the domain-specific operational knowledge required for reliable HPC support. This paper presents HPC-LLM, a retrieval augmented and domain-adapted assistant designed to support common HPC workflows including Slurm scheduling, MPI execution, GPU utilization, filesystem management, and cluster troubleshooting. The proposed framework integrates automated documentation ingestion, dense retrieval, lightweight domain adaptation using QLoRA, and local inference within a modular orchestration pipeline. To support domain adaptation, we construct an HPC-oriented corpus from publicly available university HPC documentation, curated operational examples, and synthetic instruction-answer pairs generated from retrieved HPC content. The resulting dataset contains approximately 9,000 to 24,000 HPC-focused training examples spanning job scheduling, GPU computing, distributed training, storage systems, and cluster administration topics. We fine-tune Llama 3.1 8B using QLoRA and evaluate the resulting model against several open weight baselines under retrieval-augmented settings on JetStream2 infrastructure. Experimental results indicate that the adapted 8B model achieves performance comparable to substantially larger general-purpose models while operating under significantly lower GPU memory requirements and inference latency. In particular, the adapted model approaches the performance of Qwen 2.5 14B while requiring substantially fewer computational resources.",
+    "published": "2026-05-08",
+    "updated": "2026-05-08",
+    "pdf_url": "https://arxiv.org/pdf/2605.16347v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.16341v1",
+    "title": "Orth-Dion: Eliminating Geometric Mismatch in Distributed Low-Rank Spectral Optimization",
+    "authors": [
+      "Tatsuhiro Nakamori",
+      "Laura Gomezjurado Gonzalez",
+      "Ganesh Talluri",
+      "Ansh Tiwari",
+      "Hideyuki Kawashima",
+      "Ioannis Mitliagkas",
+      "Guillaume Rabusseau",
+      "Hiroki Naganuma"
+    ],
+    "summary": "Low-rank gradient compression reduces communication in distributed training by representing updates with rank-$r$ factors. Dion is a recent method that approximates Muon, a spectral optimizer that orthogonalizes momentum, using one step of power iteration followed by column normalization (rescaling each column of the right factor to unit length). This makes it compatible with fully sharded data parallel training, but it converges more slowly than full-rank spectral methods. We show that this gap is geometric: column normalization does not yield the rank-$r$ polar factor that Muon implicitly targets, so the resulting direction violates the dual-norm constraint of the low-rank spectral geometry, and the rate picks up an extra factor of $\\sqrt{r}$ even though the low-rank approximation of the gradient itself is accurate. The same mismatch enters the smoothness term and the error-feedback recursion in the analysis, which has a knock-on effect on empirical performance. We propose Orth-Dion, which replaces column normalization with QR orthogonalization of the right factor. Under non-Euclidean smoothness, with $L_r$ the curvature constant along rank-$r$ directions, Orth-Dion attains rate $O(\\sqrt{L_r/T})$, matching exact spectral methods at the same per-step communication cost as Dion. The proof removes the bounded-drift assumption common in prior error-feedback analyses via a self-consistent fixed-point argument, and uses a time-averaged contraction that only requires the error sequence to contract on average rather than at every step. Experiments on large-scale language model pre-training validate the predicted $\\sqrt{r}$ scaling and show that Orth-Dion closes the convergence gap to Muon at Dion's communication cost.",
+    "published": "2026-05-07",
+    "updated": "2026-05-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.16341v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.16311v1",
+    "title": "SignMuon: Communication-Efficient Distributed Muon Optimization",
+    "authors": [
+      "Neel Mishra",
+      "Kushagara Trivedi",
+      "Pawan Kumar"
+    ],
+    "summary": "Distributed training of large neural networks is bottlenecked by full-precision gradient communication and by coordinatewise optimizers that ignore the matrix structure of weight tensors. We propose Sign-Muon, a 1-bit, matrix-aware optimizer that combines majority-vote sign aggregation from signSGD with the polar-step framework of Muon. Each worker forms a Muon-style direction by taking the polar factor of its momentum via a Newton--Schulz iteration, transmits only the entrywise signs, and aggregates by majority vote; an optional local polar step further enforces orthogonality at no extra communication cost.\n  Under spectral-norm smoothness and bounded-variance stochastic gradients, the spectral-norm normalized sign step yields an $\\mathcal{O}(1/\\sqrt{T})$ nonconvex rate for an $\\ell_1$-based stationarity measure. With unimodal symmetric noise, majority vote across $M$ workers cuts the stochastic term by $1/\\sqrt{M}$, matching signSGD. In the $α$-$β$ model, distributed Sign-Muon needs only one integer sum-allreduce per iteration; all orthogonalization is local, giving a $32\\times$ bandwidth reduction over float32 ($4\\times$ for int8).\n  Across 330 CIFAR-10/ResNet-50 configurations Sign-Muon attains the best validation accuracy (92.15\\%); its 4-GPU majority-vote variant reaches 92.02\\% with 37\\% less training time at matched effective batch. On nanoGPT, Sign-Muon achieves lower perplexity and better anytime performance than other sign-based baselines, with favorable weak-scaling up to 16 GPUs.",
+    "published": "2026-05-04",
+    "updated": "2026-05-04",
+    "pdf_url": "https://arxiv.org/pdf/2605.16311v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
