@@ -1,0 +1,95 @@
+[
+  {
+    "id": "2605.22355v1",
+    "title": "TransitLM: A Large-Scale Dataset and Benchmark for Map-Free Transit Route Generation",
+    "authors": [
+      "Hanyu Guo",
+      "Jiedong Yang",
+      "Chao Chen",
+      "Longfei Xu",
+      "Kaikui Liu",
+      "Xiangxiang Chu"
+    ],
+    "summary": "Public transit route planning traditionally depends on structured map infrastructure and complex routing engines, and no existing dataset supports training models to bypass this dependency. We present TransitLM, a large-scale dataset of over 13 million transit route planning records from four Chinese cities covering 120,845 stations and 13,666 lines, released as a continual pre-training corpus and benchmark data for three evaluation tasks with complementary metrics. Experiments show that an LLM trained on TransitLM produces structurally valid routes at high accuracy and implicitly grounds arbitrary GPS coordinates to appropriate stations without any explicit mapping. These results demonstrate that transit route planning can be learned entirely from data, enabling end-to-end, map-free route generation directly from origin-destination information. The dataset and benchmark are available at https://huggingface.co/datasets/GD-ML/TransitLM, with evaluation code at https://github.com/HotTricker/TransitLM.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22355v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/HotTricker/TransitLM.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.22176v1",
+    "title": "LLM-Metrics: Measuring Research Impact Through Large Language Model Memory",
+    "authors": [
+      "Si Shen",
+      "Wenhua Zhao",
+      "Danhao Zhu"
+    ],
+    "summary": "Citation counts remain the dominant metric for assessing research impact, yet they suffer from well-documented limitations: temporal lag, disciplinary bias, and Matthew effects. Here we propose LLM-Metrics, a research-impact assessment metric derived from the parametric memory of large language models (LLMs). The central hypothesis is that high-impact papers receive greater exposure in the academic community, that this exposure enters LLM training data in textual form, and that models consequently form stronger parametric memory of these papers. We designed four types of multiple-choice probes, covering title recognition, author recognition, method recognition, and venue recognition, and evaluated 549 computer science papers published in 2023-2024 across 17 LLMs spanning 0.5B to 72B parameters from six vendors. Of the 17 models, 15 produced positive predictions, 9 of which were significant at p less than 0.05, with an overall Spearman correlation of rho = 0.1495 and p = 0.0004 against citation counts. Three additional findings support the proposed mechanism. First, the predictive signal was stronger for 2024 papers, rho = 0.1880, whose citation counts were near zero at model-training time, reducing the plausibility of a simple reverse-causality explanation. Second, author-recognition probes showed the strongest discriminative power, consistent with an exposure-driven memory mechanism. Third, model scale and predictive power were non-monotonic: a 3B-parameter model, Llama-3.2-3B-Instruct, with rho = 0.1829, outperformed most larger models, supporting a selective-memory hypothesis in which the limited capacity of smaller models can serve as an effective information filter. LLM-Metrics offers a real-time, cross-disciplinary, citation-independent paradigm for research assessment.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22176v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.22014v1",
+    "title": "LiveR: Fine-Grained Elasticity via Live Reconfiguration for Model Training",
+    "authors": [
+      "Haoyuan Liu",
+      "Kairui Zhou",
+      "Shuyao Qi",
+      "Qinwei Yang",
+      "Shengkai Lin",
+      "Shizhen Zhao",
+      "Wei Zhang"
+    ],
+    "summary": "To reduce user costs and maximize cluster utilization, large model training increasingly leverages volatile but inexpensive GPU capacity, such as spot instances and reclaimable resources in shared clusters. Yet, capitalizing on these economic benefits requires jobs to adapt within the short warning windows that many such environments provide. Existing elastic training systems still treat reconfiguration as stop-and-restart: they externalize distributed state through checkpoints, rebuild the distributed runtime on a new topology, and restart training, turning each resize event into a storage-heavy recovery procedure that incurs substantial downtime from checkpoint I/O, process restart, CUDA initialization, and communicator setup. We present LiveR, a live reconfiguration runtime for elastic LLM training that replaces storage-backed restart with a live, bounded-memory handoff between mixed-parallel training worlds. While the current world continues training, LiveR asynchronously prepares the target world, bootstraps newly added workers in isolation to keep heavyweight initialization off the critical path, and streams model state directly over high-bandwidth interconnects while reshaping it online across tensor, pipeline, and data parallel dimensions. Once the target world is ready, LiveR performs a lightweight commit that switches training to the new configuration without stop-and-restart on the live path. We implement LiveR atop Megatron-LM and PyTorch and evaluate it end-to-end on a multi-node GPU cluster. Across diverse reconfiguration scenarios, LiveR reduces downtime from minutes to seconds, accelerates reconfiguration by 14$\\times$-23$\\times$ over checkpoint/restart baselines, incurs minimal steady-state overhead, and sustains up to 99% training goodput under volatile-resource conditions, making volatile low-cost GPU capacity far more practical for LLM training.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22014v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.22775v1",
+    "title": "MambaGaze: Bidirectional Mamba with Explicit Missing Data Modeling for Cognitive Load Assessment from Eye-Gaze Tracking Data",
+    "authors": [
+      "Amir Mousavi",
+      "Mohammad Sadegh Sirjani",
+      "Erfan Nourbakhsh",
+      "Mimi Xie",
+      "Rocky Slavin",
+      "Leslie Neely",
+      "John Davis",
+      "John Quarles"
+    ],
+    "summary": "Real-time cognitive load assessment from eye-tracking signals could potentially enable adaptive human-centered-AI such as safety-critical applications such as driver vigilance monitoring or automated flight deck assistance, yet two challenges persist: handling frequent data missingness from blinks and tracking failures, and efficiently modeling long-range temporal dependencies. We propose MambaGaze, a framework that addresses these challenges through 1) XMD encoding, which augments raw features with observation masks and time-deltas to explicitly model data uncertainty, and 2) bidirectional Mamba-2, which captures temporal dependencies with linear computational complexity. Experiments on CLARE and CL-Drive datasets under leave-one-subject-out evaluation show that MambaGaze achieves 76.8% and 73.1% accuracy, respectively, outperforming CNN, Transformer, ResNet, and VGG baselines by 4-12 percentage points. Edge deployment benchmarks on NVIDIA Jetson platforms demonstrate real-time inference at 43-68 FPS with power consumption below 7.5W, confirming feasibility for wearable cognitive load monitoring.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22775v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.HC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
