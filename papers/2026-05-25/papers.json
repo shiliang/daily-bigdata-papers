@@ -1,0 +1,107 @@
+[
+  {
+    "id": "2605.23901v1",
+    "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
+    "authors": [
+      "Xu Ouyang",
+      "Deyi Liu",
+      "Yuhang Cai",
+      "Jing Liu",
+      "Yuan Yang",
+      "Chen Zheng",
+      "Thomas Hartvigsen",
+      "Yiyuan Ma"
+    ],
+    "summary": "Existing scaling laws for Large Language Models (LLMs), predominantly monotonic power laws, fail to explain emerging non-monotonic phenomena such as catastrophic overtraining and quantization-induced degradation, where performance deteriorates despite increased compute.\n  We propose the Shannon Scaling Law, a unified theoretical framework that models LLM training as information transmission over a noisy channel, grounded in the Shannon-Hartley theorem. By mapping model parameters to channel bandwidth and training tokens to signal power, our formulation explicitly captures the interaction between learning signal and intrinsic noise. This perspective reveals a fundamental Shannon capacity for LLMs: scaling model size or data without preserving a sufficient signal-to-noise ratio (SNR) inevitably amplifies noise, inducing a transition from monotonic improvement to U-shaped performance degradation.\n  We validate our theory through experiments on Pythia and OLMo2 under perturbations, including Gaussian noise, quantization and supervised fine-tuning on math, QA and code tasks. The Shannon Scaling Law consistently outperforms classical scaling laws and recent perturbation-aware laws, achieving strong $R^2$ scores and accurately capturing loss basins missed by prior approaches. It also extrapolates: fitted on $\\leq$6.9B Pythia models with $\\leq$180B tokens, it predicts the unseen 12B model up to 307B tokens at pooled $R^2{=}0.847$, while monotonic baselines collapse.",
+    "published": "2026-05-22",
+    "updated": "2026-05-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.23901v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.IT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.23348v1",
+    "title": "XWind: A Cross-site Router for Large Language Model Inference Serving at Renewable Energy Farms",
+    "authors": [
+      "Tella Rajashekhar Reddy",
+      "Atharva Deshmukh",
+      "Liangcheng Yu",
+      "Chaojie Zhang",
+      "Mike Shepperd",
+      "Rohan Gandhi",
+      "Anjaly Parayil",
+      "Srinivasan Iyengar",
+      "Ajay Manchepalli",
+      "Debopam Bhattacherjee"
+    ],
+    "summary": "AI power demand is growing at an unprecedented rate while power grids are often ailing and struggle to keep up. Grid expansion comes with high capital expenditure and long-distance transmission losses, yet there is abundant renewable energy at the source, just not matched to demand.\n  This paper proposes a complementary AI infrastructure deployment model, AI Greenferencing, that brings modular AI compute to renewable energy sources, focusing on wind, allowing AI footprint expansion, generating local behind-the-meter demand for renewable sites, and helping ease the growing strain on power utilities. Our feasibility analysis shows that 890+ GW of wind capacity lies within 50 ms network round trip time of Azure data centers, and that site-wise right-sizing combined with spatial complementarity of wind energy keeps aggregate fleet utilization on par with traditional deployments.\n  To serve inference requests under variable wind power, we build XWind, a lightweight, reactive, and workload-agnostic AI inference router that uses only real-time signals: inference latency, KV-cache utilization, and queue depth, to dynamically configure sites and distribute requests. Evaluated on a real 64-GPU A100 testbed emulating three wind-powered sites with Azure production traces, XWind reduces P99 end-to-end latency by up to 52% over the strongest contender (also our idea) and by up to 98% over baselines such as power-capping and GPU idling, with consistent gains across workload types, load levels, and GPU generations.",
+    "published": "2026-05-22",
+    "updated": "2026-05-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.23348v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.NI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.23652v1",
+    "title": "One Policy, Infinite NPCs: Persona-Traceable Shared RL Policies for Scalable Game Agents",
+    "authors": [
+      "Yoosung Hong"
+    ],
+    "summary": "On a 300-persona life-simulation benchmark, pcsp achieves compositional zero-shot persona identification up to 17x above chance, Spearman rho approx 0.73 semantic-behavioral alignment, and 22x faster inference than an LLM-as-policy baseline. Life simulation games require hundreds to thousands of non-player characters (NPCs) that behave consistently with distinct personalities while remaining controllable through designer-authored natural language. Existing methods fail on constraints like persona consistency, controllability, or real-time inference. We introduce pcsp (Persona Conditioned Shared Policy), a single reinforcement learning policy conditioned on frozen LLM embeddings of free-form persona descriptions. pcsp combines once-per-NPC persona encoding, low-rank persona projection, neural persona conditioning, and a PPO + InfoNCE consistency + KL diversity training objective. Across three experimental settings, ablations show that the InfoNCE trajectory-consistency objective is load bearing: removing it collapses zero-shot persona identification to chance. External validation on Melting Pot 2.4.0 substrates confirms that our method produces persona-conditioned behavioral divergence in multi-agent strategic environments. We distinguish two senses of held-out evaluation: compositional zero-shot and vocabulary-expansion held-out. Finally, a UE5 deployment reproduces the in-engine persona-conditioning ablation at 64 agents with a low failure rate, showing that the sub-frame inference profile survives in a commercial game engine. These results prove that shared RL policies can support scalable, real-time, persona-conditioned NPC control.",
+    "published": "2026-05-22",
+    "updated": "2026-05-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.23652v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.23054v1",
+    "title": "Model Collapse as Cultural Evolution",
+    "authors": [
+      "Dongxin Guo",
+      "Jikun Wu",
+      "Siu Ming Yiu"
+    ],
+    "summary": "Model collapse, the progressive degradation of LLMs trained on their own outputs, has been characterized statistically but lacks a linguistic explanation for which structures degrade, in what order, and why. We show that iterated learning theory from cultural evolution fills this gap. We derive five falsifiable predictions, distinguish those uniquely discriminative for the theory from confirmatory ones, and test them by self-training LLaMA-2-7B and Mistral-7B over 10 generations in English, German, and Turkish. The critical discriminative finding: compositionality follows a non-monotonic trajectory (initially rising, then falling) under unfiltered self-training. This signature persists with maximally regular seed data (ruling out noise removal) and is sustained only by task-grounded filtering, not random filtering, providing the first LLM-scale evidence for the compression-communication tradeoff. All predictions are confirmed with large effect sizes (Hedges' $g > 1.6$; $\\mathrm{BF}_{10} > 100$), and LLM regularization gradients closely match human behavioral data ($R^2 = 0.94$). These results reframe model collapse as a cultural transmission phenomenon and yield concrete principles for self-training pipeline design.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.23054v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.22923v1",
+    "title": "AI-Friendly LaTeX: Using LaTeX Code as a Knowledge Source for Retrieval-Augmented Generation",
+    "authors": [
+      "Tom Verhoeff"
+    ],
+    "summary": "Large language models can answer questions about textbooks, lecture notes, and programming exercises more reliably when their answers are grounded in an explicit knowledge source. Retrieval-augmented generation (RAG) is a common approach: relevant fragments of a document are retrieved and inserted into the model context before answering. For mathematical and technical material, the original LaTeX source can be a better starting point than a PDF, because it contains structural information, labels, sectioning commands, macros, and authorial intent that are often lost or distorted in PDF extraction. However, LaTeX source is not automatically AI-friendly. Cross-references must be resolved, custom macros must be interpreted, exercises and examples must be identified, and author-supplied semantic metadata may be needed. This article describes a focused preprocessing approach for turning LaTeX source, together with its compiled auxiliary files and optional author annotations, into Markdown and JSONL chunks suitable for indexing in a vector database.",
+    "published": "2026-05-21",
+    "updated": "2026-05-21",
+    "pdf_url": "https://arxiv.org/pdf/2605.22923v1",
+    "categories": [
+      "cs.IR",
+      "cs.CL"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  }
+]
