@@ -1,0 +1,273 @@
+[
+  {
+    "id": "2605.25704v1",
+    "title": "PowLU: An Activation Function for Stable Pre-Training of LLMs",
+    "authors": [
+      "Peijie Jiang",
+      "Yuqi Feng",
+      "Cunyin Peng",
+      "Qian Zhao",
+      "Jia Liu",
+      "KunLong Chen",
+      "Zhiqiang Zhang",
+      "Jun Zhou"
+    ],
+    "summary": "In contemporary large language models (LLMs), the swish-gated linear unit (SwiGLU) activation function is widely adopted to regulate the information flow and introduce non-linearity. For large positive inputs, SwiGLU approximates the quadratic function $x^2$, providing strong nonlinearity and expressive capacity. However, this property also causes numerical instability as the input or model scale increases, particularly in low-precision LLM training. The main reason is its approximate quadratic amplification, which enlarges the output range and exacerbates outliers. To address this issue, we propose a stable activation function, Power Linear Unit (PowLU), for large-scale LLM pre-training. Specifically, PowLU employs a rational power function to achieve adaptive nonlinearity, thereby improving representation ability and enabling stable training in spike regions. Moreover, we provide theoretical justification for several key properties of PowLU. Scaling law experiments confirm that the performance is consistent across model sizes, and further experimental results with the Ling architecture (7.9B and 124B total parameters) demonstrate that PowLU achieves competitive results against SwiGLU and SwiGLU-Clip in large-scale training of LLMs. In addition, the experimental results also show that PowLU effectively improves the scalability of the large-scale training of LLMs.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.25704v1",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.25698v1",
+    "title": "How Should LLMs Consume High-Quality Data? Optimal Data Scheduling via Quality-Aware Functional Scaling Laws",
+    "authors": [
+      "Zhitao Zhu",
+      "Xili Wang",
+      "Shizhe Wu",
+      "Jiawei Fu",
+      "Xiaoqing Liu"
+    ],
+    "summary": "High-quality data is scarce in large language model (LLM) training, yet how to schedule its use jointly with training dynamics lacks theoretical guidance. We extend functional scaling laws by incorporating a data-quality dimension, and solve the joint data-quality and batch-size scheduling problem in asymptotic closed form. The solution reveals two regimes and a dual role of high-quality data. In the noise-limited regime, high-quality data should be used as a signal amplifier: lowering the batch size converts cleaner data into more signal without amplifying noise. In the signal-limited regime, it should be used as a noise suppressor: late placement reduces terminal noise without sacrificing signal accumulation. Existing curriculum-style pipelines primarily exploit the second role by placing cleaner data late, but miss the first role because conventional decay schedules reduce update intensity exactly when high-quality data becomes available. Guided by this, we propose Drop-Stable-Rampup for LLM midtraining: upon the quality transition, drop the batch size, hold it stable to accumulate signal, then ramp up to suppress terminal noise. On a 15B Mixture-of-Experts model midtrained on 108B tokens, Drop-Stable-Rampup improves average accuracy over Warmup-Stable-Decay (WSD) by +1.70 and over Cosine-decay by +2.98, with particularly large gains on mathematical reasoning benchmarks such as GSM8K (+4.23) and MATH (+2.80).",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.25698v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.25451v1",
+    "title": "BigMac: Breaking the Pareto Frontier of Compute and Memory in Multimodal LLM Training",
+    "authors": [
+      "Zili Zhang",
+      "Chengxu Yang",
+      "Shenglong Zhang",
+      "Chenyu Wang",
+      "Yufan Zhang",
+      "Tuo Dai",
+      "Zhouyang Li",
+      "Yuhong Ge",
+      "Chao Jin",
+      "Xin Jin",
+      "Yuliang Liu"
+    ],
+    "summary": "Training multimodal large language models (MLLMs) is challenged by both model and data heterogeneity. Existing systems redesign the training pipeline to address these challenges, but remain bound by a Pareto frontier between compute and memory efficiency, improving one only at the expense of the other. We present BigMac, a new training pipeline for multimodal LLMs. The core idea of BigMac is to elegantly nest the encoder and generator computation into the original LLM pipeline, forming a dependency-safe nested pipeline structure. With this design, BigMac reduces the activation memory complexity of the encoder and generator to O(1) while keeping the activation memory complexity of the LLM unchanged. At the same time, it achieves the same computational efficiency as the idealized setting with unlimited memory. As a result, BigMac breaks the Pareto frontier between computational efficiency and memory usage, enabling simultaneous optimization of both computation and memory in MLLM training. We evaluate BigMac on multiple MLLMs and training workloads. Experimental results show that BigMac achieves a 1.08$\\times$-1.9$\\times$ training speedup over baseline systems while maintaining stable memory usage as batch size increases.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.25451v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.25375v1",
+    "title": "Bandwidth-Aware and Cost-Efficient Pipeline Parallel Scheduling in Geo-Distributed LLM Training",
+    "authors": [
+      "Han Zhang",
+      "Jianchun Liu",
+      "Hongli Xu"
+    ],
+    "summary": "The rapid evolution of large language models (LLMs) has made geographically distributed training necessary due to GPU scarcity within a single cloud region. In such cross-region settings, Pipeline Parallelism (PP) is communication-efficient, yet scheduling PP remains challenging under heterogeneous inter-region bandwidth and regional electricity prices. Existing schedulers are either delay-first, incurring high electricity cost, or cost-first, relying on rigid resource allocation that prolongs Job Completion Time (JCT). They are also ineffective at optimizing execution order in multi-tenant environments, where long-running and bandwidth-intensive jobs can cause head-of-line (HoL) blocking and degrade overall performance. To this end, we propose BACE-Pipe, a bandwidth-aware and cost-efficient pipeline scheduling framework for LLM training across geo-distributed clusters. BACE-Pipe first introduces a dynamic job prioritization mechanism that optimizes execution order by jointly considering job characteristics (e.g., computation time) and real-time network utilization. It then employs a bandwidth-aware pathfinder to identify feasible cross-region pipeline paths that satisfy communication constraints, thereby preventing communication from stalling the pipeline. Among all feasible paths, a cost-minimizing allocator determines the optimal GPU placement strategy by preferentially assigning resources to regions with lower electricity prices. Consequently, BACE-Pipe mitigates HoL blocking, improves resource utilization, and simultaneously reduces both JCT and total electricity cost. Extensive simulations show that BACE-Pipe reduces average JCT by 27.9%--64.7% and total electricity cost by 12.6%--30.6% compared with state-of-the-art baselines.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.25375v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.25860v1",
+    "title": "SAM3-Assisted Training of Lightweight YOLO Models for Precision Pig Farming",
+    "authors": [
+      "Marcos Vinicius Mendes Faria",
+      "Thiago Borges Pereira",
+      "Isabella C. F. S. Condotta",
+      "Thiago Meireles Paixão",
+      "Francisco de Assis Boldt"
+    ],
+    "summary": "Deep learning-based object detection has revolutionized Precision Livestock Farming (PLF), yet a critical barrier remains: high-performance Foundation Models (such as SAM 3) are too computationally intensive for edge deployment, while lightweight models (like YOLO) require prohibitive manual annotation efforts. This work proposes a fully automated knowledge distillation pipeline that leverages the Segment Anything Model 3 (SAM 3) to generate zero-shot pseudo-labels for training efficient YOLOv8 detectors. By treating SAM 3 as an offline auto-annotator, we eliminate the manual labeling bottleneck, producing models capable of real-time inference on resource-constrained hardware. We systematically evaluate this approach on the PigLife dataset, comparing SAM 3-supervised models against human-annotated baselines. Results demonstrate that a SAM 3-trained YOLOv8m achieves a mean Average Precision (mAP) of 79.4% without human intervention, while reducing inference latency by approximately 200$\\times$ compared to the teacher model. Furthermore, stratified analysis reveals that in low-occlusion scenarios, the automated pipeline achieves detection rates comparable to human benchmarks ($AP_{50} > 99\\%$). These findings indicate that foundation models can serve as effective, zero-annotation-cost supervisors, enabling scalable edge computing solutions for smart agriculture.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.25860v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.24975v1",
+    "title": "Bridging the Gap: Enabling Soft Actor Critic for High Performance Legged Locomotion",
+    "authors": [
+      "Gianluca Sabatini",
+      "Chenhao Li",
+      "Marco Hutter"
+    ],
+    "summary": "Proximal Policy Optimization (PPO) has become the de facto standard for training legged robots, thanks to its robustness and scalability in massively parallel simulation environments like IsaacLab. However, its on-policy nature makes it inherently sample-inefficient, preventing its use for continuous adaptation and fine-tuning on real hardware. Soft Actor-Critic (SAC), by contrast, is an off-policy algorithm that can reuse past experience, making it a natural candidate for sim-to-real transfer workflows where the same algorithm can be used both in simulation and for online learning on the real robot. Despite these advantages, SAC has consistently failed to match PPO's empirical performance in massively parallel training settings. This work identifies the root causes of this gap and introduces targeted modifications, covering policy initialization, timeout-aware critic targets, and multi-step return estimation, that enable SAC to train stably at scale. Evaluated across multiple legged robot platforms and diverse locomotion tasks, our approach closes the performance gap with PPO entirely.",
+    "published": "2026-05-24",
+    "updated": "2026-05-24",
+    "pdf_url": "https://arxiv.org/pdf/2605.24975v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2603.06798v2",
+    "title": "NEST: Network- and Memory-Aware Device Placement For Distributed Deep Learning",
+    "authors": [
+      "Irene Wang",
+      "Vishnu Varma Venkata",
+      "Arvind Krishnamurthy",
+      "Divya Mahajan"
+    ],
+    "summary": "The growing scale of deep learning demands distributed training frameworks that jointly reason about parallelism, memory, and network topology. Prior works often rely on heuristic or topology-agnostic search, handling communication and memory separately. Without per-device memory awareness, these methods typically ensure feasibility post hoc by sharding parameters and activations across many devices, increasing synchronization, inflating communication, and underutilizing compute-limiting scalability and efficiency on real datacenter networks. We present NEST, a network-, compute-, and memory-aware device placement framework that unifies model parallelism, topology modeling, and memory feasibility via structured dynamic programming. NEST's DP operates on operator graphs with tensor and expert parallel configurations, explicit allreduce latencies across hierarchical or arbitrary networks, and memory/compute profiles. By factoring parallelism across tensor, pipeline, data, and expert dimensions, NEST defines a principled search space for hybrid strategies while jointly optimizing co-location, network latency, and memory feasibility. Evaluations across diverse hardware and networks show NEST achieves up to 2.43 times higher throughput, better memory efficiency, and improved scalability over state-of-the-art baselines, providing a foundation for co-designing parallelization strategies and datacenter interconnects for next-generation AI infrastructure. The source code of NEST is available at: https://github.com/scai-tech/Nest",
+    "published": "2026-03-06",
+    "updated": "2026-05-24",
+    "pdf_url": "https://arxiv.org/pdf/2603.06798v2",
+    "categories": [
+      "cs.LG",
+      "cs.DC",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/scai-tech/Nest",
+      "stars": 4,
+      "description": "",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2605.24564v1",
+    "title": "Summoning the Oracle to Slay It: Mitigating Look-Ahead Bias in Financial Backtesting with Large Language Models",
+    "authors": [
+      "Weixian Waylon Li",
+      "Mengyu Wang",
+      "Tiejun Ma"
+    ],
+    "summary": "Backtesting large language models (LLMs) on historical financial data is unreliable because pre-training cuts off after the events happened. An LLM trained in 2024 already \"knows\" which way 2018-2020 stocks moved. We name this failure parametric look-ahead bias and propose FinCAD, an inference-time adaptation of Context-Aware Decoding that suppresses an LLM's memory of historical outcomes without retraining. FinCAD pairs an adversarial bias-discovery pipeline that learns a model-specific memory-activating prior prompt with an entity- and date-adaptive rule that scales the CAD strength to per-(entity, date) memorisation, so the penalty fires on memorised in-sample dates and decays to zero out-of-sample. Across five 7-14B LLMs and five mega-cap equities, FinCAD cuts in-sample backtest returns by up to -67.1% on memorised dates while leaving 2025 out-of-sample returns within $8K and Sharpe within 0.10 of baseline, and preserves general-purpose reasoning within 1.7 pts. On an eleven-model leaderboard, it raises the in-sample / out-of-sample Spearman correlation from +0.779 to +0.846, recovering rankings that genuinely predict out-of-sample performance.",
+    "published": "2026-05-23",
+    "updated": "2026-05-23",
+    "pdf_url": "https://arxiv.org/pdf/2605.24564v1",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.24709v1",
+    "title": "Streaming Reinforcement Learning under Partial Observability with Real-Time Recurrent Learning",
+    "authors": [
+      "Noah Farr",
+      "Aryaman Reddi",
+      "Carlo D'Eramo",
+      "Jan Peters"
+    ],
+    "summary": "Streaming reinforcement learning has emerged as an online learning paradigm that conforms to the restrictions of natural learning agents that process data incrementally, i.e. with a batch size of 1 and no replay buffer. While streaming RL has recently been shown to scale with deep function approximation with full observability, partially observable settings have remained out of reach. Truncated backpropagation through time collapses to a one-step gradient horizon under the streaming setting, and exact real-time recurrent learning is prohibitively expensive. We close this gap using recurrent trace units, a diagonal recurrent architecture that enables exact RTRL with linear time and memory complexity in the parameter count, and show that they integrate cleanly into existing streaming algorithms across both discrete and continuous control. On a MemoryChain diagnostic with chain lengths from 2 to 128, our method sustains performance where streaming TBPTT(1) baselines using feedforward, GRU, and RTU networks collapse. On five POPGym tasks and on partially observable MuJoCo continuous control, the streaming approach is competitive with batched PPO on POPGym and recovers a substantial fraction of batched performance on masked MuJoCo, despite using no replay buffer or batched updates.",
+    "published": "2026-05-23",
+    "updated": "2026-05-23",
+    "pdf_url": "https://arxiv.org/pdf/2605.24709v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.24420v1",
+    "title": "Batch Normalization Amplifies Memorization and Privacy Risks",
+    "authors": [
+      "Ngoc Phu Doan",
+      "Chongyan Gu",
+      "Ihsen Alouani"
+    ],
+    "summary": "Batch Normalization (BN) is widely adopted to enable faster convergence and more stable training of deep neural networks. However, its impact on privacy and memorization has remained largely unexplored. In this work, we investigate the effect of BN layers on the memorization of atypical or outlier samples and its implications for privacy leakage. We conduct an extensive empirical study using three complementary approaches: (i) unintended memorization of out-of-distribution training samples, (ii) per-sample influence measured via gradient norms, and (iii) susceptibility to membership inference attacks (MIA). Across multiple datasets and architectures, we consistently observe that BN substantially increases the memorization of outliers compared to models without BN. Critically, this amplified memorization translates directly into privacy vulnerabilities: models with BN exhibit significantly higher susceptibility to MIAs. We complement our empirical findings with a theoretical analysis showing that BN amplifies the per-step influence of outlier samples during training, providing mechanistic insight into this phenomenon. Our results highlight an underappreciated privacy risk associated with BN and provide both practical and theoretical insights into how normalization layers can amplify the influence of rare or sensitive training examples.",
+    "published": "2026-05-23",
+    "updated": "2026-05-23",
+    "pdf_url": "https://arxiv.org/pdf/2605.24420v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.24261v1",
+    "title": "Optimizing Digital Therapeutic Interventions: Online Learning under Endogenous Adherence",
+    "authors": [
+      "Eric Pulick",
+      "Stephanie Carpenter",
+      "Matthew Buman",
+      "Yonatan Mintz"
+    ],
+    "summary": "A critical challenge facing clinicians managing chronic disease interventions is sustaining long-run patient health given limited information and resources. Digital therapeutics (DTs) provide a cost-effective way to manage interventions at scale through repeated interactions (e.g. daily treatment recommendations), but patient success is highly dependent on their adherence. Behavioral psychology suggests that both treatment recommendations and past adherence affect future adherence, yet existing decision support frameworks for DTs model only recommendation effects or treat adherence as exogenous context, leaving a key gap in model and algorithm development. To address this gap, we present a DT decision support framework that captures both recommendation and adherence effects, allowing clinicians to better plan treatment recommendations. We model a patient's time-varying capacity for engagement with treatment using a linear dynamical system (LDS) that captures both recommendation and adherence effects, endogenously connected to adherence behavior with a logit link. We establish finite-time identification guarantees for this model, extending LDS results to our setting. Next, we propose an optimism-based algorithm, UCB-BOLD, for online treatment selection and prove that it achieves sublinear regret. We evaluate UCB-BOLD against benchmarks via ablation studies on a synthetic patient cohort generated using micro-randomized trial data. DT decision support tools can include dynamical models to enable decision makers to efficiently use the data in DT settings to improve patient health through effective resource allocation. While myopic or heuristic approaches suffice for some patient types, the benefits of explicitly planning around recommendation and adherence effects are significant for others; UCB-BOLD achieves 2-3x lower conditional value-at-risk regret than the next-best benchmark.",
+    "published": "2026-05-22",
+    "updated": "2026-05-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.24261v1",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.24052v1",
+    "title": "Truthful Online Preference Aggregation for LLM Fine-Tuning in Mobile Crowdsourcing",
+    "authors": [
+      "Shugang Hao",
+      "Lingjie Duan"
+    ],
+    "summary": "To better serve users' demands in mobile applications (e.g., navigation), mobile crowdsourcing platforms can iteratively align large language model (LLM)-generated content (e.g., AI-generated traffic condition predictions) with human feedback collected from crowdsourcing workers (e.g., mobile users). However, workers may strategically misreport their online preference feedback to maximize their influence or payment. Existing pipelines in mobile crowdsourcing (e.g., EM-based weight estimation) fail to identify the most accurate worker in this online setting, resulting in a linear regret $\\mathcal{O}(T)$ over $T$ time slots. In this paper, we study truthful online preference aggregation for LLM fine-tuning in mobile crowdsourcing. We formulate a new dynamic Bayesian game to model the multi-agent online learning process between the platform and strategic mobile workers. We propose a novel online weighted aggregation mechanism that dynamically adjusts each worker's weight in the preference aggregation according to their feedback accuracy. We prove that our mechanism ensures truthful feedback from strategic workers and achieves a sublinear regret $\\mathcal{O}(\\sqrt{T})$ over $T$ time slots. We further extend our mechanism to a challenging scenario with limited worker feedback per time slot, still guaranteeing a sublinear regret $\\mathcal{O}(\\sqrt{T})$. Experiments on LLM fine-tuning with real-world datasets further demonstrate significant performance gains of our mechanisms over benchmark schemes.",
+    "published": "2026-05-22",
+    "updated": "2026-05-22",
+    "pdf_url": "https://arxiv.org/pdf/2605.24052v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.24006v1",
+    "title": "A Tabular Schedule Abstraction for Communication-Aware Evaluation of Pipeline-Parallel LLM Training",
+    "authors": [
+      "Daniel Barley",
+      "Jonathan Leis",
+      "Benjamin Klenk",
+      "Holger Fröning"
+    ],
+    "summary": "Pipeline parallelism is a key technique for distributed training of large language models because it reduces per-device parameter and activation memory. However, comparing pipeline schedules is difficult: analytical models expose structural quantities such as bubble ratios, while end-to-end hardware experiments are costly and system-specific. In this work, we introduce a tabular schedule abstraction and a unified multi-abstraction methodology that connects formula-based reasoning, idealized schedule tables, and communication-aware execution simulation.\n  Using this framework, we compare GPipe, 1F1B, Chimera, and Hanayo in its restricted regime across multiple modeled system configurations. Our results show that schedule rankings are not abstraction-invariant: communication can negate structural advantages suggested by bubble analysis alone. Under the assumptions considered here, GPipe and 1F1B are runtime-equivalent, but 1F1B achieves a lower activation-memory peak. Chimera is advantageous mainly at low microbatch counts and in communication-favorable regimes, while Hanayo is effective in its intended restricted operating point but remains sensitive to network bottlenecks. We further study an asymmetric Chimera-style placement, which does not reduce the global peak memory requirement but reveals limited runtime gains in shallow pipelines. Overall, pipeline schedule quality is meaningful only in the context of the modeled execution environment.",
+    "published": "2026-05-19",
+    "updated": "2026-05-19",
+    "pdf_url": "https://arxiv.org/pdf/2605.24006v1",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  }
+]
