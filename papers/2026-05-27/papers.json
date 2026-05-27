@@ -1,0 +1,254 @@
+[
+  {
+    "id": "2605.26872v1",
+    "title": "The Strongest Teacher Is Not Always the Best Teacher: Student-Centric Answer Selection",
+    "authors": [
+      "Zhengyu Hu",
+      "Zheyuan Xiao",
+      "Linxin Song",
+      "Fengqing Jiang",
+      "Yutai Li",
+      "Zhengyu Chen",
+      "Zhihan Xiong",
+      "Yue Liu",
+      "Junhao Lin",
+      "Yao Su",
+      "Lijie Hu",
+      "Kaize Ding",
+      "Xiao Teng",
+      "Radha Poovendran"
+    ],
+    "summary": "LLM training increasingly relies on teacher-generated supervision, from synthetic responses to reasoning traces and tool-use demonstrations. Current practice often chooses the highest-performing teacher to generate student training data, implicitly treating teacher test performance as a proxy for teaching quality. We show that this assumption can fail: even when multiple teachers provide correct answers to the same question, the answer from the strongest teacher is not necessarily the best supervision for a given student. To address this gap, we propose Student-Centric Answer Sampling (SCAS), a framework that selects from verified teacher-generated answers according to their estimated student-centric learning cost. Motivated by a token-wise gradient decomposition, we derive an efficient forward-only proxy for this cost and use it to guide answer selection during training. Experiments across 30 teacher models, 6 student base models, and 8 tasks show that SCAS consistently improves student performance, suggesting that effective distillation should prioritize supervision matched to the current student rather than teacher strength alone.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26872v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.26459v1",
+    "title": "MuCon: Clipped Muon Updates for LLM Training",
+    "authors": [
+      "Albert Yi"
+    ],
+    "summary": "Muon-style optimizers take a matrix-valued momentum or preconditioned update $B = U \\operatorname{diag}(σ_1,\\ldots,σ_r) V^\\top$ and replace it with its canonical partial polar factor $\\operatorname{Pol}(B) = U V^\\top$. This maps every nonzero singular value to one. MuCon is the clipped-Muon variant studied here: it applies singular-value clipping to the same Muon matrix, $D^{\\mathrm{MuCon}}\\_τ(B) = \\operatorname{MClip}\\_τ(B) = U \\operatorname{diag}\\bigl(\\min\\{σ\\_i,τ\\}\\bigr) V^\\top, \\qquad τ> 0$. Thus, $\\operatorname{MClip}\\_τ$ denotes the mathematical clipping operator, while MuCon denotes the optimizer primitive that substitutes this clipped direction for Muon's polar direction. The Muon/MuCon scaling parameterization used in this work is called $\\text{SpectralP}$: it is the hidden-matrix scaling recipe under which polar Muon or clipped MuCon directions are applied. The map $\\operatorname{MClip}\\_τ$ is the Frobenius projection onto the spectral-norm ball $\\{X : \\|X\\|_2 \\le τ\\}$: it leaves singular values at or below $τ$ unchanged and modifies only the violating singular directions. This paper asks when the MuCon clipping step can be approximated without a full dense SVD. We record two exact identities, a polar/absolute-value formula and a scalar-root formulation leading to a rational Newton filter for the clipped positive-semidefinite factor, and identify the numerical obstruction common to both: singular values near the threshold make sign decisions and rational solves ill-conditioned. Matrix-function methods are therefore useful only when paired with stable polar/square-root primitives or explicit regularization near the clipping boundary.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26459v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.26665v1",
+    "title": "Resolving the Correct Library: A Loader-Level Defense Solution Against Shared Object Hijacking",
+    "authors": [
+      "Can Ozkan",
+      "Dave Singelee"
+    ],
+    "summary": "Shared library hijacking attacks in the Linux ecosystem, including embedded Linux, are a significant concern. It fundamentally exploits the dynamic linker's library-resolution semantics rather than modifying trusted libraries directly. Prior research has extensively analyzed attack vectors exploiting environment variables, embedded search paths, and dynamic loader internals, demonstrating that hijacking is rooted in fundamental loader behavior rather than isolated misconfigurations. Existing defenses either harden or replace the loader, enforce control-flow integrity after libraries are loaded, or apply file-centric integrity mechanisms such as signatures and measurement frameworks. However, these approaches fail to address a critical gap: none verify whether the shared object actually resolved by the loader is the intended and trusted one.\n  In this paper, we argue that shared library hijacking is fundamentally a loader-resolution authenticity problem and present a loader-centric verification framework that enforces authenticity guarantees for the dynamic linker's resolution process. Our design supports both path-bound and location-independent (i.e., Build-ID-based) identity models combined with cryptographic hashing. We implement our approach on GNU libc (glibc) systems and evaluate it on both general-purpose Linux (e.g., Ubuntu) and embedded Linux (e.g., Buildroot) environments under emulation. Our results demonstrate that our proposed mechanism indeed prevents shared library hijacking attacks.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26665v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2605.26845v1",
+    "title": "Birkhoff Decompositions and Photonic Interconnects Wait! Don't Forget the Compute!",
+    "authors": [
+      "Eliezer Amponsah",
+      "Vamsi Addanki"
+    ],
+    "summary": "The growing demand for efficient communication in distributed training and inference has sparked significant interest in reconfigurable photonic interconnects across both academia and industry. Mixture-of-Experts (MoE) models, with their highly skewed communication patterns, present a natural opportunity for such circuit-switched fabrics. However, existing approaches largely optimize communication in isolation, overlooking the interaction between communication and the expert computation that follows.\n  In this paper, we revisit circuit scheduling for all-to-all communication in MoE execution. We show that the dispatch--compute--combine structure fundamentally challenges classical scheduling techniques such as Birkhoff--von Neumann (BvN) decomposition. First, MoE communication matrices are rarely doubly stochastic, introducing significant scheduling bubbles in BvN-based schedules. Second, while decomposition enables communication--compute overlap, the excessive number of matchings produced by BvN fragments execution into small batches, leading to severe compute inefficiencies due to fixed execution overheads. Motivated by these observations, we explore a simple greedy max-weight decomposition strategy that bounds the number of matchings while preserving large batch sizes per matching. Despite its simplicity, the approach significantly improves overlap efficiency, reduces compute overheads, and approaches the performance of an ideal congestion-free all-to-all.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26845v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2605.26776v1",
+    "title": "Towards Generalization-Oriented Models for Vehicle Routing Problems with Mixture-of-Experts",
+    "authors": [
+      "Changhao Miao",
+      "Yuntian Zhang",
+      "Tongyu Wu",
+      "Fang Deng",
+      "Chen Chen"
+    ],
+    "summary": "In recent years, Deep Reinforcement Learning (DRL) has achieved substantial progress on Vehicle Routing Problems (VRPs). However, existing DRL-based methods are typically trained on instances generated from a uniform distribution, which limits their performance under real-world distribution shifts. In this paper, we aim to develop a generalization-oriented model that partitions the policy network into multiple modules and adaptively recombines modules to form specific policies during inference. Specifically, we propose Residual Refined Experts with Instance-level Gating (R2E-IG) to improve cross-distribution generalization. Our contributions are threefold: (1) We introduce a Residual Refined Expert (R2E) architecture that enhance expert expressiveness via residual refinement; (2) We design an instance-level gating mechanism that learns distribution-aware instance representations and routes inputs to suitable modules; (3) We propose a mixed-distribution training mechanism equipped with Dynamic Weight Adaption (DWA), which dynamically reweights training data from different distributions to emphasize more informative ones. Extensive experiments show that R2E-IG achieves competitive performance against state-of-the-art baselines on both in-distribution and out-of-distribution instances across synthetic and benchmark datasets. Moreover, R2E-IG is generic and can be easily integrated into existing DRL-based methods to further improve performance.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.26776v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.13779v2",
+    "title": "MinT: Managed Infrastructure for Training and Serving Millions of LLMs",
+    "authors": [
+      "Mind Lab",
+      " :",
+      "Song Cao",
+      "Vic Cao",
+      "Andrew Chen",
+      "Kaijie Chen",
+      "Cleon Cheng",
+      "Steven Chiang",
+      "Kaixuan Fan",
+      "Hera Feng",
+      "Huan Feng",
+      "Arthur Fu",
+      "Jun Gao",
+      "Hongquan Gu",
+      "Aaron Guan",
+      "Nolan Ho",
+      "Mutian Hong",
+      "Hailee Hou",
+      "Peixuan Hua",
+      "Charles Huang",
+      "Miles Jiang",
+      "Nora Jiang",
+      "Yuyi Jiang",
+      "Qiuyu Jin",
+      "Fancy Kong",
+      "Andrew Lei",
+      "Kyrie Lei",
+      "Alexy Li",
+      "Lucian Li",
+      "Ray Li",
+      "Theo Li",
+      "Zhihui Li",
+      "Jiayi Lin",
+      "Kairus Liu",
+      "Kieran Liu",
+      "Logan Liu",
+      "Xiang Liu",
+      "Irvine Lu",
+      "Maeve Luo",
+      "Runze Lv",
+      "Pony Ma",
+      "Verity Niu",
+      "Anson Qiu",
+      "Vincent Wang",
+      "Rio Yang",
+      "Maxwell Yao",
+      "Carrie Ye",
+      "Regis Ye",
+      "Wenlin Ye",
+      "Josh Ying",
+      "Danney Zeng",
+      "Yuhan Zhan",
+      "Anya Zhang",
+      "Di Zhang",
+      "Ruijia Zhang",
+      "Sueky Zhang",
+      "Ya Zhang",
+      "Wei Zhao",
+      "Ada Zhou",
+      "Changhai Zhou",
+      "Yuhua Zhou",
+      "Xinyue Zhu",
+      "Murphy Zhuang"
+    ],
+    "summary": "We present MindLab Toolkit (MinT), a managed infrastructure system for Low-Rank Adaptation (LoRA) post-training and online serving. MinT targets a setting where many trained policies are produced over a small number of expensive base-model deployments. Instead of materializing each policy as a merged full checkpoint, MinT keeps the base model resident and moves exported LoRA adapter revisions through rollout, update, export, evaluation, serving, and rollback, hiding distributed training, serving, scheduling, and data movement behind a service interface. MinT scales this path along three axes. Scale Up extends LoRA RL to frontier-scale dense and MoE architectures, including MLA and DSA attention paths, with training and serving validated beyond 1T total parameters. Scale Down moves only the exported LoRA adapter, which can be under 1% of base-model size in rank-1 settings; adapter-only handoff reduces the measured step by 18.3x on a 4B dense model and 2.85x on a 30B MoE, while concurrent multi-policy GRPO shortens wall time by 1.77x and 1.45x without raising peak memory. Scale Out separates durable policy addressability from CPU/GPU working sets: a tensor-parallel deployment supports 10^6-scale addressable catalogs (measured single-engine sweeps through 100K) and thousand-adapter active waves at cluster scale, with cold loading treated as scheduled service work and packed MoE LoRA tensors improving live engine loading by 8.5-8.7x. MinT thus manages million-scale LoRA policy catalogs while training and serving selected adapter revisions over shared 1T-class base models.",
+    "published": "2026-05-13",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.13779v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.26373v1",
+    "title": "Online Learning on Hidden-Convex Losses via Algorithmic Equivalence: Optimal Regret, Geometric Barrier, and Bandit Feedback",
+    "authors": [
+      "Anas Barakat",
+      "Andreas Kontogiannis",
+      "Vasilis Pollatos",
+      "Ioannis Panageas",
+      "Antonios Varvitsiotis"
+    ],
+    "summary": "We study adversarial online learning with hidden-convex losses, i.e., nonconvex losses that become convex after a nonlinear reparameterization. Ghai, Lu and Hazan (2022) proved that, under geometric and smoothness assumptions, online gradient descent (OGD) on such nonconvex losses approximately simulates online mirror descent (OMD) on the underlying convex losses with a suitable regularizer, yielding $\\mathcal{O}(T^{2/3})$ regret. They left open whether the optimal $Θ(\\sqrt{T})$ regret from online convex optimization can be recovered in this hidden-convex setting. We answer this question affirmatively. More specifically, via a sharper discrete-time algorithmic equivalence argument, we prove that OGD achieves $\\mathcal{O}(\\sqrt{T})$ regret under the same assumptions, matching the optimal worst-case rate for adversarial online convex optimization. We also address another open question of Ghai, Lu and Hazan (2022) by clarifying the geometry required for this algorithmic equivalence. We replace the diagonal-Jacobian sufficient condition with a necessary-and-sufficient Hessian compatibility condition, thereby expanding the class of admissible reparameterizations. We complement our tight regret bound with a lower bound showing that the Hessian compatibility assumption is essential for OGD; when it fails, we construct a smooth reparameterization and an adversarial sequence of hidden-convex losses for which OGD suffers $Ω(T)$ regret. Finally, we extend our analysis to one-point bandit feedback and prove a $\\mathcal{O}(T^{3/4})$ expected regret bound for bandit OGD with spherical smoothing, matching its classical rate on convex losses.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.26373v1",
+    "categories": [
+      "cs.LG",
+      "math.OC",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.26282v1",
+    "title": "Scaling World-Model Reinforcement Learning Through Diffusion Policy Optimization",
+    "authors": [
+      "Xiaoyuan Cheng",
+      "Wenxuan Yuan",
+      "Zhancun Mu",
+      "Yuanzhao Zhang",
+      "Yiming Yang",
+      "Hai Wang",
+      "Zhuo Sun",
+      "Che Liu"
+    ],
+    "summary": "Model-based reinforcement learning (RL) can be effectively supported at scale through the use of world models. However, in practice, scaling such approaches remains fundamentally limited. A commonly recognized challenge is model bias and error compounding, which degrade long-horizon predictions. Beyond these issues, we identify a more critical yet underexplored bottleneck: a structural misalignment between search and value learning in existing world model approaches. In particular, policy improvement often relies on value functions induced by a separate, non-search policy, resulting in training inconsistency and ultimately suboptimal learning. To address this limitation, we propose Model-Based Diffusion Policy Optimization (MBDPO) in world models, a framework that unifies search and policy optimization through diffusion policy representations, thereby unlocking the potential of world models for scalable policy learning. Instead of constructing an explicit planner over a learned world model, we reformulate policy optimization as a diffusion process over searched trajectories in latent world models. In this view, we extract an implicit energy function from the collected dataset that anchors the policy, enabling MBDPO to refine the score field for policy optimization while mitigating misalignment. We evaluate MBDPO across a wide range of settings, including multi-task offline pretraining, online learning, and offline-to-online fine-tuning. In the offline regime, we further investigate its scaling behavior by pretraining on large-scale datasets, observing consistent and monotonic performance gains with increasing model capacity.",
+    "published": "2026-05-25",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.26282v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.21168v2",
+    "title": "ScenePilot: Controllable Boundary-Driven Critical Scenario Generation for Autonomous Driving",
+    "authors": [
+      "Qiyu Ruan",
+      "Yuxuan Wang",
+      "He Li",
+      "Zhenning Li",
+      "Cheng-zhong Xu"
+    ],
+    "summary": "Safety-critical scenarios are central to evaluating autonomous driving systems, yet their rarity in naturalistic logs makes simulation-based stress testing indispensable. Most scenario generation methods treat surrounding agents as adversaries, but they either (i) induce failures without explicitly modeling vehicle-road physical limits, yielding visually extreme yet physically unsolvable crashes, or (ii) enforce physical feasibility or policy feasibility in isolation, which can over-focus on aggressive maneuvers or remain tied to a controller-dependent capability boundary. We propose ScenePilot, a feasibility-guided, boundary-driven framework that targets the boundary band: scenarios that are physically solvable in principle yet still cause the deployed autonomy stack to fail. We formulate generation as constrained multi-objective reinforcement learning, combining an RSS-derived physical-feasibility score $σ$ with an online-learned AV-risk predictor $Φ$, and introduce step-level feasibility-aware shielding to keep exploration near the feasibility boundary while avoiding infeasible artifacts. Experiments on SafeBench with multiple planners show that ScenePilot yields substantially higher collision rates (+6.2 percentage points) while preserving physical validity, and that adversarial fine-tuning on these boundary-band scenarios consistently reduces downstream crash rates. The code is available at https://github.com/QiyuRuan/ScenePilot.",
+    "published": "2026-05-20",
+    "updated": "2026-05-25",
+    "pdf_url": "https://arxiv.org/pdf/2605.21168v2",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": {
+      "url": "https://github.com/QiyuRuan/ScenePilot.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  }
+]
