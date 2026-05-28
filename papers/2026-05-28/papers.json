@@ -1,0 +1,279 @@
+[
+  {
+    "id": "2605.28302v1",
+    "title": "How Far Can Disaggregation Go? A Design-Space Exploration of Attention-FFN Disaggregation for Efficient MoE LLM Serving",
+    "authors": [
+      "Hanjiang Wu",
+      "Abhimanyu Rajeshkumar Bambhaniya",
+      "Sarbartha Banerjee",
+      "Tuhin Khare",
+      "Sudarshan Srinivasan",
+      "Suvinay Subramanian",
+      "Souvik Kundu",
+      "Madhu Kumar",
+      "Midhilesh Elavazhagan",
+      "William Won",
+      "Amir Yazdanbakhsh",
+      "Tushar Krishna"
+    ],
+    "summary": "Modern large language model (LLM) inference has progressively disaggregated to keep pace with growing model sizes and tight TTFT and TPOT service-level objectives: from chunked-prefill aggregation, to prefill-decode (P/D) disaggregation, and most recently to operator-level Attention-FFN Disaggregation (AFD). This trend is especially important for mixture-of-experts (MoE) models, where memory-bound attention, compute-intensive expert FFNs, and MoE dispatch/combine communication create distinct resource demands. AFD further exposes this heterogeneity by placing attention and MoE-FFN execution on separate GPU groups. Each level of disaggregation deepens the scheduling design space across workload characteristics, resource allocation, and interconnect topology, raising the central question: when does each level actually pay off? We systematically characterize this trade-off for MoE inference across realistic workloads spanning input/output sequence lengths, prefix-KV reuse, and per-user latency constraints. Using chunked-prefill and P/D disaggregation as baselines, we study the benefits and limits of AFD at scale through a framework that fuses on-device kernel measurements with high-fidelity network simulation. Under strict TTFT/TPOT SLOs, AFD sustains around 4k tokens/s of system throughput on DeepSeek-V3.2 across chat, coding, and agentic-coding workloads, where non-AFD deployments are infeasible. We distill concrete takeaways for jointly optimizing throughput and interactivity, including how to partition attention and FFN across GPUs as a function of workload and model architecture, providing design principles for current rack- and cluster-scale deployments as well as future disaggregated AI infrastructure.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28302v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.28792v1",
+    "title": "CaMBRAIN: Real-time, Continuous EEG Inference with Causal State Space Models",
+    "authors": [
+      "Abhilash Durgam",
+      "Nyle Siddiqui",
+      "Jeffrey A. Chan-Santiago",
+      "Qiushi Fu",
+      "Elakkat D. Gireesh",
+      "Mubarak Shah"
+    ],
+    "summary": "Electroencephalography (EEG) is a critical, non-invasive method to monitor electrical brain activity. EEGs can span anywhere from a couple seconds to multiple hours, posing a major hurdle for existing deep learning methods due to two major factors: (1) existing EEG models are predominantly built upon the attention mechanism, incurring quadratic scaling as the sequence length increases, and (2) raw EEG signals must be processed in a sliding-window fashion due to fixed-length input requirements, preventing global understanding of the entire signal. To this extent, we propose CaMBRAIN - the first Causal, Mamba-based state space model (SSM) capable of real-time inference of EEG signals, arguing that bidirectional approaches are needlessly expensive given the causal, unidirectional nature of EEG. However, training such a model is non-trivial, as crucial EEG events can be extremely brief - within fractions of a second - yet separated by long intervals spanning minutes. Current EEG methods use self-supervised objectives that optimize for signal reconstruction, but these are not well suited for streaming SSMs; they fail to explicitly train the hidden state to retain the salient long-range context needed for streaming inference. We therefore introduce a multi-stage self-supervised training pipeline specifically tailored to encourage long-range memory retention and strong performance on EEG signals, while preserving the linear-time complexity of state space models. CaMBRAIN achieves state-of-the-art (SOTA) results across 3 different EEG datasets with >10x higher throughput than existing models, enabling the first model capable of long-range, continuous inference of variable-length EEG signals.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28792v1",
+    "categories": [
+      "cs.AI",
+      "cs.HC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.28583v1",
+    "title": "SARAD: LLM-Based Safety-Aware Hybrid Reinforcement Learning with Collision Prediction for Autonomous Driving",
+    "authors": [
+      "Kangyu Wu",
+      "Peng Cui",
+      "Guoxi Chen",
+      "Ya Zhang"
+    ],
+    "summary": "Ensuring both safety and efficiency in decision-making for autonomous driving systems remains a fundamental challenge. Traditional Deep Reinforcement Learning (DRL) suffers from unsafe random exploration and slow convergence, while Large Language Models (LLMs) demonstrate inherent latency in real-time inference operations. To address these limitations, this paper proposes SARAD, a novel safety-aware hybrid framework that synergizes LLMs and DRL for autonomous driving. SARAD substitutes the random exploration of DRL with Retrieval-Augmented Generation (RAG)-enhanced, LLM-guided decisions sourced from a dynamic expert knowledge repository. An attention discriminator is proposed to integrate the prior knowledge of LLMs into DRL policy optimization. A collision predictor module, fine-tuned with historical collision data, is further designed to improve vehicle safety. Extensive experiments show that SARAD achieves significant performance improvements in the Highway-Env simulator, validating the effectiveness of the proposed model in autonomous driving.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28583v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG",
+      "eess.SY"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.28684v1",
+    "title": "History-aware adaptive reduced-order models via incremental singular value decomposition",
+    "authors": [
+      "Amirpasha Hedayat",
+      "Ali Mohaghegh",
+      "Laura Balzano",
+      "Cheng Huang",
+      "Karthik Duraisamy"
+    ],
+    "summary": "Reduced-order models (ROMs) can accelerate high-dimensional dynamical simulations, but their accuracy often deteriorates when online dynamics leave the regime represented by offline training data. We develop a projection-based adaptive ROM framework based on incremental singular value decomposition (iSVD), in which occasional full-order operator evaluations provide correction snapshots for online basis updates. The intrusive ROMs considered here are fully parameterized by the basis, so each update naturally propagates to reduced operators and hyper-reduction machinery. Through its evolving singular structure, iSVD retains an encoded history of the observed dynamics and is history-aware in this sense. We study the method on three nonlinear problems of increasing complexity: the one-dimensional viscous Burgers equation, the Sod shock tube, and a stiff one-dimensional ten-species rotating detonation engine (RDE). The Burgers problem is used to analyze the method and compare iSVD with alternative basis adaptation rules, showing that history-aware updates outperform instantaneous updates and that iSVD gives the strongest overall performance. The Sod and RDE cases demonstrate that these advantages persist in more challenging compressible-flow settings. For the RDE problem, the iSVD adaptive ROM improves upon the current state-of-the-art Direct adaptive ROM baseline in both predictive accuracy and computational efficiency. A cost analysis shows that the dominant online cost comes from interacting with the full-order model to obtain correction snapshots, while the iSVD update itself is negligible. These results identify iSVD as an effective mechanism for online learning of reduced subspaces and suggest a path toward ROMs that remain predictive over horizons several orders of magnitude longer than their initial training window.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28684v1",
+    "categories": [
+      "cs.LG",
+      "cs.CE",
+      "math.NA",
+      "physics.comp-ph"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.28603v1",
+    "title": "Online Irregular Multivariate Time Series Forecasting via Uncertainty-Driven Dual-Expert Calibration",
+    "authors": [
+      "Haonan Wen",
+      "Hanyang Chen",
+      "Songhe Feng"
+    ],
+    "summary": "Irregular multivariate time series forecasting is critical in many real-world applications, where time series are irregularly sampled and exhibit dynamically evolving missingness patterns. Although existing methods perform well in offline settings, they often suffer from significant performance degradation when deployed online due to dynamic shifts in data distribution. Maintaining forecasting capability in such dynamic scenarios typically necessitates online adaptation techniques. Since irregular sampling fundamentally undermines temporal continuity and periodicity, we cannot leverage these widely studied characteristics from regular MTS for online learning. To this end, we study the problem of online IMTS forecasting and propose Under-Cali, an uncertainty-driven dual-expert calibration framework consisting of three core components: an uncertainty estimator, a dual-expert calibration module, and an adaptive routing module. We design an uncertainty estimator that serves as the core control signal to jointly manage inference and adaptation processes. In our framework, the uncertainty estimator first assesses uncertainty for each incoming batch. The adaptive routing module then directs samples with high uncertainty to the unreliable expert for calibration, while low uncertainty samples remain with the reliable expert. Subsequently, the system updates the reliable expert and the uncertainty estimator using well-calibrated reliable samples, and updates the unreliable expert with challenging samples, enabling stable and efficient online learning. Under-Cali keeps the source forecasting model frozen and performs adaptation only through a lightweight, model-agnostic calibration module, enabling efficient adaptation. Extensive experiments on IMTS benchmarks demonstrate consistent improvements with low computational cost. Our code is available at https://github.com/HaonanWen/Under-Cali.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28603v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/HaonanWen/Under-Cali.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.28442v1",
+    "title": "Self-Supervised Online Robot-Agnostic Traversability Estimation for Open-World Environments",
+    "authors": [
+      "Julia Hindel",
+      "Simon Bultmann",
+      "Houman Masnavi",
+      "Daniele Cattaneo",
+      "Abhinav Valada"
+    ],
+    "summary": "Self-supervised online traversability estimation enables robots to continuously learn from unlabeled open-world experiences and adapt their navigation behavior toward safe and efficient trajectories. Existing approaches either rely on handcrafted proprioceptive traversability scores, limiting robot-agnosticism, or cluster prior data, preventing online learning. Moreover, many continual learning methods incur substantial memory and computational costs, hindering onboard deployment. We introduce COTRATE, an online learning framework for continuous traversability estimation from multimodal, unlabeled robot experience. Our method first infers robust traversability scores using a robot-agnostic, learning-based online terrain assessment module operating on proprioceptiveand inertial signals. These scores then supervise a visual traversability network through a novel alignment loss that associates visual embeddings with online terrain assessments.To mitigate forgetting during continual learning with minimal overhead, we propose a diversity-aware feature selection strategythat preserves performance using a compact replay memory. We further show that the learned traversability representation supports knowledge transfer across different robot platforms with different locomotion kinematics. We evaluate COTRATE on a dataset of \\approx 50,000 images collected with two robotic platforms across 11 outdoor terrains, and benchmark it on navigation tasks in three representative outdoor environments. We make the dataset, code, and trained models publicly available.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28442v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.27929v1",
+    "title": "Exploratory Experience Shapes the Geometry of Predictive Representations",
+    "authors": [
+      "Kseniia Shilova",
+      "Abdelrahman Sharafeldin",
+      "Advay Balakrishnan",
+      "Hannah Choi"
+    ],
+    "summary": "Active sensing links behavior and learning through an action-perception loop: actions determine the observations used to update internal predictive models of perception, which subsequently guide the next actions. Predictive-coding frameworks provide a natural way to model this process, since internal representations are continuously updated to predict future observations. Here, we ask how exploratory and exploitative behavioral strategies shape these internal predictive representations. We build an online learning agent in a tree-like maze with a controllable parameter regulating the balance between exploratory and exploitative regimes. The agent updates a predictive-coding-based perception model from experience generated by its own behavior. The model predicts both future maze states and reward probability, allowing the agent to select actions either by expected information gain during exploration or by predicted reward during exploitation. We show that the resulting internal predictive representations depend strongly on the agent's behavioral regime. Exploratory agents develop representations that are more spatially organized and better preserve the structure of maze transitions in latent space. In contrast, exploitative agents learn less organized representations. We then train this predictive model on natural trajectories of water-deprived mice navigating the same maze and compare the resulting representations with those learned from agent trajectories. More exploratory mice show representational geometries that closely match those of exploratory agents, whereas mice with more restricted visitation patterns resemble reward-driven, exploitative agents. Together, these findings suggest that exploration enables predictive models to form generalized internal representations by organizing latent space around both spatial location and transition context in artificial agents and animals.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.27929v1",
+    "categories": [
+      "q-bio.NC",
+      "cs.LG"
+    ],
+    "primary_category": "q-bio.NC",
+    "github": null
+  },
+  {
+    "id": "2605.27831v1",
+    "title": "Decentralized Parameter-Free Online Learning with Compressed Gossip",
+    "authors": [
+      "Tomas Ortega",
+      "Hamid Jafarkhani"
+    ],
+    "summary": "We study decentralized online convex optimization when agents communicate over a graph and messages may be compressed. Classical decentralized online methods typically require learning-rate choices that depend on the horizon, comparator scale, or other problem parameters, while compressed communication introduces additional disagreement that must be controlled. We propose DECO-EF (DEcentralized COin-betting with Error Feedback), a decentralized parameter-free online learning algorithm that combines coin-betting predictions with compressed difference-based gossip. Each agent maintains a clean accumulated state and a compressed tracker, and communicates only compressed state differences during gossip steps. The method is parameter-free in the online-learning sense: it does not tune to the horizon, the comparator norm, or the learning rate. We prove expected comparator-adaptive network-regret bounds for DECO-EF under compressed communication. To the best of our knowledge, this gives the first expected sublinear network-regret guarantees for parameter-free decentralized online learning under compressed communication.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.27831v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.27794v1",
+    "title": "Learning to target with network interference",
+    "authors": [
+      "Xiaomeng Wang",
+      "Hamsa Bastani",
+      "Osbert Bastani",
+      "Zhimei Ren"
+    ],
+    "summary": "This paper studies adaptive targeting under network interference in a bandit setting, where treatments applied to one individual may affect others through spillover effects. We consider a linear model in a sparse regime, where each individual's outcome can be affected by at most a few others. We first establish a regret lower bound showing that ignoring the network structure and reducing the problem to a standard linear bandit inevitably leads to inefficient learning, particularly in large populations. To understand how structural information can be leveraged, we analyze regimes with varying levels of knowledge of the interference structure: (1) full support knowledge, (2) knowledge of the column support sizes, and (3) no prior knowledge. For each regime, we establish regret lower bounds characterizing the fundamental limits of learning, and develop algorithms that achieve near-optimal regret. Together, our results provide a unified view of how knowledge of the interference structure governs the efficiency of online learning under interference, and offer practical adaptive targeting algorithms in each setting. Numerical experiments on synthetic and real-world data demonstrate the practical benefits of our algorithms.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.27794v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "stat.ME"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2605.28095v1",
+    "title": "SiDP: Memory-Efficient Data Parallelism for Offline LLM Inference",
+    "authors": [
+      "Alan Zhao",
+      "Cyril Y. He"
+    ],
+    "summary": "The rapid adoption of large language models (LLMs) has shifted a substantial portion of inference workloads into throughput-oriented offline regimes, where fully utilizing GPU compute requires large batch sizes. However, existing deployments face a structural tension. Data parallelism (DP) scales throughput well but replicates model weights, leaving limited GPU memory for key-value (KV) cache and constraining batch size. Model parallelism reduces per-device weights, but requires fine-grained synchronization that erodes DP's independence and scheduling flexibility. We present SiDP, a memory-efficient data-parallel paradigm for offline LLM inference that treats weights as a bandwidth-backed shared resource inside a DP group. Instead of storing the full model on every GPU, SiDP organizes weights as a distributed pool: each layer is owned by a single GPU, and other replicas access its weights on demand via two complementary execution modes: a Weight-as-a-Service (WaS) mode that streams remote weights over NVLink into a small cache in the large-batch regime, and a Compute-as-a-Service (CaS) mode that ships activations to owners in the small-batch tail. Evaluated on NVIDIA H20, H200, and B200 GPUs with Qwen3-32B, Qwen2.5-72B, and Llama-3.1-70B, SiDP increases usable KV capacity by up to 1.8x under the same configurations, and converts this into up to 1.5x higher end-to-end throughput over baselines (vLLM) for offline workloads.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.28095v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.27918v1",
+    "title": "Addressing Variable Heterogeneity in Distributed Multimodal Training with Entrain",
+    "authors": [
+      "Insu Jang",
+      "Mosharaf Chowdhury"
+    ],
+    "summary": "Multimodal LLM datasets are inherently heterogeneous, with significant data variability. Although each modality exhibits independent variability, sample-level entanglement makes it difficult to balance workloads across both modalities and batches. We present Entrain, a distributed MLLM training framework that addresses both heterogeneity and variability in multimodal training workloads. Entrain challenges the intuition that dynamic data variability requires dynamic model parallelism by shifting the profiling paradigm from micro-level samples to macroscopic batches. We prove that a single, static model-parallel configuration suffices for optimal load balancing under this paradigm. At the microscopic scale, Entrain introduces a hierarchical microbatch assignment algorithm that defers excess workload within each iteration to stabilize variability across microbatches. Evaluations show that Entrain reduces workload variability across microbatches by up to 10.6$\\times$, improving end-to-end training throughput by up to 1.40$\\times$ over existing baselines.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.27918v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.27557v1",
+    "title": "The Fundamental Limits of Fraud Detection in Card Payment Networks",
+    "authors": [
+      "Gaurav Dhama"
+    ],
+    "summary": "Card payment fraud detection is usually framed as a supervised classification problem. Although this approach has generated practical progress, improvement has remained incremental despite major advances in model architecture. We argue that this is not mainly a failure of function approximation or optimization, but a consequence of structural information impairments inherent to the payment ecosystem.\n  We formalize card authorization as a sequential decision problem with delayed, censored, corrupted, and counterfactually missing feedback. We derive a minimax regret lower bound showing that these impairments enter multiplicatively in the denominator of the achievable learning rate. The bound implies that improving issuer reporting quality or reducing censorship can yield larger reductions in the regret floor than increasing model complexity. We also show that heterogeneity across issuers worsens learnability beyond what average impairment rates suggest.\n  The paper contributes a theory of why fraud detection in payment networks is fundamentally harder than in standard online learning settings, identifies ecosystem information quality as the key bottleneck, and provides a theoretical basis for prioritizing investments in reporting infrastructure, dispute process quality, and selective exploration. The paper is theory-first and does not rely on proprietary transaction data.",
+    "published": "2026-05-26",
+    "updated": "2026-05-26",
+    "pdf_url": "https://arxiv.org/pdf/2605.27557v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.27445v1",
+    "title": "RAGe: A Retrieval-Augmented Generation Evaluation Framework",
+    "authors": [
+      "Larissa Guder",
+      "João Pedro de Moura",
+      "Arthur Accorsi",
+      "Gustavo Losch do Amaral",
+      "Maurício Cecílio Magnaguagno",
+      "Felipe Meneguzzi",
+      "Marcio Sorraglia Pinho",
+      "Dalvan Griebler"
+    ],
+    "summary": "Deploying Large Language Model (LLM) applications, particularly those relying on Retrieval-Augmented Generation (RAG), remains challenging due to high computational demands, outdated knowledge bases, and the need to manually select optimal pipeline components. In this work, we propose a modular framework for benchmarking and guiding the efficient development of RAG applications by focusing on resource telemetry and component recommendation, suggesting the best components for a domain-specific dataset. Our approach leverages core techniques in LLM applications, including document chunking, vector databases, embedding models, and retrievers, to evaluate trade-offs among accuracy, efficiency, and scalability. By directly correlating retrieval and generation quality with underlying hardware constraints, RAGe supports researchers to identify the most effective, domain-specific RAG setups for their specific operational needs, facilitating rapid prototyping even on consumer-grade hardware.",
+    "published": "2026-05-23",
+    "updated": "2026-05-23",
+    "pdf_url": "https://arxiv.org/pdf/2605.27445v1",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  }
+]
