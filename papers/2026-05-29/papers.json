@@ -1,0 +1,144 @@
+[
+  {
+    "id": "2605.30334v1",
+    "title": "Demystifying Data Organization for Enhanced LLM Training",
+    "authors": [
+      "Yalun Dai",
+      "Yangyu Huang",
+      "Tongshen Yang",
+      "Yonghan Wang",
+      "Xin Zhang",
+      "Wenshan Wu",
+      "Qihao Zhao",
+      "Hao Li",
+      "Yuanyuan Gao",
+      "Kim-Hui Yap",
+      "Scarlett Li"
+    ],
+    "summary": "Large Language Models (LLMs) have revolutionized various fields, yet their training efficiency is heavily reliant on effective data curation. While data selection has been widely studied, the strategic data organization for enhanced training remains an underexplored area, particularly since current LLMs are often trained for only one or a few epochs. This paper systematically explores the influence of data organization on LLM training by reusing pre-computed sample-level scores originally generated for data efficiency, thereby incurring minimal additional computational overhead. We identify and formalize four key guidelines for optimizing data organization: Boundary Sharpening, Cyclic Scheduling, Curriculum Continuity, and Local Diversity. Guided by them, we introduce two novel data ordering methods termed STR and SAW. Extensive experiments across different model scales and data sizes, encompassing both pre-training and SFT stages, validate the effectiveness of our summarized guidelines. They also demonstrate the robustness of our proposed data ordering methods in enhancing the stability and performance of LLM training. Github Link: https://github.com/microsoft/data-efficacy/",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.30334v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.AI",
+    "github": {
+      "url": "https://github.com/microsoft/data-efficacy",
+      "stars": 46,
+      "description": "Data Efficacy for Language Model Training",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2605.29387v1",
+    "title": "On the Optimizer Dependence of Neural Scaling Laws",
+    "authors": [
+      "Vansh Ramani",
+      "Shourya Vir Jain"
+    ],
+    "summary": "The scaling exponent $α$ in neural scaling laws $L(N) \\propto N^{-α}$ is commonly treated as a fixed constant set by architecture and data. We present evidence that $α$ depends systematically on the optimizer. In controlled random-feature regression experiments -- the canonical theoretical framework for neural scaling -- we measure $α$ across five optimizer variants and six spectral conditions. Preconditioned optimizers consistently yield steeper scaling (larger $α$), with the $α$-shift increasing across most of the tested spectral range, peaking near $s = 1.5$, and remaining large at $s = 2.0$. At $s \\approx 1.0$ (characteristic of natural language), the full natural gradient achieves $α\\approx 0.31$ versus $α\\approx 0.12$ for gradient descent -- a $2.6\\times$ larger fitted exponent that, within the random-feature model, compounds with each model-size doubling. Whether and how this exponent shift transfers to large-scale LLM training -- where recent evidence suggests the advantage may attenuate with scale -- remains an important open question. Our results imply that scaling-law forecasts should account for optimizer choice, and we provide a spectral diagnostic predicting when advanced optimizers will pay off.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29387v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.30263v1",
+    "title": "minWM: A Full-Stack Open-Source Framework for Real-Time Interactive Video World Models",
+    "authors": [
+      "Min Zhao",
+      "Hongzhou Zhu",
+      "Bokai Yan",
+      "Zihan Zhou",
+      "Yimin Chen",
+      "Wenqiang Sun",
+      "Kaiwen Zheng",
+      "Guande He",
+      "Xiao Yang",
+      "Chongxuan Li",
+      "Fan Bao",
+      "Jun Zhu"
+    ],
+    "summary": "Recent video diffusion foundation models have achieved remarkable progress in high-quality video generation, yet turning them into real-time interactive video world models remains challenging. Interactive world models require controllable, causal, and low-latency rollout, which in practice demands a full pipeline spanning data construction, controllable fine-tuning, autoregressive training, few-step distillation, and streaming inference. In this work, we present minWM, a full-stack open-source framework for building real-time interactive video world models. minWM provides an end-to-end pipeline that converts existing bidirectional T2V/TI2V video foundation models into camera-controllable few-step autoregressive world models. Specifically, minWM first fine-tunes a bidirectional video diffusion model with camera control, and then applies the Causal Forcing / Causal Forcing++ pipeline, including AR diffusion training, causal ODE or causal consistency distillation, and asymmetric DMD, to distill it into a few-step autoregressive generator for low-latency rollout. The framework is modular and architecture-extensible: we instantiate it on representative open backbones, including Wan2.1-T2V-1.3B and HY1.5-TI2V-8B, covering both cross-attention-based condition injection and MMDiT-style architectures. minWM also supports adapting existing video world models, such as HY-WorldPlay, to new data distributions, training recipes, and latency targets. Beyond releasing runnable scripts, checkpoints, documentation, and inference code, we provide practical ablations on camera trajectory quality, controllability training steps, and minimal batch-size requirements. We hope minWM serves as a reproducible and extensible recipe for building and adapting real-time interactive video world models.\n  Project Page: [https://github.com/shengshu-ai/minWM](https://github.com/shengshu-ai/minWM)",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.30263v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/shengshu-ai/minWM",
+      "stars": 192,
+      "description": "A Minimal and Elegant Framework & Tutorial for Real-Time Interactive World Models",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2605.29587v1",
+    "title": "FPLIER: Federated Pathway-Level Information Extractor",
+    "authors": [
+      "Daniele Malpetti",
+      "Christian Berchtold",
+      "Francesco Gualdi",
+      "Marco Scutari",
+      "Laura Azzimonti",
+      "Francesca Mangili"
+    ],
+    "summary": "In transcriptomics, gene-set-aware factorization methods such as the Pathway Level Information Extractor (PLIER) are most effective when trained on large, heterogeneous expression compendia. Yet, many clinically relevant cohorts cannot be pooled into a single dataset due to privacy and governance constraints. We present FPLIER, a federated extension of PLIER that enables distributed training across multiple data holders while incorporating publicly available datasets. Through secure aggregation, FPLIER produces training updates algebraically equivalent to those of a centralized pooled-data approach while keeping expression data local. We evaluate FPLIER across multiple scenarios in two simulated consortia (from the K-CLIER and MultiPLIER studies) and demonstrate stable convergence. We further conduct a systematic analysis of membership inference attacks targeting both intermediate training statistics and the released model. Our results show that privacy risk is governed by the rank of the training expression matrix. Incorporating public data or reducing data dimensionality increases this rank, moving the system toward a full-rank regime in which training and non-training samples become indistinguishable to the attacker, and membership-inference performance approaches random guessing.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29587v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "primary_category": "q-bio.QM",
+    "github": null
+  },
+  {
+    "id": "2605.29450v1",
+    "title": "Protecting On-Device AI Inference: A Systematic Review of Attacks and Defence Mechanisms",
+    "authors": [
+      "Zisis Tsiatsikas",
+      "Alexandros Fakis",
+      "Georgios Karopoulos",
+      "Vasileios Kouliaridis",
+      "Marios Anagnostopoulos"
+    ],
+    "summary": "The need for secure and private Artificial Intelligence (AI) and Machine Learning (ML) on edge and mobile devices has increased the necessity of protecting the architecture of these systems from threats to both security and privacy. With an ever-increasing number of pre-trained AI models being used on mobile platforms for client-side inference, there are rising concerns about the risks associated with the theft/extraction of AI models, adversarial attacks on AI models, and data breaches. As a result of this trend, a variety of defence mechanisms have been proposed to protect against these threats. These include Trusted Execution Environments (TEEs), homomorphic encryption, obfuscation, and differential privacy, among others. However, current surveys largely focus on edge intelligence, which includes distributed training, and thus overlook security and privacy issues that are specific to on-device AI inference. To the best of our knowledge, this paper presents the first comprehensive review of threats and corresponding defence mechanisms targeting on-device inference. Our results show that the attack and defence literature are unbalanced: approximately one quarter of the surveyed attack papers focus on Intellectual Property (IP) attacks, whereas half of the defence solutions tackle the same issue. More importantly, some attack categories have no defence paper associated to them, such as adversarial attacks that account for roughly one third of the attack literature. This asymmetry between known attacks and available mitigations highlights clear opportunities for future research on securing on-device AI inference.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29450v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2605.29359v1",
+    "title": "Does Distributed Training Undermine Compute Governance?",
+    "authors": [
+      "Robi Rahman"
+    ],
+    "summary": "Compute governance proposals often rely on the assumption that frontier AI training requires large, detectable computing clusters. However, recent advances in distributed training algorithms could allow developers to conduct frontier-scale training on distributed agglomerations of hardware, rather than needing large datacenter facilities. Developers who prefer not to be constrained by regulations may structure their hardware in a manner that evades the registration and monitoring requirements associated with compute governance. Therefore, regulations must be designed to detect and prevent illicit distributed training operations. This paper evaluates the feasibility of such evasion and outlines recommended countermeasures, including whistleblowing, chip tracking, forensic accounting, and memory and compute thresholds for clusters.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29359v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  }
+]
