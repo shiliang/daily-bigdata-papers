@@ -1,0 +1,122 @@
+[
+  {
+    "id": "2605.29420v1",
+    "title": "When Does Persona Prompting Actually Help? A Retrieval and Metric Analysis of Expert Role Injection in LLMs",
+    "authors": [
+      "Shuai Xiao",
+      "Su Liu",
+      "Weikai Zhou",
+      "Jialun Wu",
+      "Xinjie He",
+      "Zhiyuan Lin",
+      "Qiyang Xie"
+    ],
+    "summary": "Persona prompting is widely used to steer large language models, yet its practical value remains unclear. Prior work often evaluates persona prompting using aggregate scores, making it difficult to determine whether expert-role prompting consistently improves response quality or instead changes responses along different quality dimensions. We study this question through a controlled comparison of four prompting conditions across 1,140 open-ended questions spanning 38 expert roles and six domains: no role prompt, a generic domain-expert prompt, embedding-based role retrieval, and a hybrid retrieval method combining embedding search with LLM-based role selection. Aggregate results show only small overall differences between conditions. However, metric-level analysis reveals a consistent tradeoff that aggregate averages obscure: role prompting systematically increases expertise depth while reducing clarity. These effects are highly conditional rather than universal. Role prompting performs best on advisory questions and in domains such as medicine and psychology, where structured expert framing and risk communication are intrinsically valuable. In contrast, baseline prompting performs better on conceptual and explanatory questions in finance, legal, science, and technology domains, where concise plain-language explanation is more important. We further show that hybrid retrieval significantly improves over embedding-only role selection, although better role retrieval does not eliminate the broader expertise-depth versus clarity tradeoff. Overall, our findings suggest that persona prompting primarily reshapes response characteristics rather than broadly improving capability, and that multi-metric evaluation is necessary for understanding its effects.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29420v1",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2605.29662v1",
+    "title": "SAFE-Pruner: Semantic Attention-Guided Future-Aware Token Pruning for Efficient Vision-Language-Action Manipulation",
+    "authors": [
+      "Shilin Ma",
+      "Chubin Zhang",
+      "Changyuan Wang",
+      "Yuji Wang",
+      "Yue Wu",
+      "Zixuan Wang",
+      "Jingqi Tian",
+      "Zheng Zhu",
+      "Yansong Tang"
+    ],
+    "summary": "Real-time inference of vision-language-action (VLA) models is essential for robotic control. While visual token pruning has shown strong potential for accelerating inference, most existing methods mainly base pruning decisions on shallow-layer cues and risk discarding visual information required by deep layers. To address this issue, we propose SAFE-Pruner, a plug-and-play pruning framework that incorporates attention cues of future layers into pruning decisions. Specifically, we identify semantic attention consistency, the tendency that VLA models concentrate their attention probability mass on the same semantic entity across execution steps. Based on this observation, we design a forward-looking strategy to forecast the token saliency in deep layers, which prevents the premature removal of critical tokens and leads to more stable acceleration. We further introduce an adaptive subtask division strategy to detect abrupt attention shifts, thereby improving forecasting accuracy and pruning reliability. Extensive experiments in simulation and real-world settings demonstrate that our method achieves up to 1.89x speedup with a minimal degradation in success rate of less than 1.7%, while outperforming state-of-the-art methods by up to 1.9%.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29662v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.30303v1",
+    "title": "Generalizing a Highly Configurable Analytics Pipeline to Replicate and Support Educational Research Across Multiple Domains",
+    "authors": [
+      "Yallen Bai",
+      "Ploy Thajchayapong",
+      "Ashok Goel"
+    ],
+    "summary": "Artificial intelligence assistants deployed in online learning environments create new opportunities to collect large volumes of learner interaction data and generate insights to improve student outcomes. Architecture for AI-Augmented Learning (A4L) is a modular data architecture that enables the collection, integration, and analysis of learner interaction data from educational AI systems, supporting the generation of instructional insights that facilitate personalized learning and reinforce the bidirectional feedback loop between instructors and learners. This study examines the modular design of the A4L Data Analytics Pipeline, an extensible data infrastructure that enables the ingestion, processing, and analysis of heterogeneous datasets generated by educational AI assistants. We describe the design principles and development process used to extend the pipeline's analytical capabilities while preserving flexibility across domains. We evaluate the pipeline through case studies spanning three research domains corresponding to three educational AI assistants deployed in online learning environments at Georgia Tech. Results show that a common set of statistical analysis methods can be consistently applied across datasets with differing structures and instructional contexts, enabling the pipeline to reproduce key analytical findings across domains. We demonstrate how analytical capabilities initially developed for one domain can be extended to support richer analyses in another, illustrating the pipeline's extensibility. These findings suggest that the A4L Analytics Pipeline can serve as reusable infrastructure for analyzing data generated by future educational AI assistants. By enabling analytics that can be systematically extended to new domains, the pipeline provides a foundation for deriving insights that inform the design and evaluation of educational AI systems.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.30303v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2605.29771v1",
+    "title": "Joint Angle Estimation with Customized Wristband Based on Online Incremental Learning",
+    "authors": [
+      "Shuo Wang",
+      "Xiaobin Chen",
+      "Xiaoming Tao"
+    ],
+    "summary": "Intelligent wearable technology plays an increasingly important role in human-computer interaction, motion, and health monitoring. To ensure comfort and practicality of use, one common form for motion monitoring is to utilize soft wearable sensors. However, many research applications regarding wearable sensors are simplistic and difficult to adapt to different situations. This study proposes a system for estimating the angle of the wrist joint using a customized wristband based on an online incremental learning approach. It is a two-stage estimation method: the first stage updates the model based on the wearer's wrist movement characteristics using online learning, integrating real-time data from an IMU as ground truth. The second stage utilizes the updated model for estimation of wrist joint angle solely with the wristband. In other words, model training is completed during data acquisition, allowing the trained model to be used for subsequent angle estimation. This method offers advantages in adapting to data drift caused by variations in different testing configurations, such as the left and right wrists of the same subject, deviations in the wearing position on the same wrist, and even differences among various subjects. The results indicate that the sensors exhibit good performance under strain variations, and the wrist joint trajectory estimation of the proposed system has an approximate error of 15 degree in different scenarios.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.29771v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.29148v1",
+    "title": "Optimal Gap-Dependent Regret for Private Stochastic Decision-Theoretic Online Learning",
+    "authors": [
+      "Tommaso Cesari",
+      "Roberto Colomboni"
+    ],
+    "summary": "We study stochastic decision-theoretic online learning with full information and event-level pure differential privacy. A COLT open problem of Hu and Mehta asks to determine the optimal gap-dependent regret rate for stochastic decision-theoretic online learning under pure event-level differential privacy. For $K$ actions, losses in $[0,1]$, and a unique best action separated from the second-best action by gap $Δ_{\\min}$, the known lower bound is of order $\n  \\frac{\\log K}{\\min\\{Δ_{\\min},\\varepsilon\\}}, $\nor equivalently, up to universal constants, of order \\[\n  \\frac{\\log K}{Δ_{\\min}}+\\frac{\\log K}{\\varepsilon}. \\] We give a horizon-free pure-DP algorithm and prove the explicit regret bound \\[\n  \\operatorname{Reg}_T\n  \\le\n  1000 \\cdot \\left(\\frac{\\log K}{Δ_{\\min}}+\\frac{\\log K}{\\varepsilon}\\right) \\] for every horizon $T$. The numerical constant is not optimized. The algorithm partitions time into blocks of exponentially increasing size, plays a single action throughout each block, and chooses the next action by an exponential mechanism applied to a data-independent random prefix of the previous block. The random prefix converts block regret into a sum, over all prefix lengths, of softmax selection errors. A single entropy-potential argument controls all privacy-dominated large-gap actions at cost $\\log K/\\varepsilon$.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.29148v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.29032v1",
+    "title": "Theoretical Foundations and Effective Algorithms for Policy-Aware Simulator Learning",
+    "authors": [
+      "Christoph Dann",
+      "Yishay Mansour",
+      "Mehryar Mohri"
+    ],
+    "summary": "Model-based reinforcement learning (MBRL) agents typically learn world models by minimizing predictive loss. However, powerful RL optimizers inevitably exploit minor model inaccuracies, leading to simulator exploitation and a reality gap where policies succeed in simulation but fail in the real world. We propose that the objective for learning simulators should be strategic robustness rather than predictive accuracy, and formulate this as a zero-sum minimax game between a model player and an adversarial policy player. We provide a comprehensive theoretical analysis: (1) an online learning guarantee showing the game is learnable with sublinear regret bounds; (2) a tractable critic-based simplification bounding the global policy-value gap by the local critic's loss; and (3) an Error-MDP duality, proving that finding the worst-case policy is formally dual to a standard RL problem where the reward is the one-step critic error. This duality yields a provably convergent active data selection algorithm. Experiments on continuous control tasks demonstrate that our approach reduces prediction error in strategically important regions by $1.5$-$2.2\\times$ and enables policies trained purely in simulation to match near-optimal real-world performance.",
+    "published": "2026-05-27",
+    "updated": "2026-05-27",
+    "pdf_url": "https://arxiv.org/pdf/2605.29032v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
