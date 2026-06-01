@@ -1,0 +1,183 @@
+[
+  {
+    "id": "2605.31100v1",
+    "title": "Vector Linking via Cross-Model Local Isometric Consistency",
+    "authors": [
+      "Ziying Chen",
+      "Yang Cao",
+      "He Sun",
+      "Beining Yang",
+      "Tianjian Yang"
+    ],
+    "summary": "We study Vector Linking: given two embedding clouds produced by different black-box encoders over partially overlapping datasets, recover cross-model object correspondences using only vectors. Empirically and theoretically, we show that independently trained contrastive encoders exhibit local geometric consistency: short-range distances are approximately preserved up to a scale factor, while long-range distances are not due to model-specific distortion. Building on this, we propose an iterative, reference-based geometric embedding hashing that recovers vector links from a tiny seed set of paired anchors. It represents each vector by distances to sampled paired anchors, proposes candidate links via hash-space matching, and aggregates evidence across views in a Beta-Bernoulli posterior to bootstrap high-confidence links as new anchors. Experiments across multiple benchmarks and embedding model pairs demonstrate accurate and robust linking under varying overlap, seed budgets, and out-of-domain anchors, with applications to vector database integration and cross-model clustering. Code is available at https://github.com/DBgroup-Edinburgh/VecLinking.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31100v1",
+    "categories": [
+      "cs.AI",
+      "cs.DB",
+      "cs.IR"
+    ],
+    "primary_category": "cs.AI",
+    "github": {
+      "url": "https://github.com/DBgroup-Edinburgh/VecLinking.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2605.31279v1",
+    "title": "Practical Cross-Band Channel Prediction for AI-RAN via Physics-Guided Deep Unfolding",
+    "authors": [
+      "Ruiqi Kong",
+      "He Chen",
+      "Xiaojun Lin"
+    ],
+    "summary": "To make cross-band channel prediction practical for AI-native RAN, algorithms must generalize across diverse environments and support real-time inference. Existing approaches achieve one but not both. To bridge this gap, we introduce GUIDE, a physics-guided deep unfolding framework that embeds wireless channel physics into differentiable layers. Without retraining in unseen environments, GUIDE achieves 2.75x beamforming gain than the deep learning-based baseline FIRE with only a slight increase in inference time, and 1.39x beamforming gain than the strongest model-based baseline R2F2 while running over 1610x faster.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31279v1",
+    "categories": [
+      "eess.SP",
+      "cs.AI",
+      "cs.NI"
+    ],
+    "primary_category": "eess.SP",
+    "github": null
+  },
+  {
+    "id": "2605.21007v2",
+    "title": "LiteViLNet: Lightweight Vision-LiDAR Fusion Network for Efficient Road Segmentation",
+    "authors": [
+      "Daojie Peng",
+      "Bingtao Wang",
+      "Fulong Ma",
+      "Liang Zhang",
+      "Jun Ma"
+    ],
+    "summary": "Road segmentation is a fundamental perception task for autonomous driving and intelligent robotic systems, requiring both high accuracy and real-time inference, especially for deployment on resource-constrained edge devices. Existing multi-modal road segmentation methods often rely on heavy transformer-based encoders to achieve state-of-the-art performance, but their enormous computational cost prohibits real-time deployment on embedded platforms. To address this dilemma, we propose LiteViLNet, a lightweight multi-modal network that fuses RGB texture information and LiDAR geometric information for efficient road segmentation. Specifically, we design a dual-stream lightweight encoder and depth-wise separable convolutions to extract hierarchical features from both modalities with minimal parameters. We further propose a Multi-Scale Feature Fusion Module (MSFM) to facilitate cross-modal interaction at different levels, and a large-kernel-bridge module to capture long-range dependencies with linear complexity. Extensive experiments on the KITTI Road dataset and real-world applications demonstrate that LiteViLNet achieves a promising balance between accuracy and efficiency. Notably, with only 14.04M parameters, our model attains a 96.36% MaxF score, ranking the best among all CNN-based methods and being comparable to larger transformer-based models, and runs at 163.79 FPS in model-only inference on RTX 4060 Ti (22.18 FPS on Jetson Orin NX). It outperforms numerous heavy-weight methods in inference speed while maintaining highly competitive accuracy, fully validating the potential of LiteViLNet for real-time embedded deployment in autonomous driving and intelligent robotics.",
+    "published": "2026-05-20",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.21007v2",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2605.31070v1",
+    "title": "Learning to Bid in FCR Markets: A Best-of-Both-Worlds Approach",
+    "authors": [
+      "Marius Potfer",
+      "Cheng Wan",
+      "Pierre Gruet"
+    ],
+    "summary": "Bidding in the European Frequency Containment Reserve (FCR) market is challenging for flexibility providers because competing offers are hidden and bidders observe only partial feedback form the market, such as, clearing price and awarded quantity. For a participant active in a single country, we show that the multi-country FCR clearing problem can be recast as a repeated multi-unit uniform-price auction against an endogenous vector of opposing bids. This reformulation yields an online learning problem and allows us to adapt a Best-of-Both-Worlds combinatorial semi-bandit algorithm implementable from this standard market feedback. The resulting bidder achieves logarithmic pseudo-regret in stochastic environments and $\\mathcal{O}(\\sqrt{T})$ regret in adversarial ones. Synthetic experiments confirm the expected scaling, and backtests on historical European FCR data show competitive performance in practice: the method performs especially well on stable products, while EXP3-type baselines can be safer under stronger non-stationarity. Overall, the results show that learning-based bidding in FCR markets is theoretically grounded and practically useful when the learning rule matches product-level market stability.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31070v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.30736v1",
+    "title": "OrcaRouter: A Production-Oriented LLM Router with Hybrid Offline-Online Learning",
+    "authors": [
+      "Zhenghua Bao",
+      "Fengya Tian",
+      "Chris Zhang",
+      "Zhenjun Chen",
+      "Xile Ma",
+      "Yi Shi"
+    ],
+    "summary": "The rapid development of large language models, each with distinct capabilities and inference costs, raises a practical deployment question: given an incoming request, which model should handle it? We present OrcaRouter, a production-oriented LLM router that combines a LinUCB-based contextual bandit over lexical and sentence-embedding features with a hybrid offline-online learning protocol. Offline, OrcaRouter obtains full-information feedback by evaluating each candidate model on a curated set of routing prompts, yielding a reward matrix used to fit one ridge regressor per arm. At deployment time, it initializes from these parameters and can optionally continue learning from bandit feedback, updating only the selected model's arm after observing its reward. At the time of our RouterArena submission (May 20, 2026), OrcaRouter-Adaptive ranked second on the public RouterArena leaderboard with an arena score of 72.08, achieving 75.54% accuracy at a cost of USD 1.00 per 1,000 queries.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.30736v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.30694v1",
+    "title": "Universal Decision Learners",
+    "authors": [
+      "Sridhar Mahadevan"
+    ],
+    "summary": "Many theories of decision making -- planning, reinforcement learning, causal intervention, online learning, and game-theoretic equilibrium -- turn local information into globally coherent behavior. This paper proposes a common categorical formulation: a Universal Decision Learner (UDL) extends a partially specified decision functor from observed contexts to new contexts by a pair of universal constructions. Left Kan extensions express rollout, aggregation, and candidate generation; right Kan extensions express consistency, constraint satisfaction, and fixed-point semantics. The central claim is not that every decision problem has the same algorithm, but that many decision formalisms instantiate the same universal problem: extend local behavioral data canonically, then characterize the globally coherent extensions. We give the abstract UDL construction, prove its universal comparison property, define Kan-invariant behavioral equivalence and minimal abstractions, and show how Bellman equations, planning recursions, causal interventions, online regret, and equilibria arise as special cases. The supplementary material develops the reinforcement-learning specialization in more detail.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.30694v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.28442v2",
+    "title": "Self-Supervised Online Robot-Agnostic Traversability Estimation for Open-World Environments",
+    "authors": [
+      "Julia Hindel",
+      "Simon Bultmann",
+      "Houman Masnavi",
+      "Daniele Cattaneo",
+      "Abhinav Valada"
+    ],
+    "summary": "Self-supervised online traversability estimation enables robots to continuously learn from unlabeled open-world experiences and adapt their navigation behavior toward safe and efficient trajectories. Existing approaches either rely on handcrafted proprioceptive traversability scores, limiting robot-agnosticism, or cluster prior data, preventing online learning. Moreover, many continual learning methods incur substantial memory and computational costs, hindering onboard deployment. We introduce COTRATE, an online learning framework for continuous traversability estimation from multimodal, unlabeled robot experience. Our method first infers robust traversability scores using a robot-agnostic, learning-based online terrain assessment module operating on proprioceptiveand inertial signals. These scores then supervise a visual traversability network through a novel alignment loss that associates visual embeddings with online terrain assessments. To mitigate forgetting during continual learning with minimal overhead, we propose a diversity-aware feature selection strategythat preserves performance using a compact replay memory. We further show that the learned traversability representation supports knowledge transfer across different robot platforms with different locomotion kinematics. We evaluate COTRATE on a dataset of $\\approx$ 50,000 images collected with two robotic platforms across 11 outdoor terrains, and benchmark it on navigation tasks in three representative outdoor environments. We make the dataset, code, and trained models publicly available.",
+    "published": "2026-05-27",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.28442v2",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2605.27557v2",
+    "title": "The Fundamental Limits of Fraud Detection in Card Payment Networks",
+    "authors": [
+      "Gaurav Dhama"
+    ],
+    "summary": "Card payment fraud detection is usually framed as a supervised classification problem. Although this approach has generated practical progress, improvement has remained incremental despite major advances in model architecture. We argue that this is not mainly a failure of function approximation or optimization, but a consequence of structural information impairments inherent to the payment ecosystem.\n  We formalize card authorization as a sequential decision problem with delayed, censored, corrupted, and counterfactually missing feedback. We derive a minimax regret lower bound showing that these impairments enter multiplicatively in the denominator of the achievable learning rate. The bound implies that improving issuer reporting quality or reducing censorship can yield larger reductions in the regret floor than increasing model complexity. We also show that heterogeneity across issuers worsens learnability beyond what average impairment rates suggest.\n  The paper contributes a theory of why fraud detection in payment networks is fundamentally harder than in standard online learning settings, identifies ecosystem information quality as the key bottleneck, and provides a theoretical basis for prioritizing investments in reporting infrastructure, dispute process quality, and selective exploration. The paper is theory-first and does not rely on proprietary transaction data.",
+    "published": "2026-05-26",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.27557v2",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2605.30479v1",
+    "title": "Universal Multiclass Transductive Online Learning",
+    "authors": [
+      "Steve Hanneke",
+      "Hongao Wang"
+    ],
+    "summary": "We consider the problem of universal transductive online classification with a possibly unbounded label space. This setting considers online learning, with the sequence of instances (without labels) known to the learner in advance. We say a concept class $\\mathcal{H}$ is learnable if there is a learning algorithm $\\mathcal{A}$, such that for every realizable sequence, the number of mistakes made by $\\mathcal{A}$ grows at most sublinearly with the number of predictions. We characterize the learnability of this setting and show that there are only two possible optimal rates for the learnable classes: either bounded or increasing logarithmically. We introduce a new combinatorial structure, called ``Level-Constrained-Littlestone-Littlestone (LCLL) tree'', which, along with the indifference property, characterizes the learnability. We also extend the learnability result to the agnostic case and the case where only the stochastic process that generates the instance sequence is known.",
+    "published": "2026-05-28",
+    "updated": "2026-05-28",
+    "pdf_url": "https://arxiv.org/pdf/2605.30479v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
