@@ -1,0 +1,274 @@
+[
+  {
+    "id": "2606.02358v1",
+    "title": "CHIMERA: A Flexible and Scalable 3.1 TOPS/W AI-MCU with Transformer Accelerator and 563 Gb/s Shared-L2 Memory Subsystem with QoS Guarantees",
+    "authors": [
+      "Lorenzo Leone",
+      "Philip Wiese",
+      "Gamze İslamoğlu",
+      "Michael Rogenmoser",
+      "Davide Rossi",
+      "Francesco Conti",
+      "Luca Benini"
+    ],
+    "summary": "We present Chimera, a flexible and scalable Microcontroller Unit (MCU) designed to accelerate real-time inference of rapidly evolving transformer-based models at the ultra-low-power edge (hundred of mW). The chip, implemented in 22 nm FDX technology, integrates a transformer accelerator tightly coupled within a compute cluster featuring nine general-purpose RV32IMA cores. Scalability extends to the memory hierarchy through a novel L2 memory island subsystem, which enables data sharing across multiple clusters while delivering 563 Gb/s aggregate bandwidth. The L2 subsystem enforces quality-of-service guarantees for latency-critical traffic, achieving up to 16x latency reduction. Chimera achieves peak energy and area efficiencies of 3.1 TOPS/W and 281 GOPS/mm2, demonstrating 1.37x higher energy efficiency and up to 100x higher area efficiency compared to State of the Art (SoA) SoCs. Compared to SoA standalone accelerators, Chimera achieves comparable energy efficiency and up to 1.8x higher area efficiency.",
+    "published": "2026-06-01",
+    "updated": "2026-06-01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02358v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2606.02020v1",
+    "title": "Unveiling the Entropy Dynamics of Chain-of-Thought Reasoning",
+    "authors": [
+      "Ting Xu",
+      "Xu He",
+      "Yupu Lu",
+      "Jiankai Sun",
+      "Dong Li",
+      "Wai Lam",
+      "Jianye Hao"
+    ],
+    "summary": "This paper investigates the entropy dynamics of Chain-of-Thought (CoT) and uncovers a consistent two-phase structure: an Uncertainty Region of exploration transitioning sharply to a Confidence Region of convergence. We demonstrate that the Confidence Region possesses two critical properties: 1) High Reliability -- answers in the confidence region become highly accurate and stable, and 2) High Redundancy -- models generate unnecessary tokens long after reaching the correct answer. These properties unlock more efficient and reliable inference strategies: 1) Early Exit leverages reliability and redundancy to terminate computation safely when returns diminish, and 2)Test-Time Scaling uses the Confidence Region signal to prioritize converged trajectories. To operationalize these insights, we formulate Confidence Region detection as a sequential change-point detection problem, being the first to apply classical change-point methods to monitor CoT reasoning. Using the Cumulative Sum (CUSUM) algorithm, a statistically optimal change-point detector, we develop a training-free framework for real-time inference control. Experiments show our approach establishes a superior Pareto-frontier for early exit. CUSUM achieves 63.06% accuracy with 11.1% token reduction, outperforming DEER and Dynasor by 3.28% and 4.36% in accuracy respectively. For test-time scaling, CUSUM-weighted voting consistently outperforms self-consistency.",
+    "published": "2026-06-01",
+    "updated": "2026-06-01",
+    "pdf_url": "https://arxiv.org/pdf/2606.02020v1",
+    "categories": [
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.01546v1",
+    "title": "Flexible Online Representation Learning Based on Similarity Matching",
+    "authors": [
+      "Shagesh Sridharan",
+      "Yanis Bahroun",
+      "Anirvan M. Sengupta"
+    ],
+    "summary": "Sparse high-dimensional representations are conducive to uncovering nontrivial structures in unsupervised exploration of data. Such a representation can deal with the dense connectivity in graphs relevant to community detection problems. However, sparse high-dimensional representations are capable of doing more, including manifold tiling and feature learning. Conventional algorithms optimize in the space of computationally intractable completely positive matrices or relax the problem to the space of doubly nonnegative matrices that scale with sample size in a way rendering them impractical for large data sets. Some of these methods also impose a row sum constraint, such as double stochasticity. Row sum constraints have the added advantage of being shift-invariant, in the context of manifold tiling. Constraints on the row sum of output similarity matrices require nontrivial online learning rules. Addressing these needs, we propose a versatile online biologically plausible learning algorithm capable of learning sparse shift-invariant representations, useful for clustering, manifold tiling, or sparse coding, depending on the data structure.",
+    "published": "2026-06-01",
+    "updated": "2026-06-01",
+    "pdf_url": "https://arxiv.org/pdf/2606.01546v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.01436v1",
+    "title": "Learning from Saturated Data: Signals Beyond Correctness for LLM Training",
+    "authors": [
+      "Hanno Hiss",
+      "Jasper Dekoninck",
+      "Martin Vechev"
+    ],
+    "summary": "The growing capabilities of large language models (LLMs) have led to the saturation of many benchmarks and training datasets used to improve them. Motivated by this, we investigate whether questions solved with perfect empirical accuracy can nevertheless be used to improve downstream performance. To do so, we replace binary correctness with two sources of more fine-grained quality signals: (1) pairwise LLM self-judgments, in which the model evaluates the relative quality of its own solutions, and (2) token-level entropy, where token-level uncertainty is used as a proxy for solution quality. We incorporate these signals into several training algorithms and evaluate them on Qwen3-1.7B-Base. When training exclusively on a simple arithmetic task, quality-based signals improve performance by up to $18.6\\%$ over the base model, substantially outperforming SFT. On GSM8K, however, gains are more modest and depend strongly on the quality signal. For instance, self-judgments show poor agreement with a stronger external judge and can even degrade performance below the base model. Overall, our results suggest that quality-based training can extract useful signal from saturated questions for base models, but that applying such signals to more complex tasks requires careful calibration and further study.",
+    "published": "2026-05-31",
+    "updated": "2026-05-31",
+    "pdf_url": "https://arxiv.org/pdf/2606.01436v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.01238v1",
+    "title": "Training-Free Imitation Learning with Closed-Form Diffusion Policies",
+    "authors": [
+      "Raghav Mishra",
+      "Ian R. Manchester"
+    ],
+    "summary": "While diffusion-based policies have impressive performance and expressivity, their long offline training slows down the data collection and policy deployment loop. We introduce Closed-Form Diffusion Policies, a class of training-free diffusion-based policies for imitation learning using the closed-form score derived from the demonstration dataset. We deploy CFDP with real-time inference with a mobile CPU in hardware experiments, showing it can successfully perform imitation directly from the dataset in milliseconds and with faster inference than neural diffusion policies. In experiments on imitation learning benchmarks, we show that CFDP is competitive against neural baselines that require hours of training, providing a favorable tradeoff between training time and performance. Finally, we show how closed-form diffusion policies act as a composable primitive that enables data-driven inference-time editing of pre-trained neural diffusion policies, including policy guidance and novel demonstration augmentation.",
+    "published": "2026-05-31",
+    "updated": "2026-05-31",
+    "pdf_url": "https://arxiv.org/pdf/2606.01238v1",
+    "categories": [
+      "cs.RO",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.00991v1",
+    "title": "Large Language Models in Transportation Systems Management and Operations: From Text Reasoning to Multi-modal Decision Support",
+    "authors": [
+      "Siyan Li",
+      "Zehao Wang",
+      "Jiachen Li",
+      "Kanok Boriboonsomsin",
+      "Matthew J. Barth",
+      "Guoyuan Wu"
+    ],
+    "summary": "Transportation systems management and operations (TSMO) increasingly depends on timely interpretation of heterogeneous data, from various sensor streams, incident reports, traveler feedback, and visual observations. Large language models (LLMs), including emerging multi-modal large language models (MM-LLMs), provide a new mechanism for integrating these structured and unstructured inputs into operator-facing decision support. This survey paper reviews LLM- and MM-LLM-based applications in TSMO across three domains: transportation operations & services (supply), mobility & fleet services (demand), and data, modeling & decision support. Using a PRISMA-guided screening process, we synthesize current studies while distinguishing operationally oriented applications from prototype and emerging concepts. We further identify recurring challenges in data heterogeneity, real-time inference, explainability, multi-modal fusion, and governance. Finally, we outline existing gaps and future directions in localized adaptation, edge deployment, benchmarking, and cross-agency collaboration. Overall, LLM-based systems appear most promising as a decision-support layer, with MM-LLMs offering particular value when heterogeneous text, visual, and sensor inputs must be integrated.",
+    "published": "2026-05-31",
+    "updated": "2026-05-31",
+    "pdf_url": "https://arxiv.org/pdf/2606.00991v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.00946v1",
+    "title": "Lodestar: An Online-Learning LLM Inference Router",
+    "authors": [
+      "Gangmuk Lim",
+      "Wanyu Zhao",
+      "Brighten Godfrey",
+      "Jiaxin Shan",
+      "Le Xu",
+      "Liguang Xie"
+    ],
+    "summary": "Efficiently serving large language model (LLM) inference tasks is crucial both for user-perceived latency such as time-to-first-token (TTFT) and for GPU utilization. However, LLM request routing, that is, assigning each inference request to a GPU instance, is particularly challenging: execution is highly input-dependent; batching and KV-cache reuse create strong cross-request coupling; and latency responds nonlinearly to context length, model/engine settings, and heterogeneous accelerators. As a result, simple traditional load balancing algorithms, and even heuristics tailored for LLM inference, fail to achieve good performance. We present Lodestar, a novel learning-based request routing system for distributed GPU clusters. Lodestar continuously collects a snapshot of the cluster at per-request level, including real-time instance state, request characteristics, and observed performance, and trains an online reward predictor that it uses to route inference requests to the instance that will maximize given reward (e.g., minimizing TTFT). Lodestar is cloud-native and works seamlessly with existing serving stacks (vLLM). With continuous online adaptation to changing workloads and infrastructure conditions, Lodestar achieves 1.41x lower average TTFT and 1.47x lower P99 TTFT on average (up to 2.15x/1.86x on homogeneous and 4.38x/4.42x on heterogeneous clusters) compared to a state-of-the-art prefix cache and load-aware heuristic, and learns these efficient routing strategies within about 5 minutes, based on experiments in a public cloud GPU cluster.",
+    "published": "2026-05-31",
+    "updated": "2026-05-31",
+    "pdf_url": "https://arxiv.org/pdf/2606.00946v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.00888v1",
+    "title": "Memory-Efficient LLM Training with Dynamic Sparsity: From Stability to Practical Scaling",
+    "authors": [
+      "Qiao Xiao",
+      "Boqian Wu",
+      "Patrik Okanovic",
+      "Tomasz Sternal",
+      "Maurice van Keulen",
+      "Elena Mocanu",
+      "Mykola Pechenizkiy",
+      "Decebal Constantin Mocanu",
+      "Torsten Hoefler"
+    ],
+    "summary": "Dynamic Sparse Training (DST) offers a promising paradigm for improving the training and inference efficiency of deep neural networks; however, we find that in large language model training, DST can suffer from optimization instability, manifested as loss spikes after topology updates. In this work, we show that the naive use of standard Adam-based optimizers leads to a cold-start issue for newly regrown parameters, resulting in excessively large updates and disrupted training dynamics. To address this issue, we propose Sparse Memory-Efficient Training (SMET), which stabilizes DST with optimizer warm-up and improves training progress through density-aware learning-rate scaling. SMET further reduces memory consumption by storing gradients and optimizer states only for active parameters. We provide a theoretical analysis of the update behaviors under SMET, showing improved optimization stability. Extensive experiments demonstrate that SMET enables stable, scalable, and memory-efficient sparse pre-training of LLMs, paving the way for sparse training as a practical alternative to dense training. Our code is publicly available at: https://github.com/QiaoXiao7282/SMET.",
+    "published": "2026-05-30",
+    "updated": "2026-05-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.00888v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/QiaoXiao7282/SMET.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.00734v1",
+    "title": "EMA: Approximate Nearest Neighbor Search with General Attribute Filtering and Dynamic Updates",
+    "authors": [
+      "Mocheng Li",
+      "Baotong Lu",
+      "James Cheng",
+      "Chenhao Ma"
+    ],
+    "summary": "Filtering Approximate Nearest Neighbor (FANN) search is a critical and emerging task for strengthening the query capability of vector databases, supporting applications such as recommendation systems, retrieval-augmented generation (RAG), and agent memory. However, most existing methods are limited to range or label filtering, often incurring unacceptable index construction time and memory overhead. Predicate-agnostic approaches further struggle to handle a wide range of predicate selectivities effectively. In this paper, we propose EMA, a filtering ANN algorithm that supports multi-predicate queries over mixed numerical and categorical attributes, and efficient dynamic updates. EMA introduces Markers as compact summaries attached to graph edges, providing conservative predicate- and geometric-aware guidance with zero false negatives at the Marker level. During query processing, EMA performs Marker-augmented joint search with a bounded edge recovery mechanism, enabling efficient filtering while preserving graph navigability. Extensive experiments demonstrate that EMA achieves 1.68x--12.25x speedup over state-of-the-art general filtering ANN methods across diverse workloads.",
+    "published": "2026-05-30",
+    "updated": "2026-05-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.00734v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2606.00329v1",
+    "title": "Benchmarking Recursive-Collapse Warning Claims Under Matched False-Positive Control",
+    "authors": [
+      "David Mullett"
+    ],
+    "summary": "Recursive systems can enter collapse-like regimes -- self-reinforcing amplification, persistent recursion, and narrowing diversity that mask accelerating internal degradation -- before overt failure becomes visible. We introduce Loopzero, a claim-bounded benchmark framework for testing whether recursive failures follow a directional telemetry pattern: rising gain (G), recursive persistence (p), and declining diversity ($δ$). The claim boundary is specified in Lean; the Lean artifact does not verify real telemetry, benchmark validity, or detector performance.\n  We evaluate the bridge on two frozen public-artifact benchmarks: a segmented public-markets benchmark (Volmageddon 2018, COVID MWCB 2020) and a MovieLens-25M offline deterministic recommender replay. Detectors are evaluated under a locked equal-false-positive contract (FP $\\in$ [0.03, 0.07], pre-registered) so all configurations face the same alert budget. Neither tested standard comparators nor Loopzero's pre-registered quantile detector achieved an accepted operating point. Directional witness alignment held on both canonical benchmarks, with adjacent-horizon and row-level limitations disclosed. Digitized Shumailov et al. (2024) LLM training-loop trajectories are directionally consistent with the pattern; matched-FP evaluation in that domain is deferred.\n  The contribution is a reproducible, falsifiable benchmark framework for evaluating recursive-collapse warning claims under an explicit alert-budget contract -- non-acceptance reported as a first-class scientific outcome.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.00329v1",
+    "categories": [
+      "eess.SY",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2605.31480v1",
+    "title": "Language Models Can Resolve Reference Compositionally, But It's Not Their Native Strength: The Case of the Personal Relation Task",
+    "authors": [
+      "Bart Evelo",
+      "Meaghan Fowlie",
+      "Denis Paperno"
+    ],
+    "summary": "Do neural models, such as Large Language Models, genuinely acquire compositional abilities for interpretation of natural language? When we talk about semantic interpretation, we can distinguish two complementary aspects: establishing what an expression refers to in the world (which we call the Extensional task) and representing its sense in a structured way (which we call the Intensional task). We evaluate LLMs and humans on both tasks in the setting of the Personal Relation Task (Paperno 2022) in which, given a universe of people and their relationships with each other, one is asked to interpret a noun phrase such as \"Amber's parent's friend\". Here, for the Intensional task, the answer is the formula \"friend(parent(amber))\", and for the Extensional task, the person. We find that humans and LLMs show opposite strengths: humans perform better on Extensional than Intensional tasks, and LLMs vice versa. Our methodology brings greater nuance to the understanding of compositional abilities in modern machine learning models. Our results support the notion that the lack of referential grounding in LLM training is a crucial missing component in mimicking human-like language understanding.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31480v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2605.31164v1",
+    "title": "D$^3$: Dynamic Directional Graph-Constrained Data Scheduling for LLM Training",
+    "authors": [
+      "Yuanjian Xu",
+      "Jianing Hao",
+      "Guang Zhang",
+      "Zhong Li"
+    ],
+    "summary": "Training data plays a central role in large language models (LLMs) optimization, motivating extensive research on data scheduling strategies. Most existing approaches concentrate on adjusting the overall data distribution but neglect the underlying interactions between samples during training. However, we argue that such interactions cannot be overlooked, as real-world data samples frequently exhibit directional influences on each other, making the training order crucial. Intuitively, we can prioritize train-units with greater influence to improves learning efficiency. In this work, we propose $D^3$, a Dynamic Directional graph-constrained Data scheduling framework. $D^3$ formulates the complex interactions among train-units as a dynamic influence graph, where edges represent loss-based dependencies. It then solves a constrained optimization problem over this graph to derive the training order, which ensures that the data sequence respects the evolving information flow throughout training. Our approach is theoretically motivated and yields consistent improvements over existing data scheduling methods across both pre-training and post-training phases. Furthermore, for scalability, $D^3$ also employs an efficient approximation algorithm that keeps the additional computational overhead within a manageable range. For future research, the code is available at https://github.com/xuyj233/D3.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2605.31164v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/xuyj233/D3.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.00320v1",
+    "title": "Adversarially Robust Control of Conditional Value-at-Risk via Rockafellar-Uryasev Conformal Inference",
+    "authors": [
+      "Catherine Chen",
+      "Jingyan Shen",
+      "Zhun Deng",
+      "Lihua Lei"
+    ],
+    "summary": "We present an online, distribution-free framework for controlling the Conditional Value-at-Risk (CVaR), extending conformal tail risk control to non-stationary and adversarial environments. Unlike classical risk control methods, which rely on stationarity or linearity of expectation, our approach provides provable safety guarantees for a nonlinear tail risk functional under arbitrary data-generating processes that may drift or shift strategically over time. By leveraging deep connections between conformal tail risk control, online learning, and the variational representation of CVaR introduced by Rockafellar and Uryasev, we develop a novel procedure for online CVaR control with adversarial regret guarantees. The proposed method operates without assumptions on the underlying data-generating process, making it broadly applicable in modern high-stakes deployment settings. We prove that the realized empirical CVaR is asymptotically controlled at the target level, and that the resulting control is asymptotically tight up to a finite-sample conservatism gap. We demonstrate the effectiveness of our approach on portfolio risk management and toxicity mitigation for Large Language Models (LLMs), where rare but catastrophic failures dominate system risk.",
+    "published": "2026-05-29",
+    "updated": "2026-05-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.00320v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
