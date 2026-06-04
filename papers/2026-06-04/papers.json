@@ -1,0 +1,233 @@
+[
+  {
+    "id": "2606.04591v1",
+    "title": "Fine-grained Fragment Retrieval in Multi-modal Long-form Dialogues",
+    "authors": [
+      "Hanbo Bi",
+      "Zhiqiang Yuan",
+      "Chongyang Li",
+      "Qiwei Yan",
+      "Zexi Jia",
+      "Jiapei Zhang",
+      "Xiaoyue Duan",
+      "Yingchao Feng",
+      "Jinchao Zhang",
+      "Jie Zhou"
+    ],
+    "summary": "With the widespread adoption of multi-modal communication platforms, long-form dialogues interleaving text and images have become increasingly common. Users often need to retrieve coherent dialogue fragments related to specific topics, rather than isolated utterances. We propose Fine-grained Fragment Retrieval (FFR), which locates semantically relevant multi-utterance, multi-image fragments in multi-modal long-form dialogues. We explore two settings: (1) FFR within Single-Dialogue, retrieving fragments from a given dialogue; and (2) FFR within Dialogue Corpus, retrieving from a large-scale corpus for open-domain scenarios. For (1), we introduce F2RVLM, a generation-based retrieval model trained with reinforcement learning, using multi-objective rewards and difficulty-aware curriculum sampling to enhance fragment coherence. For (2), we develop FFRS, a two-stage system combining offline fragment-level indexing with online retrieval. Specifically, each dialogue is decomposed into minimal semantic fragments encoded by a Fragment Embedding Model (FEM) into a vector database; at inference, FEM rapidly recalls Top-K candidates, and F2RVLM performs fine-grained reasoning to identify the most relevant sub-content. To support FFR, we construct MLDR, the longest multi-modal dialogue retrieval dataset to date, and a WeChat-based real-world test set. Experiments on both benchmarks demonstrate that F2RVLM and FFRS consistently achieve superior performance across single-dialogue and corpus-level FFR.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.04591v1",
+    "categories": [
+      "cs.CL",
+      "cs.CV"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.04582v1",
+    "title": "Reconstructing Unobservable Temperature Fields via Simulation-Aided Intelligent Sensing",
+    "authors": [
+      "Monika Stipsitz",
+      "Hèlios Sanchis-Alepuz",
+      "Jacob Reynvaan",
+      "Silvester Sabathiel"
+    ],
+    "summary": "Real-time monitoring of the temperature distribution within components and sub-structures is a challenging topic in many systems due to restrictions on feasible sensor locations. While machine learning (ML) proves a versatile tool in many applications, its adoption for high-resolution thermal monitoring is hindered by the availability of high-quality datasets for training. In this work, we propose a novel approach for generating datasets for industrial applications based on randomized physics-based simulations. We demonstrate the approach in a proof-of-concept hardware setup: A neural network (NN) trained only on such a synthetic dataset, is used to reconstruct the internal temperature field from sparse sensors embedded in the hardware. The NN-based reconstructions do not only outperform Kriging in robustness but also enable real-time inference, making the method suitable for online monitoring of otherwise unobservable thermal states.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.04582v1",
+    "categories": [
+      "physics.comp-ph",
+      "cs.LG",
+      "physics.app-ph"
+    ],
+    "primary_category": "physics.comp-ph",
+    "github": null
+  },
+  {
+    "id": "2606.04931v1",
+    "title": "Mean-based algorithms: A lower bound and regret",
+    "authors": [
+      "Julius Durmann",
+      "Amelie Kleber"
+    ],
+    "summary": "Mean-based algorithms are a class of online learning algorithms that assign low probability to actions with low average rewards. Recent work indicates these algorithms converge favorably to serially undominated actions, which approximate Nash equilibria in economic games. However, empirical studies also show slower convergence compared to established algorithms in bandit-feedback scenarios.\n  We study mean-based algorithms when the time horizon is unknown and only bandit feedback is available. In this setting, we provide the first lower bound on the algorithm-defining sequence $γ_t$ that formally establishes a limit on how fast these algorithms can learn. Additionally, we propose two mean-based algorithms: one generalizes $ε$-greedy, and the other extends the mean-based Exp3 to unknown horizons. Our experiments show that mean-based algorithms, although slightly slower, can perform competitively with other bandit-feedback algorithms.\n  We further analyze the relationship to no-regret algorithms. Depending on the choice of $γ_t$, the intersection with no-regret algorithms is non-trivial, and we show that algorithms exist that are both mean-based and no-regret. This adds context to the \"exploitability\" of this class of algorithms that previous contributions suggest.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.04931v1",
+    "categories": [
+      "cs.LG",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.04305v1",
+    "title": "Offline-to-Online Learning in Linear Bandits",
+    "authors": [
+      "Kushagra Chandak",
+      "Toshinori Kitamura",
+      "Xiaoqi Tan"
+    ],
+    "summary": "We study online learning with an additional offline dataset in the stochastic linear bandit setting. Although this problem arises frequently in practice, the offline-to-online tradeoff remains poorly understood in structured environments. We propose a linear bandit algorithm that balances this tradeoff: it relies on offline data during early rounds, and increasingly favors exploration as the horizon grows. We establish regret bounds showing that our method is simultaneously competitive with both purely online and purely offline solutions. In particular, it achieves sublinear regret relative to the optimal action in the number of online interactions, while its regret relative to an offline reference decreases as the number of offline samples grows. Empirical results further demonstrate its effectiveness across various problem parameters.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.04305v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.04272v1",
+    "title": "RL Excursions during Pre-Training: Re-examining Policy Optimization for LLM training",
+    "authors": [
+      "Rachit Bansal",
+      "Clara Mohri",
+      "Tian Qin",
+      "David Alvarez-Melis",
+      "Sham Kakade"
+    ],
+    "summary": "The standard LLM training pipeline applies reinforcement learning (RL) only after pre-training and supervised fine-tuning (SFT). We question this status quo by training a LLM from scratch and applying RL, SFT, and SFT followed by RL directly to intermediate pre-training checkpoints. We find that RL is effective very early, and often matches the full SFT$\\to$RL pipeline early as well. Through experiments on harder problems, we find that targeted pre-training data composition is a strong lever for RL effectiveness, even more so than model scale. Beyond reasoning accuracy, applying RL directly to base checkpoints expands the model's distribution; the sharpening effect reported in recent work arises only when RL follows SFT. The general capabilities of the model remain essentially unchanged by RL, while they degrade following SFT. Finally, we merge RL and SFT objectives by parallel averaging, which outperforms across all other training methods discussed, across metrics, while preserving general capabilities. Together, these results suggest that LLM training might benefit from an expanded use of RL.",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.04272v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.03108v1",
+    "title": "EvoTrainer: Co-Evolving LLM Policies and Training Harnesses for Autonomous Agentic Reinforcement Learning",
+    "authors": [
+      "Guhong Chen",
+      "Yingcheng Shi",
+      "Yongbin Li",
+      "Binhua Li",
+      "Xander Xu",
+      "Hu Wei",
+      "Shiwen Ni",
+      "Min Yang",
+      "Jieping Ye"
+    ],
+    "summary": "Autonomous LLM training is often framed as recipe search, which leaves the training harness largely static. This limitation sharpens in agentic RL, where shifting bottlenecks and scalar rewards mask diverse failure modes. We introduce EvoTrainer, an autonomous training framework that co-evolves LLM policies and training-side harnesses through empirical feedback: it diagnoses rollout-level evidence, revises diagnostics, backtests interventions, and accumulates reusable skills. Evaluated on mathematical reasoning, competitive-programming code generation, and repository-level software engineering, EvoTrainer matches or exceeds the human-engineered RL references under the same data, codebase, and evaluation protocol, with the largest gain on long-horizon agentic SWE. Trajectory analyses show that retained strategies diverge across domains, evolving diagnostics prevent invalid high-scoring branches from being promoted, and reusable skills shape later search. Autonomous LLM RL should move beyond recipe search toward joint evolution of policies and the training harnesses that interpret them.",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03108v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.03151v1",
+    "title": "ACRONYM: Accelerated Approximate Nearest Neighbor Search in Memory for Dynamic Vector Databases",
+    "authors": [
+      "Md Mizanur Rahaman Nayan",
+      "Tianqi Zhang",
+      "Flavio Ponzina",
+      "Tajana Rosing",
+      "Azad J Naeemi"
+    ],
+    "summary": "Vector database search with frequent updates is increasingly critical in applications such as retrieval augmented generation, recommendation systems, and large-scale embedding retrieval. Existing solutions, such as graph-based and partition-based approximate nearest neighbor search (ANNS), suffer from frequent index rebuilding due to data distribution-dependent indexing that impacts continuous deployment and causes long rebuilding latency. This paper proposes an algorithm-hardware co-designed platform, ACRONYM, that addresses key problems with state of the art database search. Algorithmically, it leverages efficient encoding independent of data distribution and Hamming-distance based search for efficient hardware acceleration. Architecturally, we propose CAM-based in-memory parallel distance computation followed by time multiplexed approximated top-k selection to enable the exhaustive search. We propose two-stage search that includes coarse search followed by binary refinement to achieve high recall in CAM based search which is heavily limited to small vector dimension due to capacity and wordline parasitic. ACRONYM supports continuous update without stalling and integrates novel XOR-and-Accumulate (XAC) based systolic-array encoder for efficient on chip encoding during search. Across million-scale datasets, while serving dynamic database ACRONYM achieves >90% recall at a throughput of 8e6 queries per second, with a memory footprint of only 32MB and an average energy consumption of 2.56uJ per query, speedup over HNSW (CPU) of about 400x and FAISS-IVF (GPU) of about 80x.",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03151v1",
+    "categories": [
+      "cs.AR",
+      "cs.DB",
+      "cs.ET"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  },
+  {
+    "id": "2606.03831v1",
+    "title": "Online Learning with Gradient-Variation Interval Regret",
+    "authors": [
+      "Yan-Feng Xie",
+      "Shuche Wang",
+      "Peng Zhao",
+      "Zhi-Hua Zhou"
+    ],
+    "summary": "This paper investigates non-stationary online learning using the metric of interval regret, which requires an online algorithm to perform well over every time interval. We propose the first online learning algorithm that achieves an interval regret bound scaling with gradient variation, a fundamental measure of the cumulative change in online function gradients, which relates to various problem-dependent quantities and is closely connected to stochastic optimization and other problems. Our method employs a simple and efficient two-layer online ensemble structure that achieves strong theoretical guarantees. Specifically, it enjoys a regret bound that simultaneously adapts to various problem-dependent quantities while also preserving the minimax-optimal rate in the worst case. Moreover, recognizing the challenge of hyperparameter tuning, we introduce a Lipschitz- and smoothness-agnostic variant that automatically adapts to these potentially unknown constants. This is primarily enabled by a novel Lipschitz-adaptive meta algorithm, which may be of independent interest. Beyond interval regret, our method also yields broader implications: it provides versatile bounds for interval dynamic regret, a stronger measure that competes with changing comparators over any interval, and yields the first piecewise characterization for stochastic extended adversarial optimization. Theoretical findings are validated by experiments.",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03831v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.03664v1",
+    "title": "AUGUSTE: Online-Learning dApp for Predictive URLLC Scheduling",
+    "authors": [
+      "Maxime Elkael",
+      "Michele Polese",
+      "Yunseong Lee",
+      "Koichiro Furueda",
+      "Tommaso Melodia"
+    ],
+    "summary": "Ultra Reliable and Low Latency Communications (URLLC) was one of the main motivations behind 5G, with 3GPP advertising 1-10 ms latency targets for applications such as industrial automation, Vehicle-To-Everything (V2X), tactical edge networking, and unmanned-system control. Years on, real 5G Time Division Duplexing (TDD) networks still show median Uplink (UL) round-trip times in the 50-70 ms range, largely because of the Scheduling Request (SR) procedure that a User Equipment (UE) must complete before transmitting UL data. Existing remedies, primarily Configured Grant (CG) scheduling, only eliminate this overhead for strictly periodic traffic and require cross-layer synchronization, which has limited their adoption. We propose AUGUSTE (Anticipatory Uplink Grants for URLLC via Self-Adapting Temporal Estimation), a learning-based Medium Access Control (MAC) scheduling framework that embeds online Machine Learning (ML) models in the UL scheduler to predict packet arrivals and proactively allocate resources before an SR is issued. An adaptive state machine alternates between a learning phase that collects unbiased arrival statistics and a confident phase that exploits the learned predictions to schedule only when traffic is expected. We evaluate AUGUSTE on a real 5G testbed running OpenAirInterface across three URLLC traffic patterns (request-response, ML edge inference, and periodic autonomous reporting), and show that it operates at the best achievable point on the latency-overhead trade-off: it matches always-on scheduling's median Round Trip Time (RTT) (around 10 ms, halving the 20 ms SR-based baseline) at roughly one-tenth its resource cost (7-10 percent overhead).",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03664v1",
+    "categories": [
+      "cs.NI",
+      "cs.AI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2606.03770v1",
+    "title": "E2LLM: Towards Efficient LLM Serving in Heterogeneous Edge/Fog Environments",
+    "authors": [
+      "Truong-Thanh Le",
+      "Amir Taherkordi",
+      "Hoang-Loc La",
+      "Frank Eliassen",
+      "Phuong Hoai Ha",
+      "Peiyuan Guan"
+    ],
+    "summary": "Large Language Models (LLMs) have become integral to modern applications, yet their deployment remains challenging. Beyond executing the models themselves, practical deployment must address cost efficiency, low latency, and optimal resource utilization. Conventional approaches typically assume that an entire model can be hosted on a single device, which does not hold in many real-world scenarios, particularly in Edge and Fog environments where device resources are constrained. In this paper, we introduce E2LLM, a framework designed to enable efficient LLM deployment in such resource limited settings. Rather than simply partitioning a single model across all available devices, E2LLM replicates the full model across multiple groups of devices (replicas) and applies model parallelism within each replica. Each replica is assigned a specialized role PREFILL or DECODER based on its efficiency in handling input and output tokens. This separation leverages the inherent differences between these two phases of LLM inference. To effectively organize devices, we utilize a Genetic Algorithm to form clusters that maximize system performance. Within each cluster, we apply Dynamic Programming to determine an optimal partitioning strategy that minimizes bottlenecks in model-parallel execution. Experimental results demonstrate that our approach adapts robustly to varying workloads, including scenarios with significant variation in input and output token lengths. Compared to the Splitwise baseline, E2LLM reduces average waiting time by over 50% under high-demand conditions",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03770v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.03498v1",
+    "title": "Demystifying Pipeline Parallelism: First Theory for PipeDream",
+    "authors": [
+      "Ivan Ilin",
+      "Peter Richtárik"
+    ],
+    "summary": "Training modern machine learning models increasingly requires computation to be distributed across many accelerators. Data parallelism remains the default choice and is often paired with tensor-parallel sharding, but model parallelism becomes unavoidable once parameters, activations, or optimizer states no longer fit on a single device. This paper studies pipeline model parallelism through the lens of PipeDream (PD) (Harlap et al., 2018). Our first contribution is theoretical: we introduce Randomized PipeDream (RPD), a stale block-SGD abstraction that yields, to our knowledge, the first clean nonconvex convergence guarantee for a PD-style method. Our second contribution is a scaling diagnosis: we prove that the delay induced by steady-state PD grows as $S^2 - S/2 + O(1)$ for $S$ stages, so the stale-read contribution in the convergence theorem scales as $Θ(γ^2 S^4)$, equivalently as $Θ(S^4/K)$ in the tuned-rate form. Our third contribution is a comparison with LocalSGD, whose periodic model averaging trades weight staleness for synchronization bubbles. In our reported simulated-time experiments, the better-performing method depends on the objective: PD performs better on the quadratic objective and on a small language-modeling training-loss task, while for logistic regression LocalSGD becomes superior as the number of stages increases.",
+    "published": "2026-06-02",
+    "updated": "2026-06-02",
+    "pdf_url": "https://arxiv.org/pdf/2606.03498v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
