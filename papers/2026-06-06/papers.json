@@ -1,0 +1,265 @@
+[
+  {
+    "id": "2606.06470v1",
+    "title": "PC Layer: Polynomial Weight Preconditioning for Improving LLM Pre-Training",
+    "authors": [
+      "Senmiao Wang",
+      "Tiantian Fang",
+      "Haoran Zhang",
+      "Yushun Zhang",
+      "Kunxiang Zhao",
+      "Alex Schwing",
+      "Ruoyu Sun"
+    ],
+    "summary": "We propose a preconditioning (PC) layer, a weight parameterization via polynomial preconditioner that ensures stable weight conditioning throughout LLM training. The PC module reshapes the singular-value spectrum of weight matrices via low-degree polynomial preconditioning. After training, the preconditioned weights can be merged back into the original architecture, incurring no inference overhead. We demonstrate the advantage of the proposed PC layer over standard transformers in Llama-1B pre-training, for both the AdamW and Muon optimizers. Theoretically, we justify this spectrum-control principle by proving that uniformly bounding each layer's singular values ensures geometric convergence of gradient descent to global minima, for certain deep linear networks. Our code is available at https://github.com/Empath-aln/PC-layer.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06470v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/Empath-aln/PC-layer.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.05924v1",
+    "title": "Better Literary Translation: A Multi-Aspect Data Generation and LLM Training Approach",
+    "authors": [
+      "Zhihao Lin",
+      "Ziqi Zhu",
+      "Hao Huang",
+      "Guanghui Wang",
+      "Peiyang He"
+    ],
+    "summary": "Literary translation poses unique challenges due to the scarcity of high-quality annotated data and the need to balance expression fluency with literary effect. We present a multi-aspect iterative refinement framework that generates high-quality translation references and preference data through specialized LLM translators, each targeting a distinct quality dimension. We leverage the generated data for supervised fine-tuning and reinforcement learning. Experiments show that our generated references outperform the original ground truth for SFT by 8.65 CEA100 points. For reinforcement learning, we find that DPO leads to performance degradation in this setting, while leveraging an explicit reward model for GRPO yields an additional 1.51 point improvement. We attribute this to the stability of two-stage training and GRPO's online exploration capability. Our resulting models, LitMT-8B and LitMT-14B, achieve 67.25 and 69.07 CEA100 respectively on the MetaphorTrans English-to-Chinese literary translation benchmark, competitive with Claude Sonnet 4.5 at 68.43, and demonstrate strong generalization to out-of-domain literary work (i.e., O. Henry).",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.05924v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.06256v1",
+    "title": "RedKnot: Efficient Long-Context LLM Serving with Head-Aware KV Reuse and SegPagedAttention",
+    "authors": [
+      "Yang Liu",
+      "ZhaoKai Luo",
+      "HuaYi Jin",
+      "ZhiYong Wang",
+      "RuoZhou He",
+      "BoYu Wang",
+      "Guanjie Chen",
+      "Junhao Hu"
+    ],
+    "summary": "As the input length of large language model (LLM) serving continues to grow, the KV cache has become a dominant bottleneck in AI infrastructure. It limits GPU memory capacity, serving concurrency, cache reuse, and distributed scalability. Several important problems, including position-independent KV cache, prefix KV cache compression, hot/cold KV cache separation, and distributed KV cache management, all depend on how the KV cache is represented and managed. However, existing serving systems largely rely on a monolithic KV cache abstraction, where the KV cache is treated as a homogeneous sequence of token-level memory blocks and managed with similar policies across attention heads and serving scenarios. We observe that KV cache utility is highly structured across KV heads: different heads exhibit different functional roles, attention distances, and runtime importance. Therefore, a full KV cache is not always necessary for every head, token range, or serving scenario.\n  We present RedKnot, a head-aware KV cache management system for LLM serving. RedKnot breaks the conventional monolithic KV cache abstraction by decomposing the KV cache along KV heads, whose importance and effective attention ranges vary significantly across serving scenarios. This head-level decomposition turns the KV cache from a monolithic tensor abstraction into a structured memory object, enabling RedKnot to uniformly support position-independent KV reuse, prefix KV compression, hot/cold KV separation, and distributed KV placement while preserving output fidelity and improving resource efficiency, without requiring model retraining or fine-tuning. RedKnot establishes a new foundation for AI infrastructure by transforming the KV cache from a monolithic, passive runtime artifact into a dynamic, model-aware runtime substrate for scalable LLM serving.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06256v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.06083v1",
+    "title": "The Dignity-Centric Stack: A Commons-Governed, Horizontally Federated Architecture for Human-Dignity AI",
+    "authors": [
+      "Eduardo C. Garrido-Merchán"
+    ],
+    "summary": "The human-dignity-centric digital social contract grounds personal data in human dignity, data personalism, and data sovereignty, and articulates six dimensions of data governance: technological oversight, automation limits, economic justice, political legitimacy, social cohesion, and legal guarantees. It presupposes, however, that enforcement falls to State regulators, licensed fiduciaries, and multi-stakeholder bodies embedded in existing legal systems. This paper asks whether its normative content can instead be realized not as rules imposed on the owners of the AI stack from without, but as a commons-governed infrastructure that any person, firm, or State may use and fund while its governance stays horizontal, polycentric, and subsidiary. We construct the Dignity Stack, a six-layer architecture mapping each dimension onto a layer of commons-governed AI infrastructure, with protocols drawn from the Liberation Stack framework and from the cooperative, mutualist, and libertarian-municipalist traditions. The commons is State-agnostic rather than anti-State, anarchist in its horizontal means but not in the abolition of the State. Its central device is a decoupling of capital from control, by which the stack functions as a shared civic battery, charged by many contributors yet steered by none in proportion to its charge. We prove that this defeats formal capture through votes or surplus, and show that structural capture, the leverage of a dominant supplier free to withdraw what it provides, is resisted only insofar as operational supply is polycentric and substitutable, a condition demanding at the lower layers and perhaps presently unattainable at chip fabrication. We conclude, with explicit attention to its limits, that commons-governed AI realizes the values the contract proclaims more faithfully than the regulation it presupposes.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06083v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2606.06219v1",
+    "title": "CLEAR: Cognition and Latent Evaluation for Adaptive Routing in End-to-End Autonomous Driving",
+    "authors": [
+      "Yining Xing",
+      "Zehong Ke",
+      "Zhiyuan Liu",
+      "Yanbo Jiang",
+      "Wenhao Yu",
+      "Jianqiang Wang"
+    ],
+    "summary": "End-to-end autonomous driving models often struggle to balance multi-modal maneuver generation with real-time inference constraints. While diffusion models successfully capture diverse driving behaviors, their iterative denoising process incurs unacceptable latency for safety-critical deployment. To address this, we propose CLEAR (Cognition and Latent Evaluation for Adaptive Routing), a framework that combines ultra-fast generative planning with deep semantic reasoning. CLEAR employs Drive-JEPA as the visual encoder and replaces the multi-step denoising chain with a single-step conditional drift in a VAE latent space, introducing a conditioning coefficient to balance diversity and expert precision. Meanwhile, we fully fine-tune Qwen~3.5~0.8B on driving QA pairs to extract scene-aware hidden states. These states guide both an Adaptive Scheduler, which selects the conditioning coefficient $α$ and sample count $N$ from a discrete set of predefined schemes, and a cross-attention scorer that selects the optimal trajectory from candidates. On the NAVSIM v1 benchmark, CLEAR achieves a state-of-the-art PDMS of 93.7. Our results demonstrate that high-fidelity, multi-modal planning can be executed efficiently without dense geometric annotations or iterative sampling.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06219v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.06486v1",
+    "title": "Regret Minimization with Adaptive Opponents in Repeated Games",
+    "authors": [
+      "Mingyang Liu",
+      "Asuman Ozdaglar",
+      "Tiancheng Yu",
+      "Kaiqing Zhang"
+    ],
+    "summary": "In this paper, we study regret minimization in repeated games with \\emph{adaptive} opponents who can respond based on histories of play. The standard metric of \\emph{external regret} in online learning is known to fail to capture such adaptivity. To account for players' counterfactual reasoning, we introduce {\\tt Repeated Policy Regret (RP-Regret)}, a game-theoretic metric that measures the difference between the \\emph{realized} and the \\emph{best-in-hindsight} accumulated utility when all players can \\emph{respond} to the history of play. Compared to existing regret notions in this setting, ours is native to repeated game playing, enabling stronger comparators and opponents with fewer constraints, while maintaining the possibility of finding better equilibria when all players minimize it. We first identify necessary conditions for obtaining {\\tt RP-Regret} sublinear in time, on the variation of the player's comparator strategies in the regret definition and on the memories of both the comparator and opponents' strategies. We then study additional conditions and provable algorithms to minimize {\\tt RP-Regret}, which is by definition \\emph{non-convex} in the strategy space. To address this challenge, we propose three algorithms: (i) one based on an optimization oracle, as assumed in some prior work in online non-convex learning; (ii) one that minimizes a convex and \\emph{linearized} surrogate of {\\tt RP-Regret} at each iteration; (iii) one that directly minimizes {\\tt RP-Regret} when opponents change strategies slowly. Furthermore, when all players can run algorithms to minimize the {\\tt RP-Regret} (or its linearized variant), certain subgame perfect equilibria of the repeated game can be learned. We also provide experiments showing that minimizing our regret notions can lead to more cooperative solutions with higher utility in games such as Stag-Hunt.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06486v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.GT"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.06043v1",
+    "title": "Adaptive Learning Rates with Surrogate Probability for Follow-the-Perturbed-Leader",
+    "authors": [
+      "Jongyeong Lee",
+      "Junya Honda",
+      "Shinji Ito",
+      "Chansoo Kim"
+    ],
+    "summary": "Follow-the-regularized-leader framework has shown effectiveness and flexibility in online learning problems, where the choice of learning rates are known to be crucial. Recently, adaptive learning rates defined in terms of the arm-selection probabilities, obtained by solving convex optimization, have achieved improved best-of-both-worlds (BOBW) guarantees in various bandit problems. In contrast, BOBW guarantees for its computationally efficient alternative, follow-the-perturbed-leader (FTPL), remain relatively limited since its optimization-free nature ironically makes the design of adaptive, probability-dependent learning rates non-trivial. To address this challenge, we propose an adaptive learning rate for FTPL by introducing surrogate probability functions that can be computed only from the available quantities, without requiring the exact probabilities. Based on these learning rates with surrogate functions, we provide the BOBW guarantee for FTPL with Pareto perturbations for any shape parameter $α>1$, generalizing prior results restricted to specific choices of $α=2$. We further show the BOBW guarantees for FTPL with adaptive learning rates in the bandit problem with expert advices. Our approach preserves the computational simplicity of FTPL while enabling probability-dependent adaptivity, and the surrogate-based methodology may be of independent interest in other algorithmic frameworks beyond FTPL and learning rate designs.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06043v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2606.05661v1",
+    "title": "Continual Learning Bench: Evaluating Frontier AI Systems in Real-World Stateful Environments",
+    "authors": [
+      "Parth Asawa",
+      "Christopher M. Glaze",
+      "Gabriel Orlanski",
+      "Ramya Ramakrishnan",
+      "Benji Xu",
+      "Asim Biswal",
+      "Vincent Sunn Chen",
+      "Frederic Sala",
+      "Matei Zaharia",
+      "Joseph E. Gonzalez"
+    ],
+    "summary": "Continual learning, the ability of AI systems to improve through sequential experience, has attracted substantial interest, but no high-quality benchmark exists to evaluate it. We introduce Continual Learning Bench (CL-Bench), the first difficult, expert-validated benchmark designed to measure whether LLM-based systems genuinely improve with experience. CL-Bench spans six diverse domains (software engineering, signal processing, disease outbreak forecasting, database querying, strategic game-playing, and demand forecasting), each validated by domain experts and designed so that tasks share a learnable latent structure (codebase layout, disease outbreak dynamics, opponent strategies) that a stateful system can discover online but a stateless one cannot. We evaluate frontier models across several agent architectures, from naive in-context learning (ICL) to dedicated memory systems, introducing a gain metric to isolate learning from prior capabilities. We find that these systems leave headroom for improved continual learning: agents frequently overfit to immediate observations or fail to reuse knowledge across instances, and dedicated memory systems do not fix this -- in fact, naive ICL outperforms systems dedicated to memory management. CL-Bench is the first benchmark to evaluate continual learning across diverse real-world domains with expert-validated tasks and isolate online learning from underlying model capability, showing a need for better continual learning systems.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.05661v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.05559v1",
+    "title": "CLaaS: Continual learning as a service for sample efficient online learning",
+    "authors": [
+      "Kion Fallah",
+      "Silen Naihin",
+      "Barak Widawsky",
+      "Qingqing Mao"
+    ],
+    "summary": "Deployed large language model agents must adapt to distribution shift in dynamic environments. Ideally, adaptation can be performed from accumulated agent experiences and retain prior capabilities while transferring to future tasks. However, agent actions and environmental transitions can only be sampled once per scenario, as real-world environments cannot be trivially reset. To this end, we investigate an experiential and online continual learning setting in which agents learn from a stream of scenarios. We propose continual learning as-a-service (CLaaS), a system which enables agents to improve during deployment, abstracted behind a chat API. To increase sample efficiency, CLaaS stores rollouts in an experience replay buffer for gradient reuse during asynchronous training. We evaluate CLaaS on an adversarial task, demonstrating that parametric updates lead to superior forward transfer and less forgetting than in-context learning, with replay being a critical choice for sample efficiency.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.05559v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.05489v1",
+    "title": "LLM-Guided ANN Index Optimization for Human-Object Interaction Retrieval",
+    "authors": [
+      "Shahrzad Esmat",
+      "Chaunte W. Lacewell",
+      "Sameh Gobriel",
+      "Nilesh Jain",
+      "Ali Jannesari"
+    ],
+    "summary": "Retrieval systems underpin modern AI applications -- spanning visual search, recommendation engines, and multi-modal question answering. Modern multi-stage retrieval systems require the joint optimization of highly coupled parameters, yet traditional hyperparameter optimization (HPO) methods -- including Tree-structured Parzen Estimators (TPE) and Gaussian Process Bayesian Optimization -- rely on an independence assumption that fundamentally prevents them from navigating these coupled configuration spaces. We address this limitation with a phase-aware large language model (LLM) agent that conditions each proposal on its full optimization history, navigating the coupled parameter space across phase-partitioned exploration, exploitation, and fine-tuning stages. Evaluated on the HICO-DET human-object interaction retrieval benchmark using Intel VDMS (Visual Data Management System), our agent outperforms Optuna TPE by +33.3% and VDTuner by +34.2% under SIEVE (Safeguarded Index Evaluation of Vector-search Efficiency, a quality-constrained throughput metric), delivering a 15.3x throughput gain over UniIR. Validation across three benchmarks confirms that the agent's advantage grows with the degree of parameter coupling: +33.3% on HICO-DET (high coupling), methods converge within 1% on GLDv2 (moderate coupling) and within 3.6% on SIFT1M (near-independent control). Cross-system validation on Milvus confirms the optimizer ranks first on all three datasets without modification, demonstrating transferability across vector database management system (VDBMS) platforms.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.05489v1",
+    "categories": [
+      "cs.CV",
+      "cs.DB"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.05254v1",
+    "title": "Flash-WAM: Modality-Aware Distillation for World Action Models",
+    "authors": [
+      "Arman Akbari",
+      "Ci Zhang",
+      "Arash Akbari",
+      "Lin Zhao",
+      "Yixiao Chen",
+      "Weiwei Chen",
+      "Xuan Zhang",
+      "Geng Yuan",
+      "Yanzhi Wang"
+    ],
+    "summary": "World-action models (WAMs) jointly generate future video and robot actions through iterative diffusion, achieving strong performance on manipulation benchmarks but requiring tens of denoising steps, a cost that precludes real-time control. Step distillation has emerged as the natural remedy, but off-the-shelf methods break down in the joint video-action setting because video and action streams use different SNR-shifted noise schedules and reach training with substantially different marginal noise distributions, an asymmetry that single-modality distillation methods cannot accommodate. We introduce \\textbf{Flash-WAM}, a modality-aware step-distillation framework inspired by consistency distillation that selects the consistency function for each modality to match its noise regime: a linear-gradient-scaling parametrization for the action stream's low-noise regime, paired with a variance-preserving parametrization for the video stream's high-noise regime, grounded in a structural analysis of the consistency-function family that characterizes the achievable gradient scaling under the consistency boundary condition. Instantiated on LingBot-VA, Flash-WAM compresses inference to a single step in each modality. On RoboTwin 2.0, this reduces per-chunk latency from $8.1$ seconds to $348$ ms on NVIDIA L40S, a $23{\\times}$ speedup that enables real-time inference. Flash-WAM preserves task success on simulation benchmarks ($85.5\\%$ RoboTwin 2.0, $95.7\\%$ LIBERO) and substantially recovers real-world performance ($60\\%$ average on a Unitree G1 humanoid robot), while naive consistency distillation drops to $24\\%$ at the same step budget.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.05254v1",
+    "categories": [
+      "cs.LG",
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.05271v1",
+    "title": "BIDENT: Heterogeneous Operator-level Mapping for Efficient Edge Inference",
+    "authors": [
+      "Hoseok Kim",
+      "Arghadip Das",
+      "Soumendu Ghosh",
+      "Arnab Raha",
+      "Vijay Raghunathan"
+    ],
+    "summary": "Modern edge System-on-Chips (SoCs) integrate heterogeneous processing units (PUs) such as CPUs, GPUs, and NPUs, yet current inference stacks map entire models to a single PU, leaving significant performance and energy efficiency on the table. This is exacerbated by emerging architectures such as state-space models (SSMs), Kolmogorov-Arnold networks (KANs), and multi-stage vision-language-action (VLA) pipelines, whose diverse operator characteristics are not uniformly suited to any single PU. We present BIDENT, a unified operator-level orchestration framework for heterogeneous edge inference that maps individual operators to the most suitable PU based on profiled execution characteristics. BIDENT formulates operator-to-PU assignment as a shortest-path problem over a weighted execution graph, enabling efficient and optimal scheduling under the cost model for both latency- and energy-minimization objectives. Unlike prior work relying on model-specific heuristics or coarse-grained partitioning, BIDENT is model-agnostic and jointly supports sequential execution, intra-model parallelism across independent operators, and multi-model concurrent scheduling in a single formulation. We implement BIDENT on an Intel Core Ultra SoC and evaluate it across 10 model families spanning CNNs, Transformers, SSMs, KANs, spiking networks, and multi-stage pipelines. BIDENT achieves up to 1.60x speedup via intra-model parallelism and a 3.42x geometric mean speedup across 190 multi-model combinations by utilizing otherwise idle compute. Sequential heterogeneous mapping yields more modest gains (up to 1.58x, 1.09x geometric mean), while energy-aware scheduling reduces energy consumption by 48.2% on average in concurrent settings. These results show that operator-level orchestration, not model-level mapping, is the key abstraction for fully exploiting heterogeneity in next-generation edge AI.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.05271v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": null
+  }
+]
