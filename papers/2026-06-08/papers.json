@@ -1,0 +1,80 @@
+[
+  {
+    "id": "2606.06794v1",
+    "title": "TA-RAG: Tone-Aware Retrieval-Augmented Generation for Peer-Support Health Communication",
+    "authors": [
+      "Yong-Bin Kang",
+      "Anthony McCosker"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) successfully grounds large language model (LLM) outputs in trusted documents, but factual grounding alone is insufficient for sensitive peer-support health communication. In domains such as HIV peer support, responses must also be accessible, stigma-free, empathetic, and tailored to the recipient. This paper presents TA-RAG, a lightweight, prompt-based tone-aware RAG framework that embeds explicit tone control into a RAG pipeline without requiring model fine-tuning. We operationalise tone across four core components: stigma-free rewriting, readability adjustment, recipient adaptation, and empathy rephrasing. We evaluate TA-RAG through component-level tests using questions derived from HIV Online Learning Australia (HOLA), UNAIDS terminology guidance, readability metrics, peer-support standards from National Association of People with HIV Australia (NAPWHA), and a public empathy dataset. Results show that the TA-RAG's components improve their targeted communication quality while preserving key content. These findings emphasise that prompt-based tone control is a potential direction for making RAG outputs suitable for sensitive peer-support health communication.",
+    "published": "2026-06-05",
+    "updated": "2026-06-05",
+    "pdf_url": "https://arxiv.org/pdf/2606.06794v1",
+    "categories": [
+      "cs.CL",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.06586v1",
+    "title": "Improving Cross-Lingual Factual Recall via Consistency-Driven Reinforcement Learning",
+    "authors": [
+      "Jonathan von Rad",
+      "Louis Arts",
+      "George Burgess",
+      "Eleftheria Kolokytha",
+      "Harry O'Donnell",
+      "Ektor Oikonomidis Doumpas",
+      "Eduardo Sanchez",
+      "Yao Lu",
+      "Pontus Stenetorp"
+    ],
+    "summary": "Large language models (LLMs) trained predominantly on English data encode substantial world knowledge, yet often fail to express it reliably in other languages, a phenomenon known as cross-lingual factual inconsistency. To study and address this, we introduce PolyFact, a large-scale parallel multilingual factual QA dataset containing 100K Wikidata-grounded facts across 12 typologically diverse languages. Using PolyFact, we compare light continual pretraining (CPT), supervised fine-tuning (SFT), and reinforcement learning via Group Relative Policy Optimization (GRPO) for improving cross-lingual factual recall in Qwen-2.5-7B and OLMo-2-1124-7B. We find that GRPO consistently outperforms SFT, improving both cross-lingual consistency and generalization to unseen languages, while CPT on parallel data yields limited additional gains. Mechanistic analyses further show that GRPO reorganizes multilingual routing by reducing language specialization in MLP layers and attention heads, thereby promoting more shared cross-lingual representations. We release our code, models, and dataset.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06586v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.06751v1",
+    "title": "StageFrontier: Synchronization-Aware Stage Accounting for Distributed ML Training",
+    "authors": [
+      "Boram Yoon",
+      "Wei Chen",
+      "Ville Kallioniemi"
+    ],
+    "summary": "When a distributed training job slows down, the hard part is knowing where to look. Synchronization hides the cause: a stall on one rank shows up as a wait on the others, so a data delay on a single rank can surface as backward time across the group. The cheap dashboards that run all the time -- per-stage averages and maxima -- misread this, double-counting the same exposed delay or burying the slow rank in an average, while full profilers see it clearly but are far too heavy to leave on.\n  StageFrontier is an always-on signal that closes this gap. Each rank reports only a short ordered vector of coarse stage durations -- data, forward, backward, and so on -- timed with CPU wall-clock, with no synchronized clocks and no kernel tracing. At each stage boundary, StageFrontier takes the cumulative time of whichever rank is furthest along; the increments of this frontier form an exact, additive accounting of the step's exposed time and point to the stage and rank where group-visible delay first appears, telling an operator where to aim a heavy profiler, not which fix to make. The accounting is exact, but the coarse signal alone cannot tell whether a leading stage truly caused the slowdown or merely ran alongside it; StageFrontier labels the windows where that distinction needs more evidence instead of guessing.\n  A PyTorch implementation adds under 0.2% throughput overhead through 128 ranks on Gloo and NCCL, places injected faults among its top two suspects on all 50 rows of a hidden-rank DDP test, and recovers the same top-stage routing as PyTorch Profiler, HTA, and Nsight Systems once their traces are reduced to the same coarse stages -- from a 0.11 MB summary instead of a 15.81 GB trace.",
+    "published": "2026-06-04",
+    "updated": "2026-06-04",
+    "pdf_url": "https://arxiv.org/pdf/2606.06751v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.06532v1",
+    "title": "GOPAgen: Motion-Aware and Efficient Agentic Long-Video Understanding with Structural Memory and Hierarchical Reasoning",
+    "authors": [
+      "Haozhe Chi",
+      "Yang Jin",
+      "Yadong Mu"
+    ],
+    "summary": "Despite significant progress in agentic long video understanding, existing methods still lack detailed motion comprehension coupled with an efficient memory architecture. In this paper, we propose GOPAgen, a novel approach that first integrates video codec into the video understanding framework via a meticulously designed motion agent trained on Groups of Pictures (GOPs) from video codec. We further develop a GOP tree reasoning algorithm, which is naturally aligned with video codec and enhances the model's ability to understand local detailed motions in videos. Additionally, we carefully design a structural memory mechanism that integrates local motion information with detailed captions in structural pages, and propose an efficient coarse-to-fine zoom-in algorithm to fully exploit the structural memory. Furthermore, we incorporate a motion vector database into the framework to enable efficient retrieval of motion vectors at different granularities. Overall, our method achieves superior Video Question Answering (VQA) performance on various video understanding benchmarks, including MotionBench and Egoschema, thereby demonstrating the superiority of our proposed framework.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.06532v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
