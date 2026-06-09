@@ -1,0 +1,300 @@
+[
+  {
+    "id": "2606.09617v1",
+    "title": "Powering the Future of AI: Navigating the Trade-offs for Europe's Energy Transition and Net-Zero Goals",
+    "authors": [
+      "Mohammad Hemmati",
+      "Gbemi Oluleye",
+      "Vassilis M. Charitopoulos"
+    ],
+    "summary": "The rapid expansion of AI globally has led to the proliferation of energy-intensive hyperscale data centres (DCs), making them as a structurally challenging component in power system planning and operation. Using a spatially explicit optimisation model of Europe across 21 AI growth scenarios, we systematically quantify additional demand, capacity requirements, emissions, and operational impacts of DCs. Results indicate that AI could drive 73-723 TWh of extra demand by 2050, risking cumulative emissions overshoots of 67-181 MtCO2 between 2030 and 2050. Our analysis indicates that after 2030, the geography of AI infrastructure will be shaped more by firm power and system flexibility than by the mere abundance of clean energy. In moderate scenarios, AI requires an additional of 200 hours of firm generation, which increases LCOE by 35 EUR/MWh in key hubs. We show that even under the pessimistic scenarios, existing infrastructure would require 70 GW additional capacity, while under managed growth pathways, this expansion could reach 226 GW. We further find DCs workload dynamics strongly shape energy dispatch, system flexibility, and emissions, while improved efficiency significantly reduces capacity needs, and system peaks. While our findings suggest that net-zero targets for 2050 may be achieved, critical emission risks may appear in the intermediate years, and the EU may compromise its carbon-neutral goals unless policies adapt to this accelerating digital transformation.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.09617v1",
+    "categories": [
+      "math.OC",
+      "cs.AI",
+      "cs.CY",
+      "eess.SY"
+    ],
+    "primary_category": "math.OC",
+    "github": null
+  },
+  {
+    "id": "2606.08950v1",
+    "title": "When More Cores Hurts: The Vector Database Scaling Paradox in HPC",
+    "authors": [
+      "Seth Ockerman",
+      "Song Young Oh",
+      "Amal Gueroudji",
+      "Rochana Chaturvedi",
+      "Philip Carns",
+      "Nicholas Chia",
+      "Matthieu Dorier",
+      "Robert Latham",
+      "Tanwi Mallick",
+      "Swan Perarnau",
+      "Robert Underwood",
+      "Kyle Chard",
+      "Ian Foster",
+      "Robert Ross",
+      "Shivaram Venkataraman"
+    ],
+    "summary": "Vector databases have been designed and optimized for cloud environments; however, emerging scientific AI workloads (e.g., molecular search, meteorological trajectory detection, and literature-driven hypothesis generation) demand efficient, scalable execution on HPC systems. We present a large-scale evaluation of three state-of-the-art vector databases -- Qdrant, Milvus, and Weaviate -- on two production supercomputers, scaling to 256 distributed workers across 64 compute nodes. We evaluate representative workload patterns -- mixed read/write and write-then-read -- using popular benchmarks, multimodal embeddings, and a novel real-world scientific dataset. Our results reveal that workload characteristics can limit latency reduction, additional cores can reduce query throughput by up to 30.67%, and scaling from 16 to 256 workers (16x) only yields a 5.46x improvement. This scaling paradox exposes the fundamental mismatch between cloud-oriented designs and HPC systems, highlighting the need for new, HPC-aware vector database designs.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.08950v1",
+    "categories": [
+      "cs.DC",
+      "cs.DB"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.08977v1",
+    "title": "Online Learning with Recency: Algorithms for Sliding-window Streaming Multi-armed Bandits",
+    "authors": [
+      "Vladimir Braverman",
+      "Chen Wang",
+      "Liudeng Wang",
+      "Samson Zhou"
+    ],
+    "summary": "Motivated by the recency effect in online learning, we study algorithms for single-pass *sliding-window streaming multi-armed bandits (MABs)* in this paper. In this setting, we are given $n$ arms with unknown sub-Gaussian reward distributions and a parameter $W$. The arms arrive in a single-pass stream, and only the most recent $W$ arms are considered valid. The algorithm is required to perform pure exploration and regret minimization with limited memory, defined as the number of stored arms. The model is a natural extension of the streaming multi-armed bandits model (without the sliding window) that has been extensively studied in recent years. We provide a comprehensive analysis of both the pure exploration and regret minimization problems with the model. For pure exploration, we prove that finding the best arm is hard with sublinear memory while finding an approximate best arm admits an efficient algorithm. For regret minimization, we explore a new notion of regret and give sharp memory-regret trade-offs for any single-pass algorithm. We complement our theoretical results with experiments, demonstrating the trade-offs between sample, regret, and memory.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.08977v1",
+    "categories": [
+      "cs.LG",
+      "cs.DS"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.01546v2",
+    "title": "Flexible Online Representation Learning Based on Similarity Matching",
+    "authors": [
+      "Shagesh Sridharan",
+      "Yanis Bahroun",
+      "Anirvan M. Sengupta"
+    ],
+    "summary": "Sparse high-dimensional representations are conducive to uncovering nontrivial structures in unsupervised exploration of data. Such a representation can deal with the dense connectivity in graphs relevant to community detection problems. However, sparse high-dimensional representations are capable of doing more, including manifold tiling and feature learning. Conventional algorithms optimize in the space of computationally intractable completely positive matrices or relax the problem to the space of doubly nonnegative matrices that scale with sample size in a way rendering them impractical for large data sets. Some of these methods also impose a row sum constraint, such as double stochasticity. Row sum constraints have the added advantage of being shift-invariant, in the context of manifold tiling. Constraints on the row sum of output similarity matrices require nontrivial online learning rules. Addressing these needs, we propose a versatile online biologically plausible learning algorithm capable of learning sparse shift-invariant representations, useful for clustering, manifold tiling, or sparse coding, depending on the data structure.",
+    "published": "2026-06-01",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.01546v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.09200v1",
+    "title": "Resource-aware Computation-Communication Overlap for multi-GPU ML Workloads",
+    "authors": [
+      "Minyu Cui",
+      "Miquel Pericas"
+    ],
+    "summary": "The rapid growth of large-scale machine learning (ML) has made distributed training across multiple GPUs a fundamental component of modern ML systems. As model sizes and computational throughput continue to increase, communication overhead has become a dominant bottleneck in multi-GPU training, particularly when computation and communication are executed sequentially. This work explores concurrent execution of computation and collective communication using two portable runtime controls: shared-memory-driven occupancy shaping for computation kernels and elevated scheduling priority for communication kernels. Our approach regulates computation-kernel residency through per-block shared-memory allocation, leaving sufficient on-chip resources for communication kernels to make progress. In addition, assigning higher priority to communication streams ensures steady communication progress once resources become available. Experiments on NVIDIA A40, A100, H100, and AMD MI250X GPUs demonstrate that the proposed method enables effective computation-communication overlap and reduces total execution time by up to 25.5 percent, without modifying vendor libraries or kernel implementations.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.09200v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.08476v1",
+    "title": "FlashCP: Load-Balanced Communication-Efficient Context Parallelism for LLM Training",
+    "authors": [
+      "Zheng Wang",
+      "Eric Liu",
+      "Linan Jiang",
+      "Zhongkai Yu",
+      "Zaifeng Pan",
+      "Yue Guan",
+      "Yuke Wang",
+      "Yufei Ding"
+    ],
+    "summary": "Context parallelism (CP) is essential for training large-scale, long-context language models, as it partitions sequences to reduce memory overhead. However, existing CP methods suffer from workload imbalance, inefficient kernels, and redundant communication due to static sequence sharding and key-value (KV) tensor communication. We present FlashCP, a load-balanced and communication-efficient framework for CP training. FlashCP introduces a sharding-aware communication mechanism to eliminate redundant KV communication and proposes a novel Whole-Doc sharding strategy that maximizes communication savings while maintaining balanced workloads. To efficiently combine Whole-Doc and Per-Doc sharding, FlashCP further designs a heuristic algorithm to search for near-optimal sharding plans. Extensive experiments show that FlashCP achieves up to 1.63x speedup over state-of-the-art CP frameworks across diverse datasets.",
+    "published": "2026-06-07",
+    "updated": "2026-06-07",
+    "pdf_url": "https://arxiv.org/pdf/2606.08476v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2605.26872v2",
+    "title": "The Strongest Teacher Is Not Always the Best Teacher: Student-Centric Answer Selection",
+    "authors": [
+      "Zhengyu Hu",
+      "Zheyuan Xiao",
+      "Linxin Song",
+      "Fengqing Jiang",
+      "Yuetai Li",
+      "Zhengyu Chen",
+      "Zhihan Xiong",
+      "Yue Liu",
+      "Junhao Lin",
+      "Yao Su",
+      "Lijie Hu",
+      "Kaize Ding",
+      "Teng Xiao",
+      "Radha Poovendran"
+    ],
+    "summary": "LLM training increasingly relies on teacher-generated supervision, from synthetic responses to reasoning traces and tool-use demonstrations. Current practice often chooses the highest-performing teacher to generate student training data, implicitly treating teacher test performance as a proxy for teaching quality. We show that this assumption can fail: even when multiple teachers provide correct answers to the same question, the answer from the strongest teacher is not necessarily the best supervision for a given student. To address this gap, we propose Student-Centric Answer Sampling (SCAS), a framework that selects from verified teacher-generated answers according to their estimated student-centric learning cost. Motivated by a token-wise gradient decomposition, we derive an efficient forward-only proxy for this cost and use it to guide answer selection during training. Experiments across 30 teacher models, 6 student base models, and 6 tasks show that SCAS consistently improves student performance, suggesting that effective distillation should prioritize supervision matched to the current student rather than teacher strength alone.",
+    "published": "2026-05-26",
+    "updated": "2026-06-07",
+    "pdf_url": "https://arxiv.org/pdf/2605.26872v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.08744v1",
+    "title": "MB-Loc: Multi-planar Bird's-eye-view Localization in outdoor LiDAR scenes",
+    "authors": [
+      "Ayaan Choudhury",
+      "Preet Savalia",
+      "Anirudh Pydah",
+      "Avinash Sharma"
+    ],
+    "summary": "Global LiDAR localization is a fundamental task for autonomous navigation systems. Recent methods perform Scene Coordinate Regression (SCR) and achieve superior accuracy over Absolute Pose Regression (APR) solutions by predicting dense 3D world coordinates. However, SCR approaches introduce two major bottlenecks: severe computational inefficiency from processing raw 3D geometries and significant performance degradation under varying sensor viewpoints. To address these limitations, we present MB-Loc, a lightweight and viewpoint-robust SCR framework. Instead of relying on heavy 3D convolutions, we project the input LiDAR scan into a 2.5D Multi-planar Bird's-Eye View (BEV) representation. By slicing the point-cloud along the Z-axis and mapping signed depths into discrete 2D planes, MB-Loc retains essential 3D geometric structures while exploiting the computational tractability of standard 2D CNNs. To handle the inherent sparsity of outdoor LiDAR, we introduce a KL-regularized latent bottleneck that explicitly models spatial uncertainty without injecting stochastic noise. Finally, to ensure rotation robustness, we apply 3D spatial augmentations prior to planar projection, forcing the network to implicitly learn viewpoint-invariant features. We perform extensive experiments on the publicly available NCLT dataset and demonstrate that our proposed method outperforms the current state-of-the-art. Operating at real-time inference speeds, MB-Loc significantly outperforms traditional 3D-SCR architectures in computational efficiency.",
+    "published": "2026-06-07",
+    "updated": "2026-06-07",
+    "pdf_url": "https://arxiv.org/pdf/2606.08744v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.08435v1",
+    "title": "Sound Field Interpolation Using Physics-Informed Extreme Learning Machine with Pre-Training",
+    "authors": [
+      "Hayato Komaba",
+      "Gen Sato",
+      "Ken Kurata",
+      "Yusuke Ikeda"
+    ],
+    "summary": "Numerous machine learning-based sound field interpolation methods have been proposed. In particular, physics-informed neural networks (PINNs) can accurately interpolate sound fields from a small number of microphones. However, their high computational cost and long training time pose practical challenges for applications requiring real-time processing or online learning. To address this, we propose a hybrid framework that combines PINN-based pre-training with a physics-informed extreme learning machine (PIELM) tailored for acoustic fields. By replacing iterative PINN fine-tuning for each target sound field with closed-form output-layer adaptation using hidden-layer weights pre-trained by PINN, the proposed method efficiently interpolates unknown sound fields from limited observations. Simulation results under simplified one-dimensional free-field conditions demonstrate that, given a pre-trained model, the proposed method achieves interpolation accuracy comparable to that of PINN-based fine-tuning while reducing the adaptation time by more than three orders of magnitude.",
+    "published": "2026-06-07",
+    "updated": "2026-06-07",
+    "pdf_url": "https://arxiv.org/pdf/2606.08435v1",
+    "categories": [
+      "eess.AS"
+    ],
+    "primary_category": "eess.AS",
+    "github": null
+  },
+  {
+    "id": "2606.08021v1",
+    "title": "Semantic Quorum Assurance: Collective Certification for Non-Deterministic AI Infrastructure",
+    "authors": [
+      "Jun He",
+      "Deying Yu"
+    ],
+    "summary": "As large language model (LLM) agents are integrated into autonomous cloud operations, distributed systems face a semantic reliability problem: proposer agents can generate production mutations, such as modifying IAM policies, opening firewall security groups, or executing data exports, that are syntactically valid and statically authorized but operationally unsafe. Classical distributed consensus protocols replicate deterministic state transitions but do not evaluate the safety of the proposed intent. To address this gap, we introduce Semantic Quorum Assurance (SQA), a control-plane primitive for governing non-deterministic agentic infrastructure. SQA represents proposals as declarative execution contracts bound to cryptographic evidence chains and routes them to a diverse panel of read-only, sandboxed validator agents. SQA aggregates their judgments under a risk-adaptive quorum predicate that enforces model and archetype diversity, adjusts weights based on calibrated assurance scores, and respects archetype-specific vetoes. Admitted proposals execute only through a sovereign execution gate. We instantiate SQA in a cloud-native control plane and formalize a correlated cognitive failure model for non-deterministic validators. On 500 infrastructure-inspired mutation scenarios, with safety results reported on held-out safe/unsafe trials excluding ambiguous scenarios, SQA reduces unsafe approval from 18.5% for single-agent validation to 0.3% while adding median validation latency of 1.45--4.12 seconds across the studied risk buckets.",
+    "published": "2026-06-06",
+    "updated": "2026-06-06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08021v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.08002v1",
+    "title": "Aqua Boundary-Saliency Attention Module for Lightweight Underwater Salient Instance Segmentation Detection Transformer",
+    "authors": [
+      "M. Fazri Nizar",
+      "Julian Supardi",
+      "Muhammad Naufal Rachmatullah"
+    ],
+    "summary": "Underwater instance segmentation integrates pixel-level mask prediction and instance-level discrimination for marine resource exploration, ecological monitoring, and underwater robotic perception. Recent prompt-based and auxiliary-modality methods improve mask quality, but their reliance on large foundation models, prompt generation, or extra modality estimation complicates efficient deployment. This work introduces Lightweight Underwater Salient Instance Segmentation Detection Transformer (LUSIS-DETR), a compact detection-transformer framework built around the Aqua Boundary-Saliency Attention Module (AquaBSAM). AquaBSAM embeds underwater boundary, contrast, attenuation, chroma, dark-channel, and center-prior cues into DINOv2-initialized multi-scale features through bounded residual modulation, while auxiliary mask supervision and small-object copy-paste are training-only. Extensive evaluation on four recent underwater instance segmentation datasets, UIIS, UIIS10K, USIS10K, and USIS16K, shows competitively leading performance against previous state-of-the-art works across category-aware and salient-instance protocols. TensorRT half-precision (FP16) benchmarking on an NVIDIA T4 graphics processing unit (GPU) achieves 4.31-6.34 milliseconds (ms) latency, supporting real-time inference under an accessible reproduction setting.",
+    "published": "2026-06-06",
+    "updated": "2026-06-06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08002v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.08048v1",
+    "title": "Diffusion Language Model Parallel Decoding via Product-of-Experts Bridge",
+    "authors": [
+      "Juntong Shi",
+      "Brian L. Trippe",
+      "Jure Leskovec",
+      "Stefano Ermon",
+      "Minkai Xu"
+    ],
+    "summary": "Diffusion language models (DLMs) offer substantial speed advantages through parallel decoding, but the lack of token dependencies limits generation quality compared to autoregressive (AR) models. Recent progress attempts to bridge the gap via importance sampling, with DLM being the proposal and AR being the target. However, due to the huge gap between their distributions, the sampling requires a large number of particles and is thus expensive to compute. In this paper, we introduce PoE-Bridge, a novel decoding framework that drastically improves generation speed and accuracy by introducing an intermediate distribution to bridge the gap. The distribution is constructed as a Product-of-Experts (PoE) of the DLM proposal and the AR target. With the intermediate distribution, we first use the DLM to draft multiple continuations in parallel, then apply rejection sampling to verify the drafted tokens and move the resulting candidates toward the PoE. We then use importance sampling to further correct the PoE-aligned candidates toward the AR target. We further propose several improved techniques, including mixed-temperature sampling for enhanced diversity and elastic rejection windows for reducing wasted verification. Empirically, PoE-Bridge achieves significantly improved accuracy with $5\\times$ speedup over the standard DLM decoding approach, and recovers at least 95% of the target AR model's performance, efficiently advancing most of the quality gap on challenging mathematical reasoning and coding tasks. Our code is available at https://github.com/juntongshi48/poe-bridge.",
+    "published": "2026-06-06",
+    "updated": "2026-06-06",
+    "pdf_url": "https://arxiv.org/pdf/2606.08048v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/juntongshi48/poe-bridge.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.07722v1",
+    "title": "Some hypotheses on how chatbots work in problem-solving-driven conversations. Large Language Models as confirmation of the Innovation Illusion",
+    "authors": [
+      "S. F. M. van Vlijmen",
+      "H. D. Lethe"
+    ],
+    "summary": "This article offers a perspective on the nature of chatbots as genuine conversation partners when discussing problems in relation to their solutions. What can chatbots do and what can't they do, and how can this be explained? Our argument draws on Aggregation Dynamics, Cognitive Linguistics, Neuropsychology and Psychology.\n  Our argument focuses on basic chatbots in the hope of thereby making statements about the core functionality of more advanced chatbots. Basic chatbots are assumed to consist of a Large Language Model (LLM) with a simple interface.\n  The main results are: a description of human understanding and thinking based on so-called metaphorical problem propagations; the hypothesis that text dataset used for training LLMs have specific characteristics and that these text datasets only partially imitate human thinking and understanding; the hypothesis that the LLM training process encodes artificial metaphorical problem propagations into an LLM from these datasets; our conclusion that a basic chatbot cannot be a thinking partner capable of matching humans; our conclusion that further development of the Large Language Model will not lead to this either.\n  Yann LeCun states: \"Animals and humans exhibit learning abilities and understandings of the world that are far beyond the capabilities of current AI and machine learning (ML) systems.\" Our conclusions are in line with this. LeCun's vision and ours are at odds with the optimism of Big Tech. That does not alter the fact that chatbots exist, that they are being used on a massive scale, by both individuals and organisations, and that it is therefore socially and politically important to understand them. Our article aims to contribute to the discussion on the functioning, benefits and drawbacks of chatbots.\n  We have not yet encountered the approach we used to arrive at our conclusions in our research into how chatbots work.",
+    "published": "2026-06-05",
+    "updated": "2026-06-05",
+    "pdf_url": "https://arxiv.org/pdf/2606.07722v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.07660v1",
+    "title": "Need We Teach Foundation Models What is a Generative Image? Gradient-Free Generative Artifact Detection via Analytic Spectral Adaptation",
+    "authors": [
+      "Qiaoyu Chen",
+      "Bing Zhang"
+    ],
+    "summary": "Adapting foundation models to detect generative artifacts via gradient-based updates compromises their intrinsic representations. Under optimization on limited samples, models overfit to local domain shortcuts. Fine-tuning massive weights on specialized data introduces erroneous inductive biases, inducing a measurable $\\mathcal{L}_2$ norm perturbation in the high-dimensional feature space -- a phenomenon we formalize as anchor drift. Amplified by nonlinear activations, this drift impairs zero-shot forgery detection across unseen domains.We propose a gradient-free methodology reframing detection from binary classification to an out-of-distribution (OOD) anomaly measurement problem. Treating a frozen foundation model as a stable coordinate system, we establish an absolute natural anchor on the real visual manifold by analytically decoupling statistical and semantic deviations, derived from attention-weighted spatial moments and orthogonal projection of perceptual inconsistencies. Evaluated in an extreme zero-shot setting (trained on face forgeries, tested on universal Text-to-Image generations), our method significantly outperforms gradient-optimized paradigms. Backpropagation-free forward passes and linear solvers enable hardware-agnostic, edge-deployable calibration with minimal latency. Furthermore, the Sherman-Morrison formula unlocks instantaneous online learning against novel attacks and enables privacy-preserving federated collaboration via covariance delta transmission.",
+    "published": "2026-06-03",
+    "updated": "2026-06-03",
+    "pdf_url": "https://arxiv.org/pdf/2606.07660v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
