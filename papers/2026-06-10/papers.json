@@ -1,0 +1,255 @@
+[
+  {
+    "id": "2606.11166v1",
+    "title": "Flaws in the LLM Automation Narrative",
+    "authors": [
+      "George Perrett",
+      "Javae Elliott",
+      "Jennifer Hill",
+      "Marc Scott"
+    ],
+    "summary": "Large Language Models (LLMs) are increasingly described as performing at the level of human experts on knowledge economy tasks. These claims are primarily based on how LLMs perform on benchmarking tasks that measure average performance across standardized datasets. Primary limitations of many benchmarking tasks are that they often measure performance based on content directly included in LLM training data, and they frequently do not assess the reliability of LLM performance or the magnitude of LLM errors. However, in high stakes contexts, these qualities are critically important. Through a novel LLM benchmarking task that requires writing computer code to complete a data analysis task, we compare the performance of a frontier LLM against submissions from human experts and explicitly measure the variance of responses and the magnitude of errors. Our study reveals that the human experts perform better on average on a range of metrics and demonstrate less variability in performance. Our results provide evidence that LLMs do not consistently perform at the level of human experts and demonstrate the importance of measuring variance and assessing error magnitude in LLM benchmark evaluations.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11166v1",
+    "categories": [
+      "stat.OT",
+      "cs.AI"
+    ],
+    "primary_category": "stat.OT",
+    "github": null
+  },
+  {
+    "id": "2606.11081v1",
+    "title": "Unifying Local Communications and Local Updates for LLM Pretraining",
+    "authors": [
+      "Pietro Cagnasso",
+      "Eugene Belilovsky",
+      "Edouard Oyallon"
+    ],
+    "summary": "Communication-efficient pre-training of LLMs is increasingly important as training draws on compute distributed across clusters, data centers, and lower-bandwidth links. Many practical methods reduce communication frequency but still rely on synchronous All-Reduce operations that maintain identical model states and tie progress to global collectives. This can become a bottleneck when bandwidth or worker speed is heterogeneous. We introduce GASLoC, a novel decentralized pre-training algorithm that generalizes the notion of communication acceleration to the recently popular \"outer optimizer\" to allow a practical gossip-based training framework that is compatible with adaptive optimizers, allows for local optimizer steps, and can utilize sparse randomized peer communication. Empirically, on a number of standard LLM training tasks, we demonstrate that GASLoC outperforms state-of-the-art decentralized algorithms in single step per communication setting for a number of topologies and, unlike existing decentralized methods in the LLM setting, it allows to obtain performance competitive with DiLoCo when utilizing multiple local steps. In the heterogeneous bandwidth setting we demonstrate the advantage of GASLoC showing that it can significantly outperform DiLoCo.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11081v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.10796v1",
+    "title": "Dep-LLM: Training-Free Depression Diagnosis via Evidence-Guided Structured Multi-factor with Reliable LLM Reasoning",
+    "authors": [
+      "Yiqing Lyu",
+      "Xianbing Zhao",
+      "Buzhou Tang",
+      "Ronghuan Jiang"
+    ],
+    "summary": "Automatic Depression Detection (ADD) from clinical interviews is a pivotal task in computational mental health, yet it remains challenging due to two critical obstacles: 1) difficulty in modeling complex but sparsely distributed depression clues within lengthy, multi-topic clinical interviews, leading to superficial and unreliable reasoning; 2) scarcity of labeled data due to clinical privacy, together with high cost of training and fine-tuning, limiting the deployment of supervised ADD systems. To jointly address these challenges, we propose Dep-LLM, a training-free framework that mirrors the step-by-step reasoning of clinical psychiatrists and operates entirely on frozen off-the-shelf foundation LLMs. Dep-LLM comprises three stages. First, a Chain-of-Thought (CoT) Depression Multi-factor Analysis module structurally decomposes the long dialogue into five clinically aligned themes and produces evidence-grounded rationales, effectively handling long-context dependencies. Second, we introduce Confidence Analysis and Modulation module that quantifies the epistemic reliability from token-level entropy of each rationale and applies an intra-label and inter-theme modulation that amplifies trustworthy signals while suppressing uncertain ones without extra training. Third, a Collaborative Multi-factor Prediction module dynamically integrates multi-factor signals weighted by confidence into the final diagnosis. Extensive experiments on the DAIC-WOZ and E-DAIC datasets demonstrate the effectiveness and generalizability of Dep-LLM: it surpasses zero-shot baseline on nearly all 21 foundation LLMs across 9 metrics such as accuracy, macro F1 and weighted-average F1, and further outperforms state-of-the-art supervised domain-specific LLMs as well as the latest closed-source commercial LLMs, while requiring no extra training.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.10796v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.10706v1",
+    "title": "Unifying Data, Memory, and Compute Efficiency in LLM training: A Survey",
+    "authors": [
+      "Vanessa Schmidt",
+      "Huy Hoang Nguyen",
+      "Cédric Jung",
+      "Shirin Salehi",
+      "Anke Schmeink"
+    ],
+    "summary": "Resource constraints increasingly determine what can be trained, fine-tuned, and deployed in large language models (LLMs), yet efficiency is often studied through isolated techniques rather than as an interacting system of limits. This survey adopts a constraint-centric perspective and organizes recent progress around three coupled bottlenecks: data efficiency (what to train on), memory efficiency (how to fit training), and compute budget awareness (when and where to spend FLOPs). On the data axis, we review selection and pruning methods that maximize learning per token, ranging from scalable proxy signals based on learning dynamics to gradient- and influence-based scoring, as well as difficulty-aware and curriculum-style strategies. We highlight emerging evidence that different notions of good data dominate in different regimes, implying that optimal subsets depend on the task objective and resource budget rather than being universal. On the systems side, we show that GPU memory, not raw compute, is often the dominant bottleneck in fine-tuning, and that effective scaling requires jointly reducing weight storage, optimizer states, and activation memory rather than optimizing any single component in isolation. Beyond memory, we frame training and inference as compute-governed processes in which optimization, data selection, and decoding must explicitly account for finite FLOP budgets. We review evidence for compute-optimal allocation and stopping rules, where computation should be halted or reallocated once marginal performance gains fall below a budget-dependent threshold. Together, these results unify compute-aware data selection, scaling laws, and adaptive inference under a common principle of resource-conditioned decision-making.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.10706v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.10684v1",
+    "title": "Divide and Cooperate: Role-Decomposed Multi-Agent LLM Training with Cross-Agent Learning Signals",
+    "authors": [
+      "Jaewan Park",
+      "Solbee Cho",
+      "Jay-Yoon Lee"
+    ],
+    "summary": "Modern language agents which perform multi-step reasoning have shown strong performance in knowledge-intensive question answering. However, existing approaches typically couple evidence acquisition and answer generation within a single policy. This forces a single model to play multiple potentially conflicting roles, inducing a combinatorial explosion in the policy space and hindering efficient exploration. It also introduces a credit assignment problem during training: a search action that retrieves sufficient evidence may still be penalized when generation fails, and vice versa. We propose DAC (Divide and Cooperate), a role-decomposed multi-agent training framework that divides agentic search into two cooperative subtasks, each handled by a dedicated agent trained with role-specific learning signals. The generator serves a dual role as both an answer producer and an evidence sufficiency verifier, abstaining when retrieved evidence is insufficient. This abstention signal is incorporated into the search agent's reward, providing structured cross-agent learning signals that improve credit assignment. Conversely, the searcher exposes the generator to diverse and challenging evidence environments by hard-positive evidence augmentation, improving its robustness. Experiments on general and multi-hop QA benchmarks show that DAC, implemented via parameter-efficient LoRA modules over a shared backbone, achieves strong performance against prior baselines that rely on full fine-tuning of monolithic models.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.10684v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.10415v1",
+    "title": "RATrain: A Resource-Aware Training Runtime for Large Language Models on Bandwidth-Constrained Heterogeneous Supercomputing Platforms",
+    "authors": [
+      "Yao Lu",
+      "Shiqing Ma",
+      "Zhongzhi Luan",
+      "Gen Li",
+      "Jiaxing Qi",
+      "Bin Han",
+      "Hailong Yang",
+      "Depei Qian"
+    ],
+    "summary": "Production heterogeneous supercomputing platforms are increasingly used to host large language model (LLM) training workloads. However, existing GPU-oriented training runtimes typically rely on high-bandwidth device memory, fast interconnects, and mature collective communication libraries, making them difficult to directly adapt to MT-3000, a platform with an explicit memory hierarchy, limited usable DDR capacity, and constrained inter-cluster communication. This paper presents RATrain, a resource-aware training runtime for dense LLMs on bandwidth-constrained heterogeneous supercomputing platforms. RATrain formulates standard non-interleaved 1F1B training as a training-state lifecycle scheduling problem, and schedules gradient synchronization, parameter update, parameter-view prefetching, and activation recovery at layer-level and stage-local granularity. RATrain further combines an MT-3000-aware execution backend for efficient and predictable FP16 GEMM, Attention Backward, and explicit data movement with a resource-aware planner that selects feasible training configurations under the 20GB usable-DDR constraint per compute cluster. We implement RATrain on a real MT-3000 platform and evaluate it using LLaMA-2-7B, Baichuan2-13B, Qwen2.5-32B, and LLaMA-2-70B configurations. Results show that RATrain achieves up to 1.35$\\times$ end-to-end speedup over MT-3000-adapted GPU-style training strategies. For LLaMA-2-7B, RATrain scales to 1024 compute clusters, reaches 112,790.55 tokens/s, and achieves 97.0\\% scaling efficiency. A further 1.028B-token correctness run shows that RATrain preserves the loss trajectory of a semantically equivalent Baseline-1F1B run, with a maximum relative loss deviation of 0.081\\%.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.10415v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.10544v1",
+    "title": "From Stacks to Circuits: A Regenerative Socio-Technical Roadmap for AI Infrastructure within Planetary Boundaries",
+    "authors": [
+      "Han-Teng Liao",
+      "Karen Ang"
+    ],
+    "summary": "Current scaling trajectories for Generative AI, typified by linear supply-side \"stacks,\" prioritize performance density while externalizing significant thermodynamic and material costs. As the \"Twin Transition\" of green and digital transformation accelerates, the industry faces technology gaps - including Scope 3 emissions and e-waste recycling - that impede sustainable scaling and lead to social tensions. This study proposes a Regenerative Socio-Technical roadmap that repurposes the Sustainable Production and Consumption system map to reframe artificial intelligence infrastructure as a system-of-systems governed ultimately by planetary limits. By integrating the Institute of Electrical and Electronics Engineers International Roadmap for Devices and Systems (IEEE IRDS) sustainability considerations for semiconductor facilities, the study proposes a metabolic circuit framework that centers \"Values and Needs\" within production and consumption relationship loops. This study identifies critical gaps in current Nvidia-centric roadmaps and proposes a competing reference architecture. It demonstrates how a spontaneous order of resource parsimony and planetary accountability can provide an actionable pathway for regulatory compliance and industrial resilience in the digital circular economy.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.10544v1",
+    "categories": [
+      "cs.SI",
+      "cs.CY",
+      "cs.NI",
+      "econ.GN",
+      "eess.SY"
+    ],
+    "primary_category": "cs.SI",
+    "github": null
+  },
+  {
+    "id": "2606.11184v1",
+    "title": "TacForeSight: Force-Guided Tactile World Model for Contact-Rich Manipulation",
+    "authors": [
+      "Yujie Zang",
+      "Yuhang Zheng",
+      "Xian Nie",
+      "Yupeng Zheng",
+      "Shuai Tian",
+      "Songen Gu",
+      "Chen Gao",
+      "Zining Wang",
+      "Shuicheng Yan",
+      "Wenchao Ding"
+    ],
+    "summary": "Contact-rich manipulation requires robots to continuously perceive and regulate evolving physical interactions under dynamic contact transitions or complex surface geometries. Recent imitation learning methods improve contact-aware control by incorporating tactile or force feedback, but they rarely model the asymmetric spatiotemporal roles of global force and local tactile sensing. To address this, we propose TacForeSight, a lightweight force-conditioned tactile foresight framework for real-time manipulation. The core component is TacForceWM, a tactile world model that predicts short-horizon tactile latent dynamics from dual-finger tactile observations conditioned on high-frequency wrist force and torque signals. Another key component, the Predictive Tactile-Conditioned Policy, leverages the predicted latents as anticipatory contact priors, models the current-to-future tactile evolution via cross-attention, and adaptively fuses visuo-tactile features through a tactile-guided gating module. By forecasting purely within a compact latent space, TacForeSight enables proactive contact reasoning with efficient real-time inference suitable for high-frequency manipulation control. Real-robot experiments on five representative tasks and three in-process perturbation settings show that TacForeSight consistently outperforms existing baselines, particularly under dynamic contact disturbances. All models and datasets will be made publicly available on the project website at https://tacforesight.github.io/ProjectPage.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11184v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.11180v1",
+    "title": "Lip Forcing: Few-Step Autoregressive Diffusion for Real-time Lip Synchronization",
+    "authors": [
+      "Paul Hyunbin Cho",
+      "Jinhyuk Jang",
+      "SeokYoung Lee",
+      "Joungbin Lee",
+      "Siyoon Jin",
+      "Heeseong Shin",
+      "Jung Yi",
+      "Yunjin Park",
+      "Chulmin Park",
+      "Seungryong Kim"
+    ],
+    "summary": "Diffusion-based lip synchronization models achieve strong visual quality and audio-visual alignment, but full-sequence bidirectional attention and many denoising steps make them impractical for real-time inference. We present Lip Forcing, to our knowledge the first autoregressive diffusion method for video-to-video (V2V) lip synchronization, which distills a 14B audio-conditioned bidirectional video diffusion teacher into causal students. At inference, the students generate each chunk in only two denoising steps without inference-time CFG, enabling real-time lip synchronization. A lip-sync-specific teacher-trajectory analysis reveals a CFG fidelity-sync tradeoff: no-CFG predictions favor reference fidelity, whereas CFG-guided predictions favor synchronization within a mid-trajectory band. Lip Forcing translates this finding into three analysis-derived components: Sync-Window DMD, a two-step inference schedule, and a SyncNet-based reward. We validate Lip Forcing at two student scales, both distilled from the 14B teacher. The 1.3B student crosses into real-time streaming at 31 FPS, $17.6\\times$ faster than its same-scale bidirectional model. The 14B student, the largest diffusion model reported for V2V lip synchronization, runs $39.8\\times$ faster than its teacher at comparable reference fidelity. Time-to-first-frame is sub-millisecond at both scales, far below every diffusion baseline.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11180v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.11169v1",
+    "title": "Piper: A Programmable Distributed Training System",
+    "authors": [
+      "Megan Frisella",
+      "Shubham Tiwari",
+      "Andy Ruan",
+      "Yi Pan",
+      "Parker Gustafson",
+      "Mat Jacob",
+      "Gilbert Bernstein",
+      "Stephanie Wang"
+    ],
+    "summary": "Large-scale model training increasingly relies on composing multiple parallelism strategies, such as data, pipeline, and expert parallelism, together with memory-saving optimizations like ZeRO. Deployed systems for foundation model pretraining often rely on human experts to manually design a high-level parallelism strategy then implement the corresponding low-level execution strategy, making it difficult to adapt the system to new strategies. Meanwhile, many general-purpose frameworks are more flexible but their implementations are still tied to a fixed set of common parallelism strategies, making it challenging to integrate state-of-the-art strategies.\n  We present Piper, a user-controllable distributed training system that decouples the strategy from the runtime implementation. Piper allows users to declare a comprehensive distributed training strategy with a small set of model annotations and scheduling directives. Each directive applies a transformation on Piper's intermediate representation (IR), a unified global training DAG that represents all computation and communication. Using this IR, Piper compiles per-device execution plans and executes them with a distributed runtime agnostic to the strategy. We show that the combined system maintains performance parity on commonly available strategies such as ZeRO, while also enabling additional performance and memory efficiency gains through joint scheduling of compute and communication in composed parallelism strategies such as DeepSeek-V3's DualPipe.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11169v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.10008v1",
+    "title": "Spiking Neural Network inference on FPGAs with hls4ml",
+    "authors": [
+      "Barry M. Dillon"
+    ],
+    "summary": "Spiking Neural Networks (SNNs) provide a naturally temporal machine-learning framework. Their neurons maintain an internal state and propagate information through discrete spikes, enabling low-latency temporal inference. Although SNNs are often associated with asynchronous neuromorphic processors, many scientific real-time inference systems rely on conventional synchronous field-programmable gate arrays (FPGAs) and high-level synthesis (HLS) workflows. In this paper we present an extension of hls4ml that enables clock-driven deployment of SNNs trained in pytorch onto FPGA firmware. We demonstrate the workflow using a dense quantised SNN trained on the Heidelberg Spiking Digits dataset where it achieves inference latencies of approximately $34μ$s. We validate the generated design through software reference comparisons, HLS C simulation, HLS synthesis, export, and Vivado synthesis reports. This work opens up the hls4ml toolkit to neuromorphic computing, allowing streamlined optimisation, synthesis, and deployment of SNN models for real-time inference.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.10008v1",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "primary_category": "cs.NE",
+    "github": null
+  },
+  {
+    "id": "2606.10085v1",
+    "title": "Structured Adaptive Tensor Prediction for Streaming Data",
+    "authors": [
+      "Zhen Qin",
+      "Yang Chen"
+    ],
+    "summary": "Matrix-valued time series arise in a wide range of applications, such as spatio-temporal data from medical imaging and geophysics. Existing methods are mainly designed for static settings and lack adaptability to streaming and time-varying environments. Adaptive filtering techniques have also been largely limited to data with scalar or vector values, leaving adaptive forecasting for matrix-valued time series inadequately understood. To bridge these gaps, we develop an adaptive tensor regression framework that includes Matrix-on-Matrix (MoM) and Tensor-on-Matrix (ToM) formulations for streaming matrix-valued prediction. The two formulations differ in whether to directly model matrix-valued outputs or to exploit temporal structure via higher-order tensor representations. For the proposed tensor regression framework, we develop stochastic gradient descent (SGD) algorithms for online learning. We show that stacking multiple responses across time into higher-order tensors improves performance; in particular, the ToM achieves lower steady-state error and stronger denoising capability than MoM, motivating our focus on the ToM model. We further characterize the tracking behavior of SGD under time-varying dynamics. From a statistical perspective, we establish fixed-time recovery guarantees for ToM under general low-dimensional structures, including sparsity, low-rankness, and their joint sparselow-rank models.",
+    "published": "2026-06-08",
+    "updated": "2026-06-08",
+    "pdf_url": "https://arxiv.org/pdf/2606.10085v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP",
+      "math.OC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
