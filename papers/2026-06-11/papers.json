@@ -1,0 +1,261 @@
+[
+  {
+    "id": "2606.12385v1",
+    "title": "Which Models Are Our Models Built On? Auditing Invisible Dependencies in Modern LLMs",
+    "authors": [
+      "Sanjay Adhikesaven",
+      "Haoxiang Sun",
+      "Sewon Min"
+    ],
+    "summary": "Modern LLM training pipelines increasingly rely on other models to generate data, filter corpora, judge outputs, and guide development decisions. These dependencies are recursive: a model may depend on an upstream artifact whose own dependencies are documented only in separate releases and artifacts. As a result, the full dependency structure is fragmented across heterogeneous public artifacts, with complexity and recursive depth far outpacing humans' ability to trace. We introduce ModSleuth, an agentic system that recursively reconstructs LLM dependency graphs from public artifacts with source-grounded evidence. We find that the primary challenge is no longer information extraction, but defining what constitutes a dependency and reconciling artifact references across inconsistent documentation. We address these challenges through a formalization that distinguishes direct and indirect dependencies, represents heterogeneous pipeline roles through operation-centered relationships, and resolves artifact identities across names, versions, and repositories. Applying ModSleuth to four public-artifact-rich LLM releases, we recover 1,060 source-verified dependencies and construct large-scale dependency graphs of modern LLM development. These graphs reveal multi-hop license obligations, train-evaluation coupling, discrepancies between released and training-time artifacts, and documentation inconsistencies that would otherwise be difficult to uncover. We release ModSleuth and the resulting dependency graphs to support transparent analysis of the increasingly complex ecosystems underlying modern LLMs.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12385v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.12236v1",
+    "title": "DrivingAgent: Design and Scheduling Agents for Autonomous Driving Systems",
+    "authors": [
+      "Zhongyu Xia",
+      "Wenhao Chen",
+      "Yongtao Wang",
+      "Ming-Hsuan Yang"
+    ],
+    "summary": "Many autonomous driving systems are increasingly incorporating foundation models to improve generalization and handle long-tail scenarios. However, this trend introduces two key challenges: (i) the manual and labor-intensive process of designing and integrating new models, and (ii) the lack of intelligent, dynamic scheduling mechanisms to meet strict real-time constraints. While Large Language Model (LLM)-based agents offer a promising avenue for automation, existing frameworks are ill-suited for autonomous driving. Specifically, they fail to distinguish between the fundamentally different requirements of system design and real-time scheduling, treat modules as opaque black boxes, and are not designed for continuous operation. To address these limitations, we propose DrivingAgent, a novel agent framework tailored to the dual challenges of autonomous driving system design and scheduling. In the design phase, DrivingAgent automates module development by interpreting system architecture, generating code, and validating modules via super-network training. In the scheduling phase, it employs a lightweight LLM trained with reinforcement learning to dynamically orchestrate system modules in real time, supported by a structured memory that integrates long-term storage with timestamped short-term context. Experimental results demonstrate that DrivingAgent achieves a superior speed--accuracy trade-off on both the nuScenes and Bench2Drive benchmarks.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12236v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.11675v1",
+    "title": "Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnostic Reasoning",
+    "authors": [
+      "Haoyang Zeng",
+      "Yuanxi Fu",
+      "Rongzhen Li",
+      "Yuming Yang",
+      "Xiao Sun",
+      "Jingwang Huang",
+      "Gujie Shao",
+      "Guohui Xiang",
+      "Quan Lu",
+      "Dongfan Ye",
+      "Xuetao Chen",
+      "Jiang Zhong",
+      "Kaiwen Wei",
+      "Zhi Xu"
+    ],
+    "summary": "Diagnosing pulmonary diseases requires integrating heterogeneous evidence amid phenotypic variability and cross-disease overlap. Although large language models (LLMs) have shown progress on pulmonary knowledge question answering (QA) and information-processing tasks, reliable pulmonary diagnosis requires patient-specific, relation-aware reasoning over electronic medical record (EMR) evidence rather than isolated knowledge recall. We define this gap between pulmonary knowledge and case-level diagnostic reasoning as the Pulmonary Knowledge-to-Diagnosis Gap. To address it, we introduce LungKG, the first structured pulmonary knowledge graph for diagnostic knowledge organization and record-grounded reasoning. LungKG contains 59,038 nodes and 164,308 edges across 15 entity types and 112 relation types, serving as both a reusable pulmonary knowledge resource and the foundation for LungKG-guided model adaptation. Built on LungKG, we propose Lung-R1, a LungKG-guided pulmonary LLM trained through KG-constrained reasoning-chain construction and KG-guided reinforcement learning. In a 20-system evaluation, Lung-R1-14B achieves state-of-the-art performance across Choice, Pulmonary-QA, and EMR Diagnosis, reaching an EMR Diagnosis score of 4.3583 and surpassing the strongest non-Lung-R1 baseline by 0.1476 points. These results demonstrate the value of LungKG-guided training for EMR-based pulmonary diagnosis.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11675v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.11780v1",
+    "title": "What Limits Does Quantization Place on Dense Top-$k$ Retrieval? A Theoretical Study",
+    "authors": [
+      "Koki Okajima",
+      "Tsukasa Yoshida"
+    ],
+    "summary": "We establish conditions for embedding a corpus of $N$ documents as $d$-dimensional vectors such that every $k$-subset $S \\subseteq [N]$ is realizable as a result of top-$k$ retrieval by some query vector. Recent work shows that $d = O(k)$ suffices for such embeddings to exist in $\\mathbb{R}^d$, independently of $N$. We theoretically prove that this corpus-independent bound is specific to infinite precision. With $B$ bits per coordinate, perfect top-$k$ retrieval requires $Bd = Ω(k \\ln N)$; thus, at any fixed precision, the dimension must grow at least logarithmically with $N$. Specializing to a $\\ell_2$-normalized $B$-bit uniform scalar quantization model, we also identify a threshold on the precision $B^{*} = O(\\ln \\ln N)$ below which no dimension suffices, together with two further regimes that bound the feasible $(B, d)$ pairs. Our result implies that in practical vector databases and dense retrieval systems where quantization is standard, the embedding dimension and possibly the precision must grow with the corpus size.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11780v1",
+    "categories": [
+      "cs.IR",
+      "cs.AI",
+      "cs.IT"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2606.12066v1",
+    "title": "Performance Analysis of YOLOv11 and YOLOv8 for Mixed Traffic Object Detection under Adverse Weather Conditions in Developing Countries",
+    "authors": [
+      "Quoc Thuan Nguyen",
+      "Ha Anh Vu",
+      "Ngo Dang Thanh Ngan",
+      "Minh Phuc Hoang Ngoc"
+    ],
+    "summary": "In modern vehicular systems, robust performance under harsh conditions has become a critical problem of autonomous driving. Our study delivers a comprehensive evaluation of the newest iteration of the YOLO series, which is YOLOv11 Nano architecture benchmarked against the widely adopted YOLOv8 Nano as a baseline on a custom fused dataset that combines the Indian Driving Dataset (IDD) [1] and Berkeley Deep Drive Dataset (BDD100K) [2]. We have analyzed the trade-offs among detection accuracy, inference speed, and computational efficiency in high-entropy scenarios involving dense mixed traffic, rain, and low-light conditions. Specifically, YOLOv11n achieves a mean Average Precision (mAP@50) of 46.6%, with a notable 3.2% improvement in Precision over the baseline, effectively reducing false positives in cluttered scenes. Furthermore, the proposed model exhibits enhanced energy efficiency, requiring 22% fewer FLOPs (6.3G vs. 8.1G) while maintaining real-time inference speed of 70.9 FPS on a Tesla T4 GPU, offering an optimal trade-off for safety-critical edge deployment.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12066v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.11556v1",
+    "title": "Privacy-Preserving Federated Autoencoder for ECG Anomaly Detection on Edge Devices",
+    "authors": [
+      "Kaan Arda Akyol",
+      "Jakub Kacper Szeląg",
+      "Aydin Abadi",
+      "Maha Alghamdi",
+      "Ghadah Albalawi",
+      "Ghouse Ibrahim Kaleelullah",
+      "Hilal Tutus",
+      "Sarah Al Subaiei",
+      "Shardul Kapse",
+      "Syed Mohammed Raheeb",
+      "Mujeeb Ahmed",
+      "Rehmat Ullah"
+    ],
+    "summary": "Continuous electrocardiography (ECG) monitoring could surface rhythm abnormalities before they escalate into cardiovascular events. However, a deployable system must satisfy three requirements simultaneously: legal-grade privacy (GDPR, HIPAA), real-time inference on constrained edge hardware, and detection quality under non-IID cross-hospital data.\n  We design and evaluate an end-to-end federated system addressing all three for unsupervised 12-lead ECG anomaly detection on PTB-XL dataset, combining three autoencoder families (VanillaAE, ConvAE, VAE), Flower-based federated averaging (FedAvg) across ten simulated hospitals, client-side differentially private SGD (DP-SGD) with a Rényi-DP accountant, and 8-bit integer (INT8) post-training quantization with Raspberry Pi 4 benchmarking. Our main contributions are: an empirical characterization of how these mechanisms compose, practical DP-specific recommendations, and technical and security insights for a clinically sensitive setting. Federated learning matches or exceeds the centralized baseline across all architectures (ConvAE federated area under the ROC curve, AUROC, $0.782$), and an $\\varepsilon$ sweep identifies $\\varepsilon=4$ as the recommended clinical operating point. INT8 quantization roughly halves model size and cuts Pi 4 latency by up to $44%$ with $<0.12%$ AUROC loss. Crucially, DP and quantization penalties are empirically independent, so practitioners need not trade a strong privacy guarantee for a compact edge footprint. To our knowledge, this is the first system combining federated learning, formal $(\\varepsilon,δ)$-DP, unsupervised reconstruction-based detection, and quantized AArch64 deployment.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11556v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.08744v2",
+    "title": "MB-Loc: Multi-planar Bird's-eye-view Localization in outdoor LiDAR scenes",
+    "authors": [
+      "Ayaan Choudhury",
+      "Preet Savalia",
+      "Anirudh Pydah",
+      "Avinash Sharma"
+    ],
+    "summary": "Global LiDAR localization is a fundamental task for autonomous navigation systems. Recent methods perform Scene Coordinate Regression (SCR) and achieve superior accuracy over Absolute Pose Regression (APR) solutions by predicting dense 3D world coordinates. However, SCR approaches introduce two major bottlenecks: severe computational inefficiency from processing raw 3D geometries and significant performance degradation under varying sensor viewpoints. To address these limitations, we present MB-Loc, a lightweight and viewpoint-robust SCR framework. Instead of relying on heavy 3D convolutions, we project the input LiDAR scan into a 2.5D Multi-planar Bird's-Eye View (BEV) representation. By slicing the point-cloud along the Z-axis and mapping signed depths into discrete 2D planes, MB-Loc retains essential 3D geometric structures while exploiting the computational tractability of standard 2D CNNs. To handle the inherent sparsity of outdoor LiDAR, we introduce a KL-regularized latent bottleneck that explicitly models spatial uncertainty without injecting stochastic noise. Finally, to ensure rotation robustness, we apply 3D spatial augmentations prior to planar projection, forcing the network to implicitly learn viewpoint-invariant features. We perform extensive experiments on the publicly available NCLT dataset and demonstrate that our proposed method outperforms the current state-of-the-art. Operating at real-time inference speeds, MB-Loc significantly outperforms traditional 3D-SCR architectures in computational efficiency.",
+    "published": "2026-06-07",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.08744v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.12246v1",
+    "title": "Efficient and Robust Online Learning to Rank in Decentralized Systems",
+    "authors": [
+      "Marcel Gregoriadis",
+      "Martijn de Vos",
+      "Sayan Biswas",
+      "Anne-Marie Kermarrec",
+      "Johan Pouwelse"
+    ],
+    "summary": "In Online Learning to Rank (OLTR), ranking models are trained directly from live user interactions, but existing systems rely on a trusted central server to collect and process these interactions. This leaves operators free to introduce biases that conflict with user interests. Decentralized learning offers an attractive alternative, allowing users to collaboratively train a shared ranking model by exchanging model updates directly with one another, without any central authority. In such settings, however, malicious nodes can send poisoned model updates that degrade the ranking quality of honest nodes. We introduce RankGuard, a decentralized OLTR framework in which users collaboratively train ranking models and exchange model updates directly with other nodes. RankGuard defends against poisoning attacks by carefully evaluating incoming models against the user's own private click history, corrected for position bias. An incoming model is only aggregated if it better explains the user's past interactions than the current local model, making it fundamentally hard for malicious nodes to craft updates that pass this test without also genuinely helping the user. We derive a theoretical convergence guarantee of RankGuard. To the best of our knowledge, this is the first formal convergence analysis of a decentralized OLTR algorithm. We evaluate RankGuard against four poisoning attacks, including a powerful adaptive attack, using four standard benchmarks and three click models. RankGuard outperforms all baselines in most settings while being up to 62x more efficient than its closest competitors.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12246v1",
+    "categories": [
+      "cs.DC",
+      "cs.IR"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.11744v1",
+    "title": "Hey Chat, Can You Teach Me? Structuring Socratic Dialogue for Human Learning in the Wild",
+    "authors": [
+      "Sidney Tio",
+      "Arunesh Sinha",
+      "Pradeep Varakantham"
+    ],
+    "summary": "Large language models are now widely used for everyday learning, but the underlying interactions are typically unstructured chats rather than following a curriculum. Unlike formal online learning systems, these interactions carry no prior record of the student, so any estimate of what the student already knows must be inferred from the dialogue itself. We show that this gap is not closed by scaling models alone. Frontier and education-tuned LLMs perform poorly when asked to tutor a student over an extended session, because doing so requires three things at once. The tutor must sequence a curriculum, conduct Socratic dialogue, and infer the student's knowledge state from that dialogue. We propose separating these responsibilities. Given a student query, our system constructs a prerequisite knowledge graph in which subtopics are nodes and dependencies are edges, and frames tutoring as deciding which node to teach next and how many dialogue turns to spend on it before moving on. A lightweight PPO policy handles this sequencing decision, while an LLM conducts the Socratic exchange at the chosen node and returns a signal of student progress. Across held-out STEM and non-STEM topics, our PPO-paired tutor outperforms heuristic baselines, frontier general-purpose models, and a model specialised for Socratic dialogue: on both the rate at which students reach full curriculum mastery and the number of turns required. Explicit curriculum structure delivers gains that scaling the underlying model does not.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11744v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.11711v1",
+    "title": "Capacity-Constrained Online Convex Optimization with Delayed Feedback",
+    "authors": [
+      "Alexander Ryabchenko",
+      "Idan Attias",
+      "Daniel M. Roy"
+    ],
+    "summary": "Online learning with delayed feedback typically assumes that the learner can track all pending rounds until their feedback arrives. In practice, tracking resources are finite, and feedback from untracked rounds is permanently lost. In this paper, we study delayed online convex optimization (OCO) under a hard capacity constraint, where at most $C$ pending rounds can be tracked at any time. To model delay information, we introduce a semi-clairvoyant model that refines the clairvoyant assumption from prior work: rather than requiring delays to be known at prediction time, the learner observes delay expirations online, consistent with the classical unconstrained delayed setting. Our approach proceeds via a reduction to a novel ``delayed and weighted'' OCO problem, using a scheduler that randomizes tracking decisions and importance-weights the resulting observations. For this base problem, we propose and analyze Delayed-Weighted FTRL and its bandit analogue, establishing regret bounds that explicitly characterize the interaction between time-varying weights and delayed feedback. Combining these base learners with our schedulers yields the first regret guarantees for capacity-constrained OCO under convex and strongly convex losses, for both first-order and bandit feedback. For first-order feedback, capacity $C = Ω(\\log T)$ suffices to recover standard delayed OCO rates up to logarithmic factors. For bandit feedback, the regret rates are modulated by powers of $(1 + σ_{\\text{max}}/C)$, where $σ_{\\text{max}}$ is the maximum number of pending observations at any time. This allows the regret bound to degrade gracefully when $C < σ_{\\text{max}}$, while remaining sublinear.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11711v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.11660v1",
+    "title": "Bergson: An Open Source Library for Data Attribution",
+    "authors": [
+      "Lucia Quirke",
+      "Louis Jaburi",
+      "David Johnston",
+      "William Z. Li",
+      "Gonçalo Paulo",
+      "Guillaume Martres",
+      "Girish Gupta",
+      "Stella Biderman",
+      "Nora Belrose"
+    ],
+    "summary": "Data attribution is a promising field in interpretability that aims to explain model behavior through the influence of its training data, with applications including debugging undesirable model behavior and training dataset curation. However, significant engineering effort is required to perform it at scale, and many cutting edge techniques lack open-source tooling and support. Bergson is an open source library that aims to enable faster progress in the field by providing a host of techniques that scale to very large language models and pre-training datasets. The library natively supports on-disk gradient stores and multi-node distributed training, and provides quality of life tools for researchers. Finally, we introduce the first open-source implementations of three leading data attribution methods: MAGIC, SOURCE, and TrackStar. The library is available at https://github.com/EleutherAI/bergson .",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.11660v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/EleutherAI/bergson",
+      "stars": 59,
+      "description": "Mapping out the \"memory\" of neural nets with data attribution",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2606.11354v1",
+    "title": "A Zero-Shot Multi-Agent Framework for Human-Building Interaction via Programmatic Reasoning",
+    "authors": [
+      "Yuqi Wang",
+      "Gulai Shen",
+      "Ali Mehmani"
+    ],
+    "summary": "Large Language Model (LLM) offers opportunities to enhance Human-Building Interaction (HBI) by enabling more direct interactions through intuitive interfaces to complex building systems. These systems can be characterized by the vast amounts of data across multiple formats, the lack of nonconfidential and generalizable information, and the requirement of domain expertise for interpretation. Applying LLMs to domain-specific tasks like HBI presents additional challenges. Limited training data makes traditional fine-tuning approaches impractical. Meanwhile, the opacity of LLM training data requires careful integration of domain knowledge to ensure reliability. Additionally, different LLMs exhibit varying alignment characteristics, suggesting that achieving both natural interaction and technical accuracy requires a multi-agent approach. These challenges highlight the need for innovative approaches to adapt LLMs for specialized domains while maintaining accuracy and user engagement. In this paper, we develop a hierarchical multi-agent framework that utilizes semantic routing and programmatic reasoning to decouple natural language understanding from building analytics. Instead of standard RAG approaches, our system employs a \"Doorman\" mechanism for task decomposition and specialized coding agents that generate executable Python scripts for precise arithmetic. We validate this framework on a dataset from more than 200 commercial buildings. Results demonstrate the effectiveness in providing accurate and contextual responses for diverse users, including stakeholders, from tenants to building managers, across various building system applications.",
+    "published": "2026-06-09",
+    "updated": "2026-06-09",
+    "pdf_url": "https://arxiv.org/pdf/2606.11354v1",
+    "categories": [
+      "cs.ET"
+    ],
+    "primary_category": "cs.ET",
+    "github": null
+  }
+]
