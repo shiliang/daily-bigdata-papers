@@ -1,0 +1,79 @@
+[
+  {
+    "id": "2606.12236v2",
+    "title": "DrivingAgent: Design and Scheduling Agents for Autonomous Driving Systems",
+    "authors": [
+      "Zhongyu Xia",
+      "Wenhao Chen",
+      "Yongtao Wang",
+      "Ming-Hsuan Yang"
+    ],
+    "summary": "Many autonomous driving systems are increasingly incorporating foundation models to improve generalization and handle long-tail scenarios. However, this trend introduces two key challenges: (i) the manual and labor-intensive process of designing and integrating new models, and (ii) the lack of intelligent, dynamic scheduling mechanisms to meet strict real-time constraints. While Large Language Model (LLM)-based agents offer a promising avenue for automation, existing frameworks are ill-suited for autonomous driving. Specifically, they fail to distinguish between the fundamentally different requirements of system design and real-time scheduling, treat modules as opaque black boxes, and are not designed for continuous operation. To address these limitations, we propose DrivingAgent, a novel agent framework tailored to the dual challenges of autonomous driving system design and scheduling. In the design phase, DrivingAgent automates module development by interpreting system architecture, generating code, and validating modules via super-network training. In the scheduling phase, it employs a lightweight LLM trained with reinforcement learning to dynamically orchestrate system modules in real time, supported by a structured memory that integrates long-term storage with timestamped short-term context. Experimental results demonstrate that DrivingAgent achieves a superior speed--accuracy trade-off on both the nuScenes and Bench2Drive benchmarks.",
+    "published": "2026-06-10",
+    "updated": "2026-06-11",
+    "pdf_url": "https://arxiv.org/pdf/2606.12236v2",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.12963v1",
+    "title": "ScaleAcross: Designing Multi-Data-Center Infrastructure for Geo-Distributed AI Training",
+    "authors": [
+      "Naved Inam",
+      "Aryan Alpesh Bhavsar",
+      "Masabattula Teja Nikhil",
+      "Sidharth Sharma"
+    ],
+    "summary": "The rapid growth of AI models and increasing data sovereignty requirements are driving the transition toward geo-distributed AI training across multiple data centers. Such deployments introduce system-level challenges arising from synchronization-intensive communication, cross-site data exchange, and wide-area latency constraints. This paper investigates EVPN--VXLAN as an infrastructure foundation for geo-distributed AI training environments and presents a scalable emulation framework for systematically studying distributed AI workloads under realistic wide-area conditions. The proposed framework combines VXLAN overlays with EVPN-based inter-data-center connectivity and is implemented using ContainerLab and FRRouting (FRR). The framework further incorporates Equal-Cost Multi-Path (ECMP) routing, Bidirectional Forwarding Detection (BFD), and a queue-pair-aware traffic distribution mechanism designed to improve communication behavior for synchronization-intensive AI workloads while preserving compatibility with commodity infrastructure. Using realistic WAN emulation, we characterize communication and system behavior under distributed training workloads employing AllReduce and Parameter Server communication patterns. Results provide insights into traffic distribution, resilience, and infrastructure behavior in geo-distributed AI environments, highlighting the potential of reproducible multi-data-center infrastructure frameworks for scalable distributed AI training.",
+    "published": "2026-06-11",
+    "updated": "2026-06-11",
+    "pdf_url": "https://arxiv.org/pdf/2606.12963v1",
+    "categories": [
+      "cs.NI",
+      "cs.DC",
+      "cs.ET"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2606.12160v2",
+    "title": "A Controlled Study of Decoding-Time Truthfulness Methods on Instruction-Tuned LLMs",
+    "authors": [
+      "Ao Sun"
+    ],
+    "summary": "Decoding-time truthfulness methods -- layer-contrast decoding, inference-time intervention, and learned logit adapters -- have demonstrated 10-30 point gains on TruthfulQA when applied to base language models. However, modern instruction-tuned LLMs already achieve substantially higher baselines (61-76%), raising the question of whether these methods remain effective in practice. We design a six-control evaluation framework -- out-of-distribution training, multi-judge validation, simple decoding baselines, confound controls, bootstrap confidence intervals, and seed variance -- and apply it across 5 models (1B-70B), 3 benchmarks, and 15 methods. We find that previously reported gains shrink substantially under strict controls: on the full TruthfulQA benchmark (N=817), no token-level method achieves statistically significant improvement, and the best learned adapter scores -2.0 points below greedy (p=.23). We identify five evaluation sensitivities -- contamination, judge choice, missing baselines, confounds, and statistical noise -- that individually or jointly account for these discrepancies. Cross-benchmark validation on HaluEval QA and TriviaQA confirms that these patterns extend beyond TruthfulQA. Deliberative prompting methods (chain-of-thought, self-critique) appear more robust in the evaluated regime, with CoT achieving +5.6-19pp across benchmarks as a training-free, single-pass method. We release a seven-point evaluation checklist and discuss implications for future truthfulness research.",
+    "published": "2026-06-10",
+    "updated": "2026-06-11",
+    "pdf_url": "https://arxiv.org/pdf/2606.12160v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.12716v1",
+    "title": "Does AI Reviewer See the Full Picture? Attacking and Defending Multimodal Peer Review",
+    "authors": [
+      "Xinyu Zhao",
+      "Rana Muhammad Shahroz Khan",
+      "Zhen Xu",
+      "Zhen Tan",
+      "Tianlong Chen"
+    ],
+    "summary": "The integration of Large Language Models (LLMs) and Multimodal LLMs (MLLMs) into scientific peer-review workflows introduces novel and significant risks for adversarial manipulation, especially given the multimodal nature of scientific papers where figures, not just text, convey core evidence. This creates a significant gap: current robustness studies on AI peer-review are overwhelmingly text-only. Moreover, the problem is distinct from standard jailbreaking, as a peer-review attack seeks to induce a domain-specific, targeted failure (e.g., \"inflate this score\") rather than a general safety policy violation, for which no practical defenses exist. To address this, we introduce PaperGuard, the first comprehensive benchmark designed to systematically evaluate and defend AI-generated peer-review against these domain-specific, cross-modal attacks. Our framework is built on three pillars: (1) a new multimodal peer-review dataset spanning multiple scientific domains; (2) a unified suite of attacks, including black-box prompt injections and white-box perturbations, specifically designed to target both text (GCG) and figures (PGD); and (3) a practical defense, motivated by the long-context challenge of academic papers, that uses chunk-based embedding search to efficiently localize and mitigate harmful instructions. Our extensive experiments, conducted across state-of-the-art models, confirm that AI reviewers are pervasively vulnerable. PaperGuard establishes the foundational benchmark, protocols, and actionable defense necessary to pioneer trustworthy, attack-resilient AI-assisted scholarly reviewing.",
+    "published": "2026-06-10",
+    "updated": "2026-06-10",
+    "pdf_url": "https://arxiv.org/pdf/2606.12716v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  }
+]
