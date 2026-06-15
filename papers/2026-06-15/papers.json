@@ -1,0 +1,120 @@
+[
+  {
+    "id": "2606.14368v1",
+    "title": "Be My Tutor: On-Policy Co-Distillation for Mutual LLM Improvement via Peer Feedback",
+    "authors": [
+      "Woohyeon Byeon",
+      "Jiwon Jeon",
+      "Jeonghye Kim",
+      "Youngchul Sung"
+    ],
+    "summary": "We study multi-domain LLM training in which two models, each stronger in a different domain, co-evolve by tutoring each other through on-policy feedback. Unlike one-way distillation or single-model fine-tuning, our goal is mutual Pareto improvement: each model improves across domains without losing its original strength. To this end, we propose On-Policy Co-Distillation (OPCoD), where each student's self-distillation is conditioned on its own correct rollout and feedback from its peer. To make feedback exchange effective, OPCoD uses cognizance-based gating to decide when to give feedback and feedback anchoring to ground feedback in the problem. On Science Q\\&A tasks, OPCoD consistently outperforms baselines and achieves Pareto improvement across all evaluated domain pairs and students.",
+    "published": "2026-06-12",
+    "updated": "2026-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2606.14368v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.14199v1",
+    "title": "OdysSim: Building Foundation Models for Human Behavior Simulation",
+    "authors": [
+      "Xuhui Zhou",
+      "Weiwei Sun",
+      "Weihua Du",
+      "Jiarui Liu",
+      "Haojia Sun",
+      "Qianou Ma",
+      "Tongshuang Wu",
+      "Yiming Yang",
+      "Maarten Sap"
+    ],
+    "summary": "Large language models are increasingly deployed as human simulators for interactive evaluation and social simulation. Yet helpfulness-driven post-training pulls them toward a homogeneous, overly agreeable assistant register, creating a behavioral Sim2Real gap. We present OdysSim, the largest open systematic investigation of behavioral foundation models, i.e., models trained to simulate human behavior at scale. We propose SOUL, a taxonomy of five capability axes (CONV, SS, COG, ROLE, EVAL) that unifies 62 datasets and 23 benchmark tasks under one framework. Specifically, we curate the OdysSim corpus (21.4M interactions, 10B tokens, retrofitted with back-generated social contexts), construct the SOUL-Index benchmark, and develop an end-to-end training recipe combining midtraining, task-specific RL, and expert distillation. The resulting open 8B OSim model ranks first or tied-first on 8 of 23 tasks, outperforming any individual frontier model by this count, with the strongest gains on conversational and social tasks. Its outputs are also more human-like in length, formatting, and word choice, and it transfers zero-shot to out-of-distribution user simulation on $τ$-bench, nearly matching real users on reaction alignment (93.2 vs. 93.5). We further show that LLM-as-judge RL induces reward-hacking patterns, and that our detectors can mitigate them during post-training. Together, our findings suggest that behavioral foundation models require rethinking the LLM training paradigm. We release all artifacts to support future research.",
+    "published": "2026-06-12",
+    "updated": "2026-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2606.14199v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.14358v1",
+    "title": "Observing Teachers' Instrumental Pedagogical Orchestration in Synchronous Online Learning: A Multimodal Grid Based on Videoconferencing Traces",
+    "authors": [
+      "Intissar Bamou",
+      "Christine Michel",
+      "Hassina El Kechai"
+    ],
+    "summary": "Synchronous online teaching environments pose specific challenges for the analysis of pedagogical activity as teaching takes place via videoconferencing platforms and interactions are multimodal. While pedagogical orchestration has been extensively studied in the context of face-to-face courses and at the level of instructional design, the analysis of teaching in videoconferencing environments remains under-explored and insufficiently instrumented in terms of methodology. This article proposes a multimodal observation grid designed to analyze the instrumentalised pedagogical orchestration of teachers during synchronous online classes. Based on theories of pedagogical orchestration, multimodality and professional gestures of teachers, this grid identifies a set of observable indicators related to communicational gestures, posture, gaze and the management of digital tools. These indicators are structured and ranked in order of priority according to their observability and analytical relevance. They are operationalised to consider the constraints associated with data that can be analysed in videoconference class contexts. The proposed grid aims to provide a reproducible methodological framework for the analysis of instrumental pedagogical orchestration, with a view to future empirical validation.",
+    "published": "2026-06-12",
+    "updated": "2026-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2606.14358v1",
+    "categories": [
+      "cs.CY"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2606.14146v1",
+    "title": "A Programmer's Guide to Cascaded Adaptive Combiners: Online Learning by Biologically Accurate Models of Multilayer Neuron Networks",
+    "authors": [
+      "Martin Nilsson",
+      "Denis Kleyko"
+    ],
+    "summary": "Learning in biological multilayer neuronal networks offers insights that extend beyond the classical weighted-sum neuron model commonly used in artificial neural networks. This article presents an accessible guide to a mechanistic neuronal network model that more accurately captures aspects of biological computation while enabling a simple yet powerful mechanism for learning in multilayer neural networks. The proposed approach supports efficient online streamed learning and provides a practical alternative to backpropagation. We demonstrate its potential in an image classification task, achieving competitive classification performance. The approach's simplicity, biological grounding, and broad applicability highlight a promising path toward algorithms that unify mechanistic neuron models and machine learning.",
+    "published": "2026-06-12",
+    "updated": "2026-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2606.14146v1",
+    "categories": [
+      "cs.NE"
+    ],
+    "primary_category": "cs.NE",
+    "github": null
+  },
+  {
+    "id": "2606.13873v1",
+    "title": "Natively Unlearnable Large Language Models",
+    "authors": [
+      "Gaurav R. Ghosal",
+      "Pratyush Maini",
+      "Aditi Raghunathan"
+    ],
+    "summary": "Unlearning aims to remove the influence of specific training data sources, but this has proved challenging because the contributions of different sources are entangled within the model. Isolating source contributions to disjoint parameters makes removal easier, though it obstructs joint learning across sources. We propose NULLs (Natively Unlearnable LLMs), a model class that satisfies the two opposing goals of isolating source-specific contributions and learning jointly across sources, by training a set of shared backbone neurons alongside a pool of sparsely activated sinks. During training, information specific to a source naturally concentrates in its sinks while information shared across sources accumulates in the backbone. A source is then unlearned at deployment by disabling its corresponding sinks, with no gradient updates and no access to the retained data. We show that NULLs scales to Wikipedia's ~6M articles, isolating each as an independent source. Unlearning a single article removes knowledge specific to it while preserving facts shared with semantically related articles, closely matching retraining from scratch. We note that unlearning with NULLs is also robust: in a case study of unlearning the Harry Potter books, NULLs resists both adversarial extraction and relearning that reverses post-hoc unlearning. Finally, NULLs preserves general language capabilities, matching a standard transformer on downstream benchmarks. Together, these results suggest that source-level unlearning need not be an afterthought. It can be built natively into LLM training while retaining the benefits of shared representation learning.",
+    "published": "2026-06-11",
+    "updated": "2026-06-11",
+    "pdf_url": "https://arxiv.org/pdf/2606.13873v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.06794v2",
+    "title": "TA-RAG: Tone-Aware Retrieval-Augmented Generation for Peer-Support Health Communication",
+    "authors": [
+      "Yong-Bin Kang",
+      "Anthony McCosker"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) successfully grounds large language model (LLM) outputs in trusted documents, but factual grounding alone is insufficient for sensitive peer-support health communication. In domains such as HIV peer support, responses must also be accessible, stigma-free, empathetic, and tailored to the recipient. This paper presents TA-RAG, a lightweight, prompt-based tone-aware RAG framework that embeds explicit tone control into a RAG pipeline without requiring model fine-tuning. We operationalise tone across four core components: stigma-free rewriting, readability adjustment, recipient adaptation, and empathy rephrasing. We evaluate TA-RAG through component-level tests using questions derived from HIV Online Learning Australia (HOLA), UNAIDS terminology guidance, readability metrics, peer-support standards from National Association of People with HIV Australia (NAPWHA), and a public empathy dataset. Results show that the TA-RAG's components improve their targeted communication quality while preserving key content. These findings emphasise that prompt-based tone control is a potential direction for making RAG outputs suitable for sensitive peer-support health communication.",
+    "published": "2026-06-05",
+    "updated": "2026-06-11",
+    "pdf_url": "https://arxiv.org/pdf/2606.06794v2",
+    "categories": [
+      "cs.CL",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  }
+]
