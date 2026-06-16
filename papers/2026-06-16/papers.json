@@ -1,0 +1,155 @@
+[
+  {
+    "id": "2606.16907v1",
+    "title": "Tangram: Hiding GPU Heterogeneity for Efficient LLM Parallelization",
+    "authors": [
+      "Yanda Tao",
+      "Pedro F. Silvestre",
+      "Marcel Wagenländer",
+      "Peter Pietzuch"
+    ],
+    "summary": "The scale of LLM training jobs requires parallelization planning over large GPU clusters. Due to different GPU types and interconnects added over time, these GPU clusters are increasingly heterogeneous. Automatic LLM parallelizers can search for parallelization plans but face an exploding search space with heterogeneous GPUs. To make search tractable in heterogeneous GPU clusters, parallelizers often omit types of parallelism (e.g., expert parallelism) or memory-saving techniques (e.g., ZeRO), which results in worse plans.\n  We describe Tangram, a system that enables the use of existing heterogeneity-unaware LLM parallelizers in heterogeneous GPU clusters by decoupling parallelization planning from GPU heterogeneity. For this, Tangram exploits two insights: (1) since bulk purchases result in sets of GPUs with similar compute, memory, and connectivity, Tangram can expose such homogeneous GPU islands to existing parallelizers; and (2) parallelizers commonly first partition models and then parallelize partitions. Tangram can compose such model slices, assigned to GPU islands, into work-balanced pipelines for high throughput. Tangram integrates with existing parallelizers through a narrow API, which relies on the enumeration of model-slice/island pairs. Tangram achieves up to 2.3x higher training throughput than current heterogeneous parallelizers (Metis and Sailor) and scales to large GPU clusters by pruning enumerated plans.",
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "pdf_url": "https://arxiv.org/pdf/2606.16907v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.16162v1",
+    "title": "Binary Decompilation LLM with Feedback-Driven Multi-Turn Refinement",
+    "authors": [
+      "Peipei Liu",
+      "Jian Sun",
+      "Mingzhe Xing",
+      "Yicheng Zeng",
+      "Zhaoteng Yan",
+      "Lixiao Zhang",
+      "Li Chen",
+      "Dan Li"
+    ],
+    "summary": "Binary decompilation is fundamental to security tasks such as vulnerability discovery, malware inspection, and executable-only program understanding. Recent LLM-based decompilation methods have shown promising results, but most still follow a single-turn generation paradigm: given assembly code or decompiler-produced pseudo-code, the model generates one output and stops. Consequently, the generated code may appear readable or even compile successfully, yet still deviate from the behavior of the original binary and mislead downstream analysis.\n  This paper presents AutoDecompiler, a decompilation-specialized LLM trained with reinforcement learning for feedback-driven multi-turn binary decompilation. Instead of treating decompilation as one-shot code generation, AutoDecompiler formulates it as an iterative refinement process, where the model revises generated code based on compilation, execution, and input/output testing feedback. To enable this process, we design decompilation-specific rewards that capture code validity, recompilability, execution consistency, and semantic fidelity. We further construct stage-aware diagnostic feedback from compiler errors, execution failures, and failed test cases, and introduce progress-aware trajectory rewarding and turn-aware advantage reweighting to encourage beneficial revisions while suppressing regressions.\n  We train the AutoDecompiler family and evaluate it across different input settings, model scales, and benchmarks. Experimental results show that AutoDecompiler consistently outperforms its single-turn counterparts under the same model size and input setting, achieving clear improvements in behavioral re-executability. These results demonstrate that learning to exploit program feedback with reinforcement learning is an effective direction for improving the functional correctness of LLM-based binary decompilation.",
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "pdf_url": "https://arxiv.org/pdf/2606.16162v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2606.16074v1",
+    "title": "PVminerLLM2: Improving Structured Extraction of Patient Voice via Preference Optimization",
+    "authors": [
+      "Samah Fodeh",
+      "Linhai Ma",
+      "Ganesh Puthiaraju",
+      "Srivani Talakokkul",
+      "Afshan Khan",
+      "Elyas Irankhah",
+      "Sreeraj Ramachandran",
+      "Ashley Hagaman",
+      "Sarah Lowe",
+      "Aimee Roundtree"
+    ],
+    "summary": "Motivation: Patient-generated text contains critical information on patients' lived experiences, social context, and care engagement, but remains largely unstructured, limiting its use in patient-centered outcomes research. Prior work introduced the PV-Miner benchmark and PVMinerLLM models for structured extraction. However, supervised fine-tuning (SFT) alone struggles with rare, fine-grained, and unevenly distributed errors, particularly in token-critical structured outputs.\n  Results: We present PVminerLLM2, an improved set of LLMs for structured patient voice extraction that applies preference optimization to address token-critical errors beyond the reach of supervised fine-tuning. Our method introduces (i) a preference objective with token-level gated stabilization term that prevents degradation of absolute token likelihood under preference optimization, and (ii) confusion-aware preference pair construction to better capture low-separation distinctions. We further incorporate token-importance weighting and inverse-frequency reweighing to address token imbalance and class skew. Across multiple model sizes, PVMinerLLM2 consistently outperforms strong baselines, achieving gains of up to 4.43% (Code), 3.50% (Sub-code), and 1.55% (Span), and outperforms baseline LLM trained with existing preference optimization methods.\n  Availability and Implementation: The supplementary material, code, evaluation scripts, and trained models for PVminerLLM2 are publicly available at: https://github.com/Data-Mining-Lab-Yale/PVminerLLM2",
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "pdf_url": "https://arxiv.org/pdf/2606.16074v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/Data-Mining-Lab-Yale/PVminerLLM2",
+      "stars": 0,
+      "description": "",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2606.16903v1",
+    "title": "Directory-Aware Query and Maintenance in Vector Databases",
+    "authors": [
+      "Mengzhao Wang",
+      "Zheng Gong",
+      "Jingpei Hu",
+      "Jiajie Fu",
+      "Maojia Sheng",
+      "Junwen Chen",
+      "Yifan Zhu"
+    ],
+    "summary": "Vector databases typically manage metadata as flat scalar attributes, which limits their ability to express hierarchical directory semantics commonly used to organize code repositories, enterprise documents, and agent memories. As a result, directory-scoped retrieval and structural updates are often implemented as application-layer workarounds, making recursive scope resolution expensive and directory maintenance difficult to keep consistent. This paper studies native directory semantics as a first-class capability for vector databases. We formalize two core operators: Directory-Semantic Query (DSQ) for hierarchically scoped retrieval, and Directory-Semantic Maintenance (DSM) for structural updates. We then evaluate three implementation strategies: query-time path expansion (PE-Online), ingestion-time path expansion (PE-Offline), and a Trie-based Hierarchical Index (TrieHI). Our analysis exposes the fundamental limitations of expansion-based designs: flattening the hierarchy incurs high recursive-query latency in PE-Online and unscalable write amplification during structural changes in both expansion strategies. In contrast, TrieHI keeps the directory topology as a native prefix tree, enabling efficient recursive retrieval through tree traversal and reducing maintenance cost through topological node manipulation. We benchmark these design points within ByteDance's Viking vector search engine and release two large-scale datasets, WIKI-Dir and ARXIV-Dir, to support future research on directory-semantic vector search. Finally, TrieHI has been integrated into OpenViking, an open-source context database for AI agents, where it supports filesystem-style context organization and directory-recursive retrieval.",
+    "published": "2026-06-15",
+    "updated": "2026-06-15",
+    "pdf_url": "https://arxiv.org/pdf/2606.16903v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2606.15525v1",
+    "title": "Modeling Nonlinear Ability Trajectories and Learner Heterogeneity in Online Learning: A Bayesian Nonparametric Dynamic IRT Framework",
+    "authors": [
+      "Zhihua Ma",
+      "Alice Xu",
+      "Icy Zhang",
+      "Guanyu Hu"
+    ],
+    "summary": "Online learning has amplified the need to understand how student engagement patterns influence learning outcomes, particularly given the flexibility of technology-mediated environments. To address this, we propose a Bayesian nonparametric dynamic item response theory (IRT) framework that tracks within-individual ability trajectories across instructional units. The proposed model integrates B-spline basis expansions to capture nonlinear effects of engagement behaviors on ability drift, alongside a Mixture-of-Finite-Mixtures (MFM) prior to automatically determine the number of latent learner clusters. This framework overcomes three limitations in the existing literature: (1) rigid linearity assumptions in engagement-ability relationships, (2) dependence on pre-specified cluster counts, and (3) the inability to track longitudinal ability dynamics. We apply the model to longitudinal data from 198 undergraduates completing a 9-chapter introductory statistics course on CourseKata. The model automatically identified four distinct learner profiles: struggling-declining (11\\%), low-stable (23\\%), mainstream-stable (55\\%), and high-improving (12\\%). Results indicate that ability trajectories remained remarkably stable across chapters, and engagement quantity metrics did not significantly predict ability drift. These findings suggest that in introductory online statistics education, academic ability primarily reflects a stable pre-existing characteristic rather than a dynamically malleable course outcome. Ultimately, this framework offers a flexible tool for learner profiling to inform adaptive instructional design.",
+    "published": "2026-06-14",
+    "updated": "2026-06-14",
+    "pdf_url": "https://arxiv.org/pdf/2606.15525v1",
+    "categories": [
+      "stat.AP",
+      "stat.ME"
+    ],
+    "primary_category": "stat.AP",
+    "github": null
+  },
+  {
+    "id": "2606.15045v1",
+    "title": "NEURON-Fabric: CXL-Side Low-Bit Gradient Aggregation for Distributed Training",
+    "authors": [
+      "Ziqiang Wang",
+      "Changcheng Huang",
+      "Chung-Horng Lung"
+    ],
+    "summary": "In large-model distributed training, especially large language model workloads, gradient All-Reduce increasingly stresses the memory and communication path. This paper asks whether a Compute Express Link (CXL) memory controller can aggregate low-bit gradient signals as gradient cache lines pass through it, while preserving a 32-bit floating-point (FP32) path for workloads, layers, or phases that should not use low-bit approximation. We present NEURON-Fabric, a CXL-side controller architecture that performs packed gradient-binary (G-Binary) sign-count aggregation and gradient-ternary (G-Ternary) gated aggregation near CXL memory, with a control interface for selecting low-bit or FP32 paths. Cycle-level timing experiments show that the measured five-cycle low-bit aggregation datapath adds at most 1.67 percent exposed runtime overhead in the full last-level-cache miss regime; under bandwidth pressure, the same compute stage is hidden by CXL service time. Functional tests confirm byte-exact identity read-back, G-Binary sign-count aggregation, and G-Ternary gating. Training checks quantify the communication and accuracy tradeoff: low-bit aggregation remains close to FP32 on CIFAR-10/ResNet-18 and SST-2/DistilBERT, while full-path low-bit aggregation fails on CIFAR-100/ResNet-18. Layer-aware admission identifies the classifier head as sensitive; keeping the head on FP32 while applying low-bit aggregation to the backbone recovers most accuracy and reduces gradient traffic to 3.6-5.4 percent of the FP32 baseline. Hardware synthesis and FPGA place-and-route estimates suggest that the 512-bit aggregation datapath is small enough to be treated as a near-memory datapath extension rather than a separate accelerator-scale block.",
+    "published": "2026-06-13",
+    "updated": "2026-06-13",
+    "pdf_url": "https://arxiv.org/pdf/2606.15045v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.14929v1",
+    "title": "Policy Regret for Embedding Model Routing: Contextual Bandits with Low-Rank Experts",
+    "authors": [
+      "Yan Dai",
+      "Negin Golrezaei",
+      "Patrick Jaillet"
+    ],
+    "summary": "Modern recommendation systems increasingly rely on dynamically routing diverse queries to multiple embedding models. Despite its practical significance, this problem remains poorly understood under realistic conditions like adversarial queries, bandit feedback, and limited observability of models. We formalize embedding model routing as an adversarial contextual linear bandit with low-rank experts, where contexts are queries, actions are items, and experts are the embedding models working on low-rank latent representation spaces. We first establish that standard regret notions suffer from structural misspecification or statistical intractability, and we identify a log-quadratic policy class that is expressive enough to capture query-dependent model routing, yet structured enough to allow efficient online learning. Second, we propose a policy gradient algorithm called Hypentropy Policy Gradient (HPG). It provably adapts to the unknown low-rank structure under incomplete information and attains $\\tilde{\\mathcal O}(s\\sqrt{M T})$ linearized policy regret -- where $s, M$, and $T$ are the intrinsic rank of the experts, the number of models, and the number of rounds -- thus avoiding a curse of dimensionality. Finally, we also provide an computationally efficient and parameter-free implementation of HPG.",
+    "published": "2026-06-12",
+    "updated": "2026-06-12",
+    "pdf_url": "https://arxiv.org/pdf/2606.14929v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
