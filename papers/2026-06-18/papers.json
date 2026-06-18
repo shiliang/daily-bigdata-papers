@@ -1,0 +1,205 @@
+[
+  {
+    "id": "2606.18650v1",
+    "title": "BLADE: Scalable Bi-level Adaptive Data Selection for LLM Training",
+    "authors": [
+      "Jiaxing Wang",
+      "Deping Xiang",
+      "Jin Xu",
+      "Zirui Liu",
+      "Zicheng Zhang",
+      "Guoqiang Gong",
+      "Jun Fang",
+      "Chao Liu",
+      "Pengzhang Liu",
+      "Tongxuan Liu",
+      "Ke Zhang",
+      "Qixia Jiang"
+    ],
+    "summary": "As Large Language Model (LLM) datasets scale to trillions of tokens, data selection has emerged as a critical frontier to filter out uninformative noise and construct adaptive learning trajectories. Beyond static heuristic filtering, advanced data selection methods for LLM training largely follow two paradigms, each with fundamental limitations. Influence-based methods provide principled bi-level objectives but require intractable inverse-Hessian computations, while excess-loss methods are computationally efficient but rely on a static reference model that becomes misaligned with the evolving proxy model during training. We propose BLADE (Bi-Level Adaptive Data sElection), a Hessian-free framework for data selection. BLADE reformulates the bi-level optimization problem underlying influence-based methods as a penalized single-level objective via Lagrange multipliers, avoiding inverse-Hessian computation while revealing a principled connection to excess-loss based data selection. The resulting objective recovers an excess-loss form but replaces the static reference model with a dynamic one that stays synchronized with training. Theoretically, we prove that this penalized formulation guarantees first-order convergence. For efficient online batch selection, we instantiate BLADE as a memoryless randomized block-coordinate Frank-Wolfe algorithm. Extensive experiments show that BLADE consistently outperforms state-of-the-art data selection baselines, providing a practical recipe for LLM training.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.18650v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.17276v2",
+    "title": "On the Memorization Behavior of LLMs in Generative Recommendation: Observations, Implications, and Training Strategies",
+    "authors": [
+      "Sunwoo Kim",
+      "Sunkyung Lee",
+      "Clark Mingxuan Ju",
+      "Donald Loveland",
+      "Bhuvesh Kumar",
+      "Kijung Shin",
+      "Neil Shah",
+      "Liam Collins"
+    ],
+    "summary": "Generative recommendation (GR) has emerged as a promising direction for recommender systems. Recently, large language models (LLMs) have been increasingly adopted for GR, as their rich pretrained knowledge is expected to help them generalize beyond common user behavior patterns that traditional memorization-oriented baselines can capture. However, existing LLM-based GR works largely ignore LLMs' well-known tendency to memorize, which, if present in LLMs fine-tuned for GR, would restrict their utilization of pretrained knowledge. In this work, we investigate this concern by examining one-hop memorization, where a model recommends items that are direct successors of items in the training data. We show that LLMs do this more than non-LLM-based GR models-in fact, the vast majority of their gains over GR baselines are actually on users whose target items can be predicted through one-hop memorization. We intuit that improving performance on the remaining users requires LLMs to learn richer item-item relations beyond one-hop transitions. To achieve this, we propose IIRG, a novel training strategy that teaches LLMs to capture: (1) collaborative relations derived from item co-occurrences across multiple hops in user sequences, and (2) semantic relations among items with similar themes, both of which can serve as useful recommendation signals. We show that IIRG significantly improves over LLMs trained solely with standard next-item prediction, with especially large gains for users whose test items are not covered by train-time one-hop transitions.",
+    "published": "2026-06-15",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.17276v2",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2606.19063v1",
+    "title": "PYPILINE: Malicious PyPI Package Detection via Suspicious API Knowledge and Agent Workflow",
+    "authors": [
+      "Siyuan Pang",
+      "Zhengwei Jiang",
+      "Yepeng Yao",
+      "Zijing Fan",
+      "Haozhe Li",
+      "Baoxu Liu"
+    ],
+    "summary": "The detection of malicious PyPI packages is crucial for maintaining the security of the open source software supply chain. Existing methods, which primarily rely on rules or traditional machine learning, suffer from poor interpretability and difficulty in adapting to novel attacks. To address this, we propose PYPILINE, a novel detection method that combines a suspicious API knowledge base with an Agent workflow. PYPILINE first conducts static analysis on known malicious packages, extracting abstract syntax trees and generating API call graphs, from which it automatically extracts and constructs a structured suspicious API knowledge base. During the detection phase, this knowledge base is used to enhance reasoning capabilities. Through an Agent workflow, PYPILINE performs in depth semantic analysis of unknown packages and outputs a structured, interpretable maliciousness assessment report. The experimental results show that PYPILINE significantly outperforms existing state-of-the-art tools in precision of 96.7\\%, recall of 99.6\\%, and F1-score of 98.1\\%, with its precision surpassing baseline tools by 5.7 to 24.2 percentage points. Additionally, we conducted an empirical study on malicious packages, systematically revealing prevalent attack strategies, as well as the most commonly abused APIs. Equipped with tool-calling AI agent workflows for automated vector database retrieval of suspicious API knowledge and mail server delivery of analysis reports, PYPILINE delivers a practical, efficient, and convenient malicious package detection solution to strengthen open-source ecosystem security.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.19063v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.19267v1",
+    "title": "A Mixed-Reality Testbed for Autonomous Vehicles",
+    "authors": [
+      "H. M. Sabbir Ahmad",
+      "Ehsan Sabouni",
+      "Emrullah Celik",
+      "Zean Wan",
+      "Damola Ajeyemi",
+      "Christos G. Cassandras",
+      "Wenchao Li"
+    ],
+    "summary": "We propose a mixed-reality, hardware-in-the-loop (HIL) testbed for autonomous vehicles that seamlessly integrates a physical testbed of mobile robots with a high-fidelity simulation environment. The virtual simulation enables the creation of diverse, safety-critical driving scenarios to validate state-of-the-art perception, planning, and control algorithms, while augmenting simulations with physical robots equipped with multimodal sensors in photorealistic virtual environments further facilitating rigorous validation. Our testbed also features vehicular connectivity using wireless communication and can accommodate a large number of agents through the combination of physical robots and virtual simulated agents, supporting research on multi-agent systems including Connected and Autonomous Vehicles (CAVs). Finally, we present a safety-guaranteed framework combining perception, planning and a novel online learning-based controller using Control Barrier Functions (CBFs) for CAVs. Experiments using the proposed framework are used to validate and demonstrate the key functionalities and the overall utility of the testbed to bridge the gap between simulation and real-world hardware deployment.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.19267v1",
+    "categories": [
+      "cs.RO",
+      "eess.SY"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.18778v1",
+    "title": "Online Distributional Prediction via Latent Cluster Geometry Under Drift and Corruption",
+    "authors": [
+      "Navyansh Mahla",
+      "Prateek Chanda",
+      "Ganesh Ramakrishnan"
+    ],
+    "summary": "Online learning in non-stationary streams is often formulated as tracking a point estimate, but many applications require predicting the full data-generating distribution. We study online distributional prediction under drift and adversarial corruption. Our approach represents each candidate law through a latent cluster geometry: a variable-size configuration of centers that organizes probability mass and induces a predictive distribution. A Gibbs quasi-posterior over these configurations yields an online predictor by posterior averaging, and the resulting variable-dimensional posterior can be sampled with reversible-jump MCMC. The method therefore avoids specifying a parametric streaming law while retaining a structured latent space for uncertainty, regularization, and comparison.\n  We evaluate performance by cumulative Wasserstein-1 regret against the time-varying true law. The analysis separates two effects: corruption perturbs the loss-based posterior update, whereas drift makes long-horizon posterior memory stale. We address the latter with a restarted variant that temporally localizes the same quasi-Bayesian update. The resulting high-probability bounds decompose into a PAC-Bayesian complexity term, a corruption-sensitive posterior perturbation term, and a dynamic optimal-transport term driven by \\(A_T^{\\mathrm{OT}}=\\sum_{t=2}^T W_2^2(p_{t-1}^*,p_t^*)\\). Under bounded support, stable latent geometry, predictive-map regularity, oracle realizability, localized restart windows, sublinear transport action, and sublinear corruption budget, the restarted predictor achieves sublinear cumulative Wasserstein regret. These guarantees require no parametric model for the stream, drift mechanism, or corruption process.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.18778v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.18588v1",
+    "title": "Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication",
+    "authors": [
+      "Wenqi Jia",
+      "Zhewen Hu",
+      "Ying Huang",
+      "Yu Gong",
+      "Stavros Kalafatis",
+      "Yuke Wang",
+      "Wei Niu",
+      "Chengming Zhang",
+      "Ang Li",
+      "Sheng Di",
+      "Yuede Ji",
+      "Bo Fang",
+      "Miao Yin"
+    ],
+    "summary": "3D Gaussian Splatting (3DGS) enables high-fidelity and real-time 3D scene reconstruction, but scaling training to large-scale scenes requires optimizing hundreds of millions of Gaussians across multiple GPUs. Existing distributed approaches either partition scenes into isolated regions, causing global inconsistency, or rely on global Gaussian-level exchanges, which lead to substantial growth in inter-GPU communication and quickly dominate iteration time.\n  We propose Splaxel, a communication-efficient distributed 3DGS training framework based on pixel-level local rendering and global composition. Instead of synchronizing Gaussians, each GPU renders its local subset and exchanges only partial pixel values, maintaining mathematical consistency while keeping communication cost stable as the scene size increases. Splaxel further reduces pixel-level redundancy through geometric and transmittance visibility prediction and improves GPU utilization via conflict-free camera-view consolidation. Evaluated on large-scale datasets with up to 120M Gaussians, Splaxel achieves up to 7.6$\\times$ speedup over the state-of-the-art distributed 3DGS framework while preserving high reconstruction quality.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.18588v1",
+    "categories": [
+      "cs.DC",
+      "cs.CV"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.18741v1",
+    "title": "ReMP: Low-Downtime Runtime Model-Parallelism Reconfiguration for LLM Serving",
+    "authors": [
+      "Haipeng Yuan",
+      "Kaining Zheng",
+      "Yongshu Bai",
+      "Yuchen Zhang",
+      "Yunquan Zhang",
+      "Baodong Wu",
+      "Xiang Gao",
+      "Daning Cheng"
+    ],
+    "summary": "Current large language model (LLM) inference systems universally deploy ultra-large-scale models using a combination of Tensor Parallelism (TP) and Pipeline Parallelism (PP). However, existing systems treat the model parallelism topology as a static configuration that cannot be flexibly adjusted at runtime. This rigid design creates a fundamental contradiction with the dynamically changing inference workloads in real-world scenarios. State-of-the-art systems lack online reconfiguration capabilities and can only switch configurations by restarting the service, resulting in several minutes of service interruption, KV cache loss, and prohibitive recomputation overhead. To address this problem, this paper presents ReMP, a runtime model parallelism reconfiguration framework that supports low downtime. ReMP achieves dynamic adjustment through three key techniques: (1) decoupling the model parallelism topology from runtime state to avoid full service reconstruction; (2) designing a two-dimensional KV cache migration mechanism to preserve reusable cache states after TP/PP changes; and (3) implementing end-to-end online reconfiguration. Experiments demonstrate that ReMP can complete most topology switches within 1-7 seconds on models ranging from 7B to 70B parameters, achieving speedups of tens to over a hundred times compared to the restart approach. Moreover, ReMP significantly outperforms fixed configurations under dynamic workloads, delivering superior performance in terms of TTFT, TPOT, and output throughput.",
+    "published": "2026-06-17",
+    "updated": "2026-06-17",
+    "pdf_url": "https://arxiv.org/pdf/2606.18741v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.18497v1",
+    "title": "Ghost Vectors: Soft-Deleted Embeddings Remain Reconstructible in HNSW Vector Databases",
+    "authors": [
+      "Chandranil Chakraborttii",
+      "Jackeline García Alvarado",
+      "Sitora Abdulofizova",
+      "Shivanshu Dwivedi"
+    ],
+    "summary": "Retrieval-augmented generation (RAG) allows large language models to access external and private corpora for factual, domain-specific responses. Modern RAG pipelines use hierarchical navigable small world (HNSW) vector databases for efficient similarity search. When a user requests data deletion, the systems typically only mark the record as deleted, leaving the embedding on disk physically unchanged. This soft-delete operation raises compliance concerns under data-erasure and retention requirements such as GDPR Article 17 and HIPAA. Analysis on three HNSW implementations confirms that deleted vectors remain physically recoverable by accessing the raw index files at the storage layer, bypassing API access. Using the Vec2Text inversion model without domain-specific fine-tuning, we show this vulnerability on multiple real-world datasets and data modalities. On Wikipedia biographical living persons dataset (BLP), we successfully recover 25.5% of exact person names and 46.4% of geographic locations (ROUGE-L 0.185). Recovery reaches 100% for both patient age and gender markers (ROUGE-L 0.290) on highly structured, sensitive data (NIH Synthea dataset). On soft-deleted image embeddings, we show 100% tissue classification on histopathology patches (p=1.02e-07) and top-1 identity recovery reaches 99% on facial embeddings (p<0.01). This work introduces Epoch Key Rotation, which encrypts vectors and discards the key upon deletion. Epoch key rotation reduces observed PII recovery to 0% and completes in 2.5 ms for 500 deleted vectors (approximately 0.005 ms/record). Additionally, it generates an ECDSA-signed cryptographic proof as an auditable record of the deletion event.",
+    "published": "2026-06-16",
+    "updated": "2026-06-16",
+    "pdf_url": "https://arxiv.org/pdf/2606.18497v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.18423v1",
+    "title": "A Critical Discourse Analysis of Gender Representation in Software Engineering Education Videos on YouTube",
+    "authors": [
+      "Isabella Graßl",
+      "Alexander Serebrenik",
+      "Giuseppe Destefanis"
+    ],
+    "summary": "Educational resources may frame students' perceptions of who belongs in software engineering, which is relevant given the field's ongoing gender gap. However, we know little about the hidden curriculum regarding gender in online learning spaces. This study presents a critical discourse analysis of 200 manually analysed English and German software engineering tutorials on YouTube, examining gender representation through contextual domains and linguistic identity markers. Our results show that male characters and masculine linguistic defaults dominate the tutorials. We identified an agency gap, in which technical and decision-making roles are almost exclusively assigned to male actors, while female actors are either absent or tend to passive, low-agency roles. The findings indicate that software engineering education on YouTube may reproduce gendered norms, in which linguistic and representational gatekeeping may serve as a symbolic barrier to software engineering.",
+    "published": "2026-06-16",
+    "updated": "2026-06-16",
+    "pdf_url": "https://arxiv.org/pdf/2606.18423v1",
+    "categories": [
+      "cs.SE"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  }
+]
