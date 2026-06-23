@@ -1,0 +1,541 @@
+[
+  {
+    "id": "2606.23030v1",
+    "title": "Have You Ever Seen Them? Entity-level Membership Inference through Interrogating Large Language Models",
+    "authors": [
+      "Yiran Zhu",
+      "Ziqi Yang"
+    ],
+    "summary": "Large Language Models (LLMs) raise growing concerns about privacy leakage and copyright compliance. Membership inference is a key tool for assessing such risks, but existing studies mainly focus on whether specific samples or sample-based data units are used for training. We argue that LLMs exhibit a human-memory-like behavior: an LLM may not memorize a specific sample verbatim, yet it can accumulate and reveal knowledge about a real-world entity from scattered mentions. This analogy motivates us to examine whether an LLM can be interrogated like a human interviewee to reveal its exposure to entity-related information. Motivated by this question, we propose entity-level membership inference, which determines whether information related to a target entity is used in LLM training. We study this task in the practical label-only black-box setting, where only generated texts are observable. We formalize the task under clue, input, and model constraints, establish the necessary and sufficient conditions for its feasibility, and instantiate five interrogation strategies based on this formalization. The strategies use limited entity clues to construct prompts, elicit entity-related responses, and infer membership from semantic features among the generated texts. We construct entity-level datasets and adapt state-of-the-art sample-level label-only methods to the entity-level setting as baselines. Experiments on person entities show that our methods achieve AUC up to 0.97 and bring gains of 6.0%--17.5% in Balanced Accuracy over the best adapted baseline.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23030v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.22932v1",
+    "title": "FORGE: Fused On-Register Gradient Elimination for Memory-Efficient LLM Training",
+    "authors": [
+      "Dikshant Kukreja",
+      "Kritarth Prasad",
+      "Avinash Anand",
+      "Zhengkui Wang",
+      "Erik Cambria",
+      "Timothy Liu",
+      "Aik Beng Ng",
+      "Simon See",
+      "Bapi Chatterjee"
+    ],
+    "summary": "Reverse-mode differentiation computes every weight gradient, writes it to memory, and only then lets the optimizer read it back. This two-phase schedule sets the memory ceiling of modern training: at the seam between the phases, every layer's gradient is live at once. We argue that this materialized gradient is an artifact of how differentiation is staged, not a quantity that learning requires -- and we eliminate it. FORGE folds the optimizer step into the backward pass and applies it one tile at a time, entirely in registers, so each gradient tile is consumed the instant it is produced and never becomes a tensor. The fusion changes only when the update happens, not what it computes: in full precision the fused step is provably exact -- the identical optimizer update, for every element-wise rule -- and that exactness survives tensor- and sequence-parallel sharding; in the bf16 and 8-bit regimes used in practice it is faithful rather than bit-identical, its deviation bounded and, for the weight store, rendered unbiased by stochastic rounding. Because each gradient tile is born and consumed in the same registers, it is never converted down to bf16 to be stored and read back; FORGE thus preserves the full-precision fidelity that both bf16 and 8-bit optimizers lose to that conversion. Nor is the method tied to one architecture or one optimizer: linear layers are ubiquitous, and FORGE reclaims the gradient memory of any of them under any element-wise rule. Empirically FORGE more than halves the memory of an optimizer step and, at the small batch sizes typical of fine-tuning and continued pretraining, runs about 1.5x faster; integrated into tensor-parallel Megatron-LM it fits 8B training at four times the micro-batch a standard optimizer allows on the same GPUs.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.22932v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.22840v1",
+    "title": "RLM-Cascade: Response-Level Speculative Decoding for Cost-Efficient LLM API Serving",
+    "authors": [
+      "Haifeng Wu",
+      "Srinivasan Manoharan",
+      "Fangbo Tu",
+      "Junhua Zhao",
+      "Jian Wan"
+    ],
+    "summary": "We present RLM-Cascade, a proxy-layer system that applies speculative decoding at the response level to reduce LLM API costs without requiring model architecture access or a shared vocabulary. A fast, inexpensive draft model generates a candidate response; a capable verify model accepts, enhances, or is bypassed entirely depending on a lightweight complexity router. On a real-world agentic coding workload (Claude Code), RLM-Cascade achieves a draft-use rate of 88.8% across 125 production requests, reducing API cost by 45.8% relative to a direct Opus baseline. Counter-intuitively, the proxy also reduces end-to-end latency: median response time is 2,026 ms versus 3,698 ms for Native Opus -- a 1.83X speedup at p50 -- because the SKIPPED path (DeepSeek only, no Opus call) dominates the workload distribution. Quality matches or exceeds the Opus baseline: 100% pass rate on a 20-task Code/Math/Instruct benchmark versus 95% for Native Opus. We further describe a rule-based complexity router that selects the SKIPPED path for simple agentic turns and a hybrid tool-call strategy that bypasses the speculative pipeline for schema-critical tool-selection turns. RLM-Cascade is deployed in production as an enterprise AI infrastructure component and published as open source with a live metrics dashboard and Prometheus endpoint.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.22840v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.22910v1",
+    "title": "Cross-lingual Retrieval-Augmented Classification for Dysarthria Severity Assessment",
+    "authors": [
+      "Taeyoung Jeong",
+      "Insung Lee",
+      "Du-Seong Chang",
+      "Myoung-Wan Koo"
+    ],
+    "summary": "Automatic dysarthria severity assessment is limited by the scarcity of labeled pathological speech data. To address this, we propose Cross-lingual Retrieval-Augmented Classification (CRAC), which leverages speech from a different language via an align-retrieve-fuse pipeline. Supervised contrastive learning first shapes a severity-focused embedding space, then a vector database is built from the opposite-language corpus. During both training and inference, the classifier retrieves top-k references from the aligned space and fuses them with the input via cross-attention. Evaluated on Korean post-stroke and Italian ALS dysarthria datasets under a speaker-independent three-class protocol, CRAC achieves balanced accuracies of 87.3% on Korean and 86.7% on Italian, improving over monolingual baselines by 8.4 and 20.0 percentage points, respectively.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.22910v1",
+    "categories": [
+      "cs.SD",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.SD",
+    "github": null
+  },
+  {
+    "id": "2606.14470v2",
+    "title": "GitOfThoughts: Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge",
+    "authors": [
+      "Pavan C Shekar",
+      "Abhishek H S",
+      "Aswanth Krishnan"
+    ],
+    "summary": "Large language model reasoning leaves no trace once it is done. The steps of a chain of thought disappear when the context window closes, a pruned search branch is just gone, and memory buffers cannot be diffed, merged, or audited. Code, infrastructure, and experiments are all version-controlled. Reasoning is not. GitOfThoughts stores an agent's reasoning tree as a git repository. Every scored thought becomes a commit, scores become notes, outcomes become tags, and retrieval is just git log over the agent's own history. We use this to test something simple. Does giving an agent memory from past problems actually make it more accurate? We tried five memory stores (none, a markdown file, a vector database, a graph, and git) across two benchmarks, two model sizes, and several pre-registered repeat experiments. The answer, on new problems, is no, including one promising early result that did not hold up when we repeated it. Memory only helps once the problem being solved is nearly identical to something already in memory (cosine similarity above about 0.8); below that, it does nothing. In other words, the model is finding the answer rather than learning the method. Even a model 4.5x larger still cannot pull a reusable method out of a worked example; it just gets better at spotting near-copies. The only thing that reliably helped on new problems was generating several answers and picking the most common one (self-consistency). So the case for using git as the memory store is not that it retrieves better. It is that it gives auditability, history, and the ability to merge two agents' memories, at no cost to accuracy.",
+    "published": "2026-06-12",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.14470v2",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.23344v1",
+    "title": "RT-DocLayout: Real-Time End-to-End Document Layout Analysis with Reading Order in the Wild",
+    "authors": [
+      "Cheng Cui",
+      "Tingquan Gao",
+      "Xueqing Wang",
+      "Changda Zhou",
+      "Hongen Liu",
+      "Ting Sun",
+      "Yubo Zhang",
+      "Zelun Zhang",
+      "Jiaxuan Liu",
+      "Manhui Lin",
+      "Yue Zhang",
+      "Suyin Liang",
+      "Yiqing Xiang",
+      "Yi Liu"
+    ],
+    "summary": "Accurate document layout analysis remains a critical bottleneck for document parsing systems, due to the intricate coupling among heterogeneous document layout elements, geometric distortions (\\eg, paper warping and bending, perspective variations), and reading order within diverse layout structures. Existing approaches typically rely on fragmented multi-stage pipelines or computationally heavy generative Transformer architectures, leading to error propagation and limited efficiency.\n  In this paper, we present RT-DocLayout, a highly efficient end-to-end framework for document layout analysis, designed as a front-end for document parsing tasks. The proposed model unifies classification, detection, pixel-level segmentation, and reading order prediction for layout elements within a single 33M-parameter architecture. Built upon the RT-DETR, our key contribution is a unified multi-task formulation within a single query-based decoder that simultaneously classifies, regresses bounding box, generates masks, and constructs relationship to reason reading order.\n  By jointly learning geometric and structural representations, RT-DocLayout introduces multi-task optimization that substantially improves robustness under real-world document distortions. Extensive experiments on public benchmarks demonstrate state-of-the-art performance in document layout analysis while maintaining real-time inference speed(132.1 FPS). When coupled with downstream OCR engines, RT-DocLayout significantly improves full-document reconstruction quality, providing a scalable and practical foundation for real-world document intelligence systems.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23344v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.23293v1",
+    "title": "Flow6D: Discrete-to-Continuous Flow Matching for Efficient and Accurate Category-Level 6D Pose Estimation",
+    "authors": [
+      "Mingyu Mei",
+      "Li Zhang",
+      "Zibo Dai",
+      "Han Sun",
+      "Xinyue Zhao",
+      "Huiliang Shen",
+      "Zaixing He"
+    ],
+    "summary": "6D pose estimation is a key task in computer vision and embodied AI, widely used in robotic manipulation, augmented reality, etc. Existing methods directly regress in a high-dimensional continuous space, facing two key challenges in category-level pose estimation: limited accuracy due to noise and local optima, and inefficient search over an infinite space that hinders real-time performance. This paper proposes Flow6D, a hierarchical flow matching framework with a two-stage discrete latent space localization-continuous pose regression strategy. Rotation and translation parameters are first discretized into bins, with a discrete flow matching model locking the latent space around the true pose to reduce search complexity. Then, by sampling in the latent space, a continuous flow matching model predicts local pose residuals to optimize the estimate and regress to an accurate pose. The framework also naturally extends to articulated objects, outperforming state-of-the-art methods on synthetic and real datasets with real-time inference at 70 FPS. Project website: https://flow6d.github.io/.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23293v1",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2606.23414v1",
+    "title": "Leveraging Similarities in Multi-Armed Bandits",
+    "authors": [
+      "Khaled Eldowa",
+      "Thibaud Rahier",
+      "Augustin Cablant",
+      "Panayotis Mertikopoulos",
+      "Pierre Gaillard"
+    ],
+    "summary": "In many online learning and bandit problems, the actions we consider possess inherent similarities--for instance because they share latent traits, tags, or hierarchical structure. We study online learning with a similarity-structured action set, encoded by a rooted tree whose leaves are the actions and whose levels quantify how closely two actions are related. The loss sequence is assumed tree-compatible: losses of similar actions are constrained to be close. We establish an impossibility result showing that usual one-point bandit feedback cannot, in general, leverage range or tree-induced similarity, even under very strong similarity constraints. We then provide a unified set of algorithms which adapt to a wide range of richer feedback models, from semi-bandit feedback down to multi-point bandit protocols, including the minimal two-point feedback setting. We show these algorithms exhibit best-of-both-worlds guarantees and provably exploit action similarities by replacing the number of actions $K$ by a similarity-aware effective number of actions $K_{\\mathrm{eff}}$ in the regret bounds. As an application, we show that under two-point feedback, it is possible to achieve $\\sqrt{T}$ regret in Lipschitz bandits when $d \\leq 2$.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23414v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.22950v1",
+    "title": "DT-GOL: Dual-Track Geometric Online Learning in Nonstationary Environment with Label Delay",
+    "authors": [
+      "Yulin Wang",
+      "Yi He",
+      "Dianlong You",
+      "Di Wu"
+    ],
+    "summary": "Online learning is crucial for handling complex data streams in big data applications. Recent research has begun to focus on dynamic scenarios, i.e., non-stationary environments. However, a crucial yet often overlooked aspect is label latency, where new data may not receive labels in time due to the slow and expensive labeling process, thus hindering rapid adaptation to dynamic environments.\n  To resolve this impasse, we propose Dual-Track Geometry Online Learning (DT-GOL), a novel framework that shifts from temporal compensation to spatial reasoning to bridge the supervised latency gap. By modeling the delay challenge as a semi-supervised task, we leverage real-time topological evolution of features as a reliable geometric surrogate for unobservable conceptual changes to achieve proactive supervised adaptation within the delay window. Unlike rigid self-training, we introduce a dynamic evidence calibration mechanism that distills geometric information into soft labels that perceive uncertainty, effectively mitigating the confirmation bias inherent in hard pseudo-labels. Furthermore, to resolve the stability-plasticity dilemma, we design a decoupled dual-track architecture in which a master learner serves as a stable anchor, updated strictly from delayed ground truth, while a transient branch leverages soft geometric knowledge for low-risk forward adaptation. Extensive experiments on real and synthetic datasets demonstrate that DT-GOL significantly outperforms existing state-of-the-art baseline methods, especially in scenarios with concept drift.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.22950v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.23087v1",
+    "title": "FlowTrain: Flow-Based Decoupled Training for Industrial-Grade Vision-Language Models",
+    "authors": [
+      "Zhida Jiang",
+      "Zhaolong Xing",
+      "Yang Pei",
+      "Xiaolong Chen",
+      "Yuanhang Xiao",
+      "Chengzhi Huang",
+      "Xiyu Liu",
+      "Haopeng Liu",
+      "Qingyuan Sang",
+      "Lingfeng Zhou",
+      "Jiaxing Wang",
+      "Zicheng Zhang",
+      "Wenzhe Wang",
+      "Xinyu Liu",
+      "Yan Li",
+      "Zhen Chen",
+      "Ke Zhang"
+    ],
+    "summary": "Industrial-grade distributed training of vision-language models (VLMs) remains far less efficient than that of unimodal LLMs. Existing solutions either follow a monolithic design that assigns uniform parallelism to heterogeneous modules or adopt a disaggregated deployment that separates modules while executing them as a batch-synchronized pipeline. In this paper, we highlight that the above solutions are still not sufficient, and VLM training can be further decoupled. To this end, we present FlowTrain, a flow-based decoupled training framework that reformulates VLM training as a producer-consumer dataflow coordinated through a unified memory pool. The encoder and backbone can progress independently over a global virtual address space. Since this execution decoupling fundamentally changes the optimization objective of allocation and scheduling, FlowTrain further introduces a heterogeneous parallel allocator that assigns module-specific parallelism strategies by solving a throughput matching problem. The dynamic packing scheduler is used to construct balanced microbatches at runtime according to the actual LLM-side computation cost. Extensive experiments on real-world workloads show that FlowTrain achieves over 50% MFU and up to 1.7x throughput improvement, narrowing the efficiency gap to LLM-only training.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.23087v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.22768v1",
+    "title": "Factored Gossip DiLoCo: Reducing Blocking Communication in DiLoCo",
+    "authors": [
+      "Chamin Hewa Koneputugodage",
+      "Thalaiyasingam Ajanthan",
+      "Sameera Ramasinghe",
+      "Hadi Mohaghegh Dolatabadi",
+      "Shamane Siriwardhana",
+      "Gil Avraham",
+      "Violetta Shevchenko",
+      "Karol Pajak",
+      "James Snewin",
+      "Alexander Long"
+    ],
+    "summary": "To make large-scale distributed training practical outside high-bandwidth datacenters, we must reduce blocking, high-volume synchronization. While DiLoCo communicates infrequently, its outer synchronization remains bandwidth-heavy and brittle to stragglers and transient failures. We relax exact synchronization to approximate synchronization via mixing/gossip, which degrades gracefully under delays and communication failures. This allows us to factorize DiLoCo synchronization into a non-blocking mixing step that overlaps computation with no staleness, and a blocking mixing step that tightens worker agreement, yielding a tunable trade-off between compute utilization and optimization stability. On up to billion-parameter language models in low-bandwidth settings, our framework substantially improves compute utilization compared to DiLoCo, with training progress ranging from comparable to closely matching it, and is more robust to failures.",
+    "published": "2026-06-22",
+    "updated": "2026-06-22",
+    "pdf_url": "https://arxiv.org/pdf/2606.22768v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.19725v2",
+    "title": "Library-Aware Doubles and Iterative Repair for Large Language Model-Generated Unit Tests in OpenSIL Firmware",
+    "authors": [
+      "Ma Toan Bach",
+      "Yuchi Zheng",
+      "Haingo Razafindranto",
+      "Tanvir Alam",
+      "Aric Leather",
+      "Ranveer Sandhu",
+      "Jitesh Arora"
+    ],
+    "summary": "Validating changes in low-level C firmware is expensive because unit tests (UTs) are fragile under strict build constraints, where missing headers, unresolved symbols, and dependency mismatches frequently prevent compilation and linking. This study introduces an automated UT authoring workflow for the Open-Source Silicon Initialization Library (openSIL) firmware codebase maintained by Advanced Micro Devices (AMD) that reduces manual effort through a large language model (LLM) guided multi-agent pipeline. The workflow combines automated generation of test scaffolds, library-aware creation or reuse of stubs, mocks, and fakes, and an iterative compile-dispatch repair loop driven by build logs and line-coverage feedback. We evaluate the approach using compilation success, repair iterations, dispatch success, and line coverage, with time, cost, and token usage as secondary measures. Across 76 functions under test, the workflow generated compilable UTs for 73 functions. In a configuration without line coverage guidance or retrieval augmentation, mean line coverage reached 73.9%. On a 48-function subset evaluated under both configurations, mean line coverage reached 98.8% with line-coverage guidance alone and reached 94.7% when combined with vector-database retrieval. Results show that automated generation-and-repair pipelines can substantially improve UT creation efficiency and coverage for constrained firmware environments while reducing manual debugging effort.",
+    "published": "2026-06-18",
+    "updated": "2026-06-21",
+    "pdf_url": "https://arxiv.org/pdf/2606.19725v2",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.MA"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2606.21943v1",
+    "title": "Modularized Reinforcement Learning on LLMs: From MDP Creation to Exploration and Learning",
+    "authors": [
+      "Zhao Yang",
+      "Yuxuan Jiang",
+      "Ting-Chih Chen",
+      "Lincen Yang",
+      "Annie Wong",
+      "Chao Gao",
+      "Jacob E. Kooi",
+      "Zhong Li",
+      "Jiayang Shi",
+      "Kevin Qiu",
+      "Qi Huang",
+      "Xinrui Zu",
+      "Shiping Yang",
+      "Hengyuan Zhang",
+      "Ngai Wong",
+      "Filip Ilievski",
+      "Shujian Yu",
+      "Aske Plaat",
+      "Zhaochun Ren",
+      "Mark Hoogendoorn",
+      "Vincent François-Lavet"
+    ],
+    "summary": "Reinforcement learning (RL) has become central to LLM post-training, yet the methods that dominate current pipelines, PPO and GRPO, represent only a narrow slice of what RL offers. Understanding why these methods prevail, and what alternatives exist, requires a principled examination of the design decisions that underlie any RL algorithm.\n  This survey organizes that examination around three stages of algorithm construction. We begin with MDP creation: how the reward function, state space, action space, termination condition, and discount factor are, or could be, defined for LLM training. We then turn to exploration, covering temperature sampling, entropy regularization, intrinsic motivation, tree search, and curriculum learning. Finally, we address learning along four classical RL dimensions: model-free versus model-based, value-based versus policy-based versus actor-critic, on-policy versus off-policy, and credit assignment, including both Monte Carlo methods, which rely on full return estimates, and bootstrapping methods, which update estimates using other learned predictions.\n  Mapping the LLM literature onto this taxonomy reveals a strikingly non-uniform distribution of research effort. Critic-free policy gradients and Monte Carlo credit assignment are densely populated, while value-based methods, off-policy actor-critic training, and bootstrapping-based credit assignment remain largely unexplored despite well-established counterparts in classical RL. These gaps represent concrete opportunities for transferring proven RL techniques to LLM training.\n  By making these gaps explicit alongside the methods that have proven effective, this survey offers researchers in both RL and LLMs a shared framework for understanding current practice and identifying promising directions for future work.",
+    "published": "2026-06-20",
+    "updated": "2026-06-20",
+    "pdf_url": "https://arxiv.org/pdf/2606.21943v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.22030v1",
+    "title": "Nous: A Predictive World Model for Long-Term Agent Memory",
+    "authors": [
+      "Pranav Singh"
+    ],
+    "summary": "We present Nous, a novel agent memory architecture grounded in the principle that knowledge is prediction, not storage. Rather than persisting facts as database records, vector embeddings, or knowledge-graph triples, Nous maintains a predictive world model: a collection of categorical probability distributions, called dimensions, one per entity-attribute pair observed in conversation. Each incoming observation is scored by its information-theoretic surprise S = -log2 P(obs | D), and the distribution is updated via a closed-form Bayesian posterior. The primary stored artifact is the delta, a record of the shift from prior to posterior belief, rather than the fact itself. Forgetting emerges naturally as entropy decay toward the uniform distribution, and identity resolution is handled through mutual information between entity dimension sets. Evaluated on the LoCoMo long-term conversational memory benchmark across ten conversations (1,540 questions) using GPT-4o-mini as backbone, Nous achieves F1 of 63.50 (single-hop), 55.32 (multi-hop), 58.57 (temporal), and 62.50 (open-domain). Against A-MEM's self-reported GPT-4o-mini numbers, Nous shows substantial gains in three of four categories, though we note that independent citations of A-MEM's results disagree with each other on category assignment, a reproducibility issue we discuss openly rather than resolve unilaterally. We additionally compare against BeliefMem, a concurrently developed system built on the same core premise of belief-based rather than deterministic memory; on the same benchmark and backbone, Nous's self-reported numbers exceed BeliefMem's self-reported numbers on all four categories, though we flag several uncontrolled differences between the two evaluation pipelines that prevent this from being a fully controlled comparison. Nous requires no external vector database or graph engine.",
+    "published": "2026-06-20",
+    "updated": "2026-06-20",
+    "pdf_url": "https://arxiv.org/pdf/2606.22030v1",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.IR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.20246v2",
+    "title": "Finetuning Vision-Language-Action Models Requires Fewer Layers Than You Think",
+    "authors": [
+      "Gia-Binh Nguyen",
+      "Trong-Bao Ho",
+      "Thien-Loc Ha",
+      "Khoa Vo",
+      "Philip Lund Møller",
+      "Quang T. Nguyen",
+      "Long Dinh",
+      "Tung M. Luu",
+      "Tuan Dam",
+      "Vu Duong",
+      "Trung Le",
+      "Nghi D. Q. Bui",
+      "Minh Vu",
+      "Tran Nguyen Le",
+      "An Thai Le",
+      "Ngan Le",
+      "Daniel Sonntag",
+      "James Zou",
+      "Jan Peters",
+      "Duy M. H. Nguyen",
+      "Ngo Anh Vien"
+    ],
+    "summary": "Vision-Language-Action (VLA) models pre-trained on massive video-robot datasets have revolutionized robotic manipulation, yet their multi-billion parameter architectures impose prohibitive computational burdens during downstream fine-tuning and real-time inference. In this work, we reveal a highly non-trivial architectural characteristic of these continuous control foundation policies (e.g., pi_0, GR00T-N1.5): despite being trained on diverse physical trajectories, they exhibit severe layer-wise representational redundancy. To exploit this, we introduce a structural compression pipeline that is entirely training-free, bypassing the need of existing methods to load full-scale models to learn optimized token reductions or dynamic layer selectors. Instead, using only a single forward pass via Centered Kernel Alignment to identify redundant layer features, we remove twin layers to permanently compress the model depth by up to 50% across both the VLM backbone and the continuous control policy head. Downstream fine-tuning of this streamlined architecture yields a dual acceleration benefit: a 40-50% reduction in training time and up to 30% faster real-time inference, while matching or exceeding full-scale base model performance. We comprehensively validate our method across three simulation benchmarks (LIBERO, RoboCasa, SimplerEnv) and 10 diverse real-world manipulation tasks across 4 unique robotic embodiments. These results prove that advanced VLAs require significantly fewer layers than previously assumed, offering a highly compute-efficient paradigm for scalable robot learning.",
+    "published": "2026-06-18",
+    "updated": "2026-06-20",
+    "pdf_url": "https://arxiv.org/pdf/2606.20246v2",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.19025v2",
+    "title": "FoMoE: Breaking the Full-Replica Barrier with a Federation of MoEs",
+    "authors": [
+      "Lorenzo Sani",
+      "Zeyu Cao",
+      "Meghdad Kurmanji",
+      "Alex Iacob",
+      "Andrej Jovanovic",
+      "Yan Gao",
+      "Wanru Zhao",
+      "Nicholas D. Lane"
+    ],
+    "summary": "Pre-training Large Language Models (LLMs) typically demands large-scale infrastructure with tightly coupled hardware accelerators. Mixture-of-Experts (MoEs) architectures partially decouple model capacity from per-token compute. This efficiency alone does not make MoE training feasible over ordinary Internet links or loosely connected commodity hardware since active expert routing still assumes high-speed datacenter fabrics. Low-communication methods such as DiLoCo and Photon reduce synchronization frequency across distributed sites, mitigating bandwidth constraints, yet still require full model replicas at every site. This creates a mismatch: modern MoEs have sparse data paths, but their distributed training infrastructure remains communication-dense and memory-inefficient, limiting attempts to pool geographically distributed compute. In this work, we introduce FoMoE, a system that breaks the full-replica paradigm by partitioning expert layers across workers and skipping non-resident experts during local training. We demonstrate that FoMoE: (I) reduces communication costs by up to 1.42x over efficient baselines and 45.44x over Distributed Data Parallelism (DDP) via partial expert replication in controlled regimes; (II) achieves empirical throughput speedups of up to 1.4x through the skip-token mechanism; and (III) shows stable routing in the trained regimes and projects the communication/memory benefits to 100B-scale configurations through system modeling.",
+    "published": "2026-06-17",
+    "updated": "2026-06-20",
+    "pdf_url": "https://arxiv.org/pdf/2606.19025v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.DC",
+      "eess.SY"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.21514v1",
+    "title": "Towards Understanding the Power and Limits of the Muon Optimizer: A River-Valley Perspective",
+    "authors": [
+      "Tianqi Shen",
+      "Jinji Yang",
+      "Runze Shi",
+      "Jianhao Ma",
+      "Jiaye Teng",
+      "Ziye Ma"
+    ],
+    "summary": "Recently, Muon has gained substantial attention as an appealing alternative to Adam-like optimizers, with many works highlighting its advantages through spectral normalization and improved conditioning. Yet this positive theoretical narrative contrasts with its empirical performance in large language model (LLM) training, where Muon's gains over Adam/AdamW are often mixed, schedule-sensitive, and not uniformly superior. To address this gap, we develop a trajectory-level theory characterizing both the strengths and limitations of Muon. We introduce a mixed-spiked matrix sensing model whose sensing operator decomposes into signal, spike, and bulk components, capturing a mixture of anisotropic structure and long-tail information reminiscent of LLM training. On top of it, we adopted a river-valley perspective in which we view the landscape as composed of a river direction flowing to the desired solution and hill directions encoding nuisance or task-irrelevant information. In the momentum-free setting, we show that Muon moves faster along the information-bearing river direction during early optimization, but can converge much more slowly near the river bottom than gradient descent. We then extend the river-valley perspective to general nonconvex objectives with momentum by studying points on the spectral river. There, while Muon converges faster early on, its orthogonalized update removes residual scale information, making it prone to overshooting and oscillation near the target solution. Together, these results suggest that our characterizations extend beyond spiked matrix sensing and motivate switching to GD-like refinement optimizers in the final phase, rather than relying only on a fixed learning-rate schedule for Muon. We also provide preliminary evidence supporting this two-stage approach in language model training experiments.",
+    "published": "2026-06-19",
+    "updated": "2026-06-19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21514v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.21130v1",
+    "title": "Learning Burst-Aware Early Warning Models for Capacity Stress under AI Workload Surges in Hyperscale Data Centers",
+    "authors": [
+      "Zihan Yu",
+      "Xianling Zeng",
+      "Zhiming Xue",
+      "Yalun Qi",
+      "Sichen Zhao"
+    ],
+    "summary": "The rapid growth of large-scale AI workloads, particularly Large Language Model (LLM) training and inference, is fundamentally reshaping the operational dynamics of hyperscale data centers. Unlike traditional cloud workloads, AI-driven jobs exhibit bursty, high-intensity, and rapidly shifting resource demands, often leading to sudden capacity stress that cannot be effectively handled by reactive threshold-based mechanisms. In this paper, we propose a deployment-oriented, burst-aware early warning framework for proactive capacity stress prediction under AI workload surges. We formulate the problem as a high-recall forecasting task over multivariate telemetry windows, with the explicit goal of enabling operational intervention before system degradation occurs. The proposed framework integrates workload intensity, temporal variation, and system pressure signals, and employs a lightweight tree-based learning model to capture nonlinear interactions in highly imbalanced environments. To evaluate the system under realistic conditions, we introduce an AI workload surge injection methodology that simulates burst-driven demand patterns observed in large-scale AI systems. Our XGBoost-based model achieves an ROC AUC of 0.697 and an AP of 0.670, significantly outperforming baseline methods. Under deployment-oriented threshold selection, the framework achieves a Recall of 0.914, enabling the detection of the majority of stress-prone periods with acceptable false-alarm cost. Beyond predictive performance, we show how the proposed framework can be integrated into operational control loops to support proactive actions such as workload throttling and resource scaling. Our results highlight the practical value of high-recall, learning-based early warning systems in enabling resilient and adaptive data center operations in the era of AI-driven workloads.",
+    "published": "2026-06-19",
+    "updated": "2026-06-19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21130v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.21669v1",
+    "title": "Online Learning of Robust Legged Odometry with Minimal Exteroceptive Supervision",
+    "authors": [
+      "Abhijeet M. Kulkarni",
+      "Yuze Du",
+      "Guoquan Huang"
+    ],
+    "summary": "Robust locomotion and navigation for legged robots relies heavily on dependable odometry. Traditional multi-sensor fusion for such state estimation requires meticulous sensor calibration and platform-specific kinematic modeling, which complicates deployment. Industrially packaged exteroceptive sensors can provide accurate motion tracking but remain vulnerable to perceptually degraded conditions. We thus develop a plug-and-play, robust legged odometry system that eliminates the need for explicit exteroceptive-to-proprioceptive calibration or system kinematic modeling. Our approach leverages established exteroceptive motion pipelines as a continuous supervisory signal to train an online learned velocity neural network directly from proprioceptive data. An Invariant EKF (InEKF) is then used to fuse the learned proprioceptive or exteroceptive velocity (if any) and IMU data. When exteroception fails due to environmental degradation, the system seamlessly falls back to using the learned proprioceptive model, yielding a resilient legged odometry that readily adapts to new hardware. We demonstrate the platform-agnostic, easily deployable nature of our approach on different quadruped platforms, showcasing promising results in maintaining robust motion estimation across challenging scenarios.",
+    "published": "2026-06-19",
+    "updated": "2026-06-19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21669v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.21364v1",
+    "title": "Predictive Repair Management Using a Multi-Head Attention Transformer and Online Learning",
+    "authors": [
+      "Xinyao Zhang",
+      "Willie Cade",
+      "Karl R. Haapala",
+      "Arun Natarajan",
+      "Sara Behdad"
+    ],
+    "summary": "Accurate prediction of repair duration is an important challenge in product maintenance due to its implications for resource allocation, customer satisfaction, and operational performance. This study aims to develop a deep learning framework to help fleet repair shops accurately categorize repair time given product historical data. The study uses an automobile repair and maintenance dataset and creates an end-to-end predictive framework by employing a multi-head attention network designed for tabular data. The developed framework combines categorical information, transformed through embeddings and attention mechanisms, with numerical historical data to facilitate integration and learning from diverse data features. A weighted loss function is introduced to overcome class imbalance issues in large datasets. Moreover, an online learning strategy is used for continuous incremental model updates to maintain predictive accuracy in evolving operational environments. Our empirical findings demonstrate that the multi-head attention mechanism extracts meaningful interactions between vehicle identifiers and repair types compared to a feed-forward neural network and a random forest model. Also, combining historical maintenance data with an online learning strategy facilitates real-time adjustments to changing patterns and increases the model's predictive performance on new data. The model is tested on real-world repair data spanning 2013 to 2020 and achieves an accuracy of 78%, with attention weight analyses illustrating feature interactions.",
+    "published": "2026-06-19",
+    "updated": "2026-06-19",
+    "pdf_url": "https://arxiv.org/pdf/2606.21364v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.17276v3",
+    "title": "On the Memorization Behavior of LLMs in Generative Recommendation: Observations, Implications, and Training Strategies",
+    "authors": [
+      "Sunwoo Kim",
+      "Sunkyung Lee",
+      "Clark Mingxuan Ju",
+      "Donald Loveland",
+      "Bhuvesh Kumar",
+      "Kijung Shin",
+      "Neil Shah",
+      "Liam Collins"
+    ],
+    "summary": "Generative recommendation (GR) has emerged as a promising direction for recommender systems. Recently, large language models (LLMs) have been increasingly adopted for GR, as their rich pretrained knowledge is expected to help them generalize beyond common user behavior patterns that traditional memorization-oriented baselines can capture. However, existing LLM-based GR works largely ignore LLMs' well-known tendency to memorize, which, if present in LLMs fine-tuned for GR, would restrict their utilization of pretrained knowledge. In this work, we investigate this concern by examining one-hop memorization, where a model recommends items that are direct successors of items in the training data. We show that LLMs do this more than non-LLM-based GR models-in fact, the vast majority of their gains over GR baselines are actually on users whose target items can be predicted through one-hop memorization. We intuit that improving performance on the remaining users requires LLMs to learn richer item-item relations beyond one-hop transitions. To achieve this, we propose IIRG, a novel training strategy that teaches LLMs to capture: (1) collaborative relations derived from item co-occurrences across multiple hops in user sequences, and (2) semantic relations among items with similar themes, both of which can serve as useful recommendation signals. We show that IIRG significantly improves over LLMs trained solely with standard next-item prediction, with especially large gains for users whose test items are not covered by train-time one-hop transitions.",
+    "published": "2026-06-15",
+    "updated": "2026-06-18",
+    "pdf_url": "https://arxiv.org/pdf/2606.17276v3",
+    "categories": [
+      "cs.IR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2606.20817v1",
+    "title": "Provably Sub-Linear Two-Timescale NeuroEvolution with Online Plasticity",
+    "authors": [
+      "Shishen Lin",
+      "Yixin Chen"
+    ],
+    "summary": "NeuroEvolution of Augmenting Topologies (NEAT) is a widely used neuroevolution algorithm for learning neural network architectures and weights for control tasks. However, standard offline optimisation searches for connection strengths directly, which can scale poorly in high-dimensional weight spaces and more difficult continuous control problems. Hybrid methods that combine neuroevolution with online learning can address this challenge, but their theoretical properties remain underexplored. This paper gives the first regret analysis for a general NeuroEvolutionary Online Learning (NEOL) framework, which decouples learning into two timescales: an outer loop for architecture search and an inner loop for online weight adaptation via rewardmodulated plasticity. Under mild conditions, we prove that NEOL achieves sublinear regret. Empirically, under fixed interaction budgets on four standard control benchmarks, a NEAT-based NEOL implementation achieves higher final fitness and lower variance than pure NEAT, and is competitive with strong reinforcement learning (RL) baselines on several tasks. The results are supported byWilcoxon rank-sum tests and ablation studies. Overall, the findings show that online plasticity can improve the sample efficiency and robustness of two-timescale neuroevolution. Code is available at https://github.com/boobaa2001/NeuroEvolution Online Learning NEOL.",
+    "published": "2026-06-18",
+    "updated": "2026-06-18",
+    "pdf_url": "https://arxiv.org/pdf/2606.20817v1",
+    "categories": [
+      "cs.NE",
+      "cs.LG"
+    ],
+    "primary_category": "cs.NE",
+    "github": {
+      "url": "https://github.com/boobaa2001/NeuroEvolution",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.20865v1",
+    "title": "Phase-Space Energy Transfer of Wave-Particle Interactions using the Field-Particle Correlation Technique and Linear Plasma Theory with JET-PLUME",
+    "authors": [
+      "Collin R. Brown",
+      "Gregory G. Howes",
+      "Kristopher G. Klein",
+      "Jason M. TenBarge"
+    ],
+    "summary": "The collisionless transfer of energy between fields and particles through wave-particle interactions is a fundamental process in space plasmas but remains incompletely characterized because many mechanisms operate across a wide parameter range and diverse plasma conditions. The Field-Particle Correlation (FPC) technique reveals velocity-space signatures of particle energization by correlating measured electric field fluctuations with changes in the velocity distribution. Fully mapping these signatures across plasma parameters requires an impractically large number of kinetic simulations or observations. To address this challenge, we introduce JET-PLUME (Judging Energy Transfer in a Plasma in a Linear Uniform Magnetized Environment), an extension of the PLUME Vlasov-Maxwell dispersion solver. JET-PLUME uses PLUME's ability to model parallel drifting bi-Maxwellian distributions to examine phase-space energy transfer by adding an analytic Fourier-space formulation of the FPC. This approach isolates the contribution of individual resonances, separates degenerate entropy mode components, and allows systematic analysis of unstable, growing modes. Dimensionless expressions extend the results across a broad parameter range and highlight the role of off-diagonal elements of the susceptibility tensor in coupling electric field and current response. We show that during kinetic Alfvén wave damping, the perpendicular field can drive parallel ion currents among particles with large perpendicular velocity, reducing the net Landau damping. The resulting velocity-space signatures, accessible through JET-PLUME, demonstrate how analytic formulations of phase-space energy transfer can reveal novel physics of wave-particle interactions across diverse plasma environments.",
+    "published": "2026-06-18",
+    "updated": "2026-06-18",
+    "pdf_url": "https://arxiv.org/pdf/2606.20865v1",
+    "categories": [
+      "physics.plasm-ph"
+    ],
+    "primary_category": "physics.plasm-ph",
+    "github": null
+  }
+]
