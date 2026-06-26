@@ -1,0 +1,294 @@
+[
+  {
+    "id": "2606.27153v1",
+    "title": "DMuon: Efficient Distributed Muon Training with Near-Adam Overhead",
+    "authors": [
+      "Vincent Chen",
+      "Starrick Liu",
+      "Regis Cheng",
+      "Dance Yang",
+      "Shalfun Li",
+      "Ryan Yu",
+      "Lucy Liang",
+      "Hang Su",
+      "Roy Gan",
+      "Hao Wang",
+      "Qian Wang"
+    ],
+    "summary": "Matrix-orthogonalization-based optimizers, exemplified by Muon, have demonstrated strong convergence behavior across a wide range of modern deep learning workloads. The matrix-aware updates offer a compelling alternative to conventional element-wise optimization, particularly as model architectures continue to grow in scale and heterogeneity. Yet contemporary distributed training infrastructure built around the assumption of element-wise optimizers is poorly matched to matrix-level optimizers such as Muon, whose updates couple entire weight matrices and require costly Newton-Schulz iterations. Vanilla Muon implementations incur more than 2x the cost of forward and backward passes. To close this gap, we present DMuon, an open-source distributed Muon implementation that integrates into existing training pipelines as a drop-in module, with no framework-level modifications. Across both embodied foundation model and large language model (LLM) training workloads, DMuon achieves a 1.48x-3.01x speedup in end-to-end step time and a 6.85x-163.00x speedup in optimizer-step time, bringing per-step latency to near-AdamW levels and enabling efficient scaling in our model training.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.27153v1",
+    "categories": [
+      "cs.DC",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.26633v1",
+    "title": "Simulating Unified Tensor Resharding in heterogeneous AI systems",
+    "authors": [
+      "Sumit Kumar",
+      "Sayantan Dasgupta",
+      "Kushal Mitra",
+      "Meet Dadhania",
+      "Rohan Sudhir Basugade",
+      "Praveen Tammana",
+      "Satananda Burla",
+      "Abed Mohammad Kamaluddin",
+      "Rinku Shah"
+    ],
+    "summary": "State-of-the-art AI training simulators assume homogeneous compute and network infrastructure. However, real-world training infrastructure is becoming increasingly heterogeneous since: (a) Model architectures such as multimodal and MoE exploit heterogeneity to improve device utilization, (b) Public cloud platforms often provide limited availability of homogeneous hardware due to fast hardware evolution, and (c) Large enterprises frequently deploy geographically distributed infrastructure that is both diverse and heterogeneous. In this paper, we present Xsim, a heterogeneity-aware simulator for distributed LLM training. Xsim supports: (i) Load balancing through non-uniform workload partitioning across heterogeneous device groups, (ii) Heterogeneity-aware collective communication via customized ring construction and chunk partitioning, (iii) Reusable heterogeneity-aware abstractions for emerging pipeline-parallel algorithms and non-uniform tensor resharding technique, (iv) Flexible input abstractions for specifying deployment plans with custom device groups and custom device-to-parallelism mappings, and (v) Pluggable integration with NS-3 and htsim, allowing users to trade off simulation fidelity for performance and scalability. Our evaluation demonstrates that Xsim accurately predicts training time for real-world heterogeneous deployments, with an error of less than 5% across most heterogeneous data-parallel/tensor-parallel configurations and around 2% error with pipeline-parallel communication modeling. We expose actionable metrics such as pipeline bubble time and straggler waiting time.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.26633v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.26711v1",
+    "title": "Mask to Concept: Auto-Promptable SAM3 via Efficient Test-Time Concept Embedding Search for Few-Shot Annotation",
+    "authors": [
+      "Quan Zhou",
+      "Shaoqing Zhai",
+      "Qiang Hu Jia Chen",
+      "Qiang Li",
+      "Zhiwei Wang"
+    ],
+    "summary": "Transforming foundation segmentation models from human-prompted tools into auto-promptable annotators is critical for scalable medical data annotation. Current methods commonly depend on external feature matchers or auxiliary networks to automate geometric prompting, but introducing architectural overhead and limiting performance scalability. Although SAM3 natively supports concept segmentation via reusable text prompts, its direct use in medical imaging is hindered by a lack of fine-grained clinical knowledge and the ambiguity of human-written descriptions. In this work, we propose Mask to Concept (M2C), an efficient framework that adapts SAM3 for medical few-shot annotation without external modules, parameter retraining, or manual text engineering. Using only a few labeled images, M2C enables SAM3 to automatically search for transferable visual concepts entirely within its frozen architecture: it initializes a learnable concept embedding, uses it to prompt segmentation, and updates the embedding by gradients of minimizing the concept segmentation error. We further introduce a Hybrid Uncertainty Estimation (HUE) module that calculates the prediction entropy and maps concept predictions back to the box prompts, measuring concept-geometry prompting inconsistency. Highly uncertain samples are flagged actively for human correction, and the corrected masks are then fed back to M2C to continuously search for more precise concept embeddings, forming a self-enhancing annotation loop with minimal expert effort. Experiments on medical segmentation benchmarks show that our method achieves SOTA few-shot segmentation performance and outstanding annotation efficiency, offering a practical and efficient pathway toward scalable medical image labeling. Codes are at https://github.com/Huster-Hq/M2C.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.26711v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/Huster-Hq/M2C.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.12716v2",
+    "title": "Does AI Reviewer See the Full Picture? Attacking and Defending Multimodal Peer Review",
+    "authors": [
+      "Xinyu Zhao",
+      "Rana Muhammad Shahroz Khan",
+      "Zhen Xu",
+      "Zhen Tan",
+      "Tianlong Chen"
+    ],
+    "summary": "The integration of Large Language Models (LLMs) and Multimodal LLMs (MLLMs) into scientific peer-review workflows introduces novel and significant risks for adversarial manipulation, especially given the multimodal nature of scientific papers where figures, not just text, convey core evidence. This creates a significant gap: current robustness studies on AI peer-review are overwhelmingly text-only. Moreover, the problem is distinct from standard jailbreaking, as a peer-review attack seeks to induce a domain-specific, targeted failure (e.g., \"inflate this score\") rather than a general safety policy violation, for which no practical defenses exist. To address this, we introduce PaperGuard, the first comprehensive benchmark designed to systematically evaluate and defend AI-generated peer-review against these domain-specific, cross-modal attacks. Our framework is built on three pillars: (1) a new multimodal peer-review dataset spanning multiple scientific domains; (2) a unified suite of attacks, including black-box prompt injections and white-box perturbations, specifically designed to target both text (GCG) and figures (PGD); and (3) a practical defense, motivated by the long-context challenge of academic papers, that uses chunk-based embedding search to efficiently localize and mitigate harmful instructions. Our extensive experiments, conducted across state-of-the-art models, confirm that AI reviewers are pervasively vulnerable. PaperGuard establishes the foundational benchmark, protocols, and actionable defense necessary to pioneer trustworthy, attack-resilient AI-assisted scholarly reviewing.",
+    "published": "2026-06-10",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.12716v2",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.27286v1",
+    "title": "Simulation-based inference for rapid Bayesian parameter estimation in epidemiological models: a comparison with MCMC",
+    "authors": [
+      "Alina Bazarova",
+      "Johann Fredrik Jadebeck",
+      "Henrik Zunker",
+      "Carolina J. Klett-Tammen",
+      "Torben Heinsohn",
+      "Wolfgang Wiechert",
+      "Katharina Noeh",
+      "Stefan Kesselheim"
+    ],
+    "summary": "Mechanistic epidemiological models are widely used to support infectious disease forecasting and public-health decision making. Bayesian calibration of such models is commonly performed using Markov chain Monte Carlo (MCMC), which can become computationally expensive for high-dimensional nonlinear systems and repeated near-real-time analyses. Here, we investigate simulation-based inference (SBI) using neural posterior estimation as a scalable alternative for Bayesian calibration of a mechanistic SECIR epidemiological model using COVID-19 intensive care unit (ICU) occupancy data from Germany during 2020. We compared SBI and MCMC across multiple epidemic phases using both 31-day inference windows and a substantially more challenging 201-day reconstruction problem involving multiple transmission change points. Posterior agreement was evaluated quantitatively using Wasserstein distances and Kullback-Leibler divergences together with posterior predictive checks. Across the 31-day windows, SBI recovered posterior distributions in strong agreement with MCMC while accurately reproducing observed ICU trajectories. In the 201-day setting, SBI preserved the dominant posterior structure despite increased uncertainty. SBI, by combining CPU and GPU resources, substantially reduced computational runtime compared with MCMC, which was restricted to running on CPUs. Whereas MCMC required approximately 1000 seconds for the 31-day inference problems, SBI achieved comparable posterior and predictive performance in approximately 60-70 seconds on a single GPU. For the 201-day inference problem, SBI required an average of 157 seconds, while the MCMC runs took over 19,000 seconds. Our results demonstrate that SBI provides a rapid and computationally efficient framework for Bayesian calibration of mechanistic epidemiological models, supporting repeated near-real-time inference and rapid outbreak analysis.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.27286v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.27315v1",
+    "title": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+    "authors": [
+      "Brian W. Lee",
+      "Nika Haghtalab",
+      "Michael I. Jordan",
+      "Ryan J. Tibshirani"
+    ],
+    "summary": "Gradient equilibrium (GEQ) is a recently introduced online optimization framework that generalizes first-order stationarity from offline optimization and abstracts problems like online conformal prediction. While GEQ has curious similarities with known online learning frameworks, namely regret minimization, prior work has shown that GEQ error and regret are incomparable objectives, leaving open a precise understanding of how GEQ fits into the broader online learning landscape. In this work, we show that GEQ is equivalent to Blackwell approachability in the algorithmic sense. That is, a Blackwell approachability problem can always be solved using queries to a black-box GEQ oracle, with no asymptotic loss in the oracle's error rate, and vice versa. Taken together with known equivalences between approachability, regret minimization, and calibration, these results imply that GEQ is equivalent to these frameworks, as well. Our reductions are efficient and can be used to transfer refined guarantees, such as optimism and strong adaptivity, from regret minimization to GEQ. Along the way, we also identify necessary and sufficient conditions for GEQ, and establish reductions between different notions of GEQ with unconstrained and constrained decision sets.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.27315v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.26936v1",
+    "title": "Jailbreaking for the Average Jane: Choosing Optimal Jailbreaks via Bandit Algorithms for Automatically Enhanced Queries",
+    "authors": [
+      "Prarabdh Shukla",
+      " Ritik",
+      "Suhas Rao",
+      "Arpit Agarwal",
+      "Arjun Bhagoji"
+    ],
+    "summary": "With a profusion of jailbreaks for LLMs now widely known, a growing concern is that non-expert malicious actors (\"the average Jane\") could elicit actionable responses to malicious requests. In this work, we examine whether this concern is justified. A non-expert malicious actor requires two ingredients for a successful attack: a powerful jailbreak for their target model, acting on an effective malicious query. For the former, we propose a novel attack strategy based on the multi-armed bandit framework. This allows efficient online learning of the optimal jailbreak from a large choice set via noisy exploration on a small number of queries, with subsequent application of the learnt policy on an exploitation set. For the latter, we curate $\\mathrm{FrankensteinBench}$, a safety benchmark of $11,279$ malicious queries drawn from manual curation over $7$ existing benchmarks, along with automated enhancement and generation. Each query is categorized as simple or complex by the technical expertise required to craft it. Our findings confirm the concern. Our bandit-based attack achieves success rates as high as $97\\%$ on average over $15$ SoTA open-weight LLMs. Moreover, adding complexity to queries raises the attack success rate by up to $26\\%$ on average across models -- making it an effective, automatable prompting strategy.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.26936v1",
+    "categories": [
+      "cs.CR",
+      "cs.CL",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.26893v1",
+    "title": "Asymptotically Optimal Learning for Parametric Prophet Inequalities",
+    "authors": [
+      "Jung-hun Kim",
+      "Anna Grebennikova",
+      "Vianney Perchet"
+    ],
+    "summary": "We study learning in prophet inequalities with i.i.d. rewards drawn from an exponential-type parametric family with an unknown parameter $θ$, a class that includes exponential, Pareto, and bounded-support power-family distributions. We first characterize the optimal full-information asymptotic competitive ratio for this family. In the unbounded-support case, the limit is $ {\\left(θ/({θ-c_+})\\right)^{c_+/θ}}/ {Γ(1-c_+/θ)},$ while in the bounded-support case, the limit is $1$. We then propose a confidence-based dynamic-programming policy for online learning. By exploiting the explicit parametric structure, the policy achieves the same optimal asymptotic competitive ratio using only online observations, without external offline samples. We further derive distribution-specific convergence rates for canonical examples. Finally, numerical experiments on synthetic instances illustrate the performance of our algorithm.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.26893v1",
+    "categories": [
+      "cs.LG",
+      "stat.ML"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.27163v1",
+    "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
+    "authors": [
+      "Ilia Larchenko"
+    ],
+    "summary": "I describe my solution to the LeHome Challenge 2026, an ICRA 2026 competition on bimanual garment folding. The system placed 1st of 62 teams in the online (simulation) round and 2nd in the real-world final. It improves a vision-language-action (VLA) policy with a reinforcement-learning loop. The policy is its own value function: the same network that predicts actions also predicts success, progress, and a few task-relevant future quantities, and those predictions drive advantage estimation, live failure detection, and candidate selection. The work mostly recombines existing RL ideas with engineering and optimization contributions that can be used together as one recipe or individually: AWR + RECAP combined for flow-matching VLA; an asynchronous distributed training / rollout pipeline through HuggingFace Hub; inference-time hyperparameters optimization via Thompson sampling; a sim-to-real recipe with camera-alignment tooling, heavy augmentation and DAgger-like HIL data collection.",
+    "published": "2026-06-25",
+    "updated": "2026-06-25",
+    "pdf_url": "https://arxiv.org/pdf/2606.27163v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.26373v1",
+    "title": "Hybrid privacy-aware semantic search: SVD-truncated document geometry and CKKS-encrypted query reranking under a restricted threat model",
+    "authors": [
+      "Sergey Kurilenko"
+    ],
+    "summary": "Dense embeddings power semantic search and retrieval-augmented generation, but embedding-inversion attacks can reconstruct source text from a vector: when a vector database leaks, the documents behind it leak too. The textbook defences are extremes - encrypting the whole search homomorphically is sound but too slow at million-document scale, while privacy noise degrades ranking long before it protects. We study a middle path exploiting the asymmetry between the static collection and the dynamic query. The collection is protected geometrically: each vector is truncated onto a lower-dimensional SVD subspace and rotated by a secret orthogonal transform known only to the owner. The query is protected cryptographically: it is reranked under CKKS homomorphic encryption, so an honest-but-curious server never sees the query or the scores. CKKS parameters come from a small offline benchmark.\n  We prove a tight lower bound on the reconstruction error of any attacker confined to the protected subspace. On one million documents and five encoders the scheme preserves ranking quality (slightly improving it on strong encoders, as a linear denoiser) at sub-second latency, and an off-the-shelf inversion attack on the protected space collapses to the noise floor. We then test stronger adversaries: a known-plaintext attacker recovers the rotation by orthogonal Procrustes from about as many leaked pairs as the retained dimension; the public product-quantization codes preserve most nearest-neighbour structure; and random-projection, calibrated-noise and BEIR baselines show the truncation is an encoder-dependent accuracy cost, not a free denoiser. We state the limits: query confidentiality is cryptographic, but document protection is an empirical obfuscation layer (SVD truncation plus a secret rotation), not a cryptographic primitive, and we delimit the threat model for each claim.",
+    "published": "2026-06-24",
+    "updated": "2026-06-24",
+    "pdf_url": "https://arxiv.org/pdf/2606.26373v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.26162v1",
+    "title": "Dissipative Quantum Multiplicative Weights with Sampling Feedback: A Classically Hard Primitive Realized via Engineered Open-System Dynamics",
+    "authors": [
+      "Agung Trisetyarso",
+      "Lenny Putri Yulianti",
+      "Kridanto Surendro"
+    ],
+    "summary": "We introduce \\emph{Dissipative Quantum Multiplicative Weights with Sampling Feedback} (DQMW-Sample), an online-learning primitive in which engineered open quantum-system dynamics prepare a Gibbs state whose computational-basis measurement supplies the loss feedback. The central conceptual contribution is to lift the computational hardness of constant-temperature Gibbs sampling into a physically realizable online-learning primitive. By engineering a Davies-type dissipator whose per-round feedback cannot be efficiently simulated classically, we obtain a learning-theoretic separation in which DQMW-Sample achieves asymptotically sublinear regret while every efficient classical learner suffers constant average regret on a suitably constructed instance. We further prove that the spectral gap of the engineered dissipator contracts hardware noise, yielding sublinear noise-induced regret under a balanced dissipation schedule, and we strengthen the single-round hardness to the full adaptive interaction: an efficient classical simulator of the entire $T$-round feedback process would collapse the polynomial hierarchy. We state the required realizability assumption in explicit form and report an initial hardware characterization on the IBM Heron~r2 processor. These results position DQMW-Sample as a concrete route toward computational advantage in online learning that is grounded in complexity theory and compatible with near-term superconducting hardware.",
+    "published": "2026-06-24",
+    "updated": "2026-06-24",
+    "pdf_url": "https://arxiv.org/pdf/2606.26162v1",
+    "categories": [
+      "quant-ph"
+    ],
+    "primary_category": "quant-ph",
+    "github": null
+  },
+  {
+    "id": "2606.26150v1",
+    "title": "Hot AI in Cold Space: Thermal-Crosstalk-Aware Scheduling for Sustainable Orbital AI Clusters",
+    "authors": [
+      "Shuyi Chen",
+      "Zhengchang Hua",
+      "Nikos Tziritas",
+      "Georgios Theodoropoulos"
+    ],
+    "summary": "Terrestrial AI training faces an unsustainable energy and water crisis, positioning Orbital Data Centers (ODCs) as a \"zero operational carbon\" alternative. However, the sub-$10μ\\text{s}$ communication latency required for distributed Large Language Model (LLM) training forces ODCs into extreme physical density, triggering a critical \"Proximity-Thermal Paradox.\" As these high-density systems scale into Monolithic Structures or Proximity Swarms, they suffer from intense thermal-fluid crosstalk (heat traps in shared cooling loops) and thermal-radiative crosstalk (mutual heating that blocks deep-space cooling radiators). If left unmitigated, this persistent heat stagnation not only triggers severe thermal throttling that degrades training throughput, but also induces severe thermal fatigue, drastically shortening hardware lifespans and generating premature space e-waste. To make orbital AI truly sustainable, this position paper challenges traditional uniform load-sharing. We propose the Thermal-Aware Heterogeneity Thesis, which treats spatial cooling variances as a primary resource management dimension. Building on this, we introduce Thermal-Load Balancing (TLB), a software framework that dynamically migrates LLM workloads to the coolest available units based on instantaneous fluid temperatures or absorbed radiation. Our analysis demonstrates that TLB resolves thermal bottlenecks to restore Model Flops Utilization (MFU), while simultaneously reducing physical thermal stress. Extending the operational lifespan of orbital hardware is crucial to amortize the massive embodied carbon of rocket launches, outlining a necessary pathway to scale orbital AI without accelerating e-waste.",
+    "published": "2026-06-23",
+    "updated": "2026-06-23",
+    "pdf_url": "https://arxiv.org/pdf/2606.26150v1",
+    "categories": [
+      "cs.DC",
+      "cs.AR",
+      "cs.ET"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.26151v1",
+    "title": "Unsupervised Memory-Enhanced Video Transformers: Obstacle Detection for Autonomous Agricultural Rover",
+    "authors": [
+      "Théo Biardeau",
+      "Anne-Sophie Capelle-Laizé",
+      "Salwan Alwan",
+      "David Helbert"
+    ],
+    "summary": "While autonomous rovers have become indispensable to precision farming, achieving consistent operational safety remains a critical challenge. Conventional safety sensors, such as LiDAR, fail to detect obstacles positioned below the plant canopy, posing a significant risk. While camera-based supervised learning methods can detect common objects, they perform poorly when faced with obstacles that were not present in their training data. Actual unsupervised anomaly detection offers a solution by learning the normal visual patterns of an environment, but often fails for the dynamic scenes captured by a moving rover.\\\\ This paper introduces Video Memory Transformers for Anomaly Detection (VMTAD), a fully unsupervised method designed for real-time obstacle detection in dynamic agricultural scenes. VMTAD utilizes a transformer-driven architecture augmented with a dedicated memory module. This memory module leverages temporal context by processing encoded representations of preceding frames. This approach enables the system to effectively address the dynamic context caused by the robot's movement. The model is trained using only images that represent normal operation, requiring no data labels.\\\\ VMTAD was rigorously evaluated on the 'Grillion' agricultural rover. On a challenging rapeseed dataset, VMTAD achieved state-of-the-art performance, reaching a 0.973 detection and 0.997 segmentation Area Under the Receiver Operating Characteristic curve. A lightweight variant provides an optimal balance of high accuracy and real-time inference (14 ms), which is critical for safety, as confirmed by our analysis of the rover's total stopping distance.",
+    "published": "2026-06-23",
+    "updated": "2026-06-23",
+    "pdf_url": "https://arxiv.org/pdf/2606.26151v1",
+    "categories": [
+      "cs.RO",
+      "cs.AI"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.26117v1",
+    "title": "The Governance Inversion Hypothesis: Why More AI Regulation May Produce Less Organisational Control",
+    "authors": [
+      "Victor Frimpong"
+    ],
+    "summary": "This paper introduces the Governance Inversion Hypothesis (GIH) to explain a growing paradox in artificial intelligence (AI) governance: under conditions of increasing regulatory expansion and technological complexity, organisations may become more formally governed while simultaneously experiencing a decline in operational control over AI systems. Existing AI governance frameworks generally assume that stronger regulation improves accountability, oversight, and organisational control. This paper challenges that assumption by arguing that governance formalisation itself may contribute to the erosion of control in AI-intensive environments. Drawing on institutional theory, organisational governance research, accountability scholarship, and emerging AI governance literature, the paper develops a conceptual framework explaining how regulatory expansion may weaken operational authority through four interconnected mechanisms: authority fragmentation, symbolic governance expansion, externalisation of control, and authority paralysis. As governance systems become increasingly layered and procedurally dense, organisations may struggle to maintain coherent authority, technical visibility, escalation capability, and meaningful intervention power over opaque and externally mediated AI infrastructures. The paper extends institutional decoupling theory by introducing governance inversion as a structural condition in which governance expansion may actively undermine operational coherence rather than strengthen it. It concludes that the central risk in AI governance may not be the absence of governance structures, but the emergence of institutions that appear increasingly governed while progressively losing the capacity to govern effectively.",
+    "published": "2026-05-23",
+    "updated": "2026-05-23",
+    "pdf_url": "https://arxiv.org/pdf/2606.26117v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI",
+      "cs.HC"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  }
+]
