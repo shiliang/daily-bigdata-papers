@@ -1,0 +1,247 @@
+[
+  {
+    "id": "2606.30077v1",
+    "title": "Online Data Selection for Instruction Tuning via Gaussian Processes",
+    "authors": [
+      "Jun Wang",
+      "Quoc Phong Nguyen",
+      "Julien Monteil",
+      "Vu Nguyen"
+    ],
+    "summary": "With Large Language Model (LLM) pre-training and fine-tuning shifting its focus from data volume to data quality, quality data selection has emerged as a critical research topic. Existing online data selection methods for LLM training are typically \"batch-constrained\", limiting optimization to local utility within random batches. To overcome this, we propose GAIA (Global Adaptive Instruction tuning via GAussian processes), a framework that formulates data valuation as a global estimation process. GAIA employs Gaussian Process regression to model continuous utility manifolds across the semantic space, utilizing an adaptive strategy fusion mechanism to dynamically prioritize high-utility samples. By casting the strategy-posterior update as an instance of the classical fixed-share Hedge framework for tracking the best expert, we inherit a dynamic-regret guarantee that characterizes GAIA's robustness under non-stationary quality scores during training. Empirical evaluations on three datasets demonstrate that GAIA significantly outperforms state-of-the-art baselines like \\greats, establishing our method as a scalable and robust solution for efficient instruction tuning.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30077v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.30554v1",
+    "title": "SubEdge: A Subscriber-Centric Edge Computing Subsystem in 6G Networks for AI",
+    "authors": [
+      "Abdirazak Ali Asir Rage",
+      "Riccardo Pozza",
+      "Rahim Tafazolli"
+    ],
+    "summary": "Beyond traditional connectivity, 6G is envisioned to transform mobile networks into a distributed fabric that provides native integrated communication, computing, and intelligence services. AI-native terminals (e.g., robots, autonomous vehicles, and smart glasses) require real-time inference from individualised, manufacturer-specific models that cannot be executed on-board nor shared across subscribers, making per-subscriber edge compute the necessary complement to per-subscriber connectivity. Existing Network for AI (Net4AI) architectures provision compute for application providers through shared deployments and do not address per-subscriber provisioning. This paper proposes SubEdge, a Net4AI subsystem that provisions integrated communication and compute resources on a per-subscriber basis, ensuring the coupled migration of both dimensions to maintain service continuity during mobility. SubEdge contributes the computing context--a per-subscriber data structure binding a Subscription Permanent Identifier (SUPI) to its inference container, edge node, and service entitlement--and a mobility-event-driven mechanism that simultaneously migrates the subscriber's compute instance and its traffic-routing policy when the serving cell changes. SubEdge operates as an Application Function over existing Network Exposure Function (NEF) APIs with zero 3GPP core modifications. Experimental evaluation on a real-world testbed shows that SubEdge's mobility-driven joint communication-and-compute migration reduces 95th-percentile latency from 22.9 ms to 12.2 ms with zero packet loss across six mobility events, sustains 99.92% frame delivery for an end-to-end 30 fps inference workload, and completes 1,560 migration operations across batches of up to 50 simultaneously migrating subscribers with 100% success.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30554v1",
+    "categories": [
+      "cs.NI",
+      "cs.DC"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2606.30322v1",
+    "title": "Hybrid Active-Online Learning Framework for Label-Efficient Concept Drift Adaptation in Optical Network Failure Detection",
+    "authors": [
+      "Yousuf Moiz Ali",
+      "Jaroslaw E. Prilepsky",
+      "João Pedro",
+      "Sasipim Srivallapanondh",
+      "Antonio Napoli",
+      "Sergei K. Turitsyn",
+      "Pedro Freire"
+    ],
+    "summary": "We propose a hybrid active-online learning framework for label-efficient concept drift adaptation in optical network failure detection. Using margin-based selective labeling, our method achieves nearceiling accuracy and AUC scores while querying only 3.4% of streaming samples, with negligible latency overhead compared to static inference.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30322v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.29980v1",
+    "title": "Exploration and Online Transfer with Behavioral Foundation Models",
+    "authors": [
+      "Louis Bagot",
+      "Mathieu Lefort",
+      "Laëtitia Matignon"
+    ],
+    "summary": "Zero-shot Transfer in Reinforcement Learning (RL) aims to train an agent that can generate optimal policies for any reward function, without additional learning at transfer time, while training only on reward-free trajectories. For their generality over tasks, such models are sometimes called ``Behavioral Foundation Models'' (BFMs). While they have shown strong performances and improvements in recent years, the current framework and algorithms still assume that, during the transfer phase, the agent is informed offline about the reward (the task to solve) through a dataset of state-reward pairs, which it uses to pick the best policy to deploy. However, in practice if the reward is a black-box (e.g. direct user feedback), it is not possible to generate such a dataset: it is necessary to observe the reward through interactions with the environment. In other words, the current framework of offline transfer is not aligned with the traditional RL setting of online learning through trial-and-error, which requires exploration in order to find rewards. This paper proposes to tackle this new online transfer in zero-shot RL, with the key insight that the BFM itself can be used to generate exploration policies. We show that it is possible to frame this online learning problem in terms of a bandit-like exploration-exploitation problem. More precisely, at each step the bandit algorithm recommends a policy, the BFM executes it in the environment, which yields a reward and a new state; we repeat the process until we converge to the optimal policy. In the popular context of linear reward approximation, we derive a formulation inspired by Upper Confidence Bound and show that exploration can be achieved through the minimization of the eigenvalues of an uncertainty matrix. We evaluate qualitatively and quantitatively our framework on a simple environment to validate the concept of our method.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.29980v1",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.30278v1",
+    "title": "LLMs and Optical Networks: A Symbiotic Relationship",
+    "authors": [
+      "Mëmëdhe Ibrahimi",
+      "Qiaolun Zhang",
+      "Giovanni S. Sticca",
+      "Jiaheng Xiong",
+      "Francesco Musumeci",
+      "Massimo Tornatore"
+    ],
+    "summary": "This paper explores the emerging symbiosis between LLMs and optical networks. Massive LLMs require geo-distributed training, which demands advanced optical transport capabilities that require new key technical enablers, as WAN-aware CCL algorithms, ZR+ pluggables, and Hollow Core Fibers. Conversely, LLMs also enable new forms of autonomous network management.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30278v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2606.29158v1",
+    "title": "On the Nonlinearity of Learning Rate Scaling for LLM Training",
+    "authors": [
+      "Zaiwen Yang",
+      "Huaqing Zhang",
+      "Jing Xu",
+      "Jingzhao Zhang"
+    ],
+    "summary": "Learning-rate transfer can reduce the cost of training large language models: instead of sweeping learning rates at target scale, practitioners extrapolate from smaller runs. Existing approaches often assume that the optimal learning rate follows a log-linear scaling law in data scale and model size. We carefully examine and evaluate this scaling law. In our empirical study of GPT-2--style models from 22M to 707M parameters trained on 5B to 100B tokens, the optimal learning rate develops upward curvature at larger scales, leading to inaccurate extrapolation. We find that this curvature largely disappears when learning rates are replaced by effective learning rate (the step size in normalized weight space), and when data $D$ extrapolation is used instead of model size $N$ extrapolation. Next, we explain nonlinearity in scaling: weight-norm converges to equilibrium slower when optimal learning is small, requiring a larger step size to reduce the transient phase. Experiments with AdamH, which directly controls the effective learning rate, further support this explanation.",
+    "published": "2026-06-28",
+    "updated": "2026-06-28",
+    "pdf_url": "https://arxiv.org/pdf/2606.29158v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.26373v2",
+    "title": "Hybrid privacy-aware semantic search: SVD-truncated document geometry and CKKS-encrypted query reranking under a restricted threat model",
+    "authors": [
+      "Sergey Kurilenko"
+    ],
+    "summary": "Dense embeddings power semantic search and retrieval-augmented generation, yet a leaked vector database also leaks the text behind it, because embeddings can be inverted with high fidelity. Fully homomorphic search is sound but far too slow at million-document scale, while privacy noise degrades ranking before it protects. We study a middle path built on an asymmetry: the static document collection is protected geometrically - each vector is SVD-truncated onto a lower-dimensional subspace and rotated by a secret orthogonal transform held only by the data owner - while the dynamic query is protected cryptographically under CKKS, so an honest-but-curious server never sees query values or similarity scores. We prove a tight lower bound on the reconstruction error of any decoder confined to the protected subspace. On a one-million-document corpus with five encoders the protection preserves - and on the strongest encoders slightly improves - retrieval quality, a linear-denoiser effect, at sub-second latency, while an off-the-shelf inversion attack collapses to the noise floor. We also quantify the boundary: a known-plaintext attacker recovers the secret rotation by orthogonal Procrustes from about as many leaked pairs as the retained dimension. The same asymmetric geometry doubles as a privacy-preserving semantic data-loss-prevention primitive for LLM firewalls: a server holding only the protected vectors detects whether a candidate matches a confidential reference corpus at near parity with a plaintext detector, degrading gracefully under text obfuscation. We state the limits plainly: query confidentiality is cryptographic, but document protection rests on SVD truncation and a secret rotation that form an empirical obfuscation layer, not a cryptographic primitive, under a clearly delimited threat model.",
+    "published": "2026-06-24",
+    "updated": "2026-06-28",
+    "pdf_url": "https://arxiv.org/pdf/2606.26373v2",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.29221v1",
+    "title": "A Linear Matching Bandit Approach to Online Multi-Human Multi-Robot Teaming",
+    "authors": [
+      "Yaohui Guo",
+      "X. Jessie Yang",
+      "Cong Shi"
+    ],
+    "summary": "We address the problem of online multi-human multi-robot teaming through the lens of a linear matching bandit framework, where a learner assigns robots with unknown features from a fixed pool to distinct sets of human agents over multiple rounds. To solve this problem, we propose LinMatch, an online learning algorithm that updates the confidence intervals of the unknown features and makes the optimistic matching under uncertainty. The contributions and novelty of this work are twofold. First, we recast the optimistic matching problem in each round as a linear program of maximum weighted matching, efficiently solvable by the celebrated Hungarian algorithm. Second, we provide novel bounds for matching with linear feature problems, showing an upper bound of $\\tilde{O}(d\\sqrt{MKT})$ and a minimax lower bound of $Ω(d\\sqrt{MKT})$, establishing a tight optimal regret rate of $\\tildeΘ(d\\sqrt{MKT})$. This demonstrates that LinMatch achieves strictly optimal achievable regret with respect to the total number of rounds $T$, the feature dimension $d$, and the matching parameters $M$ and $K$. The proposed algorithm and bounds apply to a wide range of matching problems with applications beyond human-robot matching, such as housing allocation, recommendation systems, and more.",
+    "published": "2026-06-28",
+    "updated": "2026-06-28",
+    "pdf_url": "https://arxiv.org/pdf/2606.29221v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.28781v1",
+    "title": "HyphaeDB: A Living Knowledge Topology for Agent-First Memory",
+    "authors": [
+      "Krishna Halaharvi"
+    ],
+    "summary": "Every existing vector database and agent memory framework treats memory as passive storage that agents query explicitly. No system propagates knowledge between agents through the memory layer itself. We introduce HyphaeDB, an agent-native memory infrastructure that reinterprets the Hierarchical Navigable Small World (HNSW) graph topology the data structure at the core of every modern vector database not as a search optimization, but as a communication fabric for multi-agent AI systems. In HyphaeDB, agents are nodes in the vector space with persistent positions, knowledge propagates via a gossip protocol through the graph's neighbor structure with energy-based attenuation, and emergent behaviors contradiction detection, pattern crystallization, and consensus formation arise from the combination of topology, propagation dynamics, and local interaction rules. We present the architecture built on three primitives (knowledge nodes, topology edges, and memory diffs), a multi-layer abstraction hierarchy with promotion via emergent consensus, and theoretical analysis grounding the system in small-world network theory, epidemic broadcast protocols, and swarm intelligence. We provide a reference implementation on PostgreSQL with pgvector and describe a concrete deployment in Swarm-Driven Development, a multi-agent software engineering methodology. HyphaeDB represents, to our knowledge, the first system to combine navigable small world topology with gossip-based knowledge propagation for multi-agent coordination.",
+    "published": "2026-06-27",
+    "updated": "2026-06-27",
+    "pdf_url": "https://arxiv.org/pdf/2606.28781v1",
+    "categories": [
+      "cs.AI",
+      "cs.MA"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.28533v1",
+    "title": "CMSL: Constructive Multi-Sequence Learning for Recommendation Systems",
+    "authors": [
+      "Zikun Cui",
+      "Renzhi Wu",
+      "Junjie Yang",
+      "Li Sheng",
+      "Jijie Wei",
+      "Linfeng Liu",
+      "Tai Guo",
+      "Tao Jia",
+      "Xiaodong Wang",
+      "Hong Li",
+      "Li Yu",
+      "Sri Reddy",
+      "Hong Yan"
+    ],
+    "summary": "Sequence learning has emerged as the promising paradigm in recommendation systems, surpassing traditional Deep Learning Recommendation Models (DLRM) by capturing the temporal nuances of user behavior. However, current state-of-the-art architectures operate under a limiting analogy: they treat user history as a monolithic chronological sequence like a sentence in a Large Language Model (LLM). We observe a fundamental divergence between natural language and recommendation data: unlike the linear, logical flow of text, user history is inherently multi-faceted. A user's journey is a fragmented reflection of diverse interests, resulting in much weaker coherence between items than is found in LLM training data. This lack of structural unity leads to context pollution. In single-sequence modeling, unrelated behaviors compete for the same attention budget. This \"noisy\" signal dilutes the model's focus, effectively capping its ability to discern high-intent patterns from background activity. To address this, we propose Constructive Multi-Sequence Learning (CMSL), a paradigm shift from passive sequence ingestion to active \"context engineering\" that constructs multiple coherent sequences in latent space. CMSL leverages a learnable Sequence Construction Module to disentangle user history into \"pure\" thematic strands, followed by a linear attention mechanism to efficiently model these strands at scale. CMSL has been deployed across ranking and retrieval tasks and across four major surfaces at Meta.",
+    "published": "2026-06-26",
+    "updated": "2026-06-26",
+    "pdf_url": "https://arxiv.org/pdf/2606.28533v1",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2606.28438v1",
+    "title": "When AI Reviews Its Own Code: Recursive Self-Training Collapse in Code LLMs",
+    "authors": [
+      "Xinyuan Song",
+      "Zekun Cai",
+      "Liang Zhao"
+    ],
+    "summary": "Recursive self-training can degrade neural generative models when generated data is reused without fresh human data or external quality control. We study this risk in code LLMs, where AI-generated code can enter real repositories, later become training data, and create a repository-scale self-training loop. While software development traditionally interrupts this loop through pull-request review, tests, compilation, and human approval, AI coding tools now produce code faster than humans can review it, and code review itself is increasingly automated by AI systems. We therefore compare three recursive fine-tuning regimes: no review, Human-gate review using model-independent filters such as compilation and static quality checks, and AI-self-gate review using the code LLM's own signals such as perplexity and binary self-scoring. Across multiple code LLMs and benchmarks, no review collapses fastest, Human-gate filters slow but do not stop collapse, and AI-self-gate filters can look strong early but later lose their filtering effect. In the clearest case, the binary self-gate enters a rubber-stamp regime where acceptance scores rise while benchmark correctness falls. We explain this behavior by formulating review as gated distributional reweighting, proving that AI self-gating degenerates to ungated self-training under a self-confirming acceptance condition, and giving a spectral analysis of representation-level covariance concentration under recursive retraining. These results suggest that stable recursive code LLM training requires exogenous verification rather than model-coupled self-review.",
+    "published": "2026-06-26",
+    "updated": "2026-06-26",
+    "pdf_url": "https://arxiv.org/pdf/2606.28438v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2606.28404v1",
+    "title": "Financing Artificial Intelligence Infrastructure: Mapping AI Infrastructure Investment and Compute Governance Across Africa",
+    "authors": [
+      "Kai-Hsin Hung",
+      "Sumaya Nur Adan",
+      "Krupa Suchak",
+      "Armita Sadeghian Barzoki",
+      "Kofi Yeboah",
+      "Mohammad Amir Anwar"
+    ],
+    "summary": "Artificial intelligence depends on large-scale compute resources and their supporting infrastructure. However, AI governance debates treat compute primarily as a technical input rather than as an outcome of investment, ownership, and financial control. This paper examines AI infrastructure investment flows across Africa through a systematic analysis of 46 publicly announced projects totalling USD $12.7 billion between 2019 and 2025. Using a value chain framework, we analyze who invests in AI-relevant infrastructure and where investments concentrate. Our findings reveal a highly concentrated landscape dominated by global data center operators, hyperscale technology firms, and development finance institutions, clustering in South Africa, Kenya, Nigeria, and Egypt. We introduce asymmetrical interdependence to describe a structural condition in which capital and physical infrastructure account for 73% of total funding while control remains concentrated in the compute layer among a small number of global technology firms. We argue that compute governance must account for capital flows, ownership, and control, not only geographic access, because these dynamics shape AI compute equity. Infrastructure presence is necessary but insufficient for meaningful governance capacity.",
+    "published": "2026-06-24",
+    "updated": "2026-06-24",
+    "pdf_url": "https://arxiv.org/pdf/2606.28404v1",
+    "categories": [
+      "cs.CY",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  }
+]
