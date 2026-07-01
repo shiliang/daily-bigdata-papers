@@ -1,0 +1,281 @@
+[
+  {
+    "id": "2606.31250v1",
+    "title": "Probing Stylistic Appropriation using Large Language Models: An Evaluation Framework for Copyright Infringement under EU Law",
+    "authors": [
+      "Noah Scharrenberg",
+      "Chang Sun"
+    ],
+    "summary": "Large language models (LLM) trained on web-scale corpora generate output that may infringe copyright, yet existing technical safeguards focus narrowly on verbatim memorisation. EU copyright doctrine applies a broader standards: substantial similarity, which extends to stylistic choices, narrative structure, and creative elaboration. This mismatch between what current methods detect and what the law protects leaves a significant compliance gap. We introduce PSALM, an LLM-as-a-judge framework that operationalises EU copyright doctrine through ten evaluators assessing computational overlap, stylistic dimensions (writing style, narrative voice), content dimensions (character, plot, scene, world building), and statutory exceptions (parody, pastiche, quotation, scènes à faire). Applying PSALM to Llama~3.2 models fine-tuned on translated historical Dutch literary works, we find that: 1) instruction-tuned models exhibit non-trivial baseline stylistic similarity prior to corpus exposure; 2) fine-tuning induces systematic stylistic appropriation across all infringement-relevant dimensions, extending beyond verbatim memorisation to abstract narrative patterns; 3) Negative Preference Optimisation unlearning substantially reduces similarity but leaves detectable residual stylistic patterns. These findings indicate that safeguards targeting literal copying alone are insufficient to mitigate broader copyright risks. PSALM provides infrastructure for auditable, legally informed compliance evaluation, though the relationship between automated similarity scores and infringement determinations requires validation by legal experts. This work bridges qualitative legal standards and quantitative technical measurement, exposing fundamental tensions between generative AI and EU intellectual property law.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31250v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2606.31229v1",
+    "title": "Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents",
+    "authors": [
+      "Keyu Zhao",
+      "Lingyan Kong",
+      "Fengli Xu",
+      "Yong Li"
+    ],
+    "summary": "Ideation plays a pivotal role in scientific discovery. Recent LLM, especially AI Scientist systems, show promising potential for automated ideation. However, existing approaches predominantly rely on pre-defined agentic workflows. This constraint severely limits the flexibility required to navigate the vast search space of scientific literature and the complex action space of research reasoning. Recently, training Agentic LLMs has emerged as a promising direction, offering flexible reasoning frameworks and the capability for autonomous tool utilization. However, there remains a non-trivial challenge: applying previous agentic data synthesis methods to scientific ideation suffers from prohibitively high data synthesis cost. To bridge this gap, we propose Agentic-Ideation, a novel framework comprising an automated trajectory synthesis pipeline and a specialized agentic LLM trained for scientific ideation. Specifically, we first define a comprehensive tool space incorporating three external tools and three cognitive tools. Then we introduce an Oracle-Guided Data Synthesis strategy. By leveraging a reference idea as oracle guidance, this approach steers the multi-agent system to efficiently reconstruct the logical reasoning and tool invocation paths, transforming aimless trial-and-error into directed trajectory generation. Finally, we train the agent on these synthesized trajectories, employing a masking strategy on tool execution results. This ensures the model focuses on decision-making logic without interference from external feedback. Experimental results demonstrate that our method outperforms the SOTA workflow-based baseline by \\textbf{11.91\\%} in overall quality. Furthermore, our approach improves the sample efficiency of high-quality data synthesis by \\textbf{over 10$\\times$}.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31229v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.31202v1",
+    "title": "Incentivizing Data Trading via Profit Reallocation",
+    "authors": [
+      "Yunxuan Ma",
+      "Wu Xin",
+      "Jichen Li",
+      "Hongyin Chen",
+      "Xiaoqi Dong",
+      "Yusen Zheng",
+      "Yukun Cheng",
+      "Xiaotie Deng"
+    ],
+    "summary": "Data trading is a central approach to data circulation, yet data markets remain far less active than expected. A primary bottleneck is the lack of effective economic incentives. Existing approaches often treat data as traditional goods, overlooking its inherent replicability and resale potential: buyers can replicate and resell data products, thereby forming transaction chains. Upstream sellers do not benefit from downstream resales and thus have limited incentives to sell. However, the impact of data resale on market performance remains insufficiently understood.\n  To address this gap, we propose a sequential, chain-based data trading model that explicitly captures data resale. The model reflects data flows in settings such as LLM training and strategic decision-making. We integrate this model with a profit reallocation mechanism. By reallocating profits along the transaction chain, this mechanism ensures upstream sellers benefit from downstream resales. We next develop efficient algorithms, including a polynomial-time exact algorithm for the discrete model and an FPTAS for the continuous model, to compute its sequential equilibria. We theoretically show that profit reallocation expands trade and improves social welfare under certain conditions, and empirical results demonstrate that our mechanism increases transaction volume by 120.0\\% and social welfare by 50.4\\% in synthetic environments, compared with the baseline mechanism that does not reallocate profits.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31202v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2606.31031v1",
+    "title": "GenPage: Towards End-to-End Generative Homepage Construction at Netflix",
+    "authors": [
+      "Lequn Wang",
+      "Jiangwei Pan",
+      "Fengdi Che",
+      "Linas Baltrunas"
+    ],
+    "summary": "We present GenPage, an end-to-end generative approach to Netflix homepage construction that replaces the traditional multi-stage recommender stack with a single transformer. GenPage treats the user and request context as a prompt, and autoregressively generates the entire structured, multi-row homepage as the response. We adapt the LLM training recipe: pretraining on production pages, followed by post-training via weighted binary classification (WBC) or reinforcement learning (RL). For industry-scale deployment, we introduce techniques addressing cold start, model freshness, business-rule enforcement, and serving efficiency. In online A/B tests against a mature, highly optimized production homepage recommender, the WBC variant of GenPage delivered a +0.24% lift on the core user engagement metric we use for launch decisions (p < 0.001), while reducing end-to-end serving latency by 20%. Offline, two findings stand out: enriching the prompt yields a larger improvement than scaling model capacity in our current regime, and RL post-training increases homepage diversity even though diversity is not part of the objective.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31031v1",
+    "categories": [
+      "cs.IR"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2606.26150v2",
+    "title": "Hot AI in Cold Space: Thermal-Crosstalk-Aware Scheduling for Sustainable Orbital AI Clusters",
+    "authors": [
+      "Shuyi Chen",
+      "Zhengchang Hua",
+      "Nikos Tziritas",
+      "Georgios Theodoropoulos"
+    ],
+    "summary": "Terrestrial AI training faces an unsustainable energy and water crisis, positioning Orbital Data Centers (ODCs) as a \"zero operational carbon\" alternative. However, the sub-$10μ\\text{s}$ communication latency required for synchronized scientific workloads, such as distributed Large Language Model (LLM) training, forces ODCs into extreme physical density, triggering a critical \"Proximity-Thermal Paradox.\" As these high-density systems scale into Monolithic Structures or Proximity Swarms, they suffer from intense thermal-fluid crosstalk (heat traps in shared cooling loops) and thermal-radiative crosstalk (mutual heating that blocks deep-space cooling radiators). If left unmitigated, this persistent heat stagnation not only triggers severe thermal throttling that degrades training throughput, but also induces severe thermal fatigue, drastically shortening hardware lifespans and generating premature space e-waste. To make orbital AI truly sustainable, this position paper challenges traditional uniform load-sharing. We propose the Thermal-Aware Heterogeneity Thesis, which treats spatial cooling variances as a primary resource management dimension. Building on this, we introduce Thermal-Load Balancing (TLB), a software framework that dynamically migrates these intensive workloads to the coolest available units based on instantaneous fluid temperatures or absorbed radiation. Our analysis demonstrates that TLB resolves thermal bottlenecks to restore Model Flops Utilization (MFU), while simultaneously reducing physical thermal stress. Extending the operational lifespan of orbital hardware is crucial to amortize the massive embodied carbon of rocket launches, outlining a necessary pathway to scale orbital AI without accelerating e-waste.",
+    "published": "2026-06-23",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.26150v2",
+    "categories": [
+      "cs.DC",
+      "cs.AR",
+      "cs.ET"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2606.31227v1",
+    "title": "Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming",
+    "authors": [
+      "Yong Yang",
+      "Xing Zheng",
+      "Huiyu Wu",
+      "Huangsheng Cheng",
+      "Xiaorong Shi",
+      "Jing Guo",
+      "Bo Yang",
+      "Yi Zhou",
+      "Xiangfan Wu",
+      "Zonghao Ying"
+    ],
+    "summary": "The fast growth of open-source AI infrastructure, from model serving engines and agent platforms to the Model Context Protocol (MCP) ecosystem and the language models themselves, has outpaced the security tooling available to defend it. We present AI-Infra-Guard, an open-source framework that organizes AI red teaming around a single observation: the attack surface of an AI agent is stratified across layers (infrastructure, protocol/tool, agent behavior, and model), and no single detection paradigm fits all of them. The framework therefore matches a paradigm to each layer, from deterministic rule matching over 75+ AI components and 1{,}400+ vulnerability rules, through LLM-driven agentic auditing of MCP servers and agent-skill packages and multi-turn black-box agent red teaming, to a jailbreak harness with 26+ attack operators over sixteen datasets. To our knowledge it is the only open-source framework to span all of these, including supply-chain auditing of the agent skills that increasingly extend AI agents. We release AI-Infra-Guard as open source so that \\emph{layer-paradigm matching} can serve as a practical foundation for agent security and a shared base for the community to build on.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31227v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.26711v2",
+    "title": "Mask to Concept: Auto-Promptable SAM3 via Efficient Test-Time Concept Embedding Search for Few-Shot Annotation",
+    "authors": [
+      "Quan Zhou",
+      "Shaoqing Zhai",
+      "Qiang Hu",
+      "Jia Chen",
+      "Qiang Li",
+      "Zhiwei Wang"
+    ],
+    "summary": "Transforming foundation segmentation models from human-prompted tools into auto-promptable annotators is critical for scalable medical data annotation. Current methods commonly depend on external feature matchers or auxiliary networks to automate geometric prompting, but introducing architectural overhead and limiting performance scalability. Although SAM3 natively supports concept segmentation via reusable text prompts, its direct use in medical imaging is hindered by a lack of fine-grained clinical knowledge and the ambiguity of human-written descriptions. In this work, we propose Mask to Concept (M2C), an efficient framework that adapts SAM3 for medical few-shot annotation without external modules, parameter retraining, or manual text engineering. Using only a few labeled images, M2C enables SAM3 to automatically search for transferable visual concepts entirely within its frozen architecture: it initializes a learnable concept embedding, uses it to prompt segmentation, and updates the embedding by gradients of minimizing the concept segmentation error. We further introduce a Hybrid Uncertainty Estimation (HUE) module that calculates the prediction entropy and maps concept predictions back to the box prompts, measuring concept-geometry prompting inconsistency. Highly uncertain samples are flagged actively for human correction, and the corrected masks are then fed back to M2C to continuously search for more precise concept embeddings, forming a self-enhancing annotation loop with minimal expert effort. Experiments on medical segmentation benchmarks show that our method achieves SOTA few-shot segmentation performance and outstanding annotation efficiency, offering a practical and efficient pathway toward scalable medical image labeling. Codes are at https://github.com/Huster-Hq/M2C.",
+    "published": "2026-06-25",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.26711v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/Huster-Hq/M2C.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.31197v1",
+    "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
+    "authors": [
+      "Tianshun Li",
+      "Hongliang Lu",
+      "Haoang Li",
+      "Xinhu Zheng"
+    ],
+    "summary": "Accurate 4D trajectory prediction and closed-loop tracking are essential for Unmanned Aerial Vehicle (UAV) swarms to achieve safe and efficient operations in complex low-altitude environments such as urban airspaces, industrial sites, and indoor facilities. However, this task remains challenging due to intrinsic nonlinearity of UAV swarm dynamics and strict real-time constraints of swarm formation control. To address these challenges, we propose a unified framework that couples coarse-to-fine trajectory forecasting with uncertainty-aware Distributed Nonlinear Model Predictive Control (DNMPC). Our approach features two key innovations: 1) a dimension-decoupled trajectory prediction module that reduces computational complexity by forecasting axis-wise motion, and 2) a diffusion-based residual dynamics refinement module that captures temporally correlated dynamic uncertainties. These refined predictions are then integrated into a DNMPC loop to ensure formation stability. We also introduce a synchronized multi-scenario 4D UAV swarm dataset spanning six representative airspace scenarios. The dataset contains over \\textbf{7,900} frames of synchronized three-UAV trajectories with frame-level annotations of speed intention and target sector. Extensive experiments demonstrate that our approach outperforms state-of-the-art baselines, reducing trajectory tracking error by up to \\textbf{10-15\\%} and achieving sub-\\textbf{0.07\\,m} average tracking error in complex urban and industrial environments, while maintaining real-time inference speeds of 34 FPS (sub-30 ms latency) suitable for agile flight.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31197v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2606.24330v2",
+    "title": "REDI-Match: Rotation-Equivariant Distillation for Efficient and Robust Dense Matching",
+    "authors": [
+      "Yinji Ge",
+      "Guixu Zheng",
+      "Wulong Guo",
+      "Qian Feng",
+      "Xu Wu",
+      "Kai Zhou",
+      "Xinyuan Liu",
+      "Fei Xing"
+    ],
+    "summary": "Vision Foundation Models (VFMs) have significantly advanced dense feature matching, yet severe in-plane rotation remains a critical challenge. Existing solutions face a fundamental dilemma: data-driven methods require inefficient parameter scaling to implicitly learn rotations, whereas strictly equivariant networks lack the semantic capacity of modern VFMs. Consequently, current frameworks typically freeze VFMs and shift the entire burden of rotation generalization to the downstream decoder. To break this architectural bottleneck, we propose REDI-Match, an efficient framework driven by a novel Rotation-Equivariant Distillation (REDI) paradigm. Instead of relying on rotation data augmentation to establish rotational correspondences, REDI distills the non-equivariant semantic representations of a VFM into a lightweight, strictly rotation-equivariant encoder, leveraging an equivariant geometric architecture to constrain robust high-dimensional semantics. To fully exploit these features, we equip the decoder with an entropy-driven spatial alignment module. By evaluating discrete rotation hypotheses, this mechanism explicitly locks onto the canonical coordinate system, eliminating global ambiguity before continuous refinement. Extensive experiments demonstrate that REDI-Match establishes a new state-of-the-art (SOTA) across multiple benchmarks. Notably, it achieves a 13.89% absolute pose accuracy improvement on the highly challenging SatAst dataset while operating 1.9x faster than the current SOTA (RoMa v2), enabling real-time inference (~41 FPS) on a single RTX 4090 GPU. Code: https://github.com/YinjiGe/REDI-Match.",
+    "published": "2026-06-23",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.24330v2",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/YinjiGe/REDI-Match.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2606.31789v1",
+    "title": "Distributed Hierarchical Temporal Memory with Shared Associative Memory for Cross-Entity Preemptive Warning",
+    "authors": [
+      "Pavia Bera",
+      "Jennifer Adorno",
+      "Sanjukta Bhanja"
+    ],
+    "summary": "Anomaly detection in multivariate time series remains a critical challenge in large-scale distributed systems, where related entities may exhibit transferable precursor behavior prior to anomaly onset. Existing methods typically operate independently on each data stream and therefore remain fundamentally reactive. To address this limitation, we introduce Distributed Hierarchical Temporal Memory (D-HTM), a neuromorphic framework that enables cross-entity preemptive warning through a Shared Associative Memory (SAM).\n  D-HTM combines a Spatial Pooler (SP) that projects observations into a common Sparse Distributed Representation (SDR) space, Temporal Memory (TM) modules that learn entity-specific dynamics online, and a Shared Associative Memory that stores recurring pre-anomaly signatures. By reusing precursor knowledge across related entities, D-HTM can issue warnings prior to local anomaly onset while preserving HTM's online learning capabilities.\n  We evaluate D-HTM on the Server Machine Dataset (SMD), the Soil Moisture Active Passive (SMAP) dataset, the Mars Science Laboratory (MSL) dataset, and a synthetic cascade benchmark designed to isolate precursor transfer. Experimental results demonstrate effective cross-entity warning propagation while maintaining competitive reactive anomaly detection performance. Across the real-world datasets, D-HTM provides an average warning lead time of 8.1 samples prior to anomaly onset.\n  These findings demonstrate that transferable precursor structure can emerge within a shared SDR space and be reused for preemptive warning generation, extending HTM beyond isolated reactive detection toward distributed predictive reasoning.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31789v1",
+    "categories": [
+      "cs.NE"
+    ],
+    "primary_category": "cs.NE",
+    "github": null
+  },
+  {
+    "id": "2606.31320v1",
+    "title": "Safe Online Learning via Smooth Safety-Structured Policy Composition",
+    "authors": [
+      "Hongpeng Cao",
+      "Liqun Zhao",
+      "Yuliang Gu",
+      "Naira Hovakimyan",
+      "Lui Sha",
+      "Marco Caccamo"
+    ],
+    "summary": "Safe online reinforcement learning requires policies to respect safety constraints while maintaining smooth optimization dynamics. Existing approaches typically rely on either strict safety enforcement via action interventions, which introduce discontinuities in system interaction and learning, or soft safety constraint formulations, which preserve smooth learning but provide limited safety assurance. We propose AutoSafe, a safety-aware policy architecture that integrates structured safety monitoring and intervention directly into the action generation process. This design enables smooth, risk-dependent transitions between performance-driven and safety-preserving behaviors, resulting in continuous online interaction and learning dynamics. Empirical results across a suite of continuous-control benchmarks demonstrate strong safety enforcement without sacrificing learning smoothness. We further validate AutoSafe on a physical cart-pole system, highlighting its practical effectiveness for safe online learning in the real world.",
+    "published": "2026-06-30",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.31320v1",
+    "categories": [
+      "cs.LG",
+      "cs.RO"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2606.29980v2",
+    "title": "Exploration and Online Transfer with Behavioral Foundation Models",
+    "authors": [
+      "Louis Bagot",
+      "Mathieu Lefort",
+      "Laëtitia Matignon"
+    ],
+    "summary": "Zero-shot Transfer in Reinforcement Learning (RL) aims to train an agent that can generate optimal policies for any reward function, without additional learning at transfer time, while training only on reward-free trajectories. For their generality over tasks, such models are sometimes called ``Behavioral Foundation Models'' (BFMs). While they have shown strong performances and improvements in recent years, the current framework and algorithms still assume that, during the transfer phase, the agent is informed offline about the reward (the task to solve) through a dataset of state-reward pairs, which it uses to pick the best policy to deploy. However, in practice if the reward is a black-box (e.g. direct user feedback), it is not possible to generate such a dataset: it is necessary to observe the reward through interactions with the environment. In other words, the current framework of offline transfer is not aligned with the traditional RL setting of online learning through trial-and-error, which requires exploration in order to find rewards. This paper proposes to tackle this new online transfer in zero-shot RL, with the key insight that the BFM itself can be used to generate exploration policies. We show that it is possible to frame this online learning problem in terms of a bandit-like exploration-exploitation problem. More precisely, at each step the bandit algorithm recommends a policy, the BFM executes it in the environment, which yields a reward and a new state; we repeat the process until we converge to the optimal policy. In the popular context of linear reward approximation, we derive a formulation inspired by Upper Confidence Bound and show that exploration can be achieved through the minimization of the eigenvalues of an uncertainty matrix. We evaluate qualitatively and quantitatively our framework on a simple environment to validate the concept of our method.",
+    "published": "2026-06-29",
+    "updated": "2026-06-30",
+    "pdf_url": "https://arxiv.org/pdf/2606.29980v2",
+    "categories": [
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2606.30926v1",
+    "title": "SpikON: A Dual-Parallel and Efficient Accelerator for Online Spiking Neural Networks Learning",
+    "authors": [
+      "Peilin Chen",
+      "Xiaoxuan Yang"
+    ],
+    "summary": "Spiking neural networks (SNNs) have emerged as a promising paradigm for energy-efficient brain-inspired computing. However, existing online unsupervised SNN learning suffers from low training accuracy and poor scalability. Although current online supervised learning algorithms perform well on large-scale datasets and networks, the non-hardware-friendly operations hinder efficient edge deployment. In this work, we propose SpikON, the first algorithm-hardware co-design framework for efficient and scalable end-to-end online supervised SNN learning. We first propose the learnable threshold through time and scaled weight centralization through time techniques to address the inefficiency of traditional algorithms. Moreover, to reduce latency and energy consumption, we introduce the novel training dataflow and cascade computation reuse scheme for SNNs that allows concurrent forward-backward computation and temporal reuse across timesteps. We further design the dedicated SNN accelerator with a dual-parallel engine and customized SIMD-based SNN core for efficient end-to-end online learning. Experiments show that the SpikON algorithm achieves 32.2% and 35.0% reductions in training latency and energy consumption over the baseline, without sacrificing accuracy. Moreover, the SpikON co-design achieves 7.2x (11.5x) and 26.8x (15.8x) training throughput (energy efficiency) compared with the edge Apple M4 GPU and TPU-like accelerator, respectively. The code is available at https://github.com/peilin-chen/SpikON.",
+    "published": "2026-06-29",
+    "updated": "2026-06-29",
+    "pdf_url": "https://arxiv.org/pdf/2606.30926v1",
+    "categories": [
+      "cs.AR"
+    ],
+    "primary_category": "cs.AR",
+    "github": {
+      "url": "https://github.com/peilin-chen/SpikON.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  }
+]
