@@ -1,0 +1,429 @@
+[
+  {
+    "id": "2607.05196v1",
+    "title": "Unified Audio Intelligence Without Regressing on Text Intelligence",
+    "authors": [
+      "Zhifeng Kong",
+      "Sang-gil Lee",
+      "Jaehyeon Kim",
+      "Boxin Wang",
+      "Zihan Liu",
+      "Sungwon Kim",
+      "Yang Chen",
+      "Arushi Goel",
+      "Rajarshi Roy",
+      "Wenliang Dai",
+      "Zhuolin Yang",
+      "Yangyi Chen",
+      "Dongfu Jiang",
+      "Sreyan Ghosh",
+      "Tuomas Rintamaki",
+      "Andrew Tao",
+      "Jonathan Raiman",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "Audio intelligence involves understanding, reasoning about, and generating both audio and speech. In this work, we introduce Nemotron-Labs-Audex-30B-A3B (Audex), a unified audio-text LLM built on Nemotron-Cascade-2-30B-A3B, a strong text-only MoE LLM. Audex adopts a simple unified design with a single Transformer decoder: audio inputs are encoded and projected into the text embedding space, while text tokens and quantized audio output tokens are treated uniformly during generation. This architecture enables strong audio-text fusion, seamless multimodal generation, and compatibility with standard LLM training and inference infrastructure. For training, we meticulously curate audio-text datasets comprising 157.4B audio tokens and 320.5B text tokens. We apply multi-stage supervised training on these datasets, followed by text-only Cascade RL and multi-domain on-policy distillation. Audex delivers state-of-the-art audio understanding, speech recognition and translation, text-to-speech, audio generation, and speech-to-speech generation, while preserving very compelling reasoning, alignment, knowledge, long-context, and agentic capabilities of its text-only LLM backbone with marginal or no regression. We release the model checkpoints to facilitate open research.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05196v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.04969v1",
+    "title": "Train Smarter, Not Longer: Memorization-Guided Data Reuse for Efficient LLM Training",
+    "authors": [
+      "Jingwei Zuo",
+      "Cong Zeng",
+      "Ilyas Chahed",
+      "Maksim Velikanov",
+      "Dhia Eddine Rhaiem",
+      "Pasquale Balsebre",
+      "Abhay Kumar",
+      "Younes Belkada",
+      "Hakim Hacid"
+    ],
+    "summary": "The training paradigm of large language models has shifted from traditional one-pass training to multi-epoch training, as reasonable reuse of limited high-quality data can improve both model performance and sample efficiency. Meanwhile, excessive repetition introduces the risk of overfitting and diminishing returns. Determining when and how to reuse data effectively thus emerges as a natural but under-explored question. Through a novel observation of model's \"Memorization Window\" signals derived from loss retention dynamics and downstream evaluation scores, we propose \"Memorization-guided Data Reuse\", a training paradigm that adaptively determines when and how data should be reused, enabling principled decisions on the number of training epochs and the scheduling of data replays. Our preliminary experiments reveal a consistent memorization-driven regime: performance continues to improve with repetition far beyond current practice (e.g., the commonly cited four-epoch limit). While a full scheduler remains future work, these insights provide a foundation for memorization-aware training schedules, helping to determine reuse budgets and move toward training LLMs smarter rather than longer with limited high-quality data.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.04969v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.04749v1",
+    "title": "Direct Model State Migration for Elastic Training of Large Language Models",
+    "authors": [
+      "Weijian Liu",
+      "Mingzhen Li",
+      "Rui Kang",
+      "Chen Sun",
+      "Guangming Tan",
+      "Weile Jia"
+    ],
+    "summary": "Large language model (LLM) training shall adapt to dynamic resources in shared clusters to tackle the elasticity, including passive preemption and optimistic scaling. State migration across device sets is required when altering the hybrid-parallel configuration due to dynamic resources. Existing solutions rely on checkpoint-based mechanisms, which persist complete states to storage for resuming with re-assigned resources, forcing all GPUs to stall when transferring model states. Despite optimization efforts, checkpoint-based solutions incur prohibitive latency due to data movement across memory hierarchies.\n  We propose ETC, a checkpoint-free state migration framework for elastic hybrid-parallel LLM training. We exploits the state locality to minimize inter-GPU data movement, replacing storage persistence with direct peer-to-peer communication. Besides, we eliminate node fragmentation through communication coalescing. Integrated with Megatron-LM, ETC reduces migration overhead by 2.33$\\times$ to 6.37$\\times$ compared to checkpoint-based solutions across diverse parallel configurations. By enabling efficient migration, ETC unlocks practical elastic training in production environments.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.04749v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.04630v1",
+    "title": "Exploiting Structural Properties for Efficient Constraint-Aware HNSW Hyperparameter Tuning",
+    "authors": [
+      "Geon Choi",
+      "Hoeun Lee",
+      "Jaeyoung Do"
+    ],
+    "summary": "Vector databases (VectorDBs) are a core component of modern retrieval systems, including Retrieval-Augmented Generation (RAG), where efficient Approximate Nearest Neighbor Search (ANNS) is critical. Among ANNS algorithms, Hierarchical Navigable Small World (HNSW) graphs are widely adopted for their strong recalllatency trade-off. However, configuring HNSW remains challenging: its hyperparameters jointly affect search quality, latency, build time, and index size in nonlinear ways, while production deployments impose strict resource and tuning-time constraints.We study HNSW hyperparameter tuning from a systems perspective and show that its configuration space exhibits strong structural regularities. Specifically, we identify monotonic, dominant unimodal, and separable relationships among search-time and construction-time parameters, which induce feasibility boundaries under performance and resource constraints. Building on this insight, we propose CHAT, a constraint-aware tuning framework for HNSW. Unlike generic black-box optimizers, CHAT exploits HNSW-specific structure to perform deterministic, sample-efficient search and prune resource-infeasible configurations before full index construction. Across multiple datasets and HNSW-based vector search engines, CHAT identifies configurations that maximize recall or throughput while satisfying constraints on accuracy, latency, build time, index size, and tuning budget. Compared to strong baselines, CHAT achieves up to 45% higher throughput or 11% higher recall, and converges up to 44x faster. These results show that principled, structure-aware tuning enables efficient and robust HNSW deployment beyond generic black-box optimization.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.04630v1",
+    "categories": [
+      "cs.DB"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2606.26373v3",
+    "title": "Hybrid privacy-aware semantic search: SVD-truncated document geometry and CKKS-encrypted query reranking under a restricted threat model",
+    "authors": [
+      "Sergey Kurilenko"
+    ],
+    "summary": "Dense embeddings power semantic search and Retrieval-Augmented Generation, yet a leaked vector database leaks the text behind it, since embeddings invert with high fidelity. The textbook defences are extreme--homomorphic search is sound but far too slow at million-document scale, while privacy noise degrades ranking before it protects. We study a middle path built on an asymmetry: each static document vector is SVD-truncated and then rotated by a secret orthogonal transform held only by the data owner, while the dynamic query is protected cryptographically under CKKS, so an honest-but-curious server sees neither query values nor scores; the CKKS parameters are fixed by a small reproducible benchmark. We prove a tight lower bound on the reconstruction error of any decoder confined to the protected subspace. On a one-million-document, five-encoder corpus the wrapper preserves retrieval quality at sub-second latency--a mild linear denoiser on self-retrieval that reverses into a 2--8-point nDCG@10 cost on graded relevance--while an off-the-shelf inversion attack collapses to the floor. We then map the boundary: a known-plaintext attacker recovers the rotation by orthogonal Procrustes from about as many leaked pairs as the retained dimension, and the public quantization codes leak neighbour structure. The same geometry doubles as a privacy-preserving data-loss-prevention primitive for LLM firewalls, matching a plaintext detector at near parity. We state the limits plainly: query confidentiality is cryptographic, but document protection is an empirical obfuscation layer, not a cryptographic primitive.",
+    "published": "2026-06-24",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2606.26373v3",
+    "categories": [
+      "cs.CR",
+      "cs.AI",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2607.04955v1",
+    "title": "CausticFlow: An Efficient Machine Learning Framework Combining Neural Differential Equations and Normalizing Flows for Binary Microlensing Parameter Inference",
+    "authors": [
+      "Haibin Ren",
+      "Wei Zhu"
+    ],
+    "summary": "We introduce CausticFlow, a machine learning framework that combines neural controlled differential equations with normalizing flows to infer binary microlensing parameters. This architecture naturally handles irregularly sampled time series and data gaps while flexibly capturing strongly correlated and multimodal posterior distributions. Trained on simulated KMTNet-like light curves, CausticFlow generates posterior samples in a fraction of a second, with maximum-a-posteriori estimates achieving typical precisions of $\\sim17\\%$ for the mass ratio $q$ and $\\sim3\\%$ for the projected separation $s$. When used as a proposal distribution for downstream local optimization, the framework improves these precisions to $<5\\%$ and $<1\\%$, respectively, and recovers model $χ^2$ for $\\sim80\\%$ of simulated events. We test the generalizability of the framework on 10 real binary lensing events characterized by higher-order effects, varied cadences, and real-world noise. Despite these mismatches between simulation and reality, CausticFlow successfully recovers the model parameters, light-curve morphology, and lensing geometry for 7 of the 10 events after simple local refinement, achieving precision levels comparable to those found for simulated data in 10 CPU minutes per event. These results demonstrate that CausticFlow acts as a fast and robust proposal engine, bridging the gap between the rapid influx of data and the need for systematic modeling in large-scale microlensing surveys such as Roman, CSST, and ET.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.04955v1",
+    "categories": [
+      "astro-ph.IM",
+      "astro-ph.EP",
+      "astro-ph.GA",
+      "astro-ph.SR"
+    ],
+    "primary_category": "astro-ph.IM",
+    "github": null
+  },
+  {
+    "id": "2607.04415v1",
+    "title": "GORIO: GPU-Centered Remote I/O for Graph ANNS over NVMe-oF",
+    "authors": [
+      "Gen Zhang",
+      "Wenhao Gu"
+    ],
+    "summary": "Graph-based approximate nearest neighbor search (ANNS) is increasingly used in vector databases and retrieval-augmented generation services, but large vector indexes often exceed the memory capacity of a single GPU server. NVMe over Fabrics (NVMe-oF) provides an attractive storage-disaggregation substrate, yet existing remote storage paths are still largely CPU-centered: the CPU forms I/O requests, drives transport progress, and determines when GPU computation can resume. This organization is poorly matched to graph ANNS, where the next data access is discovered inside GPU graph traversal.\n  This paper presents GORIO, a system study that extends GPU-centered local I/O to remote storage and specializes the resulting substrate for graph ANNS over NVMe-oF. GORIO keeps query evolution, page-miss generation, pending-query state, and resume decisions on the GPU, while the CPU acts only as an NVMe-oF transport and completion proxy. The design has two layers: a GPU-direct remote I/O path that turns local page-cache misses into split-phase remote operations, and ANNS-specific scheduling mechanisms that overlap graph traversal with remote page service. On a SIFT1M DiskANN-style graph workload over an RDMA NVMe-oF path, GORIO is 1.31$\\times$ faster than the state-of-the-art remote-I/O reference path and 3.73$\\times$ faster than the direct remote page-cache path. These results demonstrate a concrete GPU-centered remote I/O substrate for graph ANNS.",
+    "published": "2026-07-05",
+    "updated": "2026-07-05",
+    "pdf_url": "https://arxiv.org/pdf/2607.04415v1",
+    "categories": [
+      "cs.DC",
+      "cs.DB"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.03657v1",
+    "title": "ViPo-MLLM: Visual-Pose Multimodal LLM for Gloss-Free Sign Language Translation",
+    "authors": [
+      "Ahmed Abul Hasanaath",
+      "Bicheng Xu",
+      "Mir Rayat Imtiaz Hossain",
+      "Leonid Sigal",
+      "Hamzah Luqman"
+    ],
+    "summary": "Gloss-free Sign Language Translation (SLT) translates sign language videos into spoken-language sentences without gloss annotations, avoiding costly labeling but requiring fine-grained modeling of hands, body, and facial cues. Existing methods often use single-modality or weakly fused features, limiting performance. We propose ViPo-MLLM, a framework that integrates spatio-temporal RGB and human pose features. Dedicated encoders model intra-modal dynamics and cross-modal attention captures long-range dependencies. The fused representation is conditioned with a structured prompt and processed by an LLM trained with contrastive and language modeling objectives. The proposed model was evaluated on the PHOENIX14T and CSL-Daily datasets and achieved new state-of-the-art results on both datasets. Moreover, the ViPo-MLLM model attained competitive performance compared to gloss-based recognition approaches, confirming the effectiveness of the proposed pose cues and cross-modal attention mechanisms.",
+    "published": "2026-07-04",
+    "updated": "2026-07-04",
+    "pdf_url": "https://arxiv.org/pdf/2607.03657v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.03834v1",
+    "title": "Enactive Drift Regulation and the Emergence Machine: A Framework for Coherent Adaptation Through Regulated Interaction",
+    "authors": [
+      "Nicholas Davis"
+    ],
+    "summary": "Adaptive systems increasingly operate in environments characterized by persistent non-stationarity, where patterns reorganize rather than merely vary. While existing approaches such as online learning, continual learning, and adaptive filtering address performance degradation under changing data distributions, they typically treat drift as noise, error, or distribution shift to be corrected. This paper argues that such framings miss a more fundamental challenge: the loss of organizational coherence over time. We introduce Enactive Drift Regulation (EDR) as a general adaptive principle that treats drift as a regulatory signal indicating breakdowns in coherence between a system's internal organization and its environment. Rather than treating prediction optimization or retraining as sufficient, EDR reframes adaptation as the regulation of structure-maintaining, reorganizing, or transitioning internal dynamics to sustain viable operation under change. We present the Emergence Machine as an architectural instantiation of EDR, organized around regimes, attractors, coherence measures, reorganization dynamics, and memory across regimes. By shifting the focus from error minimization to coherence regulation, this work provides a principled framework for long-duration adaptation under non-stationarity and offers a bridge between adaptive control and enactive accounts of cognition.",
+    "published": "2026-07-04",
+    "updated": "2026-07-04",
+    "pdf_url": "https://arxiv.org/pdf/2607.03834v1",
+    "categories": [
+      "cs.HC"
+    ],
+    "primary_category": "cs.HC",
+    "github": null
+  },
+  {
+    "id": "2607.02050v2",
+    "title": "A Memory Efficient Unified Algorithm for Online Learning of Linear Dynamical Systems",
+    "authors": [
+      "Yuval Ran-Milo",
+      "Angelos Assos",
+      "Elad Hazan"
+    ],
+    "summary": "Motivated by the challenge of stabilizing a general unknown linear dynamical system (LDS) from observations, we study the natural prerequisite of online prediction. Our goal is to achieve sublinear regret with a memory footprint that adapts to the intrinsic complexity of the dynamics rather than the full hidden-state dimension. We focus on the practically central regime of systems with low instability complexity -- eigenvalues outside the real stable interval that do not decay rapidly, together with non-semisimple modes -- potentially embedded in an otherwise stable real spectrum of much higher dimension; we write $k$ for this count. This regime is the primary setting in which stabilization is plausible: we show that many systems with high instability complexity cannot be stabilized without exponentially large controls. Thus, prediction is meaningful for stabilization precisely when the instability complexity is small. Within this regime, we introduce a unified online algorithm that handles every LDS (including non-diagonalizable systems with complex or exploding modes) with a learnable parameter count of $\\widetilde{O}(k)$. Finally, we prove a lower bound showing that $k$ is a valid complexity measure: any filter-based predictor needs at least $k$ filters. Experiments corroborate our theory: on a high-dimensional system, our predictor sharply outperforms prior methods at an equal parameter budget.",
+    "published": "2026-07-02",
+    "updated": "2026-07-04",
+    "pdf_url": "https://arxiv.org/pdf/2607.02050v2",
+    "categories": [
+      "cs.LG",
+      "eess.SY"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.03229v1",
+    "title": "HyperParallel-Mpipe: A Composable Algebra System for Optimizing MLLM Training over Supernode Clusters",
+    "authors": [
+      "Chong Li",
+      "Zhengdao Yu",
+      "Nelson Lossing",
+      "Thibaut Tachon",
+      "Pierre Leca",
+      "Etienne Filhol",
+      "Yujie Yuan",
+      "Chong Bao",
+      "Teng Su"
+    ],
+    "summary": "Modern AI applications have expanded beyond text-only interaction into a wide range of multimodal scenarios, making multimodal large language models (MLLMs) crucial for both research and industry. However, compared with traditional decoder-only LLM training, large-scale MLLM training often shows much lower MFU. We analyze the key pain points in MLLM training and introduce Mpipe, which uses a schedule algebra to derive concrete runtime behavior from a compact schedule specification. From this algebra, Mpipe derives transpose, a multimodal-aware heterogeneous parallel schedule that remaps modality-encoder computation into otherwise idle pipeline regions. On Ascend 910C NPU clusters, Mpipe achieves 2.70x speedup in a small-scale setting and 1.21x speedup in a 512-card large-scale setting.",
+    "published": "2026-07-03",
+    "updated": "2026-07-03",
+    "pdf_url": "https://arxiv.org/pdf/2607.03229v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.03118v1",
+    "title": "Vidu S1: A Real-Time Interactive Video Generation Model",
+    "authors": [
+      "Jintao Zhang",
+      "Kai Jiang",
+      "Jintao Chen",
+      "Xu Wang",
+      "Yang Luo",
+      "Yuji Wang",
+      "Dechuang Chen",
+      "Jungang Li",
+      "Chengyang Ye",
+      "Marco Chen",
+      "Hongzhou Zhu",
+      "Min Zhao",
+      "Yuxuan Jiang",
+      "Zhengkun Huang",
+      "Chendong Xiang",
+      "Kaiwen Zheng",
+      "Haoxu Wang",
+      "Xiaohang Wang",
+      "Qi Jia",
+      "Xin Chen",
+      "Yimin Chen",
+      "Youhe Jiang",
+      "Fangcheng Fu",
+      "Zhijie Deng",
+      "Fan Bao",
+      "Jianfei Chen",
+      "Jun Zhu"
+    ],
+    "summary": "We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports infinite-length real-time video generation without blurring, drift, or visual distortion. Built with TurboDiffusion and TurboServe, Vidu S1 outputs 540p real-time videos at up to 42 FPS on regular consumer GPUs. Users can upload custom images of real people, anime, and pets, and choose different voice tones for personalized experiences. Experiments show that Vidu S1 achieves the best performance across all test metrics while fully meeting real-time inference requirements. A playable online demo is available at https://vidu.com/vidu-stream.",
+    "published": "2026-07-03",
+    "updated": "2026-07-03",
+    "pdf_url": "https://arxiv.org/pdf/2607.03118v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.03089v1",
+    "title": "STELLA: Efficient Sensor-to-LLM Translation for On-Device Human Activity Recognition",
+    "authors": [
+      "Nirhoshan Sivaroopan",
+      "Albert Zomaya",
+      "Kanchana Thilakarathna"
+    ],
+    "summary": "HAR is increasingly expected to run continuously on edge devices, yet recent LLM-based methods remain hard to deploy: raw sensor prompts are long, cloud inference adds latency and privacy risk, and fine-tuned LLM pipelines turn general-purpose models into task-specific classifiers. We present STELLA, an efficient sensor-to-LLM translation framework for on-device HAR that shifts the burden from LLM adaptation to sensor tokenization. A lightweight hierarchical tokenizer compresses an entire multi-channel inertial window into a fixed set of compact latent sensor tokens, which are projected into the embedding space of a frozen pretrained LLM and combined with a natural-language prompt for label scoring. This preserves activity-relevant temporal and cross-channel structure while keeping LLM-side computation predictable across sensor configurations. STELLA also supports on-device personalization, adapting only the lightweight tokenizer on small amounts of user-specific labelled data and augmenting inference with a local retrieval context, keeping the LLM, user data, and retrieval on device. Across seven public HAR datasets and eight benchmark settings, STELLA achieves new state-of-the-art performance, improving over prior methods by up to 11.83% F1; on-device personalization yields up to a further 21.91% F1 as user data accumulates after deployment. STELLA also outperforms representative time-series tokenizers under the same LLM pipeline and achieves real-time inference under practical mobile and edge budgets, showing that efficient sensor tokenization is a practical path toward accurate, private, and personalized LLM-based HAR on edge devices.",
+    "published": "2026-07-03",
+    "updated": "2026-07-03",
+    "pdf_url": "https://arxiv.org/pdf/2607.03089v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.02895v1",
+    "title": "Selectivity Estimation for Linear Queries via Online Learning",
+    "authors": [
+      "Fangzhu Shen",
+      "Debmalya Panigrahi",
+      "Sudeepa Roy"
+    ],
+    "summary": "Learning-based approaches for selectivity estimation in databases have gained significant traction in recent years. However, theoretical studies of these learning-based approaches are essentially limited to fixed query distributions on static databases. In practice, both the underlying database and the query workload can dynamically change over time. In this work, we propose an algorithmic framework for learning selectivity of queries in this more general dynamic setup. Inspired by online learning, we measure the performance of the learning algorithm in this setting by its regret, which compares the cumulative loss incurred by the learning algorithm to that of the best fixed strategy. We establish upper and lower bounds on regret for histogram-based linear queries, such as point, range, and subset selection queries, under standard loss functions, in both static and dynamic database settings.",
+    "published": "2026-07-03",
+    "updated": "2026-07-03",
+    "pdf_url": "https://arxiv.org/pdf/2607.02895v1",
+    "categories": [
+      "cs.DB",
+      "cs.LG"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2607.03011v1",
+    "title": "Can Model Merging Improve Aggregation in DiLoCo?",
+    "authors": [
+      "Stefan Horoi",
+      "Benjamin Thérien",
+      "Guy Wolf",
+      "Eugene Belilovsky"
+    ],
+    "summary": "Model merging techniques, which aggregate independently finetuned models into one to combine their capabilities, have become a topic of significant interest in recent years, with a broad array of methods having been proposed to tackle this problem. Simultaneously, an emerging trend in distributed learning has been the use of methods such as local SGD and DiLoCo, which greatly reduce communication costs by periodically aggregating the independently trained local models. However, these communication-efficient methods have been shown to degrade in performance relative to the FLOP-matched data-parallel gold standard as the number of independent local models grows and as the number of local training steps before global communication is increased. In this work, we draw an explicit analogy between the pseudo-gradient aggregation step in local SGD/DiLoCo and task arithmetic-based model merging, establishing a straightforward way to utilize merging methods in the context of distributed optimization. We then evaluate multiple state-of-the-art model merging methods in this setting and identify one method in particular, Iso-C, as a promising approach for improving DiLoCo. We find that DiLoCo SGD with Iso-C aggregation outperforms not only simple pseudo-gradient averaging but even the momentum-based DiLoCo, despite lacking a momentum mechanism itself. Building on this finding, we propose IsoLoCo, which adapts Iso-C for distributed training by equipping it with Nesterov momentum. Our empirical evaluations on language model pre-training across varying numbers of local workers show that IsoLoCo significantly outperforms DiLoCo, with the gap between them widening as the number of workers increases. This advantage remains present across model sizes and inner step counts, confirming that merging-inspired aggregation is an effective strategy for low-communication distributed training.",
+    "published": "2026-07-03",
+    "updated": "2026-07-03",
+    "pdf_url": "https://arxiv.org/pdf/2607.03011v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.02714v1",
+    "title": "Not All Refusals Are Equal: How Safety Alignment Fails Cybersecurity at Scale",
+    "authors": [
+      "Vadym Hadetskyi",
+      "Dario Pasquini",
+      "Artem Sorokin"
+    ],
+    "summary": "There is no doubt that safety alignment is an essential step in LLM training. However, conceptually it does not distinguish between various domains and the level of potential harm of a query, which creates significant complications in the fields like cyber security, where a model should not be constrained by its safety circuits to accomplish the goals of legitimate, authorized operations. In this work, we share our findings from a large scale abliteration experiment on 24 open-source LLMs and show that domain-specific abliteration is achievable with standard methodology on the example of a 1T-parameter Kimi K2. Building on recent work showing that refusal in LLMs occupies a multi-dimensional subspace within layers, we find that it is also distributed widely across layers, especially in trillion-parameter MoE architectures, and so we aim to capture the part of it that represents harmful concepts in the cybersecurity domain exclusively. We also investigate the correlation between models' features and the effect of domain-specific abliteration, identifying that the type of safety training and architecture are the most reliable predictors. Finally, we classify the models into 3 \\emph{abliteration susceptibility} tiers and put forward a set of conjectures as to why a particular effect from this intervention might be observed in a given model.",
+    "published": "2026-07-02",
+    "updated": "2026-07-02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02714v1",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2607.02731v1",
+    "title": "SMOCS: A Streaming Framework for Simplified Deployment, Monitoring, and Optimization of ML Systems in Production",
+    "authors": [
+      "Armen Kasparian",
+      "Kishansingh Rajput",
+      "Malachi Schram",
+      "John Vennekate"
+    ],
+    "summary": "Machine learning has demonstrated significant potential for real-time monitoring, optimization, and control of scientific facilities. However, deploying and maintaining ML models in operational environments remains a substantial engineering challenge. Each facility presents unique data protocols, non-standard formats, and infrastructure constraints, forcing teams to rebuild integration pipelines for every new application. We present SMOCS (Streaming Monitoring Optimization and Control System), a Kafka-based containerized framework that addresses this challenge through three contributions: 1) a layered abstraction over Apache Kafka that separates infrastructure from application logic, 2) a three-thread agent architecture that temporally decouples data ingestion, model training, and real-time inference enabling continuous online learning from live data streams, and 3) a configuration-driven deployment model that enables domain experts to operate ML pipelines without software engineering expertise. SMOCS is facility platform-agnostic, fault-isolated by design, and horizontally scalable through Docker containerization. The framework is publicly available as open-source software on the Jefferson Lab Github.",
+    "published": "2026-07-02",
+    "updated": "2026-07-02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02731v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2607.02646v1",
+    "title": "EVA-Client: A Unified Data Collection, Inference, and Deployment Framework for Embodied Policies on Real Robots",
+    "authors": [
+      "Heqing Yang",
+      "Yang Yi",
+      "Liyao Wang",
+      "Linqing Zhong",
+      "Donglin Yang",
+      "Ruipu Wu",
+      "Zitong Bai",
+      "Fengjiao Chen",
+      "Manyuan Zhang",
+      "Linjiang Huang",
+      "Si Liu"
+    ],
+    "summary": "We present EVA-Client, an open-source framework for deployment, data collection, and evaluation of trained manipulation policies on real robots. Sitting between a policy server and the physical hardware, EVA-Client unifies the real-robot stages of the policy iteration loop within a single codebase. It makes three contributions. First, a component-decoupled architecture in which robot backends, inference strategies, and transport middlewares form an orthogonal grid: adding a robot or a strategy touches only its own layer. Second, inspectable execution through Debug, Collect, and Eval workflows, with modes ranging from open-loop simulation to continuous real-time control. Third, every evaluation run doubles as a data collection, recording full rollouts in training-ready format alongside exhaustive logs and a side-by-side comparison viewer, so each evaluation feeds the next round of training rather than ending as an unrecorded impression. EVA-Client further consolidates major real-time inference strategies, synchronous and asynchronous execution, ACT-style temporal ensembling, Real-Time Chunking, and a naive-async ablation baseline, behind a single configuration surface.",
+    "published": "2026-07-02",
+    "updated": "2026-07-02",
+    "pdf_url": "https://arxiv.org/pdf/2607.02646v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.02544v1",
+    "title": "Not Every Sync Is Safe: Calibrated DiLoCo Scheduling for Shared AI Infrastructure",
+    "authors": [
+      "Maxwell Twelftree",
+      "David Lemphers",
+      "An-chi He",
+      "Yue Yang"
+    ],
+    "summary": "DiLoCo-style training reduces communication by letting learner islands train locally before occasional outer synchronization, making it attractive for fragmented industrial AI fleets where training shares hardware with latency-sensitive serving. The question for such fleets is when an outer merge is worth its system cost, and whether choosing \\emph{which} windows to defer matters at all. Existing scheduling studies evaluate workload-aware policies against fixed-period baselines, but most omit the control that isolates timing from budget: matched random deferral, which inherits the controller's synchronization budget but is not itself deployable. This omission is consequential: across controlled stress tests and real vLLM sidecar replays, matched random ties or beats every forecast-free policy we test, so gains reported against weaker baselines cannot be attributed to window choice. We fill this gap with Workload-Aware DiLoCo (WA-DiLoCo), a score-based controller that weighs learner progress against fleet pressure, and a calibration protocol that determines when matched random can be beaten, then demonstrate that it can. In the bursty regime where calibration exposes request-overlap structure, adding a one-step EWMA burst forecast to the online controller beats matched random in real vLLM sidecar replay, reducing SLO violations from 6.54\\% to 5.09\\% (8 of 10 seeds, $p=0.021$); offline Calibrated-WA, a non-deployable bound, shows the remaining headroom at 4.45\\% versus 6.26\\%. The deployable lesson remains the protocol: report real-sidecar effect-size transfer, a no-sync load match, and a matched-random envelope before claiming serving-SLO improvement.",
+    "published": "2026-06-24",
+    "updated": "2026-06-24",
+    "pdf_url": "https://arxiv.org/pdf/2607.02544v1",
+    "categories": [
+      "cs.DC",
+      "cs.AI"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  }
+]
