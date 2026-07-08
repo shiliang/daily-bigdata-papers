@@ -1,0 +1,266 @@
+[
+  {
+    "id": "2607.05196v2",
+    "title": "Unified Audio Intelligence Without Regressing on Text Intelligence",
+    "authors": [
+      "Zhifeng Kong",
+      "Sang-gil Lee",
+      "Jaehyeon Kim",
+      "Boxin Wang",
+      "Zihan Liu",
+      "Sungwon Kim",
+      "Yang Chen",
+      "Arushi Goel",
+      "Rajarshi Roy",
+      "Wenliang Dai",
+      "Zhuolin Yang",
+      "Yangyi Chen",
+      "Dongfu Jiang",
+      "Sreyan Ghosh",
+      "Tuomas Rintamaki",
+      "Andrew Tao",
+      "Jonathan Raiman",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro",
+      "Wei Ping"
+    ],
+    "summary": "Audio intelligence involves understanding, reasoning about, and generating both audio and speech. In this work, we introduce Nemotron-Labs-Audex-30B-A3B (Audex), a unified audio-text LLM built on Nemotron-Cascade-2-30B-A3B, a strong text-only MoE LLM. Audex adopts a simple unified design with a single Transformer decoder: audio inputs are encoded and projected into the text embedding space, while text tokens and quantized audio output tokens are treated uniformly during generation. This architecture enables strong audio-text fusion, seamless multimodal generation, and compatibility with standard LLM training and inference infrastructure. For training, we meticulously curate audio-text datasets comprising 157.4B audio tokens and 320.5B text tokens. We apply multi-stage supervised training on these datasets, followed by text-only Cascade RL and multi-domain on-policy distillation. Audex delivers state-of-the-art audio understanding, speech recognition and translation, text-to-speech, audio generation, and speech-to-speech generation, while preserving very compelling reasoning, alignment, knowledge, long-context, and agentic capabilities of its text-only LLM backbone with marginal or no regression. We release the model checkpoints to facilitate open research.",
+    "published": "2026-07-06",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05196v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG",
+      "cs.SD",
+      "eess.AS"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.02714v2",
+    "title": "Not All Refusals Are Equal: How Safety Alignment Fails Cybersecurity at Scale",
+    "authors": [
+      "Vadym Hadetskyi",
+      "Dario Pasquini",
+      "Artem Sorokin"
+    ],
+    "summary": "There is no doubt that safety alignment is an essential step in LLM training. However, conceptually it does not distinguish between various domains and the level of potential harm of a query, which creates significant complications in the fields like cyber security, where a model should not be constrained by its safety circuits to accomplish the goals of legitimate, authorized operations. In this work, we share our findings from a large scale abliteration experiment on 24 open-source LLMs and show that domain-specific abliteration is achievable with standard methodology on the example of a 1T-parameter Kimi K2. Building on recent work showing that refusal in LLMs occupies a multi-dimensional subspace within layers, we find that it is also distributed widely across layers, especially in trillion-parameter MoE architectures, and so we aim to capture the part of it that represents harmful concepts in the cybersecurity domain exclusively. We also investigate the correlation between models' features and the effect of domain-specific abliteration, identifying that the type of safety training and architecture are the most reliable predictors. Finally, we classify the models into 3 abliteration susceptibility tiers and put forward a set of conjectures as to why a particular effect from this intervention might be observed in a given model.",
+    "published": "2026-07-02",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.02714v2",
+    "categories": [
+      "cs.CR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2607.04415v2",
+    "title": "GORIO: GPU-Centered Remote I/O for Graph ANNS over NVMe-oF",
+    "authors": [
+      "Gen Zhang",
+      "Wenhao Gu",
+      "Shan Huang",
+      "Xinhai Chen"
+    ],
+    "summary": "Graph-based approximate nearest neighbor search (ANNS) is increasingly used in vector databases and retrieval-augmented generation services, but large vector indexes often exceed the memory capacity of a single GPU server. NVMe over Fabrics (NVMe-oF) provides an attractive storage-disaggregation substrate, yet existing remote storage paths are still largely CPU-centered: the CPU forms I/O requests, drives transport progress, and determines when GPU computation can resume. This organization is poorly matched to graph ANNS, where the next data access is discovered inside GPU graph traversal.\n  This paper presents GORIO, a system study that extends GPU-centered local I/O to remote storage and specializes the resulting substrate for graph ANNS over NVMe-oF. GORIO keeps query evolution, page-miss generation, pending-query state, and resume decisions on the GPU, while the CPU acts only as an NVMe-oF transport and completion proxy. The design has two layers: a GPU-direct remote I/O path that turns local page-cache misses into split-phase remote operations, and ANNS-specific scheduling mechanisms that overlap graph traversal with remote page service. On a SIFT1M DiskANN-style graph workload over an RDMA NVMe-oF path, GORIO is 1.31X faster than the state-of-the-art remote-I/O reference path and 4.89X faster than the direct remote page-cache path. These results demonstrate a concrete GPU-centered remote I/O substrate for graph ANNS.",
+    "published": "2026-07-05",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.04415v2",
+    "categories": [
+      "cs.DC",
+      "cs.DB"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.05938v1",
+    "title": "Prior-First, Condition-Second: Scalable and Controllable Hand Motion Completion",
+    "authors": [
+      "Mingyi Shi",
+      "Xuelin Chen",
+      "Taku Komura"
+    ],
+    "summary": "Synthesizing hand motion that matches the full body motion and the semantic labels is a difficult task due to their high degrees of freedom and the lack of semantic labels. To cope with this issue, we propose a prior-first, condition-second framework for body-conditioned hand motion completion. Our framework first learns a generic body-hand kinematic prior from large-scale unstructured and unlabeled motion data, capturing the intrinsic coordination between global body dynamics and hand articulation. Semantic control is then introduced through lightweight adaptation on top of the frozen prior, avoiding the need to relearn kinematic structure for each control interface. Our framework centers on a streaming, autoregressive body-hand prior that generates coherent, kinematically consistent hand motion from body dynamics in real time, using structured kinematic modeling to maintain mechanical body-hand coupling. To enable practical controllability under limited supervision, we introduce semantically-layered adapters that inject conditioning signals at appropriate kinematic levels, supporting both self-supervised attribute control and weakly supervised text-driven control with only a few hours of labeled data. Extensive evaluations demonstrate that our framework improves kinematic plausibility, robustness, and controllability compared to end-to-end conditioned baselines, particularly in low-resource and cross-dataset settings. We further showcase real-time inference and an interactive authoring workflow, highlighting the applicability to production animation pipelines. Homepage: https://AIGAnimation.github.io/HandPrior/",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05938v1",
+    "categories": [
+      "cs.GR",
+      "cs.RO"
+    ],
+    "primary_category": "cs.GR",
+    "github": null
+  },
+  {
+    "id": "2607.06425v1",
+    "title": "Adaptive and Neural Operator Control of Nonlinear Volterra Hyperbolic PDEs",
+    "authors": [
+      "Miroslav Krstic"
+    ],
+    "summary": "Adaptive control learns the plant online; neural-operator control learns the control gains offline. We bring the two together for a class of nonlinear hyperbolic PDEs whose dynamics are governed by an unknown Volterra series of arbitrarily many kernels. An observer-based passive identifier learns a truncation of this series online. The infinite-dimensional map that synthesizes the backstepping kernels from the parameter estimates -- a cascade of PDEs on simplex domains of increasing dimension, prohibitive to solve in real time -- is approximated once, offline, by a neural operator. The closed loop then carries two learning processes in series: online learning of the plant feeds an offline-learned PDE solver, whose output is the online control gains. We prove closed-loop stability and asymptotic regulation of the plant state, observer state, and input, on a basin that recovers the exact-kernel basin as the neural-operator accuracy improves. With a single Lyapunov function we absorb at once the perturbations -- all vanishing -- of truncating an infinite Volterra series, of identifying the plant online, and of approximating the gains.",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.06425v1",
+    "categories": [
+      "eess.SY",
+      "math.OC"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2607.06079v1",
+    "title": "Scalable Perturbation Learning for Online Self-Supervised Echo State Networks",
+    "authors": [
+      "Taiki Yamada",
+      "Kantaro Fujiwara"
+    ],
+    "summary": "Intelligent systems should not only solve tasks but also adapt under real-world constraints. Autonomous adaptation via self-supervised learning, sequential adaptation via online learning, and memory-efficient implementation via perturbation-based learning are important requirements for such systems. However, these requirements are generally in tension for high-dimensional systems, because perturbation-based learning suffers from variance that grows with the dimension of the perturbed variables.\n  In this study, we focus on echo state networks (ESNs), where this tension naturally arises in large reservoirs. We propose a perturbation-based learning rule for online self-supervised learning in ESNs. The proposed rule is derived from an orthogonal decomposition of the self-supervised learning cost, which separates an input-dependent component from a redundant component determined by the fixed ESN parameters. By perturbing only the input-dependent component, the effective perturbation dimension is reduced from the reservoir dimension to the input dimension.\n  Thus, the proposed method preserves self-supervised adaptation, online learning, and scalar-feedback perturbation learning, while avoiding reservoir-size-dependent variance growth. This suggests a design principle for scalable and hardware-compatible learning: online learning should be restricted to the dynamically necessary low-dimensional component of the objective.",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.06079v1",
+    "categories": [
+      "cs.LG",
+      "cs.NE"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.05734v1",
+    "title": "SCOReD: Student-Aware CoT Optimization for Recommendation Distillation",
+    "authors": [
+      "Haz Sameen Shahgir",
+      "Yufei Li",
+      "Frank Shyu",
+      "Luke Simon",
+      "Sandeep Pandey",
+      "Xi Liu",
+      "Yue Dong"
+    ],
+    "summary": "Chain-of-thought (CoT) distillation in the recommendation domain is a necessary precursor to RL training, but raw teacher traces are ill-suited to this task. Large teachers approach the recommendation task with unusually high reasoning uncertainty, repeatedly rechecking their answers without revising them; supervised fine-tuning on such traces produces verbose students that never revise their initial guess. Furthermore, due to the novelty of the recommendation domain, the teacher's reasoning traces are highly out-of-distribution for the small student LLM.\n  We propose Student-Aware CoT Optimization for Recommendation Distillation (SCOReD), a CoT optimization framework tailored to recommendation that first parses each teacher trace into typed segments and uses the student LLM's attention to score the importance of each segment. Then SCOReD dynamically selects a per-segment edit (KEEP / REWRITE / FUSE / PRUNE) based on the output length and comparative log probability lift of the answer given the edit as per the student. Therefore, SCOReD prunes redundant sections of the reasoning trace while preserving information-dense sections and adapts raw teacher traces to the student's output distribution. Training on SCOReD-optimized CoTs provides a cleaner learning signal to the student model and improves over baseline SFT by 1.56% NDCG and 1.9% Recall@5, while reducing reasoning length by 27.3%.",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05734v1",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2607.05721v1",
+    "title": "SpanUQ: Span-Level Uncertainty Quantification for Large Language Model Generation",
+    "authors": [
+      "Yimeng Zhang",
+      "Yingying Zhuang",
+      "Ziyi Wang",
+      "Yuxuan Lu",
+      "Pei Chen",
+      "Aman Gupta",
+      "Zhe Su",
+      "Ming Tan",
+      "Zhilin Zhang",
+      "Qun Liu",
+      "Manikandarajan Ramanathan",
+      "Rajashekar Maragoud",
+      "Edward Vul",
+      "Jing Huang",
+      "Dakuo Wang"
+    ],
+    "summary": "Uncertainty estimation is essential not only for the trustworthy deployment of large language models (LLMs) but also as a foundation for self-refinement in LLM generation. However, existing approaches operate at suboptimal granularities: token-level scores lack semantic coherence, while sequence-level scores fail to localize errors. We formalize Span-Level Uncertainty Estimation (SLUE), a new task that targets the natural granularity for uncertainty: semantically coherent text spans, each conveying a single assessable unit of meaning. To address this task, we introduce SPANUQ, a lightweight probe that distills the uncertainty knowledge from expensive multi-sample inference into a single forward pass over LLM hidden states. SPANUQ employs a DETR-style span decoder to simultaneously detect spans and estimate their uncertainty via a Mixture of Beta distribution, trained with a principled combination of Beta NLL regression and contrastive ranking objectives. We construct SPANUQ-BENCH, the first span-level uncertainty benchmark comprising 20K prompts, 293K annotated spans, and continuous soft labels derived from multi-sample claim verification. Experiments on five LLM backbones show that SPANUQ consistently achieves the best span-level uncertainty quality, outperforming the strongest probe baseline and all sampling-based methods while being 10-20x faster. Its DETR-based span detector attains 0.910 F1, surpassing the best heuristic by 39.4%, enabling precise error localization that sequence-level methods cannot provide. The framework generalizes across five LLMs spanning two model families.",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.05721v1",
+    "categories": [
+      "cs.CL"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.01646v2",
+    "title": "PHOENIX: Resilient LLM Training with Hot-Swapping via Zero-Overhead Checkpoint",
+    "authors": [
+      "Haotian Xie",
+      "Junlin Chen",
+      "Mingkai Zheng",
+      "Lishan Yang",
+      "Zhao Zhang"
+    ],
+    "summary": "State-of-the-art large language model (LLM) training takes tens of thousands of graphics processing units (GPUs) for months and encounters failures across the software and hardware stack. Existing fault-tolerance mechanisms either impose non-trivial overhead during failure-free execution or suffer from prolonged recovery latency, particularly under scenarios where a small subset of compute nodes experience permanent failures. %The tradeoff between failure-free overhead and recovery latency forms a space forms a Pareto frontier We present PHOENIX to simultaneously address both optimization objectives. PHOENIX incorporates a fault-tolerance mechanism that restores LLM training via hot-swapping, namely by replacing failed nodes with spare nodes without terminating the complete job. The hot-swapping of PHOENIX is enabled by two ideas: First, it exploits an off-critical-path in-memory checkpointing mechanism for spatial redundancy. Second, it introduces a communicator reconstruction protocol that replaces failed nodes with spare nodes at runtime. PHOENIX efficiently overlaps the in-memory checkpointing with computation, thus introducing zero overhead during error-free execution. Upon permanent node failures, PHOENIX can rebuild memory states with minimal recomputation by leveraging in-memory checkpoints. We evaluate PHOENIX across scales (up to 512 NVIDIA A100 GPUs) and LLMs (up to 65B parameters), and observe zero checkpoint overhead with hot-swapping recovery completing in under 40 seconds. These results show that PHOENIX simultaneously achieves both zero-overhead error-free execution and extremely low recovery cost.",
+    "published": "2026-07-02",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.01646v2",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.05605v1",
+    "title": "Patch Knowledge Transfer for Efficient AI-Generated Image Quality Assessment",
+    "authors": [
+      "Jiquan Yuan"
+    ],
+    "summary": "With the rapid advancement of image generation technologies, perceptual quality assessment of AI-generated images has emerged as a crucial research direction in computer vision. The core challenge of this task lies in achieving efficient quality assessment for massive generated images. Current mainstream approaches exhibit two key limitations: 1) Methods employing complex feature extraction strategies, while improving performance, incur prohibitive computational costs that hinder real-time inference; 2) Simple image scaling-based solutions, despite their computational efficiency, demonstrate significantly inferior assessment accuracy. To address this critical issue, we propose Patch Knowledge Transfer (PKT), a knowledge distillation-based optimization framework that achieves synergistic optimization of visual representation capability and inference efficiency through an innovative multi-level knowledge transfer mechanism. Specifically, we design a dual-model architecture: a teacher model with local-global hybrid processing provides high-quality supervision signals, while a student model relying solely on global processing efficiently inherits the teacher's representation capacity through multi-level supervision. Extensive experiments conducted on 4 AIGIQA databases demonstrate that the PKT framework enables the student model to maintain performance comparable to the teacher while reducing computational costs by 67.7\\%. Furthermore, compared to existing methods, our approach achieves a superior balance between model efficiency and assessment accuracy.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05605v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.05609v1",
+    "title": "To Retain or to Adapt? Generalizing Continual Learning",
+    "authors": [
+      "Giulia Lanzillotta",
+      "Mandana Samiei",
+      "Doina Precup",
+      "Razvan Pascanu",
+      "Claire Vernade"
+    ],
+    "summary": "The Continual Learning (CL) literature has long been driven by the goal of mitigating catastrophic forgetting. This objective rests on a pervasive, often unstated assumption: that a lifelong learner should approximate the Joint-Task Learning (JTL) solution and retain all previously acquired knowledge. We challenge this retention-centered premise, arguing that in non-stationary environments prioritizing retention can impede real-time adaptation. Shifting the focus to the Average Lifelong Error (ALE), we formalize CL as an online optimization problem governed by the interaction between environmental and learning dynamics. We introduce Transfer Efficiency as a quantitative measure of the tension between Instability, the bias inherited from conflicting past experience, and Transient Error, the optimization cost of learning new tasks from scratch. Under mild convergence conditions, holding across linear and neural network models, this decomposition yields a Critical Task Duration: a closed-form threshold beyond which historical knowledge transitions from a warm-start advantage to an optimization liability whenever retention induces a positive stationary bias. We validate these theoretical predictions on continual image classification and reinforcement learning benchmarks. Finally, by connecting continual learning to the online learning framework of predictable sequences, we show that JTL is only one instance of a broader family of objectives, and we propose a new general class of continual learning algorithms, which we call Predictive Continual Learning. Predictive CL algorithms optimize expected future performance under an explicit, dynamically updated model of future tasks. As a proof of concept, we analyze a Window algorithm that interpolates between JTL and Independent-Task Learning (ITL), outperforming both under controlled distributional drift.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05609v1",
+    "categories": [
+      "stat.ML",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2607.05580v1",
+    "title": "Dynamics and Convergences for Markov Coevolutionary Opinion Formation Games in Dynamic Social Networks",
+    "authors": [
+      "Po-An Chen",
+      "Chi-Jen Lu",
+      "Chuang-Chieh Lin",
+      "Jim Shi",
+      "Chih-Chieh Hung"
+    ],
+    "summary": "While deterministic variants of the coevolutionary opinion formation games such as the K-Nearest Neighbor (K-NN) game, e.g., in Bhawalkar et al., in a dynamic social network can sometimes be shown to stabilize using potential functions or localized smoothness arguments, introducing stochasticity fundamentally changes the mathematical landscape. In the \"K-NN Markov game\", network topologies evolve via a time-varying, randomized selection process. Proving whether such a system, as a special case of general-sum Markov games, converges to an equilibrium is a profoundly non-obvious and challenging theoretical question. Multiagent reinforcement learning has been shown to derive Nash (minimax) equilibria in two-player zero-sum Markov games and Markov potential games (along with some price-of-anarchy types of results). In recent work, optimistic dynamics are shown to converge to correlated equilibria in general-sum Markov games while the price-of-anarchy bounds are unknown. We thus analyze playing specific no-regret algorithms in general-sum Markov games for convergence to a stricter set than correlated equilibria.\n  We integrate the convergence analysis techniques from multi-agent reinforcement learning in works of Wei et al. and online learning in a recent work of Anagnostides et al.. Specifically in (general-sum) Markov games, since the regret of the optimistic gradient ascent algorithm would have extra positive terms coming from Q-values, taking care of these terms requires non-trivial extra work setting an appropriate range of our learning rate and deriving the threshold on the number of iterations for convergence or a bounded price of anarchy, significantly different from those in the assumption in a main technical theorem of Anagnostides et al.. We analyze a weaker sense of convergences to approximate Nash equilibria by playing optimistic gradient ascents in general-sum Markov games.",
+    "published": "2026-07-06",
+    "updated": "2026-07-06",
+    "pdf_url": "https://arxiv.org/pdf/2607.05580v1",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  }
+]
