@@ -1,0 +1,60 @@
+[
+  {
+    "id": "2607.06996v1",
+    "title": "Multimodal Smart Glove for Sign Language Recognition Using Deep Learning",
+    "authors": [
+      "Anh Thu Nguyen Ngoc",
+      "Tam Phong Truong",
+      "Thai Anh Nguyen Duong",
+      "Vu Linh Nguyen",
+      "Manh Duong Phung"
+    ],
+    "summary": "Sign language recognition technologies can improve communication between deaf individuals and the broader community, but many existing systems face challenges in real-world deployment. This paper presents a deployable smart glove system for sign language recognition that integrates wearable sensing and deep learning. The glove incorporates flex sensors and an inertial measurement unit (IMU) to capture finger articulation and hand motion, while facial cues are obtained through a camera. Sensor data are transmitted via an ESP32-C6 microcontroller and processed using a long short-term memory (LSTM) network to model temporal gesture dynamics. Experimental results show that the proposed model achieves an overall recognition accuracy of approximately 95%. The trained model is further converted to TensorFlow Lite for real-time inference. This demonstrates the feasibility of the system for practical sign language translation applications.",
+    "published": "2026-07-08",
+    "updated": "2026-07-08",
+    "pdf_url": "https://arxiv.org/pdf/2607.06996v1",
+    "categories": [
+      "cs.HC"
+    ],
+    "primary_category": "cs.HC",
+    "github": null
+  },
+  {
+    "id": "2607.07508v1",
+    "title": "Single-Rollout Asynchronous Optimization for Agentic Reinforcement Learning",
+    "authors": [
+      "Zhenyu Hou",
+      "Yujiang Li",
+      "Jie Tang",
+      "Yuxiao Dong"
+    ],
+    "summary": "Reinforcement learning (RL) is becoming increasingly important for post-training large language models (LLMs). Previous RL pipelines for LLMs were mostly synchronous and batch-interleaved, which is inefficient for long-horizon agentic tasks. Recently, asynchronous RL has emerged as a more efficient alternative by updating the model as rollouts arrive. However, existing asynchronous RL systems often emphasize throughput, while leaving training stability and task effectiveness largely underexplored. For example, a key challenge is that group-wise sampling in the widely-used GRPO framework does not naturally fit asynchronous agentic training. In this paper, we present Single-rollout Asynchronous Optimization (SAO) to address the stability and off-policy challenges in asynchronous RL. To reduce off-policy effects and improve generalization, we replace group-wise sampling with single-rollout sampling, that is, using one rollout per prompt. We further improve this single-rollout strategy with practical value-model training designs. To improve optimization stability, we introduce a strict double-side token-level clipping strategy. SAO is able to train stably for one thousand steps and consistently outperform GRPO and its variants on agentic coding and reasoning benchmarks, such as SWE-Bench Verified, BeyondAIME, and IMOAnswerBench. We also demonstrate that single-rollout RL is particularly effective in a simulated online learning setting, where the model must adapt to changing evolving environments. To this end, SAO is successfully deployed in the agentic RL pipeline for training the open GLM-5.2 model (750B-A40B).",
+    "published": "2026-07-08",
+    "updated": "2026-07-08",
+    "pdf_url": "https://arxiv.org/pdf/2607.07508v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.06779v1",
+    "title": "URS-Stereo: Uncertainty-Guided Residual Search for Real-Time Stereo Matching",
+    "authors": [
+      "Pouya Sohrabipour",
+      "Chaitanya kumar reddy Pallerla",
+      "Dongyi Wang"
+    ],
+    "summary": "Real-time stereo matching is crucial for robotics, autonomous systems, and embedded vision applications, where both computational efficiency and disparity accuracy are required. Recent coarse-to-fine stereo matching methods improve efficiency by progressively refining disparity estimates using local cost volumes at higher resolutions. However, these methods rely heavily on the accuracy of propagated disparity estimates from previous stages. When the propagated disparity is inaccurate, the ground-truth correspondence may fall outside the predefined local search range, leading to unrecoverable matching failures during subsequent refinement. In this paper, we propose URS-Stereo, a real-time coarse-to-fine stereo matching framework that addresses this limitation through uncertainty-guided search adaptation. Specifically, we introduce an Uncertainty-Guided Residual Search Module (UGRSM), which predicts the reliability of propagated disparities together with residual search offsets to adaptively relocate the centers of local cost volumes before disparity refinement. By dynamically adjusting the search region according to the confidence of the propagated disparity, the proposed method significantly improves the robustness of local correspondence estimation while preserving the computational efficiency of coarse-to-fine stereo matching. Extensive experiments on SceneFlow, KITTI 2012, KITTI 2015, Middlebury, and ETH3D demonstrate that URS-Stereo consistently improves disparity estimation while maintaining real-time inference speed, validating the effectiveness of the proposed uncertainty-guided search strategy",
+    "published": "2026-07-07",
+    "updated": "2026-07-07",
+    "pdf_url": "https://arxiv.org/pdf/2607.06779v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
