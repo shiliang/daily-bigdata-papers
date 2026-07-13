@@ -1,0 +1,96 @@
+[
+  {
+    "id": "2607.09424v1",
+    "title": "A Sovereign, Open-Source Foundation Model for German and English",
+    "authors": [
+      "The Soofi-Team",
+      " :",
+      "Benedikt Droste",
+      "David Fitzek",
+      "Ruben Härle",
+      "Lukas Helff",
+      "Maximilian Idahl",
+      "Alex Jude",
+      "Abbas Goher Khan",
+      "Maurice Kraus",
+      "Timm Ruland",
+      "Richard Rutmann",
+      "Sebastian Sztwiertnia",
+      "Markus Frey",
+      "Daniil Gurgurov",
+      "Jan Pfister",
+      "Tom Röhr",
+      "Sebastian von Rohrscheidt",
+      "Jörg Bienert",
+      "Nicolas Flores-Herr",
+      "Simon Gottschalk",
+      "Andreas Hotho",
+      "Kristian Kersting",
+      "Joachim Köhler",
+      "Alexander Löser",
+      "Wolfgang Nejdl",
+      "Simon Ostermann",
+      "Jan Plogsties",
+      "Patrick Putzky",
+      "Mehdi Ali",
+      "Michael Fromm",
+      "Max Lübbering"
+    ],
+    "summary": "We present Soofi S 30B-A3B, a sovereign, open-source Mixture-of-Experts (MoE) hybrid Mamba Transformer foundation model for German and English. Its hybrid design activates only 3B of 30B parameters per token and keeps the inference cache near-constant as context grows, giving it a decisive throughput advantage over dense models for long-context, high-concurrency deployment. Pretrained on roughly 27 trillion tokens with deliberately up-weighted German, Soofi S matches dense 14 to 27B models on aggregate English and German benchmarks while achieving the best code aggregates in both languages among 17 open base models, and outperforms every European sovereign baseline in our comparison, including ones far larger in active parameters. Among fully open models, Soofi S obtains the highest English and German evaluation scores, ahead of Olmo 3 32B and Apertus 70B. Soofi S was built end-to-end on the German Industrial AI Cloud, a sovereign HPC scale AI infrastructure operated by Deutsche Telekom in Munich. Soofi S will be released under highly permissive, open-access terms: weights, selected intermediate checkpoints, full per-source data accounting, hyperparameters, and training and evaluation code. Where source licenses permit, data-construction artifacts are released under permissive licenses; commercially licensed sources are documented with aggregate statistics and exact mixture accounting.",
+    "published": "2026-07-10",
+    "updated": "2026-07-10",
+    "pdf_url": "https://arxiv.org/pdf/2607.09424v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.09372v1",
+    "title": "Graph Neural Networks for Scalable and Transferable Node Centrality Approximation",
+    "authors": [
+      "Samra Sana",
+      "Giorgio Mantica",
+      "Saul Imbrici"
+    ],
+    "summary": "Graph Neural Networks (GNNs) provide a learning-based framework for approximating graph quantities that are expensive to compute exactly. This paper investigates GNNs for scalable approximation of betweenness and closeness centrality, formulated as a node-ranking problem. Exact centrality values are used as supervision, and ranking quality is evaluated using Kendall's tau rank correlation. We study whether message-passing GNNs can learn transferable structural representations across different graph topologies rather than only fitting the distribution used during training. On unseen Erdos renyi graphs, the proposed models achieve tau = 0.851 for betweenness and tau = 0.894 for closeness. A large-scale betweenness model trained on graphs with N = 5,000 nodes achieves tau = 0.938, demonstrating scalability. Mixed-distribution training on Erdos renyi, Barabasi-Albert, and Gaussian Random Partition graphs improves betweenness transfer across graph families. In contrast, closeness centrality remains more sensitive to community-structured graphs and shows reduced transfer to real-world topologies. Finally, GNN inference achieves up to a 97.7x speedup over exact computation. These results show that mixed-distribution training can improve structural transfer in GNN-based centrality approximation, while identifying closeness centrality's sensitivity to topology as an open challenge.",
+    "published": "2026-07-10",
+    "updated": "2026-07-10",
+    "pdf_url": "https://arxiv.org/pdf/2607.09372v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.05734v2",
+    "title": "SCOReD: Student-Aware CoT Optimization for Recommendation Distillation",
+    "authors": [
+      "Haz Sameen Shahgir",
+      "Yufei Li",
+      "Xiaohan Wei",
+      "Yunchen Pu",
+      "Fei Tian",
+      "Chonglin Sun",
+      "Frank Shyu",
+      "Sandeep Pandey",
+      "Luke Simon",
+      "Yue Dong",
+      "Xi Liu"
+    ],
+    "summary": "Chain-of-thought (CoT) distillation in the recommendation domain is a necessary precursor to RL training, but raw teacher traces are ill-suited to this task. Large teachers approach the recommendation task with unusually high reasoning uncertainty, repeatedly rechecking their answers without revising them; supervised fine-tuning on such traces produces verbose students that never revise their initial guess. Furthermore, due to the novelty of the recommendation domain, the teacher's reasoning traces are highly out-of-distribution for the small student LLM.\n  We propose Student-Aware CoT Optimization for Recommendation Distillation (SCOReD), a CoT optimization framework tailored to recommendation that first parses each teacher trace into typed segments and uses the student LLM's attention to score the importance of each segment. Then SCOReD dynamically selects a per-segment edit (KEEP / REWRITE / FUSE / PRUNE) based on the output length and comparative log probability lift of the answer given the edit as per the student. Therefore, SCOReD prunes redundant sections of the reasoning trace while preserving information-dense sections and adapts raw teacher traces to the student's output distribution. Training on SCOReD-optimized CoTs provides a cleaner learning signal to the student model and improves over baseline SFT by 1.56% NDCG and 1.9% Recall@5, while reducing reasoning length by 27.3%.",
+    "published": "2026-07-07",
+    "updated": "2026-07-09",
+    "pdf_url": "https://arxiv.org/pdf/2607.05734v2",
+    "categories": [
+      "cs.IR",
+      "cs.AI"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  }
+]
