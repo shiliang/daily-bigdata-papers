@@ -1,0 +1,221 @@
+[
+  {
+    "id": "2607.09424v2",
+    "title": "A Sovereign, Open-Source Foundation Model for German and English",
+    "authors": [
+      "The Soofi-Team",
+      " :",
+      "Benedikt Droste",
+      "David Fitzek",
+      "Ruben Härle",
+      "Lukas Helff",
+      "Maximilian Idahl",
+      "Alex Jude",
+      "Abbas Goher Khan",
+      "Maurice Kraus",
+      "Timm Ruland",
+      "Richard Rutmann",
+      "Sebastian Sztwiertnia",
+      "Markus Frey",
+      "Daniil Gurgurov",
+      "Jan Pfister",
+      "Tom Röhr",
+      "Sebastian von Rohrscheidt",
+      "Jörg Bienert",
+      "Nicolas Flores-Herr",
+      "Simon Gottschalk",
+      "Andreas Hotho",
+      "Kristian Kersting",
+      "Joachim Köhler",
+      "Alexander Löser",
+      "Wolfgang Nejdl",
+      "Simon Ostermann",
+      "Jan Plogsties",
+      "Patrick Putzky",
+      "Mehdi Ali",
+      "Michael Fromm",
+      "Max Lübbering"
+    ],
+    "summary": "We present Soofi S 30B-A3B, a sovereign, open-source Mixture-of-Experts (MoE) hybrid Mamba Transformer foundation model for German and English. Its hybrid design activates only 3B of 30B parameters per token and keeps the inference cache near-constant as context grows, giving it a decisive throughput advantage over dense models for long-context, high-concurrency deployment. Pretrained on roughly 27 trillion tokens with deliberately up-weighted German, Soofi S matches dense 14 to 27B models on aggregate English and German benchmarks while achieving the best code aggregates in both languages among 17 open base models, and outperforms every European sovereign baseline in our comparison, including ones far larger in active parameters. Among fully open models, Soofi S obtains the highest English and German evaluation scores, ahead of Olmo 3 32B and Apertus 70B. Soofi S was built end-to-end on the German Industrial AI Cloud, a sovereign HPC scale AI infrastructure operated by Deutsche Telekom in Munich. Soofi S will be released under highly permissive, open-access terms: weights, selected intermediate checkpoints, full per-source data accounting, hyperparameters, and training and evaluation code. Where source licenses permit, data-construction artifacts are released under permissive licenses; commercially licensed sources are documented with aggregate statistics and exact mixture accounting.",
+    "published": "2026-07-10",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.09424v2",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.11734v1",
+    "title": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
+    "authors": [
+      "Zhiyang Dou",
+      "John U. Onyemelukwe",
+      "Hangxing Zhang",
+      "Heng Zhang",
+      "Minghao Guo",
+      "Yunsheng Tian",
+      "Michal Piotr Lipiec",
+      "Joshua Jacob",
+      "Chao Liu",
+      "Peter Yichen Chen",
+      "Yuri Ivanov",
+      "Wojciech Matusik"
+    ],
+    "summary": "Differentiable simulators have advanced policy learning and model-based control, yet actuator dynamics remain an important source of sim-to-real error. This is particularly acute on low-cost platforms, where the linear current-to-torque relation $τ= K_tI$ becomes unreliable during commanded-target tracking because of friction, hysteresis, backlash, and thermal effects. We present NeuralActuator, a neural actuator model that jointly predicts (i) a simulator-equivalent generalized-effort surrogate for trajectory propagation on low-cost servo platforms, (ii) external force with a contact-probability gate for sensorless force perception, and (iii) a motor-condition score for the supervised joint. We also introduce the Neural Actuation Dataset (NAD), collected with a twin-arm teleoperation system that records robot states and actuator telemetry together with external-force labels. The torque-surrogate head is trained through differentiable simulation from pose trajectories without direct generalized-effort labels, while the force, gate, and motor-condition heads receive direct supervision. A Transformer captures temporal dependencies while supporting real-time inference. We evaluate NeuralActuator on a 5-DoF OpenManipulator-X, a 6-DoF SO-101, and a 7-DoF Franka Emika Panda, spanning three actuator families and platforms costing approximately USD 500 to over USD 30,000. The low-cost platforms support dynamics and force evaluation, while the offline Franka experiment provides an additional payload-force-estimation benchmark. Experiments further demonstrate its application for motor condition estimation on OpenManipulator-X and improved behavior-cloning performance when NeuralActuator is used as a pretrained module.",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.11734v1",
+    "categories": [
+      "cs.RO",
+      "cs.CV",
+      "cs.GR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.10963v1",
+    "title": "Efficient Online Proportional Sampling with Applications to Smoothed Online Learning",
+    "authors": [
+      "Amirmahdi Mirfakhar",
+      "Maria-Florina Balcan",
+      "Hedyeh Beyhaghi"
+    ],
+    "summary": "We study the problem of efficient online proportional sampling from a high-dimensional domain under a $σ$-smoothed adversary, where the sampling distribution is induced by a dynamically evolving weight function defined over a sequence of piecewise-structured partitions. This setting captures a broad range of applications, including principal-agent games (e.g., pricing and contract design), and algorithm configuration and parameter tuning. The central challenge is maintaining an efficient data structure as the induced partition grows increasingly complex over time -- naively, the number of subregions can grow as $O(t^d)$ by round $t$ in $d$ dimensions. We design a data structure that supports efficient updates and proportional sampling while avoiding the cost of explicitly maintaining this exponential growth, where the discontinuities are structured from axis-parallel hyperplanes. Under a $σ$-smoothed adaptive adversary, we prove a tight $O(\\sqrt{σT})$ bound on the depth of our data structure, and an $O(\\log T)$ bound under a random-order adversary -- to our knowledge, the first such results for this class of problems. We apply this framework to online learning with piecewise-structured rewards, obtaining efficient no-regret algorithms under both full-information and bandit feedback, with provable sublinear regret guarantees.",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.10963v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CG",
+      "cs.GT",
+      "econ.TH"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.10661v1",
+    "title": "Unlocking Parallelism in Autoregressive Language Models via Speculative Decoding with Progressive Tree Drafting",
+    "authors": [
+      "Zipeng Gao",
+      "Zhi Zheng",
+      "Qingrong Xia",
+      "Junda Lin",
+      "Ziwei Zhao",
+      "Tong Xu",
+      "Zhefeng Wang",
+      "Enhong Chen"
+    ],
+    "summary": "Speculative decoding has significantly accelerated Large Language Model (LLM) inference by alleviating memory-bound bottlenecks. However, traditional speculative decoding typically relies on auxiliary draft modules, incurring significant training and communication overhead. Although recent methods attempt to generate drafts within the target model itself, they often fail to fully exploit its latent parallel capacity due to a lack of structural coordination. In this paper, we propose \\textbf{Progressive Tree Drafting (PTD)}, which employs a structured, guided parallel drafting strategy to harness the model's parallel potential. By coupling a progressive tree structure with a stepwise pruning mechanism, PTD actively guides the LLM to explore multiple semantic paths in a single forward pass, ensuring both draft diversity and coherence. Experiments demonstrate that PTD achieves up to $2\\times$ decoding speedup across various benchmarks while remaining training-free and model-agnostic. Our code is available at: https://github.com/MINE-USTC/PTD.",
+    "published": "2026-07-12",
+    "updated": "2026-07-12",
+    "pdf_url": "https://arxiv.org/pdf/2607.10661v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": {
+      "url": "https://github.com/MINE-USTC/PTD.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2607.09954v1",
+    "title": "A Knowledge-Based Multi-Agent Framework for Security Control Recommendation",
+    "authors": [
+      "Carolina Fernández-Martínez",
+      "Shuaib Siddiqui",
+      "Vanesa Daza"
+    ],
+    "summary": "Hardening IT on-premises environments can be a daunting task for teams without access to adequate cybersecurity expertise. In this regard, Decision Support Systems (DSS) with embedded expert knowledge can assist users by guiding them with security recommendations to meet their objectives. This work proposes a Security DSS that recommends security control sub-families given minimal user requirements indicating coverage of different security dimensions. It leverages a curated, unified dataset from both well-known Information Security (InfoSec) and academic sources. This DSS is defined as a non-zero-sum, simultaneous game that is grounded in a Multi-Agent Influence Diagram (MAID) model and explores the decision space over 7 security dimensions or agents, using no-regret online learning to ultimately find the security control sub-families that best fit the requirements while incurring minimal under- and over-provisioning of security resources. This work was validated in terms of performance and accuracy, among others, for varying dataset sizes. It shows exceptional satisfaction coverage results of 99% when using as little as ~65% of the SW-implementable security controls, running in 1.2-35.7 seconds; and more moderate coverage results of 73%-77% when using ~29% of the controls, resolving in 0.8-13.8 seconds.",
+    "published": "2026-07-10",
+    "updated": "2026-07-10",
+    "pdf_url": "https://arxiv.org/pdf/2607.09954v1",
+    "categories": [
+      "cs.GT",
+      "cs.AI",
+      "cs.CR",
+      "cs.LG",
+      "cs.MA"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2607.09950v1",
+    "title": "Implicit Midpoint Gradient Descent: Fast and Learning rate free convergence for Zero-Sum Games",
+    "authors": [
+      "Gaoqi Xue",
+      "James P. Bailey"
+    ],
+    "summary": "We study unconstrained bilinear zero-sum games, a fundamental model in online learning, adversarial optimization, and multi-agent decision-making. We introduce the implicit midpoint gradient descent rule, which we derive from continuous-time follow-the-regularized leader dynamics via symplectic integration methods. We prove that implicit midpoint gradient descent inherits several powerful properties from the continuous-time dynamics, including bounded orbits, fast ergodic convergence to Nash equilibria, and learning-rate-independent stability guarantees. This is the first traditional online optimization approach to simultaneously achieve these properties in unconstrained bilinear zero-sum games. Finally, computational experiments demonstrate that the proposed method significantly outperforms the standard methods, optimistic and alternating gradient descent.",
+    "published": "2026-07-10",
+    "updated": "2026-07-10",
+    "pdf_url": "https://arxiv.org/pdf/2607.09950v1",
+    "categories": [
+      "cs.GT",
+      "math.OC"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2607.05580v2",
+    "title": "Dynamics and Convergences for Markov Coevolutionary Opinion Formation Games in Dynamic Social Networks",
+    "authors": [
+      "Po-An Chen",
+      "Chi-Jen Lu",
+      "Chuang-Chieh Lin",
+      "Jim Shi",
+      "Chih-Chieh Hung"
+    ],
+    "summary": "While deterministic variants of the coevolutionary opinion formation games such as the K-Nearest Neighbor (K-NN) game, e.g., in Bhawalkar et al., in a dynamic social network can sometimes be shown to stabilize using potential functions or localized smoothness arguments, introducing stochasticity fundamentally changes the mathematical landscape. In the \"K-NN Markov game\", network topologies evolve via a time-varying, randomized selection process. Proving whether such a system, as a special case of general-sum Markov games, converges to an equilibrium is a profoundly non-obvious and challenging theoretical question. Multiagent reinforcement learning has been shown to derive Nash (minimax) equilibria in two-player zero-sum Markov games and Markov potential games (along with some price-of-anarchy types of results). In recent work, optimistic dynamics are shown to converge to correlated equilibria in general-sum Markov games while the price-of-anarchy bounds are unknown. We thus analyze playing specific no-regret algorithms in general-sum Markov games for convergence to a stricter set than correlated equilibria.\n  We integrate the convergence analysis techniques from multi-agent reinforcement learning in works of Wei et al. and online learning in a recent work of Anagnostides et al. Specifically in (general-sum) Markov games, since the regret of the optimistic gradient ascent algorithm would have extra positive terms coming from Q-values, taking care of these terms requires non-trivial extra work setting an appropriate range of our learning rate and deriving the threshold on the number of iterations for convergence or a bounded price of anarchy, significantly different from those in the assumption in a main technical theorem of Anagnostides et al. We analyze a weaker sense of convergences to approximate Nash equilibria by playing optimistic gradient ascents in general-sum Markov games.",
+    "published": "2026-07-06",
+    "updated": "2026-07-10",
+    "pdf_url": "https://arxiv.org/pdf/2607.05580v2",
+    "categories": [
+      "cs.GT"
+    ],
+    "primary_category": "cs.GT",
+    "github": null
+  },
+  {
+    "id": "2607.09798v1",
+    "title": "JEPA for AI-Native 6G: Predictive Representations and Open Challenges",
+    "authors": [
+      "Sheikh Salman Hassan",
+      "Irshad A. Meer",
+      "Almoatssimbillah Saifaldawla",
+      "Yan Kyaw Tun",
+      "Mustafa Ozger",
+      "Madyan Alsenwi",
+      "Nguyen Van Huynh",
+      "Woong-Hee Lee",
+      "Cedomir Stefanovic",
+      "Mathini Sellathurai",
+      "Henk Wymeersch",
+      "Tharmalingam Ratnarajah"
+    ],
+    "summary": "Sixth-generation (6G) networks are moving toward AI-native operation, where learning modules are embedded across the radio access network (RAN), edge, and core. This transition requires learning from limited labels, heterogeneous wireless and network data, partial observations, non-stationary propagation, and latency-constrained control loops. Joint-embedding predictive architecture (JEPA) is a promising self-supervised paradigm for this setting because it predicts missing or future representations in latent space instead of reconstructing raw measurements or using contrastive negative samples. This article presents a wireless-oriented tutorial on JEPA for 6G intelligence. We define the JEPA training mechanism, describe how CSI, beam measurements, KPIs, topology graphs, and sensing observations can be tokenized and masked, and position the learned encoder as a predictive representation layer for RAN, O-RAN, edge, and core functions, with task-specific heads or controllers producing final decisions. Then we present an illustrative, beam-management case study suggesting that a wireless-aware target, specifically an auxiliary future beam-energy target during self-supervised pretraining, can improve label efficiency and robustness across shifted deployment conditions relative to a supervised source domain. Finally, we outline open challenges in multi-timescale prediction, action-conditioned modeling, distributed training, trustworthiness, efficient deployment, benchmarking, and standardization.",
+    "published": "2026-07-09",
+    "updated": "2026-07-09",
+    "pdf_url": "https://arxiv.org/pdf/2607.09798v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.NI"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
