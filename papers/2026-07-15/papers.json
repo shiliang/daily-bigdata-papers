@@ -1,0 +1,122 @@
+[
+  {
+    "id": "2607.12316v1",
+    "title": "Antiproof: Synthesizing Vulnerability Detectors and Proofs of Exploitability",
+    "authors": [
+      "Alon Shakevsky",
+      "Corban Villa",
+      "Ion Stoica",
+      "Raluca Ada Popa"
+    ],
+    "summary": "Discovering vulnerabilities before attackers exploit them requires high recall and reliable automatic validation, but existing approaches struggle to achieve both without prohibitive cost. We present Antiproof, an end-to-end vulnerability discovery system that combines neuro-symbolic detector synthesis for high-recall discovery with proof-of-exploitability oracles for automatic validation. Antiproof learns and iteratively refines static detectors from vulnerability datasets, then validates candidates by verifying whether executable proofs demonstrate concrete attacker capabilities. Evaluated on BountyBench and our curated KEVBench dataset, Antiproof detects 64 of 66 vulnerabilities, improving recall by more than 60 percentage points over static-analysis and neuro-symbolic baselines. In a scan of 50 widely deployed systems, Antiproof uncovered several hundred previously unknown vulnerabilities. We are responsibly disclosing all confirmed zero-days and have received 12 CVE assignments to date, including remote code execution vulnerabilities in Ray, SGLang, vLLM, and LiteLLM that could allow attackers to take over LLM training and inference systems.",
+    "published": "2026-07-14",
+    "updated": "2026-07-14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12316v1",
+    "categories": [
+      "cs.CR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2607.12909v1",
+    "title": "Real-time fall detection based on vision for low-power edge platforms",
+    "authors": [
+      "Wenjun Xia",
+      "Zhicheng Peng",
+      "Haopeng Li",
+      "Zhengdi Zhang"
+    ],
+    "summary": "Falling detection is vital for elderly care and intelligent surveillance; however, prevailing vision-based approaches predominantly frame it as static pose classification or discrete temporal pattern matching, fundamentally overlooking the instability dynamics of the human support system. This paper proposes a physics-informed falling detection framework that recasts falling as a stability-loss event in a coupled dynamical system. We introduce a novel dual-LTC architecture comprising a Center-of-Mass (CoM) subsystem and a Base-of-Support (BoS) subsystem, both instantiated as Liquid Time-Constant (LTC) neural networks to continuously model inertial trajectory evolution and ground-contact adjustment through adaptive time constants, Physical interpretability of falling motion. A learnable coupling module emulates physical interaction between the two subsystems, while a Stability Manifold classifier operates in the joint latent space to detect boundary crossing via Lyapunov-inspired stability metrics. Complementary counterfactual trajectory projection and Time-to-Collision (TTC) estimation further enable irreversibility assessment and early warning. The architecture is designed to support a three-state prediction paradigm (Normal, Falling, Fallen); in this preliminary study, we validate the core stability discrimination capability on a two-class dataset (Normal vs. Falling), leaving the full three-state temporal transition to future work. Unlike conventional CNN--RNN pipelines, the proposed formulation encodes continuous-time mechanical inertia, yielding a sub-50K-parameter network capable of real-time inference on resource-constrained edge devices. Extensive experiments demonstrate competitive accuracy with superior physical interpretability, validating its efficacy for low-compute visual fall detection.",
+    "published": "2026-07-14",
+    "updated": "2026-07-14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12909v1",
+    "categories": [
+      "q-bio.NC",
+      "cs.AI",
+      "cs.CV"
+    ],
+    "primary_category": "q-bio.NC",
+    "github": null
+  },
+  {
+    "id": "2607.12592v1",
+    "title": "WanToFight: Real-Time Generative Game Engine for Multi-Player Combat Interaction",
+    "authors": [
+      "Li Hu",
+      "Guangyuan Wang",
+      "Peng Zhang",
+      "Bang Zhang"
+    ],
+    "summary": "We present WanToFight, a generative game engine that simulates real-time, two-player The King of Fighters '97 (KOF~'97) gameplay from keyboard input. Prior generative game engines target either single-player first-person settings or non-real-time cooperative scenarios; multi-player control, real-time inference, complex physical interaction, and adversarial gameplay have not been jointly addressed. WanToFight closes this gap with three components built on the Wan-1.3B video diffusion transformer: a streaming autoregressive generator with block-causal attention and a rolling KV cache; a visually grounded Player Association module that binds each player's keyboard signal to a character identity; and a gated, locally causal keyboard injection module trained with a single-player-to-full-gameplay curriculum. A four-step DMD-distilled student paired with a pruned VAE decoder sustains 30FPS at 512x384 on a single NVIDIA RTX 5090 over the duration of a complete match. To our knowledge, WanToFight is the first generative game engine to combine multi-player control, real-time inference, complex physical interaction, and adversarial gameplay in one system.",
+    "published": "2026-07-14",
+    "updated": "2026-07-14",
+    "pdf_url": "https://arxiv.org/pdf/2607.12592v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.12188v1",
+    "title": "Cost-Governed RAG: Unified Per-Tenant Cost Attribution Across Retrieval and Generation in Multi-Tenant LLM Systems",
+    "authors": [
+      "Navnit Shukla"
+    ],
+    "summary": "Enterprise Retrieval-Augmented Generation (RAG) deployments face a critical governance gap: while LLM generation cost is metered per token, the retrieval layer - vector memory, similarity compute, and embedding API calls - remains an unattributed shared cost, enabling invisible cross-subsidization among tenants. We present Cost-Governed RAG, an architecture that integrates a codebook-oblivious vector index (TurboVec) with a multi-tenant LLM governance gateway, creating a unified observability stack where embedding, retrieval, and generation costs are jointly attributable per tenant. The architecture exploits TurboVec's deterministic, closed-form memory formula to enable near-exact per-tenant retrieval cost calculation - a property unavailable in graph-based indexes with non-linear memory overhead. Deployed on Snowpark Container Services within a cloud data platform's governance boundary, the system achieves 99.96% end-to-end cost attribution accuracy across 100 simulated tenants (10M vectors, log-normal size distribution) with telemetry overhead below 0.04% of query latency. The architecture reduces retrieval infrastructure cost by 3.1-9.0x compared to managed vector database services under the pricing assumptions detailed in Section IV. We formalize a three-layer cost model and demonstrate that codebook-oblivious quantization enables deterministic per-tenant cost attribution while also removing the shared-codebook leakage surface present in trained quantizers - the latter observation being exploratory and subject to the limitations described in Section VII.",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.12188v1",
+    "categories": [
+      "cs.AI",
+      "cs.DB",
+      "cs.IR"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  },
+  {
+    "id": "2607.11976v1",
+    "title": "LiteTopK: Exploiting the Curse of Dimensionality for a Fused Indexer-TopK Kernel in Long-Context Sparse Attention",
+    "authors": [
+      "Ziqi Yin",
+      "Jianyang Gao",
+      "Peiqi Yin",
+      "Jiangneng Li",
+      "Gao Cong"
+    ],
+    "summary": "Indexer-TopK, the operation to compute the scores and select the top-k candidates, is widely used by sparse attention kernels in large language models and vector retrieval in recommendation systems and vector databases. However, existing GPU-based Indexer-TopK kernels like DeepSeek Sparse Attention (DSA) remain inefficient due to excessive global memory traffic, costly synchronization, and prohibitive memory overhead. In this work, we exploit the curse of dimensionality in high-dimensional spaces, where distances between high-dimensional vectors tend to concentrate within a narrow range, to design LITETOPK, a novel and efficient fused Indexer-TopK kernel. LITETOPK first samples a small subset of data to estimate query-data score ranges, then uses these estimates to partition candidate results into bins online. This organization allows the LITETOPK kernel to maintain a tight approximate threshold, write back only promising candidates, reduce unnecessary I/O, substantially lower memory overhead, and still preserve exact Top-k correctness. Experimental results show that LITETOPK accelerates the prefill stage of GLM 5.2 by 1.2x in real-world deployment scenarios while incurring lower memory overhead.",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.11976v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.12042v1",
+    "title": "SymbOmni: Evolving Agentic Omni Models via Symbolic Concept Learning",
+    "authors": [
+      "Jinxiu Liu",
+      "Jianru Li",
+      "Tanqing Kuang",
+      "Xuanming Liu",
+      "Kangfu Mei",
+      "Yandong Wen",
+      "Weiyang Liu"
+    ],
+    "summary": "Visual generation is increasingly ubiquitous in diverse domains, from text-to-image/video synthesis to multimodal interactive creation. Yet prevailing monolithic models remain fundamentally constrained by their inability to learn cumulatively and evolve autonomously, which is a limitation we term the \"perpetual novice\" problem. They lack mechanisms for structuring experience into reusable knowledge and therefore rely on brittle, \"from-scratch\" reasoning for each task, resulting in poor compositional generalization and inefficient knowledge retention. Motivated by these limitations, we propose SymbOmni, an agentic omni-model designed for cumulative evolution through Symbolic Concept Learning. At its core is the Symbolic Concept Box, an optimizable memory module that abstracts low-level operations into reusable Symbolic Workflow Instructions. SymbOmni operates through an induction-transduction cycle: experiences are abstracted into symbolic concepts (induction), which are then adaptively composed to solve novel tasks (transduction). The training is done by verbalized backpropagation with language-based feedback to enable continuous self-improvement without gradient-based model fine-tuning. Comprehensive experiments validate that (I) SymbOmni significantly outperforms existing agent-based systems for iterative creation and also surpasses closed-source models (e.g., Nano Banana, GPT-Image-1) in both image quality and task success rates; (II) SymbOmni effectively reduces token consumption by over 40% while maintaining competitive generation quality; and (III) SymbOmni enables effective continual learning by achieving cumulative gains across multiple online-learning benchmarks and setting a new state of the art.",
+    "published": "2026-07-13",
+    "updated": "2026-07-13",
+    "pdf_url": "https://arxiv.org/pdf/2607.12042v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
