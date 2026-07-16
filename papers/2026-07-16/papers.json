@@ -1,0 +1,169 @@
+[
+  {
+    "id": "2607.13443v1",
+    "title": "The Environmental Cost of Digital Sovereignty: Water, Energy, and Emissions Impacts of Sovereign AI Infrastructure in the Global South",
+    "authors": [
+      "Muntaser Syed",
+      "Marius C. Silaghi",
+      "Sheikh Abujar",
+      "Sharun Akter Khushbu",
+      "Amal El Ahmad"
+    ],
+    "summary": "Sovereign AI has become a strategic priority across the Global South, with over \\$200 billion in state-led commitments announced between 2024 and 2026. Yet the physical infrastructure that compute sovereignty demands, above all data centers, imposes water, energy, and carbon costs that fall hardest on countries least equipped to absorb them. This paper presents a comparative environmental stress analysis across four cases: the United Arab Emirates, Bangladesh, India, and Africa (with a focus on Kenya). Using publicly available water stress data, grid carbon intensity factors, and GPU power specifications, we model the water consumption, energy demand, and carbon emissions of hypothetical sovereign AI deployments under multiple cooling technology scenarios. We find that a 1,024-GPU cluster using evaporative cooling in the UAE would consume over 30 million liters of water annually in a country classified as ``extremely high'' water stress. In Bangladesh, sovereign AI policy documents call for centralized GPU procurement but do not address where to site data centers in a country where more than a fifth of the land floods in an average year and the power grid struggles to deliver reliable supply. We identify a sovereignty-sustainability trilemma in which no country can simultaneously maximize AI sovereignty, minimize environmental impact, and maintain affordable resource access for citizens. We propose design principles for environmentally responsible sovereign AI, including mandatory water usage effectiveness reporting, climate-vulnerability siting assessments, and a preference for frugal small language models over frontier pre-training in resource-constrained settings.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13443v1",
+    "categories": [
+      "cs.CY",
+      "cs.DC"
+    ],
+    "primary_category": "cs.CY",
+    "github": null
+  },
+  {
+    "id": "2607.11976v2",
+    "title": "LiteTopK: Exploiting the Curse of Dimensionality for a Fused Indexer-TopK Kernel in Long-Context Sparse Attention",
+    "authors": [
+      "Ziqi Yin",
+      "Jianyang Gao",
+      "Peiqi Yin",
+      "Jiangneng Li",
+      "Gao Cong"
+    ],
+    "summary": "Indexer-TopK, the operation to compute the scores and select the top-k candidates, is widely used by sparse attention kernels in large language models and vector retrieval in recommendation systems and vector databases. However, existing GPU-based Indexer-TopK kernels like DeepSeek Sparse Attention (DSA) remain inefficient due to excessive global memory traffic, costly synchronization, and prohibitive memory overhead. In this work, we exploit the curse of dimensionality in high-dimensional spaces, where distances between high-dimensional vectors tend to concentrate within a narrow range, to design LITETOPK, a novel and efficient fused Indexer-TopK kernel. LITETOPK first samples a small subset of data to estimate query-data score ranges, then uses these estimates to partition candidate results into bins online. This organization allows the LITETOPK kernel to maintain a tight approximate threshold, write back only promising candidates, reduce unnecessary I/O, substantially lower memory overhead, and still preserve exact Top-k correctness. Experimental results show that LITETOPK accelerates the prefill stage of GLM 5.2 by 1.2x in real-world deployment scenarios while incurring lower memory overhead.",
+    "published": "2026-07-13",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.11976v2",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.13674v1",
+    "title": "WAVE-Stereo: Warp-Aligned Volume Encoding for Stereo Matching",
+    "authors": [
+      "Zehan Liu",
+      "Yage He",
+      "Xianwu Gong"
+    ],
+    "summary": "Existing iterative stereo matching methods primarily adopt two types of correspondence representation: explicit matching search via correlation volumes and local residual refinement via warped features, yet the two remain separately modeled. We propose WAVE-Stereo, built on a core insight: correlation volumes and feature warping provide complementary matching cues. \\textbf{GeoWarp Correspondence Encoder (GWCE)} encodes matching search, residual alignment, and disparity prior in parallel at the ConvGRU input. To mitigate matching degradation in textureless regions, we propose \\textbf{Periodic Global Context Propagation (PGCP)}, which propagates global spatial information in a periodic manner. On five real-world benchmarks -- Middlebury, ETH3D, KITTI 2012, KITTI 2015, and Booster -- WAVE-Stereo achieves competitive zero-shot generalization accuracy without any external foundation model prior, achieving 3.18\\% D1-all on KITTI 2015, 4.42\\% Bad-2.0 on Booster, and 66ms real-time inference, striking a favorable balance between accuracy and efficiency. Our code is available at https://github.com/yamanoko-do/WAVE-Stereo.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13674v1",
+    "categories": [
+      "cs.CV",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": {
+      "url": "https://github.com/yamanoko-do/WAVE-Stereo.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2607.13576v1",
+    "title": "Structured Reinforcement Learning for Bayesian Persuasion : Application to Intelligent Interactive Driving",
+    "authors": [
+      "Merlin Paul",
+      "Anup Aprem"
+    ],
+    "summary": "Interactive driving, wherein an intelligent lead vehicle equipped with real-time traffic data coordinates route choices of connected vehicles, offers a promising approach to dynamic traffic management. To address the challenge of harmonising decisions, this paper considers the strategic information revealing framework of Bayesian persuasion. Here, the principal (lead vehicle) aims to guide the agent's (connected vehicle) partially observable sequential decision making towards its own objectives by selectively revealing information, such as real-time traffic ahead, using signals. However, the agent's farsighted response to maximize its long-term reward, renders the principal's signaling strategy design computationally challenging. We propose an online structured reinforcement learning framework to synthesize computationally efficient signaling strategy which is persuasive for a far-sighted agent. The main contributions of the paper are as follows: (i) For a monotonic agent with approximate best response, we propose MAPL, a structured policy learning algorithm for faster online learning, (ii) Identification of sufficient conditions for the supermodular structure of the Q function of the principal for a monotonic agent, (iii) Identification of sufficient conditions to ensure the persuasiveness of the principal's signaling strategy, (iv) Supermodular Q learning for Principal (SQP), which leverages the supermodular structure of principal's action value to synthesize computationally efficient signaling strategy that is persuasive for a monotonic learning agent, (v) Numerical analysis considering a real-time application of Bayesian persuasive driving for lane selection demonstrates that the proposed method is 30% cost efficient for optimising travelling rewards of both the lead and connected vehicle compared to the existing methodologies for signaling strategy design.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13576v1",
+    "categories": [
+      "cs.LG",
+      "eess.SP"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.13546v1",
+    "title": "From Novice to Expert: Cost-Aware Bandits for Evolving Worker Performance in Crowdsensing",
+    "authors": [
+      "Yin Huang",
+      "Qingsong Liu",
+      "Jie Xu"
+    ],
+    "summary": "Mobile crowdsensing (MC) recruits mobile users to perform sensing tasks using their smartphones, enabling large-scale applications such as traffic monitoring and environmental sensing. A fundamental challenge is online worker recruitment under uncertainty, where the platform must learn workers' sensing performance while operating with a limited budget. Existing learning-based MC recruitment methods typically assume that each worker's sensing quality is stationary with a fixed mean over time. In practice, however, worker performance often improves with experience and eventually stabilizes, while the incurred sensing cost can be unknown in advance due to time-varying device and context states. In this paper, we study a budget-constrained online recruitment problem in which the platform selects one worker in each round, observes the sensing quality and incurred cost, where the expected sensing quality of each worker increases with experience and eventually converges to a plateau, and repeats until the budget is exhausted. We formulate this problem as a structured bandit model where each worker's expected reward evolves according to an unknown increasing-then-converging function of its participation count, and each worker has an unknown expected cost. We develop a cost-aware online learning framework that jointly learns evolving reward trajectories and heterogeneous costs, detects performance saturation, and allocates the limited budget to maximize long-term sensing utility. We provide theoretical performance guarantees and validate the proposed approach through extensive experiments, demonstrating consistent improvements over baselines that ignore experience-driven dynamics or assume known costs.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13546v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.13455v1",
+    "title": "Reverse to Advance: Teleoperation-Cost Effective Hard Policy Learning from Reversed Easy Tasks",
+    "authors": [
+      "Qiyuan Qiao",
+      "Ge Yuan",
+      "Can Wang",
+      "Dong Xu"
+    ],
+    "summary": "High-quality teleoperation datasets are costly to collect, particularly for hard tasks. We observe that many tasks exhibit directional asymmetry: completing the forward hard task is difficult, whereas reversing it by relaxing or disrupting the environment is comparatively easy. This suggests that reversed easy-task trajectories can serve as a scalable supervision signal for the hard task, reducing the cost of manual demonstration collection. However, reversed data can be noisy, and directly training on it may yield suboptimal policies. To enable largely automated acquisition and effective use of reversed data, we propose a teleoperation-cost effective framework for hard policy learning via temporal reversal of easy tasks, consisting of three key components: a closed-loop data collection pipeline that alternates between hard-task and easy-task policies to autonomously reset the environment and generate diverse trajectories; a hierarchical data refinement pipeline that temporally inverts easy-task rollouts and filters low-quality motion using kinematic priors and a critic-guided advantage filter; and an iterative policy learning method that trains the hard-task policy using both initial reversed easy-task demonstrations and the filtered reversed data in a continuous online learning loop. By combining automated collection, hierarchical refinement, and iterative learning, our method enables scalable, reliable training of complex, high-precision manipulation tasks. Across two simulated benchmarks and real-robot experiments, we demonstrate that our method improves hard-task success rates with higher data efficiency and more stable training compared to reversal-based and reinforcement-learning baselines, without requiring extensive hard-task teleoperation.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13455v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.13387v1",
+    "title": "Change-Aware Self-Adaptive AI-Aided Kalman Filters With Neural Change Point Detection",
+    "authors": [
+      "Wenyi Zhang",
+      "Xiaoyong Ni",
+      "Nir Shlezinger",
+      "Zengfu Wang"
+    ],
+    "summary": "Reliable state estimation in dynamical systems is often challenged by model mismatches, unknown noise statistics, and temporal variations. While AI-aided Kalman filters such as KalmanNet leverage deep learning to enhance classical estimation, they remain vulnerable to distribution shifts and lack mechanisms for autonomous adaptation. This work introduces Change-Aware Self-Adaptive KalmanNet (CASA-KalmanNet), an online adaptation framework that integrates a dedicated neural module, termed CPDNet, to monitor the interpretable internal features of KalmanNet and provide soft indicators of reliability degradation. These indicators dynamically regulate an online learning process, enabling data-efficient and timely adaptation to both abrupt and gradual changes in the system without requiring additional state labels from the changed regime. Numerical experiments on linear and nonlinear state-space models show that CASA-KalmanNet consistently outperforms existing learning-based filters under model mismatch, while approaching the accuracy of optimal classical methods with full domain knowledge.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.13387v1",
+    "categories": [
+      "eess.SY"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2607.13332v1",
+    "title": "Agora: Collective and Permissionless Internet-Scale Pretraining of Large Language Models",
+    "authors": [
+      "Gil Avraham",
+      "Violetta Shevchenko",
+      "Hadi Mohaghegh Dolatabadi",
+      "Karol Pajak",
+      "James Snewin",
+      "Harry Xi",
+      "Rodney O'Donnell",
+      "Thalaiyasingam Ajanthan",
+      "Sameera Ramasinghe",
+      "Chamin Hewa Koneputugodage",
+      "Shamane Siriwardhana",
+      "Alexander Long"
+    ],
+    "summary": "Training large language models at the multi-billion to trillion parameter scale is confined to datacenters, where data-parallel (DP) and model-parallel (MP) techniques presume homogeneous accelerators, high-speed interconnects, and a single orchestrating entity. Frontier model development is thereby concentrated among the few groups able to assemble such clusters. Meanwhile, an enormous pool of compute remains unusable for training: consumer and professional GPUs that are heterogeneous, preemptible, individually owned, and connected only by the internet. We present Agora, a system that makes efficient use of this compute. Agora combines bandwidth-efficient pipeline-parallel model sharding over internet-grade links with multi-party, fault-tolerant collective operations. Each participant holds only one stage of the model, and no single party ever possesses the full weights. We term this setup Protocol Learning: it enables collectively trained, collectively owned models, opening a path to open-source frontier training with economic sustainability. This report presents the outcome of a research effort spanning communication-efficient parallelism, asynchronous optimization, and fault-tolerant systems design. It culminates in the first demonstration of its kind: Pluralis-8B, an open, permissionless pretraining run of an 8.6B-parameter model on 500B tokens of FineWeb-Edu. The model was trained over 40 days by 330 contributor nodes, predominantly consumer GPUs on internet connections, joining and leaving throughout. The run sustained ~170k tokens/s and 4.2 tokens per TFLOP of pooled compute, 63% of the efficiency of a centralized H100 baseline, and converged to within a small margin of a centralized reference run.",
+    "published": "2026-07-14",
+    "updated": "2026-07-14",
+    "pdf_url": "https://arxiv.org/pdf/2607.13332v1",
+    "categories": [
+      "cs.LG",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  }
+]
