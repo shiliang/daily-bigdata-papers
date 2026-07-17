@@ -1,0 +1,100 @@
+[
+  {
+    "id": "2607.15115v1",
+    "title": "Don't Predict, Prioritize: Rethinking GPU Reliability Assessment",
+    "authors": [
+      "Difeng Ma",
+      "Changhua Pei",
+      "Yuanwei Lu",
+      "Quan Zhou",
+      "Zexin Wang",
+      "Yibo Zhu",
+      "Daxin Jiang",
+      "Dan Pei",
+      "Jingjing Li",
+      "Gaogang Xie"
+    ],
+    "summary": "The reliability of Graphics Processing Units (GPUs) is a criticalbottleneck for modern large-scale AI infrastructure, where a sin-gle node failure can disrupt synchronous training jobs and causesignificant financial losses. While predictive maintenance is widelyused in other hardware domains, we demonstrate that accuratelypredicting the exact timing of GPU failures is inherently difficult.Through an in-depth analysis of telemetry data from a productioncluster, we find that major GPU failures, including Double Bit Er-rors (DBEs) and GPU Lost events, exhibit strong stochasticity andlow signal-to-noise ratios in time-series telemetry, which makesconventional time-based prediction ineffective.\n  This insight motivates a paradigm shift: instead of attempting topredict the absolute timing of a failure, we propose a more robustapproach focused on ranking nodes by their relative failure risk. Wepropose HeaRank (Health Rank), a Learning-to-Rank (LTR) frame-work that leverages stable historical failure patterns to computea global risk ranking of GPU nodes. Evaluated on a production-scale cluster with thousands of GPUs, HeaRank achieves an AUCof 0.83, significantly outperforming both heuristic baselines andstate-of-the-art ranking algorithms. In online deployment, HeaRanksuccessfully captures 64% of future failures within the top 5% ofranked nodes, compared to only 21% by the incumbent productionsystem. These results suggest that relative risk ranking can serveas a robust alternative in environments where absolute failure pre-diction is inherently limited. Our work highlights the importanceof risk-aware scheduling and proactive resource management inmodern GPU clusters.",
+    "published": "2026-07-16",
+    "updated": "2026-07-16",
+    "pdf_url": "https://arxiv.org/pdf/2607.15115v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.14564v1",
+    "title": "Almost Navigable Graphs",
+    "authors": [
+      "Pratyush Avi",
+      "Christopher Musco"
+    ],
+    "summary": "Graph-based methods like HNSW, DiskANN, NSG, and others have become an increasingly popular choice for implementing approximate nearest neighbor search (ANNS) in Vector Databases (VecDBs). The success of these methods has motivated the study of how to best construct a search graph for a given dataset. To that end, \\emph{navigability} has been identified as a desirable graph property which ensures good ANNS performance when combined with greedy search.\n  However, for a dataset with $n$ vectors, the sparsest navigable graph requires $O(n\\sqrt{n})$ edges in the worst-case, and we show empirically that, for typical billion node datasets, 100s of edges are needed per node. This leads to slow search and high memory requirements. Moreover, under standard complexity theoretical assumptions, it was recently established that constructing a sparse navigable graph requires $Ω(n^{2-ε})$ time, which is prohibitive for large datasets.\n  We address these concerns by introducing a relaxed notation of navigability called ``$γ$-almost navigability'' for any $γ\\in [0,1]$, with $γ= 1$ corresponding to full navigability. We prove that any dataset (under any distance) admits a $γ$-almost navigable graph with just $O\\left(\\frac{n}{1-γ}\\right)$ edges, linear in the dataset size. We present a randomized algorithm for constructing such a graph in near-linear time.\n  While we prove that $γ$-almost navigability sacrifices the worst-case search guarantees enjoyed by navigability, we show empirically that greedy beam search still performs well in such graphs when $γ< 1$. Indeed, we obtain improved recall-runtime tradeoffs on a variety of datasets compared to fully navigable graphs. Moreover, our graphs are more space efficient, with degree typically less than half that of a fully navigable graph for comparable performance.",
+    "published": "2026-07-16",
+    "updated": "2026-07-16",
+    "pdf_url": "https://arxiv.org/pdf/2607.14564v1",
+    "categories": [
+      "cs.DS"
+    ],
+    "primary_category": "cs.DS",
+    "github": null
+  },
+  {
+    "id": "2607.14725v1",
+    "title": "BridgeFlow: Fast and Robust SE(2)-Equivariant Motion Planning with Flow Matching",
+    "authors": [
+      "Xinzhe Zhou",
+      "Xuyang Wang",
+      "Xiaoming Duan",
+      "Jianping He"
+    ],
+    "summary": "In robotic motion planning, equivariance to rigid body transformations is crucial for robust spatial generalization. However, current learning-based planners face a critical dilemma: they either lack inherent equivariance, treating transformed tasks as novel scenarios, or enforce it via computationally expensive specialized architectures that bottleneck real-time inference. To break this trade-off, we propose BridgeFlow, a fast and strictly SE(2)-equivariant generative motion planning framework. Rather than relying on heavy equivariant networks, BridgeFlow achieves exact spatial equivariance via a lightweight task-centric canonicalization module, enabling generalization using standard architectures. To further accelerate inference, we pair a Brownian bridge informative prior with context-aware mini-batch optimal transport. This constructs a straightened vector field that minimizes transport costs and stabilizes training. Furthermore, environmental awareness is explicitly embedded via Classifier-Free Guidance. Evaluations in dense 2D environments and on a 7-DoF Franka manipulator demonstrate that BridgeFlow achieves up to a 15x inference speedup and a 2x higher valid trajectory rate over state-of-the-art diffusion baselines, alongside robust generalization to entirely unseen environments and arbitrary spatial transformations.",
+    "published": "2026-07-16",
+    "updated": "2026-07-16",
+    "pdf_url": "https://arxiv.org/pdf/2607.14725v1",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.14331v1",
+    "title": "Long-History User Transformers for Real-Time Ad Ranking",
+    "authors": [
+      "Viacheslav Ovchinnikov",
+      "Georgii Smirnov",
+      "Nikolai Savushkin",
+      "Veronika Ivanova",
+      "Maksim Kuzin"
+    ],
+    "summary": "Long interaction histories are among the most informative inputs for click-through rate (CTR) prediction, yet in online advertising they collide with a hard serving constraint: ads must be scored within a few hundred milliseconds to enter the auction, which rules out running a large sequence encoder at request time. We describe how a production advertising system resolves this conflict by decoupling history encoding from real-time inference. A high-capacity offline transformer asynchronously encodes the user's full cross-surface interaction history into a compact representation cached in a feature store, while a lightweight runtime model combines this cached representation with the user's most recent events and the request context at serving time. The offline encoder is pre-trained autoregressively on large-scale interaction logs with a dual objective - feedback prediction and next-item prediction - and the two-stage architecture is then fine-tuned for CTR prediction on the target advertising surface. Offline, the split design recovers 72-80% of the quality of a full-history runtime transformer that would be too expensive to deploy, and the cached representation is robust enough to staleness to permit inexpensive refresh policies. In production A/B experiments, the system improves the primary ranking metric by +2.77% in search advertising and +2.1% on the Yandex Advertising Network, with revenue gains of +2.26% and +0.43% respectively - without increasing serving latency.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.14331v1",
+    "categories": [
+      "cs.IR"
+    ],
+    "primary_category": "cs.IR",
+    "github": null
+  },
+  {
+    "id": "2607.14394v1",
+    "title": "DRIFT: Direct Reduced Fourier Transforms for Distributed Spectral Neural Operators",
+    "authors": [
+      "Sana Taghipour Anvari",
+      "David Kaeli"
+    ],
+    "summary": "Fourier Neural Operators (FNOs) learn solution operators for partial differential equations and offer orders of magnitude speedup over traditional numerical solvers at inference time, which makes them attractive surrogates for high-resolution computational physics. Scaling FNOs to high-resolution spatial grids requires distributing the data across GPUs, but the distributed FFT at the core of each spectral layer requires multiple dense all-to-all collectives that communicate the full spatial tensor, only for most coefficients to be discarded immediately. We introduce the Distributed Truncated Spectral Transform (DTST), which reverses this order. Each GPU computes only a small subset of frequency modes used by the spectral convolution locally via a partial DFT, and two collectives combine the results with a payload that depends only on this mode count, not the spatial resolution. DTST produces spectral coefficients identical to the standard distributed FFT with truncation, while providing both spatial data parallelism and spectral weight model parallelism. We present DRIFT, a GPU implementation of DTST for distributed Fourier Neural Operators, using separable per-dimension basis matrices and efficient GPU-to-GPU communication. On a 3D+time FNO across 4--32 GPUs, on up to 8 nodes (4 GPUs/node), DRIFT achieves a forward-pass speedup of 38--64$\\times$ and a 37$\\times$ training speedup over the distributed FNO baseline, reducing communication time from 97\\% to under 6\\% of the forward-pass time, with growing speedups at higher resolution.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.14394v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  }
+]
