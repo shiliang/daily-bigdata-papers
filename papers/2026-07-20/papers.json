@@ -1,0 +1,137 @@
+[
+  {
+    "id": "2607.16097v1",
+    "title": "Understanding Reasoning from Pretraining to Post-Training",
+    "authors": [
+      "Jingyan Shen",
+      "Ang Li",
+      "Salman Rahman",
+      "Yifan Sun",
+      "Micah Goldblum",
+      "Matus Telgarsky",
+      "Pavel Izmailov"
+    ],
+    "summary": "Reinforcement learning (RL) has become central to improving large language models (LLMs) on complex reasoning tasks, yet RL post-training is largely studied in isolation from the pretraining that precedes it. As a result, two basic questions remain open: (1) how do pretraining choices (model size, data) shape the returns to RL compute, and (2) what does RL actually do to the model? These questions are difficult to study in the standard LLM setting: pretraining corpora are vast and uncontrolled, making it hard to attribute behaviors to pretraining versus RL, and systematic compute sweeps across both stages are prohibitively expensive. To address these challenges, we use chess as a controlled testbed for studying reasoning across the full pretraining-to-post-training pipeline. We follow the standard LLM training pipeline by pretraining language models from 5M to 1B parameters on human chess games, supervised fine-tuning on synthetic reasoning traces, and running RL on chess puzzles with verifiable rewards. Using this framework, we find that the post-RL performance at given RL compute level is well-predicted from the pretraining loss, and slope of the RL reward curves improves approximately linearly with the pretraining tokens. Beyond scaling, we find that RL does not simply sharpen the SFT policy: on easy puzzles it amplifies correct moves the SFT policy already preferred, while on hard puzzles it surfaces correct moves that were nearly absent under SFT. We further test whether our findings transfer beyond chess by training a 1B language model on math-domain text, where the same predictive pattern emerges: longer-pretrained checkpoints reach higher post-RL performance and improve faster under RL. In sum, we provide a quantitative account of the pretraining-to-RL interface and a controlled testbed for studying the science of reasoning across the full pretraining-to-post-training pipeline.",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16097v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.16161v1",
+    "title": "Adaptive Fault Injection Planning for Multi-Layer Self-Healing AI Infrastructure",
+    "authors": [
+      "Saurabh Kulkarni",
+      "Yuxin Yang",
+      "Rohan Kulkarni",
+      "Gautam Nayak"
+    ],
+    "summary": "Modern GPU-accelerator platforms rely on multi-layer self-healing pipelines that span hardware, firmware, management software, and orchestration. When faults propagate across layer boundaries, they can bypass detection, corrupt diagnosis, or trigger conflicting remediations--yet conventional fault-injection campaigns test each layer in isolation. We present ADA-ST, an adaptive fault-injection methodology that uses a weighted fault-propagation graph to guide cross-layer scenario selection. We construct four-layer graphs for three successive platforms at a hyperscale operator: Alpha, Beta, and Gamma. Platform Alpha, a production system that accumulated 72,550 repair tickets over four years, provides the empirical foundation; 49% of those tickets involve cross-layer fault propagation. We show that existing static test campaigns cover only 20-25% of the modeled fault-propagation edges, leaving approximately three-quarters of the cross-layer attack surface unexercised. ADA-ST closes this gap through iterative, activity-guided scenario selection that maximizes marginal coverage gain per iteration, reaching full edge coverage within 10 iterations on Alpha, 12 on Beta, and 9 on Gamma. The Fault-Layer Abstraction Mapping (FLAM) transfers propagation knowledge across hardware generations with 100% fidelity from Alpha to Beta and 96% from Beta to Gamma. Physical spot-validation on the newest platform confirms all four tested propagation edges, revealing cross-layer vulnerabilities spanning telemetry blind spots, absence-based detection gaps, multi-signal correlation failures, and trust-without-verification propagation at the L2-to-L3 boundary.",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16161v1",
+    "categories": [
+      "cs.ET"
+    ],
+    "primary_category": "cs.ET",
+    "github": null
+  },
+  {
+    "id": "2607.15640v1",
+    "title": "LLM Latent Edge Measurement: Point-in-Time Economic Graphs for Quantitative Investing from Corporate Disclosures",
+    "authors": [
+      "Fan Yang",
+      "Lin Zhang"
+    ],
+    "summary": "Standard industry classification systems such as GICS assign each firm to a single sector, but the economic relationships through which shocks propagate, such as supplier agreements, customer concentration, intellectual property licensing, cloud service dependencies, and power purchase contracts frequently cross sector boundaries and are often disclosed only in unstructured text. We formulate the construction of a firm-level adjacency matrix as a measurement problem and propose an LLM based pipeline that extracts a weighted, directed, point in time corporate network from public disclosures.\n  Applied to the most recent 10 K and 10 K filings of 42 Nasdaq 100 constituents, the proposed pipeline produces a network containing 149 directed edges. An adversarial audit confirms 88% of sampled edges with weights of at least 0.1, increasing to 100% when economically plausible but weakly documented relationships are included. Refuted edges are concentrated entirely in the lowest-weight portion of the network. The resulting network is consistent with GICS where sector classifications are informative, exhibiting a 1.9-fold increase in within-sector connectivity, while also recovering economically meaningful cross-sector relationships that standard classifications cannot represent. Examples include nuclear power-purchase agreements connecting utilities with hyper scale technology firms and GPU-cloud dependencies within the emerging AI infrastructure ecosystem. Ablation studies further demonstrate that multi-agent fusion, inverse-document-frequency filtering, and relative thresholding each make measurable contributions to network quality.",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.15640v1",
+    "categories": [
+      "stat.AP"
+    ],
+    "primary_category": "stat.AP",
+    "github": null
+  },
+  {
+    "id": "2607.16013v1",
+    "title": "Robust Monitoring of Arc Welding Processes: A Generalizable Framework with DVAE and Particle Filter",
+    "authors": [
+      "Yue Cao",
+      "Hai Lin",
+      "YuMing Zhang"
+    ],
+    "summary": "Arc welding processes are essential for continuous fabrication but prone to disturbances that impair weld quality, making real-time monitoring critical yet difficult due to complex visual patterns and nonlinear, time-varying dynamics. Deep learning shows promise but faces scalability limits because of its dependence on large labeled datasets and application-specific tuning. We explore whether a unified approach can characterize major arc welding processes across applications and improve scalability through consistent state monitoring. This paper introduces a robust and generalizable monitoring framework for arc welding. It combines unsupervised deep latent representation learning, which extracts compact features from weld pool images, with Bayesian filtering to handle persistent and fluctuating disturbances such as arc radiation and specular reflections. Specifically, a Dynamic Variational Autoencoder (DVAE), consisting of a CNN-based encoder-decoder and an LSTM-based transition model, jointly learns latent representations and their evolution under control inputs. For robust real-time inference, a specialized Particle Filter (PF) propagates the latent and LSTM hidden states, preserving process history while suppressing sensor noise. This design is well suited to welding's slow and inertial dynamics. Validation on GTAW and GMAW without process-specific tuning demonstrates the framework's generalizability and robustness.",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16013v1",
+    "categories": [
+      "eess.IV"
+    ],
+    "primary_category": "eess.IV",
+    "github": null
+  },
+  {
+    "id": "2607.11734v2",
+    "title": "NeuralActuator: Neural Actuation Modeling for Robot Dynamics and External Force Perception",
+    "authors": [
+      "Zhiyang Dou",
+      "John U. Onyemelukwe",
+      "Hangxing Zhang",
+      "Heng Zhang",
+      "Minghao Guo",
+      "Yunsheng Tian",
+      "Michal Piotr Lipiec",
+      "Joshua Jacob",
+      "Chao Liu",
+      "Peter Yichen Chen",
+      "Yuri Ivanov",
+      "Wojciech Matusik"
+    ],
+    "summary": "Differentiable simulators have advanced policy learning and model-based control across robotic tasks. Yet actuator dynamics remain underexplored and can be a major source of sim-to-real error, particularly on low-cost platforms, where the linear current-to-joint-torque approximation $τ= K_t I$ becomes unreliable because of friction, hysteresis, backlash, and thermal effects. Accurate actuator models can also support force perception and integrated force/position control. We present NeuralActuator, which jointly predicts (i) a torque surrogate for trajectory propagation on low-cost servo platforms, (ii) external forces with a contact-probability gate for sensorless force perception, and (iii) a motor-condition score for a supervised joint, distinguishing normal from mechanically restricted operation. A twin-arm teleoperation system records robot states and actuator telemetry alongside external-force labels, yielding the Neural Actuation Dataset (NAD). The torque-surrogate head is trained through differentiable simulation from pose trajectories without ground-truth joint-torque measurements. A Transformer captures temporal dependencies while enabling real-time inference. We validate NeuralActuator on a 5-DoF OpenManipulator-X, a 6-DoF SO-101 from LeRobot, and a 7-DoF Franka Emika Panda, spanning three actuator families and costs from approximately \\$500 to more than \\$30{,}000. The low-cost platforms support physically plausible dynamics and force evaluation, while the offline Franka experiment provides a payload-force-estimation benchmark. We also demonstrate motor-condition estimation and improved behavior-cloning performance using NeuralActuator as a pretrained module. We release the dataset, code, and hardware configurations on the project page: https://frank-zy-dou.github.io/projects/NeuralActuator/index.html.",
+    "published": "2026-07-13",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.11734v2",
+    "categories": [
+      "cs.RO",
+      "cs.CV",
+      "cs.GR",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.15314v1",
+    "title": "Cura 1T: Specialized Model for Agentic Healthcare",
+    "authors": [
+      "actAVA AI",
+      " :",
+      "Haolin Chen",
+      "Leon Qi",
+      "Steve Brown",
+      "Deon Metelski",
+      "Tao Xia",
+      "Joonyul Lee",
+      "Qixuan Wang",
+      "Kevin Riley",
+      "Frank Wang",
+      "Weiran Yao"
+    ],
+    "summary": "Healthcare spans high-stakes communication, expert reasoning, and workflow execution, yet specialized LLMs that cover these use cases together remain limited. A healthcare model must handle patient consultation, clinical reasoning over text and images, interactive diagnosis, and electronic health record (EHR) tool use. These capabilities fail in different ways, and a narrow update for one task can degrade another. We present Cura 1T, a healthcare-specialized LLM trained through a human-gated self-evolution loop. In each evolution round, a training agent plans a target capability, trains the model, evaluates benchmark trajectories, and refines the data mixture from observed failures. This data-centered loop improves the model through targeted synthetic and curated examples rather than a single generic medical-data update. Across the healthcare evaluation suite, Cura 1T ranks at or near the top among frontier baselines, while remaining competitive on out-of-domain reasoning and agentic benchmarks.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.15314v1",
+    "categories": [
+      "cs.AI"
+    ],
+    "primary_category": "cs.AI",
+    "github": null
+  }
+]
