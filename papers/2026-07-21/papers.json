@@ -1,0 +1,200 @@
+[
+  {
+    "id": "2607.17723v1",
+    "title": "A domain decomposition online-learning-enhanced nonlinear elimination preconditioner",
+    "authors": [
+      "Pai Zhang",
+      "Linyan Gu",
+      "Li Luo"
+    ],
+    "summary": "Nonlinearly preconditioned inexact Newton methods form an effective class of solvers for large-scale nonlinear algebraic systems arising from the discretization of partial differential equations. A central challenge in nonlinear elimination (NE) preconditioning is the reliable identification of the slowly converging components to be eliminated. Existing selection strategies often rely on problem-specific physical information or user-tuned thresholds applied directly to the raw nonlinear residual, which may contain irregular oscillatory structures near stagnation regions, making the selected bad subset highly sensitive to threshold parameters. In this work, we propose an online-learning-enhanced NE preconditioner that identifies the bad subset from the dominant structure of the nonlinear residual rather than from the raw residual itself. Residual snapshots are collected online during the stagnation phase of the current Newton solve, and an unsupervised extraction model is trained to capture the principal nonlinear imbalance. We consider both a linear extractor based on principal component analysis and nonlinear extractors based on autoencoder neural networks. Moreover, we integrate the approach into a parallel domain decomposition framework, which trains a local extraction model independently on each subdomain. The learned residual reconstruction is then used to define the bad subset and guide the nonlinear elimination process. Numerical experiments on lid-driven cavity flows at Reynolds numbers up to 10,000 show that the proposed method produces more reliable and coherent bad subsets, is robust with respect to both NE and learning parameters, and outperforms the baseline NE preconditioner in terms of the convergence.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.17723v1",
+    "categories": [
+      "math.NA"
+    ],
+    "primary_category": "math.NA",
+    "github": null
+  },
+  {
+    "id": "2607.17614v1",
+    "title": "Online learning of neural state-space models",
+    "authors": [
+      "Bendegúz Györök",
+      "Tamás Péni",
+      "Maarten Schoukens",
+      "Roland Tóth"
+    ],
+    "summary": "Recent advances in deep-learning-based nonlinear system identification have led to encoder-based estimation of neural state-space (ANN-SS) models that achieve state-of-the-art performance in offline settings by estimating initial model states from past input-output data. These methods are typically used in multiple-shooting-based offline identification, and online learning of these models remains largely unexplored. This paper presents a batch-wise learning pipeline and a direct recursive identification algorithm for subspace encoder-based ANN-SS models. We provide convergence analysis of the recursive formulation and validate its performance through extensive simulation studies. The results demonstrate that the proposed approach enables computationally efficient online adaptation with high model accuracy.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.17614v1",
+    "categories": [
+      "eess.SY",
+      "cs.LG"
+    ],
+    "primary_category": "eess.SY",
+    "github": null
+  },
+  {
+    "id": "2607.17843v1",
+    "title": "Mobius Learning: Cyclic Depth Folding in Transformers",
+    "authors": [
+      "Tongtian Zhu"
+    ],
+    "summary": "Transformer-based language models organize computation along an ordered depth axis, where shallow and deep blocks often develop distinct representational roles. We challenge the conventional view that these roles must remain tied to a block's position in the ordered sequence. We introduce Mobius Learning, a training architecture based on cyclic depth folding, in which different data streams follow cyclically shifted block orders. The same block group is therefore applied early in the block sequence for some data streams and late for others, so it is optimized in both shallow and deep roles, a phenomenon we call depth-role superposition. Surprisingly, in four-worker experiments with a modded GPT-2 small (124M) model trained on 2.5B FineWeb tokens using Muon, Mobius Learning achieves lower validation loss than a fixed-order looped Transformer at larger numbers of Transformer block-sequence passes. This counterintuitive result shows that a block group need not remain confined to one fixed shallow or deep role within the block sequence and opens a new design space based on cyclic depth folding. Crucially, this structure makes Mobius Learning particularly well suited to memory-constrained distributed training: raw training data remain local, while each worker stores one block group rather than the complete Transformer block stack.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.17843v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL",
+      "cs.DC"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.18171v1",
+    "title": "FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications",
+    "authors": [
+      "Krish Agarwal",
+      "Zhuoming Chen",
+      "Yanyuan Qin",
+      "Zhenyu Gu",
+      "Atri Rudra",
+      "Beidi Chen"
+    ],
+    "summary": "Real-time multimodal applications, including voice agents and interactive video generation, compose heterogeneous models into pipelines whose efficient deployment requires application-specific decisions about placement, streaming, and intra-model parallelism. Existing serving systems and auto-parallelism compilers commit to limited transformations and fixed workload assumptions, so achieving high performance on a new application requires hand-crafting an efficient implementation. We present FlashRT, an agent harness that guides coding agents to lift simple developer-written reference implementations into optimized multi-GPU deployments that flexibly weigh target metrics like latency and throughput. Using a new chain-of-program paradigm, FlashRT directs a generic coding agent through a multi-pass transformation process where an agent transforms the reference into an intermediate representation (IR) to capture data dependencies and persistent-state scopes, validates this IR via a sequential interpreter, and performs static analyses to identify candidate transformations. Then, the agent iteratively implements, verifies, and benchmarks each candidate under a measurement-gated optimization loop to produce effective deployments that span different hardware budgets. Across various applications, including video world models and multimodal LLMs, FlashRT converts reference implementations into highly efficient deployments, delivering up to ~70x latency reduction and 2.8x throughput improvement on NVIDIA B200 GPUs. On AMD MI355X GPUs, FlashRT matches the peak latency reduction while increasing peak throughput improvement to 3.6x, demonstrating that agent-driven optimization can be more scalable on platforms with less mature expert optimization. In fact, for Qwen3-Omni text-to-audio inference, FlashRT reduces response latency by 65% compared to the expert vLLM-Omni implementation on AMD MI355X.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.18171v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.16963v1",
+    "title": "Adaptive Incident Prioritization for Security Operations at Scale",
+    "authors": [
+      "Scott Freitas",
+      "Amir Gharib",
+      "Maayan Magenheim"
+    ],
+    "summary": "Large security operations centers (SOCs) often face hundreds of active incidents per day, creating substantial cognitive and operational demands for analysts. Analysts must quickly decide which incidents deserve attention within long, constantly changing queues, yet incidents are commonly ordered by arrival time, coarse severity, or product-specific heuristics that leave their relative priority unclear. We introduce Adaptive Incident Prioritization (AIP), the ranking algorithm behind Microsoft Defender Queue Assistant, which continuously prioritizes security incidents for analyst investigation. AIP adapts BM25-style ranking to a query-less, multi-tenant queue setting by representing each incident as a collection of normalized security components extracted from alerts and metadata. The model combines saturated local component frequency, global component rarity estimated across tenants, bounded domain-prior multipliers, and component-level explanations. Deployed across tens of thousands of customers, AIP performs near-real-time inference and refreshes incident scores with a median latency of five seconds. In an expert-reviewed evaluation across 1,000 customer organizations, AIP achieves 92.8% Precision@10. In post-launch telemetry across 473,000 organization-day queues, AIP increases alert-detail interaction by 5.8% and alert-detail view events by 17.5% relative to severity ordering, providing behavioral evidence that model-ranked queues concentrate analyst engagement. We also extend the Microsoft GUIDE dataset with, to our knowledge, the first public label source for SOC queue prioritization over real-world incidents. The extension covers 499 organization queues and 9,980 incidents with expert-derived priority labels, enabling the research community to develop, compare, and advance methods for incident prioritization.",
+    "published": "2026-07-18",
+    "updated": "2026-07-18",
+    "pdf_url": "https://arxiv.org/pdf/2607.16963v1",
+    "categories": [
+      "cs.CR",
+      "cs.IR"
+    ],
+    "primary_category": "cs.CR",
+    "github": null
+  },
+  {
+    "id": "2606.27163v2",
+    "title": "Learning to Fold: prizewinning solution at LeHome Challenge 2026 (1st place online, 2nd offline)",
+    "authors": [
+      "Ilia Larchenko"
+    ],
+    "summary": "I describe my solution to the LeHome Challenge 2026, an ICRA 2026 competition on bimanual garment folding. The system placed 1st of 62 teams in the online (simulation) round and 2nd in the real-world final. It improves a vision-language-action (VLA) policy with a reinforcement-learning loop. The policy is its own value function: the same network that predicts actions also predicts success, progress, and a few task-relevant future quantities, and those predictions drive advantage estimation, live failure detection, and candidate selection. The work mostly recombines existing RL ideas with engineering and optimization contributions that can be used together as one recipe or individually: AWR + RECAP combined for flow-matching VLA; an asynchronous distributed training / rollout pipeline through HuggingFace Hub; inference-time hyperparameters optimization via Thompson sampling; a sim-to-real recipe with camera-alignment tooling, heavy augmentation and DAgger-like HIL data collection.",
+    "published": "2026-06-25",
+    "updated": "2026-07-18",
+    "pdf_url": "https://arxiv.org/pdf/2606.27163v2",
+    "categories": [
+      "cs.RO",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.16372v1",
+    "title": "AoA: Theorem Proving Agent over Abstract Syntax Tree of Redesigned Language",
+    "authors": [
+      "Qiyuan Xu",
+      "Joshua Ong Jun Leang",
+      "Renxi Wang",
+      "Wenda Li",
+      "Haonan Li",
+      "Luke Ong",
+      "Conrad Watt"
+    ],
+    "summary": "Interactive theorem proving (ITP) underpins program verification and formalized mathematics, but its manual effort limits scalability. LLM-based proof agents promise to ease this effort, but their heavy token consumption and API cost remain a major obstacle. We trace this cost to a shared root: current agents operate on serialized concrete syntax, emitting proofs as source text and recovering proof states through separate, line-number-based queries, so every edit shifts later lines and forces repeated relocation of errors and states. This same dependence on concrete syntax also blocks adoption of Minilang, a recent proof language that reaches SOTA on LLM-based proving but is too new for LLMs' training corpora. We address both problems by lifting the agent off source text and onto the abstract syntax tree (AST): the model supplies proofs as JSON representations of Minilang's AST -- native to tool-calling LLMs -- and drives the prover through a tree-edit model that fuses proof operations and states into one proof tree, so each operation carries its own subgoal's state, readable directly off the tree. We realize this design in \\emph{Agent over AST} (AoA). Against Amazon's Isabelle Agent on miniF2F and NTP4VC-Pearl common success sets, AoA cuts API cost by 2.3--4.7x (normalized input-cache accounting), uses 2.9--6.9x fewer tokens and 3.9--8.9x fewer tool calls, and finishes 1.4--2.0x faster -- while also solving far more problems on the harder verification benchmark.",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16372v1",
+    "categories": [
+      "cs.SE",
+      "cs.AI",
+      "cs.LG",
+      "cs.PL"
+    ],
+    "primary_category": "cs.SE",
+    "github": null
+  },
+  {
+    "id": "2607.16448v1",
+    "title": "Retrieval is Enough: Training-Free Interpretability with a Tool-Using Agent",
+    "authors": [
+      "Sriram Balasubramanian",
+      "Soheil Feizi"
+    ],
+    "summary": "Interpretability methods for neural network activations span a wide cost spectrum, from cheap, training-free techniques (such as linear probes, PCA, SVD) to more expensive training-based ones (such as SAEs and activation oracles). Training-based methods are typically more powerful, in part because they leverage large activation datasets during training. This raises a natural question - do they actually surface insights that go beyond what is recoverable from the training dataset itself? To address this, we equip an LLM agent with a vector database of activations paired with their textual contexts, along with tools for manipulating activations - projecting out directions in latent space, computing activation differences and averages. The agent iteratively queries the database, forms hypotheses from the retrieved samples, and validates them by constructing linear probes. We call this method HARP, for Hypothesis-driven Agentic Retrieval and Probing. Despite not involving any training, HARP outperforms both activation oracles and SAE-based agents on concept discovery, concept detection, model steering, and secret elicitation. The training-free design also makes HARP substantially cheaper and more flexible: new datasets can be indexed on demand whenever existing ones prove insufficient. More broadly, our results suggest that current training-based methods do not yet extract insights beyond their training data, and motivate benchmarks that explicitly require interpretability methods to demonstrate such insights. We release our code at https://github.com/SriramB-98/HARP",
+    "published": "2026-07-17",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2607.16448v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/SriramB-98/HARP",
+      "stars": 0,
+      "description": "An agentic interpretability tool",
+      "language": "Python"
+    }
+  },
+  {
+    "id": "2601.00126v3",
+    "title": "Compositional Diffusion with Guided Search for Long-Horizon Planning",
+    "authors": [
+      "Utkarsh A Mishra",
+      "David He",
+      "Yongxin Chen",
+      "Danfei Xu"
+    ],
+    "summary": "Generative models have emerged as powerful tools for planning, with compositional approaches offering particular promise for modeling long-horizon task distributions by composing together local, modular generative models. This compositional paradigm spans diverse domains, from multi-step manipulation planning to panoramic image synthesis to long video generation. However, compositional generative models face a critical challenge: when local distributions are multimodal, existing composition methods average incompatible modes, producing plans that are neither locally feasible nor globally coherent. We propose Compositional Diffusion with Guided Search (CDGS), which addresses this mode averaging problem by embedding search directly within the diffusion denoising process. Our method explores diverse combinations of local modes through population-based sampling, prunes infeasible candidates using likelihood-based filtering, and enforces global consistency through iterative resampling between overlapping segments. CDGS matches oracle performance on seven robot manipulation tasks, outperforming baselines that lack compositionality or require long-horizon training data. The approach generalizes across domains, enabling coherent text-guided panoramic images and long videos through effective local-to-global message passing. More details: https://cdgsearch.github.io/",
+    "published": "2025-12-31",
+    "updated": "2026-07-17",
+    "pdf_url": "https://arxiv.org/pdf/2601.00126v3",
+    "categories": [
+      "cs.RO"
+    ],
+    "primary_category": "cs.RO",
+    "github": null
+  },
+  {
+    "id": "2607.16319v1",
+    "title": "Deep Learning-based Filtering for Video Coding: A Survey on Architectures, Algorithms, and Complexity Analysis",
+    "authors": [
+      "Young-Woon Lee",
+      "Byung-Gyu Kim"
+    ],
+    "summary": "As Ultra-High-Definition (UHD) displays and immersive media services become ubiquitous in the Internet of Things (IoT) and Consumer Electronics (CE) sectors, including 8K display and mobile devices, the demand for high-efficiency video coding is unprecedented. While Deep Learning-based Filtering (DLF) has emerged as a promising solution to mitigate compression artifacts inherent in standards like High Efficiency Video Coding (HEVC/H.265) and Versatile Video Coding (VVC/H.266), its deployment in CE devices is severely constrained by computational complexity, memory bandwidth, and power consumption. To bridge the gap between academic research and practical deployment, this paper presents a comprehensive, hardware-oriented survey of DLF techniques. We propose a systematic three-dimensional taxonomy classifying methods into (1) Integration Scheme within the Video Coding, (2) Coding Information Utilization, and (3) Network Design Strategy. Unlike prior reviews, this work critically analyzes the trade-offs between Rate-Distortion (RD) performance and hardware feasibility, highlighting the evolution from heavy, performance-oriented models to lightweight, hardware-friendly architectures targeting Neural Processing Units (NPUs). Furthermore, we incorporate the latest standardization activities from the Joint Video Experts Team (JVET) on Neural Network-based Video Coding (NNVC) to provide realistic guidelines. We also identify open challenges such as real-time inference latency and error propagation, providing a roadmap toward robust, low-power intelligent video coding in next-generation CE vision endpoints.",
+    "published": "2026-07-15",
+    "updated": "2026-07-15",
+    "pdf_url": "https://arxiv.org/pdf/2607.16319v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  }
+]
