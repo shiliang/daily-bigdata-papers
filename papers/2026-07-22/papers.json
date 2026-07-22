@@ -1,0 +1,103 @@
+[
+  {
+    "id": "2607.03118v2",
+    "title": "Vidu S1: A Real-Time Interactive Video Generation Model",
+    "authors": [
+      "Jintao Zhang",
+      "Kai Jiang",
+      "Jintao Chen",
+      "Xu Wang",
+      "Yang Luo",
+      "Yuji Wang",
+      "Dechuang Chen",
+      "Jungang Li",
+      "Chengyang Ye",
+      "Marco Chen",
+      "Hongzhou Zhu",
+      "Min Zhao",
+      "Yuxuan Jiang",
+      "Zhengkun Huang",
+      "Chendong Xiang",
+      "Kaiwen Zheng",
+      "Haoxu Wang",
+      "Xiaohang Wang",
+      "Qi Jia",
+      "Xin Chen",
+      "Yimin Chen",
+      "Youhe Jiang",
+      "Fangcheng Fu",
+      "Zhijie Deng",
+      "Fan Bao",
+      "Jianfei Chen",
+      "Jun Zhu"
+    ],
+    "summary": "We introduce Vidu S1, a real-time interactive video generation model supporting voice control of digital characters. Users can control video generation content at any moment through voice instructions. Vidu S1 supports infinite-length real-time video generation without blurring, drift, or visual distortion. Built with TurboDiffusion and TurboServe, Vidu S1 outputs 540p real-time videos at up to 42 FPS on regular consumer GPUs. Users can upload custom images of real people, anime, and pets, and choose different voice tones for personalized experiences. Experiments show that Vidu S1 achieves the best performance across all test metrics while fully meeting real-time inference requirements. A playable online demo is available at https://vidu.com/vidu-stream.",
+    "published": "2026-07-03",
+    "updated": "2026-07-21",
+    "pdf_url": "https://arxiv.org/pdf/2607.03118v2",
+    "categories": [
+      "cs.CV",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.18540v1",
+    "title": "Recti-Q: Feature-Space Rectification for Out-of-Distribution-Robust Quantized Perception in Edge Robotics",
+    "authors": [
+      "Hamidreza Yaghoubi Araghi",
+      "Parastoo Pilevar",
+      "Ming C. Lin"
+    ],
+    "summary": "Robotic perception pipelines increasingly rely on large vision backbones deployed on SWaP-constrained edge platforms, making post-training quantization (PTQ) attractive for real-time inference. However, while PTQ often preserves clean in-distribution accuracy, we show that it can substantially degrade reliability under deployment-relevant distribution shifts (e.g., sensor noise, severe weather, and novel operating environments), creating a Quantization-Induced Robustness Gap. Across foundational vision benchmarks (ImageNet-C and PACS), 4-bit PTQ models exhibit pronounced robustness degradation despite negligible ID accuracy loss. To address this, we propose Recti-Q, a lightweight feature-space rectification framework that freezes the quantized backbone and trains a small classifier-head LoRA adapter using only source data. Recti-Q is architecture-agnostic across CNNs and Transformers, supports efficient teacher-free training, and recovers a significant portion of the lost robustness, in some cases matching or exceeding FP32 performance. At less than 1% parameter overhead (as small as 6 KB), Recti-Q preserves over 99% of PTQ memory savings, adds negligible compute, and enables low-bandwidth Over-The-Air (OTA) resilience patching for deployed robotic fleets operating in unpredictable physical environments.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.18540v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG",
+      "cs.RO"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.18522v1",
+    "title": "Adaptive Two-Stage Online Learning for Service-Affecting Failure Detection in Mobile Core Networks",
+    "authors": [
+      "J. du Toit",
+      "G. Fita",
+      "J. Salzwedel",
+      "A. Stoltz",
+      "R. Wolhuter"
+    ],
+    "summary": "Mobile network operators monitor aggregated traffic volumes to assess the operational health of core network infrastructure. Reliable failure detection is challenging due to strong temporal structure, non-stationarity, measurement artefacts, and extreme class imbalance, which limit static threshold-based monitoring. This paper proposes a two-stage online learning framework for traffic-based failure detection in mobile core networks. Stage I incrementally models normal traffic dynamics using lightweight regression with time-aware features. Stage II analyses prediction residuals together with contextual indicators to detect genuine service-affecting network failures. The framework operates fully online under a prequential evaluation protocol, enabling continuous adaptation with low computational overhead. Across linear and non-linear models, the proposed two-stage architecture achieves the best precision-recall trade-off, attaining the highest recall, F1-score, and AUC at acceptable false positive rates. These results demonstrate the importance of explicit residual decomposition for reliable failure detection in streaming mobile core network data.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.18522v1",
+    "categories": [
+      "cs.LG"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.18415v1",
+    "title": "$\\texttt{codesign-mcdp}$: A Python Library for Monotone Co-Design Problems",
+    "authors": [
+      "Corentin Briat"
+    ],
+    "summary": "$\\texttt{codesign-mcdp}$ is a Python library for formulating and solving $\\textit{Monotone Co-Design Problems}$ (MCDPs) in the framework of Censi (2015). A design problem is a relation between two posets, a functionality poset $F$ and a resource poset $R$; given a target functionality, the problem asks for the antichain of minimal resources needed to deliver it. Design problems compose under three operators (series, parallel, feedback), and the resulting class is closed under composition. The library implements the antichain calculus, six primitive design-problem types, the three composition operators, a Kleene fixed-point solver, and two high-level builders (an MCDPL-style declarative builder and a modular $\\texttt{System}$ builder). Further layers add set-based and stochastic uncertainty, compositional online learning, and temporal, vector-state, and online co-design, alongside a suite of worked examples.",
+    "published": "2026-07-20",
+    "updated": "2026-07-20",
+    "pdf_url": "https://arxiv.org/pdf/2607.18415v1",
+    "categories": [
+      "math.OC",
+      "cs.MS",
+      "eess.SY"
+    ],
+    "primary_category": "math.OC",
+    "github": null
+  }
+]
