@@ -1,0 +1,165 @@
+[
+  {
+    "id": "2607.20145v1",
+    "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+    "authors": [
+      "Dongfang Li",
+      "Xiaodong Luo",
+      "Ruoyu Sun",
+      "Xuhui Chen",
+      "Linyuan Qiu",
+      "Jian Meng",
+      "Zhengxuan Lu",
+      "Yiting Wang",
+      "Yucheng Xie",
+      "Tao Guo",
+      "Tianxiang Fang",
+      "Jing Li",
+      "Sihang Chen",
+      "Shihao Hong",
+      "Chang Liu",
+      "Weihua Dai",
+      "Zirong Zeng",
+      "Ziwei Zhu",
+      "Zhuohan Wang",
+      "Zhengjun Yue",
+      "Igor Vasilyev",
+      "Min Liu",
+      "Weijian Sun",
+      "Xin Chen",
+      "Yingmeng Gao",
+      "Jinhua Zhou",
+      "Taolue Chen",
+      "Chenwei Wu",
+      "Dong Zhang",
+      "Wenlong Jin",
+      "Jinmin Xiang",
+      "Barkova Maria",
+      "Ushakov Anton",
+      "Xianfei Jin",
+      "Tian Ding",
+      "Zhihang Lin",
+      "Qian Chen",
+      "Linxin Yang",
+      "Mingzhe Yang",
+      "Bingwei Zhang",
+      "Hongzhang Yang",
+      "Fangxue Zhang",
+      "Shijun Qin",
+      "Jie Yu",
+      "Cuihua Hu",
+      "Tolstykh Vasiliy",
+      "Nosov Ivan",
+      "Abdullin Amir",
+      "Zhichen Zhou",
+      "Xin Zhang",
+      "Zhixiong Ning",
+      "Xutong Zhao",
+      "Junjie Huang",
+      "Jiajun Liu",
+      "Weiyan Kong",
+      "Zheng Zhang",
+      "Wenhan Luo",
+      "Lin Hu",
+      "Yangbo Guo",
+      "Li Zeng",
+      "Shihao Zeng",
+      "Baotian Hu",
+      "Min Zhang",
+      "Haizhou Li",
+      "Zhiquan Luo"
+    ],
+    "summary": "Full-parameter post-training of trillion-parameter-scale MoE models introduces substantial system-level challenges for large-scale distributed training, including severe memory pressure, non-overlapped communication overhead, and inefficient kernel execution. While most large-scale LLM training systems are built around GPU-based clusters, this report presents an end-to-end optimization practice on the Ascend NPU SuperPOD. Using the DeepSeek-V4 model family as the target workload, we develop a hierarchical optimization framework spanning model-level parallelism, computation-communication orchestration, and low-level kernel execution. The resulting system achieves 34.22% Model FLOPs Utilization (MFU) with a 2.93x improvement over the open-source baseline recipe while maintaining training stability. Building on this optimized infrastructure, we further establish a CPT and SFT workflow for complex Operations Research (OR) tasks. We refer to the integrated framework as SLAI T-Rex. Using DeepSeek-V4-Flash, we develop OR-oriented CPT and SFT data pipelines that combine collected domain resources with solver-verified synthetic optimization documents. The resulting dataset contains 10K high-quality SFT samples spanning four task categories and three problem representations. The specialized model achieves the highest average zero-shot Pass@1 score among the evaluated models, reaching 71.81% and outperforming GPT-5.4-Mini and the base DeepSeek-V4-Flash model by 3.98 and 11.27 percentage points, respectively. Overall, this work demonstrates a full-stack pathway from efficient trillion-parameter model post-training on Ascend infra to domain-specialized Flash models for solver-grounded mathematical modeling, advancing frontier-model systems for complex reasoning.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20145v1",
+    "categories": [
+      "cs.CL",
+      "cs.AI"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.20071v1",
+    "title": "GaussianSeed: Hierarchical Gaussian Seeding for High-Resolution 3D Occupancy Prediction",
+    "authors": [
+      "Xinzhuo Li",
+      "Xianghui Pan",
+      "Jiayuan Du",
+      "Wei Wei",
+      "Liuyi Wang",
+      "Chengju Liu",
+      "Qijun Chen"
+    ],
+    "summary": "Vision-centric 3D occupancy prediction provides dense scene representations essential for autonomous driving and robotic navigation, yet existing methods struggle to scale to high voxel resolutions due to prohibitive computational costs. To address this, we introduce GaussianSeed, a progressive multi-scale Gaussian occupancy prediction framework that organizes primitives into a coarse-to-fine hierarchy. Benefiting from this hierarchical design, GaussianSeed effectively circumvents the memory bottlenecks inherent in dense representations, successfully scaling to a $0.1\\text{m}$ spatial resolution while maintaining real-time inference capabilities. To comprehensively evaluate high-resolution geometric perception, we further construct TJScenes, a panoramic six-camera occupancy dataset with highly detailed $0.1\\text{m}$ annotations. Extensive experiments on Occ3D-nuScenes and TJScenes demonstrate that GaussianSeed delivers the lowest latency among all evaluated methods while maintaining highly competitive accuracy, advancing the efficiency-quality frontier of high-resolution 3D occupancy prediction.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20071v1",
+    "categories": [
+      "cs.CV"
+    ],
+    "primary_category": "cs.CV",
+    "github": null
+  },
+  {
+    "id": "2607.20239v1",
+    "title": "Adaptive Bayesian Online Learning via Expert Aggregation",
+    "authors": [
+      "Jungbin Jun",
+      "Ilsang Ohn"
+    ],
+    "summary": "Bayesian online learning promises uncertainty-aware prediction on data streams, but its performance hinges on inferential choices, including learning rates, prior distributions and variational families, which are usually fixed before seeing the stream. We address this by treating Bayesian update rules as experts and aggregating the Bayesian experts according to sequential predictive losses. We prove that the resulting aggregate competes with the best expert in hindsight at an aggregation cost determined by how each expert's per-round performance is evaluated. We instantiate the framework in online conformal inference and Gaussian process regression. The conformal inference application yields a smoothed Bayesian counterpart of adaptive conformal inference with long-run randomized coverage, while the Gaussian process application gives an oracle inequality in cumulative predictive Kullback-Leibler risk and adaptation to unknown Hölder smoothness up to logarithmic factors. Experiments show that the aggregate tracks strong experts without oracle expert selection.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20239v1",
+    "categories": [
+      "stat.ML",
+      "cs.LG"
+    ],
+    "primary_category": "stat.ML",
+    "github": null
+  },
+  {
+    "id": "2607.19893v1",
+    "title": "Odin: Primitive-Level Synchronization for Distributed Point-Based Neural Rendering",
+    "authors": [
+      "Zhenxiang Ma",
+      "Zeyu He",
+      "Yuanzhen Zhou",
+      "Zhenyu Yang",
+      "Yuchang Zhang",
+      "Miao Tao",
+      "Rong Fu",
+      "Jidong Zhai",
+      "Hengjie Li"
+    ],
+    "summary": "Point-based neural rendering (PBNR) represents 3D scenes as explicit, trainable primitives and underpins high-quality reconstruction and emerging embodied AI and world-model pipelines. Unlike layer-structured neural networks, PBNR has primitive-indexed dependencies: each view reads and updates only a sparse, view-dependent subset of mutable scene state. As large scenes require distributed training and optimized renderers reduce per-view computation, global task- or iteration-level barriers increasingly place synchronization, rather than rendering, on the critical path. We present Odin, a distributed PBNR training system that replaces global barriers with primitive-level synchronization. Its ahead-of-time scheduler uses stable locality and phase order to identify low-conflict overlap windows, while the runtime validates primitive publication before later work observes mutable state. Odin provides a quality-first path that preserves synchronized-training visibility and a throughput-first path that uses overlap and gradient evidence to admit only small, low-impact delayed reads; structural changes and high-impact cases remain synchronized. Across four existing PBNR pipelines and 13 non-city scenes on 8 GPUs, Odin improves throughput by 1.22 times on average and hides 82% of critical-path wait while preserving reconstruction quality. In a MatrixCity mixed-parallel case study scaling to 64 GPUs, Odin improves throughput over Grendel by up to 1.89 times without changing renderer kernels, optimizers, training budgets, or model capacity.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.19893v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.19590v1",
+    "title": "Learning to Transmit: Volatility-Aware Predictive Communication for Energy-Efficient IoT Networks",
+    "authors": [
+      "John Kangethe",
+      "Ifrat Ikhtear Uddin",
+      "Longwei Wang"
+    ],
+    "summary": "Communication is the dominant source of energy consumption in Internet-of-Things (IoT) networks, yet many sensed measurements exhibit strong temporal correlations and provide little new information to the receiver. This paper introduces \\textsc{ADAPTIVEML}, a volatility-aware predictive communication framework that enables IoT devices to intelligently decide when communication is necessary. Each sensor maintains a lightweight machine learning predictor and transmits only when the prediction residual exceeds an adaptive threshold proportional to the local signal volatility. By normalizing prediction errors using a rolling estimate of signal variability, the proposed transmission policy automatically adapts to changing environmental conditions, seasonal variations, and deployment-specific dynamics without manual threshold tuning. To address long-term non-stationarity, we further propose \\textsc{ADAPTIVEML-RLS}, an online learning extension based on Recursive Least Squares (RLS) with exponential forgetting, allowing continuous adaptation to sensor drift and evolving signal characteristics. Extensive experiments are conducted on three heterogeneous real-world datasets comprising more than 2.4 million sensor observations from outdoor environmental monitoring, indoor wireless sensor networks, and urban air-quality sensing. Compared with six representative baselines, including periodic transmission, static-threshold suppression, ARIMA, Kalman filtering, EMA, and LMS filtering, \\textsc{ADAPTIVEML} achieves up to 94.7\\% transmission reduction while maintaining a reconstruction error of 0.352$^\\circ$C. \\textsc{ADAPTIVEML-RLS} further reduces reconstruction error by 12--18\\% under drift conditions while preserving transmission reduction above 93\\%. These results demonstrate the effectiveness of volatility-aware predictive communication for energy-efficient and adaptive IoT networks.",
+    "published": "2026-07-21",
+    "updated": "2026-07-21",
+    "pdf_url": "https://arxiv.org/pdf/2607.19590v1",
+    "categories": [
+      "cs.IT"
+    ],
+    "primary_category": "cs.IT",
+    "github": null
+  }
+]
