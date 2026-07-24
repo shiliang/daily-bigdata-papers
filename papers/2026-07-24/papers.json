@@ -1,0 +1,202 @@
+[
+  {
+    "id": "2607.21075v1",
+    "title": "VibeVoice-ASR-BitNet Technical Report",
+    "authors": [
+      "Songchen Xu",
+      "Ting Song",
+      "Shaohan Huang",
+      "Zhiliang Peng",
+      "Yan Xia",
+      "Yujie Tu",
+      "Xin Huang",
+      "Jianwei Yu",
+      "Li Dong",
+      "Furu Wei"
+    ],
+    "summary": "We present VibeVoice-ASR-BitNet, a compressed variant of VibeVoice-ASR optimized for real-time inference on edge CPUs. We apply heterogeneous quantization tailored to the computational characteristics of each stage: the VAE acoustic tokenizer uses full-pipeline INT8 quantization (I8_S) with kernel fusion and SIMD optimization, while the autoregressive language model adopts BitNet-style ternary weights (I2_S). To preserve accuracy under aggressive compression, we employ a progressive quantization-aware training strategy. For inference, we implement custom SIMD kernels and fused operators within the ggml framework targeting both ARM and x86 platforms, achieving real-time recognition with RTF < 1 using as few as 3 CPU threads. VibeVoice-ASR-BitNet is 1.6-2.3x faster than Whisper.cpp at comparable model sizes (~1.6 GB), with only modest accuracy degradation compared to the FP16 baseline.",
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21075v1",
+    "categories": [
+      "cs.SD",
+      "cs.CL",
+      "eess.AS"
+    ],
+    "primary_category": "cs.SD",
+    "github": null
+  },
+  {
+    "id": "2607.21403v1",
+    "title": "A Diffusion-Model Subpopulation Digital Twin for Mobile Health Deployment: A Case Study on the HeartSteps Intervention",
+    "authors": [
+      "Ziping Xu",
+      "Yuyi Chang",
+      "Chenshun Ni",
+      "Nithin Sugavanam",
+      "Asim H. Gazi",
+      "Pedja Klasnja",
+      "Emre Ertin",
+      "Susan A. Murphy"
+    ],
+    "summary": "Mobile-health interventions increasingly use online learning and decision making algorithms to personalize when to nudge users toward healthier behavior, but a poorly designed algorithm can burden and disengage participants. New algorithm design decisions should therefore be vetted against realistic simulated users before each real-life deployment. We propose a method to develop ``JITAI-Twins'': digital twins of a target subpopulation for comparing candidate online algorithms before a just-in-time adaptive intervention (JITAI) deployment. The method builds on a conditional time-series diffusion model that is temporally consistent (future actions do not affect the generated past), and it supports repeated updating from three sources of information, in three steps: pre-training on a large observational dataset, fine-tuning on small prior intervention deployments in related populations, and inference-time calibration to the next target population from domain-scientist expertise. We validate the twin at each pre-deployment stage of the long-running HeartSteps series (v2 through v4) of physical-activity suggestion intervention deployments, treating each successive deployment as an upcoming study. The proposed method reproduces the target subpopulation's temporal and between-participant structure better than simpler simulators. These results suggest that our twin can be used to simulate a target deployment before it runs, the prerequisite for testing and informing online algorithm design decisions.",
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21403v1",
+    "categories": [
+      "cs.LG",
+      "stat.ME"
+    ],
+    "primary_category": "cs.LG",
+    "github": null
+  },
+  {
+    "id": "2607.20967v1",
+    "title": "Update the Unseen Only: Minimizing AoI for Collaborative Perception through Online Learning",
+    "authors": [
+      "Yanan Ma",
+      "Zhuoyi Zhao",
+      "Zhengru Fang",
+      "Haonan An",
+      "Xianhao Chen",
+      "Yuguang Fang"
+    ],
+    "summary": "While collaborative perception (CP) enhances the safety of autonomous driving, limited bandwidth can cause severe shared data staleness in CP systems. Existing age-of-information (AoI) minimization policies are not well-suited for CP, as they overlook the fact that a vehicle's AoI decreases not only through updates from the source (i.e., a base station) but also through the vehicle's local sensing. To address this issue, we propose a mobility-aware AoI minimization framework for CP that explicitly accounts for vehicles' dynamic sensing ranges. We first derive a closed-form expression for the long-term time average sum AoI within a considered region, accommodating an ever-changing vehicle population and their dynamic sensed areas. Based on this characterization, we develop Local-sensing-aware Max-Weight Scheduling (LocMW), an online learning algorithm designed for sensor information broadcast from a source to vehicles under unknown environmental statistics and delayed observations. We provide performance guarantees demonstrating that LocMW achieves a sublinear cumulative excess AoI compared to the optimal stationary randomized benchmark. Extensive simulations using vehicular trajectory datasets and 3D perception tasks demonstrate that our LocMW policy substantially outperforms competing baselines, reducing the time-averaged sum AoI by up to 31.6% and improving mAP detection accuracy by up to 16.3%.",
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "pdf_url": "https://arxiv.org/pdf/2607.20967v1",
+    "categories": [
+      "cs.NI"
+    ],
+    "primary_category": "cs.NI",
+    "github": null
+  },
+  {
+    "id": "2607.21224v1",
+    "title": "Controlled Periodic Synchronization for Efficient Data-Parallel Training",
+    "authors": [
+      "Imane Ettifouri",
+      "Mostapha Zbakh",
+      "Claude Tadonki"
+    ],
+    "summary": "Data-parallel training relies on frequent gradient synchronization across workers. Standard DDP synchronizes gradients at every iteration, which is effective on fast local-area networks but increasingly sensitive to communication latency and network variability in geographically distributed environments. Periodic methods such as LocalSGD reduce synchronization frequency but rely mainly on parameter averaging, which may be insufficient when worker trajectories diverge. This paper studies synchronization frequency as a systems parameter for communication-constrained distributed training. We evaluate Controlled Periodic Data Parallelism (CPDP), a PyTorch-DDP-compatible strategy that alternates local updates with a reconciliation step combining gradient AllReduce and SlowMo parameter averaging. Experiments are conducted on Grid'5000 across intra-site clusters and a cross-site WAN deployment spanning Nancy and Sophia with 16.6 ms RTT. In the main fixed learning-rate setting of 0.1 on ResNet-50/CIFAR-100, CPDP achieves the highest peak test accuracy among the evaluated configurations. At K=2, CPDP improves over DDP by 2.28 percentage points but incurs additional wall-clock time. At K=4, CPDP improves over DDP by 2.44 percentage points while reducing average wall-clock time by 13.8%. Direct profiling shows that exposed synchronization time at K=4 is roughly half that of DDP, explaining the improved WAN accuracy-time trade-off. Additional experiments on ViT-S/CIFAR-100 and ResNet-50/TinyImageNet show that CPDP remains competitive with DDP and generally improves over LocalSGD. Overall, the results show that synchronization frequency is a practical control parameter for distributed training under communication constraints.",
+    "published": "2026-07-23",
+    "updated": "2026-07-23",
+    "pdf_url": "https://arxiv.org/pdf/2607.21224v1",
+    "categories": [
+      "cs.DC"
+    ],
+    "primary_category": "cs.DC",
+    "github": null
+  },
+  {
+    "id": "2607.20630v1",
+    "title": "Demonstrating GenDB: Instance-Optimized and Customized Query Processing Code Generation via LLM Agents",
+    "authors": [
+      "Jiale Lao",
+      "Immanuel Trummer"
+    ],
+    "summary": "Traditional query processing engines require continuous development and extensions to support new techniques and user requirements, and in some cases, entirely new systems must be built from scratch. However, these engines are difficult to extend due to their internal complexity, and building new systems demands significant engineering effort and cost. To address this, we demonstrate GenDB, a generative query engine that shifts query processing from manually engineered systems to query processing code generation driven by Large Language Models (LLMs). An early prototype of GenDB uses LLM agents to generate instance-optimized query execution code tailored to specific data, workloads, and hardware resources. This prototype suits offline code generation for repetitive, templated queries, since the upfront generation cost amortizes over many executions and correctness can be ensured through extensive fuzz testing and manual inspection. For ad-hoc queries, GenDB can work with a traditional DBMS in a hybrid architecture: the DBMS handles one-off queries, while GenDB speeds up frequent SQL templates. Our demonstration allows users to (1) visually and interactively explore how GenDB analyzes workloads, profiles hardware resources and underlying data, produces query plans, generates code based on them, and finally uses an optimizer to iteratively achieve a correct and efficient implementation; (2) use visual inspection and analysis to gain qualitative insights into why GenDB produces code that achieves significantly better performance than state-of-the-art query engines on two benchmarks: TPC-H and a newly constructed benchmark designed to reduce potential data leakage from LLM training data; and (3) upload their own data and queries to explore GenDB with different LLMs and query patterns.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20630v1",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "primary_category": "cs.DB",
+    "github": null
+  },
+  {
+    "id": "2607.09424v3",
+    "title": "A Sovereign, Open-Source Foundation Model for German and English",
+    "authors": [
+      " Soofi-Team",
+      " :",
+      "Benedikt Droste",
+      "David Fitzek",
+      "Ruben Härle",
+      "Lukas Helff",
+      "Maximilian Idahl",
+      "Alex Jude",
+      "Abbas Goher Khan",
+      "Maurice Kraus",
+      "Timm Ruland",
+      "Richard Rutmann",
+      "Sebastian Sztwiertnia",
+      "Markus Frey",
+      "Daniil Gurgurov",
+      "Jan Pfister",
+      "Tom Röhr",
+      "Sebastian von Rohrscheidt",
+      "Jörg Bienert",
+      "Nicolas Flores-Herr",
+      "Simon Gottschalk",
+      "Andreas Hotho",
+      "Kristian Kersting",
+      "Joachim Köhler",
+      "Alexander Löser",
+      "Wolfgang Nejdl",
+      "Simon Ostermann",
+      "Jan Plogsties",
+      "Björn Plüster",
+      "Patrick Putzky",
+      "Mehdi Ali",
+      "Michael Fromm",
+      "Max Lübbering"
+    ],
+    "summary": "We present Soofi S 30B-A3B, a sovereign, open-source Mixture-of-Experts (MoE) hybrid Mamba Transformer foundation model for German and English. Its hybrid design activates only 3B of 30B parameters per token and keeps the inference cache near-constant as context grows, giving it a decisive throughput advantage over dense models for long-context, high-concurrency deployment. Pretrained on roughly 27 trillion tokens with deliberately up-weighted German, Soofi S matches dense 14 to 27B models on aggregate English and German benchmarks while achieving the best code aggregates in both languages among 17 open base models, and outperforms every European sovereign baseline in our comparison, including ones far larger in active parameters. Among fully open models, Soofi S obtains the highest English and German evaluation scores, ahead of Olmo 3 32B and Apertus 70B. Soofi S was built end-to-end on the German Industrial AI Cloud, a sovereign HPC scale AI infrastructure operated by Deutsche Telekom in Munich. Soofi S will be released under highly permissive, open-access terms: weights, selected intermediate checkpoints, full per-source data accounting, hyperparameters, and training and evaluation code. Where source licenses permit, data-construction artifacts are released under permissive licenses; commercially licensed sources are documented with aggregate statistics and exact mixture accounting.",
+    "published": "2026-07-10",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.09424v3",
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.LG"
+    ],
+    "primary_category": "cs.CL",
+    "github": null
+  },
+  {
+    "id": "2607.20757v1",
+    "title": "GaugeQuant: Online Learning of Quantization-Optimal Bases from LLM Symmetries",
+    "authors": [
+      "Miguel P. Bento",
+      "João Seabra"
+    ],
+    "summary": "Transformers are known to have internal continuous symmetries that leave outputs invariant, while modifying quantization. GaugeQuant leverages this in-training by introducing a LogSumExp term to the loss that breaks the symmetries, thus selecting a basis that minimizes activation outliers. A stop-gradient operator ensures that only rotation matrices are updated, yielding the language modeling objective completely unaltered. Our requires no specific calibration data, no quantization simulation, and adds negligible training overhead. With the LLaMA-2 7B model under W4A4 quantization with group size 128, perplexity drops from 8.22 to 6.73, competing with post-training methods that require frozen models and calibration datasets. Under W4A16, perplexity drops from 11.16 to 5.45. Code is available at https://github.com/MPedraBento/gauge-quant.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20757v1",
+    "categories": [
+      "cs.LG",
+      "cs.CL"
+    ],
+    "primary_category": "cs.LG",
+    "github": {
+      "url": "https://github.com/MPedraBento/gauge-quant.",
+      "stars": 0,
+      "description": "",
+      "language": ""
+    }
+  },
+  {
+    "id": "2607.20739v1",
+    "title": "Pipelined Gradient Coding",
+    "authors": [
+      "Xian Su",
+      "Jun Li"
+    ],
+    "summary": "In large-scale machine learning, distributed training commonly involves multiple workers evaluating the gradients of the model on different dataset partitions. A common challenge is the presence of straggling workers, which may significantly slow down training. Traditional gradient coding (GC) addresses this by duplicating dataset partitions across workers, allowing for the replacement of missing gradients from stragglers. However, GC requires workers to evaluate gradients on multiple dataset partitions in each step, potentially increasing overall training time. In this paper, we propose to pipeline GC, such that gradient evaluation is segmented across multiple steps and each worker evaluates gradients on just a single dataset partition per step. We develop the pipelined version for fractional repetition (FR) and cyclic repetition (CR), two representative dataset placement schemes in GC, and prove convergence guarantees for both. Through extensive simulations and experiments on cloud infrastructure, our schemes not only significantly reduce training time but also accelerate convergence compared to GC and other baselines.",
+    "published": "2026-07-22",
+    "updated": "2026-07-22",
+    "pdf_url": "https://arxiv.org/pdf/2607.20739v1",
+    "categories": [
+      "cs.IT",
+      "cs.LG"
+    ],
+    "primary_category": "cs.IT",
+    "github": null
+  }
+]
